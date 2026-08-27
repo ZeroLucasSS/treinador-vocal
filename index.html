@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Treinador Vocal</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background: #111;
+            color: #fff;
+        }
+
+        main {
+            width: 100%;
+            max-width: 520px;
+
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 8px;
+        }
+
+        p {
+            line-height: 1.5;
+            color: #ccc;
+        }
+
+        button {
+            margin-top: 24px;
+            padding: 16px 24px;
+
+            border: 0;
+            border-radius: 10px;
+
+            font-size: 18px;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        #status {
+            margin-top: 24px;
+            min-height: 28px;
+
+            font-weight: bold;
+        }
+
+        .sucesso {
+            color: #67d96f;
+        }
+
+        .erro {
+            color: #ff7070;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <h1>🎤 Treinador Vocal</h1>
+
+        <p>
+            Teste inicial do projeto.
+        </p>
+
+        <p>
+            Pressione o botão abaixo para verificar
+            se este navegador consegue acessar o microfone.
+        </p>
+
+        <button id="botaoMicrofone">
+            Testar microfone
+        </button>
+
+        <div id="status">
+            Aguardando teste.
+        </div>
+    </main>
+
+    <script>
+        const botao = document.getElementById("botaoMicrofone");
+        const status = document.getElementById("status");
+
+        botao.addEventListener("click", async () => {
+            status.className = "";
+            status.textContent = "Solicitando acesso ao microfone...";
+
+            if (
+                !navigator.mediaDevices ||
+                !navigator.mediaDevices.getUserMedia
+            ) {
+                status.className = "erro";
+                status.textContent =
+                    "Este navegador não oferece suporte ao acesso ao microfone.";
+
+                return;
+            }
+
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({
+                    audio: true
+                });
+
+                status.className = "sucesso";
+                status.textContent =
+                    "✓ Microfone autorizado e detectado com sucesso!";
+
+                /*
+                 * Por enquanto não precisamos ouvir nem processar o áudio.
+                 * Portanto, encerramos imediatamente o acesso ao microfone.
+                 */
+                stream.getTracks().forEach(track => {
+                    track.stop();
+                });
+
+            } catch (erro) {
+                console.error(erro);
+
+                status.className = "erro";
+
+                if (erro.name === "NotAllowedError") {
+                    status.textContent =
+                        "Permissão do microfone negada.";
+                } else if (erro.name === "NotFoundError") {
+                    status.textContent =
+                        "Nenhum microfone foi encontrado.";
+                } else {
+                    status.textContent =
+                        "Não foi possível acessar o microfone: " +
+                        erro.message;
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
