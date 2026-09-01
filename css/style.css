@@ -1,0 +1,489 @@
+:root {
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color-scheme: dark;
+
+    --fundo: #101114;
+    --painel: #191b20;
+    --painel-secundario: #22252b;
+
+    --texto: #f5f5f5;
+    --texto-secundario: #a9adb7;
+
+    --borda: #30343c;
+
+    --verde: #62dd8b;
+    --amarelo: #f4c95d;
+    --vermelho: #ff6b6b;
+    --azul: #68a8ff;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #20242b 0%,
+            var(--fundo) 45%
+        );
+
+    color: var(--texto);
+}
+
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+
+.app {
+    width: min(100%, 720px);
+
+    margin: 0 auto;
+
+    padding:
+        max(24px, env(safe-area-inset-top))
+        20px
+        max(32px, env(safe-area-inset-bottom));
+}
+
+
+.cabecalho {
+    text-align: center;
+
+    margin-bottom: 28px;
+}
+
+
+.etapa {
+    margin: 0 0 8px;
+
+    color: var(--azul);
+
+    font-size: 0.78rem;
+    font-weight: 800;
+
+    letter-spacing: 0.13em;
+}
+
+
+h1 {
+    margin: 0;
+
+    font-size: clamp(
+        2rem,
+        8vw,
+        3rem
+    );
+
+    line-height: 1.05;
+}
+
+
+.descricao {
+    max-width: 520px;
+
+    margin: 14px auto 0;
+
+    color: var(--texto-secundario);
+
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+.painel {
+    padding: 28px 22px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.025),
+            rgba(255, 255, 255, 0)
+        ),
+        var(--painel);
+
+    border: 1px solid var(--borda);
+    border-radius: 24px;
+
+    box-shadow:
+        0 24px 60px
+        rgba(0, 0, 0, 0.28);
+}
+
+
+.estado-microfone {
+    width: fit-content;
+
+    margin: 0 auto 22px;
+
+    padding: 7px 12px;
+
+    border: 1px solid var(--borda);
+    border-radius: 999px;
+
+    background: var(--painel-secundario);
+
+    color: var(--texto-secundario);
+
+    font-size: 0.84rem;
+    font-weight: 700;
+}
+
+
+.estado-microfone.ativo {
+    border-color:
+        rgba(98, 221, 139, 0.4);
+
+    color: var(--verde);
+}
+
+
+.nota-area {
+    min-height: 118px;
+
+    display: flex;
+
+    align-items: baseline;
+    justify-content: center;
+
+    gap: 6px;
+}
+
+
+.nota {
+    font-size: clamp(
+        5rem,
+        25vw,
+        8rem
+    );
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    letter-spacing: -0.06em;
+}
+
+
+.oitava {
+    font-size: clamp(
+        2rem,
+        10vw,
+        3rem
+    );
+
+    font-weight: 700;
+
+    color: var(--texto-secundario);
+}
+
+
+.frequencia {
+    margin-top: 8px;
+
+    text-align: center;
+
+    color: var(--texto-secundario);
+
+    font-size: 1.35rem;
+    font-variant-numeric: tabular-nums;
+}
+
+
+.afinacao {
+    margin-top: 36px;
+}
+
+
+.afinacao-rotulos {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 9px;
+
+    color: var(--texto-secundario);
+
+    font-size: 0.75rem;
+}
+
+
+.medidor {
+    position: relative;
+
+    height: 18px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(104, 168, 255, 0.45),
+            rgba(244, 201, 93, 0.35),
+            rgba(98, 221, 139, 0.6),
+            rgba(244, 201, 93, 0.35),
+            rgba(255, 107, 107, 0.45)
+        );
+
+    overflow: visible;
+}
+
+
+.linha-central {
+    position: absolute;
+
+    left: 50%;
+    top: -6px;
+
+    width: 2px;
+    height: 30px;
+
+    transform: translateX(-50%);
+
+    background: white;
+
+    opacity: 0.75;
+
+    border-radius: 999px;
+}
+
+
+.indicador {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 28px;
+    height: 28px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border: 4px solid white;
+    border-radius: 50%;
+
+    background: var(--painel);
+
+    box-shadow:
+        0 4px 12px
+        rgba(0, 0, 0, 0.4);
+
+    transition:
+        left 70ms linear,
+        opacity 120ms ease;
+}
+
+
+.cents {
+    min-height: 30px;
+
+    margin-top: 16px;
+
+    text-align: center;
+
+    font-size: 1.15rem;
+    font-weight: 800;
+
+    font-variant-numeric: tabular-nums;
+}
+
+
+.cents.afinado {
+    color: var(--verde);
+}
+
+
+.cents.proximo {
+    color: var(--amarelo);
+}
+
+
+.cents.distante {
+    color: var(--vermelho);
+}
+
+
+.detalhes {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin-top: 32px;
+}
+
+
+.detalhe {
+    min-width: 0;
+
+    padding: 14px 10px;
+
+    background: var(--painel-secundario);
+
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+
+    text-align: center;
+}
+
+
+.detalhe-titulo {
+    display: block;
+
+    min-height: 32px;
+
+    color: var(--texto-secundario);
+
+    font-size: 0.72rem;
+}
+
+
+.detalhe-valor {
+    display: block;
+
+    margin-top: 6px;
+
+    font-size: 0.98rem;
+    font-weight: 800;
+
+    font-variant-numeric: tabular-nums;
+}
+
+
+.botao-principal {
+    width: 100%;
+
+    margin-top: 26px;
+    padding: 16px 22px;
+
+    border: 0;
+    border-radius: 14px;
+
+    background: var(--texto);
+
+    color: #111;
+
+    font-size: 1.05rem;
+    font-weight: 900;
+
+    cursor: pointer;
+}
+
+
+.botao-principal:active {
+    transform: scale(0.99);
+}
+
+
+.botao-principal.parar {
+    background: var(--vermelho);
+
+    color: white;
+}
+
+
+.botao-principal:disabled {
+    cursor: wait;
+
+    opacity: 0.65;
+}
+
+
+.mensagem {
+    min-height: 48px;
+
+    margin: 18px 0 0;
+
+    text-align: center;
+
+    color: var(--texto-secundario);
+
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+
+.mensagem.erro {
+    color: var(--vermelho);
+}
+
+
+.rodape {
+    padding: 20px 16px 0;
+
+    text-align: center;
+
+    color: #777d88;
+
+    font-size: 0.76rem;
+    line-height: 1.45;
+}
+
+
+@media (max-width: 520px) {
+
+    .app {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+
+    .painel {
+        padding:
+            24px
+            16px;
+    }
+
+
+    .detalhes {
+        grid-template-columns: 1fr;
+    }
+
+
+    .detalhe {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 12px;
+
+        text-align: left;
+    }
+
+
+    .detalhe-titulo {
+        min-height: 0;
+    }
+
+
+    .detalhe-valor {
+        margin-top: 0;
+    }
+}

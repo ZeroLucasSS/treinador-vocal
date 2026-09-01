@@ -2,156 +2,190 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
     >
 
+    <meta
+        name="theme-color"
+        content="#101114"
+    >
+
     <title>Treinador Vocal</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 24px;
-
-            font-family: Arial, Helvetica, sans-serif;
-
-            background: #111;
-            color: #fff;
-        }
-
-        main {
-            width: 100%;
-            max-width: 520px;
-
-            text-align: center;
-        }
-
-        h1 {
-            margin-bottom: 8px;
-        }
-
-        p {
-            line-height: 1.5;
-            color: #ccc;
-        }
-
-        button {
-            margin-top: 24px;
-            padding: 16px 24px;
-
-            border: 0;
-            border-radius: 10px;
-
-            font-size: 18px;
-            font-weight: bold;
-
-            cursor: pointer;
-        }
-
-        #status {
-            margin-top: 24px;
-            min-height: 28px;
-
-            font-weight: bold;
-        }
-
-        .sucesso {
-            color: #67d96f;
-        }
-
-        .erro {
-            color: #ff7070;
-        }
-    </style>
+    <link
+        rel="stylesheet"
+        href="./css/style.css"
+    >
 </head>
 
 <body>
 
-    <main>
-        <h1>🎤 Treinador Vocal</h1>
+    <main class="app">
 
-        <p>
-            Teste inicial do projeto.
-        </p>
+        <header class="cabecalho">
+            <p class="etapa">
+                ETAPA 1 — PROTÓTIPO
+            </p>
 
-        <p>
-            Pressione o botão abaixo para verificar
-            se este navegador consegue acessar o microfone.
-        </p>
+            <h1>
+                Treinador Vocal
+            </h1>
 
-        <button id="botaoMicrofone">
-            Testar microfone
-        </button>
+            <p class="descricao">
+                Cante uma nota sustentada e acompanhe
+                a frequência detectada em tempo real.
+            </p>
+        </header>
 
-        <div id="status">
-            Aguardando teste.
-        </div>
+
+        <section class="painel">
+
+            <div
+                id="estadoMicrofone"
+                class="estado-microfone"
+            >
+                Microfone desligado
+            </div>
+
+
+            <div class="nota-area">
+
+                <div
+                    id="nota"
+                    class="nota"
+                >
+                    —
+                </div>
+
+                <div
+                    id="oitava"
+                    class="oitava"
+                >
+                </div>
+
+            </div>
+
+
+            <div
+                id="frequencia"
+                class="frequencia"
+            >
+                -- Hz
+            </div>
+
+
+            <div class="afinacao">
+
+                <div class="afinacao-rotulos">
+                    <span>Grave</span>
+                    <span>Afinado</span>
+                    <span>Agudo</span>
+                </div>
+
+                <div class="medidor">
+
+                    <div class="linha-central"></div>
+
+                    <div
+                        id="indicador"
+                        class="indicador"
+                    ></div>
+
+                </div>
+
+                <div
+                    id="cents"
+                    class="cents"
+                >
+                    -- cents
+                </div>
+
+            </div>
+
+
+            <div class="detalhes">
+
+                <div class="detalhe">
+                    <span class="detalhe-titulo">
+                        Nota MIDI
+                    </span>
+
+                    <span
+                        id="midi"
+                        class="detalhe-valor"
+                    >
+                        —
+                    </span>
+                </div>
+
+
+                <div class="detalhe">
+                    <span class="detalhe-titulo">
+                        Frequência ideal
+                    </span>
+
+                    <span
+                        id="frequenciaIdeal"
+                        class="detalhe-valor"
+                    >
+                        —
+                    </span>
+                </div>
+
+
+                <div class="detalhe">
+                    <span class="detalhe-titulo">
+                        Sinal
+                    </span>
+
+                    <span
+                        id="nivelSinal"
+                        class="detalhe-valor"
+                    >
+                        —
+                    </span>
+                </div>
+
+            </div>
+
+
+            <button
+                id="botaoMicrofone"
+                class="botao-principal"
+                type="button"
+            >
+                Ativar microfone
+            </button>
+
+
+            <p
+                id="mensagem"
+                class="mensagem"
+            >
+                Pressione o botão e depois cante uma vogal,
+                como “aaaa”, por alguns segundos.
+            </p>
+
+        </section>
+
+
+        <footer class="rodape">
+            <p>
+                O áudio é processado localmente no navegador
+                e não é enviado para nenhum servidor.
+            </p>
+        </footer>
+
     </main>
 
-    <script>
-        const botao = document.getElementById("botaoMicrofone");
-        const status = document.getElementById("status");
 
-        botao.addEventListener("click", async () => {
-            status.className = "";
-            status.textContent = "Solicitando acesso ao microfone...";
-
-            if (
-                !navigator.mediaDevices ||
-                !navigator.mediaDevices.getUserMedia
-            ) {
-                status.className = "erro";
-                status.textContent =
-                    "Este navegador não oferece suporte ao acesso ao microfone.";
-
-                return;
-            }
-
-            try {
-                const stream = await navigator.mediaDevices.getUserMedia({
-                    audio: true
-                });
-
-                status.className = "sucesso";
-                status.textContent =
-                    "✓ Microfone autorizado e detectado com sucesso!";
-
-                /*
-                 * Por enquanto não precisamos ouvir nem processar o áudio.
-                 * Portanto, encerramos imediatamente o acesso ao microfone.
-                 */
-                stream.getTracks().forEach(track => {
-                    track.stop();
-                });
-
-            } catch (erro) {
-                console.error(erro);
-
-                status.className = "erro";
-
-                if (erro.name === "NotAllowedError") {
-                    status.textContent =
-                        "Permissão do microfone negada.";
-                } else if (erro.name === "NotFoundError") {
-                    status.textContent =
-                        "Nenhum microfone foi encontrado.";
-                } else {
-                    status.textContent =
-                        "Não foi possível acessar o microfone: " +
-                        erro.message;
-                }
-            }
-        });
-    </script>
+    <script
+        type="module"
+        src="./js/app.js"
+    ></script>
 
 </body>
 </html>
