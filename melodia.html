@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#101114"
+    >
+
+    <title>Modo Melodia — Treinador Vocal</title>
+
+    <link
+        rel="stylesheet"
+        href="./css/melody.css"
+    >
+</head>
+
+<body>
+
+    <main class="app">
+
+        <header class="cabecalho">
+
+            <a
+                href="./index.html"
+                class="voltar"
+            >
+                ← Exercícios
+            </a>
+
+            <p class="etapa">
+                MODO MELODIA CONTÍNUA
+            </p>
+
+            <h1>
+                Piano Roll
+            </h1>
+
+            <p class="descricao">
+                Acompanhe as barras da melodia e tente manter
+                sua voz dentro das notas no momento correto.
+            </p>
+
+        </header>
+
+
+        <!-- ==================================================
+             CONFIGURAÇÃO
+             ================================================== -->
+
+        <section
+            id="configuracao"
+            class="configuracao"
+        >
+
+            <div class="campo">
+
+                <label
+                    for="seletorMelodia"
+                    class="rotulo"
+                >
+                    MELODIA
+                </label>
+
+                <select
+                    id="seletorMelodia"
+                    class="select"
+                ></select>
+
+            </div>
+
+
+            <div class="campo">
+
+                <label
+                    for="seletorDificuldade"
+                    class="rotulo"
+                >
+                    DIFICULDADE
+                </label>
+
+                <select
+                    id="seletorDificuldade"
+                    class="select"
+                >
+
+                    <option value="beginner">
+                        Iniciante — ±40 cents
+                    </option>
+
+                    <option value="intermediate">
+                        Intermediário — ±25 cents
+                    </option>
+
+                    <option value="advanced">
+                        Avançado — ±15 cents
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="botoes-configuracao">
+
+                <button
+                    id="botaoOuvir"
+                    class="botao-secundario"
+                    type="button"
+                >
+                    🔊 Ouvir melodia
+                </button>
+
+                <button
+                    id="botaoIniciar"
+                    class="botao-principal"
+                    type="button"
+                >
+                    Iniciar treino
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             STATUS
+             ================================================== -->
+
+        <section class="barra-status">
+
+            <div class="status-item">
+
+                <span>
+                    Estado
+                </span>
+
+                <strong id="estado">
+                    Pronto
+                </strong>
+
+            </div>
+
+
+            <div class="status-item">
+
+                <span>
+                    Microfone
+                </span>
+
+                <strong id="estadoMicrofone">
+                    Desligado
+                </strong>
+
+            </div>
+
+
+            <div class="status-item">
+
+                <span>
+                    Progresso
+                </span>
+
+                <strong id="progressoMusica">
+                    0%
+                </strong>
+
+            </div>
+
+
+            <div class="status-item">
+
+                <span>
+                    Pontuação
+                </span>
+
+                <strong id="pontuacaoAtual">
+                    0
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             PIANO ROLL
+             ================================================== -->
+
+        <section class="painel-piano-roll">
+
+            <div class="painel-cabecalho">
+
+                <div>
+
+                    <p class="rotulo">
+                        MELODIA
+                    </p>
+
+                    <h2 id="nomeMelodia">
+                        —
+                    </h2>
+
+                </div>
+
+
+                <div class="legenda">
+
+                    <span>
+                        <i class="legenda-alvo"></i>
+                        Nota-alvo
+                    </span>
+
+                    <span>
+                        <i class="legenda-voz"></i>
+                        Sua voz
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="contador"
+                class="contador oculto"
+            >
+                3
+            </div>
+
+
+            <div class="canvas-container">
+
+                <canvas
+                    id="pianoRoll"
+                ></canvas>
+
+            </div>
+
+
+            <div class="linha-tempo">
+
+                <span id="tempoAtual">
+                    0:00
+                </span>
+
+                <div class="barra-tempo">
+
+                    <div
+                        id="barraTempo"
+                        class="barra-tempo-preenchimento"
+                    ></div>
+
+                </div>
+
+                <span id="tempoTotal">
+                    0:00
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             FEEDBACK
+             ================================================== -->
+
+        <section class="painel-feedback">
+
+            <div class="nota-atual">
+
+                <div>
+
+                    <span class="rotulo">
+                        NOTA ESPERADA
+                    </span>
+
+                    <strong id="notaEsperada">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="seta">
+                    →
+                </div>
+
+
+                <div>
+
+                    <span class="rotulo">
+                        SUA VOZ
+                    </span>
+
+                    <strong id="notaCantada">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="feedback"
+                class="feedback neutro"
+            >
+                Ouça a melodia ou inicie o treino.
+            </div>
+
+
+            <div class="metricas">
+
+                <div>
+
+                    <span>
+                        Erro atual
+                    </span>
+
+                    <strong id="erroAtual">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Precisão
+                    </span>
+
+                    <strong id="precisao">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Notas avaliadas
+                    </span>
+
+                    <strong id="notasAvaliadas">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             RESULTADO
+             ================================================== -->
+
+        <section
+            id="resultado"
+            class="resultado oculto"
+        >
+
+            <p class="rotulo">
+                TREINO CONCLUÍDO
+            </p>
+
+            <h2>
+                Resultado da melodia
+            </h2>
+
+
+            <div class="pontuacao-final">
+
+                <strong id="pontuacaoFinal">
+                    0
+                </strong>
+
+                <span>
+                    / 100
+                </span>
+
+            </div>
+
+
+            <p
+                id="avaliacaoFinal"
+                class="avaliacao-final"
+            ></p>
+
+
+            <div class="resultado-grid">
+
+                <div>
+
+                    <span>
+                        Precisão temporal
+                    </span>
+
+                    <strong id="resultadoPrecisao">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Erro médio
+                    </span>
+
+                    <strong id="resultadoErro">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Notas acertadas
+                    </span>
+
+                    <strong id="resultadoNotas">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="botaoRepetir"
+                class="botao-principal"
+                type="button"
+            >
+                Repetir melodia
+            </button>
+
+        </section>
+
+
+        <footer class="rodape">
+
+            <p>
+                Durante a avaliação, o áudio do microfone
+                é processado apenas no próprio aparelho.
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <script
+        type="module"
+        src="./js/melody-mode.js"
+    ></script>
+
+</body>
+</html>
