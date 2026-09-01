@@ -12,6 +12,7 @@
     --fundo: #101114;
     --painel: #191b20;
     --painel-secundario: #22252b;
+    --painel-claro: #2a2e36;
 
     --texto: #f5f5f5;
     --texto-secundario: #a9adb7;
@@ -19,9 +20,16 @@
     --borda: #30343c;
 
     --verde: #62dd8b;
+    --verde-fundo: rgba(98, 221, 139, 0.12);
+
     --amarelo: #f4c95d;
+    --amarelo-fundo: rgba(244, 201, 93, 0.12);
+
     --vermelho: #ff6b6b;
+    --vermelho-fundo: rgba(255, 107, 107, 0.12);
+
     --azul: #68a8ff;
+    --azul-fundo: rgba(104, 168, 255, 0.12);
 }
 
 
@@ -44,36 +52,44 @@ body {
         radial-gradient(
             circle at top,
             #20242b 0%,
-            var(--fundo) 45%
+            var(--fundo) 48%
         );
 
     color: var(--texto);
 }
 
 
-button,
-input,
-select {
+button {
     font: inherit;
 }
 
 
+button:focus-visible {
+    outline: 3px solid rgba(104, 168, 255, 0.7);
+    outline-offset: 3px;
+}
+
+
 .app {
-    width: min(100%, 720px);
+    width: min(100%, 760px);
 
     margin: 0 auto;
 
     padding:
         max(24px, env(safe-area-inset-top))
-        20px
-        max(32px, env(safe-area-inset-bottom));
+        18px
+        max(36px, env(safe-area-inset-bottom));
 }
 
 
-.cabecalho {
-    text-align: center;
+/* ============================================================
+   CABEÇALHO
+   ============================================================ */
 
-    margin-bottom: 28px;
+.cabecalho {
+    margin-bottom: 24px;
+
+    text-align: center;
 }
 
 
@@ -82,8 +98,8 @@ select {
 
     color: var(--azul);
 
-    font-size: 0.78rem;
-    font-weight: 800;
+    font-size: 0.76rem;
+    font-weight: 900;
 
     letter-spacing: 0.13em;
 }
@@ -95,7 +111,7 @@ h1 {
     font-size: clamp(
         2rem,
         8vw,
-        3rem
+        3.2rem
     );
 
     line-height: 1.05;
@@ -103,30 +119,103 @@ h1 {
 
 
 .descricao {
-    max-width: 520px;
+    max-width: 540px;
 
     margin: 14px auto 0;
 
     color: var(--texto-secundario);
 
-    font-size: 1rem;
     line-height: 1.5;
 }
 
 
+/* ============================================================
+   SELETOR DE EXERCÍCIOS
+   ============================================================ */
+
+.selecao-exercicios {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+
+    margin-bottom: 16px;
+}
+
+
+.botao-exercicio {
+    min-height: 86px;
+
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 12px 8px;
+
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+
+    background: var(--painel);
+
+    color: var(--texto-secundario);
+
+    cursor: pointer;
+
+    transition:
+        border-color 150ms ease,
+        background 150ms ease,
+        color 150ms ease,
+        transform 100ms ease;
+}
+
+
+.botao-exercicio:hover {
+    border-color: #4c5361;
+}
+
+
+.botao-exercicio:active {
+    transform: scale(0.98);
+}
+
+
+.botao-exercicio.ativo {
+    border-color: rgba(104, 168, 255, 0.65);
+
+    background: var(--azul-fundo);
+
+    color: var(--texto);
+}
+
+
+.icone-exercicio {
+    font-size: 1.6rem;
+}
+
+
+/* ============================================================
+   PAINEL PRINCIPAL
+   ============================================================ */
+
 .painel {
-    padding: 28px 22px;
+    padding: 26px 22px;
+
+    border: 1px solid var(--borda);
+    border-radius: 24px;
 
     background:
         linear-gradient(
             180deg,
             rgba(255, 255, 255, 0.025),
-            rgba(255, 255, 255, 0)
+            transparent
         ),
         var(--painel);
-
-    border: 1px solid var(--borda);
-    border-radius: 24px;
 
     box-shadow:
         0 24px 60px
@@ -134,12 +223,39 @@ h1 {
 }
 
 
+.topo-painel {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 18px;
+}
+
+
+.rotulo {
+    margin: 0 0 5px;
+
+    color: var(--texto-secundario);
+
+    font-size: 0.7rem;
+    font-weight: 900;
+
+    letter-spacing: 0.11em;
+}
+
+
+h2 {
+    margin: 0;
+
+    font-size: 1.5rem;
+}
+
+
 .estado-microfone {
-    width: fit-content;
+    flex-shrink: 0;
 
-    margin: 0 auto 22px;
-
-    padding: 7px 12px;
+    padding: 7px 11px;
 
     border: 1px solid var(--borda);
     border-radius: 999px;
@@ -148,8 +264,8 @@ h1 {
 
     color: var(--texto-secundario);
 
-    font-size: 0.84rem;
-    font-weight: 700;
+    font-size: 0.76rem;
+    font-weight: 800;
 }
 
 
@@ -161,60 +277,232 @@ h1 {
 }
 
 
-.nota-area {
-    min-height: 118px;
+.descricao-exercicio {
+    margin: 14px 0 0;
+
+    color: var(--texto-secundario);
+
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   NOTA-ALVO
+   ============================================================ */
+
+.alvo-container {
+    margin-top: 28px;
+
+    padding: 22px;
+
+    border: 1px solid rgba(104, 168, 255, 0.25);
+    border-radius: 18px;
+
+    background: var(--azul-fundo);
+
+    text-align: center;
+}
+
+
+.nota-alvo-area {
+    min-height: 96px;
 
     display: flex;
 
     align-items: baseline;
     justify-content: center;
 
-    gap: 6px;
+    gap: 4px;
+}
+
+
+.nota-alvo {
+    font-size: clamp(
+        4.4rem,
+        20vw,
+        6.8rem
+    );
+
+    font-weight: 950;
+
+    line-height: 1;
+}
+
+
+.oitava-alvo {
+    font-size: 2.3rem;
+
+    font-weight: 800;
+
+    color: var(--texto-secundario);
+}
+
+
+.botao-secundario {
+    margin-top: 12px;
+
+    padding: 11px 17px;
+
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+
+    background: var(--painel-claro);
+
+    color: var(--texto);
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+
+.botao-secundario:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.45;
+}
+
+
+/* ============================================================
+   SEQUÊNCIA VISUAL
+   ============================================================ */
+
+.sequencia-visual {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 0;
+
+    margin-top: 16px;
+}
+
+
+.nota-sequencia {
+    min-width: 58px;
+
+    padding: 10px;
+
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+
+    background: var(--painel-secundario);
+
+    color: var(--texto-secundario);
+
+    text-align: center;
+
+    font-weight: 900;
+
+    transition:
+        border-color 150ms ease,
+        background 150ms ease,
+        color 150ms ease,
+        transform 150ms ease;
+}
+
+
+.nota-sequencia.atual {
+    transform: scale(1.08);
+
+    border-color: var(--azul);
+
+    background: var(--azul-fundo);
+
+    color: var(--texto);
+}
+
+
+.nota-sequencia.concluida {
+    border-color:
+        rgba(98, 221, 139, 0.55);
+
+    background: var(--verde-fundo);
+
+    color: var(--verde);
+}
+
+
+.divisor {
+    height: 1px;
+
+    margin: 28px 0;
+
+    background: var(--borda);
+}
+
+
+/* ============================================================
+   NOTA DETECTADA
+   ============================================================ */
+
+.deteccao {
+    text-align: center;
+}
+
+
+.nota-detectada-area {
+    min-height: 116px;
+
+    display: flex;
+
+    align-items: baseline;
+    justify-content: center;
+
+    gap: 5px;
 }
 
 
 .nota {
     font-size: clamp(
         5rem,
-        25vw,
+        24vw,
         8rem
     );
 
-    font-weight: 900;
+    font-weight: 950;
 
     line-height: 1;
 
-    letter-spacing: -0.06em;
+    letter-spacing: -0.05em;
 }
 
 
 .oitava {
     font-size: clamp(
         2rem,
-        10vw,
+        9vw,
         3rem
     );
 
-    font-weight: 700;
-
     color: var(--texto-secundario);
+
+    font-weight: 800;
 }
 
 
 .frequencia {
-    margin-top: 8px;
-
-    text-align: center;
+    margin-top: 6px;
 
     color: var(--texto-secundario);
 
-    font-size: 1.35rem;
+    font-size: 1.2rem;
+
     font-variant-numeric: tabular-nums;
 }
 
 
+/* ============================================================
+   MEDIDOR
+   ============================================================ */
+
 .afinacao {
-    margin-top: 36px;
+    margin-top: 32px;
 }
 
 
@@ -227,7 +515,7 @@ h1 {
 
     color: var(--texto-secundario);
 
-    font-size: 0.75rem;
+    font-size: 0.74rem;
 }
 
 
@@ -236,19 +524,33 @@ h1 {
 
     height: 18px;
 
+    overflow: visible;
+
     border-radius: 999px;
 
     background:
         linear-gradient(
             90deg,
-            rgba(104, 168, 255, 0.45),
-            rgba(244, 201, 93, 0.35),
+            rgba(255, 107, 107, 0.45),
+            rgba(244, 201, 93, 0.45),
             rgba(98, 221, 139, 0.6),
-            rgba(244, 201, 93, 0.35),
+            rgba(244, 201, 93, 0.45),
             rgba(255, 107, 107, 0.45)
         );
+}
 
-    overflow: visible;
+
+.faixa-correta {
+    position: absolute;
+
+    left: 35%;
+    right: 35%;
+    top: -3px;
+
+    height: 24px;
+
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 999px;
 }
 
 
@@ -256,18 +558,18 @@ h1 {
     position: absolute;
 
     left: 50%;
-    top: -6px;
+    top: -7px;
 
     width: 2px;
-    height: 30px;
+    height: 32px;
 
     transform: translateX(-50%);
 
+    border-radius: 999px;
+
     background: white;
 
-    opacity: 0.75;
-
-    border-radius: 999px;
+    opacity: 0.85;
 }
 
 
@@ -293,20 +595,22 @@ h1 {
         rgba(0, 0, 0, 0.4);
 
     transition:
-        left 70ms linear,
-        opacity 120ms ease;
+        left 65ms linear,
+        opacity 100ms ease;
 }
 
 
 .cents {
     min-height: 30px;
 
-    margin-top: 16px;
+    margin-top: 15px;
 
     text-align: center;
 
-    font-size: 1.15rem;
-    font-weight: 800;
+    color: var(--texto-secundario);
+
+    font-size: 1.1rem;
+    font-weight: 900;
 
     font-variant-numeric: tabular-nums;
 }
@@ -327,6 +631,113 @@ h1 {
 }
 
 
+/* ============================================================
+   FEEDBACK
+   ============================================================ */
+
+.feedback {
+    margin-top: 22px;
+
+    padding: 16px;
+
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+
+    text-align: center;
+
+    font-weight: 850;
+
+    line-height: 1.4;
+}
+
+
+.feedback.neutro {
+    background: var(--painel-secundario);
+
+    color: var(--texto-secundario);
+}
+
+
+.feedback.correto {
+    border-color:
+        rgba(98, 221, 139, 0.4);
+
+    background: var(--verde-fundo);
+
+    color: var(--verde);
+}
+
+
+.feedback.proximo {
+    border-color:
+        rgba(244, 201, 93, 0.4);
+
+    background: var(--amarelo-fundo);
+
+    color: var(--amarelo);
+}
+
+
+.feedback.errado {
+    border-color:
+        rgba(255, 107, 107, 0.4);
+
+    background: var(--vermelho-fundo);
+
+    color: var(--vermelho);
+}
+
+
+/* ============================================================
+   PROGRESSO
+   ============================================================ */
+
+.progresso-container {
+    margin-top: 24px;
+}
+
+
+.progresso-cabecalho {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    color: var(--texto-secundario);
+
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+
+.barra-progresso {
+    height: 10px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: var(--painel-secundario);
+}
+
+
+.barra-progresso-preenchimento {
+    width: 0%;
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: var(--verde);
+
+    transition: width 90ms linear;
+}
+
+
+/* ============================================================
+   DETALHES
+   ============================================================ */
+
 .detalhes {
     display: grid;
 
@@ -335,19 +746,17 @@ h1 {
 
     gap: 10px;
 
-    margin-top: 32px;
+    margin-top: 28px;
 }
 
 
 .detalhe {
-    min-width: 0;
-
     padding: 14px 10px;
-
-    background: var(--painel-secundario);
 
     border: 1px solid var(--borda);
     border-radius: 14px;
+
+    background: var(--painel-secundario);
 
     text-align: center;
 }
@@ -356,11 +765,9 @@ h1 {
 .detalhe-titulo {
     display: block;
 
-    min-height: 32px;
-
     color: var(--texto-secundario);
 
-    font-size: 0.72rem;
+    font-size: 0.7rem;
 }
 
 
@@ -369,12 +776,16 @@ h1 {
 
     margin-top: 6px;
 
-    font-size: 0.98rem;
-    font-weight: 800;
+    font-size: 0.96rem;
+    font-weight: 900;
 
     font-variant-numeric: tabular-nums;
 }
 
+
+/* ============================================================
+   BOTÃO PRINCIPAL
+   ============================================================ */
 
 .botao-principal {
     width: 100%;
@@ -390,14 +801,9 @@ h1 {
     color: #111;
 
     font-size: 1.05rem;
-    font-weight: 900;
+    font-weight: 950;
 
     cursor: pointer;
-}
-
-
-.botao-principal:active {
-    transform: scale(0.99);
 }
 
 
@@ -411,21 +817,21 @@ h1 {
 .botao-principal:disabled {
     cursor: wait;
 
-    opacity: 0.65;
+    opacity: 0.6;
 }
 
 
 .mensagem {
-    min-height: 48px;
+    min-height: 42px;
 
-    margin: 18px 0 0;
+    margin: 16px 0 0;
 
     text-align: center;
 
     color: var(--texto-secundario);
 
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-size: 0.86rem;
+    line-height: 1.45;
 }
 
 
@@ -435,29 +841,36 @@ h1 {
 
 
 .rodape {
-    padding: 20px 16px 0;
+    padding: 20px 10px 0;
 
     text-align: center;
 
     color: #777d88;
 
-    font-size: 0.76rem;
+    font-size: 0.75rem;
     line-height: 1.45;
 }
 
 
-@media (max-width: 520px) {
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
 
-    .app {
-        padding-left: 14px;
-        padding-right: 14px;
+@media (max-width: 620px) {
+
+    .selecao-exercicios {
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
 
-    .painel {
-        padding:
-            24px
-            16px;
+    .topo-painel {
+        flex-direction: column;
+    }
+
+
+    .estado-microfone {
+        align-self: flex-start;
     }
 
 
@@ -478,12 +891,39 @@ h1 {
     }
 
 
-    .detalhe-titulo {
-        min-height: 0;
+    .detalhe-valor {
+        margin-top: 0;
+    }
+}
+
+
+@media (max-width: 420px) {
+
+    .app {
+        padding-left: 12px;
+        padding-right: 12px;
     }
 
 
-    .detalhe-valor {
-        margin-top: 0;
+    .painel {
+        padding:
+            22px
+            15px;
+    }
+
+
+    .alvo-container {
+        padding:
+            20px
+            14px;
+    }
+
+
+    .nota-sequencia {
+        min-width: 48px;
+
+        padding:
+            9px
+            7px;
     }
 }

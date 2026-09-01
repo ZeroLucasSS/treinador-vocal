@@ -26,8 +26,9 @@
     <main class="app">
 
         <header class="cabecalho">
+
             <p class="etapa">
-                ETAPA 1 — PROTÓTIPO
+                ETAPA 3 — EXERCÍCIOS
             </p>
 
             <h1>
@@ -35,45 +36,165 @@
             </h1>
 
             <p class="descricao">
-                Cante uma nota sustentada e acompanhe
-                a frequência detectada em tempo real.
+                Ouça a referência, cante a nota indicada
+                e acompanhe sua afinação em tempo real.
             </p>
+
         </header>
+
+
+        <section class="selecao-exercicios">
+
+            <button
+                class="botao-exercicio ativo"
+                data-exercise="single"
+                type="button"
+            >
+                <span class="icone-exercicio">♪</span>
+                <span>Nota única</span>
+            </button>
+
+
+            <button
+                class="botao-exercicio"
+                data-exercise="sustain"
+                type="button"
+            >
+                <span class="icone-exercicio">▬</span>
+                <span>Sustentação</span>
+            </button>
+
+
+            <button
+                class="botao-exercicio"
+                data-exercise="interval"
+                type="button"
+            >
+                <span class="icone-exercicio">♫</span>
+                <span>Intervalos</span>
+            </button>
+
+
+            <button
+                class="botao-exercicio"
+                data-exercise="sequence"
+                type="button"
+            >
+                <span class="icone-exercicio">♬</span>
+                <span>Sequência</span>
+            </button>
+
+        </section>
 
 
         <section class="painel">
 
-            <div
-                id="estadoMicrofone"
-                class="estado-microfone"
-            >
-                Microfone desligado
-            </div>
+            <div class="topo-painel">
 
+                <div>
+                    <p class="rotulo">
+                        EXERCÍCIO
+                    </p>
 
-            <div class="nota-area">
-
-                <div
-                    id="nota"
-                    class="nota"
-                >
-                    —
+                    <h2 id="tituloExercicio">
+                        Nota única
+                    </h2>
                 </div>
 
+
                 <div
-                    id="oitava"
-                    class="oitava"
+                    id="estadoMicrofone"
+                    class="estado-microfone"
                 >
+                    Microfone desligado
                 </div>
 
             </div>
 
 
-            <div
-                id="frequencia"
-                class="frequencia"
+            <p
+                id="descricaoExercicio"
+                class="descricao-exercicio"
             >
-                -- Hz
+                Ouça uma nota e tente reproduzi-la corretamente.
+            </p>
+
+
+            <div class="alvo-container">
+
+                <p class="rotulo">
+                    NOTA-ALVO
+                </p>
+
+                <div class="nota-alvo-area">
+
+                    <span
+                        id="notaAlvo"
+                        class="nota-alvo"
+                    >
+                        —
+                    </span>
+
+                    <span
+                        id="oitavaAlvo"
+                        class="oitava-alvo"
+                    ></span>
+
+                </div>
+
+
+                <button
+                    id="botaoOuvirNota"
+                    class="botao-secundario"
+                    type="button"
+                    disabled
+                >
+                    🔊 Ouvir referência
+                </button>
+
+            </div>
+
+
+            <div
+                id="sequenciaVisual"
+                class="sequencia-visual"
+            ></div>
+
+
+            <div class="divisor"></div>
+
+
+            <div class="deteccao">
+
+                <p class="rotulo">
+                    VOCÊ ESTÁ CANTANDO
+                </p>
+
+
+                <div class="nota-detectada-area">
+
+                    <span
+                        id="nota"
+                        class="nota"
+                    >
+                        —
+                    </span>
+
+                    <span
+                        id="oitava"
+                        class="oitava"
+                    ></span>
+
+                </div>
+
+
+                <div
+                    id="frequencia"
+                    class="frequencia"
+                >
+                    -- Hz
+                </div>
+
             </div>
 
 
@@ -81,11 +202,14 @@
 
                 <div class="afinacao-rotulos">
                     <span>Grave</span>
-                    <span>Afinado</span>
+                    <span>Correto</span>
                     <span>Agudo</span>
                 </div>
 
+
                 <div class="medidor">
+
+                    <div class="faixa-correta"></div>
 
                     <div class="linha-central"></div>
 
@@ -96,11 +220,47 @@
 
                 </div>
 
+
                 <div
                     id="cents"
                     class="cents"
                 >
-                    -- cents
+                    Aguardando...
+                </div>
+
+            </div>
+
+
+            <div
+                id="feedback"
+                class="feedback neutro"
+            >
+                Escolha o exercício e pressione “Iniciar exercício”.
+            </div>
+
+
+            <div class="progresso-container">
+
+                <div class="progresso-cabecalho">
+
+                    <span>
+                        Progresso
+                    </span>
+
+                    <span id="textoProgresso">
+                        0%
+                    </span>
+
+                </div>
+
+
+                <div class="barra-progresso">
+
+                    <div
+                        id="barraProgresso"
+                        class="barra-progresso-preenchimento"
+                    ></div>
+
                 </div>
 
             </div>
@@ -109,34 +269,39 @@
             <div class="detalhes">
 
                 <div class="detalhe">
+
                     <span class="detalhe-titulo">
-                        Nota MIDI
+                        Frequência-alvo
                     </span>
 
                     <span
-                        id="midi"
+                        id="frequenciaAlvo"
                         class="detalhe-valor"
                     >
                         —
                     </span>
+
                 </div>
 
 
                 <div class="detalhe">
+
                     <span class="detalhe-titulo">
-                        Frequência ideal
+                        Erro
                     </span>
 
                     <span
-                        id="frequenciaIdeal"
+                        id="erroCents"
                         class="detalhe-valor"
                     >
                         —
                     </span>
+
                 </div>
 
 
                 <div class="detalhe">
+
                     <span class="detalhe-titulo">
                         Sinal
                     </span>
@@ -147,17 +312,18 @@
                     >
                         —
                     </span>
+
                 </div>
 
             </div>
 
 
             <button
-                id="botaoMicrofone"
+                id="botaoPrincipal"
                 class="botao-principal"
                 type="button"
             >
-                Ativar microfone
+                Iniciar exercício
             </button>
 
 
@@ -165,18 +331,19 @@
                 id="mensagem"
                 class="mensagem"
             >
-                Pressione o botão e depois cante uma vogal,
-                como “aaaa”, por alguns segundos.
+                Ao iniciar, o navegador pedirá acesso ao microfone.
             </p>
 
         </section>
 
 
         <footer class="rodape">
+
             <p>
-                O áudio é processado localmente no navegador
+                O áudio é analisado localmente no aparelho
                 e não é enviado para nenhum servidor.
             </p>
+
         </footer>
 
     </main>
