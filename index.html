@@ -28,7 +28,7 @@
         <header class="cabecalho">
 
             <p class="etapa">
-                ETAPA 3 — EXERCÍCIOS
+                TREINAMENTO DE AFINAÇÃO
             </p>
 
             <h1>
@@ -36,62 +36,236 @@
             </h1>
 
             <p class="descricao">
-                Ouça a referência, cante a nota indicada
-                e acompanhe sua afinação em tempo real.
+                Ouça, reproduza e acompanhe sua evolução
+                nota por nota.
             </p>
 
         </header>
 
 
-        <section class="selecao-exercicios">
+        <!-- ==================================================
+             CONFIGURAÇÃO
+             ================================================== -->
 
-            <button
-                class="botao-exercicio ativo"
-                data-exercise="single"
-                type="button"
-            >
-                <span class="icone-exercicio">♪</span>
-                <span>Nota única</span>
-            </button>
+        <section
+            id="configuracao"
+            class="configuracao"
+        >
 
+            <div class="grupo-configuracao">
 
-            <button
-                class="botao-exercicio"
-                data-exercise="sustain"
-                type="button"
-            >
-                <span class="icone-exercicio">▬</span>
-                <span>Sustentação</span>
-            </button>
+                <p class="rotulo">
+                    TIPO DE EXERCÍCIO
+                </p>
 
 
-            <button
-                class="botao-exercicio"
-                data-exercise="interval"
-                type="button"
-            >
-                <span class="icone-exercicio">♫</span>
-                <span>Intervalos</span>
-            </button>
+                <div class="selecao-exercicios">
+
+                    <button
+                        class="botao-exercicio ativo"
+                        data-exercise="single"
+                        type="button"
+                    >
+                        <span class="icone-exercicio">♪</span>
+                        <span>Nota única</span>
+                    </button>
 
 
-            <button
-                class="botao-exercicio"
-                data-exercise="sequence"
-                type="button"
-            >
-                <span class="icone-exercicio">♬</span>
-                <span>Sequência</span>
-            </button>
+                    <button
+                        class="botao-exercicio"
+                        data-exercise="sustain"
+                        type="button"
+                    >
+                        <span class="icone-exercicio">▬</span>
+                        <span>Sustentação</span>
+                    </button>
+
+
+                    <button
+                        class="botao-exercicio"
+                        data-exercise="interval"
+                        type="button"
+                    >
+                        <span class="icone-exercicio">♫</span>
+                        <span>Intervalos</span>
+                    </button>
+
+
+                    <button
+                        class="botao-exercicio"
+                        data-exercise="sequence"
+                        type="button"
+                    >
+                        <span class="icone-exercicio">♬</span>
+                        <span>Sequência</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="grupo-configuracao">
+
+                <p class="rotulo">
+                    DIFICULDADE
+                </p>
+
+
+                <div class="selecao-dificuldade">
+
+                    <button
+                        class="botao-dificuldade ativo"
+                        data-difficulty="beginner"
+                        type="button"
+                    >
+                        <strong>Iniciante</strong>
+
+                        <span>
+                            ±40 cents
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="botao-dificuldade"
+                        data-difficulty="intermediate"
+                        type="button"
+                    >
+                        <strong>Intermediário</strong>
+
+                        <span>
+                            ±25 cents
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="botao-dificuldade"
+                        data-difficulty="advanced"
+                        type="button"
+                    >
+                        <strong>Avançado</strong>
+
+                        <span>
+                            ±15 cents
+                        </span>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="grupo-configuracao">
+
+                <label
+                    for="quantidadeRodadas"
+                    class="rotulo"
+                >
+                    RODADAS DA SESSÃO
+                </label>
+
+
+                <select
+                    id="quantidadeRodadas"
+                    class="select-rodadas"
+                >
+                    <option value="3">
+                        3 rodadas
+                    </option>
+
+                    <option
+                        value="5"
+                        selected
+                    >
+                        5 rodadas
+                    </option>
+
+                    <option value="10">
+                        10 rodadas
+                    </option>
+
+                </select>
+
+            </div>
 
         </section>
 
+
+        <!-- ==================================================
+             ESTATÍSTICAS
+             ================================================== -->
+
+        <section
+            id="estatisticasSessao"
+            class="estatisticas-sessao oculto"
+        >
+
+            <div class="estatistica">
+
+                <span class="estatistica-rotulo">
+                    Rodada
+                </span>
+
+                <strong id="estatisticaRodada">
+                    1 / 5
+                </strong>
+
+            </div>
+
+
+            <div class="estatistica">
+
+                <span class="estatistica-rotulo">
+                    Acertos
+                </span>
+
+                <strong id="estatisticaAcertos">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="estatistica">
+
+                <span class="estatistica-rotulo">
+                    Tentativas
+                </span>
+
+                <strong id="estatisticaTentativas">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="estatistica">
+
+                <span class="estatistica-rotulo">
+                    Pontuação
+                </span>
+
+                <strong id="estatisticaPontuacao">
+                    0
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             PAINEL PRINCIPAL
+             ================================================== -->
 
         <section class="painel">
 
             <div class="topo-painel">
 
                 <div>
+
                     <p class="rotulo">
                         EXERCÍCIO
                     </p>
@@ -99,6 +273,7 @@
                     <h2 id="tituloExercicio">
                         Nota única
                     </h2>
+
                 </div>
 
 
@@ -120,11 +295,14 @@
             </p>
 
 
+            <!-- NOTA-ALVO -->
+
             <div class="alvo-container">
 
                 <p class="rotulo">
                     NOTA-ALVO
                 </p>
+
 
                 <div class="nota-alvo-area">
 
@@ -164,6 +342,8 @@
             <div class="divisor"></div>
 
 
+            <!-- NOTA DETECTADA -->
+
             <div class="deteccao">
 
                 <p class="rotulo">
@@ -198,18 +378,33 @@
             </div>
 
 
+            <!-- MEDIDOR -->
+
             <div class="afinacao">
 
                 <div class="afinacao-rotulos">
-                    <span>Grave</span>
-                    <span>Correto</span>
-                    <span>Agudo</span>
+
+                    <span>
+                        Grave
+                    </span>
+
+                    <span>
+                        Correto
+                    </span>
+
+                    <span>
+                        Agudo
+                    </span>
+
                 </div>
 
 
                 <div class="medidor">
 
-                    <div class="faixa-correta"></div>
+                    <div
+                        id="faixaCorreta"
+                        class="faixa-correta"
+                    ></div>
 
                     <div class="linha-central"></div>
 
@@ -231,20 +426,24 @@
             </div>
 
 
+            <!-- FEEDBACK -->
+
             <div
                 id="feedback"
                 class="feedback neutro"
             >
-                Escolha o exercício e pressione “Iniciar exercício”.
+                Configure a sessão e pressione “Iniciar sessão”.
             </div>
 
+
+            <!-- PROGRESSO DA NOTA/EXERCÍCIO -->
 
             <div class="progresso-container">
 
                 <div class="progresso-cabecalho">
 
                     <span>
-                        Progresso
+                        Exercício atual
                     </span>
 
                     <span id="textoProgresso">
@@ -265,6 +464,8 @@
 
             </div>
 
+
+            <!-- DETALHES -->
 
             <div class="detalhes">
 
@@ -323,7 +524,7 @@
                 class="botao-principal"
                 type="button"
             >
-                Iniciar exercício
+                Iniciar sessão
             </button>
 
 
@@ -331,8 +532,109 @@
                 id="mensagem"
                 class="mensagem"
             >
-                Ao iniciar, o navegador pedirá acesso ao microfone.
+                Escolha o exercício, a dificuldade e a quantidade de rodadas.
             </p>
+
+        </section>
+
+
+        <!-- ==================================================
+             RESULTADO DA SESSÃO
+             ================================================== -->
+
+        <section
+            id="resultadoSessao"
+            class="resultado-sessao oculto"
+        >
+
+            <p class="rotulo">
+                SESSÃO CONCLUÍDA
+            </p>
+
+            <h2>
+                Resultado do treino
+            </h2>
+
+
+            <div class="pontuacao-final">
+
+                <span
+                    id="pontuacaoFinal"
+                    class="numero-pontuacao"
+                >
+                    0
+                </span>
+
+                <span class="de-cem">
+                    / 100
+                </span>
+
+            </div>
+
+
+            <p
+                id="avaliacaoFinal"
+                class="avaliacao-final"
+            >
+            </p>
+
+
+            <div class="resumo-final">
+
+                <div>
+
+                    <span>
+                        Notas acertadas
+                    </span>
+
+                    <strong id="resultadoAcertos">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Tentativas
+                    </span>
+
+                    <strong id="resultadoTentativas">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Erro médio
+                    </span>
+
+                    <strong id="resultadoPrecisao">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="listaRodadas"
+                class="lista-rodadas"
+            ></div>
+
+
+            <button
+                id="botaoNovaSessao"
+                class="botao-principal"
+                type="button"
+            >
+                Iniciar nova sessão
+            </button>
 
         </section>
 
@@ -340,8 +642,8 @@
         <footer class="rodape">
 
             <p>
-                O áudio é analisado localmente no aparelho
-                e não é enviado para nenhum servidor.
+                O áudio é processado localmente no aparelho.
+                Nenhuma gravação é enviada para servidores.
             </p>
 
         </footer>

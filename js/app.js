@@ -3,25 +3,17 @@
  * app.js
  * ============================================================
  *
- * ETAPA 3 — EXERCÍCIOS
+ * TREINADOR VOCAL
  *
- * Fluxo geral:
+ * Etapa atual:
  *
- * escolhe exercício
- *       ↓
- * gera notas-alvo
- *       ↓
- * toca referência
- *       ↓
- * microfone
- *       ↓
- * detector YIN
- *       ↓
- * frequência detectada
- *       ↓
- * comparação com nota-alvo
- *       ↓
- * feedback + progresso
+ * - sessões;
+ * - níveis de dificuldade;
+ * - rodadas;
+ * - tentativas;
+ * - acertos;
+ * - pontuação;
+ * - relatório final.
  *
  * ============================================================
  */
@@ -55,88 +47,106 @@ import {
 } from "./tone-generator.js";
 
 
-/*
- * ============================================================
- * CONFIGURAÇÕES
- * ============================================================
- */
+import {
+    TrainingSession,
+    DIFFICULTIES
+} from "./session.js";
 
 
 /*
- * Sinal abaixo disso será considerado silêncio.
+ * ============================================================
+ * CONFIGURAÇÕES DE ÁUDIO
+ * ============================================================
  */
+
 const MIN_RMS =
     0.01;
 
 
-/*
- * Confiança mínima do detector YIN.
- */
 const MIN_PROBABILITY =
     0.70;
 
 
-/*
- * Número de frequências usadas na suavização.
- */
 const SMOOTHING_WINDOW =
     5;
 
 
-/*
- * Quantos cents em torno da nota-alvo
- * contam como afinação correta.
- *
- * Começaremos com ±30 cents.
- *
- * Posteriormente poderemos criar níveis:
- *
- * iniciante = 35
- * intermediário = 25
- * avançado = 15
- */
-const CORRECT_TOLERANCE_CENTS =
-    30;
-
-
-/*
- * Até esta distância ainda consideramos
- * que a pessoa está "próxima".
- */
-const NEAR_TOLERANCE_CENTS =
-    70;
-
-
-/*
- * Depois desse tempo sem pitch,
- * apagamos a leitura da tela.
- */
 const NO_PITCH_TIMEOUT =
     450;
 
 
 /*
- * Após acertar uma nota da sequência,
- * fazemos uma pequena pausa antes
- * de avançar para a próxima.
+ * Um silêncio desta duração encerra a tentativa vocal atual.
+ *
+ * Ao voltar a cantar, contabilizamos nova tentativa.
  */
+const NEW_ATTEMPT_SILENCE_MS =
+    650;
+
+
 const ADVANCE_DELAY_MS =
-    500;
+    650;
+
+
+const NEXT_ROUND_DELAY_MS =
+    1200;
 
 
 /*
  * ============================================================
- * ELEMENTOS DA INTERFACE
+ * ELEMENTOS
  * ============================================================
  */
 
 const elements = {
+
+    configuration:
+        document.getElementById(
+            "configuracao"
+        ),
 
     exerciseButtons:
         Array.from(
             document.querySelectorAll(
                 ".botao-exercicio"
             )
+        ),
+
+    difficultyButtons:
+        Array.from(
+            document.querySelectorAll(
+                ".botao-dificuldade"
+            )
+        ),
+
+    roundCount:
+        document.getElementById(
+            "quantidadeRodadas"
+        ),
+
+    sessionStats:
+        document.getElementById(
+            "estatisticasSessao"
+        ),
+
+    sessionRound:
+        document.getElementById(
+            "estatisticaRodada"
+        ),
+
+    sessionHits:
+        document.getElementById(
+            "estatisticaAcertos"
+        ),
+
+    sessionAttempts:
+        document.getElementById(
+            "estatisticaTentativas"
+        ),
+
+    sessionScore:
+        document.getElementById(
+            "estatisticaPontuacao"
         ),
 
     title:
@@ -162,6 +172,11 @@ const elements = {
     targetOctave:
         document.getElementById(
             "oitavaAlvo"
+        ),
+
+    targetFrequency:
+        document.getElementById(
+            "frequenciaAlvo"
         ),
 
     listenButton:
@@ -194,9 +209,19 @@ const elements = {
             "indicador"
         ),
 
+    correctRange:
+        document.getElementById(
+            "faixaCorreta"
+        ),
+
     cents:
         document.getElementById(
             "cents"
+        ),
+
+    errorCents:
+        document.getElementById(
+            "erroCents"
         ),
 
     feedback:
@@ -214,16 +239,6 @@ const elements = {
             "barraProgresso"
         ),
 
-    targetFrequency:
-        document.getElementById(
-            "frequenciaAlvo"
-        ),
-
-    errorCents:
-        document.getElementById(
-            "erroCents"
-        ),
-
     signalLevel:
         document.getElementById(
             "nivelSinal"
@@ -237,6 +252,46 @@ const elements = {
     message:
         document.getElementById(
             "mensagem"
+        ),
+
+    resultPanel:
+        document.getElementById(
+            "resultadoSessao"
+        ),
+
+    finalScore:
+        document.getElementById(
+            "pontuacaoFinal"
+        ),
+
+    finalEvaluation:
+        document.getElementById(
+            "avaliacaoFinal"
+        ),
+
+    resultHits:
+        document.getElementById(
+            "resultadoAcertos"
+        ),
+
+    resultAttempts:
+        document.getElementById(
+            "resultadoTentativas"
+        ),
+
+    resultAccuracy:
+        document.getElementById(
+            "resultadoPrecisao"
+        ),
+
+    roundsList:
+        document.getElementById(
+            "listaRodadas"
+        ),
+
+    newSessionButton:
+        document.getElementById(
+            "botaoNovaSessao"
         )
 };
 
@@ -276,10 +331,18 @@ let selectedExerciseId =
     "single";
 
 
+let selectedDifficultyId =
+    "beginner";
+
+
 let currentExercise =
     getExercise(
         selectedExerciseId
     );
+
+
+let trainingSession =
+    null;
 
 
 let exerciseData =
@@ -290,11 +353,7 @@ let currentTargetIndex =
     0;
 
 
-let exerciseRunning =
-    false;
-
-
-let exerciseCompleted =
+let sessionRunning =
     false;
 
 
@@ -303,6 +362,10 @@ let referencePlaying =
 
 
 let advancingNote =
+    false;
+
+
+let advancingRound =
     false;
 
 
@@ -323,8 +386,33 @@ let lastValidPitchTime =
 
 
 /*
+ * Controle das tentativas.
+ */
+let attemptActive =
+    false;
+
+
+let lastVoiceTime =
+    0;
+
+
+let attemptsForCurrentTarget =
+    0;
+
+
+/*
+ * Durante o período correto,
+ * armazenamos erros absolutos em cents.
+ *
+ * Isso permite calcular a precisão da nota.
+ */
+let correctCentsSamples =
+    [];
+
+
+/*
  * ============================================================
- * SELEÇÃO DE EXERCÍCIO
+ * SELEÇÃO DO EXERCÍCIO
  * ============================================================
  */
 
@@ -333,10 +421,10 @@ elements.exerciseButtons.forEach(
 
         button.addEventListener(
             "click",
-            async () => {
+            () => {
 
                 if (
-                    exerciseRunning
+                    sessionRunning
                 ) {
                     return;
                 }
@@ -367,9 +455,51 @@ elements.exerciseButtons.forEach(
 
 
                 updateExerciseDescription();
+            }
+        );
+    }
+);
 
 
-                resetExerciseVisuals();
+/*
+ * ============================================================
+ * DIFICULDADE
+ * ============================================================
+ */
+
+elements.difficultyButtons.forEach(
+    button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                if (
+                    sessionRunning
+                ) {
+                    return;
+                }
+
+
+                selectedDifficultyId =
+                    button.dataset.difficulty;
+
+
+                elements.difficultyButtons
+                    .forEach(
+                        item =>
+                            item.classList.remove(
+                                "ativo"
+                            )
+                    );
+
+
+                button.classList.add(
+                    "ativo"
+                );
+
+
+                updateCorrectRangeVisual();
             }
         );
     }
@@ -387,14 +517,14 @@ elements.mainButton.addEventListener(
     async () => {
 
         if (
-            exerciseRunning
+            sessionRunning
         ) {
 
-            await stopExercise();
+            await stopSession();
 
         } else {
 
-            await startExercise();
+            await startSession();
         }
     }
 );
@@ -402,7 +532,42 @@ elements.mainButton.addEventListener(
 
 /*
  * ============================================================
- * BOTÃO DE OUVIR REFERÊNCIA
+ * NOVA SESSÃO
+ * ============================================================
+ */
+
+elements.newSessionButton.addEventListener(
+    "click",
+    () => {
+
+        elements.resultPanel
+            .classList
+            .add(
+                "oculto"
+            );
+
+
+        elements.configuration
+            .classList
+            .remove(
+                "oculto"
+            );
+
+
+        resetTrainingDisplay();
+
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+);
+
+
+/*
+ * ============================================================
+ * OUVIR NOTA
  * ============================================================
  */
 
@@ -425,125 +590,113 @@ elements.listenButton.addEventListener(
 
 /*
  * ============================================================
- * INICIAR EXERCÍCIO
+ * INICIAR SESSÃO
  * ============================================================
  */
 
-async function startExercise() {
+async function startSession() {
 
     elements.mainButton.disabled =
         true;
 
 
-    elements.message.className =
-        "mensagem";
-
-
-    elements.message.textContent =
-        "Preparando exercício...";
-
-
     try {
 
-        /*
-         * Monta novo exercício.
-         */
+        const totalRounds =
+            Number(
+                elements.roundCount.value
+            );
+
+
+        trainingSession =
+            new TrainingSession({
+
+                difficulty:
+                    selectedDifficultyId,
+
+                totalRounds
+            });
+
+
         currentExercise =
             getExercise(
                 selectedExerciseId
             );
 
 
-        exerciseData =
-            currentExercise.build();
-
-
-        currentTargetIndex =
-            0;
-
-
-        exerciseCompleted =
-            false;
-
-
-        advancingNote =
-            false;
-
-
-        holdStartTime =
-            null;
-
-
-        recentFrequencies =
-            [];
-
-
-        updateSequenceVisual();
-
-
-        updateTargetVisual();
-
-
-        /*
-         * Abre primeiro o contexto do gerador de som.
-         *
-         * Isso acontece dentro do clique do usuário,
-         * o que ajuda nos navegadores móveis.
-         */
-        await toneGenerator.ensureContext();
-
-
-        /*
-         * Ativa o microfone.
-         */
-        await microphone.start();
-
-
-        exerciseRunning =
+        sessionRunning =
             true;
 
 
-        lastValidPitchTime =
-            performance.now();
+        elements.resultPanel
+            .classList
+            .add(
+                "oculto"
+            );
 
 
-        updateRunningInterface();
+        elements.configuration
+            .classList
+            .add(
+                "oculto"
+            );
 
 
-        /*
-         * Toca a referência automaticamente.
-         *
-         * Durante a reprodução, a análise vocal continua
-         * bloqueada para não confundirmos o alto-falante
-         * com a voz do aluno.
-         */
-        await playExerciseReference();
+        elements.sessionStats
+            .classList
+            .remove(
+                "oculto"
+            );
+
+
+        await toneGenerator.ensureContext();
+
+
+        await microphone.start();
+
+
+        elements.microphoneState.textContent =
+            "● Microfone ativo";
+
+
+        elements.microphoneState
+            .classList
+            .add(
+                "ativo"
+            );
+
+
+        elements.mainButton.textContent =
+            "Interromper sessão";
+
+
+        elements.mainButton
+            .classList
+            .add(
+                "parar"
+            );
+
+
+        updateCorrectRangeVisual();
+
+
+        updateSessionStats();
+
+
+        await startRound();
 
 
         if (
-            !exerciseRunning
+            sessionRunning
         ) {
-            return;
+
+            processAudio();
         }
-
-
-        setFeedback(
-            "Agora é sua vez. Cante a nota indicada.",
-            "neutro"
-        );
-
-
-        elements.message.textContent =
-            "Cante uma vogal sustentada, como “aaaa”.";
-
-
-        processAudio();
 
 
     } catch (error) {
 
         console.error(
-            "Erro ao iniciar exercício:",
             error
         );
 
@@ -560,18 +713,10 @@ async function startExercise() {
             elements.message.textContent =
                 "A permissão do microfone foi negada.";
 
-        } else if (
-            error.name ===
-            "NotFoundError"
-        ) {
-
-            elements.message.textContent =
-                "Nenhum microfone foi encontrado.";
-
         } else {
 
             elements.message.textContent =
-                "Não foi possível iniciar o exercício: " +
+                "Não foi possível iniciar a sessão: " +
                 error.message;
         }
 
@@ -587,20 +732,52 @@ async function startExercise() {
 
 /*
  * ============================================================
- * PARAR EXERCÍCIO
+ * NOVA RODADA
  * ============================================================
  */
 
-async function stopExercise() {
+async function startRound() {
 
-    elements.mainButton.disabled =
+    if (
+        !sessionRunning
+    ) {
+        return;
+    }
+
+
+    advancingRound =
         true;
 
 
-    await forceStop();
+    exerciseData =
+        currentExercise.build();
 
 
-    resetExerciseVisuals();
+    currentTargetIndex =
+        0;
+
+
+    resetCurrentTargetState();
+
+
+    updateTargetVisual();
+
+
+    updateSequenceVisual();
+
+
+    updateProgressRaw(
+        0
+    );
+
+
+    updateSessionStats();
+
+
+    setFeedback(
+        `Rodada ${trainingSession.currentRound} de ${trainingSession.totalRounds}. Ouça com atenção.`,
+        "neutro"
+    );
 
 
     elements.message.className =
@@ -608,84 +785,48 @@ async function stopExercise() {
 
 
     elements.message.textContent =
-        "Exercício interrompido.";
+        "A referência será tocada antes de você cantar.";
 
 
-    elements.mainButton.disabled =
-        false;
-}
-
-
-/*
- * Encerramento interno.
- */
-async function forceStop() {
-
-    exerciseRunning =
-        false;
-
-
-    referencePlaying =
-        false;
-
-
-    advancingNote =
-        false;
-
-
-    holdStartTime =
-        null;
+    await playExerciseReference();
 
 
     if (
-        animationFrameId !==
-        null
-    ) {
-
-        cancelAnimationFrame(
-            animationFrameId
-        );
-
-
-        animationFrameId =
-            null;
-    }
-
-
-    await microphone.stop();
-
-
-    recentFrequencies =
-        [];
-
-
-    updateStoppedInterface();
-}
-
-
-/*
- * ============================================================
- * REFERÊNCIA SONORA
- * ============================================================
- */
-
-async function playExerciseReference() {
-
-    if (
-        !exerciseData
+        !sessionRunning
     ) {
         return;
     }
 
 
-    referencePlaying =
-        true;
-
-
     setFeedback(
-        "Ouça com atenção...",
+        "Agora é sua vez. Cante a nota indicada.",
         "neutro"
     );
+
+
+    elements.message.textContent =
+        "Cante usando uma vogal sustentada, como “aaaa”.";
+
+
+    advancingRound =
+        false;
+
+
+    lastValidPitchTime =
+        performance.now();
+}
+
+
+/*
+ * ============================================================
+ * REFERÊNCIA
+ * ============================================================
+ */
+
+async function playExerciseReference() {
+
+    referencePlaying =
+        true;
 
 
     clearDetectedPitch();
@@ -715,10 +856,6 @@ async function playExerciseReference() {
         }
 
 
-        /*
-         * Pequena pausa para que o som do alto-falante
-         * desapareça antes de começarmos a avaliar a voz.
-         */
         await wait(
             300
         );
@@ -729,24 +866,27 @@ async function playExerciseReference() {
             false;
 
 
-        lastValidPitchTime =
+        attemptActive =
+            false;
+
+
+        lastVoiceTime =
             performance.now();
     }
 }
 
 
 /*
- * Toca somente a nota-alvo atual.
+ * Referência da nota atual.
  */
 async function playCurrentReference() {
 
-    const targetMidi =
+    const midi =
         getCurrentTargetMidi();
 
 
     if (
-        targetMidi ===
-        null
+        midi === null
     ) {
         return;
     }
@@ -756,8 +896,7 @@ async function playCurrentReference() {
         true;
 
 
-    const previousFeedback =
-        elements.feedback.textContent;
+    clearDetectedPitch();
 
 
     setFeedback(
@@ -766,13 +905,10 @@ async function playCurrentReference() {
     );
 
 
-    clearDetectedPitch();
-
-
     try {
 
         await toneGenerator.playNote(
-            targetMidi,
+            midi,
             900
         );
 
@@ -787,52 +923,46 @@ async function playCurrentReference() {
             false;
 
 
+        attemptActive =
+            false;
+
+
+        lastVoiceTime =
+            performance.now();
+
+
         if (
-            exerciseRunning
+            sessionRunning
         ) {
 
             setFeedback(
                 "Sua vez. Reproduza a nota.",
                 "neutro"
             );
-
-        } else {
-
-            setFeedback(
-                previousFeedback,
-                "neutro"
-            );
         }
-
-
-        lastValidPitchTime =
-            performance.now();
     }
 }
 
 
 /*
  * ============================================================
- * PROCESSAMENTO DE ÁUDIO
+ * LOOP DE ÁUDIO
  * ============================================================
  */
 
 function processAudio() {
 
     if (
-        !exerciseRunning
+        !sessionRunning
     ) {
         return;
     }
 
 
-    /*
-     * Enquanto a referência toca,
-     * não avaliamos o microfone.
-     */
     if (
         referencePlaying ||
-        advancingNote
+        advancingNote ||
+        advancingRound
     ) {
 
         scheduleNextFrame();
@@ -845,7 +975,9 @@ function processAudio() {
         microphone.getTimeDomainData();
 
 
-    if (!buffer) {
+    if (
+        !buffer
+    ) {
 
         scheduleNextFrame();
 
@@ -869,7 +1001,7 @@ function processAudio() {
         MIN_RMS
     ) {
 
-        handleNoPitch();
+        handleSilence();
 
         scheduleNextFrame();
 
@@ -898,52 +1030,71 @@ function processAudio() {
     }
 
 
-    const smoothedFrequency =
+    lastValidPitchTime =
+        performance.now();
+
+
+    lastVoiceTime =
+        performance.now();
+
+
+    /*
+     * Se ainda não havia tentativa ativa,
+     * começamos uma nova.
+     */
+    if (
+        !attemptActive
+    ) {
+
+        attemptActive =
+            true;
+
+
+        attemptsForCurrentTarget++;
+
+
+        trainingSession.registerAttempt();
+
+
+        updateSessionStats();
+    }
+
+
+    const frequency =
         smoothFrequency(
             detection.frequency
         );
 
 
     if (
-        !smoothedFrequency
+        !frequency
     ) {
-
-        handleNoPitch();
 
         scheduleNextFrame();
 
         return;
     }
-
-
-    lastValidPitchTime =
-        performance.now();
 
 
     const musicalData =
         analyzeFrequency(
-            smoothedFrequency
+            frequency
         );
 
 
     if (
-        !musicalData
+        musicalData
     ) {
 
-        scheduleNextFrame();
+        updateDetectedPitch(
+            musicalData
+        );
 
-        return;
+
+        evaluatePitch(
+            frequency
+        );
     }
-
-
-    updateDetectedPitch(
-        musicalData
-    );
-
-
-    evaluatePitch(
-        smoothedFrequency
-    );
 
 
     scheduleNextFrame();
@@ -965,8 +1116,7 @@ function evaluatePitch(
 
 
     if (
-        targetMidi ===
-        null
+        targetMidi === null
     ) {
         return;
     }
@@ -978,19 +1128,6 @@ function evaluatePitch(
         );
 
 
-    /*
-     * Esta diferença é calculada diretamente
-     * em relação à nota-alvo.
-     *
-     * Portanto, se o aluno cantar uma nota completamente
-     * diferente, veremos algo como:
-     *
-     * -200 cents
-     * +700 cents
-     * -1200 cents
-     *
-     * etc.
-     */
     const centsDifference =
         1200 *
         Math.log2(
@@ -1010,12 +1147,27 @@ function evaluatePitch(
         );
 
 
+    const tolerance =
+        trainingSession
+            .difficulty
+            .toleranceCents;
+
+
+    const nearTolerance =
+        trainingSession
+            .difficulty
+            .nearToleranceCents;
+
+
     /*
-     * NOTA CORRETA
+     * ========================================================
+     * CORRETO
+     * ========================================================
      */
+
     if (
         absoluteDifference <=
-        CORRECT_TOLERANCE_CENTS
+        tolerance
     ) {
 
         if (
@@ -1025,7 +1177,16 @@ function evaluatePitch(
 
             holdStartTime =
                 performance.now();
+
+
+            correctCentsSamples =
+                [];
         }
+
+
+        correctCentsSamples.push(
+            absoluteDifference
+        );
 
 
         const heldMs =
@@ -1034,7 +1195,8 @@ function evaluatePitch(
 
 
         const requiredMs =
-            currentExercise.requiredHoldMs;
+            currentExercise
+                .requiredHoldMs;
 
 
         const localProgress =
@@ -1074,7 +1236,7 @@ function evaluatePitch(
         } else {
 
             setFeedback(
-                "Nota correta! Continue...",
+                "Correto! Mantenha a afinação...",
                 "correto"
             );
         }
@@ -1094,11 +1256,14 @@ function evaluatePitch(
 
 
     /*
-     * Saiu da faixa correta:
-     * o tempo de sustentação reinicia.
+     * Saiu da faixa correta.
      */
     holdStartTime =
         null;
+
+
+    correctCentsSamples =
+        [];
 
 
     updateExerciseProgress(
@@ -1107,11 +1272,14 @@ function evaluatePitch(
 
 
     /*
-     * NOTA PRÓXIMA
+     * ========================================================
+     * PRÓXIMO
+     * ========================================================
      */
+
     if (
         absoluteDifference <=
-        NEAR_TOLERANCE_CENTS
+        nearTolerance
     ) {
 
         if (
@@ -1138,8 +1306,11 @@ function evaluatePitch(
 
 
     /*
-     * NOTA MAIS DISTANTE
+     * ========================================================
+     * DISTANTE
+     * ========================================================
      */
+
     if (
         centsDifference <
         0
@@ -1162,7 +1333,7 @@ function evaluatePitch(
 
 /*
  * ============================================================
- * CONCLUSÃO DA NOTA ATUAL
+ * NOTA CONCLUÍDA
  * ============================================================
  */
 
@@ -1170,7 +1341,7 @@ async function completeCurrentTarget() {
 
     if (
         advancingNote ||
-        exerciseCompleted
+        advancingRound
     ) {
         return;
     }
@@ -1184,31 +1355,50 @@ async function completeCurrentTarget() {
         null;
 
 
+    const averageAbsCents =
+        calculateAverage(
+            correctCentsSamples
+        );
+
+
+    const noteScore =
+        trainingSession.registerHit({
+
+            averageAbsCents,
+
+            attemptsForTarget:
+                Math.max(
+                    1,
+                    attemptsForCurrentTarget
+                )
+        });
+
+
+    updateSessionStats();
+
+
     markCurrentSequenceNoteCompleted();
 
 
-    const isLastNote =
+    setFeedback(
+        `✓ Nota concluída — ${noteScore} pontos`,
+        "correto"
+    );
+
+
+    const isLastTarget =
         currentTargetIndex >=
         exerciseData.notes.length - 1;
 
 
-    /*
-     * Exercício terminado.
-     */
     if (
-        isLastNote
+        isLastTarget
     ) {
 
-        await completeExercise();
+        await finishCurrentRound();
 
         return;
     }
-
-
-    setFeedback(
-        "Muito bem! Próxima nota...",
-        "correto"
-    );
 
 
     await wait(
@@ -1217,7 +1407,7 @@ async function completeCurrentTarget() {
 
 
     if (
-        !exerciseRunning
+        !sessionRunning
     ) {
         return;
     }
@@ -1226,8 +1416,7 @@ async function completeCurrentTarget() {
     currentTargetIndex++;
 
 
-    recentFrequencies =
-        [];
+    resetCurrentTargetState();
 
 
     updateTargetVisual();
@@ -1240,48 +1429,91 @@ async function completeCurrentTarget() {
 
 
     setFeedback(
-        "Agora cante a próxima nota.",
+        "Próxima nota.",
         "neutro"
     );
 
 
-    /*
-     * Tocamos a nova nota isoladamente,
-     * para ajudar nesta fase inicial.
-     *
-     * Mais tarde poderemos criar um modo
-     * "memória", onde a sequência é ouvida
-     * somente no início.
-     */
     await playCurrentReference();
 
 
     advancingNote =
         false;
-
-
-    lastValidPitchTime =
-        performance.now();
 }
 
 
 /*
  * ============================================================
- * CONCLUSÃO DO EXERCÍCIO
+ * RODADA CONCLUÍDA
  * ============================================================
  */
 
-async function completeExercise() {
+async function finishCurrentRound() {
 
-    exerciseCompleted =
+    advancingRound =
         true;
 
 
-    exerciseRunning =
+    const roundResult =
+        trainingSession.finishRound();
+
+
+    updateSessionStats();
+
+
+    setFeedback(
+        `✓ Rodada concluída — ${roundResult.score} pontos`,
+        "correto"
+    );
+
+
+    if (
+        trainingSession.finished
+    ) {
+
+        await finishSession();
+
+        return;
+    }
+
+
+    await wait(
+        NEXT_ROUND_DELAY_MS
+    );
+
+
+    if (
+        !sessionRunning
+    ) {
+        return;
+    }
+
+
+    advancingNote =
+        false;
+
+
+    await startRound();
+}
+
+
+/*
+ * ============================================================
+ * FINAL DA SESSÃO
+ * ============================================================
+ */
+
+async function finishSession() {
+
+    sessionRunning =
         false;
 
 
     advancingNote =
+        false;
+
+
+    advancingRound =
         false;
 
 
@@ -1303,25 +1535,6 @@ async function completeExercise() {
     await microphone.stop();
 
 
-    updateProgressRaw(
-        1
-    );
-
-
-    setFeedback(
-        "✓ Exercício concluído!",
-        "correto"
-    );
-
-
-    elements.message.className =
-        "mensagem";
-
-
-    elements.message.textContent =
-        "Excelente. Pressione o botão para gerar um novo exercício.";
-
-
     elements.microphoneState.textContent =
         "Microfone desligado";
 
@@ -1334,7 +1547,11 @@ async function completeExercise() {
 
 
     elements.mainButton.textContent =
-        "Novo exercício";
+        "Sessão concluída";
+
+
+    elements.mainButton.disabled =
+        true;
 
 
     elements.mainButton
@@ -1344,87 +1561,291 @@ async function completeExercise() {
         );
 
 
-    elements.listenButton.disabled =
-        false;
+    updateProgressRaw(
+        1
+    );
+
+
+    setFeedback(
+        "✓ Sessão concluída!",
+        "correto"
+    );
+
+
+    showSessionResults();
 }
 
 
 /*
  * ============================================================
- * PROGRESSO
+ * RESULTADOS
  * ============================================================
  */
 
-function updateExerciseProgress(
-    currentNoteProgress
+function showSessionResults() {
+
+    const summary =
+        trainingSession.getSummary();
+
+
+    elements.finalScore.textContent =
+        summary.score;
+
+
+    elements.resultHits.textContent =
+        summary.hits;
+
+
+    elements.resultAttempts.textContent =
+        summary.attempts;
+
+
+    elements.resultAccuracy.textContent =
+        `${summary.averageCents.toFixed(1)} cents`;
+
+
+    elements.finalEvaluation.textContent =
+        getEvaluationText(
+            summary.score
+        );
+
+
+    elements.roundsList.innerHTML =
+        "";
+
+
+    summary.rounds.forEach(
+        round => {
+
+            const item =
+                document.createElement(
+                    "div"
+                );
+
+
+            item.className =
+                "resultado-rodada";
+
+
+            const left =
+                document.createElement(
+                    "div"
+                );
+
+
+            const title =
+                document.createElement(
+                    "strong"
+                );
+
+
+            title.textContent =
+                `Rodada ${round.round}`;
+
+
+            const info =
+                document.createElement(
+                    "div"
+                );
+
+
+            info.className =
+                "resultado-rodada-info";
+
+
+            info.textContent =
+                `${round.hits} acertos · ${round.attempts} tentativas`;
+
+
+            left.appendChild(
+                title
+            );
+
+
+            left.appendChild(
+                info
+            );
+
+
+            const score =
+                document.createElement(
+                    "span"
+                );
+
+
+            score.className =
+                "resultado-rodada-pontos";
+
+
+            score.textContent =
+                `${round.score} pts`;
+
+
+            item.appendChild(
+                left
+            );
+
+
+            item.appendChild(
+                score
+            );
+
+
+            elements.roundsList.appendChild(
+                item
+            );
+        }
+    );
+
+
+    elements.resultPanel
+        .classList
+        .remove(
+            "oculto"
+        );
+
+
+    setTimeout(
+        () => {
+
+            elements.resultPanel.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        },
+        150
+    );
+}
+
+
+function getEvaluationText(
+    score
 ) {
 
     if (
-        !exerciseData
+        score >=
+        95
+    ) {
+
+        return (
+            "Excelente controle de afinação. " +
+            "Você permaneceu muito próximo das frequências-alvo."
+        );
+    }
+
+
+    if (
+        score >=
+        85
+    ) {
+
+        return (
+            "Muito bom. A afinação esteve consistente na maior parte do treino."
+        );
+    }
+
+
+    if (
+        score >=
+        70
+    ) {
+
+        return (
+            "Bom resultado. Continue treinando para encontrar e estabilizar as notas com mais precisão."
+        );
+    }
+
+
+    if (
+        score >=
+        55
+    ) {
+
+        return (
+            "Você conseguiu completar o treino. Tente repetir a sessão prestando atenção às indicações de subir ou descer a voz."
+        );
+    }
+
+
+    return (
+        "Este exercício ainda está exigente. Vale repetir em uma dificuldade menor e trabalhar cada nota com calma."
+    );
+}
+
+
+/*
+ * ============================================================
+ * ESTATÍSTICAS EM TEMPO REAL
+ * ============================================================
+ */
+
+function updateSessionStats() {
+
+    if (
+        !trainingSession
     ) {
         return;
     }
 
 
-    const totalNotes =
-        exerciseData.notes.length;
+    elements.sessionRound.textContent =
+        `${trainingSession.currentRound} / ${trainingSession.totalRounds}`;
 
 
-    /*
-     * Quantidade de notas completas
-     * antes da nota atual.
-     */
-    const completedNotes =
-        currentTargetIndex;
+    elements.sessionHits.textContent =
+        trainingSession.totalHits;
 
 
-    const totalProgress =
-        (
-            completedNotes +
-            currentNoteProgress
-        ) /
-        totalNotes;
+    elements.sessionAttempts.textContent =
+        trainingSession.totalAttempts;
 
 
-    updateProgressRaw(
-        totalProgress
-    );
-}
-
-
-function updateProgressRaw(
-    progress
-) {
-
-    const limited =
-        Math.max(
-            0,
-            Math.min(
-                1,
-                progress
-            )
-        );
-
-
-    const percentage =
-        Math.round(
-            limited *
-            100
-        );
-
-
-    elements.progressBar.style.width =
-        `${percentage}%`;
-
-
-    elements.progressText.textContent =
-        `${percentage}%`;
+    elements.sessionScore.textContent =
+        trainingSession.getScore();
 }
 
 
 /*
  * ============================================================
- * ALVO ATUAL
+ * ESTADO DO ALVO
+ * ============================================================
+ */
+
+function resetCurrentTargetState() {
+
+    holdStartTime =
+        null;
+
+
+    recentFrequencies =
+        [];
+
+
+    correctCentsSamples =
+        [];
+
+
+    attemptActive =
+        false;
+
+
+    attemptsForCurrentTarget =
+        0;
+
+
+    lastVoiceTime =
+        performance.now();
+
+
+    lastValidPitchTime =
+        performance.now();
+}
+
+
+/*
+ * ============================================================
+ * ALVO
  * ============================================================
  */
 
@@ -1436,6 +1857,7 @@ function getCurrentTargetMidi() {
         currentTargetIndex >=
         exerciseData.notes.length
     ) {
+
         return null;
     }
 
@@ -1499,7 +1921,7 @@ function updateTargetVisual() {
 
 /*
  * ============================================================
- * VISUAL DA SEQUÊNCIA
+ * SEQUÊNCIA VISUAL
  * ============================================================
  */
 
@@ -1511,8 +1933,10 @@ function updateSequenceVisual() {
 
     if (
         !exerciseData ||
-        exerciseData.notes.length <= 1
+        exerciseData.notes.length <=
+        1
     ) {
+
         return;
     }
 
@@ -1564,19 +1988,15 @@ function updateSequenceVisual() {
 
 function markCurrentSequenceNoteCompleted() {
 
-    const children =
-        Array.from(
-            elements.sequence.children
-        );
-
-
     const item =
-        children[
+        elements.sequence.children[
             currentTargetIndex
         ];
 
 
-    if (item) {
+    if (
+        item
+    ) {
 
         item.classList.remove(
             "atual"
@@ -1592,7 +2012,7 @@ function markCurrentSequenceNoteCompleted() {
 
 /*
  * ============================================================
- * LEITURA DETECTADA
+ * NOTA DETECTADA
  * ============================================================
  */
 
@@ -1615,7 +2035,7 @@ function updateDetectedPitch(
 
 /*
  * ============================================================
- * MEDIDOR DE DISTÂNCIA DA NOTA-ALVO
+ * MEDIDOR
  * ============================================================
  */
 
@@ -1623,14 +2043,6 @@ function updateTargetMeter(
     cents
 ) {
 
-    /*
-     * Nosso medidor visual vai de:
-     *
-     * -100 cents → extremo esquerdo
-     * +100 cents → extremo direito
-     *
-     * Valores maiores são apenas limitados visualmente.
-     */
     const limited =
         Math.max(
             -100,
@@ -1668,19 +2080,25 @@ function updateTargetMeter(
         `${sign}${rounded} cents`;
 
 
+    const tolerance =
+        trainingSession
+            .difficulty
+            .toleranceCents;
+
+
+    const nearTolerance =
+        trainingSession
+            .difficulty
+            .nearToleranceCents;
+
+
     elements.cents.className =
         "cents";
 
 
-    const absolute =
-        Math.abs(
-            cents
-        );
-
-
     if (
-        absolute <=
-        CORRECT_TOLERANCE_CENTS
+        Math.abs(cents) <=
+        tolerance
     ) {
 
         elements.cents.textContent =
@@ -1692,8 +2110,8 @@ function updateTargetMeter(
         );
 
     } else if (
-        absolute <=
-        NEAR_TOLERANCE_CENTS
+        Math.abs(cents) <=
+        nearTolerance
     ) {
 
         elements.cents.textContent =
@@ -1718,6 +2136,115 @@ function updateTargetMeter(
 
 
 /*
+ * Ajusta visualmente a largura da zona correta.
+ *
+ * O medidor cobre de -100 a +100 cents.
+ */
+function updateCorrectRangeVisual() {
+
+    const difficulty =
+        trainingSession
+            ? trainingSession.difficulty
+            : DIFFICULTIES[
+                selectedDifficultyId
+            ];
+
+
+    const tolerance =
+        difficulty.toleranceCents;
+
+
+    const left =
+        50 -
+        (
+            tolerance /
+            2
+        );
+
+
+    const width =
+        tolerance;
+
+
+    elements.correctRange.style.left =
+        `${left}%`;
+
+
+    elements.correctRange.style.width =
+        `${width}%`;
+}
+
+
+/*
+ * ============================================================
+ * PROGRESSO
+ * ============================================================
+ */
+
+function updateExerciseProgress(
+    localProgress
+) {
+
+    if (
+        !exerciseData
+    ) {
+        return;
+    }
+
+
+    const completed =
+        currentTargetIndex;
+
+
+    const total =
+        exerciseData.notes.length;
+
+
+    const totalProgress =
+        (
+            completed +
+            localProgress
+        ) /
+        total;
+
+
+    updateProgressRaw(
+        totalProgress
+    );
+}
+
+
+function updateProgressRaw(
+    progress
+) {
+
+    const value =
+        Math.max(
+            0,
+            Math.min(
+                1,
+                progress
+            )
+        );
+
+
+    const percentage =
+        Math.round(
+            value *
+            100
+        );
+
+
+    elements.progressBar.style.width =
+        `${percentage}%`;
+
+
+    elements.progressText.textContent =
+        `${percentage}%`;
+}
+
+
+/*
  * ============================================================
  * SUAVIZAÇÃO
  * ============================================================
@@ -1728,9 +2255,13 @@ function smoothFrequency(
 ) {
 
     if (
-        !Number.isFinite(frequency) ||
-        frequency <= 0
+        !Number.isFinite(
+            frequency
+        ) ||
+        frequency <=
+        0
     ) {
+
         return null;
     }
 
@@ -1760,15 +2291,20 @@ function smoothFrequency(
 
     const middle =
         Math.floor(
-            sorted.length / 2
+            sorted.length /
+            2
         );
 
 
     if (
-        sorted.length % 2 === 1
+        sorted.length %
+        2 ===
+        1
     ) {
 
-        return sorted[middle];
+        return sorted[
+            middle
+        ];
     }
 
 
@@ -1781,7 +2317,86 @@ function smoothFrequency(
 
 /*
  * ============================================================
- * SINAL
+ * SILÊNCIO
+ * ============================================================
+ */
+
+function handleSilence() {
+
+    holdStartTime =
+        null;
+
+
+    correctCentsSamples =
+        [];
+
+
+    updateExerciseProgress(
+        0
+    );
+
+
+    const silenceDuration =
+        performance.now() -
+        lastVoiceTime;
+
+
+    if (
+        attemptActive &&
+        silenceDuration >=
+        NEW_ATTEMPT_SILENCE_MS
+    ) {
+
+        attemptActive =
+            false;
+    }
+
+
+    handleNoPitch();
+}
+
+
+function handleNoPitch() {
+
+    const elapsed =
+        performance.now() -
+        lastValidPitchTime;
+
+
+    if (
+        elapsed <
+        NO_PITCH_TIMEOUT
+    ) {
+
+        return;
+    }
+
+
+    recentFrequencies =
+        [];
+
+
+    clearDetectedPitch();
+
+
+    if (
+        sessionRunning &&
+        !referencePlaying &&
+        !advancingNote &&
+        !advancingRound
+    ) {
+
+        setFeedback(
+            "Cante a nota indicada.",
+            "neutro"
+        );
+    }
+}
+
+
+/*
+ * ============================================================
+ * NÍVEL DO SINAL
  * ============================================================
  */
 
@@ -1838,68 +2453,6 @@ function updateSignalLevel(
 
 /*
  * ============================================================
- * AUSÊNCIA DE PITCH
- * ============================================================
- */
-
-function handleNoPitch() {
-
-    holdStartTime =
-        null;
-
-
-    /*
-     * Se a pessoa parar de cantar durante a sustentação,
-     * o tempo da nota atual reinicia.
-     */
-    if (
-        exerciseRunning &&
-        !referencePlaying &&
-        !advancingNote
-    ) {
-
-        updateExerciseProgress(
-            0
-        );
-    }
-
-
-    const elapsed =
-        performance.now() -
-        lastValidPitchTime;
-
-
-    if (
-        elapsed <
-        NO_PITCH_TIMEOUT
-    ) {
-        return;
-    }
-
-
-    recentFrequencies =
-        [];
-
-
-    clearDetectedPitch();
-
-
-    if (
-        exerciseRunning &&
-        !referencePlaying &&
-        !advancingNote
-    ) {
-
-        setFeedback(
-            "Cante a nota indicada.",
-            "neutro"
-        );
-    }
-}
-
-
-/*
- * ============================================================
  * FEEDBACK
  * ============================================================
  */
@@ -1920,90 +2473,7 @@ function setFeedback(
 
 /*
  * ============================================================
- * INTERFACE DE EXECUÇÃO
- * ============================================================
- */
-
-function updateRunningInterface() {
-
-    elements.microphoneState.textContent =
-        "● Microfone ativo";
-
-
-    elements.microphoneState
-        .classList
-        .add(
-            "ativo"
-        );
-
-
-    elements.mainButton.textContent =
-        "Interromper exercício";
-
-
-    elements.mainButton
-        .classList
-        .add(
-            "parar"
-        );
-
-
-    elements.listenButton.disabled =
-        false;
-
-
-    /*
-     * Bloqueia troca de exercício durante uma sessão.
-     */
-    elements.exerciseButtons
-        .forEach(
-            button => {
-
-                button.disabled =
-                    true;
-            }
-        );
-}
-
-
-function updateStoppedInterface() {
-
-    elements.microphoneState.textContent =
-        "Microfone desligado";
-
-
-    elements.microphoneState
-        .classList
-        .remove(
-            "ativo"
-        );
-
-
-    elements.mainButton.textContent =
-        "Iniciar exercício";
-
-
-    elements.mainButton
-        .classList
-        .remove(
-            "parar"
-        );
-
-
-    elements.exerciseButtons
-        .forEach(
-            button => {
-
-                button.disabled =
-                    false;
-            }
-        );
-}
-
-
-/*
- * ============================================================
- * RESET
+ * RESET VISUAL
  * ============================================================
  */
 
@@ -2038,26 +2508,29 @@ function clearDetectedPitch() {
 }
 
 
-function resetExerciseVisuals() {
+function resetTrainingDisplay() {
+
+    trainingSession =
+        null;
+
 
     exerciseData =
         null;
+
+
+    sessionRunning =
+        false;
 
 
     currentTargetIndex =
         0;
 
 
-    exerciseCompleted =
-        false;
-
-
-    holdStartTime =
-        null;
-
-
-    recentFrequencies =
-        [];
+    elements.sessionStats
+        .classList
+        .add(
+            "oculto"
+        );
 
 
     elements.targetNote.textContent =
@@ -2084,6 +2557,28 @@ function resetExerciseVisuals() {
         true;
 
 
+    elements.mainButton.disabled =
+        false;
+
+
+    elements.mainButton.textContent =
+        "Iniciar sessão";
+
+
+    elements.mainButton.classList.remove(
+        "parar"
+    );
+
+
+    elements.microphoneState.textContent =
+        "Microfone desligado";
+
+
+    elements.microphoneState.classList.remove(
+        "ativo"
+    );
+
+
     clearDetectedPitch();
 
 
@@ -2093,22 +2588,118 @@ function resetExerciseVisuals() {
 
 
     setFeedback(
-        "Pressione “Iniciar exercício” para começar.",
+        "Configure a sessão e pressione “Iniciar sessão”.",
         "neutro"
     );
 
 
-    updateStoppedInterface();
+    elements.message.className =
+        "mensagem";
+
+
+    elements.message.textContent =
+        "Escolha o exercício, a dificuldade e a quantidade de rodadas.";
+
+
+    updateCorrectRangeVisual();
 }
 
 
 /*
  * ============================================================
- * DESCRIÇÃO DO EXERCÍCIO
+ * PARAR MANUALMENTE
+ * ============================================================
+ */
+
+async function stopSession() {
+
+    elements.mainButton.disabled =
+        true;
+
+
+    await forceStop();
+
+
+    elements.configuration
+        .classList
+        .remove(
+            "oculto"
+        );
+
+
+    elements.sessionStats
+        .classList
+        .add(
+            "oculto"
+        );
+
+
+    resetTrainingDisplay();
+
+
+    elements.message.textContent =
+        "Sessão interrompida.";
+
+
+    elements.mainButton.disabled =
+        false;
+}
+
+
+async function forceStop() {
+
+    sessionRunning =
+        false;
+
+
+    referencePlaying =
+        false;
+
+
+    advancingNote =
+        false;
+
+
+    advancingRound =
+        false;
+
+
+    holdStartTime =
+        null;
+
+
+    if (
+        animationFrameId !==
+        null
+    ) {
+
+        cancelAnimationFrame(
+            animationFrameId
+        );
+
+
+        animationFrameId =
+            null;
+    }
+
+
+    await microphone.stop();
+}
+
+
+/*
+ * ============================================================
+ * DESCRIÇÃO
  * ============================================================
  */
 
 function updateExerciseDescription() {
+
+    currentExercise =
+        getExercise(
+            selectedExerciseId
+        );
+
 
     elements.title.textContent =
         currentExercise.title;
@@ -2121,9 +2712,34 @@ function updateExerciseDescription() {
 
 /*
  * ============================================================
- * PRÓXIMO FRAME
+ * UTILITÁRIOS
  * ============================================================
  */
+
+function calculateAverage(
+    values
+) {
+
+    if (
+        !values ||
+        values.length ===
+        0
+    ) {
+
+        return 0;
+    }
+
+
+    return (
+        values.reduce(
+            (sum, value) =>
+                sum + value,
+            0
+        ) /
+        values.length
+    );
+}
+
 
 function scheduleNextFrame() {
 
@@ -2134,19 +2750,15 @@ function scheduleNextFrame() {
 }
 
 
-/*
- * ============================================================
- * UTILITÁRIO
- * ============================================================
- */
-
-function wait(ms) {
+function wait(
+    milliseconds
+) {
 
     return new Promise(
         resolve =>
             setTimeout(
                 resolve,
-                ms
+                milliseconds
             )
     );
 }
@@ -2154,7 +2766,7 @@ function wait(ms) {
 
 /*
  * ============================================================
- * ENCERRAMENTO DA PÁGINA
+ * SAÍDA DA PÁGINA
  * ============================================================
  */
 
@@ -2162,13 +2774,7 @@ window.addEventListener(
     "pagehide",
     () => {
 
-        if (
-            microphone.running
-        ) {
-
-            microphone.stop();
-        }
-
+        microphone.stop();
 
         toneGenerator.close();
     }
@@ -2177,10 +2783,10 @@ window.addEventListener(
 
 /*
  * ============================================================
- * ESTADO INICIAL
+ * INICIALIZAÇÃO
  * ============================================================
  */
 
 updateExerciseDescription();
 
-resetExerciseVisuals();
+resetTrainingDisplay();
