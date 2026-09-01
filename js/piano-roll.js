@@ -3,15 +3,35 @@
  * piano-roll.js
  * ============================================================
  *
- * Renderizador Canvas do piano roll.
+ * Renderizador visual do modo de melodia contínua.
  *
  * Responsabilidades:
  *
- * - desenhar linhas das notas;
- * - desenhar barras da melodia;
- * - fazer o tempo "andar";
- * - desenhar playhead;
- * - desenhar trajetória vocal.
+ * - desenhar a grade musical;
+ * - desenhar as barras das notas;
+ * - movimentar a melodia no tempo;
+ * - destacar a barra atualmente ativa;
+ * - desenhar o playhead;
+ * - desenhar o traçado da voz;
+ * - receber o resultado individual de cada nota;
+ * - colorir barras concluídas conforme o desempenho.
+ *
+ * Estados de uma barra:
+ *
+ * pending
+ *     nota ainda não avaliada
+ *
+ * excellent
+ *     bom desempenho
+ *
+ * partial
+ *     desempenho parcial
+ *
+ * error
+ *     nota cantada, mas com desempenho insuficiente
+ *
+ * missed
+ *     nenhuma voz válida detectada naquela nota
  *
  * ============================================================
  */
@@ -29,6 +49,14 @@ export class PianoRoll {
         canvas
     ) {
 
+        if (!canvas) {
+
+            throw new Error(
+                "Canvas do piano roll não encontrado."
+            );
+        }
+
+
         this.canvas =
             canvas;
 
@@ -39,6 +67,20 @@ export class PianoRoll {
             );
 
 
+        if (!this.ctx) {
+
+            throw new Error(
+                "Não foi possível criar o contexto 2D do piano roll."
+            );
+        }
+
+
+        /*
+         * ====================================================
+         * ESTADO PRINCIPAL
+         * ====================================================
+         */
+
         this.melody =
             null;
 
@@ -48,27 +90,31 @@ export class PianoRoll {
 
 
         /*
-         * Quantos segundos ficam visíveis
-         * horizontalmente.
+         * Quantos segundos da música ficam visíveis
+         * horizontalmente ao mesmo tempo.
          */
         this.visibleSeconds =
             6;
 
 
         /*
-         * Posição horizontal do playhead.
+         * O playhead fica em 35% da largura.
          *
-         * 0.35 significa 35% da largura.
+         * Assim conseguimos enxergar:
          *
-         * Assim vemos:
-         *
-         * notas já cantadas à esquerda
-         * e próximas notas à direita.
+         * passado à esquerda;
+         * futuro à direita.
          */
         this.playheadRatio =
             0.35;
 
 
+        /*
+         * Limites verticais iniciais.
+         *
+         * Eles serão recalculados quando
+         * uma melodia for carregada.
+         */
         this.minMidi =
             48;
 
@@ -78,35 +124,113 @@ export class PianoRoll {
 
 
         /*
-         * Histórico da voz:
+         * Histórico visual da voz.
+         *
+         * Cada elemento:
          *
          * {
-         *     time,
-         *     midiFloat
+         *     time: 4.25,
+         *     midiFloat: 55.12
          * }
          */
         this.voicePoints =
             [];
 
 
+        /*
+         * Resultado consolidado das barras.
+         *
+         * Estrutura:
+         *
+         * Map(
+         *     index,
+         *     {
+         *         status: "excellent",
+         *         score: 91
+         *     }
+         * )
+         */
+        this.noteResults =
+            new Map();
+
+
+        /*
+         * Tamanho real do canvas em CSS pixels.
+         */
+        this.width =
+            0;
+
+
+        this.height =
+            0;
+
+
+        /*
+         * Mantemos limite razoável para DPR.
+         *
+         * Alguns aparelhos Android possuem DPR muito alto
+         * e isso pode criar um canvas desnecessariamente pesado.
+         */
         this.devicePixelRatio =
-            Math.max(
-                1,
-                window.devicePixelRatio || 1
+            Math.min(
+                3,
+                Math.max(
+                    1,
+                    window.devicePixelRatio || 1
+                )
             );
 
 
-        this.resizeObserver =
-            new ResizeObserver(
+        /*
+         * ====================================================
+         * OBSERVAÇÃO DE TAMANHO
+         * ====================================================
+         */
+
+        if (
+            typeof ResizeObserver !==
+            "undefined"
+        ) {
+
+            this.resizeObserver =
+                new ResizeObserver(
+                    () => {
+
+                        this.resize();
+                    }
+                );
+
+
+            if (
+                this.canvas.parentElement
+            ) {
+
+                this.resizeObserver.observe(
+                    this.canvas.parentElement
+                );
+            }
+
+        } else {
+
+            /*
+             * Fallback para navegadores sem ResizeObserver.
+             */
+            this.resizeObserver =
+                null;
+
+
+            this.boundResize =
                 () => {
+
                     this.resize();
-                }
+                };
+
+
+            window.addEventListener(
+                "resize",
+                this.boundResize
             );
-
-
-        this.resizeObserver.observe(
-            this.canvas.parentElement
-        );
+        }
 
 
         this.resize();
@@ -114,9 +238,9 @@ export class PianoRoll {
 
 
     /*
-     * --------------------------------------------------------
-     * CARREGAR MELODIA
-     * --------------------------------------------------------
+     * ========================================================
+     * MELODIA
+     * ========================================================
      */
 
     setMelody(
@@ -124,36 +248,109 @@ export class PianoRoll {
     ) {
 
         this.melody =
-            melody;
+            melody || null;
 
 
+        /*
+         * Recalcula automaticamente
+         * a faixa vertical necessária.
+         */
         if (
-            melody &&
-            melody.notes.length
+            this.melody &&
+            Array.isArray(
+                this.melody.notes
+            ) &&
+            this.melody.notes.length >
+                0
         ) {
 
             const midis =
-                melody.notes.map(
-                    note =>
-                        note.midi
-                );
+                this.melody.notes
+                    .map(
+                        note =>
+                            Number(
+                                note.midi
+                            )
+                    )
+                    .filter(
+                        midi =>
+                            Number.isFinite(
+                                midi
+                            )
+                    );
 
 
-            /*
-             * Acrescentamos margens verticais
-             * para a voz poder aparecer um pouco
-             * acima ou abaixo das notas da música.
-             */
-            this.minMidi =
-                Math.min(
-                    ...midis
-                ) - 3;
+            if (
+                midis.length >
+                0
+            ) {
+
+                /*
+                 * Margem de três semitons acima
+                 * e abaixo da melodia.
+                 *
+                 * Isso permite visualizar desvios
+                 * da voz sem cortar imediatamente
+                 * o traçado.
+                 */
+                this.minMidi =
+                    Math.floor(
+                        Math.min(
+                            ...midis
+                        ) - 3
+                    );
 
 
-            this.maxMidi =
-                Math.max(
-                    ...midis
-                ) + 3;
+                this.maxMidi =
+                    Math.ceil(
+                        Math.max(
+                            ...midis
+                        ) + 3
+                    );
+
+
+                /*
+                 * Garante faixa vertical mínima.
+                 */
+                const minimumRange =
+                    12;
+
+
+                const currentRange =
+                    this.maxMidi -
+                    this.minMidi;
+
+
+                if (
+                    currentRange <
+                    minimumRange
+                ) {
+
+                    const missing =
+                        minimumRange -
+                        currentRange;
+
+
+                    const lower =
+                        Math.floor(
+                            missing /
+                            2
+                        );
+
+
+                    const upper =
+                        missing -
+                        lower;
+
+
+                    this.minMidi -=
+                        lower;
+
+
+                    this.maxMidi +=
+                        upper;
+                }
+            }
         }
 
 
@@ -165,14 +362,128 @@ export class PianoRoll {
             [];
 
 
+        this.noteResults.clear();
+
+
         this.draw();
     }
 
 
     /*
-     * --------------------------------------------------------
+     * ========================================================
+     * RESULTADOS DAS BARRAS
+     * ========================================================
+     */
+
+    setNoteResult(
+        index,
+        result
+    ) {
+
+        if (
+            !Number.isInteger(
+                index
+            ) ||
+            index <
+            0
+        ) {
+            return;
+        }
+
+
+        if (
+            !result ||
+            typeof result !==
+            "object"
+        ) {
+            return;
+        }
+
+
+        const allowedStatuses =
+            new Set([
+                "pending",
+                "excellent",
+                "partial",
+                "error",
+                "missed"
+            ]);
+
+
+        const status =
+            allowedStatuses.has(
+                result.status
+            )
+                ? result.status
+                : "pending";
+
+
+        const score =
+            Number.isFinite(
+                Number(
+                    result.score
+                )
+            )
+                ? Math.max(
+                    0,
+                    Math.min(
+                        100,
+                        Math.round(
+                            Number(
+                                result.score
+                            )
+                        )
+                    )
+                )
+                : null;
+
+
+        this.noteResults.set(
+            index,
+            {
+                status,
+                score
+            }
+        );
+
+
+        /*
+         * Redesenho imediato.
+         *
+         * Isso é importante porque permite que
+         * uma barra troque de azul para sua cor
+         * definitiva assim que a avaliação terminar.
+         */
+        this.draw();
+    }
+
+
+    getNoteResult(
+        index
+    ) {
+
+        return (
+            this.noteResults.get(
+                index
+            ) ||
+            null
+        );
+    }
+
+
+    clearNoteResults() {
+
+        this.noteResults.clear();
+
+
+        this.draw();
+    }
+
+
+    /*
+     * ========================================================
      * TAMANHO DO CANVAS
-     * --------------------------------------------------------
+     * ========================================================
      */
 
     resize() {
@@ -181,9 +492,7 @@ export class PianoRoll {
             this.canvas.parentElement;
 
 
-        if (
-            !parent
-        ) {
+        if (!parent) {
             return;
         }
 
@@ -206,18 +515,58 @@ export class PianoRoll {
             );
 
 
-        this.canvas.width =
-            Math.floor(
-                width *
-                this.devicePixelRatio
+        this.width =
+            width;
+
+
+        this.height =
+            height;
+
+
+        const pixelWidth =
+            Math.max(
+                1,
+                Math.round(
+                    width *
+                    this.devicePixelRatio
+                )
             );
 
 
-        this.canvas.height =
-            Math.floor(
-                height *
-                this.devicePixelRatio
+        const pixelHeight =
+            Math.max(
+                1,
+                Math.round(
+                    height *
+                    this.devicePixelRatio
+                )
             );
+
+
+        /*
+         * Só alteramos as dimensões internas
+         * quando necessário.
+         *
+         * Alterar width/height limpa o canvas.
+         */
+        if (
+            this.canvas.width !==
+            pixelWidth
+        ) {
+
+            this.canvas.width =
+                pixelWidth;
+        }
+
+
+        if (
+            this.canvas.height !==
+            pixelHeight
+        ) {
+
+            this.canvas.height =
+                pixelHeight;
+        }
 
 
         this.canvas.style.width =
@@ -228,6 +577,9 @@ export class PianoRoll {
             `${height}px`;
 
 
+        /*
+         * Trabalhamos internamente em CSS pixels.
+         */
         this.ctx.setTransform(
             this.devicePixelRatio,
             0,
@@ -238,32 +590,39 @@ export class PianoRoll {
         );
 
 
-        this.width =
-            width;
-
-
-        this.height =
-            height;
-
-
         this.draw();
     }
 
 
     /*
-     * --------------------------------------------------------
+     * ========================================================
      * TEMPO
-     * --------------------------------------------------------
+     * ========================================================
      */
 
     setCurrentTime(
         seconds
     ) {
 
+        const value =
+            Number(
+                seconds
+            );
+
+
+        if (
+            !Number.isFinite(
+                value
+            )
+        ) {
+            return;
+        }
+
+
         this.currentTime =
             Math.max(
                 0,
-                seconds
+                value
             );
 
 
@@ -272,9 +631,9 @@ export class PianoRoll {
 
 
     /*
-     * --------------------------------------------------------
-     * VOZ
-     * --------------------------------------------------------
+     * ========================================================
+     * TRAÇADO DA VOZ
+     * ========================================================
      */
 
     addVoicePoint(
@@ -282,12 +641,24 @@ export class PianoRoll {
         midiFloat
     ) {
 
+        const safeTime =
+            Number(
+                time
+            );
+
+
+        const safeMidi =
+            Number(
+                midiFloat
+            );
+
+
         if (
             !Number.isFinite(
-                time
+                safeTime
             ) ||
             !Number.isFinite(
-                midiFloat
+                safeMidi
             )
         ) {
             return;
@@ -296,28 +667,39 @@ export class PianoRoll {
 
         this.voicePoints.push({
 
-            time,
+            time:
+                safeTime,
 
-            midiFloat
+            midiFloat:
+                safeMidi
         });
 
 
         /*
-         * Não precisamos manter pontos muito antigos.
+         * Mantemos apenas os pontos que ainda
+         * podem aparecer no lado esquerdo da tela.
          *
-         * Mantemos apenas uma margem adicional
-         * para a esquerda.
+         * Uma pequena margem adicional evita
+         * cortes visuais abruptos.
          */
-        const oldestTime =
-            time -
-            this.visibleSeconds *
-            1.2;
+        const oldestVisibleTime =
+            this.currentTime -
+            (
+                this.visibleSeconds *
+                this.playheadRatio
+            );
+
+
+        const oldestStoredTime =
+            oldestVisibleTime -
+            1;
 
 
         while (
-            this.voicePoints.length &&
+            this.voicePoints.length >
+                0 &&
             this.voicePoints[0].time <
-            oldestTime
+                oldestStoredTime
         ) {
 
             this.voicePoints.shift();
@@ -336,14 +718,21 @@ export class PianoRoll {
 
 
     /*
-     * --------------------------------------------------------
-     * CONVERSÃO X
-     * --------------------------------------------------------
+     * ========================================================
+     * CONVERSÃO DE TEMPO PARA X
+     * ========================================================
      */
 
     timeToX(
         time
     ) {
+
+        if (
+            !this.width
+        ) {
+            return 0;
+        }
+
 
         const playheadX =
             this.width *
@@ -367,9 +756,9 @@ export class PianoRoll {
 
 
     /*
-     * --------------------------------------------------------
-     * CONVERSÃO Y
-     * --------------------------------------------------------
+     * ========================================================
+     * CONVERSÃO MIDI PARA Y
+     * ========================================================
      */
 
     midiToY(
@@ -382,13 +771,23 @@ export class PianoRoll {
             1;
 
 
+        if (
+            range <= 0 ||
+            !this.height
+        ) {
+            return 0;
+        }
+
+
         const noteHeight =
             this.height /
             range;
 
 
         /*
-         * Notas agudas ficam em cima.
+         * MIDI maior = mais agudo.
+         *
+         * No canvas, Y menor fica mais alto.
          */
         return (
             this.height -
@@ -410,6 +809,13 @@ export class PianoRoll {
             1;
 
 
+        if (
+            range <= 0
+        ) {
+            return 1;
+        }
+
+
         return (
             this.height /
             range
@@ -418,17 +824,17 @@ export class PianoRoll {
 
 
     /*
-     * --------------------------------------------------------
+     * ========================================================
      * DESENHO PRINCIPAL
-     * --------------------------------------------------------
+     * ========================================================
      */
 
     draw() {
 
         if (
             !this.ctx ||
-            !this.width ||
-            !this.height
+            this.width <= 0 ||
+            this.height <= 0
         ) {
             return;
         }
@@ -445,11 +851,17 @@ export class PianoRoll {
         this.drawBackground();
 
 
-        this.drawGrid();
+        this.drawHorizontalGrid();
+
+
+        this.drawVerticalGrid();
 
 
         if (
-            this.melody
+            this.melody &&
+            Array.isArray(
+                this.melody.notes
+            )
         ) {
 
             this.drawNotes();
@@ -464,9 +876,9 @@ export class PianoRoll {
 
 
     /*
-     * --------------------------------------------------------
+     * ========================================================
      * FUNDO
-     * --------------------------------------------------------
+     * ========================================================
      */
 
     drawBackground() {
@@ -485,19 +897,22 @@ export class PianoRoll {
 
 
     /*
-     * --------------------------------------------------------
-     * GRADE MUSICAL
-     * --------------------------------------------------------
+     * ========================================================
+     * GRADE HORIZONTAL
+     * ========================================================
      */
 
-    drawGrid() {
+    drawHorizontalGrid() {
 
         const noteHeight =
             this.getNoteHeight();
 
 
+        this.ctx.save();
+
+
         this.ctx.font =
-            "11px system-ui";
+            "11px system-ui, sans-serif";
 
 
         this.ctx.textBaseline =
@@ -505,8 +920,10 @@ export class PianoRoll {
 
 
         for (
-            let midi = this.minMidi;
-            midi <= this.maxMidi;
+            let midi =
+                this.minMidi;
+            midi <=
+                this.maxMidi;
             midi++
         ) {
 
@@ -529,10 +946,36 @@ export class PianoRoll {
 
 
             /*
-             * Destacamos os Dós como referência.
+             * Destacamos os Dós para ajudar
+             * na orientação vertical.
              */
             const isC =
-                noteName === "C";
+                noteName ===
+                "C";
+
+
+            /*
+             * Região alternada extremamente sutil.
+             */
+            if (
+                midi %
+                2 ===
+                0
+            ) {
+
+                this.ctx.fillStyle =
+                    "rgba(255,255,255,0.012)";
+
+
+                this.ctx.fillRect(
+                    0,
+                    y -
+                        noteHeight /
+                        2,
+                    this.width,
+                    noteHeight
+                );
+            }
 
 
             this.ctx.strokeStyle =
@@ -551,14 +994,16 @@ export class PianoRoll {
             this.ctx.moveTo(
                 0,
                 y +
-                noteHeight / 2
+                    noteHeight /
+                    2
             );
 
 
             this.ctx.lineTo(
                 this.width,
                 y +
-                noteHeight / 2
+                    noteHeight /
+                    2
             );
 
 
@@ -566,7 +1011,8 @@ export class PianoRoll {
 
 
             /*
-             * Nome da nota à esquerda.
+             * Mostramos o nome dos Dós
+             * como referência de oitava.
              */
             if (
                 isC
@@ -578,38 +1024,60 @@ export class PianoRoll {
 
                 this.ctx.fillText(
                     `${noteName}${octave}`,
-                    6,
+                    7,
                     y
                 );
             }
         }
 
 
-        /*
-         * Linhas verticais de segundo.
-         */
+        this.ctx.restore();
+    }
+
+
+    /*
+     * ========================================================
+     * GRADE VERTICAL DE TEMPO
+     * ========================================================
+     */
+
+    drawVerticalGrid() {
+
+        const visibleBefore =
+            this.visibleSeconds *
+            this.playheadRatio;
+
+
+        const visibleAfter =
+            this.visibleSeconds *
+            (
+                1 -
+                this.playheadRatio
+            );
+
+
         const startTime =
             Math.floor(
                 this.currentTime -
-                this.visibleSeconds *
-                this.playheadRatio
+                visibleBefore
             );
 
 
         const endTime =
             Math.ceil(
                 this.currentTime +
-                this.visibleSeconds *
-                (
-                    1 -
-                    this.playheadRatio
-                )
+                visibleAfter
             );
 
 
+        this.ctx.save();
+
+
         for (
-            let second = startTime;
-            second <= endTime;
+            let second =
+                startTime;
+            second <=
+                endTime;
             second++
         ) {
 
@@ -619,8 +1087,22 @@ export class PianoRoll {
                 );
 
 
+            /*
+             * Segundo zero recebe leve destaque.
+             */
+            const isZero =
+                second ===
+                0;
+
+
             this.ctx.strokeStyle =
-                "rgba(255,255,255,0.06)";
+                isZero
+                    ? "rgba(255,255,255,0.12)"
+                    : "rgba(255,255,255,0.06)";
+
+
+            this.ctx.lineWidth =
+                1;
 
 
             this.ctx.beginPath();
@@ -640,13 +1122,16 @@ export class PianoRoll {
 
             this.ctx.stroke();
         }
+
+
+        this.ctx.restore();
     }
 
 
     /*
-     * --------------------------------------------------------
+     * ========================================================
      * BARRAS DA MELODIA
-     * --------------------------------------------------------
+     * ========================================================
      */
 
     drawNotes() {
@@ -657,115 +1142,405 @@ export class PianoRoll {
 
         const barHeight =
             Math.max(
-                8,
-                noteHeight * 0.65
+                9,
+                noteHeight *
+                0.64
             );
 
 
-        for (
-            const note of
-            this.melody.notes
-        ) {
+        this.melody.notes.forEach(
+            (
+                note,
+                index
+            ) => {
 
-            const startX =
-                this.timeToX(
-                    note.start
+                const midi =
+                    Number(
+                        note.midi
+                    );
+
+
+                const start =
+                    Number(
+                        note.start
+                    );
+
+
+                const duration =
+                    Number(
+                        note.duration
+                    );
+
+
+                if (
+                    !Number.isFinite(
+                        midi
+                    ) ||
+                    !Number.isFinite(
+                        start
+                    ) ||
+                    !Number.isFinite(
+                        duration
+                    )
+                ) {
+                    return;
+                }
+
+
+                const end =
+                    start +
+                    duration;
+
+
+                const startX =
+                    this.timeToX(
+                        start
+                    );
+
+
+                const endX =
+                    this.timeToX(
+                        end
+                    );
+
+
+                /*
+                 * Não desenhamos objetos totalmente
+                 * fora da área visível.
+                 */
+                if (
+                    endX <
+                    -10 ||
+                    startX >
+                    this.width +
+                    10
+                ) {
+                    return;
+                }
+
+
+                const width =
+                    Math.max(
+                        2,
+                        endX -
+                        startX
+                    );
+
+
+                const y =
+                    this.midiToY(
+                        midi
+                    );
+
+
+                /*
+                 * Uma barra só é considerada ativa
+                 * durante seu período musical real.
+                 */
+                const active =
+                    this.currentTime >=
+                        start &&
+                    this.currentTime <
+                        end;
+
+
+                const result =
+                    this.getNoteResult(
+                        index
+                    );
+
+
+                /*
+                 * =================================================
+                 * COR DA BARRA
+                 * =================================================
+                 *
+                 * Resultado definitivo tem prioridade absoluta.
+                 *
+                 * Isso garante que uma barra já julgada
+                 * nunca volte a aparecer azul.
+                 */
+                this.ctx.fillStyle =
+                    this.getNoteColor(
+                        result,
+                        active
+                    );
+
+
+                this.beginRoundedRect(
+                    startX,
+                    y -
+                        barHeight /
+                        2,
+                    width,
+                    barHeight,
+                    5
                 );
 
 
-            const endX =
-                this.timeToX(
-                    note.start +
-                    note.duration
-                );
+                this.ctx.fill();
 
 
-            const width =
-                endX -
-                startX;
+                /*
+                 * =================================================
+                 * CONTORNO
+                 * =================================================
+                 *
+                 * Apenas barras ainda não consolidadas
+                 * recebem o contorno branco de "nota atual".
+                 */
+                if (
+                    active &&
+                    !result
+                ) {
+
+                    this.ctx.strokeStyle =
+                        "rgba(255,255,255,0.95)";
 
 
-            /*
-             * Fora da tela.
-             */
-            if (
-                endX < 0 ||
-                startX > this.width
-            ) {
-                continue;
+                    this.ctx.lineWidth =
+                        2;
+
+
+                    this.ctx.stroke();
+                }
+
+
+                /*
+                 * Barra consolidada recebe um
+                 * contorno muito discreto.
+                 */
+                if (
+                    result
+                ) {
+
+                    this.ctx.strokeStyle =
+                        "rgba(255,255,255,0.12)";
+
+
+                    this.ctx.lineWidth =
+                        1;
+
+
+                    this.ctx.stroke();
+                }
+
+
+                /*
+                 * =================================================
+                 * PONTUAÇÃO NA BARRA
+                 * =================================================
+                 */
+
+                if (
+                    result &&
+                    Number.isFinite(
+                        result.score
+                    ) &&
+                    width >=
+                        42
+                ) {
+
+                    const scoreText =
+                        String(
+                            result.score
+                        );
+
+
+                    this.ctx.save();
+
+
+                    this.ctx.font =
+                        "900 10px system-ui, sans-serif";
+
+
+                    this.ctx.textBaseline =
+                        "middle";
+
+
+                    const textMetrics =
+                        this.ctx.measureText(
+                            scoreText
+                        );
+
+
+                    const paddingX =
+                        5;
+
+
+                    const badgeWidth =
+                        textMetrics.width +
+                        paddingX *
+                        2;
+
+
+                    const badgeHeight =
+                        Math.min(
+                            16,
+                            Math.max(
+                                12,
+                                barHeight -
+                                    2
+                            )
+                        );
+
+
+                    const badgeX =
+                        startX +
+                        4;
+
+
+                    const badgeY =
+                        y -
+                        badgeHeight /
+                        2;
+
+
+                    /*
+                     * Só desenhamos o badge
+                     * se couber dentro da barra.
+                     */
+                    if (
+                        badgeWidth +
+                            8 <=
+                        width
+                    ) {
+
+                        this.ctx.fillStyle =
+                            "rgba(0,0,0,0.58)";
+
+
+                        this.beginRoundedRect(
+                            badgeX,
+                            badgeY,
+                            badgeWidth,
+                            badgeHeight,
+                            badgeHeight /
+                                2
+                        );
+
+
+                        this.ctx.fill();
+
+
+                        this.ctx.fillStyle =
+                            "rgba(255,255,255,0.95)";
+
+
+                        this.ctx.fillText(
+                            scoreText,
+                            badgeX +
+                                paddingX,
+                            y
+                        );
+                    }
+
+
+                    this.ctx.restore();
+                }
             }
-
-
-            const y =
-                this.midiToY(
-                    note.midi
-                );
-
-
-            const active =
-                this.currentTime >=
-                    note.start &&
-                this.currentTime <=
-                    note.start +
-                    note.duration;
-
-
-            const finished =
-                this.currentTime >
-                note.start +
-                note.duration;
-
-
-            if (
-                active
-            ) {
-
-                this.ctx.fillStyle =
-                    "rgba(104,168,255,0.95)";
-
-            } else if (
-                finished
-            ) {
-
-                this.ctx.fillStyle =
-                    "rgba(104,168,255,0.28)";
-
-            } else {
-
-                this.ctx.fillStyle =
-                    "rgba(104,168,255,0.62)";
-            }
-
-
-            this.roundRect(
-                startX,
-                y -
-                    barHeight / 2,
-                width,
-                barHeight,
-                5
-            );
-
-
-            this.ctx.fill();
-        }
+        );
     }
 
 
     /*
-     * --------------------------------------------------------
+     * ========================================================
+     * COR DAS NOTAS
+     * ========================================================
+     */
+
+    getNoteColor(
+        result,
+        active
+    ) {
+
+        /*
+         * Resultado consolidado sempre vence.
+         */
+        if (
+            result
+        ) {
+
+            switch (
+                result.status
+            ) {
+
+                case "excellent":
+
+                    return (
+                        "rgba(98,221,139,0.92)"
+                    );
+
+
+                case "partial":
+
+                    return (
+                        "rgba(244,201,93,0.90)"
+                    );
+
+
+                case "error":
+
+                    return (
+                        "rgba(255,107,107,0.90)"
+                    );
+
+
+                case "missed":
+
+                    return (
+                        "rgba(120,126,138,0.48)"
+                    );
+
+
+                case "pending":
+
+                default:
+
+                    break;
+            }
+        }
+
+
+        /*
+         * Barra atualmente atravessando o playhead.
+         */
+        if (
+            active
+        ) {
+
+            return (
+                "rgba(104,168,255,0.96)"
+            );
+        }
+
+
+        /*
+         * Barras ainda não avaliadas.
+         */
+        return (
+            "rgba(104,168,255,0.62)"
+        );
+    }
+
+
+    /*
+     * ========================================================
      * TRAJETÓRIA DA VOZ
-     * --------------------------------------------------------
+     * ========================================================
      */
 
     drawVoice() {
 
         if (
             this.voicePoints.length <
-            2
+            1
         ) {
             return;
         }
+
+
+        this.ctx.save();
 
 
         this.ctx.strokeStyle =
@@ -784,10 +1559,18 @@ export class PianoRoll {
             "round";
 
 
+        this.ctx.shadowColor =
+            "rgba(98,221,139,0.28)";
+
+
+        this.ctx.shadowBlur =
+            5;
+
+
         this.ctx.beginPath();
 
 
-        let started =
+        let segmentStarted =
             false;
 
 
@@ -806,6 +1589,29 @@ export class PianoRoll {
                 );
 
 
+            /*
+             * Ponto fora da tela.
+             */
+            if (
+                x <
+                -20 ||
+                x >
+                this.width +
+                    20
+            ) {
+
+                previousTime =
+                    point.time;
+
+
+                segmentStarted =
+                    false;
+
+
+                continue;
+            }
+
+
             const y =
                 this.midiToY(
                     point.midiFloat
@@ -813,18 +1619,21 @@ export class PianoRoll {
 
 
             /*
-             * Não desenha segmentos enormes
-             * através de períodos sem voz.
+             * Se passou muito tempo sem voz,
+             * não conectamos dois trechos separados.
              */
             const discontinuity =
-                previousTime !== null &&
-                point.time -
-                    previousTime >
+                previousTime !==
+                    null &&
+                (
+                    point.time -
+                    previousTime
+                ) >
                     0.18;
 
 
             if (
-                !started ||
+                !segmentStarted ||
                 discontinuity
             ) {
 
@@ -834,7 +1643,7 @@ export class PianoRoll {
                 );
 
 
-                started =
+                segmentStarted =
                     true;
 
             } else {
@@ -852,13 +1661,75 @@ export class PianoRoll {
 
 
         this.ctx.stroke();
+
+
+        /*
+         * Pequeno ponto no registro vocal mais recente.
+         */
+        const lastPoint =
+            this.voicePoints[
+                this.voicePoints.length -
+                1
+            ];
+
+
+        if (
+            lastPoint
+        ) {
+
+            const x =
+                this.timeToX(
+                    lastPoint.time
+                );
+
+
+            const y =
+                this.midiToY(
+                    lastPoint.midiFloat
+                );
+
+
+            if (
+                x >=
+                    0 &&
+                x <=
+                    this.width
+            ) {
+
+                this.ctx.shadowBlur =
+                    0;
+
+
+                this.ctx.fillStyle =
+                    "#62dd8b";
+
+
+                this.ctx.beginPath();
+
+
+                this.ctx.arc(
+                    x,
+                    y,
+                    3.5,
+                    0,
+                    Math.PI *
+                        2
+                );
+
+
+                this.ctx.fill();
+            }
+        }
+
+
+        this.ctx.restore();
     }
 
 
     /*
-     * --------------------------------------------------------
+     * ========================================================
      * PLAYHEAD
-     * --------------------------------------------------------
+     * ========================================================
      */
 
     drawPlayhead() {
@@ -868,9 +1739,12 @@ export class PianoRoll {
             this.playheadRatio;
 
 
+        this.ctx.save();
+
+
         /*
-         * Área levemente destacada
-         * ao redor do instante atual.
+         * Faixa translúcida ao redor
+         * do instante atual.
          */
         this.ctx.fillStyle =
             "rgba(255,255,255,0.025)";
@@ -884,8 +1758,11 @@ export class PianoRoll {
         );
 
 
+        /*
+         * Linha principal.
+         */
         this.ctx.strokeStyle =
-            "rgba(255,255,255,0.95)";
+            "rgba(255,255,255,0.96)";
 
 
         this.ctx.lineWidth =
@@ -911,7 +1788,7 @@ export class PianoRoll {
 
 
         /*
-         * Pequeno triângulo superior.
+         * Triângulo superior.
          */
         this.ctx.fillStyle =
             "#ffffff";
@@ -942,16 +1819,19 @@ export class PianoRoll {
 
 
         this.ctx.fill();
+
+
+        this.ctx.restore();
     }
 
 
     /*
-     * --------------------------------------------------------
-     * RECT COM BORDAS ARREDONDADAS
-     * --------------------------------------------------------
+     * ========================================================
+     * RECT ARREDONDADO
+     * ========================================================
      */
 
-    roundRect(
+    beginRoundedRect(
         x,
         y,
         width,
@@ -960,9 +1840,37 @@ export class PianoRoll {
     ) {
 
         /*
-         * CanvasRenderingContext2D.roundRect
-         * é amplamente suportado, mas mantemos
-         * fallback simples.
+         * Protege contra largura negativa.
+         */
+        const safeWidth =
+            Math.max(
+                0,
+                width
+            );
+
+
+        const safeHeight =
+            Math.max(
+                0,
+                height
+            );
+
+
+        const safeRadius =
+            Math.max(
+                0,
+                Math.min(
+                    radius,
+                    safeWidth /
+                        2,
+                    safeHeight /
+                        2
+                )
+            );
+
+
+        /*
+         * API moderna.
          */
         if (
             typeof this.ctx.roundRect ===
@@ -975,9 +1883,9 @@ export class PianoRoll {
             this.ctx.roundRect(
                 x,
                 y,
-                width,
-                height,
-                radius
+                safeWidth,
+                safeHeight,
+                safeRadius
             );
 
 
@@ -985,75 +1893,89 @@ export class PianoRoll {
         }
 
 
-        const r =
-            Math.min(
-                radius,
-                Math.abs(width) / 2,
-                height / 2
-            );
+        /*
+         * Fallback.
+         */
+        const right =
+            x +
+            safeWidth;
+
+
+        const bottom =
+            y +
+            safeHeight;
 
 
         this.ctx.beginPath();
 
 
         this.ctx.moveTo(
-            x + r,
+            x +
+                safeRadius,
             y
         );
 
 
         this.ctx.lineTo(
-            x + width - r,
+            right -
+                safeRadius,
             y
         );
 
 
         this.ctx.quadraticCurveTo(
-            x + width,
+            right,
             y,
-            x + width,
-            y + r
+            right,
+            y +
+                safeRadius
         );
 
 
         this.ctx.lineTo(
-            x + width,
-            y + height - r
+            right,
+            bottom -
+                safeRadius
         );
 
 
         this.ctx.quadraticCurveTo(
-            x + width,
-            y + height,
-            x + width - r,
-            y + height
+            right,
+            bottom,
+            right -
+                safeRadius,
+            bottom
         );
 
 
         this.ctx.lineTo(
-            x + r,
-            y + height
+            x +
+                safeRadius,
+            bottom
         );
 
 
         this.ctx.quadraticCurveTo(
             x,
-            y + height,
+            bottom,
             x,
-            y + height - r
+            bottom -
+                safeRadius
         );
 
 
         this.ctx.lineTo(
             x,
-            y + r
+            y +
+                safeRadius
         );
 
 
         this.ctx.quadraticCurveTo(
             x,
             y,
-            x + r,
+            x +
+                safeRadius,
             y
         );
 
@@ -1062,8 +1984,41 @@ export class PianoRoll {
     }
 
 
+    /*
+     * ========================================================
+     * LIMPEZA
+     * ========================================================
+     */
+
     destroy() {
 
-        this.resizeObserver.disconnect();
+        if (
+            this.resizeObserver
+        ) {
+
+            this.resizeObserver.disconnect();
+        }
+
+
+        if (
+            this.boundResize
+        ) {
+
+            window.removeEventListener(
+                "resize",
+                this.boundResize
+            );
+        }
+
+
+        this.voicePoints =
+            [];
+
+
+        this.noteResults.clear();
+
+
+        this.melody =
+            null;
     }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
 
@@ -13,7 +14,9 @@
         content="#101114"
     >
 
-    <title>Modo Melodia — Treinador Vocal</title>
+    <title>
+        Modo Melodia — Treinador Vocal
+    </title>
 
     <link
         rel="stylesheet"
@@ -21,9 +24,14 @@
     >
 </head>
 
+
 <body>
 
     <main class="app">
+
+        <!-- ==================================================
+             CABEÇALHO
+             ================================================== -->
 
         <header class="cabecalho">
 
@@ -34,13 +42,16 @@
                 ← Exercícios
             </a>
 
+
             <p class="etapa">
                 MODO MELODIA CONTÍNUA
             </p>
 
+
             <h1>
                 Piano Roll
             </h1>
+
 
             <p class="descricao">
                 Acompanhe as barras da melodia e tente manter
@@ -48,6 +59,7 @@
             </p>
 
         </header>
+
 
 
         <!-- ==================================================
@@ -68,10 +80,12 @@
                     MELODIA
                 </label>
 
+
                 <select
                     id="seletorMelodia"
                     class="select"
-                ></select>
+                >
+                </select>
 
             </div>
 
@@ -85,6 +99,7 @@
                     DIFICULDADE
                 </label>
 
+
                 <select
                     id="seletorDificuldade"
                     class="select"
@@ -94,9 +109,11 @@
                         Iniciante — ±40 cents
                     </option>
 
+
                     <option value="intermediate">
                         Intermediário — ±25 cents
                     </option>
+
 
                     <option value="advanced">
                         Avançado — ±15 cents
@@ -117,6 +134,7 @@
                     🔊 Ouvir melodia
                 </button>
 
+
                 <button
                     id="botaoIniciar"
                     class="botao-principal"
@@ -130,8 +148,9 @@
         </section>
 
 
+
         <!-- ==================================================
-             STATUS
+             STATUS GERAL
              ================================================== -->
 
         <section class="barra-status">
@@ -141,6 +160,7 @@
                 <span>
                     Estado
                 </span>
+
 
                 <strong id="estado">
                     Pronto
@@ -155,6 +175,7 @@
                     Microfone
                 </span>
 
+
                 <strong id="estadoMicrofone">
                     Desligado
                 </strong>
@@ -167,6 +188,7 @@
                 <span>
                     Progresso
                 </span>
+
 
                 <strong id="progressoMusica">
                     0%
@@ -181,6 +203,7 @@
                     Pontuação
                 </span>
 
+
                 <strong id="pontuacaoAtual">
                     0
                 </strong>
@@ -188,6 +211,7 @@
             </div>
 
         </section>
+
 
 
         <!-- ==================================================
@@ -204,6 +228,7 @@
                         MELODIA
                     </p>
 
+
                     <h2 id="nomeMelodia">
                         —
                     </h2>
@@ -214,19 +239,29 @@
                 <div class="legenda">
 
                     <span>
+
                         <i class="legenda-alvo"></i>
+
                         Nota-alvo
+
                     </span>
 
+
                     <span>
+
                         <i class="legenda-voz"></i>
+
                         Sua voz
+
                     </span>
 
                 </div>
 
             </div>
 
+
+
+            <!-- CONTAGEM REGRESSIVA -->
 
             <div
                 id="contador"
@@ -235,6 +270,9 @@
                 3
             </div>
 
+
+
+            <!-- CANVAS -->
 
             <div class="canvas-container">
 
@@ -245,20 +283,26 @@
             </div>
 
 
+
+            <!-- LINHA DO TEMPO -->
+
             <div class="linha-tempo">
 
                 <span id="tempoAtual">
                     0:00
                 </span>
 
+
                 <div class="barra-tempo">
 
                     <div
                         id="barraTempo"
                         class="barra-tempo-preenchimento"
-                    ></div>
+                    >
+                    </div>
 
                 </div>
+
 
                 <span id="tempoTotal">
                     0:00
@@ -269,11 +313,14 @@
         </section>
 
 
+
         <!-- ==================================================
-             FEEDBACK
+             FEEDBACK EM TEMPO REAL
              ================================================== -->
 
         <section class="painel-feedback">
+
+            <!-- NOTA ESPERADA X NOTA CANTADA -->
 
             <div class="nota-atual">
 
@@ -282,6 +329,7 @@
                     <span class="rotulo">
                         NOTA ESPERADA
                     </span>
+
 
                     <strong id="notaEsperada">
                         —
@@ -301,6 +349,7 @@
                         SUA VOZ
                     </span>
 
+
                     <strong id="notaCantada">
                         —
                     </strong>
@@ -310,6 +359,9 @@
             </div>
 
 
+
+            <!-- FEEDBACK TEXTUAL -->
+
             <div
                 id="feedback"
                 class="feedback neutro"
@@ -318,6 +370,9 @@
             </div>
 
 
+
+            <!-- MÉTRICAS EM TEMPO REAL -->
+
             <div class="metricas">
 
                 <div>
@@ -325,6 +380,7 @@
                     <span>
                         Erro atual
                     </span>
+
 
                     <strong id="erroAtual">
                         —
@@ -336,8 +392,9 @@
                 <div>
 
                     <span>
-                        Precisão
+                        Afinação
                     </span>
+
 
                     <strong id="precisao">
                         —
@@ -352,8 +409,51 @@
                         Notas avaliadas
                     </span>
 
+
                     <strong id="notasAvaliadas">
                         0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Entrada atual
+                    </span>
+
+
+                    <strong id="entradaAtual">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Cobertura
+                    </span>
+
+
+                    <strong id="coberturaAtual">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Nota atual
+                    </span>
+
+
+                    <strong id="pontuacaoNotaAtual">
+                        —
                     </strong>
 
                 </div>
@@ -363,8 +463,9 @@
         </section>
 
 
+
         <!-- ==================================================
-             RESULTADO
+             RESULTADO FINAL
              ================================================== -->
 
         <section
@@ -376,16 +477,21 @@
                 TREINO CONCLUÍDO
             </p>
 
+
             <h2>
                 Resultado da melodia
             </h2>
 
+
+
+            <!-- PONTUAÇÃO -->
 
             <div class="pontuacao-final">
 
                 <strong id="pontuacaoFinal">
                     0
                 </strong>
+
 
                 <span>
                     / 100
@@ -394,19 +500,27 @@
             </div>
 
 
+
+            <!-- AVALIAÇÃO TEXTUAL -->
+
             <p
                 id="avaliacaoFinal"
                 class="avaliacao-final"
-            ></p>
+            >
+            </p>
 
+
+
+            <!-- RESUMO GERAL -->
 
             <div class="resultado-grid">
 
                 <div>
 
                     <span>
-                        Precisão temporal
+                        Pontuação de afinação
                     </span>
+
 
                     <strong id="resultadoPrecisao">
                         —
@@ -421,6 +535,7 @@
                         Erro médio
                     </span>
 
+
                     <strong id="resultadoErro">
                         —
                     </strong>
@@ -434,7 +549,50 @@
                         Notas acertadas
                     </span>
 
+
                     <strong id="resultadoNotas">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Entrada média
+                    </span>
+
+
+                    <strong id="resultadoEntrada">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Cobertura média
+                    </span>
+
+
+                    <strong id="resultadoCobertura">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Notas não cantadas
+                    </span>
+
+
+                    <strong id="resultadoOmitidas">
                         —
                     </strong>
 
@@ -442,6 +600,30 @@
 
             </div>
 
+
+
+            <!-- ==================================================
+                 RESULTADO NOTA A NOTA
+                 ================================================== -->
+
+            <div class="detalhamento-notas">
+
+                <p class="rotulo">
+                    DESEMPENHO NOTA A NOTA
+                </p>
+
+
+                <div
+                    id="listaResultadosNotas"
+                    class="lista-resultados-notas"
+                >
+                </div>
+
+            </div>
+
+
+
+            <!-- REPETIR -->
 
             <button
                 id="botaoRepetir"
@@ -453,6 +635,11 @@
 
         </section>
 
+
+
+        <!-- ==================================================
+             RODAPÉ
+             ================================================== -->
 
         <footer class="rodape">
 
@@ -466,10 +653,16 @@
     </main>
 
 
+
+    <!-- ======================================================
+         JAVASCRIPT
+         ====================================================== -->
+
     <script
         type="module"
         src="./js/melody-mode.js"
     ></script>
 
 </body>
+
 </html>
