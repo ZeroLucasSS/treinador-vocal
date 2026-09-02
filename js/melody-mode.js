@@ -3,32 +3,21 @@
  * melody-mode.js
  * ============================================================
  *
- * MODO MELODIA CONTÍNUA — PIANO ROLL
+ * MIDI VOCAL + BACKING TRACK
  *
- * Esta versão trabalha em conjunto com:
+ * Música-base:
  *
- * - melodia.html atualizado
- * - melody.css atualizado
- * - piano-roll.js atualizado
+ * "Ninguém te ama como Eu"
  *
- * Responsabilidades:
+ * MP3:
  *
- * - selecionar a melodia;
- * - reproduzir a referência;
- * - iniciar o treino;
- * - controlar o relógio musical;
- * - capturar o microfone;
- * - detectar a frequência;
- * - desenhar a trajetória vocal;
- * - descobrir qual barra está ativa;
- * - avaliar cada nota individualmente;
- * - medir afinação;
- * - medir entrada;
- * - medir cobertura/duração;
- * - calcular pontuação por nota;
- * - enviar o resultado ao piano roll;
- * - colorir as barras concluídas;
- * - gerar o relatório final.
+ * ./assets/audio/
+ * ninguem-te-ama-como-eu-instrumental.mp3
+ *
+ * MIDI:
+ *
+ * ./assets/midi/
+ * ninguem-te-ama-como-eu-voz.mid
  *
  * ============================================================
  */
@@ -58,98 +47,81 @@ import {
 
 
 import {
-    MELODIES,
-    getMelody,
-    getMelodyDuration
-} from "./melodies.js";
-
-
-import {
     PianoRoll
 } from "./piano-roll.js";
 
 
+import {
+    loadMidiFromUrl,
+    chooseBestMelodyTrack
+} from "./midi-loader.js";
+
+
 /*
  * ============================================================
- * CONFIGURAÇÕES DE ÁUDIO
+ * ARQUIVOS
  * ============================================================
  */
 
-
-/*
- * Sinais abaixo deste RMS são considerados
- * silêncio ou ruído insuficiente.
- */
-const MIN_RMS =
-    0.01;
+const MIDI_URL =
+    "./assets/midi/ninguem-te-ama-como-eu-voz.mid";
 
 
 /*
- * Confiança mínima aceita pelo detector YIN.
+ * 4:37
  */
-const MIN_PROBABILITY =
-    0.70;
+const EXPECTED_DURATION =
+    277;
 
 
 /*
- * Quantidade de leituras recentes usadas
- * no filtro de mediana.
+ * Aceitamos pequena diferença
+ * entre metadados dos arquivos.
  */
-const SMOOTHING_WINDOW =
+const DURATION_WARNING_TOLERANCE =
     5;
 
 
 /*
- * Intervalo mínimo entre os pontos visuais
- * enviados ao piano roll.
- *
- * O detector pode trabalhar em ~60 FPS,
- * mas não precisamos desenhar 60 pontos por segundo.
+ * ============================================================
+ * ÁUDIO / DETECÇÃO
+ * ============================================================
  */
+
+const MIN_RMS =
+    0.01;
+
+
+const MIN_PROBABILITY =
+    0.70;
+
+
+const SMOOTHING_WINDOW =
+    5;
+
+
 const VOICE_POINT_INTERVAL_MS =
     45;
 
 
-/*
- * Se houver uma interrupção maior do que isso
- * entre duas amostras vocais, não contamos
- * o intervalo inteiro como tempo cantado.
- */
 const MAX_VOICED_SAMPLE_GAP =
     0.15;
 
 
 /*
  * ============================================================
- * CONFIGURAÇÕES TEMPORAIS
+ * AVALIAÇÃO TEMPORAL
  * ============================================================
  */
 
-
-/*
- * Margem antes e depois da barra.
- *
- * Ajuda a medir entradas um pouco antecipadas
- * ou atrasadas.
- */
 const NOTE_TIME_MARGIN =
     0.12;
 
 
-/*
- * Entrada até ±120 ms:
- *
- * excelente.
- */
 const EXCELLENT_ONSET_MS =
     120;
 
 
-/*
- * Entrada até ±300 ms:
- *
- * ainda aceitável.
- */
 const ACCEPTABLE_ONSET_MS =
     300;
 
@@ -195,19 +167,15 @@ const DIFFICULTIES = {
 
 /*
  * ============================================================
- * ELEMENTOS DA INTERFACE
+ * DOM
  * ============================================================
  */
 
 const elements = {
 
-    /*
-     * Configuração
-     */
-
-    melodySelect:
+    trackSelect:
         document.getElementById(
-            "seletorMelodia"
+            "seletorTrilhaMidi"
         ),
 
     difficultySelect:
@@ -215,9 +183,14 @@ const elements = {
             "seletorDificuldade"
         ),
 
-    listenButton:
+    melodyListenButton:
         document.getElementById(
             "botaoOuvir"
+        ),
+
+    backingListenButton:
+        document.getElementById(
+            "botaoOuvirInstrumental"
         ),
 
     startButton:
@@ -225,10 +198,25 @@ const elements = {
             "botaoIniciar"
         ),
 
+    headphoneConfirmation:
+        document.getElementById(
+            "confirmarFones"
+        ),
 
-    /*
-     * Status
-     */
+    backingAudio:
+        document.getElementById(
+            "backingTrackAudio"
+        ),
+
+    backingFileStatus:
+        document.getElementById(
+            "statusBackingTrack"
+        ),
+
+    midiStatus:
+        document.getElementById(
+            "statusMidi"
+        ),
 
     state:
         document.getElementById(
@@ -240,6 +228,11 @@ const elements = {
             "estadoMicrofone"
         ),
 
+    backingState:
+        document.getElementById(
+            "estadoBacking"
+        ),
+
     progress:
         document.getElementById(
             "progressoMusica"
@@ -249,11 +242,6 @@ const elements = {
         document.getElementById(
             "pontuacaoAtual"
         ),
-
-
-    /*
-     * Piano roll
-     */
 
     melodyName:
         document.getElementById(
@@ -284,11 +272,6 @@ const elements = {
         document.getElementById(
             "barraTempo"
         ),
-
-
-    /*
-     * Feedback
-     */
 
     expectedNote:
         document.getElementById(
@@ -334,11 +317,6 @@ const elements = {
         document.getElementById(
             "pontuacaoNotaAtual"
         ),
-
-
-    /*
-     * Resultado final
-     */
 
     result:
         document.getElementById(
@@ -399,100 +377,6 @@ const elements = {
 
 /*
  * ============================================================
- * VALIDAÇÃO DOS ELEMENTOS
- * ============================================================
- *
- * Se algum ID essencial estiver errado no HTML,
- * queremos descobrir imediatamente.
- * ============================================================
- */
-
-validateRequiredElements();
-
-
-function validateRequiredElements() {
-
-    const required = {
-
-        seletorMelodia:
-            elements.melodySelect,
-
-        seletorDificuldade:
-            elements.difficultySelect,
-
-        botaoOuvir:
-            elements.listenButton,
-
-        botaoIniciar:
-            elements.startButton,
-
-        pianoRoll:
-            elements.canvas,
-
-        contador:
-            elements.counter,
-
-        notaEsperada:
-            elements.expectedNote,
-
-        notaCantada:
-            elements.sungNote,
-
-        feedback:
-            elements.feedback,
-
-        entradaAtual:
-            elements.currentOnset,
-
-        coberturaAtual:
-            elements.currentCoverage,
-
-        pontuacaoNotaAtual:
-            elements.currentNoteScore,
-
-        resultadoEntrada:
-            elements.resultOnset,
-
-        resultadoCobertura:
-            elements.resultCoverage,
-
-        resultadoOmitidas:
-            elements.resultMissed,
-
-        listaResultadosNotas:
-            elements.noteResultsList
-    };
-
-
-    const missing =
-        Object.entries(
-            required
-        )
-        .filter(
-            ([, element]) =>
-                !element
-        )
-        .map(
-            ([id]) =>
-                id
-        );
-
-
-    if (
-        missing.length >
-        0
-    ) {
-
-        throw new Error(
-            "Elementos obrigatórios não encontrados no melodia.html: " +
-            missing.join(", ")
-        );
-    }
-}
-
-
-/*
- * ============================================================
  * COMPONENTES
  * ============================================================
  */
@@ -531,19 +415,45 @@ const pianoRoll =
  * ============================================================
  */
 
+let midiData =
+    null;
+
+
+let selectedTrack =
+    null;
+
+
+/*
+ * Formato compreendido pelo piano roll:
+ *
+ * {
+ *     id,
+ *     name,
+ *     description,
+ *     notes
+ * }
+ */
 let selectedMelody =
-    MELODIES[0];
+    null;
+
+
+let noteStates =
+    [];
 
 
 let running =
     false;
 
 
-let previewPlaying =
+let countdownRunning =
     false;
 
 
-let countdownRunning =
+let backingPreviewPlaying =
+    false;
+
+
+let melodyPreviewPlaying =
     false;
 
 
@@ -555,8 +465,8 @@ let previewAnimationFrameId =
     null;
 
 
-let startTimestamp =
-    0;
+let melodyPreviewTimers =
+    [];
 
 
 let currentSongTime =
@@ -572,205 +482,346 @@ let lastVoicePointTimestamp =
 
 
 /*
- * Cada posição corresponde à respectiva barra
- * de selectedMelody.notes.
- */
-let noteStates =
-    [];
-
-
-/*
  * ============================================================
  * INICIALIZAÇÃO
  * ============================================================
  */
 
-populateMelodySelector();
+initialize();
 
 
-selectMelody(
-    selectedMelody.id
-);
+async function initialize() {
+
+    elements.state.textContent =
+        "Carregando";
 
 
-/*
- * ============================================================
- * EVENTOS
- * ============================================================
- */
+    setupBackingTrack();
 
 
-/*
- * Troca de melodia.
- */
-elements.melodySelect.addEventListener(
-    "change",
-    () => {
+    try {
 
-        if (
-            running ||
-            previewPlaying ||
-            countdownRunning
-        ) {
-            return;
-        }
+        await loadVocalMidi();
 
 
-        selectMelody(
-            elements.melodySelect.value
+    } catch (error) {
+
+        console.error(
+            "Erro ao carregar MIDI:",
+            error
         );
-    }
-);
 
 
-/*
- * Ouvir a referência.
- */
-elements.listenButton.addEventListener(
-    "click",
-    async () => {
-
-        if (
-            running ||
-            previewPlaying ||
-            countdownRunning
-        ) {
-            return;
-        }
+        elements.midiStatus.textContent =
+            "Erro ao carregar";
 
 
-        await previewMelody();
-    }
-);
+        elements.melodyName.textContent =
+            "MIDI não disponível";
 
 
-/*
- * Iniciar ou interromper treino.
- */
-elements.startButton.addEventListener(
-    "click",
-    async () => {
-
-        if (
-            running ||
-            countdownRunning
-        ) {
-
-            await stopTraining();
-
-        } else {
-
-            await startTraining();
-        }
-    }
-);
-
-
-/*
- * Repetir a mesma melodia.
- */
-elements.repeatButton.addEventListener(
-    "click",
-    async () => {
-
-        if (
-            running ||
-            countdownRunning
-        ) {
-            return;
-        }
-
-
-        elements.result
-            .classList
-            .add(
-                "oculto"
-            );
-
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-
-
-        await startTraining();
-    }
-);
-
-
-/*
- * ============================================================
- * POPULAR LISTA DE MELODIAS
- * ============================================================
- */
-
-function populateMelodySelector() {
-
-    elements.melodySelect.innerHTML =
-        "";
-
-
-    for (
-        const melody of
-        MELODIES
-    ) {
-
-        const option =
-            document.createElement(
-                "option"
-            );
-
-
-        option.value =
-            melody.id;
-
-
-        option.textContent =
-            melody.name;
-
-
-        elements.melodySelect.appendChild(
-            option
+        setFeedback(
+            `Não foi possível carregar o MIDI vocal: ${error.message}`,
+            "errado"
         );
+
+
+        elements.startButton.disabled =
+            true;
+
+
+        elements.melodyListenButton.disabled =
+            true;
     }
 }
 
 
 /*
  * ============================================================
- * SELECIONAR MELODIA
+ * BACKING TRACK
  * ============================================================
  */
 
-function selectMelody(
-    id
+function setupBackingTrack() {
+
+    elements.backingAudio.addEventListener(
+        "loadedmetadata",
+        () => {
+
+            const duration =
+                elements.backingAudio.duration;
+
+
+            elements.totalTime.textContent =
+                formatTime(
+                    duration
+                );
+
+
+            const difference =
+                Math.abs(
+                    duration -
+                    EXPECTED_DURATION
+                );
+
+
+            if (
+                difference <=
+                DURATION_WARNING_TOLERANCE
+            ) {
+
+                elements.backingFileStatus.textContent =
+                    `Pronto — ${formatTime(duration)}`;
+
+            } else {
+
+                elements.backingFileStatus.textContent =
+                    `Pronto — ${formatTime(duration)} ⚠`;
+            }
+
+
+            checkFilesReady();
+        }
+    );
+
+
+    elements.backingAudio.addEventListener(
+        "error",
+        () => {
+
+            elements.backingFileStatus.textContent =
+                "Arquivo não encontrado";
+
+
+            elements.startButton.disabled =
+                true;
+
+
+            setFeedback(
+                "Não foi possível carregar o instrumental MP3.",
+                "errado"
+            );
+        }
+    );
+
+
+    elements.backingAudio.load();
+}
+
+
+/*
+ * ============================================================
+ * CARREGAR MIDI VOCAL
+ * ============================================================
+ */
+
+async function loadVocalMidi() {
+
+    elements.midiStatus.textContent =
+        "Lendo arquivo...";
+
+
+    midiData =
+        await loadMidiFromUrl(
+            MIDI_URL
+        );
+
+
+    const playableTracks =
+        midiData.tracks.filter(
+            track =>
+                track.noteCount >
+                0
+        );
+
+
+    if (
+        playableTracks.length ===
+        0
+    ) {
+
+        throw new Error(
+            "Nenhuma nota foi encontrada no arquivo MIDI."
+        );
+    }
+
+
+    populateTrackSelector(
+        playableTracks
+    );
+
+
+    const bestTrack =
+        chooseBestMelodyTrack(
+            midiData
+        );
+
+
+    if (!bestTrack) {
+
+        throw new Error(
+            "Não foi possível escolher uma trilha melódica."
+        );
+    }
+
+
+    elements.trackSelect.value =
+        String(
+            bestTrack.index
+        );
+
+
+    selectMidiTrack(
+        bestTrack.index
+    );
+
+
+    elements.trackSelect.disabled =
+        false;
+
+
+    elements.melodyListenButton.disabled =
+        false;
+
+
+    const totalNotes =
+        playableTracks.reduce(
+            (
+                sum,
+                track
+            ) =>
+                sum +
+                track.noteCount,
+            0
+        );
+
+
+    elements.midiStatus.textContent =
+        `${playableTracks.length} trilha(s), ${totalNotes} notas`;
+
+
+    checkFilesReady();
+}
+
+
+/*
+ * ============================================================
+ * POPULAR SELETOR DE TRILHAS
+ * ============================================================
+ */
+
+function populateTrackSelector(
+    tracks
 ) {
 
-    selectedMelody =
-        getMelody(
-            id
+    elements.trackSelect.innerHTML =
+        "";
+
+
+    tracks.forEach(
+        track => {
+
+            const option =
+                document.createElement(
+                    "option"
+                );
+
+
+            option.value =
+                String(
+                    track.index
+                );
+
+
+            let label =
+                track.name;
+
+
+            label +=
+                ` — ${track.noteCount} notas`;
+
+
+            if (
+                track.polyphonic
+            ) {
+
+                label +=
+                    " — polifônica";
+            }
+
+
+            option.textContent =
+                label;
+
+
+            elements.trackSelect.appendChild(
+                option
+            );
+        }
+    );
+}
+
+
+/*
+ * ============================================================
+ * SELECIONAR TRILHA MIDI
+ * ============================================================
+ */
+
+function selectMidiTrack(
+    trackIndex
+) {
+
+    const numericIndex =
+        Number(
+            trackIndex
         );
 
 
-    elements.melodySelect.value =
-        selectedMelody.id;
-
-
-    elements.melodyName.textContent =
-        selectedMelody.name;
-
-
-    const duration =
-        getMelodyDuration(
-            selectedMelody
+    selectedTrack =
+        midiData.tracks.find(
+            track =>
+                track.index ===
+                numericIndex
         );
 
 
-    elements.totalTime.textContent =
-        formatTime(
-            duration
+    if (!selectedTrack) {
+
+        throw new Error(
+            "Trilha MIDI não encontrada."
         );
+    }
+
+
+    selectedMelody = {
+
+        id:
+            `midi-track-${selectedTrack.index}`,
+
+        name:
+            selectedTrack.name,
+
+        description:
+            buildTrackDescription(
+                selectedTrack
+            ),
+
+        notes:
+            selectedTrack.notes.map(
+                note => ({
+
+                    midi:
+                        note.midi,
+
+                    start:
+                        note.start,
+
+                    duration:
+                        note.duration
+                })
+            )
+    };
 
 
     resetInterfaceStatistics();
@@ -792,193 +843,453 @@ function selectMelody(
     pianoRoll.clearNoteResults();
 
 
+    elements.melodyName.textContent =
+        selectedTrack.name;
+
+
     setFeedback(
-        selectedMelody.description,
-        "neutro"
+        buildTrackDescription(
+            selectedTrack
+        ),
+        selectedTrack.polyphonic
+            ? "proximo"
+            : "neutro"
     );
+}
+
+
+/*
+ * ============================================================
+ * DESCRIÇÃO DA TRILHA
+ * ============================================================
+ */
+
+function buildTrackDescription(
+    track
+) {
+
+    const minNote =
+        track.minMidi !==
+        null
+            ? formatMidi(
+                track.minMidi
+            )
+            : "—";
+
+
+    const maxNote =
+        track.maxMidi !==
+        null
+            ? formatMidi(
+                track.maxMidi
+            )
+            : "—";
+
+
+    const mode =
+        track.polyphonic
+            ? "polifônica"
+            : "monofônica";
+
+
+    return (
+        `${track.noteCount} notas · ` +
+        `${formatTime(track.duration)} · ` +
+        `${minNote} a ${maxNote} · ` +
+        mode
+    );
+}
+
+
+/*
+ * ============================================================
+ * ARQUIVOS PRONTOS
+ * ============================================================
+ */
+
+function checkFilesReady() {
+
+    const mp3Ready =
+        Number.isFinite(
+            elements.backingAudio.duration
+        ) &&
+        elements.backingAudio.duration >
+            0;
+
+
+    const midiReady =
+        selectedMelody !==
+        null &&
+        selectedMelody.notes.length >
+            0;
+
+
+    if (
+        mp3Ready &&
+        midiReady
+    ) {
+
+        elements.startButton.disabled =
+            false;
+
+
+        elements.state.textContent =
+            "Pronto";
+
+
+        setFeedback(
+            "MIDI vocal e instrumental carregados. Confira a trilha selecionada e use fones de ouvido.",
+            "neutro"
+        );
+    }
+}
+
+
+/*
+ * ============================================================
+ * EVENTOS
+ * ============================================================
+ */
+
+elements.trackSelect.addEventListener(
+    "change",
+    () => {
+
+        if (
+            running ||
+            countdownRunning ||
+            backingPreviewPlaying ||
+            melodyPreviewPlaying
+        ) {
+
+            return;
+        }
+
+
+        selectMidiTrack(
+            Number(
+                elements.trackSelect.value
+            )
+        );
+    }
+);
+
+
+elements.melodyListenButton.addEventListener(
+    "click",
+    async () => {
+
+        if (
+            running ||
+            countdownRunning ||
+            backingPreviewPlaying
+        ) {
+
+            return;
+        }
+
+
+        if (
+            melodyPreviewPlaying
+        ) {
+
+            stopMelodyPreview();
+
+        } else {
+
+            await startMelodyPreview();
+        }
+    }
+);
+
+
+elements.backingListenButton.addEventListener(
+    "click",
+    async () => {
+
+        if (
+            running ||
+            countdownRunning ||
+            melodyPreviewPlaying
+        ) {
+
+            return;
+        }
+
+
+        if (
+            backingPreviewPlaying
+        ) {
+
+            stopBackingPreview();
+
+        } else {
+
+            await startBackingPreview();
+        }
+    }
+);
+
+
+elements.startButton.addEventListener(
+    "click",
+    async () => {
+
+        if (
+            running ||
+            countdownRunning
+        ) {
+
+            await stopTraining();
+
+        } else {
+
+            await startTraining();
+        }
+    }
+);
+
+
+elements.repeatButton.addEventListener(
+    "click",
+    async () => {
+
+        elements.result
+            .classList
+            .add(
+                "oculto"
+            );
+
+
+        await startTraining();
+    }
+);
+
+
+/*
+ * ============================================================
+ * PRÉVIA DO INSTRUMENTAL
+ * ============================================================
+ */
+
+async function startBackingPreview() {
+
+    if (
+        !Number.isFinite(
+            elements.backingAudio.duration
+        )
+    ) {
+
+        return;
+    }
+
+
+    backingPreviewPlaying =
+        true;
+
+
+    lockControls(
+        true
+    );
+
+
+    elements.backingListenButton.disabled =
+        false;
+
+
+    elements.backingListenButton.textContent =
+        "⏹ Parar instrumental";
+
+
+    elements.state.textContent =
+        "Ouvindo instrumental";
+
+
+    elements.backingState.textContent =
+        "Tocando";
+
+
+    elements.backingAudio.currentTime =
+        0;
+
+
+    pianoRoll.setCurrentTime(
+        0
+    );
+
+
+    try {
+
+        await elements.backingAudio.play();
+
+
+        animateBackingPreview();
+
+
+    } catch (error) {
+
+        console.error(
+            error
+        );
+
+
+        stopBackingPreview();
+
+
+        setFeedback(
+            "Não foi possível reproduzir o instrumental.",
+            "errado"
+        );
+    }
+}
+
+
+function animateBackingPreview() {
+
+    if (
+        !backingPreviewPlaying
+    ) {
+
+        return;
+    }
+
+
+    currentSongTime =
+        elements.backingAudio.currentTime;
+
+
+    pianoRoll.setCurrentTime(
+        currentSongTime
+    );
+
+
+    updateTimeInterface(
+        currentSongTime
+    );
+
+
+    updateExpectedNoteInterface(
+        currentSongTime
+    );
+
+
+    if (
+        elements.backingAudio.ended
+    ) {
+
+        stopBackingPreview();
+
+        return;
+    }
+
+
+    previewAnimationFrameId =
+        requestAnimationFrame(
+            animateBackingPreview
+        );
+}
+
+
+function stopBackingPreview() {
+
+    backingPreviewPlaying =
+        false;
+
+
+    elements.backingAudio.pause();
+
+
+    elements.backingAudio.currentTime =
+        0;
+
+
+    if (
+        previewAnimationFrameId !==
+        null
+    ) {
+
+        cancelAnimationFrame(
+            previewAnimationFrameId
+        );
+
+
+        previewAnimationFrameId =
+            null;
+    }
+
+
+    elements.backingListenButton.textContent =
+        "🎧 Ouvir instrumental";
 
 
     elements.state.textContent =
         "Pronto";
 
 
-    elements.microphoneState.textContent =
-        "Desligado";
+    elements.backingState.textContent =
+        "Parado";
+
+
+    lockControls(
+        false
+    );
+
+
+    pianoRoll.setCurrentTime(
+        0
+    );
+
+
+    updateTimeInterface(
+        0
+    );
+
+
+    updateExpectedNoteInterface(
+        0
+    );
 }
 
 
 /*
  * ============================================================
- * CRIAR ESTADOS INDIVIDUAIS DAS NOTAS
+ * PRÉVIA DA MELODIA MIDI
+ * ============================================================
+ *
+ * Diferentemente da versão anterior,
+ * respeitamos start e duration reais.
  * ============================================================
  */
 
-function createNoteStates() {
-
-    noteStates =
-        selectedMelody.notes.map(
-            (
-                note,
-                index
-            ) => {
-
-                return {
-
-                    /*
-                     * Identidade
-                     */
-
-                    index,
-
-                    midi:
-                        note.midi,
-
-
-                    /*
-                     * Tempo esperado
-                     */
-
-                    expectedStart:
-                        note.start,
-
-                    expectedEnd:
-                        note.start +
-                        note.duration,
-
-                    expectedDuration:
-                        note.duration,
-
-
-                    /*
-                     * Entrada vocal
-                     */
-
-                    firstVoiceTime:
-                        null,
-
-                    onsetErrorMs:
-                        null,
-
-
-                    /*
-                     * Últimas amostras
-                     */
-
-                    lastVoiceTime:
-                        null,
-
-                    lastSampleTime:
-                        null,
-
-
-                    /*
-                     * Quantidade de áudio recebido
-                     */
-
-                    voiceSamples:
-                        0,
-
-                    correctSamples:
-                        0,
-
-                    nearSamples:
-                        0,
-
-
-                    /*
-                     * Erros de pitch
-                     */
-
-                    centsValues:
-                        [],
-
-
-                    /*
-                     * Tempo realmente vocalizado
-                     */
-
-                    voicedTime:
-                        0,
-
-
-                    /*
-                     * Resultado final
-                     */
-
-                    finalized:
-                        false,
-
-                    status:
-                        "pending",
-
-                    score:
-                        0,
-
-                    averageCents:
-                        null,
-
-                    coverage:
-                        0,
-
-                    pitchScore:
-                        0,
-
-                    timingScore:
-                        0,
-
-                    durationScore:
-                        0
-                };
-            }
-        );
-}
-
-
-/*
- * ============================================================
- * PRÉVIA SONORA
- * ============================================================
- */
-
-async function previewMelody() {
+async function startMelodyPreview() {
 
     if (
-        previewPlaying
+        !selectedMelody
     ) {
+
         return;
     }
 
 
-    previewPlaying =
+    melodyPreviewPlaying =
         true;
 
 
-    lockConfigurationControls(
+    lockControls(
         true
     );
 
 
+    elements.melodyListenButton.disabled =
+        false;
+
+
+    elements.melodyListenButton.textContent =
+        "⏹ Parar melodia";
+
+
     elements.state.textContent =
-        "Ouvindo";
-
-
-    elements.result
-        .classList
-        .add(
-            "oculto"
-        );
-
-
-    setFeedback(
-        "Ouça a melodia com atenção.",
-        "neutro"
-    );
-
-
-    pianoRoll.clearVoice();
-
-
-    pianoRoll.clearNoteResults();
+        "Ouvindo MIDI";
 
 
     pianoRoll.setCurrentTime(
@@ -1001,215 +1312,274 @@ async function previewMelody() {
 
 
         /*
-         * Cada nota será disparada no seu tempo próprio.
+         * Agenda visual.
          */
-        const notePromises =
-            selectedMelody.notes.map(
-                note => {
-
-                    return playScheduledPreviewNote(
-                        note,
-                        previewStart
-                    );
-                }
-            );
-
-
-        await animatePreview(
+        animateMelodyPreview(
             previewStart
         );
 
 
-        await Promise.allSettled(
-            notePromises
+        /*
+         * Agenda notas.
+         */
+        selectedMelody.notes.forEach(
+            note => {
+
+                const timer =
+                    setTimeout(
+                        () => {
+
+                            if (
+                                !melodyPreviewPlaying
+                            ) {
+
+                                return;
+                            }
+
+
+                            toneGenerator.playNote(
+                                note.midi,
+                                Math.max(
+                                    30,
+                                    note.duration *
+                                        1000
+                                )
+                            );
+
+                        },
+                        Math.max(
+                            0,
+                            note.start *
+                                1000
+                        )
+                    );
+
+
+                melodyPreviewTimers.push(
+                    timer
+                );
+            }
         );
 
 
     } catch (error) {
 
         console.error(
-            "Erro ao reproduzir melodia:",
             error
         );
 
 
+        stopMelodyPreview();
+
+
         setFeedback(
-            "Não foi possível reproduzir a melodia.",
+            "Não foi possível reproduzir a melodia MIDI.",
             "errado"
-        );
-
-
-    } finally {
-
-        previewPlaying =
-            false;
-
-
-        if (
-            previewAnimationFrameId !==
-            null
-        ) {
-
-            cancelAnimationFrame(
-                previewAnimationFrameId
-            );
-
-
-            previewAnimationFrameId =
-                null;
-        }
-
-
-        lockConfigurationControls(
-            false
-        );
-
-
-        elements.state.textContent =
-            "Pronto";
-
-
-        pianoRoll.setCurrentTime(
-            0
-        );
-
-
-        updateTimeInterface(
-            0
         );
     }
 }
 
 
-/*
- * ============================================================
- * NOTA INDIVIDUAL DA PRÉVIA
- * ============================================================
- */
-
-async function playScheduledPreviewNote(
-    note,
+function animateMelodyPreview(
     previewStart
 ) {
 
-    const elapsedMs =
-        performance.now() -
-        previewStart;
-
-
-    const targetStartMs =
-        note.start *
-        1000;
-
-
-    const delay =
-        Math.max(
-            0,
-            targetStartMs -
-            elapsedMs
-        );
-
-
-    await wait(
-        delay
-    );
-
-
     if (
-        !previewPlaying
+        !melodyPreviewPlaying
     ) {
+
         return;
     }
 
 
-    await toneGenerator.playNote(
-        note.midi,
-        note.duration *
-            1000
+    currentSongTime =
+        (
+            performance.now() -
+            previewStart
+        ) /
+        1000;
+
+
+    pianoRoll.setCurrentTime(
+        currentSongTime
+    );
+
+
+    updateTimeInterface(
+        currentSongTime
+    );
+
+
+    updateExpectedNoteInterface(
+        currentSongTime
+    );
+
+
+    if (
+        currentSongTime >=
+        selectedTrack.duration
+    ) {
+
+        stopMelodyPreview();
+
+        return;
+    }
+
+
+    previewAnimationFrameId =
+        requestAnimationFrame(
+            () =>
+                animateMelodyPreview(
+                    previewStart
+                )
+        );
+}
+
+
+function stopMelodyPreview() {
+
+    melodyPreviewPlaying =
+        false;
+
+
+    melodyPreviewTimers.forEach(
+        timer =>
+            clearTimeout(
+                timer
+            )
+    );
+
+
+    melodyPreviewTimers =
+        [];
+
+
+    if (
+        previewAnimationFrameId !==
+        null
+    ) {
+
+        cancelAnimationFrame(
+            previewAnimationFrameId
+        );
+
+
+        previewAnimationFrameId =
+            null;
+    }
+
+
+    elements.melodyListenButton.textContent =
+        "🔊 Ouvir melodia MIDI";
+
+
+    elements.state.textContent =
+        "Pronto";
+
+
+    lockControls(
+        false
+    );
+
+
+    pianoRoll.setCurrentTime(
+        0
+    );
+
+
+    updateTimeInterface(
+        0
+    );
+
+
+    updateExpectedNoteInterface(
+        0
     );
 }
 
 
 /*
  * ============================================================
- * ANIMAÇÃO DA PRÉVIA
+ * ESTADOS DAS NOTAS
  * ============================================================
  */
 
-function animatePreview(
-    previewStart
-) {
+function createNoteStates() {
 
-    const duration =
-        getMelodyDuration(
-            selectedMelody
+    noteStates =
+        selectedMelody.notes.map(
+            (
+                note,
+                index
+            ) => ({
+
+                index,
+
+                midi:
+                    note.midi,
+
+                expectedStart:
+                    note.start,
+
+                expectedEnd:
+                    note.start +
+                    note.duration,
+
+                expectedDuration:
+                    note.duration,
+
+                firstVoiceTime:
+                    null,
+
+                onsetErrorMs:
+                    null,
+
+                lastVoiceTime:
+                    null,
+
+                lastSampleTime:
+                    null,
+
+                voiceSamples:
+                    0,
+
+                correctSamples:
+                    0,
+
+                nearSamples:
+                    0,
+
+                centsValues:
+                    [],
+
+                voicedTime:
+                    0,
+
+                finalized:
+                    false,
+
+                status:
+                    "pending",
+
+                score:
+                    0,
+
+                averageCents:
+                    null,
+
+                coverage:
+                    0,
+
+                pitchScore:
+                    0,
+
+                timingScore:
+                    0,
+
+                durationScore:
+                    0
+            })
         );
-
-
-    return new Promise(
-        resolve => {
-
-            const frame =
-                () => {
-
-                    if (
-                        !previewPlaying
-                    ) {
-
-                        resolve();
-
-                        return;
-                    }
-
-
-                    const elapsed =
-                        (
-                            performance.now() -
-                            previewStart
-                        ) /
-                        1000;
-
-
-                    pianoRoll.setCurrentTime(
-                        elapsed
-                    );
-
-
-                    updateTimeInterface(
-                        elapsed
-                    );
-
-
-                    updateExpectedNoteInterface(
-                        elapsed
-                    );
-
-
-                    if (
-                        elapsed >=
-                        duration
-                    ) {
-
-                        previewAnimationFrameId =
-                            null;
-
-
-                        resolve();
-
-                        return;
-                    }
-
-
-                    previewAnimationFrameId =
-                        requestAnimationFrame(
-                            frame
-                        );
-                };
-
-
-            frame();
-        }
-    );
 }
 
 
@@ -1222,11 +1592,46 @@ function animatePreview(
 async function startTraining() {
 
     if (
+        !selectedMelody
+    ) {
+
+        setFeedback(
+            "A melodia MIDI ainda não foi carregada.",
+            "errado"
+        );
+
+
+        return;
+    }
+
+
+    if (
+        !elements.headphoneConfirmation.checked
+    ) {
+
+        setFeedback(
+            "Confirme que está usando fones de ouvido antes de iniciar.",
+            "proximo"
+        );
+
+
+        return;
+    }
+
+
+    if (
         running ||
         countdownRunning
     ) {
+
         return;
     }
+
+
+    stopBackingPreview();
+
+
+    stopMelodyPreview();
 
 
     elements.result
@@ -1236,10 +1641,6 @@ async function startTraining() {
         );
 
 
-    /*
-     * O botão continua disponível para podermos
-     * interromper inclusive durante a contagem regressiva.
-     */
     elements.startButton.textContent =
         "Interromper treino";
 
@@ -1251,59 +1652,35 @@ async function startTraining() {
         );
 
 
-    lockConfigurationControls(
+    lockControls(
         true
     );
 
 
+    /*
+     * Botão principal permanece disponível.
+     */
+    elements.startButton.disabled =
+        false;
+
+
     try {
 
-        /*
-         * Primeiro preparamos o contexto de áudio.
-         */
-        await toneGenerator.ensureContext();
-
-
-        /*
-         * Depois iniciamos o microfone.
-         */
         await microphone.start();
 
 
         /*
-         * ====================================================
-         * IMPORTANTE
-         * ====================================================
+         * IMPORTANTE:
          *
-         * Primeiro limpamos a interface e os estados
-         * pertencentes ao treino anterior.
-         *
-         * Somente DEPOIS criamos os estados da nova melodia.
-         *
-         * Na versão anterior a ordem estava invertida:
-         *
-         * createNoteStates();
-         * resetInterfaceStatistics();
-         *
-         * Como resetInterfaceStatistics() contém:
-         *
-         * noteStates = [];
-         *
-         * todas as notas recém-criadas eram apagadas
-         * imediatamente.
-         *
-         * ====================================================
+         * primeiro limpa.
+         * depois cria estados.
          */
-
         resetInterfaceStatistics();
 
 
         createNoteStates();
 
 
-        /*
-         * Reinicia o piano roll.
-         */
         pianoRoll.setMelody(
             selectedMelody
         );
@@ -1315,33 +1692,23 @@ async function startTraining() {
         pianoRoll.clearNoteResults();
 
 
-        recentFrequencies =
-            [];
-
-
-        lastVoicePointTimestamp =
-            0;
-
-
         elements.microphoneState.textContent =
             "Ativo";
+
+
+        elements.backingState.textContent =
+            "Aguardando";
 
 
         elements.state.textContent =
             "Preparando";
 
 
-        setFeedback(
-            "Prepare-se para cantar.",
-            "neutro"
-        );
-
-
         countdownRunning =
             true;
 
 
-        const countdownCompleted =
+        const completed =
             await countdown();
 
 
@@ -1349,12 +1716,8 @@ async function startTraining() {
             false;
 
 
-        /*
-         * Se a contagem foi interrompida,
-         * não iniciamos o relógio musical.
-         */
         if (
-            !countdownCompleted
+            !completed
         ) {
 
             return;
@@ -1363,16 +1726,22 @@ async function startTraining() {
 
         /*
          * ====================================================
-         * INÍCIO REAL DA MELODIA
+         * MP3 = RELÓGIO MESTRE
          * ====================================================
          */
 
+        elements.backingAudio.pause();
+
+
+        elements.backingAudio.currentTime =
+            0;
+
+
+        await elements.backingAudio.play();
+
+
         running =
             true;
-
-
-        startTimestamp =
-            performance.now();
 
 
         currentSongTime =
@@ -1383,8 +1752,12 @@ async function startTraining() {
             "Cantando";
 
 
+        elements.backingState.textContent =
+            "Tocando";
+
+
         setFeedback(
-            "Acompanhe as barras e cante.",
+            "Acompanhe o instrumental e a melodia MIDI.",
             "neutro"
         );
 
@@ -1395,38 +1768,17 @@ async function startTraining() {
     } catch (error) {
 
         console.error(
-            "Erro ao iniciar treino:",
             error
         );
 
 
-        if (
+        setFeedback(
             error.name ===
-            "NotAllowedError"
-        ) {
-
-            setFeedback(
-                "A permissão do microfone foi negada.",
-                "errado"
-            );
-
-        } else if (
-            error.name ===
-            "NotFoundError"
-        ) {
-
-            setFeedback(
-                "Nenhum microfone foi encontrado.",
-                "errado"
-            );
-
-        } else {
-
-            setFeedback(
-                `Não foi possível iniciar o treino: ${error.message}`,
-                "errado"
-            );
-        }
+                "NotAllowedError"
+                ? "A permissão do microfone foi negada."
+                : `Não foi possível iniciar: ${error.message}`,
+            "errado"
+        );
 
 
         await stopTraining();
@@ -1456,10 +1808,6 @@ async function countdown() {
             [3, 2, 1]
         ) {
 
-            /*
-             * Se stopTraining() foi chamado,
-             * countdownRunning passa a false.
-             */
             if (
                 !countdownRunning
             ) {
@@ -1522,81 +1870,54 @@ function processFrame() {
     if (
         !running
     ) {
+
         return;
     }
 
 
-    const now =
-        performance.now();
-
+    /*
+     * ========================================================
+     * O MP3 É O RELÓGIO MESTRE
+     * ========================================================
+     */
 
     currentSongTime =
-        (
-            now -
-            startTimestamp
-        ) /
-        1000;
+        elements.backingAudio.currentTime;
 
 
-    const duration =
-        getMelodyDuration(
-            selectedMelody
-        );
-
-
-    /*
-     * Atualiza o deslocamento do canvas.
-     */
     pianoRoll.setCurrentTime(
         currentSongTime
     );
 
 
-    /*
-     * Atualiza barra temporal.
-     */
     updateTimeInterface(
         currentSongTime
     );
 
 
-    /*
-     * Mesmo em silêncio mostramos
-     * qual nota está atravessando o playhead.
-     */
     updateExpectedNoteInterface(
         currentSongTime
     );
 
 
-    /*
-     * Julga todas as notas cujo período já terminou.
-     *
-     * É aqui que as barras azuis passadas
-     * passam a verde/amarelo/vermelho/cinza.
-     */
     finalizeExpiredNotes(
         currentSongTime
     );
 
 
-    /*
-     * Final da melodia.
-     */
+    processMicrophone(
+        performance.now()
+    );
+
+
     if (
-        currentSongTime >=
-        duration
+        elements.backingAudio.ended
     ) {
 
         finishTraining();
 
         return;
     }
-
-
-    processMicrophone(
-        now
-    );
 
 
     animationFrameId =
@@ -1621,6 +1942,7 @@ function processMicrophone(
 
 
     if (!buffer) {
+
         return;
     }
 
@@ -1631,9 +1953,6 @@ function processMicrophone(
         );
 
 
-    /*
-     * Silêncio.
-     */
     if (
         rms <
         MIN_RMS
@@ -1674,9 +1993,8 @@ function processMicrophone(
         );
 
 
-    if (
-        !frequency
-    ) {
+    if (!frequency) {
+
         return;
     }
 
@@ -1691,13 +2009,11 @@ function processMicrophone(
         midiFloat ===
         null
     ) {
+
         return;
     }
 
 
-    /*
-     * Traçado da voz no piano roll.
-     */
     if (
         timestamp -
         lastVoicePointTimestamp >=
@@ -1715,17 +2031,11 @@ function processMicrophone(
     }
 
 
-    /*
-     * Nota nominal cantada.
-     */
     updateSungNote(
         midiFloat
     );
 
 
-    /*
-     * Avaliação musical/temporal.
-     */
     evaluateVoiceSample(
         frequency,
         currentSongTime
@@ -1735,7 +2045,7 @@ function processMicrophone(
 
 /*
  * ============================================================
- * QUAL BARRA DEVE RECEBER ESTA AMOSTRA?
+ * ALVO ATIVO
  * ============================================================
  */
 
@@ -1744,24 +2054,17 @@ function getEvaluationTarget(
 ) {
 
     /*
-     * --------------------------------------------------------
-     * 1. Prioridade máxima:
+     * Para uma trilha vocal monofônica,
+     * esta busca retorna uma nota.
      *
-     * período real da barra.
-     *
-     * Usamos:
-     *
-     * start <= time < end
-     *
-     * Assim a fronteira entre duas notas consecutivas
-     * pertence à segunda nota, não à primeira.
-     * --------------------------------------------------------
+     * Se a trilha for polifônica,
+     * usa a primeira nota ativa.
      */
-
     for (
-        let index = 0;
+        let index =
+            0;
         index <
-        selectedMelody.notes.length;
+            selectedMelody.notes.length;
         index++
     ) {
 
@@ -1769,10 +2072,6 @@ function getEvaluationTarget(
             selectedMelody.notes[
                 index
             ];
-
-
-        const start =
-            note.start;
 
 
         const end =
@@ -1782,125 +2081,42 @@ function getEvaluationTarget(
 
         if (
             time >=
-            start &&
+                note.start &&
             time <
-            end
+                end
         ) {
 
             return {
+
                 note,
+
                 index
             };
-        }
-    }
-
-
-    /*
-     * --------------------------------------------------------
-     * 2. Margem temporal.
-     *
-     * Usada somente quando não estamos dentro
-     * do período real de nenhuma barra.
-     *
-     * Isso permite capturar pequenas entradas antecipadas
-     * ou finalizações ligeiramente atrasadas.
-     * --------------------------------------------------------
-     */
-
-    let bestTarget =
-        null;
-
-
-    let bestDistance =
-        Infinity;
-
-
-    for (
-        let index = 0;
-        index <
-        selectedMelody.notes.length;
-        index++
-    ) {
-
-        const note =
-            selectedMelody.notes[
-                index
-            ];
-
-
-        const start =
-            note.start;
-
-
-        const end =
-            note.start +
-            note.duration;
-
-
-        if (
-            time <
-                start -
-                    NOTE_TIME_MARGIN ||
-            time >
-                end +
-                    NOTE_TIME_MARGIN
-        ) {
-
-            continue;
         }
 
 
         /*
-         * Distância até a barra.
+         * Como notas estão ordenadas,
+         * podemos parar quando já passamos
+         * do tempo procurado.
          */
-        let distance =
-            0;
-
-
         if (
-            time <
-            start
+            note.start >
+            time
         ) {
 
-            distance =
-                start -
-                time;
-
-        } else if (
-            time >
-            end
-        ) {
-
-            distance =
-                time -
-                end;
-        }
-
-
-        if (
-            distance <
-            bestDistance
-        ) {
-
-            bestDistance =
-                distance;
-
-
-            bestTarget = {
-                note,
-                index
-            };
+            break;
         }
     }
 
 
-    return bestTarget;
+    return null;
 }
 
 
 /*
  * ============================================================
- * AVALIAR AMOSTRA VOCAL
+ * AVALIAÇÃO VOCAL
  * ============================================================
  */
 
@@ -1915,14 +2131,7 @@ function evaluateVoiceSample(
         );
 
 
-    /*
-     * Voz detectada durante uma pausa.
-     *
-     * Nesta etapa não penalizamos isso.
-     */
-    if (
-        !target
-    ) {
+    if (!target) {
 
         elements.currentError.textContent =
             "—";
@@ -1940,37 +2149,21 @@ function evaluateVoiceSample(
             "—";
 
 
-        setFeedback(
-            "Aguarde a próxima nota...",
-            "neutro"
-        );
-
-
         return;
     }
 
 
-    const {
-        note,
-        index
-    } =
-        target;
-
-
     const state =
         noteStates[
-            index
+            target.index
         ];
 
 
-    /*
-     * Uma barra já julgada não recebe
-     * mais dados.
-     */
     if (
         !state ||
         state.finalized
     ) {
+
         return;
     }
 
@@ -1981,7 +2174,7 @@ function evaluateVoiceSample(
 
     const targetFrequency =
         midiToFrequency(
-            note.midi
+            target.note.midi
         );
 
 
@@ -2000,9 +2193,9 @@ function evaluateVoiceSample(
 
 
     /*
-     * ========================================================
-     * PRIMEIRA AMOSTRA = ENTRADA
-     * ========================================================
+     * --------------------------------------------------------
+     * ENTRADA
+     * --------------------------------------------------------
      */
 
     if (
@@ -2017,16 +2210,16 @@ function evaluateVoiceSample(
         state.onsetErrorMs =
             (
                 time -
-                note.start
+                target.note.start
             ) *
             1000;
     }
 
 
     /*
-     * ========================================================
-     * TEMPO REALMENTE CANTADO
-     * ========================================================
+     * --------------------------------------------------------
+     * COBERTURA
+     * --------------------------------------------------------
      */
 
     if (
@@ -2039,12 +2232,6 @@ function evaluateVoiceSample(
             state.lastSampleTime;
 
 
-        /*
-         * Só somamos continuidade real.
-         *
-         * Uma pausa longa não pode ser interpretada
-         * como canto sustentado.
-         */
         if (
             delta >
                 0 &&
@@ -2052,10 +2239,6 @@ function evaluateVoiceSample(
                 MAX_VOICED_SAMPLE_GAP
         ) {
 
-            /*
-             * Limitamos a cobertura ao período real
-             * da barra.
-             */
             const intervalStart =
                 Math.max(
                     state.lastSampleTime,
@@ -2095,12 +2278,6 @@ function evaluateVoiceSample(
         time;
 
 
-    /*
-     * ========================================================
-     * ESTATÍSTICAS DE PITCH
-     * ========================================================
-     */
-
     state.voiceSamples++;
 
 
@@ -2126,26 +2303,19 @@ function evaluateVoiceSample(
 
 
     /*
-     * ========================================================
-     * MÉTRICAS AO VIVO
-     * ========================================================
+     * --------------------------------------------------------
+     * INTERFACE
+     * --------------------------------------------------------
      */
 
-    const roundedCents =
+    const rounded =
         Math.round(
             cents
         );
 
 
-    const sign =
-        roundedCents >
-        0
-            ? "+"
-            : "";
-
-
     elements.currentError.textContent =
-        `${sign}${roundedCents} cents`;
+        `${rounded > 0 ? "+" : ""}${rounded} cents`;
 
 
     elements.currentOnset.textContent =
@@ -2167,25 +2337,24 @@ function evaluateVoiceSample(
         )}%`;
 
 
-    /*
-     * Exibimos uma estimativa da pontuação
-     * enquanto a nota ainda está ocorrendo.
-     */
-    const liveScores =
+    const scores =
         calculateNoteScores(
-            state,
-            false
+            state
         );
 
 
     elements.currentNoteScore.textContent =
-        liveScores.totalScore;
+        scores.totalScore;
+
+
+    elements.accuracy.textContent =
+        `${scores.pitchScore}%`;
 
 
     /*
-     * ========================================================
-     * FEEDBACK IMEDIATO
-     * ========================================================
+     * --------------------------------------------------------
+     * FEEDBACK
+     * --------------------------------------------------------
      */
 
     if (
@@ -2203,72 +2372,30 @@ function evaluateVoiceSample(
         difficulty.near
     ) {
 
-        if (
+        setFeedback(
             cents <
-            0
-        ) {
-
-            setFeedback(
-                "Quase — suba um pouco.",
-                "proximo"
-            );
-
-        } else {
-
-            setFeedback(
-                "Quase — desça um pouco.",
-                "proximo"
-            );
-        }
+                0
+                ? "Quase — suba um pouco."
+                : "Quase — desça um pouco.",
+            "proximo"
+        );
 
     } else {
 
-        if (
+        setFeedback(
             cents <
-            0
-        ) {
-
-            setFeedback(
-                "Abaixo da nota — suba a voz.",
-                "errado"
-            );
-
-        } else {
-
-            setFeedback(
-                "Acima da nota — desça a voz.",
-                "errado"
-            );
-        }
+                0
+                ? "Abaixo da nota — suba a voz."
+                : "Acima da nota — desça a voz.",
+            "errado"
+        );
     }
-
-
-    /*
-     * Atualiza também a afinação média
-     * da barra atual.
-     */
-    const currentAverageCents =
-        calculateAverage(
-            state.centsValues
-        );
-
-
-    const currentPitchScore =
-        calculatePitchScore(
-            currentAverageCents,
-            state,
-            difficulty
-        );
-
-
-    elements.accuracy.textContent =
-        `${currentPitchScore}%`;
 }
 
 
 /*
  * ============================================================
- * FINALIZAR NOTAS CUJO TEMPO TERMINOU
+ * FINALIZAR NOTAS
  * ============================================================
  */
 
@@ -2276,21 +2403,6 @@ function finalizeExpiredNotes(
     time
 ) {
 
-    if (
-        !noteStates.length
-    ) {
-        return;
-    }
-
-
-    /*
-     * Cada barra é independente.
-     *
-     * Não dependemos de um contador sequencial externo.
-     *
-     * Portanto, se qualquer barra já venceu,
-     * ela será julgada.
-     */
     selectedMelody.notes.forEach(
         (
             note,
@@ -2307,19 +2419,16 @@ function finalizeExpiredNotes(
                 !state ||
                 state.finalized
             ) {
+
                 return;
             }
 
 
-            const evaluationEnd =
-                note.start +
-                note.duration +
-                NOTE_TIME_MARGIN;
-
-
             if (
                 time >=
-                evaluationEnd
+                note.start +
+                note.duration +
+                NOTE_TIME_MARGIN
             ) {
 
                 finalizeNote(
@@ -2330,12 +2439,6 @@ function finalizeExpiredNotes(
     );
 }
 
-
-/*
- * ============================================================
- * FINALIZAR UMA BARRA
- * ============================================================
- */
 
 function finalizeNote(
     index
@@ -2351,21 +2454,19 @@ function finalizeNote(
         !state ||
         state.finalized
     ) {
+
         return;
     }
 
 
-    /*
-     * A partir deste ponto a barra não recebe mais amostras.
-     */
     state.finalized =
         true;
 
 
     /*
-     * ========================================================
-     * BARRA NÃO CANTADA
-     * ========================================================
+     * --------------------------------------------------------
+     * OMITIDA
+     * --------------------------------------------------------
      */
 
     if (
@@ -2401,15 +2502,10 @@ function finalizeNote(
             0;
 
 
-        /*
-         * Envia imediatamente o resultado
-         * para o piano roll.
-         *
-         * A barra deverá ficar cinza.
-         */
         pianoRoll.setNoteResult(
             index,
             {
+
                 status:
                     "missed",
 
@@ -2422,19 +2518,14 @@ function finalizeNote(
         updateLiveStatistics();
 
 
-        clearCurrentNoteMetricsIfNeeded(
-            index
-        );
-
-
         return;
     }
 
 
     /*
-     * ========================================================
-     * ERRO MÉDIO
-     * ========================================================
+     * --------------------------------------------------------
+     * RESULTADO
+     * --------------------------------------------------------
      */
 
     state.averageCents =
@@ -2443,28 +2534,15 @@ function finalizeNote(
         );
 
 
-    /*
-     * ========================================================
-     * COBERTURA
-     * ========================================================
-     */
-
     state.coverage =
         calculateCoverage(
             state
         );
 
 
-    /*
-     * ========================================================
-     * PONTUAÇÕES
-     * ========================================================
-     */
-
     const scores =
         calculateNoteScores(
-            state,
-            true
+            state
         );
 
 
@@ -2483,12 +2561,6 @@ function finalizeNote(
     state.score =
         scores.totalScore;
 
-
-    /*
-     * ========================================================
-     * CLASSIFICAÇÃO VISUAL
-     * ========================================================
-     */
 
     if (
         state.score >=
@@ -2513,24 +2585,10 @@ function finalizeNote(
     }
 
 
-    /*
-     * ========================================================
-     * ENVIA RESULTADO AO PIANO ROLL
-     * ========================================================
-     *
-     * Este é o ponto responsável por transformar:
-     *
-     * azul → verde
-     * azul → amarelo
-     * azul → vermelho
-     *
-     * imediatamente após a barra terminar.
-     * ========================================================
-     */
-
     pianoRoll.setNoteResult(
         index,
         {
+
             status:
                 state.status,
 
@@ -2540,32 +2598,18 @@ function finalizeNote(
     );
 
 
-    /*
-     * Mostra a pontuação definitiva da última barra
-     * recém-avaliada.
-     */
-    elements.currentNoteScore.textContent =
-        state.score;
-
-
     updateLiveStatistics();
-
-
-    clearCurrentNoteMetricsIfNeeded(
-        index
-    );
 }
 
 
 /*
  * ============================================================
- * PONTUAÇÃO DA NOTA
+ * PONTUAÇÃO
  * ============================================================
  */
 
 function calculateNoteScores(
-    state,
-    finalized
+    state
 ) {
 
     const difficulty =
@@ -2580,21 +2624,6 @@ function calculateNoteScores(
             : difficulty.near;
 
 
-    /*
-     * ========================================================
-     * 1. AFINAÇÃO
-     * ========================================================
-     *
-     * Consideramos dois aspectos:
-     *
-     * A) erro médio absoluto;
-     * B) porcentagem de amostras dentro da tolerância.
-     *
-     * Isso evita que um pequeno trecho muito ruim
-     * domine completamente a nota.
-     * ========================================================
-     */
-
     const meanErrorScore =
         Math.max(
             0,
@@ -2604,7 +2633,7 @@ function calculateNoteScores(
                 (
                     1 -
                     averageCents /
-                        difficulty.near
+                    difficulty.near
                 )
             )
         );
@@ -2618,25 +2647,15 @@ function calculateNoteScores(
             : 0;
 
 
-    const correctRatioScore =
-        correctRatio *
-        100;
-
-
     const pitchScore =
-        Math.round(
+        clampScore(
             meanErrorScore *
                 0.55 +
-            correctRatioScore *
+            correctRatio *
+                100 *
                 0.45
         );
 
-
-    /*
-     * ========================================================
-     * 2. ENTRADA
-     * ========================================================
-     */
 
     const timingScore =
         calculateTimingScore(
@@ -2644,78 +2663,17 @@ function calculateNoteScores(
         );
 
 
-    /*
-     * ========================================================
-     * 3. DURAÇÃO / COBERTURA
-     * ========================================================
-     */
-
-    let coverage =
-        calculateCoverage(
-            state
-        );
-
-
-    /*
-     * Enquanto a barra ainda está em andamento,
-     * uma cobertura pequena é natural.
-     *
-     * Para o valor "ao vivo", comparamos com quanto
-     * da nota já deveria ter transcorrido.
-     */
-    if (
-        !finalized
-    ) {
-
-        const elapsedExpected =
-            Math.max(
-                0,
-                Math.min(
-                    currentSongTime -
-                        state.expectedStart,
-                    state.expectedDuration
-                )
-            );
-
-
-        if (
-            elapsedExpected >
-            0
-        ) {
-
-            coverage =
-                Math.max(
-                    0,
-                    Math.min(
-                        1,
-                        state.voicedTime /
-                            elapsedExpected
-                    )
-                );
-        }
-    }
-
-
     const durationScore =
-        Math.round(
-            coverage *
+        clampScore(
+            calculateCoverage(
+                state
+            ) *
             100
         );
 
 
-    /*
-     * ========================================================
-     * PONTUAÇÃO TOTAL
-     * ========================================================
-     *
-     * 60% afinação
-     * 20% entrada
-     * 20% duração
-     * ========================================================
-     */
-
     const totalScore =
-        Math.round(
+        clampScore(
             pitchScore *
                 0.60 +
             timingScore *
@@ -2727,99 +2685,24 @@ function calculateNoteScores(
 
     return {
 
-        pitchScore:
-            clampScore(
-                pitchScore
-            ),
+        pitchScore,
 
-        timingScore:
-            clampScore(
-                timingScore
-            ),
+        timingScore,
 
-        durationScore:
-            clampScore(
-                durationScore
-            ),
+        durationScore,
 
-        totalScore:
-            clampScore(
-                totalScore
-            )
+        totalScore
     };
 }
 
 
-/*
- * ============================================================
- * PONTUAÇÃO DE AFINAÇÃO
- * ============================================================
- */
-
-function calculatePitchScore(
-    averageCents,
-    state,
-    difficulty
-) {
-
-    if (
-        !Number.isFinite(
-            averageCents
-        ) ||
-        !state ||
-        state.voiceSamples ===
-            0
-    ) {
-
-        return 0;
-    }
-
-
-    const meanErrorScore =
-        Math.max(
-            0,
-            Math.min(
-                100,
-                100 *
-                (
-                    1 -
-                    averageCents /
-                        difficulty.near
-                )
-            )
-        );
-
-
-    const correctRatio =
-        state.correctSamples /
-        state.voiceSamples;
-
-
-    return clampScore(
-        Math.round(
-            meanErrorScore *
-                0.55 +
-            correctRatio *
-                100 *
-                0.45
-        )
-    );
-}
-
-
-/*
- * ============================================================
- * PONTUAÇÃO DE ENTRADA
- * ============================================================
- */
-
 function calculateTimingScore(
-    onsetErrorMs
+    onset
 ) {
 
     if (
         !Number.isFinite(
-            onsetErrorMs
+            onset
         )
     ) {
 
@@ -2827,18 +2710,14 @@ function calculateTimingScore(
     }
 
 
-    const absolute =
+    const value =
         Math.abs(
-            onsetErrorMs
+            onset
         );
 
 
-    /*
-     * Até ±120 ms:
-     * nota máxima.
-     */
     if (
-        absolute <=
+        value <=
         EXCELLENT_ONSET_MS
     ) {
 
@@ -2846,19 +2725,14 @@ function calculateTimingScore(
     }
 
 
-    /*
-     * Entre 120 e 300 ms:
-     *
-     * cai suavemente de 100 para 50.
-     */
     if (
-        absolute <=
+        value <=
         ACCEPTABLE_ONSET_MS
     ) {
 
         const ratio =
             (
-                absolute -
+                value -
                 EXCELLENT_ONSET_MS
             ) /
             (
@@ -2868,55 +2742,31 @@ function calculateTimingScore(
 
 
         return clampScore(
-            Math.round(
-                100 -
-                ratio *
-                    50
-            )
+            100 -
+            ratio *
+                50
         );
     }
 
 
-    /*
-     * Após 300 ms:
-     *
-     * perde aproximadamente 1 ponto
-     * a cada 10 ms adicionais.
-     */
-    const penalty =
+    return clampScore(
+        50 -
         (
-            absolute -
+            value -
             ACCEPTABLE_ONSET_MS
         ) /
-        10;
-
-
-    return clampScore(
-        Math.round(
-            50 -
-            penalty
-        )
+        10
     );
 }
 
-
-/*
- * ============================================================
- * COBERTURA
- * ============================================================
- */
 
 function calculateCoverage(
     state
 ) {
 
     if (
-        !state ||
-        !Number.isFinite(
-            state.expectedDuration
-        ) ||
         state.expectedDuration <=
-            0
+        0
     ) {
 
         return 0;
@@ -2936,7 +2786,7 @@ function calculateCoverage(
 
 /*
  * ============================================================
- * NOTA ESPERADA NA INTERFACE
+ * INTERFACE DE NOTA
  * ============================================================
  */
 
@@ -2944,152 +2794,37 @@ function updateExpectedNoteInterface(
     time
 ) {
 
-    const active =
-        getStrictActiveTarget(
+    const target =
+        getEvaluationTarget(
             time
         );
 
 
-    if (
-        !active
-    ) {
-
-        elements.expectedNote.textContent =
-            "—";
-
-
-        return;
-    }
-
-
     elements.expectedNote.textContent =
-        formatMidi(
-            active.note.midi
-        );
+        target
+            ? formatMidi(
+                target.note.midi
+            )
+            : "—";
 }
 
-
-/*
- * ============================================================
- * NOTA ESTRITAMENTE ATIVA
- * ============================================================
- *
- * Esta função é usada apenas para interface.
- *
- * Não usa margens.
- * ============================================================
- */
-
-function getStrictActiveTarget(
-    time
-) {
-
-    for (
-        let index = 0;
-        index <
-        selectedMelody.notes.length;
-        index++
-    ) {
-
-        const note =
-            selectedMelody.notes[
-                index
-            ];
-
-
-        const start =
-            note.start;
-
-
-        const end =
-            note.start +
-            note.duration;
-
-
-        if (
-            time >=
-                start &&
-            time <
-                end
-        ) {
-
-            return {
-                note,
-                index
-            };
-        }
-    }
-
-
-    return null;
-}
-
-
-/*
- * ============================================================
- * LIMPAR MÉTRICAS DA NOTA ANTERIOR
- * ============================================================
- */
-
-function clearCurrentNoteMetricsIfNeeded(
-    finalizedIndex
-) {
-
-    const active =
-        getStrictActiveTarget(
-            currentSongTime
-        );
-
-
-    /*
-     * Se ainda estivermos visualmente na mesma barra
-     * por alguns milissegundos, mantemos o resultado.
-     */
-    if (
-        active &&
-        active.index ===
-            finalizedIndex
-    ) {
-
-        return;
-    }
-
-
-    elements.currentOnset.textContent =
-        "—";
-
-
-    elements.currentCoverage.textContent =
-        "—";
-}
-
-
-/*
- * ============================================================
- * NOTA CANTADA
- * ============================================================
- */
 
 function updateSungNote(
     midiFloat
 ) {
 
-    const nearestMidi =
-        Math.round(
-            midiFloat
-        );
-
-
     elements.sungNote.textContent =
         formatMidi(
-            nearestMidi
+            Math.round(
+                midiFloat
+            )
         );
 }
 
 
 /*
  * ============================================================
- * ESTATÍSTICAS EM TEMPO REAL
+ * ESTATÍSTICAS AO VIVO
  * ============================================================
  */
 
@@ -3102,23 +2837,12 @@ function updateLiveStatistics() {
         );
 
 
-    const sung =
-        finalized.filter(
-            state =>
-                state.voiceSamples >
-                0
-        );
+    elements.evaluatedNotes.textContent =
+        finalized.length;
 
 
-    /*
-     * Pontuação atual considera inclusive barras omitidas.
-     *
-     * Portanto, silêncio em uma nota já terminada
-     * pesa corretamente como zero.
-     */
-    const currentTotalScore =
-        finalized.length >
-        0
+    const score =
+        finalized.length
             ? calculateAverage(
                 finalized.map(
                     state =>
@@ -3130,43 +2854,14 @@ function updateLiveStatistics() {
 
     elements.currentScore.textContent =
         Math.round(
-            currentTotalScore
+            score
         );
-
-
-    /*
-     * Pontuação média de afinação das notas
-     * efetivamente cantadas.
-     */
-    const averagePitchScore =
-        sung.length >
-        0
-            ? calculateAverage(
-                sung.map(
-                    state =>
-                        state.pitchScore
-                )
-            )
-            : null;
-
-
-    elements.accuracy.textContent =
-        averagePitchScore !==
-        null
-            ? `${Math.round(
-                averagePitchScore
-            )}%`
-            : "—";
-
-
-    elements.evaluatedNotes.textContent =
-        finalized.length;
 }
 
 
 /*
  * ============================================================
- * ATUALIZAR TEMPO
+ * LINHA DO TEMPO
  * ============================================================
  */
 
@@ -3175,12 +2870,14 @@ function updateTimeInterface(
 ) {
 
     const duration =
-        getMelodyDuration(
-            selectedMelody
-        );
+        Number.isFinite(
+            elements.backingAudio.duration
+        )
+            ? elements.backingAudio.duration
+            : EXPECTED_DURATION;
 
 
-    const limited =
+    const safe =
         Math.max(
             0,
             Math.min(
@@ -3193,30 +2890,32 @@ function updateTimeInterface(
     const ratio =
         duration >
         0
-            ? limited /
+            ? safe /
                 duration
             : 0;
 
 
-    const percentage =
-        Math.round(
-            ratio *
-            100
+    elements.currentTime.textContent =
+        formatTime(
+            safe
         );
 
 
-    elements.currentTime.textContent =
+    elements.totalTime.textContent =
         formatTime(
-            limited
+            duration
         );
 
 
     elements.progress.textContent =
-        `${percentage}%`;
+        `${Math.round(
+            ratio *
+            100
+        )}%`;
 
 
     elements.timeBar.style.width =
-        `${percentage}%`;
+        `${ratio * 100}%`;
 }
 
 
@@ -3231,14 +2930,11 @@ async function finishTraining() {
     if (
         !running
     ) {
+
         return;
     }
 
 
-    /*
-     * Impede nova chamada enquanto aguardamos
-     * o encerramento do microfone.
-     */
     running =
         false;
 
@@ -3259,10 +2955,11 @@ async function finishTraining() {
 
 
     /*
-     * Algumas barras podem terminar exatamente
-     * junto do fim da melodia.
+     * Finaliza somente notas cujo tempo
+     * já passou.
      *
-     * Garantimos que todas sejam julgadas.
+     * Se o MIDI terminar antes do MP3,
+     * todas já terão sido avaliadas.
      */
     noteStates.forEach(
         (
@@ -3282,11 +2979,18 @@ async function finishTraining() {
     );
 
 
+    elements.backingAudio.pause();
+
+
     await microphone.stop();
 
 
     elements.microphoneState.textContent =
         "Desligado";
+
+
+    elements.backingState.textContent =
+        "Concluído";
 
 
     elements.state.textContent =
@@ -3304,24 +3008,9 @@ async function finishTraining() {
         );
 
 
-    lockConfigurationControls(
+    lockControls(
         false
     );
-
-
-    updateTimeInterface(
-        getMelodyDuration(
-            selectedMelody
-        )
-    );
-
-
-    elements.expectedNote.textContent =
-        "—";
-
-
-    elements.sungNote.textContent =
-        "—";
 
 
     showResults();
@@ -3336,14 +3025,11 @@ async function finishTraining() {
 
 async function stopTraining() {
 
-    /*
-     * Interrompe também a contagem regressiva.
-     */
-    countdownRunning =
+    running =
         false;
 
 
-    running =
+    countdownRunning =
         false;
 
 
@@ -3362,23 +3048,22 @@ async function stopTraining() {
     }
 
 
-    elements.counter
-        .classList
-        .add(
-            "oculto"
-        );
+    elements.backingAudio.pause();
 
 
-    if (
-        microphone.running
-    ) {
+    elements.backingAudio.currentTime =
+        0;
 
-        await microphone.stop();
-    }
+
+    await microphone.stop();
 
 
     elements.microphoneState.textContent =
         "Desligado";
+
+
+    elements.backingState.textContent =
+        "Parado";
 
 
     elements.state.textContent =
@@ -3396,12 +3081,23 @@ async function stopTraining() {
         );
 
 
-    elements.startButton.disabled =
-        false;
-
-
-    lockConfigurationControls(
+    lockControls(
         false
+    );
+
+
+    pianoRoll.setCurrentTime(
+        0
+    );
+
+
+    updateTimeInterface(
+        0
+    );
+
+
+    updateExpectedNoteInterface(
+        0
     );
 
 
@@ -3414,17 +3110,17 @@ async function stopTraining() {
 
 /*
  * ============================================================
- * RELATÓRIO FINAL
+ * RESULTADO
  * ============================================================
  */
 
 function showResults() {
 
-    const totalNotes =
+    const total =
         noteStates.length;
 
 
-    const sungNotes =
+    const sung =
         noteStates.filter(
             state =>
                 state.voiceSamples >
@@ -3432,7 +3128,7 @@ function showResults() {
         );
 
 
-    const missedNotes =
+    const missed =
         noteStates.filter(
             state =>
                 state.status ===
@@ -3440,11 +3136,7 @@ function showResults() {
         );
 
 
-    /*
-     * Consideramos "acertada" qualquer nota
-     * verde/excellent.
-     */
-    const excellentNotes =
+    const excellent =
         noteStates.filter(
             state =>
                 state.status ===
@@ -3452,15 +3144,8 @@ function showResults() {
         );
 
 
-    /*
-     * Nota geral:
-     *
-     * média das pontuações individuais,
-     * incluindo zeros.
-     */
     const totalScore =
-        totalNotes >
-        0
+        total
             ? Math.round(
                 calculateAverage(
                     noteStates.map(
@@ -3472,26 +3157,25 @@ function showResults() {
             : 0;
 
 
-    /*
-     * Pontuação média de afinação.
-     */
-    const averagePitchScore =
-        sungNotes.length >
-        0
-            ? calculateAverage(
-                sungNotes.map(
-                    state =>
-                        state.pitchScore
+    elements.finalScore.textContent =
+        totalScore;
+
+
+    elements.resultAccuracy.textContent =
+        sung.length
+            ? `${Math.round(
+                calculateAverage(
+                    sung.map(
+                        state =>
+                            state.pitchScore
+                    )
                 )
-            )
-            : null;
+            )}%`
+            : "—";
 
 
-    /*
-     * Erro médio absoluto em cents.
-     */
-    const pitchStates =
-        sungNotes.filter(
+    const errorStates =
+        sung.filter(
             state =>
                 Number.isFinite(
                     state.averageCents
@@ -3499,26 +3183,23 @@ function showResults() {
         );
 
 
-    const averageCents =
-        pitchStates.length >
-        0
-            ? calculateAverage(
-                pitchStates.map(
+    elements.resultError.textContent =
+        errorStates.length
+            ? `${calculateAverage(
+                errorStates.map(
                     state =>
                         state.averageCents
                 )
-            )
-            : null;
+            ).toFixed(1)} cents`
+            : "—";
 
 
-    /*
-     * Média absoluta do erro de entrada.
-     *
-     * Para o resumo, não importa aqui se entrou
-     * antes ou depois; queremos saber a magnitude média.
-     */
+    elements.resultNotes.textContent =
+        `${excellent.length} / ${total}`;
+
+
     const onsetStates =
-        sungNotes.filter(
+        sung.filter(
             state =>
                 Number.isFinite(
                     state.onsetErrorMs
@@ -3526,85 +3207,37 @@ function showResults() {
         );
 
 
-    const averageOnset =
-        onsetStates.length >
-        0
-            ? calculateAverage(
-                onsetStates.map(
-                    state =>
-                        Math.abs(
-                            state.onsetErrorMs
-                        )
-                )
-            )
-            : null;
-
-
-    /*
-     * Cobertura média.
-     *
-     * Aqui incluímos TODAS as notas,
-     * inclusive as omitidas com cobertura zero.
-     *
-     * Isso torna a métrica mais representativa
-     * da execução completa.
-     */
-    const averageCoverage =
-        totalNotes >
-        0
-            ? calculateAverage(
-                noteStates.map(
-                    state =>
-                        state.coverage
-                )
-            )
-            : 0;
-
-
-    /*
-     * ========================================================
-     * PREENCHE RESULTADO
-     * ========================================================
-     */
-
-    elements.finalScore.textContent =
-        totalScore;
-
-
-    elements.resultAccuracy.textContent =
-        averagePitchScore !==
-        null
-            ? `${averagePitchScore.toFixed(0)}%`
-            : "—";
-
-
-    elements.resultError.textContent =
-        averageCents !==
-        null
-            ? `${averageCents.toFixed(1)} cents`
-            : "—";
-
-
-    elements.resultNotes.textContent =
-        `${excellentNotes.length} / ${totalNotes}`;
-
-
     elements.resultOnset.textContent =
-        averageOnset !==
-        null
-            ? `${averageOnset.toFixed(0)} ms`
+        onsetStates.length
+            ? `${Math.round(
+                calculateAverage(
+                    onsetStates.map(
+                        state =>
+                            Math.abs(
+                                state.onsetErrorMs
+                            )
+                    )
+                )
+            )} ms`
             : "—";
 
 
     elements.resultCoverage.textContent =
-        `${Math.round(
-            averageCoverage *
-            100
-        )}%`;
+        total
+            ? `${Math.round(
+                calculateAverage(
+                    noteStates.map(
+                        state =>
+                            state.coverage
+                    )
+                ) *
+                100
+            )}%`
+            : "—";
 
 
     elements.resultMissed.textContent =
-        missedNotes.length;
+        missed.length;
 
 
     elements.finalEvaluation.textContent =
@@ -3613,9 +3246,6 @@ function showResults() {
         );
 
 
-    /*
-     * Lista detalhada.
-     */
     buildNoteResultsList();
 
 
@@ -3627,35 +3257,15 @@ function showResults() {
 
 
     setFeedback(
-        "Melodia concluída!",
+        "Treino concluído!",
         "correto"
-    );
-
-
-    /*
-     * Leva o usuário ao relatório.
-     */
-    setTimeout(
-        () => {
-
-            elements.result.scrollIntoView({
-
-                behavior:
-                    "smooth",
-
-                block:
-                    "start"
-            });
-
-        },
-        150
     );
 }
 
 
 /*
  * ============================================================
- * RESULTADO NOTA A NOTA
+ * LISTA NOTA A NOTA
  * ============================================================
  */
 
@@ -3671,15 +3281,6 @@ function buildNoteResultsList() {
             index
         ) => {
 
-            const note =
-                selectedMelody.notes[
-                    index
-                ];
-
-
-            /*
-             * Container.
-             */
             const item =
                 document.createElement(
                     "div"
@@ -3692,28 +3293,22 @@ function buildNoteResultsList() {
                 )}`;
 
 
-            /*
-             * Número + nota.
-             */
-            const indexElement =
+            const title =
                 document.createElement(
                     "div"
                 );
 
 
-            indexElement.className =
+            title.className =
                 "resultado-nota-indice";
 
 
-            indexElement.textContent =
+            title.textContent =
                 `${index + 1}. ${formatMidi(
-                    note.midi
+                    state.midi
                 )}`;
 
 
-            /*
-             * Métricas.
-             */
             const details =
                 document.createElement(
                     "div"
@@ -3733,13 +3328,6 @@ function buildNoteResultsList() {
                     details,
                     "Não cantada"
                 );
-
-
-                appendDetail(
-                    details,
-                    `Duração esperada: ${note.duration.toFixed(2)} s`
-                );
-
 
             } else {
 
@@ -3770,24 +3358,9 @@ function buildNoteResultsList() {
                     details,
                     `Afinação: ${state.pitchScore}%`
                 );
-
-
-                appendDetail(
-                    details,
-                    `Tempo: ${state.timingScore}%`
-                );
-
-
-                appendDetail(
-                    details,
-                    `Duração: ${state.durationScore}%`
-                );
             }
 
 
-            /*
-             * Pontuação.
-             */
             const score =
                 document.createElement(
                     "div"
@@ -3802,24 +3375,17 @@ function buildNoteResultsList() {
                 `${state.score} pts`;
 
 
-            item.appendChild(
-                indexElement
-            );
-
-
-            item.appendChild(
-                details
-            );
-
-
-            item.appendChild(
+            item.append(
+                title,
+                details,
                 score
             );
 
 
-            elements.noteResultsList.appendChild(
-                item
-            );
+            elements.noteResultsList
+                .appendChild(
+                    item
+                );
         }
     );
 }
@@ -3827,9 +3393,371 @@ function buildNoteResultsList() {
 
 /*
  * ============================================================
- * ADICIONAR DETALHE SEM USAR innerHTML
+ * RESET
  * ============================================================
  */
+
+function resetInterfaceStatistics() {
+
+    noteStates =
+        [];
+
+
+    recentFrequencies =
+        [];
+
+
+    lastVoicePointTimestamp =
+        0;
+
+
+    currentSongTime =
+        0;
+
+
+    elements.currentScore.textContent =
+        "0";
+
+
+    elements.expectedNote.textContent =
+        "—";
+
+
+    elements.sungNote.textContent =
+        "—";
+
+
+    elements.currentError.textContent =
+        "—";
+
+
+    elements.accuracy.textContent =
+        "—";
+
+
+    elements.evaluatedNotes.textContent =
+        "0";
+
+
+    elements.currentOnset.textContent =
+        "—";
+
+
+    elements.currentCoverage.textContent =
+        "—";
+
+
+    elements.currentNoteScore.textContent =
+        "—";
+
+
+    elements.noteResultsList.innerHTML =
+        "";
+
+
+    updateTimeInterface(
+        0
+    );
+}
+
+
+/*
+ * ============================================================
+ * CONTROLES
+ * ============================================================
+ */
+
+function lockControls(
+    locked
+) {
+
+    elements.trackSelect.disabled =
+        locked;
+
+
+    elements.difficultySelect.disabled =
+        locked;
+
+
+    elements.melodyListenButton.disabled =
+        locked;
+
+
+    elements.backingListenButton.disabled =
+        locked;
+
+
+    if (
+        backingPreviewPlaying
+    ) {
+
+        elements.backingListenButton.disabled =
+            false;
+    }
+
+
+    if (
+        melodyPreviewPlaying
+    ) {
+
+        elements.melodyListenButton.disabled =
+            false;
+    }
+}
+
+
+/*
+ * ============================================================
+ * DIFICULDADE
+ * ============================================================
+ */
+
+function getCurrentDifficulty() {
+
+    return (
+        DIFFICULTIES[
+            elements.difficultySelect.value
+        ] ||
+        DIFFICULTIES.beginner
+    );
+}
+
+
+/*
+ * ============================================================
+ * SUAVIZAÇÃO
+ * ============================================================
+ */
+
+function smoothFrequency(
+    frequency
+) {
+
+    if (
+        !Number.isFinite(
+            frequency
+        ) ||
+        frequency <=
+            0
+    ) {
+
+        return null;
+    }
+
+
+    recentFrequencies.push(
+        frequency
+    );
+
+
+    if (
+        recentFrequencies.length >
+        SMOOTHING_WINDOW
+    ) {
+
+        recentFrequencies.shift();
+    }
+
+
+    const sorted =
+        [...recentFrequencies]
+            .sort(
+                (a, b) =>
+                    a - b
+            );
+
+
+    const middle =
+        Math.floor(
+            sorted.length /
+            2
+        );
+
+
+    if (
+        sorted.length %
+            2 ===
+        1
+    ) {
+
+        return sorted[
+            middle
+        ];
+    }
+
+
+    return (
+        sorted[
+            middle - 1
+        ] +
+        sorted[
+            middle
+        ]
+    ) / 2;
+}
+
+
+/*
+ * ============================================================
+ * FORMATADORES
+ * ============================================================
+ */
+
+function formatMidi(
+    midi
+) {
+
+    return (
+        midiToNoteName(
+            midi
+        ) +
+        midiToOctave(
+            midi
+        )
+    );
+}
+
+
+function formatTime(
+    seconds
+) {
+
+    const safe =
+        Math.max(
+            0,
+            Number(
+                seconds
+            ) || 0
+        );
+
+
+    const minutes =
+        Math.floor(
+            safe /
+            60
+        );
+
+
+    const remaining =
+        Math.floor(
+            safe %
+            60
+        );
+
+
+    return (
+        `${minutes}:` +
+        String(
+            remaining
+        )
+        .padStart(
+            2,
+            "0"
+        )
+    );
+}
+
+
+function formatSignedMilliseconds(
+    value
+) {
+
+    if (
+        !Number.isFinite(
+            value
+        )
+    ) {
+
+        return "—";
+    }
+
+
+    const rounded =
+        Math.round(
+            value
+        );
+
+
+    if (
+        rounded >
+        0
+    ) {
+
+        return `+${rounded} ms`;
+    }
+
+
+    return `${rounded} ms`;
+}
+
+
+/*
+ * ============================================================
+ * UTILITÁRIOS
+ * ============================================================
+ */
+
+function calculateAverage(
+    values
+) {
+
+    if (
+        !Array.isArray(
+            values
+        ) ||
+        values.length ===
+            0
+    ) {
+
+        return 0;
+    }
+
+
+    return (
+        values.reduce(
+            (
+                sum,
+                value
+            ) =>
+                sum +
+                value,
+            0
+        ) /
+        values.length
+    );
+}
+
+
+function clampScore(
+    value
+) {
+
+    return Math.max(
+        0,
+        Math.min(
+            100,
+            Math.round(
+                value
+            )
+        )
+    );
+}
+
+
+function setFeedback(
+    text,
+    type =
+        "neutro"
+) {
+
+    elements.feedback.textContent =
+        text;
+
+
+    elements.feedback.className =
+        `feedback ${type}`;
+}
+
 
 function appendDetail(
     container,
@@ -3851,12 +3779,6 @@ function appendDetail(
     );
 }
 
-
-/*
- * ============================================================
- * CLASSE CSS DO RESULTADO
- * ============================================================
- */
 
 function getResultCssClass(
     status
@@ -3893,402 +3815,6 @@ function getResultCssClass(
 }
 
 
-/*
- * ============================================================
- * RESET DA INTERFACE
- * ============================================================
- */
-
-function resetInterfaceStatistics() {
-
-    noteStates =
-        [];
-
-
-    recentFrequencies =
-        [];
-
-
-    lastVoicePointTimestamp =
-        0;
-
-
-    currentSongTime =
-        0;
-
-
-    elements.currentTime.textContent =
-        "0:00";
-
-
-    elements.progress.textContent =
-        "0%";
-
-
-    elements.timeBar.style.width =
-        "0%";
-
-
-    elements.currentScore.textContent =
-        "0";
-
-
-    elements.expectedNote.textContent =
-        "—";
-
-
-    elements.sungNote.textContent =
-        "—";
-
-
-    elements.currentError.textContent =
-        "—";
-
-
-    elements.accuracy.textContent =
-        "—";
-
-
-    elements.evaluatedNotes.textContent =
-        "0";
-
-
-    elements.currentOnset.textContent =
-        "—";
-
-
-    elements.currentCoverage.textContent =
-        "—";
-
-
-    elements.currentNoteScore.textContent =
-        "—";
-
-
-    elements.noteResultsList.innerHTML =
-        "";
-}
-
-
-/*
- * ============================================================
- * SUAVIZAÇÃO DA FREQUÊNCIA
- * ============================================================
- */
-
-function smoothFrequency(
-    frequency
-) {
-
-    if (
-        !Number.isFinite(
-            frequency
-        ) ||
-        frequency <=
-        0
-    ) {
-
-        return null;
-    }
-
-
-    recentFrequencies.push(
-        frequency
-    );
-
-
-    if (
-        recentFrequencies.length >
-        SMOOTHING_WINDOW
-    ) {
-
-        recentFrequencies.shift();
-    }
-
-
-    const sorted =
-        [
-            ...recentFrequencies
-        ]
-        .sort(
-            (a, b) =>
-                a - b
-        );
-
-
-    const middle =
-        Math.floor(
-            sorted.length /
-            2
-        );
-
-
-    if (
-        sorted.length %
-        2 ===
-        1
-    ) {
-
-        return sorted[
-            middle
-        ];
-    }
-
-
-    return (
-        sorted[
-            middle - 1
-        ] +
-        sorted[
-            middle
-        ]
-    ) / 2;
-}
-
-
-/*
- * ============================================================
- * DIFICULDADE ATUAL
- * ============================================================
- */
-
-function getCurrentDifficulty() {
-
-    return (
-        DIFFICULTIES[
-            elements.difficultySelect.value
-        ] ||
-        DIFFICULTIES.beginner
-    );
-}
-
-
-/*
- * ============================================================
- * BLOQUEAR CONFIGURAÇÃO
- * ============================================================
- *
- * IMPORTANTE:
- *
- * não bloqueamos o botão principal.
- *
- * Ele precisa continuar disponível para
- * "Interromper treino".
- * ============================================================
- */
-
-function lockConfigurationControls(
-    locked
-) {
-
-    elements.melodySelect.disabled =
-        locked;
-
-
-    elements.difficultySelect.disabled =
-        locked;
-
-
-    elements.listenButton.disabled =
-        locked;
-}
-
-
-/*
- * ============================================================
- * FEEDBACK
- * ============================================================
- */
-
-function setFeedback(
-    text,
-    type = "neutro"
-) {
-
-    elements.feedback.textContent =
-        text;
-
-
-    elements.feedback.className =
-        `feedback ${type}`;
-}
-
-
-/*
- * ============================================================
- * FORMATAÇÃO MIDI
- * ============================================================
- */
-
-function formatMidi(
-    midi
-) {
-
-    return (
-        midiToNoteName(
-            midi
-        ) +
-        midiToOctave(
-            midi
-        )
-    );
-}
-
-
-/*
- * ============================================================
- * FORMATAÇÃO DE TEMPO
- * ============================================================
- */
-
-function formatTime(
-    seconds
-) {
-
-    const safe =
-        Math.max(
-            0,
-            Number(
-                seconds
-            ) || 0
-        );
-
-
-    const minutes =
-        Math.floor(
-            safe /
-            60
-        );
-
-
-    const remainingSeconds =
-        Math.floor(
-            safe %
-            60
-        );
-
-
-    return (
-        `${minutes}:` +
-        String(
-            remainingSeconds
-        ).padStart(
-            2,
-            "0"
-        )
-    );
-}
-
-
-/*
- * ============================================================
- * FORMATAÇÃO DA ENTRADA
- * ============================================================
- */
-
-function formatSignedMilliseconds(
-    milliseconds
-) {
-
-    if (
-        !Number.isFinite(
-            milliseconds
-        )
-    ) {
-
-        return "—";
-    }
-
-
-    const rounded =
-        Math.round(
-            milliseconds
-        );
-
-
-    if (
-        rounded ===
-        0
-    ) {
-
-        return "0 ms";
-    }
-
-
-    if (
-        rounded >
-        0
-    ) {
-
-        return `+${rounded} ms`;
-    }
-
-
-    return `${rounded} ms`;
-}
-
-
-/*
- * ============================================================
- * MÉDIA
- * ============================================================
- */
-
-function calculateAverage(
-    values
-) {
-
-    if (
-        !Array.isArray(
-            values
-        ) ||
-        values.length ===
-        0
-    ) {
-
-        return 0;
-    }
-
-
-    return (
-        values.reduce(
-            (sum, value) =>
-                sum + value,
-            0
-        ) /
-        values.length
-    );
-}
-
-
-/*
- * ============================================================
- * LIMITAR SCORE
- * ============================================================
- */
-
-function clampScore(
-    value
-) {
-
-    return Math.max(
-        0,
-        Math.min(
-            100,
-            Math.round(
-                value
-            )
-        )
-    );
-}
-
-
-/*
- * ============================================================
- * TEXTO FINAL
- * ============================================================
- */
-
 function getFinalEvaluation(
     score
 ) {
@@ -4310,7 +3836,7 @@ function getFinalEvaluation(
     ) {
 
         return (
-            "Muito bom. Você acompanhou a melodia com boa precisão e poucas perdas de sincronismo."
+            "Muito bom. Você acompanhou a melodia com boa precisão."
         );
     }
 
@@ -4321,7 +3847,7 @@ function getFinalEvaluation(
     ) {
 
         return (
-            "Bom resultado. Observe no piano roll quais barras ficaram amarelas ou vermelhas e tente corrigi-las na próxima execução."
+            "Bom resultado. Observe no piano roll os trechos que precisam de mais atenção."
         );
     }
 
@@ -4332,42 +3858,34 @@ function getFinalEvaluation(
     ) {
 
         return (
-            "Você já consegue acompanhar parte da melodia. Priorize acertar a altura, a entrada e a sustentação das barras mais difíceis."
+            "Você acompanhou parte da melodia. Trabalhe especialmente as barras vermelhas e cinzas."
         );
     }
 
 
     return (
-        "A melodia ainda está desafiadora. Ouça novamente a referência e use as barras coloridas para identificar os trechos que precisam de mais atenção."
+        "Continue praticando. O piano roll mostrará quais trechos da melodia precisam ser estudados com mais atenção."
     );
 }
 
-
-/*
- * ============================================================
- * ESPERA
- * ============================================================
- */
 
 function wait(
     milliseconds
 ) {
 
     return new Promise(
-        resolve => {
-
+        resolve =>
             setTimeout(
                 resolve,
                 milliseconds
-            );
-        }
+            )
     );
 }
 
 
 /*
  * ============================================================
- * ENCERRAMENTO DA PÁGINA
+ * LIMPEZA
  * ============================================================
  */
 
@@ -4379,34 +3897,27 @@ window.addEventListener(
             false;
 
 
-        previewPlaying =
-            false;
-
-
         countdownRunning =
             false;
 
 
-        if (
-            animationFrameId !==
-            null
-        ) {
-
-            cancelAnimationFrame(
-                animationFrameId
-            );
-        }
+        backingPreviewPlaying =
+            false;
 
 
-        if (
-            previewAnimationFrameId !==
-            null
-        ) {
+        melodyPreviewPlaying =
+            false;
 
-            cancelAnimationFrame(
-                previewAnimationFrameId
-            );
-        }
+
+        elements.backingAudio.pause();
+
+
+        melodyPreviewTimers.forEach(
+            timer =>
+                clearTimeout(
+                    timer
+                )
+        );
 
 
         microphone.stop();

@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -15,13 +16,14 @@
     >
 
     <title>
-        Modo Melodia — Treinador Vocal
+        Ninguém te ama como Eu — Treinador Vocal
     </title>
 
     <link
         rel="stylesheet"
         href="./css/melody.css"
     >
+
 </head>
 
 
@@ -44,7 +46,7 @@
 
 
             <p class="etapa">
-                MODO MELODIA CONTÍNUA
+                TREINO COM BACKING TRACK
             </p>
 
 
@@ -54,8 +56,9 @@
 
 
             <p class="descricao">
-                Acompanhe as barras da melodia e tente manter
-                sua voz dentro das notas no momento correto.
+                Cante sobre o acompanhamento instrumental
+                enquanto o sistema compara sua voz com
+                a melodia vocal extraída do arquivo MIDI.
             </p>
 
         </header>
@@ -63,28 +66,134 @@
 
 
         <!-- ==================================================
+             MÚSICA
+             ================================================== -->
+
+        <section class="musica-base">
+
+            <div>
+
+                <p class="rotulo">
+                    MÚSICA
+                </p>
+
+
+                <h2>
+                    Ninguém te ama como Eu
+                </h2>
+
+
+                <p class="musica-detalhes">
+                    Marcos André
+                </p>
+
+            </div>
+
+
+            <div class="arquivos-musica">
+
+                <div class="arquivo-status">
+
+                    <span>
+                        Instrumental MP3
+                    </span>
+
+                    <strong id="statusBackingTrack">
+                        Carregando...
+                    </strong>
+
+                </div>
+
+
+                <div class="arquivo-status">
+
+                    <span>
+                        Melodia vocal MIDI
+                    </span>
+
+                    <strong id="statusMidi">
+                        Carregando...
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             FONES
+             ================================================== -->
+
+        <section class="aviso-fones">
+
+            <div class="icone-fones">
+                🎧
+            </div>
+
+
+            <div class="aviso-fones-texto">
+
+                <strong>
+                    Use fones de ouvido durante o treino
+                </strong>
+
+
+                <p>
+                    O acompanhamento instrumental será reproduzido
+                    enquanto o microfone analisa sua voz.
+                    Sem fones, o instrumental pode interferir
+                    na detecção da frequência cantada.
+                </p>
+
+
+                <label class="confirmacao-fones">
+
+                    <input
+                        id="confirmarFones"
+                        type="checkbox"
+                    >
+
+                    <span>
+                        Entendi e estou usando fones de ouvido.
+                    </span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
              CONFIGURAÇÃO
              ================================================== -->
 
-        <section
-            id="configuracao"
-            class="configuracao"
-        >
+        <section class="configuracao">
 
             <div class="campo">
 
                 <label
-                    for="seletorMelodia"
+                    for="seletorTrilhaMidi"
                     class="rotulo"
                 >
-                    MELODIA
+                    TRILHA VOCAL DO MIDI
                 </label>
 
 
                 <select
-                    id="seletorMelodia"
+                    id="seletorTrilhaMidi"
                     class="select"
+                    disabled
                 >
+
+                    <option>
+                        Carregando MIDI...
+                    </option>
+
                 </select>
 
             </div>
@@ -130,8 +239,18 @@
                     id="botaoOuvir"
                     class="botao-secundario"
                     type="button"
+                    disabled
                 >
-                    🔊 Ouvir melodia
+                    🔊 Ouvir melodia MIDI
+                </button>
+
+
+                <button
+                    id="botaoOuvirInstrumental"
+                    class="botao-secundario"
+                    type="button"
+                >
+                    🎧 Ouvir instrumental
                 </button>
 
 
@@ -139,6 +258,7 @@
                     id="botaoIniciar"
                     class="botao-principal"
                     type="button"
+                    disabled
                 >
                     Iniciar treino
                 </button>
@@ -150,7 +270,20 @@
 
 
         <!-- ==================================================
-             STATUS GERAL
+             ÁUDIO
+             ================================================== -->
+
+        <audio
+            id="backingTrackAudio"
+            preload="metadata"
+            src="./assets/audio/ninguem-te-ama-como-eu-instrumental.mp3"
+        >
+        </audio>
+
+
+
+        <!-- ==================================================
+             STATUS
              ================================================== -->
 
         <section class="barra-status">
@@ -161,9 +294,8 @@
                     Estado
                 </span>
 
-
                 <strong id="estado">
-                    Pronto
+                    Carregando
                 </strong>
 
             </div>
@@ -175,7 +307,6 @@
                     Microfone
                 </span>
 
-
                 <strong id="estadoMicrofone">
                     Desligado
                 </strong>
@@ -186,9 +317,21 @@
             <div class="status-item">
 
                 <span>
-                    Progresso
+                    Backing Track
                 </span>
 
+                <strong id="estadoBacking">
+                    Parado
+                </strong>
+
+            </div>
+
+
+            <div class="status-item">
+
+                <span>
+                    Progresso
+                </span>
 
                 <strong id="progressoMusica">
                     0%
@@ -202,7 +345,6 @@
                 <span>
                     Pontuação
                 </span>
-
 
                 <strong id="pontuacaoAtual">
                     0
@@ -225,12 +367,12 @@
                 <div>
 
                     <p class="rotulo">
-                        MELODIA
+                        MELODIA VOCAL MIDI
                     </p>
 
 
                     <h2 id="nomeMelodia">
-                        —
+                        Carregando...
                     </h2>
 
                 </div>
@@ -261,8 +403,6 @@
 
 
 
-            <!-- CONTAGEM REGRESSIVA -->
-
             <div
                 id="contador"
                 class="contador oculto"
@@ -271,8 +411,6 @@
             </div>
 
 
-
-            <!-- CANVAS -->
 
             <div class="canvas-container">
 
@@ -283,8 +421,6 @@
             </div>
 
 
-
-            <!-- LINHA DO TEMPO -->
 
             <div class="linha-tempo">
 
@@ -305,7 +441,7 @@
 
 
                 <span id="tempoTotal">
-                    0:00
+                    4:37
                 </span>
 
             </div>
@@ -315,12 +451,10 @@
 
 
         <!-- ==================================================
-             FEEDBACK EM TEMPO REAL
+             FEEDBACK
              ================================================== -->
 
         <section class="painel-feedback">
-
-            <!-- NOTA ESPERADA X NOTA CANTADA -->
 
             <div class="nota-atual">
 
@@ -329,7 +463,6 @@
                     <span class="rotulo">
                         NOTA ESPERADA
                     </span>
-
 
                     <strong id="notaEsperada">
                         —
@@ -349,7 +482,6 @@
                         SUA VOZ
                     </span>
 
-
                     <strong id="notaCantada">
                         —
                     </strong>
@@ -360,18 +492,14 @@
 
 
 
-            <!-- FEEDBACK TEXTUAL -->
-
             <div
                 id="feedback"
                 class="feedback neutro"
             >
-                Ouça a melodia ou inicie o treino.
+                Carregando arquivos da música...
             </div>
 
 
-
-            <!-- MÉTRICAS EM TEMPO REAL -->
 
             <div class="metricas">
 
@@ -380,7 +508,6 @@
                     <span>
                         Erro atual
                     </span>
-
 
                     <strong id="erroAtual">
                         —
@@ -395,7 +522,6 @@
                         Afinação
                     </span>
 
-
                     <strong id="precisao">
                         —
                     </strong>
@@ -408,7 +534,6 @@
                     <span>
                         Notas avaliadas
                     </span>
-
 
                     <strong id="notasAvaliadas">
                         0
@@ -423,7 +548,6 @@
                         Entrada atual
                     </span>
 
-
                     <strong id="entradaAtual">
                         —
                     </strong>
@@ -436,7 +560,6 @@
                     <span>
                         Cobertura
                     </span>
-
 
                     <strong id="coberturaAtual">
                         —
@@ -451,7 +574,6 @@
                         Nota atual
                     </span>
 
-
                     <strong id="pontuacaoNotaAtual">
                         —
                     </strong>
@@ -465,7 +587,7 @@
 
 
         <!-- ==================================================
-             RESULTADO FINAL
+             RESULTADO
              ================================================== -->
 
         <section
@@ -479,19 +601,15 @@
 
 
             <h2>
-                Resultado da melodia
+                Resultado da música
             </h2>
 
-
-
-            <!-- PONTUAÇÃO -->
 
             <div class="pontuacao-final">
 
                 <strong id="pontuacaoFinal">
                     0
                 </strong>
-
 
                 <span>
                     / 100
@@ -500,18 +618,12 @@
             </div>
 
 
-
-            <!-- AVALIAÇÃO TEXTUAL -->
-
             <p
                 id="avaliacaoFinal"
                 class="avaliacao-final"
             >
             </p>
 
-
-
-            <!-- RESUMO GERAL -->
 
             <div class="resultado-grid">
 
@@ -520,7 +632,6 @@
                     <span>
                         Pontuação de afinação
                     </span>
-
 
                     <strong id="resultadoPrecisao">
                         —
@@ -535,7 +646,6 @@
                         Erro médio
                     </span>
 
-
                     <strong id="resultadoErro">
                         —
                     </strong>
@@ -548,7 +658,6 @@
                     <span>
                         Notas acertadas
                     </span>
-
 
                     <strong id="resultadoNotas">
                         —
@@ -563,7 +672,6 @@
                         Entrada média
                     </span>
 
-
                     <strong id="resultadoEntrada">
                         —
                     </strong>
@@ -576,7 +684,6 @@
                     <span>
                         Cobertura média
                     </span>
-
 
                     <strong id="resultadoCobertura">
                         —
@@ -591,7 +698,6 @@
                         Notas não cantadas
                     </span>
 
-
                     <strong id="resultadoOmitidas">
                         —
                     </strong>
@@ -601,10 +707,6 @@
             </div>
 
 
-
-            <!-- ==================================================
-                 RESULTADO NOTA A NOTA
-                 ================================================== -->
 
             <div class="detalhamento-notas">
 
@@ -622,41 +724,29 @@
             </div>
 
 
-
-            <!-- REPETIR -->
-
             <button
                 id="botaoRepetir"
                 class="botao-principal"
                 type="button"
             >
-                Repetir melodia
+                Repetir treino
             </button>
 
         </section>
 
 
 
-        <!-- ==================================================
-             RODAPÉ
-             ================================================== -->
-
         <footer class="rodape">
 
             <p>
-                Durante a avaliação, o áudio do microfone
-                é processado apenas no próprio aparelho.
+                O instrumental e o MIDI são processados localmente.
+                O áudio captado pelo microfone não é enviado para servidores.
             </p>
 
         </footer>
 
     </main>
 
-
-
-    <!-- ======================================================
-         JAVASCRIPT
-         ====================================================== -->
 
     <script
         type="module"
