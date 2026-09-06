@@ -16,8 +16,9 @@
     >
 
     <title>
-        Ninguém te ama como Eu — Treinador Vocal
+        Treino de Música — Treinador Vocal
     </title>
+
 
     <link
         rel="stylesheet"
@@ -38,10 +39,10 @@
         <header class="cabecalho">
 
             <a
-                href="./index.html"
+                href="./biblioteca.html"
                 class="voltar"
             >
-                ← Exercícios
+                ← Biblioteca
             </a>
 
 
@@ -58,7 +59,7 @@
             <p class="descricao">
                 Cante sobre o acompanhamento instrumental
                 enquanto o sistema compara sua voz com
-                a melodia vocal extraída do arquivo MIDI.
+                a melodia vocal da música.
             </p>
 
         </header>
@@ -78,13 +79,16 @@
                 </p>
 
 
-                <h2>
-                    Ninguém te ama como Eu
+                <h2 id="tituloMusica">
+                    Carregando...
                 </h2>
 
 
-                <p class="musica-detalhes">
-                    Marcos André
+                <p
+                    id="artistaMusica"
+                    class="musica-detalhes"
+                >
+                    —
                 </p>
 
             </div>
@@ -249,6 +253,7 @@
                     id="botaoOuvirInstrumental"
                     class="botao-secundario"
                     type="button"
+                    disabled
                 >
                     🎧 Ouvir instrumental
                 </button>
@@ -276,7 +281,6 @@
         <audio
             id="backingTrackAudio"
             preload="metadata"
-            src="./assets/audio/ninguem-te-ama-como-eu-instrumental.mp3"
         >
         </audio>
 
@@ -441,7 +445,7 @@
 
 
                 <span id="tempoTotal">
-                    4:37
+                    0:00
                 </span>
 
             </div>
@@ -496,7 +500,7 @@
                 id="feedback"
                 class="feedback neutro"
             >
-                Carregando arquivos da música...
+                Carregando música...
             </div>
 
 
@@ -724,6 +728,7 @@
             </div>
 
 
+
             <button
                 id="botaoRepetir"
                 class="botao-principal"
@@ -735,6 +740,10 @@
         </section>
 
 
+
+        <!-- ==================================================
+             RODAPÉ
+             ================================================== -->
 
         <footer class="rodape">
 

@@ -1,0 +1,54 @@
+{
+    "version": 1,
+    "genres": [
+        {
+            "id": "catolicas",
+            "name": "Católicas",
+            "songs": [
+                {
+                    "id": "ninguem-te-ama-como-eu-marcos-andre",
+                    "title": "Ninguém te ama como Eu",
+                    "artist": "Marcos André",
+                    "genre": "catolicas",
+                    "folder": "catolicas/ninguem-te-ama-como-eu-marcos-andre",
+                    "duration": 278,
+                    "difficulty": "intermediate",
+                    "language": "pt-BR",
+                    "files": {
+                        "audio": "instrumental.mp3",
+                        "midi": "voz.mid",
+                        "lyrics": "letra.srt",
+                        "cover": "capa.jpg"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "rock-nacional",
+            "name": "Rock Nacional",
+            "songs": [
+                {
+                    "id": "tempo-perdido-legiao-urbana",
+                    "title": "Tempo Perdido",
+                    "artist": "Legião Urbana",
+                    "genre": "rock-nacional",
+                    "folder": "rock-nacional/tempo-perdido-legiao-urbana",
+                    "duration": 300,
+                    "difficulty": "intermediate",
+                    "language": "pt-BR",
+                    "files": {
+                        "audio": "instrumental.mp3",
+                        "midi": "voz.mid",
+                        "lyrics": "letra.srt",
+                        "cover": null
+                    }
+                }
+            ]
+        },
+        {
+            "id": "romanticas",
+            "name": "Românticas",
+            "songs": []
+        }
+    ]
+}
