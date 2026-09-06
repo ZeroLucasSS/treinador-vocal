@@ -144,30 +144,30 @@ const DIFFICULTIES = {
     beginner: {
 
         tolerance:
-            40,
+            100,
 
         near:
-            90
+            175
     },
 
 
     intermediate: {
 
         tolerance:
-            25,
+            70,
 
         near:
-            70
+            125
     },
 
 
     advanced: {
 
         tolerance:
-            15,
+            50,
 
         near:
-            50
+            90
     }
 };
 
