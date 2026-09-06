@@ -22,21 +22,10 @@
  * - gênero;
  * - backing track MP3;
  * - MIDI vocal;
- * - offset de sincronização, se houver.
+ * - letra SRT;
+ * - offsets independentes de MIDI e letra.
  *
  * O MP3 continua sendo o RELÓGIO MESTRE.
- *
- * Fluxo:
- *
- * catalogo.json
- *      ↓
- * música selecionada
- *      ↓
- * MP3 + MIDI
- *      ↓
- * backingAudio.currentTime
- *      ↓
- * Piano Roll + avaliação vocal
  *
  * ============================================================
  */
@@ -74,6 +63,20 @@ import {
     loadMidiFromUrl,
     chooseBestMelodyTrack
 } from "./midi-loader.js";
+
+
+import {
+    loadSrtFromUrl,
+    getLyricsTime
+} from "./srt-loader.js";
+
+
+import {
+    getSongAudioUrl,
+    getSongMidiUrl,
+    getSongLyricsUrl,
+    getSongOffsets
+} from "./song-catalog.js";
 
 
 /*
@@ -171,15 +174,11 @@ const DIFFICULTIES = {
 
 /*
  * ============================================================
- * ELEMENTOS DA INTERFACE
+ * ELEMENTOS
  * ============================================================
  */
 
 const elements = {
-
-    /*
-     * Dados da música
-     */
 
     songTitle:
         document.getElementById(
@@ -197,10 +196,6 @@ const elements = {
         ),
 
 
-    /*
-     * Arquivos
-     */
-
     backingFileStatus:
         document.getElementById(
             "statusBackingTrack"
@@ -211,10 +206,11 @@ const elements = {
             "statusMidi"
         ),
 
+    lyricsStatus:
+        document.getElementById(
+            "statusLetra"
+        ),
 
-    /*
-     * Configuração
-     */
 
     trackSelect:
         document.getElementById(
@@ -247,19 +243,22 @@ const elements = {
         ),
 
 
-    /*
-     * Áudio
-     */
+    midiOffsetValue:
+        document.getElementById(
+            "valorOffsetMidi"
+        ),
+
+    lyricsOffsetValue:
+        document.getElementById(
+            "valorOffsetLetra"
+        ),
+
 
     backingAudio:
         document.getElementById(
             "backingTrackAudio"
         ),
 
-
-    /*
-     * Status
-     */
 
     state:
         document.getElementById(
@@ -286,10 +285,6 @@ const elements = {
             "pontuacaoAtual"
         ),
 
-
-    /*
-     * Piano Roll
-     */
 
     melodyName:
         document.getElementById(
@@ -322,9 +317,16 @@ const elements = {
         ),
 
 
-    /*
-     * Feedback
-     */
+    lyricsPanel:
+        document.getElementById(
+            "painelLetra"
+        ),
+
+    currentLyrics:
+        document.getElementById(
+            "letraAtual"
+        ),
+
 
     expectedNote:
         document.getElementById(
@@ -371,10 +373,6 @@ const elements = {
             "pontuacaoNotaAtual"
         ),
 
-
-    /*
-     * Resultado
-     */
 
     result:
         document.getElementById(
@@ -435,7 +433,7 @@ const elements = {
 
 /*
  * ============================================================
- * VALIDAÇÃO DOS ELEMENTOS ESSENCIAIS
+ * VALIDAR ELEMENTOS
  * ============================================================
  */
 
@@ -499,6 +497,18 @@ function validateRequiredElements() {
 
         barraTempo:
             elements.timeBar,
+
+        valorOffsetMidi:
+            elements.midiOffsetValue,
+
+        valorOffsetLetra:
+            elements.lyricsOffsetValue,
+
+        painelLetra:
+            elements.lyricsPanel,
+
+        letraAtual:
+            elements.currentLyrics,
 
         notaEsperada:
             elements.expectedNote,
@@ -649,9 +659,6 @@ let selectedMelody =
     null;
 
 
-/*
- * Caminhos finais dos arquivos.
- */
 let backingUrl =
     null;
 
@@ -660,25 +667,34 @@ let midiUrl =
     null;
 
 
+let lyricsUrl =
+    null;
+
+
 /*
- * Offset da melodia em relação ao MP3.
- *
- * Positivo:
- * MIDI é deslocado para frente.
- *
- * Negativo:
- * MIDI é deslocado para trás.
- *
- * No caso atual validado naturalmente:
- * 0.
+ * Positivo = atrasar MIDI.
+ * Negativo = adiantar MIDI.
  */
 let melodyOffsetSeconds =
     0;
 
 
 /*
- * Estado da avaliação.
+ * Positivo = atrasar letra.
+ * Negativo = adiantar letra.
  */
+let lyricsOffsetSeconds =
+    0;
+
+
+let subtitles =
+    [];
+
+
+let currentSubtitleIndex =
+    0;
+
+
 let noteStates =
     [];
 
@@ -707,25 +723,14 @@ let previewAnimationFrameId =
     null;
 
 
-/*
- * Timers usados apenas na prévia sonora MIDI.
- */
 let melodyPreviewTimers =
     [];
 
 
-/*
- * Tempo REAL do backing track.
- */
 let backingSongTime =
     0;
 
 
-/*
- * Tempo usado pela melodia MIDI.
- *
- * Pode diferir do MP3 caso haja offset.
- */
 let currentSongTime =
     0;
 
@@ -738,9 +743,6 @@ let lastVoicePointTimestamp =
     0;
 
 
-/*
- * Otimizações para músicas longas.
- */
 let currentTargetIndex =
     0;
 
@@ -765,23 +767,14 @@ async function initialize() {
 
     try {
 
-        /*
-         * 1. Catálogo
-         */
         catalog =
             await loadCatalog();
 
 
-        /*
-         * 2. Descobre qual música foi solicitada.
-         */
         const songId =
             getSongIdFromUrl();
 
 
-        /*
-         * 3. Localiza a música.
-         */
         currentSong =
             findSongInCatalog(
                 catalog,
@@ -801,30 +794,20 @@ async function initialize() {
         }
 
 
-        /*
-         * 4. Prepara caminhos e interface.
-         */
         prepareSong(
             currentSong
         );
 
 
-        /*
-         * 5. MP3
-         */
         setupBackingTrack();
 
 
-        /*
-         * 6. MIDI
-         */
         await loadVocalMidi();
 
 
-        /*
-         * 7. Libera interface quando ambos
-         * estiverem realmente disponíveis.
-         */
+        await loadLyrics();
+
+
         checkFilesReady();
 
 
@@ -854,6 +837,10 @@ function setLoadingState() {
 
 
     elements.midiStatus.textContent =
+        "Carregando...";
+
+
+    elements.lyricsStatus.textContent =
         "Carregando...";
 
 
@@ -934,7 +921,7 @@ async function loadCatalog() {
 
 /*
  * ============================================================
- * ID DA MÚSICA NA URL
+ * ID DA MÚSICA
  * ============================================================
  */
 
@@ -946,13 +933,6 @@ function getSongIdFromUrl() {
         );
 
 
-    /*
-     * Principal:
-     *
-     * ?song=id-da-musica
-     *
-     * Aceitamos também ?id= como fallback.
-     */
     const value =
         params.get(
             "song"
@@ -974,28 +954,6 @@ function getSongIdFromUrl() {
  * ============================================================
  * LOCALIZAR MÚSICA
  * ============================================================
- *
- * Suporta os dois formatos:
- *
- * FORMATO A
- *
- * {
- *     "genres": [
- *         {
- *             "id": "catolicas",
- *             "name": "Católicas",
- *             "songs": [...]
- *         }
- *     ]
- * }
- *
- * FORMATO B
- *
- * {
- *     "songs": [...]
- * }
- *
- * ============================================================
  */
 
 function findSongInCatalog(
@@ -1011,9 +969,6 @@ function findSongInCatalog(
     }
 
 
-    /*
-     * Formato simples.
-     */
     if (
         Array.isArray(
             catalogData.songs
@@ -1037,9 +992,6 @@ function findSongInCatalog(
     }
 
 
-    /*
-     * Formato agrupado por gênero.
-     */
     if (
         Array.isArray(
             catalogData.genres
@@ -1073,10 +1025,6 @@ function findSongInCatalog(
                 song
             ) {
 
-                /*
-                 * Acrescentamos os dados do gênero
-                 * caso não estejam na própria música.
-                 */
                 return {
 
                     ...song,
@@ -1110,122 +1058,51 @@ function prepareSong(
     song
 ) {
 
-    /*
-     * --------------------------------------------------------
-     * Offset
-     * --------------------------------------------------------
-     *
-     * Aceitamos:
-     *
-     * offset
-     * syncOffset
-     *
-     * em SEGUNDOS.
-     */
-    const rawOffset =
-        song.offset ??
-        song.syncOffset ??
-        0;
-
-
-    melodyOffsetSeconds =
-        Number.isFinite(
-            Number(
-                rawOffset
-            )
-        )
-            ? Number(
-                rawOffset
-            )
-            : 0;
-
-
-    /*
-     * --------------------------------------------------------
-     * Arquivos
-     * --------------------------------------------------------
-     */
-
-    const files =
-        song.files ||
-        {};
-
-
-    const audioFile =
-        files.audio ||
-        song.audio ||
-        "instrumental.mp3";
-
-
-    const midiFile =
-        files.midi ||
-        song.midi ||
-        "voz.mid";
-
-
-    /*
-     * --------------------------------------------------------
-     * Caminho-base
-     * --------------------------------------------------------
-     *
-     * Pode vir explicitamente:
-     *
-     * "path":
-     * "./assets/musicas/catolicas/..."
-     *
-     * Caso não venha, montamos:
-     *
-     * ./assets/musicas/<genre>/<id>/
-     */
-    let basePath =
-        song.path ||
-        "";
-
-
-    if (
-        !basePath
-    ) {
-
-        if (
-            !song.genre
-        ) {
-
-            throw new Error(
-                `A música "${song.id}" não possui "path" nem "genre".`
-            );
-        }
-
-
-        basePath =
-            `./assets/musicas/${song.genre}/${song.id}/`;
-    }
-
-
-    basePath =
-        ensureTrailingSlash(
-            basePath
+    const offsets =
+        getSongOffsets(
+            song
         );
 
 
+    melodyOffsetSeconds =
+        offsets.midi;
+
+
+    lyricsOffsetSeconds =
+        offsets.lyrics;
+
+
     backingUrl =
-        resolveSongFileUrl(
-            basePath,
-            audioFile
+        getSongAudioUrl(
+            song
         );
 
 
     midiUrl =
-        resolveSongFileUrl(
-            basePath,
-            midiFile
+        getSongMidiUrl(
+            song
         );
 
 
-    /*
-     * --------------------------------------------------------
-     * Interface
-     * --------------------------------------------------------
-     */
+    lyricsUrl =
+        getSongLyricsUrl(
+            song
+        );
+
+
+    if (
+        !backingUrl ||
+        !midiUrl
+    ) {
+
+        throw new Error(
+            `A música "${song.id}" não possui os arquivos obrigatórios de áudio e MIDI.`
+        );
+    }
+
+
+    updateSyncInterface();
+
 
     document.title =
         `${song.title} — Treinador Vocal`;
@@ -1267,10 +1144,6 @@ function prepareSong(
         "Melodia vocal";
 
 
-    /*
-     * O HTML não precisa conhecer nenhum MP3.
-     * A fonte agora vem do catálogo.
-     */
     elements.backingAudio.pause();
 
 
@@ -1286,79 +1159,11 @@ function prepareSong(
 
 /*
  * ============================================================
- * RESOLVER CAMINHO DE ARQUIVO
- * ============================================================
- */
-
-function resolveSongFileUrl(
-    basePath,
-    file
-) {
-
-    if (
-        typeof file !==
-        "string" ||
-        !file.trim()
-    ) {
-
-        throw new Error(
-            "Nome de arquivo da música inválido."
-        );
-    }
-
-
-    const trimmed =
-        file.trim();
-
-
-    /*
-     * URL absoluta ou caminho absoluto.
-     */
-    if (
-        /^(https?:)?\/\//i.test(
-            trimmed
-        ) ||
-        trimmed.startsWith(
-            "/"
-        )
-    ) {
-
-        return trimmed;
-    }
-
-
-    return (
-        basePath +
-        trimmed
-    );
-}
-
-
-function ensureTrailingSlash(
-    path
-) {
-
-    return path.endsWith(
-        "/"
-    )
-        ? path
-        : `${path}/`;
-}
-
-
-/*
- * ============================================================
  * BACKING TRACK
  * ============================================================
  */
 
 function setupBackingTrack() {
-
-    /*
-     * Removemos listeners anteriores utilizando
-     * propriedades on... porque esta página
-     * trabalha com apenas uma música por carregamento.
-     */
 
     elements.backingAudio.onloadedmetadata =
         () => {
@@ -1377,12 +1182,6 @@ function setupBackingTrack() {
                 `Pronto — ${formatTime(duration)}`;
 
 
-            /*
-             * Se o catálogo possuir duração informada,
-             * apenas registramos discrepância no console.
-             *
-             * O MP3 real continua sendo a autoridade.
-             */
             if (
                 Number.isFinite(
                     Number(
@@ -1472,7 +1271,7 @@ function setupBackingTrack() {
 
 /*
  * ============================================================
- * CARREGAR MIDI VOCAL
+ * MIDI
  * ============================================================
  */
 
@@ -1569,7 +1368,117 @@ async function loadVocalMidi() {
 
 /*
  * ============================================================
- * SELETOR DE TRILHAS MIDI
+ * LETRA SRT
+ * ============================================================
+ */
+
+async function loadLyrics() {
+
+    subtitles =
+        [];
+
+
+    currentSubtitleIndex =
+        0;
+
+
+    resetLyricsInterface();
+
+
+    if (
+        !lyricsUrl
+    ) {
+
+        elements.lyricsStatus.textContent =
+            "Não disponível";
+
+
+        elements.currentLyrics.textContent =
+            "Letra não disponível";
+
+
+        elements.currentLyrics.classList.add(
+            "sem-frase"
+        );
+
+
+        updateSyncControlsState();
+
+        return;
+    }
+
+
+    elements.lyricsStatus.textContent =
+        "Lendo arquivo...";
+
+
+    try {
+
+        subtitles =
+            await loadSrtFromUrl(
+                lyricsUrl
+            );
+
+
+        if (
+            subtitles.length ===
+            0
+        ) {
+
+            elements.lyricsStatus.textContent =
+                "Arquivo vazio";
+
+
+            elements.currentLyrics.textContent =
+                "Letra não disponível";
+
+
+            updateSyncControlsState();
+
+            return;
+        }
+
+
+        elements.lyricsStatus.textContent =
+            `${subtitles.length} frase(s)`;
+
+
+        resetLyricsInterface();
+
+
+    } catch (error) {
+
+        console.warn(
+            "Não foi possível carregar a letra SRT:",
+            error
+        );
+
+
+        subtitles =
+            [];
+
+
+        elements.lyricsStatus.textContent =
+            "Erro ao carregar";
+
+
+        elements.currentLyrics.textContent =
+            "Letra não disponível";
+
+
+        elements.currentLyrics.classList.add(
+            "sem-frase"
+        );
+    }
+
+
+    updateSyncControlsState();
+}
+
+
+/*
+ * ============================================================
+ * SELETOR DE TRILHAS
  * ============================================================
  */
 
@@ -1628,7 +1537,7 @@ function populateTrackSelector(
 
 /*
  * ============================================================
- * SELECIONAR TRILHA MIDI
+ * SELECIONAR TRILHA
  * ============================================================
  */
 
@@ -1668,53 +1577,7 @@ function selectMidiTrack(
     }
 
 
-    /*
-     * ========================================================
-     * CONVERSÃO PARA O FORMATO DO PIANO ROLL
-     * ========================================================
-     *
-     * Aplicamos o offset aqui.
-     *
-     * Se offset = 0:
-     *
-     * MIDI permanece exatamente como foi importado.
-     */
-    selectedMelody = {
-
-        id:
-            `${currentSong.id}-track-${selectedTrack.index}`,
-
-        name:
-            currentSong.title,
-
-        artist:
-            currentSong.artist ||
-            "",
-
-        description:
-            buildTrackDescription(
-                selectedTrack
-            ),
-
-        notes:
-            selectedTrack.notes.map(
-                note => ({
-
-                    midi:
-                        note.midi,
-
-                    start:
-                        Math.max(
-                            0,
-                            note.start +
-                            melodyOffsetSeconds
-                        ),
-
-                    duration:
-                        note.duration
-                })
-            )
-    };
+    rebuildSelectedMelody();
 
 
     resetInterfaceStatistics();
@@ -1762,6 +1625,177 @@ function selectMidiTrack(
             "neutro"
         );
     }
+
+
+    updateSyncControlsState();
+}
+
+
+/*
+ * ============================================================
+ * CONSTRUIR MELODIA APLICANDO OFFSET
+ * ============================================================
+ */
+
+function rebuildSelectedMelody() {
+
+    if (
+        !selectedTrack ||
+        !currentSong
+    ) {
+
+        return;
+    }
+
+
+    selectedMelody = {
+
+        id:
+            `${currentSong.id}-track-${selectedTrack.index}`,
+
+        name:
+            currentSong.title,
+
+        artist:
+            currentSong.artist ||
+            "",
+
+        description:
+            buildTrackDescription(
+                selectedTrack
+            ),
+
+        notes:
+            selectedTrack.notes.map(
+                note => ({
+
+                    midi:
+                        note.midi,
+
+                    start:
+                        Math.max(
+                            0,
+                            note.start +
+                            melodyOffsetSeconds
+                        ),
+
+                    duration:
+                        note.duration
+                })
+            )
+    };
+}
+
+
+/*
+ * ============================================================
+ * OFFSET MIDI
+ * ============================================================
+ */
+
+function setMidiOffset(
+    value
+) {
+
+    const numeric =
+        Number(
+            value
+        );
+
+
+    if (
+        !Number.isFinite(
+            numeric
+        )
+    ) {
+
+        return;
+    }
+
+
+    melodyOffsetSeconds =
+        roundOffset(
+            numeric
+        );
+
+
+    rebuildSelectedMelody();
+
+
+    if (
+        selectedMelody
+    ) {
+
+        pianoRoll.setMelody(
+            selectedMelody
+        );
+
+
+        pianoRoll.setCurrentTime(
+            currentSongTime
+        );
+
+
+        currentTargetIndex =
+            0;
+
+
+        nextFinalizeIndex =
+            0;
+
+
+        updateExpectedNoteInterface(
+            currentSongTime
+        );
+    }
+
+
+    updateSyncInterface();
+}
+
+
+/*
+ * ============================================================
+ * OFFSET LETRA
+ * ============================================================
+ */
+
+function setLyricsOffset(
+    value
+) {
+
+    const numeric =
+        Number(
+            value
+        );
+
+
+    if (
+        !Number.isFinite(
+            numeric
+        )
+    ) {
+
+        return;
+    }
+
+
+    lyricsOffsetSeconds =
+        roundOffset(
+            numeric
+        );
+
+
+    currentSubtitleIndex =
+        0;
+
+
+    updateLyricsInterface(
+        backingSongTime
+    );
+
+
+    updateSyncInterface();
 }
 
 
@@ -1860,12 +1894,15 @@ function checkFilesReady() {
             "neutro"
         );
     }
+
+
+    updateSyncControlsState();
 }
 
 
 /*
  * ============================================================
- * EVENTOS
+ * EVENTOS PRINCIPAIS
  * ============================================================
  */
 
@@ -1993,6 +2030,82 @@ elements.repeatButton.addEventListener(
 
 /*
  * ============================================================
+ * BOTÕES DE SINCRONIZAÇÃO
+ * ============================================================
+ */
+
+document.querySelectorAll(
+    ".botao-sync"
+)
+.forEach(
+    button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                if (
+                    running ||
+                    countdownRunning ||
+                    melodyPreviewPlaying
+                ) {
+
+                    return;
+                }
+
+
+                const target =
+                    button.dataset.syncTarget;
+
+
+                const reset =
+                    button.dataset.syncReset ===
+                    "true";
+
+
+                const delta =
+                    Number(
+                        button.dataset.syncDelta ||
+                        0
+                    );
+
+
+                if (
+                    target ===
+                    "midi"
+                ) {
+
+                    setMidiOffset(
+                        reset
+                            ? 0
+                            : melodyOffsetSeconds +
+                                delta
+                    );
+
+                    return;
+                }
+
+
+                if (
+                    target ===
+                    "lyrics"
+                ) {
+
+                    setLyricsOffset(
+                        reset
+                            ? 0
+                            : lyricsOffsetSeconds +
+                                delta
+                    );
+                }
+            }
+        );
+    }
+);
+
+
+/*
+ * ============================================================
  * PRÉVIA DO INSTRUMENTAL
  * ============================================================
  */
@@ -2050,6 +2163,22 @@ async function startBackingPreview() {
         0;
 
 
+    backingSongTime =
+        0;
+
+
+    currentSongTime =
+        0;
+
+
+    currentTargetIndex =
+        0;
+
+
+    currentSubtitleIndex =
+        0;
+
+
     pianoRoll.setCurrentTime(
         0
     );
@@ -2061,6 +2190,9 @@ async function startBackingPreview() {
     updateTimeInterface(
         0
     );
+
+
+    resetLyricsInterface();
 
 
     try {
@@ -2104,11 +2236,6 @@ function animateBackingPreview() {
         elements.backingAudio.currentTime;
 
 
-    /*
-     * Como o offset já foi incorporado
-     * às próprias notas, o relógio visual
-     * continua sendo exatamente o MP3.
-     */
     currentSongTime =
         backingSongTime;
 
@@ -2125,6 +2252,11 @@ function animateBackingPreview() {
 
     updateExpectedNoteInterface(
         currentSongTime
+    );
+
+
+    updateLyricsInterface(
+        backingSongTime
     );
 
 
@@ -2154,10 +2286,6 @@ function stopBackingPreview() {
     elements.backingAudio.pause();
 
 
-    /*
-     * currentTime pode lançar erro em uma
-     * situação excepcional de áudio ainda não pronto.
-     */
     try {
 
         elements.backingAudio.currentTime =
@@ -2201,6 +2329,22 @@ function stopBackingPreview() {
     }
 
 
+    backingSongTime =
+        0;
+
+
+    currentSongTime =
+        0;
+
+
+    currentTargetIndex =
+        0;
+
+
+    currentSubtitleIndex =
+        0;
+
+
     pianoRoll.setCurrentTime(
         0
     );
@@ -2214,6 +2358,9 @@ function stopBackingPreview() {
     updateExpectedNoteInterface(
         0
     );
+
+
+    resetLyricsInterface();
 
 
     lockControls(
@@ -2262,6 +2409,14 @@ async function startMelodyPreview() {
         "Ouvindo MIDI";
 
 
+    currentSongTime =
+        0;
+
+
+    currentTargetIndex =
+        0;
+
+
     pianoRoll.setCurrentTime(
         0
     );
@@ -2275,6 +2430,9 @@ async function startMelodyPreview() {
     );
 
 
+    resetLyricsInterface();
+
+
     try {
 
         await toneGenerator.ensureContext();
@@ -2284,10 +2442,6 @@ async function startMelodyPreview() {
             performance.now();
 
 
-        /*
-         * Agenda cada nota no tempo real
-         * definido pelo MIDI.
-         */
         selectedMelody.notes.forEach(
             note => {
 
@@ -2382,23 +2536,21 @@ function animateMelodyPreview(
     );
 
 
-    /*
-     * Durante a prévia MIDI usamos a duração
-     * MIDI para a barra visual.
-     */
-    updatePreviewTimeInterface(
-        currentSongTime,
+    const melodyDuration =
         getMelodyDuration(
             selectedMelody
-        )
+        );
+
+
+    updatePreviewTimeInterface(
+        currentSongTime,
+        melodyDuration
     );
 
 
     if (
         currentSongTime >=
-        getMelodyDuration(
-            selectedMelody
-        )
+        melodyDuration
     ) {
 
         stopMelodyPreview();
@@ -2464,6 +2616,14 @@ function stopMelodyPreview() {
     }
 
 
+    currentSongTime =
+        0;
+
+
+    currentTargetIndex =
+        0;
+
+
     pianoRoll.setCurrentTime(
         0
     );
@@ -2477,6 +2637,9 @@ function stopMelodyPreview() {
     updateExpectedNoteInterface(
         0
     );
+
+
+    resetLyricsInterface();
 
 
     lockControls(
@@ -2668,35 +2831,21 @@ async function startTraining() {
     );
 
 
-    /*
-     * O botão principal precisa permanecer
-     * disponível para interromper.
-     */
     elements.startButton.disabled =
         false;
 
 
     try {
 
-        /*
-         * Microfone.
-         */
         await microphone.start();
 
 
         /*
-         * ====================================================
-         * IMPORTANTE
-         * ====================================================
+         * IMPORTANTE:
          *
-         * Primeiro limpa.
-         *
-         * Depois cria noteStates.
-         *
-         * NÃO inverter esta ordem.
-         * ====================================================
+         * primeiro reseta.
+         * depois cria os estados.
          */
-
         resetInterfaceStatistics();
 
 
@@ -2717,6 +2866,9 @@ async function startTraining() {
 
 
         pianoRoll.clearNoteResults();
+
+
+        resetLyricsInterface();
 
 
         recentFrequencies =
@@ -2745,11 +2897,11 @@ async function startTraining() {
         );
 
 
-        /*
-         * Contagem.
-         */
         countdownRunning =
             true;
+
+
+        updateSyncControlsState();
 
 
         const completed =
@@ -2768,12 +2920,6 @@ async function startTraining() {
         }
 
 
-        /*
-         * ====================================================
-         * COMEÇO REAL
-         * ====================================================
-         */
-
         elements.backingAudio.pause();
 
 
@@ -2781,11 +2927,6 @@ async function startTraining() {
             0;
 
 
-        /*
-         * Primeiro inicia o MP3.
-         *
-         * Somente depois marcamos running.
-         */
         await elements.backingAudio.play();
 
 
@@ -2801,6 +2942,10 @@ async function startTraining() {
             0;
 
 
+        currentSubtitleIndex =
+            0;
+
+
         elements.state.textContent =
             "Cantando";
 
@@ -2810,9 +2955,12 @@ async function startTraining() {
 
 
         setFeedback(
-            "Acompanhe o instrumental e a melodia no piano roll.",
+            "Acompanhe o instrumental, a letra e a melodia no piano roll.",
             "neutro"
         );
+
+
+        updateSyncControlsState();
 
 
         processFrame();
@@ -2919,9 +3067,7 @@ async function countdown() {
         );
 
 
-        return (
-            countdownRunning
-        );
+        return countdownRunning;
 
 
     } finally {
@@ -2952,14 +3098,8 @@ function processFrame() {
 
 
     /*
-     * ========================================================
-     * RELÓGIO MESTRE
-     * ========================================================
-     *
-     * O tempo vem SEMPRE do MP3.
-     * ========================================================
+     * MP3 = RELÓGIO MESTRE.
      */
-
     backingSongTime =
         elements.backingAudio.currentTime;
 
@@ -2980,6 +3120,11 @@ function processFrame() {
 
     updateExpectedNoteInterface(
         currentSongTime
+    );
+
+
+    updateLyricsInterface(
+        backingSongTime
     );
 
 
@@ -3046,7 +3191,6 @@ function processMicrophone(
         elements.sungNote.textContent =
             "—";
 
-
         return;
     }
 
@@ -3066,7 +3210,6 @@ function processMicrophone(
 
         elements.sungNote.textContent =
             "—";
-
 
         return;
     }
@@ -3104,9 +3247,6 @@ function processMicrophone(
     }
 
 
-    /*
-     * Traçado visual.
-     */
     if (
         timestamp -
         lastVoicePointTimestamp >=
@@ -3140,12 +3280,6 @@ function processMicrophone(
  * ============================================================
  * ALVO ATIVO
  * ============================================================
- *
- * Otimizado para músicas com centenas
- * ou milhares de notas.
- *
- * Não percorremos toda a música a cada frame.
- * ============================================================
  */
 
 function getEvaluationTarget(
@@ -3162,10 +3296,6 @@ function getEvaluationTarget(
     }
 
 
-    /*
-     * Se o relógio voltou para trás,
-     * reinicia a busca.
-     */
     if (
         currentTargetIndex >
         0 &&
@@ -3180,10 +3310,6 @@ function getEvaluationTarget(
     }
 
 
-    /*
-     * Avança enquanto a nota atual
-     * já terminou.
-     */
     while (
         currentTargetIndex <
         selectedMelody.notes.length
@@ -3253,7 +3379,7 @@ function getEvaluationTarget(
 
 /*
  * ============================================================
- * AVALIAR AMOSTRA VOCAL
+ * AVALIAÇÃO DA VOZ
  * ============================================================
  */
 
@@ -3339,11 +3465,8 @@ function evaluateVoiceSample(
 
 
     /*
-     * ========================================================
-     * ENTRADA
-     * ========================================================
+     * Entrada.
      */
-
     if (
         state.firstVoiceTime ===
         null
@@ -3363,11 +3486,8 @@ function evaluateVoiceSample(
 
 
     /*
-     * ========================================================
-     * COBERTURA / SUSTENTAÇÃO
-     * ========================================================
+     * Cobertura / sustentação.
      */
-
     if (
         state.lastSampleTime !==
         null
@@ -3424,12 +3544,6 @@ function evaluateVoiceSample(
         time;
 
 
-    /*
-     * ========================================================
-     * AFINAÇÃO
-     * ========================================================
-     */
-
     state.voiceSamples++;
 
 
@@ -3453,12 +3567,6 @@ function evaluateVoiceSample(
         state.nearSamples++;
     }
 
-
-    /*
-     * ========================================================
-     * INTERFACE EM TEMPO REAL
-     * ========================================================
-     */
 
     const roundedCents =
         Math.round(
@@ -3513,12 +3621,6 @@ function evaluateVoiceSample(
         `${liveScores.pitchScore}%`;
 
 
-    /*
-     * ========================================================
-     * FEEDBACK
-     * ========================================================
-     */
-
     if (
         absCents <=
         difficulty.tolerance
@@ -3558,12 +3660,6 @@ function evaluateVoiceSample(
 /*
  * ============================================================
  * FINALIZAR NOTAS EXPIRADAS
- * ============================================================
- *
- * Otimizado:
- *
- * percorremos apenas as próximas notas ainda
- * não avaliadas.
  * ============================================================
  */
 
@@ -3636,12 +3732,6 @@ function finalizeNote(
         true;
 
 
-    /*
-     * ========================================================
-     * OMITIDA
-     * ========================================================
-     */
-
     if (
         state.voiceSamples ===
         0
@@ -3678,7 +3768,6 @@ function finalizeNote(
         pianoRoll.setNoteResult(
             index,
             {
-
                 status:
                     "missed",
 
@@ -3690,16 +3779,9 @@ function finalizeNote(
 
         updateLiveStatistics();
 
-
         return;
     }
 
-
-    /*
-     * ========================================================
-     * RESULTADOS
-     * ========================================================
-     */
 
     state.averageCents =
         calculateAverage(
@@ -3737,12 +3819,6 @@ function finalizeNote(
         scores.totalScore;
 
 
-    /*
-     * ========================================================
-     * COR DA BARRA
-     * ========================================================
-     */
-
     if (
         state.score >=
         80
@@ -3769,7 +3845,6 @@ function finalizeNote(
     pianoRoll.setNoteResult(
         index,
         {
-
             status:
                 state.status,
 
@@ -3785,12 +3860,7 @@ function finalizeNote(
 
 /*
  * ============================================================
- * PONTUAÇÃO DE UMA NOTA
- * ============================================================
- *
- * 60% afinação
- * 20% entrada
- * 20% duração
+ * PONTUAÇÃO
  * ============================================================
  */
 
@@ -3805,12 +3875,6 @@ function calculateNoteScores(
     const difficulty =
         getCurrentDifficulty();
 
-
-    /*
-     * ========================================================
-     * AFINAÇÃO
-     * ========================================================
-     */
 
     const averageCents =
         state.centsValues.length >
@@ -3854,23 +3918,11 @@ function calculateNoteScores(
         );
 
 
-    /*
-     * ========================================================
-     * ENTRADA
-     * ========================================================
-     */
-
     const timingScore =
         calculateTimingScore(
             state.onsetErrorMs
         );
 
-
-    /*
-     * ========================================================
-     * COBERTURA
-     * ========================================================
-     */
 
     const coverage =
         finalized
@@ -3889,12 +3941,6 @@ function calculateNoteScores(
             100
         );
 
-
-    /*
-     * ========================================================
-     * TOTAL
-     * ========================================================
-     */
 
     const totalScore =
         clampScore(
@@ -3919,12 +3965,6 @@ function calculateNoteScores(
     };
 }
 
-
-/*
- * ============================================================
- * PONTUAÇÃO DE ENTRADA
- * ============================================================
- */
 
 function calculateTimingScore(
     onset
@@ -3992,7 +4032,7 @@ function calculateTimingScore(
 
 /*
  * ============================================================
- * COBERTURA DEFINITIVA
+ * COBERTURA
  * ============================================================
  */
 
@@ -4020,12 +4060,6 @@ function calculateCoverage(
     );
 }
 
-
-/*
- * ============================================================
- * COBERTURA DURANTE A NOTA
- * ============================================================
- */
 
 function calculateLiveCoverage(
     state,
@@ -4097,11 +4131,6 @@ function updateExpectedNoteInterface(
             : "—";
 
 
-    /*
-     * Se estamos em introdução/interlúdio,
-     * não deixamos métricas antigas aparentando
-     * pertencer ao silêncio atual.
-     */
     if (
         !target
     ) {
@@ -4172,7 +4201,6 @@ function updateLiveStatistics() {
         elements.currentScore.textContent =
             "0";
 
-
         return;
     }
 
@@ -4197,7 +4225,7 @@ function updateLiveStatistics() {
 
 /*
  * ============================================================
- * TEMPO DO BACKING TRACK
+ * TEMPO DO MP3
  * ============================================================
  */
 
@@ -4363,11 +4391,6 @@ async function finishTraining() {
     }
 
 
-    /*
-     * Quando o MP3 termina,
-     * qualquer nota ainda não julgada
-     * também precisa receber resultado.
-     */
     noteStates.forEach(
         (
             state,
@@ -4441,6 +4464,9 @@ async function finishTraining() {
 
     elements.sungNote.textContent =
         "—";
+
+
+    resetLyricsInterface();
 
 
     showResults();
@@ -4535,6 +4561,22 @@ async function stopTraining() {
     );
 
 
+    backingSongTime =
+        0;
+
+
+    currentSongTime =
+        0;
+
+
+    currentTargetIndex =
+        0;
+
+
+    currentSubtitleIndex =
+        0;
+
+
     pianoRoll.setCurrentTime(
         0
     );
@@ -4548,6 +4590,9 @@ async function stopTraining() {
     updateExpectedNoteInterface(
         0
     );
+
+
+    resetLyricsInterface();
 
 
     setFeedback(
@@ -4593,12 +4638,6 @@ function showResults() {
         );
 
 
-    /*
-     * ========================================================
-     * PONTUAÇÃO GERAL
-     * ========================================================
-     */
-
     const totalScore =
         total >
         0
@@ -4619,12 +4658,6 @@ function showResults() {
         );
 
 
-    /*
-     * ========================================================
-     * AFINAÇÃO
-     * ========================================================
-     */
-
     elements.resultAccuracy.textContent =
         sung.length >
         0
@@ -4638,12 +4671,6 @@ function showResults() {
             )}%`
             : "—";
 
-
-    /*
-     * ========================================================
-     * ERRO MÉDIO
-     * ========================================================
-     */
 
     const errorStates =
         sung.filter(
@@ -4666,21 +4693,9 @@ function showResults() {
             : "—";
 
 
-    /*
-     * ========================================================
-     * NOTAS ACERTADAS
-     * ========================================================
-     */
-
     elements.resultNotes.textContent =
         `${excellent.length} / ${total}`;
 
-
-    /*
-     * ========================================================
-     * ENTRADA
-     * ========================================================
-     */
 
     const onsetStates =
         sung.filter(
@@ -4707,12 +4722,6 @@ function showResults() {
             : "—";
 
 
-    /*
-     * ========================================================
-     * COBERTURA
-     * ========================================================
-     */
-
     elements.resultCoverage.textContent =
         total >
         0
@@ -4727,12 +4736,6 @@ function showResults() {
             )}%`
             : "—";
 
-
-    /*
-     * ========================================================
-     * OMITIDAS
-     * ========================================================
-     */
 
     elements.resultMissed.textContent =
         String(
@@ -4782,7 +4785,7 @@ function showResults() {
 
 /*
  * ============================================================
- * RESULTADO NOTA A NOTA
+ * LISTA NOTA A NOTA
  * ============================================================
  */
 
@@ -4810,9 +4813,6 @@ function buildNoteResultsList() {
                 )}`;
 
 
-            /*
-             * Nota.
-             */
             const title =
                 document.createElement(
                     "div"
@@ -4829,9 +4829,6 @@ function buildNoteResultsList() {
                 )}`;
 
 
-            /*
-             * Métricas.
-             */
             const details =
                 document.createElement(
                     "div"
@@ -4851,7 +4848,6 @@ function buildNoteResultsList() {
                     details,
                     "Não cantada"
                 );
-
 
             } else {
 
@@ -4897,9 +4893,6 @@ function buildNoteResultsList() {
             }
 
 
-            /*
-             * Pontuação.
-             */
             const score =
                 document.createElement(
                     "div"
@@ -4932,7 +4925,7 @@ function buildNoteResultsList() {
 
 /*
  * ============================================================
- * RESET DE INTERFACE
+ * RESET
  * ============================================================
  */
 
@@ -4963,6 +4956,10 @@ function resetInterfaceStatistics() {
 
 
     currentSongTime =
+        0;
+
+
+    currentSubtitleIndex =
         0;
 
 
@@ -5006,6 +5003,9 @@ function resetInterfaceStatistics() {
         "";
 
 
+    resetLyricsInterface();
+
+
     updateTimeInterface(
         0
     );
@@ -5014,7 +5014,7 @@ function resetInterfaceStatistics() {
 
 /*
  * ============================================================
- * CONTROLES
+ * BLOQUEIO DOS CONTROLES
  * ============================================================
  */
 
@@ -5038,10 +5038,6 @@ function lockControls(
         locked;
 
 
-    /*
-     * Durante prévia, o botão correspondente
-     * continua habilitado para permitir parar.
-     */
     if (
         backingPreviewPlaying
     ) {
@@ -5060,10 +5056,6 @@ function lockControls(
     }
 
 
-    /*
-     * Quando não está bloqueado, respeitamos
-     * disponibilidade dos arquivos.
-     */
     if (
         !locked
     ) {
@@ -5090,6 +5082,259 @@ function lockControls(
                 )
             );
     }
+
+
+    updateSyncControlsState();
+}
+
+
+/*
+ * ============================================================
+ * CONTROLES DE SINCRONIZAÇÃO
+ * ============================================================
+ */
+
+function updateSyncControlsState() {
+
+    /*
+     * MIDI pode ser ajustado durante a prévia
+     * do instrumental.
+     *
+     * Não permitimos durante:
+     *
+     * - treino;
+     * - contagem regressiva;
+     * - prévia MIDI isolada.
+     */
+    const midiEnabled =
+        Boolean(
+            selectedTrack
+        ) &&
+        !running &&
+        !countdownRunning &&
+        !melodyPreviewPlaying;
+
+
+    const lyricsEnabled =
+        subtitles.length >
+            0 &&
+        !running &&
+        !countdownRunning &&
+        !melodyPreviewPlaying;
+
+
+    document.querySelectorAll(
+        '.botao-sync[data-sync-target="midi"]'
+    )
+    .forEach(
+        button => {
+
+            button.disabled =
+                !midiEnabled;
+        }
+    );
+
+
+    document.querySelectorAll(
+        '.botao-sync[data-sync-target="lyrics"]'
+    )
+    .forEach(
+        button => {
+
+            button.disabled =
+                !lyricsEnabled;
+        }
+    );
+}
+
+
+function updateSyncInterface() {
+
+    elements.midiOffsetValue.textContent =
+        formatOffsetMilliseconds(
+            melodyOffsetSeconds
+        );
+
+
+    elements.lyricsOffsetValue.textContent =
+        formatOffsetMilliseconds(
+            lyricsOffsetSeconds
+        );
+
+
+    updateSyncControlsState();
+}
+
+
+function roundOffset(
+    value
+) {
+
+    return Math.round(
+        Number(
+            value
+        ) *
+        1000
+    ) /
+    1000;
+}
+
+
+function formatOffsetMilliseconds(
+    seconds
+) {
+
+    const milliseconds =
+        Math.round(
+            Number(
+                seconds
+            ) *
+            1000
+        );
+
+
+    if (
+        milliseconds ===
+        0
+    ) {
+
+        return "0 ms";
+    }
+
+
+    return milliseconds >
+        0
+            ? `+${milliseconds} ms`
+            : `${milliseconds} ms`;
+}
+
+
+/*
+ * ============================================================
+ * LETRA SINCRONIZADA
+ * ============================================================
+ */
+
+function updateLyricsInterface(
+    audioTime
+) {
+
+    if (
+        subtitles.length ===
+        0
+    ) {
+
+        return;
+    }
+
+
+    const lyricTime =
+        getLyricsTime(
+            audioTime,
+            lyricsOffsetSeconds
+        );
+
+
+    /*
+     * Caso o relógio volte para trás
+     * (reinício ou seek), reinicia a busca.
+     */
+    if (
+        currentSubtitleIndex >
+            0 &&
+        lyricTime <
+            subtitles[
+                currentSubtitleIndex
+            ]?.start
+    ) {
+
+        currentSubtitleIndex =
+            0;
+    }
+
+
+    while (
+        currentSubtitleIndex <
+            subtitles.length &&
+        lyricTime >
+            subtitles[
+                currentSubtitleIndex
+            ].end
+    ) {
+
+        currentSubtitleIndex++;
+    }
+
+
+    const subtitle =
+        subtitles[
+            currentSubtitleIndex
+        ];
+
+
+    if (
+        subtitle &&
+        lyricTime >=
+            subtitle.start &&
+        lyricTime <=
+            subtitle.end
+    ) {
+
+        /*
+         * textContent preserva segurança.
+         *
+         * As quebras \n serão exibidas pelo CSS
+         * usando white-space: pre-line.
+         */
+        elements.currentLyrics.textContent =
+            subtitle.text;
+
+
+        elements.currentLyrics.classList.remove(
+            "sem-frase"
+        );
+
+
+        return;
+    }
+
+
+    elements.currentLyrics.textContent =
+        "♪";
+
+
+    elements.currentLyrics.classList.add(
+        "sem-frase"
+    );
+}
+
+
+function resetLyricsInterface() {
+
+    currentSubtitleIndex =
+        0;
+
+
+    if (
+        subtitles.length ===
+        0
+    ) {
+
+        elements.currentLyrics.textContent =
+            lyricsUrl
+                ? "♪"
+                : "Letra não disponível";
+
+    } else {
+
+        elements.currentLyrics.textContent =
+            "♪";
+    }
+
+
+    elements.currentLyrics.classList.add(
+        "sem-frase"
+    );
 }
 
 
@@ -5112,7 +5357,7 @@ function getCurrentDifficulty() {
 
 /*
  * ============================================================
- * SUAVIZAÇÃO DA FREQUÊNCIA
+ * SUAVIZAÇÃO
  * ============================================================
  */
 
@@ -5188,7 +5433,7 @@ function smoothFrequency(
 
 /*
  * ============================================================
- * DURAÇÃO DA MELODIA
+ * DURAÇÃO MIDI
  * ============================================================
  */
 
@@ -5282,7 +5527,7 @@ function formatMidi(
 
 /*
  * ============================================================
- * FORMATAÇÃO DE TEMPO
+ * FORMATAÇÃO TEMPO
  * ============================================================
  */
 
@@ -5329,7 +5574,7 @@ function formatTime(
 
 /*
  * ============================================================
- * FORMATAÇÃO DE ENTRADA
+ * FORMATAÇÃO MILISSEGUNDOS
  * ============================================================
  */
 
@@ -5430,7 +5675,7 @@ function clampScore(
 
 /*
  * ============================================================
- * DETALHES DO RESULTADO
+ * RESULTADOS
  * ============================================================
  */
 
@@ -5454,12 +5699,6 @@ function appendDetail(
     );
 }
 
-
-/*
- * ============================================================
- * CLASSE CSS DO RESULTADO
- * ============================================================
- */
 
 function getResultCssClass(
     status
@@ -5495,12 +5734,6 @@ function getResultCssClass(
     }
 }
 
-
-/*
- * ============================================================
- * AVALIAÇÃO FINAL
- * ============================================================
- */
 
 function getFinalEvaluation(
     score
@@ -5623,7 +5856,7 @@ function handleInitializationError(
 
 /*
  * ============================================================
- * ENCERRAMENTO DA PÁGINA
+ * ENCERRAMENTO
  * ============================================================
  */
 

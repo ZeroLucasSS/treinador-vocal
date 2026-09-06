@@ -3,14 +3,19 @@
  * song-catalog.js
  * ============================================================
  *
- * Responsável por:
+ * Camada central do catálogo de músicas.
+ *
+ * Responsabilidades:
  *
  * - carregar catalogo.json;
- * - normalizar os dados;
+ * - validar e normalizar dados;
  * - listar gêneros;
  * - listar músicas;
  * - localizar música pelo ID;
- * - construir os caminhos dos arquivos.
+ * - construir URLs dos arquivos;
+ * - fornecer URL da letra SRT;
+ * - normalizar offsets de MIDI e letra;
+ * - construir URL da tela de treino.
  *
  * O restante do aplicativo NÃO precisa conhecer
  * a estrutura física das pastas.
@@ -83,6 +88,22 @@ export async function loadSongCatalog() {
 
 /*
  * ============================================================
+ * LIMPAR CACHE
+ * ============================================================
+ *
+ * Útil principalmente para desenvolvimento.
+ * ============================================================
+ */
+
+export function clearSongCatalogCache() {
+
+    cachedCatalog =
+        null;
+}
+
+
+/*
+ * ============================================================
  * NORMALIZAR CATÁLOGO
  * ============================================================
  */
@@ -108,15 +129,38 @@ function normalizeCatalog(
         rawCatalog.genres.map(
             genre => {
 
+                const genreId =
+                    String(
+                        genre?.id ||
+                        ""
+                    )
+                    .trim();
+
+
+                const genreName =
+                    String(
+                        genre?.name ||
+                        genreId ||
+                        "Sem categoria"
+                    )
+                    .trim();
+
+
                 const normalizedSongs =
                     Array.isArray(
-                        genre.songs
+                        genre?.songs
                     )
                         ? genre.songs.map(
                             song =>
                                 normalizeSong(
                                     song,
-                                    genre
+                                    {
+                                        id:
+                                            genreId,
+
+                                        name:
+                                            genreName
+                                    }
                                 )
                         )
                         : [];
@@ -125,17 +169,10 @@ function normalizeCatalog(
                 return {
 
                     id:
-                        String(
-                            genre.id ||
-                            ""
-                        ),
+                        genreId,
 
                     name:
-                        String(
-                            genre.name ||
-                            genre.id ||
-                            "Sem categoria"
-                        ),
+                        genreName,
 
                     songs:
                         normalizedSongs
@@ -147,9 +184,10 @@ function normalizeCatalog(
     return {
 
         version:
-            Number(
-                rawCatalog.version
-            ) || 1,
+            normalizePositiveInteger(
+                rawCatalog.version,
+                1
+            ),
 
         genres
     };
@@ -178,12 +216,19 @@ function normalizeSong(
     }
 
 
+    const id =
+        String(
+            song.id
+        )
+        .trim();
+
+
     if (
         !song.folder
     ) {
 
         throw new Error(
-            `A música "${song.id}" não possui a propriedade folder.`
+            `A música "${id}" não possui a propriedade folder.`
         );
     }
 
@@ -195,41 +240,44 @@ function normalizeSong(
     ) {
 
         throw new Error(
-            `A música "${song.id}" precisa possuir arquivos audio e midi.`
+            `A música "${id}" precisa possuir arquivos audio e midi.`
         );
     }
 
 
     return {
 
-        id:
-            String(
-                song.id
-            ),
+        id,
 
         title:
             String(
                 song.title ||
-                song.id
-            ),
+                id
+            )
+            .trim(),
 
         artist:
             String(
                 song.artist ||
                 "Artista não informado"
-            ),
+            )
+            .trim(),
 
         genre:
             String(
                 song.genre ||
                 genre.id
-            ),
+            )
+            .trim(),
 
         genreName:
             String(
+                song.genreName ||
                 genre.name ||
-                genre.id
-            ),
+                genre.id ||
+                "Sem categoria"
+            )
+            .trim(),
 
         folder:
             normalizeFolder(
@@ -237,54 +285,157 @@ function normalizeSong(
             ),
 
         duration:
-            Number.isFinite(
-                Number(
-                    song.duration
-                )
-            )
-                ? Number(
-                    song.duration
-                )
-                : null,
+            normalizeNullablePositiveNumber(
+                song.duration
+            ),
 
         difficulty:
-            String(
-                song.difficulty ||
-                "beginner"
+            normalizeDifficulty(
+                song.difficulty
             ),
 
         language:
             String(
                 song.language ||
                 "pt-BR"
+            )
+            .trim(),
+
+        /*
+         * ====================================================
+         * SINCRONIZAÇÃO
+         * ====================================================
+         *
+         * Sempre retornamos números.
+         *
+         * Dessa forma o restante do aplicativo
+         * nunca precisa lidar com undefined/null.
+         *
+         * Unidade:
+         * SEGUNDOS.
+         */
+        offset:
+            normalizeOffset(
+                song.offset
+            ),
+
+        lyricsOffset:
+            normalizeOffset(
+                song.lyricsOffset
             ),
 
         files: {
 
             audio:
-                String(
-                    song.files.audio
+                normalizeRequiredFileName(
+                    song.files.audio,
+                    id,
+                    "audio"
                 ),
 
             midi:
-                String(
-                    song.files.midi
+                normalizeRequiredFileName(
+                    song.files.midi,
+                    id,
+                    "midi"
                 ),
 
             lyrics:
-                song.files.lyrics
-                    ? String(
-                        song.files.lyrics
-                    )
-                    : null,
+                normalizeOptionalFileName(
+                    song.files.lyrics
+                ),
 
             cover:
-                song.files.cover
-                    ? String(
-                        song.files.cover
-                    )
-                    : null
+                normalizeOptionalFileName(
+                    song.files.cover
+                )
         }
+    };
+}
+
+
+/*
+ * ============================================================
+ * NORMALIZAR OFFSET
+ * ============================================================
+ *
+ * Exemplos válidos:
+ *
+ * 0
+ * -0.25
+ * 0.480
+ * "0.25"
+ *
+ * Valores inválidos viram zero.
+ *
+ * Unidade:
+ * segundos.
+ *
+ * ============================================================
+ */
+
+export function normalizeSongOffset(
+    value
+) {
+
+    return normalizeOffset(
+        value
+    );
+}
+
+
+function normalizeOffset(
+    value
+) {
+
+    if (
+        value ===
+        null ||
+        value ===
+        undefined ||
+        value ===
+        ""
+    ) {
+
+        return 0;
+    }
+
+
+    const numeric =
+        Number(
+            value
+        );
+
+
+    return Number.isFinite(
+        numeric
+    )
+        ? numeric
+        : 0;
+}
+
+
+/*
+ * ============================================================
+ * OBTER OFFSETS
+ * ============================================================
+ */
+
+export function getSongOffsets(
+    song
+) {
+
+    return {
+
+        midi:
+            normalizeOffset(
+                song?.offset
+            ),
+
+        lyrics:
+            normalizeOffset(
+                song?.lyricsOffset
+            )
     };
 }
 
@@ -302,6 +453,11 @@ function normalizeFolder(
     return String(
         folder
     )
+    .trim()
+    .replace(
+        /\\/g,
+        "/"
+    )
     .replace(
         /^\/+/,
         ""
@@ -310,6 +466,212 @@ function normalizeFolder(
         /\/+$/,
         ""
     );
+}
+
+
+/*
+ * ============================================================
+ * NORMALIZAR ARQUIVO OBRIGATÓRIO
+ * ============================================================
+ */
+
+function normalizeRequiredFileName(
+    value,
+    songId,
+    fileType
+) {
+
+    const normalized =
+        String(
+            value ||
+            ""
+        )
+        .trim();
+
+
+    if (
+        !normalized
+    ) {
+
+        throw new Error(
+            `A música "${songId}" não possui o arquivo obrigatório "${fileType}".`
+        );
+    }
+
+
+    return normalizeFileName(
+        normalized
+    );
+}
+
+
+/*
+ * ============================================================
+ * NORMALIZAR ARQUIVO OPCIONAL
+ * ============================================================
+ */
+
+function normalizeOptionalFileName(
+    value
+) {
+
+    if (
+        value ===
+        null ||
+        value ===
+        undefined
+    ) {
+
+        return null;
+    }
+
+
+    const normalized =
+        String(
+            value
+        )
+        .trim();
+
+
+    if (
+        !normalized
+    ) {
+
+        return null;
+    }
+
+
+    return normalizeFileName(
+        normalized
+    );
+}
+
+
+/*
+ * ============================================================
+ * NORMALIZAR NOME DE ARQUIVO
+ * ============================================================
+ */
+
+function normalizeFileName(
+    value
+) {
+
+    return String(
+        value
+    )
+    .trim()
+    .replace(
+        /\\/g,
+        "/"
+    )
+    .replace(
+        /^\/+/,
+        ""
+    );
+}
+
+
+/*
+ * ============================================================
+ * NORMALIZAR DURAÇÃO
+ * ============================================================
+ */
+
+function normalizeNullablePositiveNumber(
+    value
+) {
+
+    const numeric =
+        Number(
+            value
+        );
+
+
+    if (
+        !Number.isFinite(
+            numeric
+        ) ||
+        numeric <
+            0
+    ) {
+
+        return null;
+    }
+
+
+    return numeric;
+}
+
+
+/*
+ * ============================================================
+ * NORMALIZAR INTEIRO POSITIVO
+ * ============================================================
+ */
+
+function normalizePositiveInteger(
+    value,
+    fallback
+) {
+
+    const numeric =
+        Number.parseInt(
+            value,
+            10
+        );
+
+
+    if (
+        !Number.isFinite(
+            numeric
+        ) ||
+        numeric <
+            1
+    ) {
+
+        return fallback;
+    }
+
+
+    return numeric;
+}
+
+
+/*
+ * ============================================================
+ * NORMALIZAR DIFICULDADE
+ * ============================================================
+ */
+
+function normalizeDifficulty(
+    value
+) {
+
+    const difficulty =
+        String(
+            value ||
+            "beginner"
+        )
+        .trim()
+        .toLowerCase();
+
+
+    switch (
+        difficulty
+    ) {
+
+        case "advanced":
+        case "intermediate":
+        case "beginner":
+
+            return difficulty;
+
+
+        default:
+
+            return "beginner";
+    }
 }
 
 
@@ -336,7 +698,69 @@ export function getAllSongs(
 
     return catalog.genres.flatMap(
         genre =>
-            genre.songs
+            Array.isArray(
+                genre.songs
+            )
+                ? genre.songs
+                : []
+    );
+}
+
+
+/*
+ * ============================================================
+ * LISTAR GÊNEROS
+ * ============================================================
+ */
+
+export function getGenres(
+    catalog
+) {
+
+    if (
+        !catalog ||
+        !Array.isArray(
+            catalog.genres
+        )
+    ) {
+
+        return [];
+    }
+
+
+    return catalog.genres;
+}
+
+
+/*
+ * ============================================================
+ * LOCALIZAR GÊNERO
+ * ============================================================
+ */
+
+export function findGenreById(
+    catalog,
+    genreId
+) {
+
+    if (
+        !catalog ||
+        !Array.isArray(
+            catalog.genres
+        )
+    ) {
+
+        return null;
+    }
+
+
+    return (
+        catalog.genres.find(
+            genre =>
+                genre.id ===
+                genreId
+        ) ||
+        null
     );
 }
 
@@ -351,6 +775,14 @@ export function findSongById(
     catalog,
     songId
 ) {
+
+    if (
+        !songId
+    ) {
+
+        return null;
+    }
+
 
     const songs =
         getAllSongs(
@@ -422,10 +854,106 @@ export function getSongFileUrl(
     }
 
 
+    const folder =
+        normalizeFolder(
+            song.folder
+        );
+
+
+    const normalizedFile =
+        normalizeFileName(
+            fileName
+        );
+
+
     return (
         `${MUSIC_ROOT}/` +
-        `${song.folder}/` +
-        `${fileName}`
+        `${folder}/` +
+        `${normalizedFile}`
+    );
+}
+
+
+/*
+ * ============================================================
+ * URL DO INSTRUMENTAL
+ * ============================================================
+ */
+
+export function getSongAudioUrl(
+    song
+) {
+
+    return getSongFileUrl(
+        song,
+        "audio"
+    );
+}
+
+
+/*
+ * ============================================================
+ * URL DO MIDI
+ * ============================================================
+ */
+
+export function getSongMidiUrl(
+    song
+) {
+
+    return getSongFileUrl(
+        song,
+        "midi"
+    );
+}
+
+
+/*
+ * ============================================================
+ * URL DA LETRA
+ * ============================================================
+ */
+
+export function getSongLyricsUrl(
+    song
+) {
+
+    return getSongFileUrl(
+        song,
+        "lyrics"
+    );
+}
+
+
+/*
+ * ============================================================
+ * URL DA CAPA
+ * ============================================================
+ */
+
+export function getSongCoverUrl(
+    song
+) {
+
+    return getSongFileUrl(
+        song,
+        "cover"
+    );
+}
+
+
+/*
+ * ============================================================
+ * VERIFICAR SE POSSUI LETRA
+ * ============================================================
+ */
+
+export function songHasLyrics(
+    song
+) {
+
+    return Boolean(
+        song?.files?.lyrics
     );
 }
 

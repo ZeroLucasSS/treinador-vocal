@@ -3,26 +3,29 @@
 gerar_catalogo.py
 ============================================================
 
-Gerador automático do catálogo de músicas do Treinador Vocal.
+Gerador automático do catálogo de músicas
+do Treinador Vocal.
 
-ESTRUTURA ESPERADA:
+------------------------------------------------------------
+ESTRUTURA ESPERADA
+------------------------------------------------------------
 
 assets/
 └── musicas/
     ├── catalogo.json
     │
     ├── catolicas/
-    │   ├── genero.json              # opcional
+    │   ├── genero.json
     │   │
-    │   └── ninguem-te-ama-como-eu-marcos-andre/
+    │   └── nome-da-musica-artista/
     │       ├── musica.json
     │       ├── instrumental.mp3
     │       ├── voz.mid
-    │       ├── letra.srt            # opcional
-    │       └── capa.jpg             # opcional
+    │       ├── letra.srt
+    │       └── capa.jpg
     │
     └── pop-rock/
-        └── facil-jota-quest/
+        └── outra-musica-artista/
             ├── musica.json
             ├── instrumental.mp3
             ├── voz.mid
@@ -30,43 +33,86 @@ assets/
             └── capa.jpg
 
 
-EXEMPLO DE musica.json:
+------------------------------------------------------------
+EXEMPLO DE musica.json
+------------------------------------------------------------
 
 {
-    "title": "Fácil",
-    "artist": "Jota Quest",
+    "title": "Ninguém te ama como Eu",
+    "artist": "Marcos André",
     "difficulty": "intermediate",
-    "language": "pt-BR"
+    "language": "pt-BR",
+    "offset": -0.24,
+    "lyricsOffset": 0
 }
 
 
-EXEMPLO OPCIONAL DE genero.json:
+------------------------------------------------------------
+CONVENÇÃO DOS OFFSETS
+------------------------------------------------------------
+
+Unidade:
+    segundos
+
+offset:
+    sincronização MIDI ↔ MP3
+
+lyricsOffset:
+    sincronização SRT ↔ MP3
+
+Valor positivo:
+    atrasa o elemento.
+
+Valor negativo:
+    adianta o elemento.
+
+Exemplo:
+
+    "offset": -0.24
+
+significa:
+
+    adiantar o MIDI em 240 ms.
+
+
+------------------------------------------------------------
+EXEMPLO OPCIONAL DE genero.json
+------------------------------------------------------------
 
 {
     "name": "Católicas"
 }
 
 
-O script detecta automaticamente:
+------------------------------------------------------------
+O SCRIPT DETECTA AUTOMATICAMENTE
+------------------------------------------------------------
 
 - ID do gênero;
 - nome do gênero;
 - ID da música;
-- pasta da música;
+- pasta;
 - instrumental.mp3;
 - voz.mid;
 - letra.srt;
-- capa.jpg;
+- capa;
 - duração do MP3.
 
-E gera:
+Também copia de musica.json:
 
-assets/musicas/catalogo.json
+- title;
+- artist;
+- difficulty;
+- language;
+- offset;
+- lyricsOffset.
 
 
-DEPENDÊNCIA:
+------------------------------------------------------------
+DEPENDÊNCIA
+------------------------------------------------------------
 
-    pip install mutagen
+pip install mutagen
 
 ============================================================
 """
@@ -74,8 +120,10 @@ DEPENDÊNCIA:
 from __future__ import annotations
 
 import json
+import math
 import sys
 import unicodedata
+
 from pathlib import Path
 from typing import Any
 
@@ -84,7 +132,12 @@ from typing import Any
 # CONFIGURAÇÕES
 # ============================================================
 
-PROJECT_ROOT = Path(__file__).resolve().parent
+PROJECT_ROOT = (
+    Path(__file__)
+    .resolve()
+    .parent
+)
+
 
 MUSIC_ROOT = (
     PROJECT_ROOT
@@ -92,23 +145,37 @@ MUSIC_ROOT = (
     / "musicas"
 )
 
+
 CATALOG_PATH = (
     MUSIC_ROOT
     / "catalogo.json"
 )
 
 
-# Arquivos-padrão de cada música.
+SONG_METADATA_FILENAME = (
+    "musica.json"
+)
 
-SONG_METADATA_FILENAME = "musica.json"
 
-GENRE_METADATA_FILENAME = "genero.json"
+GENRE_METADATA_FILENAME = (
+    "genero.json"
+)
 
-AUDIO_FILENAME = "instrumental.mp3"
 
-MIDI_FILENAME = "voz.mid"
+AUDIO_FILENAME = (
+    "instrumental.mp3"
+)
 
-LYRICS_FILENAME = "letra.srt"
+
+MIDI_FILENAME = (
+    "voz.mid"
+)
+
+
+LYRICS_FILENAME = (
+    "letra.srt"
+)
+
 
 COVER_FILENAMES = (
     "capa.jpg",
@@ -118,16 +185,30 @@ COVER_FILENAMES = (
 )
 
 
-# Valores-padrão.
-
-DEFAULT_DIFFICULTY = "beginner"
-
-DEFAULT_LANGUAGE = "pt-BR"
-
-CATALOG_VERSION = 1
+DEFAULT_DIFFICULTY = (
+    "beginner"
+)
 
 
-# Dificuldades aceitas pelo web-app.
+DEFAULT_LANGUAGE = (
+    "pt-BR"
+)
+
+
+DEFAULT_OFFSET = (
+    0.0
+)
+
+
+DEFAULT_LYRICS_OFFSET = (
+    0.0
+)
+
+
+CATALOG_VERSION = (
+    1
+)
+
 
 VALID_DIFFICULTIES = {
     "beginner",
@@ -137,91 +218,131 @@ VALID_DIFFICULTIES = {
 
 
 # ============================================================
-# CORES DO TERMINAL
+# TERMINAL
 # ============================================================
 
 class Terminal:
+
     OK = "[OK]"
+
     INFO = "[INFO]"
+
     WARN = "[AVISO]"
+
     ERROR = "[ERRO]"
 
 
 # ============================================================
-# FUNÇÃO PRINCIPAL
+# ERRO ESPECÍFICO
+# ============================================================
+
+class CatalogGenerationError(
+    Exception
+):
+    pass
+
+
+# ============================================================
+# EXECUÇÃO PRINCIPAL
 # ============================================================
 
 def main() -> int:
 
     print()
-    print("=" * 64)
-    print(" GERADOR DO CATÁLOGO DE MÚSICAS")
-    print("=" * 64)
+
+    print(
+        "=" * 68
+    )
+
+    print(
+        " GERADOR DO CATÁLOGO DE MÚSICAS"
+    )
+
+    print(
+        "=" * 68
+    )
+
     print()
+
 
     try:
 
         validate_music_root()
 
-        old_catalog = load_existing_catalog()
+
+        old_catalog = (
+            load_existing_catalog()
+        )
+
 
         genres = scan_genres(
             old_catalog
         )
 
+
         validate_duplicate_song_ids(
             genres
         )
 
+
         catalog = {
-            "version": CATALOG_VERSION,
-            "genres": genres,
+
+            "version":
+                CATALOG_VERSION,
+
+            "genres":
+                genres,
         }
+
 
         write_catalog(
             catalog
         )
 
+
         print_summary(
             catalog
         )
 
+
         return 0
+
 
     except CatalogGenerationError as error:
 
         print()
+
         print(
             f"{Terminal.ERROR} {error}"
         )
+
         print()
 
         return 1
+
 
     except Exception as error:
 
         print()
+
         print(
-            f"{Terminal.ERROR} Erro inesperado:"
+            f"{Terminal.ERROR} "
+            "Erro inesperado:"
         )
+
         print(
-            f"       {type(error).__name__}: {error}"
+            f"       "
+            f"{type(error).__name__}: "
+            f"{error}"
         )
+
         print()
 
         return 1
 
 
 # ============================================================
-# EXCEÇÃO ESPECÍFICA
-# ============================================================
-
-class CatalogGenerationError(Exception):
-    pass
-
-
-# ============================================================
-# VALIDAR RAIZ
+# VALIDAR PASTA PRINCIPAL
 # ============================================================
 
 def validate_music_root() -> None:
@@ -232,6 +353,7 @@ def validate_music_root() -> None:
             "A pasta de músicas não foi encontrada:\n"
             f"{MUSIC_ROOT}"
         )
+
 
     if not MUSIC_ROOT.is_dir():
 
@@ -250,9 +372,14 @@ def load_existing_catalog() -> dict[str, Any]:
     if not CATALOG_PATH.exists():
 
         return {
-            "version": CATALOG_VERSION,
-            "genres": [],
+
+            "version":
+                CATALOG_VERSION,
+
+            "genres":
+                [],
         }
+
 
     try:
 
@@ -265,13 +392,16 @@ def load_existing_catalog() -> dict[str, Any]:
                 file
             )
 
+
     except json.JSONDecodeError as error:
 
         raise CatalogGenerationError(
             "O catalogo.json existente contém JSON inválido.\n"
-            f"Linha {error.lineno}, coluna {error.colno}: "
+            f"Linha {error.lineno}, "
+            f"coluna {error.colno}: "
             f"{error.msg}"
         ) from error
+
 
     except OSError as error:
 
@@ -279,33 +409,44 @@ def load_existing_catalog() -> dict[str, Any]:
             "Não foi possível ler o catalogo.json existente."
         ) from error
 
+
     if not isinstance(
         data,
         dict
     ):
 
         return {
-            "version": CATALOG_VERSION,
-            "genres": [],
+
+            "version":
+                CATALOG_VERSION,
+
+            "genres":
+                [],
         }
+
 
     return data
 
 
 # ============================================================
-# MAPA DOS GÊNEROS EXISTENTES
+# NOMES DE GÊNEROS EXISTENTES
 # ============================================================
 
 def get_existing_genre_names(
     old_catalog: dict[str, Any]
 ) -> dict[str, str]:
 
-    result: dict[str, str] = {}
+    result: dict[
+        str,
+        str
+    ] = {}
+
 
     genres = old_catalog.get(
         "genres",
         []
     )
+
 
     if not isinstance(
         genres,
@@ -314,13 +455,16 @@ def get_existing_genre_names(
 
         return result
 
+
     for genre in genres:
 
         if not isinstance(
             genre,
             dict
         ):
+
             continue
+
 
         genre_id = str(
             genre.get(
@@ -329,6 +473,7 @@ def get_existing_genre_names(
             )
         ).strip()
 
+
         genre_name = str(
             genre.get(
                 "name",
@@ -336,11 +481,16 @@ def get_existing_genre_names(
             )
         ).strip()
 
-        if genre_id and genre_name:
+
+        if (
+            genre_id
+            and genre_name
+        ):
 
             result[
                 genre_id
             ] = genre_name
+
 
     return result
 
@@ -359,24 +509,31 @@ def scan_genres(
         )
     )
 
+
     genres: list[
         dict[str, Any]
     ] = []
 
+
     genre_directories = sorted(
         (
             path
-            for path in MUSIC_ROOT.iterdir()
+            for path
+            in MUSIC_ROOT.iterdir()
             if path.is_dir()
-            and not path.name.startswith(".")
-            and not path.name.startswith("_")
+            and not path.name.startswith(
+                "."
+            )
+            and not path.name.startswith(
+                "_"
+            )
         ),
-        key=lambda path: (
+        key=lambda path:
             normalize_sort_text(
                 path.name
             )
-        )
     )
+
 
     if not genre_directories:
 
@@ -387,48 +544,60 @@ def scan_genres(
 
         return genres
 
+
     for genre_directory in genre_directories:
 
         genre_id = (
             genre_directory.name
         )
 
-        genre_name = (
-            get_genre_name(
-                genre_directory,
-                existing_names
-            )
+
+        genre_name = get_genre_name(
+            genre_directory,
+            existing_names
         )
+
 
         print(
             f"{Terminal.INFO} "
             f"Gênero: {genre_name}"
         )
 
+
         songs = scan_songs(
             genre_directory,
             genre_id
         )
 
+
         genres.append(
             {
-                "id": genre_id,
-                "name": genre_name,
-                "songs": songs,
+
+                "id":
+                    genre_id,
+
+                "name":
+                    genre_name,
+
+                "songs":
+                    songs,
             }
         )
 
+
         print(
-            f"       {len(songs)} música(s)"
+            f"       "
+            f"{len(songs)} música(s)"
         )
 
         print()
+
 
     return genres
 
 
 # ============================================================
-# NOME DO GÊNERO
+# OBTER NOME DO GÊNERO
 # ============================================================
 
 def get_genre_name(
@@ -441,6 +610,7 @@ def get_genre_name(
         / GENRE_METADATA_FILENAME
     )
 
+
     # --------------------------------------------------------
     # 1. genero.json
     # --------------------------------------------------------
@@ -451,6 +621,7 @@ def get_genre_name(
             metadata_path
         )
 
+
         name = str(
             metadata.get(
                 "name",
@@ -458,12 +629,14 @@ def get_genre_name(
             )
         ).strip()
 
+
         if name:
 
             return name
 
+
     # --------------------------------------------------------
-    # 2. Nome já existente no catálogo
+    # 2. Nome já presente no catálogo
     # --------------------------------------------------------
 
     if (
@@ -475,8 +648,9 @@ def get_genre_name(
             genre_directory.name
         ]
 
+
     # --------------------------------------------------------
-    # 3. Converte slug automaticamente
+    # 3. Gerar pelo slug
     # --------------------------------------------------------
 
     return slug_to_display_name(
@@ -497,20 +671,26 @@ def scan_songs(
         dict[str, Any]
     ] = []
 
+
     song_directories = sorted(
         (
             path
-            for path in genre_directory.iterdir()
+            for path
+            in genre_directory.iterdir()
             if path.is_dir()
-            and not path.name.startswith(".")
-            and not path.name.startswith("_")
+            and not path.name.startswith(
+                "."
+            )
+            and not path.name.startswith(
+                "_"
+            )
         ),
-        key=lambda path: (
+        key=lambda path:
             normalize_sort_text(
                 path.name
             )
-        )
     )
+
 
     for song_directory in song_directories:
 
@@ -521,30 +701,31 @@ def scan_songs(
                 song_directory
             )
 
+
             songs.append(
                 song
             )
 
-            print(
-                f"       {Terminal.OK} "
-                f"{song['title']} — "
-                f"{song['artist']} "
-                f"({format_duration(song['duration'])})"
+
+            print_song_summary(
+                song
             )
+
 
         except CatalogGenerationError as error:
 
             raise CatalogGenerationError(
-                f"Problema na pasta:\n"
+                "Problema na pasta:\n"
                 f"{song_directory}\n\n"
                 f"{error}"
             ) from error
+
 
     return songs
 
 
 # ============================================================
-# CONSTRUIR ENTRADA DE MÚSICA
+# CONSTRUIR REGISTRO DA MÚSICA
 # ============================================================
 
 def build_song_entry(
@@ -557,20 +738,24 @@ def build_song_entry(
         / SONG_METADATA_FILENAME
     )
 
+
     if not metadata_path.exists():
 
         raise CatalogGenerationError(
-            f"O arquivo {SONG_METADATA_FILENAME} "
+            f"O arquivo "
+            f"{SONG_METADATA_FILENAME} "
             "não foi encontrado."
         )
+
 
     metadata = read_json_file(
         metadata_path
     )
 
-    # --------------------------------------------------------
+
+    # ========================================================
     # ID
-    # --------------------------------------------------------
+    # ========================================================
 
     song_id = str(
         metadata.get(
@@ -579,15 +764,17 @@ def build_song_entry(
         )
     ).strip()
 
+
     if not song_id:
 
         raise CatalogGenerationError(
             "A música não possui um ID válido."
         )
 
-    # --------------------------------------------------------
-    # Título
-    # --------------------------------------------------------
+
+    # ========================================================
+    # TÍTULO
+    # ========================================================
 
     title = str(
         metadata.get(
@@ -596,16 +783,18 @@ def build_song_entry(
         )
     ).strip()
 
+
     if not title:
 
         raise CatalogGenerationError(
-            f'O campo "title" é obrigatório em '
-            f"{SONG_METADATA_FILENAME}."
+            f'O campo "title" é obrigatório '
+            f"em {SONG_METADATA_FILENAME}."
         )
 
-    # --------------------------------------------------------
-    # Artista
-    # --------------------------------------------------------
+
+    # ========================================================
+    # ARTISTA
+    # ========================================================
 
     artist = str(
         metadata.get(
@@ -614,16 +803,18 @@ def build_song_entry(
         )
     ).strip()
 
+
     if not artist:
 
         raise CatalogGenerationError(
-            f'O campo "artist" é obrigatório em '
-            f"{SONG_METADATA_FILENAME}."
+            f'O campo "artist" é obrigatório '
+            f"em {SONG_METADATA_FILENAME}."
         )
 
-    # --------------------------------------------------------
-    # Dificuldade
-    # --------------------------------------------------------
+
+    # ========================================================
+    # DIFICULDADE
+    # ========================================================
 
     difficulty = str(
         metadata.get(
@@ -631,6 +822,7 @@ def build_song_entry(
             DEFAULT_DIFFICULTY
         )
     ).strip().lower()
+
 
     if (
         difficulty
@@ -640,13 +832,14 @@ def build_song_entry(
         raise CatalogGenerationError(
             "Dificuldade inválida: "
             f'"{difficulty}".\n'
-            "Use um dos valores:\n"
+            "Valores permitidos:\n"
             "beginner, intermediate ou advanced."
         )
 
-    # --------------------------------------------------------
-    # Idioma
-    # --------------------------------------------------------
+
+    # ========================================================
+    # IDIOMA
+    # ========================================================
 
     language = str(
         metadata.get(
@@ -655,75 +848,112 @@ def build_song_entry(
         )
     ).strip()
 
+
     if not language:
 
         language = (
             DEFAULT_LANGUAGE
         )
 
-    # --------------------------------------------------------
-    # Offset opcional
-    # --------------------------------------------------------
 
-    offset = parse_optional_number(
-        metadata.get(
-            "offset"
-        )
+    # ========================================================
+    # OFFSET MIDI
+    # ========================================================
+
+    offset = read_offset_field(
+        metadata,
+        "offset",
+        DEFAULT_OFFSET
     )
 
-    # --------------------------------------------------------
-    # Arquivos obrigatórios
-    # --------------------------------------------------------
+
+    # ========================================================
+    # OFFSET DA LETRA
+    # ========================================================
+
+    lyrics_offset = read_offset_field(
+        metadata,
+        "lyricsOffset",
+        DEFAULT_LYRICS_OFFSET
+    )
+
+
+    # ========================================================
+    # ARQUIVOS OBRIGATÓRIOS
+    # ========================================================
 
     audio_path = (
         song_directory
         / AUDIO_FILENAME
     )
 
+
     midi_path = (
         song_directory
         / MIDI_FILENAME
     )
 
+
     if not audio_path.exists():
 
         raise CatalogGenerationError(
-            f"Arquivo obrigatório ausente: "
+            "Arquivo obrigatório ausente: "
             f"{AUDIO_FILENAME}"
         )
+
+
+    if not audio_path.is_file():
+
+        raise CatalogGenerationError(
+            f"{AUDIO_FILENAME} "
+            "não é um arquivo válido."
+        )
+
 
     if not midi_path.exists():
 
         raise CatalogGenerationError(
-            f"Arquivo obrigatório ausente: "
+            "Arquivo obrigatório ausente: "
             f"{MIDI_FILENAME}"
         )
 
-    # --------------------------------------------------------
-    # Arquivos opcionais
-    # --------------------------------------------------------
+
+    if not midi_path.is_file():
+
+        raise CatalogGenerationError(
+            f"{MIDI_FILENAME} "
+            "não é um arquivo válido."
+        )
+
+
+    # ========================================================
+    # ARQUIVOS OPCIONAIS
+    # ========================================================
 
     lyrics_path = (
         song_directory
         / LYRICS_FILENAME
     )
 
+
     cover_path = find_cover(
         song_directory
     )
 
-    # --------------------------------------------------------
-    # Duração
-    # --------------------------------------------------------
+
+    # ========================================================
+    # DURAÇÃO
+    # ========================================================
 
     duration = get_song_duration(
         audio_path,
         metadata
     )
 
-    # --------------------------------------------------------
-    # Pasta relativa a assets/musicas
-    # --------------------------------------------------------
+
+    # ========================================================
+    # PASTA RELATIVA
+    # ========================================================
 
     relative_folder = (
         song_directory
@@ -733,11 +963,15 @@ def build_song_entry(
         .as_posix()
     )
 
-    # --------------------------------------------------------
-    # Montar registro
-    # --------------------------------------------------------
 
-    result: dict[str, Any] = {
+    # ========================================================
+    # REGISTRO FINAL
+    # ========================================================
+
+    result: dict[
+        str,
+        Any
+    ] = {
 
         "id":
             song_id,
@@ -763,6 +997,16 @@ def build_song_entry(
         "language":
             language,
 
+        # Estes dois campos são SEMPRE escritos.
+        # Assim o catalogo.json fica explícito
+        # sobre a calibração de cada música.
+
+        "offset":
+            offset,
+
+        "lyricsOffset":
+            lyrics_offset,
+
         "files": {
 
             "audio":
@@ -774,7 +1018,10 @@ def build_song_entry(
             "lyrics":
                 (
                     LYRICS_FILENAME
-                    if lyrics_path.exists()
+                    if (
+                        lyrics_path.exists()
+                        and lyrics_path.is_file()
+                    )
                     else None
                 ),
 
@@ -787,24 +1034,105 @@ def build_song_entry(
         },
     }
 
-    # --------------------------------------------------------
-    # Offset somente quando necessário
-    # --------------------------------------------------------
-
-    if (
-        offset is not None
-        and offset != 0
-    ):
-
-        result[
-            "offset"
-        ] = offset
 
     return result
 
 
 # ============================================================
-# CAPA
+# LER OFFSET
+# ============================================================
+
+def read_offset_field(
+    metadata: dict[str, Any],
+    field_name: str,
+    default: float
+) -> float:
+
+    """
+    Lê um offset temporal em segundos.
+
+    Valores válidos:
+
+        0
+        -0.24
+        0.350
+        "0.5"
+
+    Se o campo não existir:
+        usa default.
+
+    Se existir e for inválido:
+        interrompe a geração.
+    """
+
+    if (
+        field_name
+        not in metadata
+    ):
+
+        return float(
+            default
+        )
+
+
+    value = metadata.get(
+        field_name
+    )
+
+
+    if (
+        value is None
+        or value == ""
+    ):
+
+        return float(
+            default
+        )
+
+
+    try:
+
+        number = float(
+            value
+        )
+
+
+    except (
+        TypeError,
+        ValueError
+    ) as error:
+
+        raise CatalogGenerationError(
+            f'O campo "{field_name}" '
+            "precisa ser um número em segundos.\n"
+            f"Valor recebido: {value!r}"
+        ) from error
+
+
+    if not math.isfinite(
+        number
+    ):
+
+        raise CatalogGenerationError(
+            f'O campo "{field_name}" '
+            "precisa ser um número finito."
+        )
+
+
+    # Evita -0.0 no JSON.
+    if number == 0:
+
+        return 0.0
+
+
+    return round(
+        number,
+        6
+    )
+
+
+# ============================================================
+# LOCALIZAR CAPA
 # ============================================================
 
 def find_cover(
@@ -818,15 +1146,20 @@ def find_cover(
             / filename
         )
 
-        if candidate.exists():
+
+        if (
+            candidate.exists()
+            and candidate.is_file()
+        ):
 
             return candidate
+
 
     return None
 
 
 # ============================================================
-# DURAÇÃO DA MÚSICA
+# DURAÇÃO DO MP3
 # ============================================================
 
 def get_song_duration(
@@ -835,15 +1168,20 @@ def get_song_duration(
 ) -> int:
 
     """
-    A duração é obtida diretamente do MP3 usando mutagen.
+    Obtém automaticamente a duração do MP3.
 
-    Caso mutagen não esteja instalado, permitimos como fallback
-    um campo "duration" no musica.json.
+    Caso mutagen não esteja instalado,
+    permite fallback para:
+
+        "duration": 277
+
+    dentro de musica.json.
     """
 
     try:
 
         from mutagen.mp3 import MP3
+
 
     except ImportError:
 
@@ -853,16 +1191,20 @@ def get_song_duration(
             )
         )
 
+
         if (
             fallback is not None
-            and fallback > 0
+            and fallback >
+                0
         ):
 
             print(
-                f"       {Terminal.WARN} "
+                f"       "
+                f"{Terminal.WARN} "
                 "Mutagen não instalado; "
                 "usando duration de musica.json."
             )
+
 
             return int(
                 round(
@@ -870,13 +1212,17 @@ def get_song_duration(
                 )
             )
 
+
         raise CatalogGenerationError(
-            "A biblioteca Python 'mutagen' não está instalada.\n\n"
+            "A biblioteca Python 'mutagen' "
+            "não está instalada.\n\n"
             "Instale-a uma única vez com:\n\n"
             "    pip install mutagen\n\n"
-            "Ela é usada para descobrir automaticamente "
-            "a duração do instrumental.mp3."
+            "Ela é usada para descobrir "
+            "automaticamente a duração "
+            "do instrumental.mp3."
         )
+
 
     try:
 
@@ -884,25 +1230,35 @@ def get_song_duration(
             audio_path
         )
 
+
         length = float(
             audio.info.length
         )
 
+
     except Exception as error:
 
         raise CatalogGenerationError(
-            f"Não foi possível determinar a duração de "
-            f"{AUDIO_FILENAME}.\n"
+            "Não foi possível determinar "
+            f"a duração de {AUDIO_FILENAME}.\n"
             f"{error}"
         ) from error
 
-    if length <= 0:
+
+    if (
+        not math.isfinite(
+            length
+        ) or
+        length <=
+            0
+    ):
 
         raise CatalogGenerationError(
-            "A duração detectada do MP3 é inválida."
+            "A duração detectada do MP3 "
+            "é inválida."
         )
 
-    # O aplicativo trabalha atualmente com duração inteira.
+
     return int(
         round(
             length
@@ -922,26 +1278,31 @@ def read_json_file(
 
         with path.open(
             "r",
-            encoding="utf-8"
+            encoding="utf-8-sig"
         ) as file:
 
             data = json.load(
                 file
             )
 
+
     except json.JSONDecodeError as error:
 
         raise CatalogGenerationError(
             f"JSON inválido em {path.name}.\n"
-            f"Linha {error.lineno}, coluna {error.colno}: "
+            f"Linha {error.lineno}, "
+            f"coluna {error.colno}: "
             f"{error.msg}"
         ) from error
+
 
     except OSError as error:
 
         raise CatalogGenerationError(
-            f"Não foi possível ler {path.name}."
+            f"Não foi possível ler "
+            f"{path.name}."
         ) from error
+
 
     if not isinstance(
         data,
@@ -949,8 +1310,10 @@ def read_json_file(
     ):
 
         raise CatalogGenerationError(
-            f"{path.name} precisa conter um objeto JSON."
+            f"{path.name} precisa conter "
+            "um objeto JSON."
         )
+
 
     return data
 
@@ -967,11 +1330,13 @@ def parse_optional_number(
 
         return None
 
+
     try:
 
         number = float(
             value
         )
+
 
     except (
         TypeError,
@@ -979,6 +1344,14 @@ def parse_optional_number(
     ):
 
         return None
+
+
+    if not math.isfinite(
+        number
+    ):
+
+        return None
+
 
     return number
 
@@ -996,6 +1369,7 @@ def validate_duplicate_song_ids(
         str
     ] = {}
 
+
     for genre in genres:
 
         for song in genre[
@@ -1008,21 +1382,26 @@ def validate_duplicate_song_ids(
                 ]
             )
 
+
             folder = (
                 song[
                     "folder"
                 ]
             )
 
+
             if song_id in seen:
 
                 raise CatalogGenerationError(
-                    "Existem duas músicas com o mesmo ID:\n\n"
+                    "Existem duas músicas "
+                    "com o mesmo ID:\n\n"
                     f'ID: "{song_id}"\n'
                     f"1. {seen[song_id]}\n"
                     f"2. {folder}\n\n"
-                    "Cada música precisa possuir um ID único."
+                    "Cada música precisa "
+                    "possuir um ID único."
                 )
+
 
             seen[
                 song_id
@@ -1045,23 +1424,26 @@ def write_catalog(
             indent=4
         )
 
-        # Nova linha final.
+
         json_text += "\n"
+
 
         CATALOG_PATH.write_text(
             json_text,
             encoding="utf-8"
         )
 
+
     except OSError as error:
 
         raise CatalogGenerationError(
-            "Não foi possível salvar catalogo.json."
+            "Não foi possível salvar "
+            "catalogo.json."
         ) from error
 
 
 # ============================================================
-# CONVERTER SLUG EM NOME
+# SLUG → NOME
 # ============================================================
 
 def slug_to_display_name(
@@ -1081,6 +1463,7 @@ def slug_to_display_name(
         .strip()
     )
 
+
     return text.title()
 
 
@@ -1099,13 +1482,16 @@ def normalize_sort_text(
         )
     )
 
+
     without_accents = "".join(
         character
-        for character in normalized
+        for character
+        in normalized
         if not unicodedata.combining(
             character
         )
     )
+
 
     return (
         without_accents
@@ -1130,15 +1516,18 @@ def format_duration(
         )
     )
 
+
     minutes = (
-        safe
-        // 60
+        safe //
+        60
     )
 
+
     remaining = (
-        safe
-        % 60
+        safe %
+        60
     )
+
 
     return (
         f"{minutes}:"
@@ -1147,59 +1536,171 @@ def format_duration(
 
 
 # ============================================================
-# RESUMO
+# FORMATAR OFFSET PARA TERMINAL
+# ============================================================
+
+def format_offset(
+    value: float
+) -> str:
+
+    milliseconds = int(
+        round(
+            value *
+            1000
+        )
+    )
+
+
+    if milliseconds > 0:
+
+        return (
+            f"+{milliseconds} ms"
+        )
+
+
+    return (
+        f"{milliseconds} ms"
+    )
+
+
+# ============================================================
+# RESUMO DA MÚSICA
+# ============================================================
+
+def print_song_summary(
+    song: dict[str, Any]
+) -> None:
+
+    print(
+        f"       "
+        f"{Terminal.OK} "
+        f"{song['title']} — "
+        f"{song['artist']} "
+        f"({format_duration(song['duration'])})"
+    )
+
+
+    print(
+        "            "
+        "MIDI: "
+        f"{format_offset(song['offset'])}"
+        " | "
+        "Letra: "
+        f"{format_offset(song['lyricsOffset'])}"
+    )
+
+
+    if (
+        song[
+            "files"
+        ][
+            "lyrics"
+        ]
+        is None
+    ):
+
+        print(
+            "            "
+            f"{Terminal.WARN} "
+            "Sem letra.srt"
+        )
+
+
+# ============================================================
+# RESUMO FINAL
 # ============================================================
 
 def print_summary(
     catalog: dict[str, Any]
 ) -> None:
 
-    genres = catalog[
-        "genres"
-    ]
+    genres = (
+        catalog[
+            "genres"
+        ]
+    )
+
 
     songs = [
+
         song
-        for genre in genres
-        for song in genre[
+
+        for genre
+        in genres
+
+        for song
+        in genre[
             "songs"
         ]
     ]
 
+
+    lyrics_count = sum(
+        1
+        for song
+        in songs
+        if song[
+            "files"
+        ][
+            "lyrics"
+        ]
+    )
+
+
     print()
-    print("-" * 64)
+
+    print(
+        "-" * 68
+    )
+
 
     print(
         f"{Terminal.OK} "
         "Catálogo gerado com sucesso."
     )
 
+
     print()
 
+
     print(
-        f"Arquivo:"
+        "Arquivo:"
     )
+
 
     print(
         f"    {CATALOG_PATH}"
     )
 
+
     print()
+
 
     print(
         f"Gêneros: {len(genres)}"
     )
 
+
     print(
         f"Músicas: {len(songs)}"
     )
 
-    print("-" * 64)
+
+    print(
+        f"Com letra SRT: "
+        f"{lyrics_count}"
+    )
+
+
+    print(
+        "-" * 68
+    )
+
     print()
 
 
 # ============================================================
-# EXECUÇÃO
+# INÍCIO
 # ============================================================
 
 if __name__ == "__main__":

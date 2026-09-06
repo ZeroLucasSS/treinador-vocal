@@ -121,6 +121,19 @@
 
                 </div>
 
+
+                <div class="arquivo-status">
+
+                    <span>
+                        Letra SRT
+                    </span>
+
+                    <strong id="statusLetra">
+                        Carregando...
+                    </strong>
+
+                </div>
+
             </div>
 
         </section>
@@ -233,6 +246,113 @@
                     </option>
 
                 </select>
+
+            </div>
+
+
+            <!-- ==============================================
+                 SINCRONIZAÇÃO
+                 ============================================== -->
+
+            <div class="sincronizacao">
+
+                <div class="sincronizacao-cabecalho">
+
+                    <div>
+                        <p class="rotulo">
+                            SINCRONIZAÇÃO
+                        </p>
+
+                        <strong>
+                            Ajuste fino da música
+                        </strong>
+                    </div>
+
+                    <p class="sincronizacao-ajuda">
+                        Valores positivos atrasam; valores negativos adiantam.
+                        Ajuste durante “Ouvir instrumental” e depois copie os
+                        valores finais para o musica.json.
+                    </p>
+
+                </div>
+
+
+                <div class="sincronizacao-linhas">
+
+                    <div class="sincronizacao-linha">
+
+                        <div class="sincronizacao-identificacao">
+                            <span>Melodia MIDI</span>
+
+                            <strong id="valorOffsetMidi">
+                                0 ms
+                            </strong>
+                        </div>
+
+                        <div class="sincronizacao-botoes">
+
+                            <button type="button" class="botao-sync" data-sync-target="midi" data-sync-delta="-0.1">
+                                −100 ms
+                            </button>
+
+                            <button type="button" class="botao-sync" data-sync-target="midi" data-sync-delta="-0.01">
+                                −10 ms
+                            </button>
+
+                            <button type="button" class="botao-sync botao-sync-zerar" data-sync-target="midi" data-sync-reset="true">
+                                Zerar
+                            </button>
+
+                            <button type="button" class="botao-sync" data-sync-target="midi" data-sync-delta="0.01">
+                                +10 ms
+                            </button>
+
+                            <button type="button" class="botao-sync" data-sync-target="midi" data-sync-delta="0.1">
+                                +100 ms
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="sincronizacao-linha">
+
+                        <div class="sincronizacao-identificacao">
+                            <span>Letra SRT</span>
+
+                            <strong id="valorOffsetLetra">
+                                0 ms
+                            </strong>
+                        </div>
+
+                        <div class="sincronizacao-botoes">
+
+                            <button type="button" class="botao-sync" data-sync-target="lyrics" data-sync-delta="-0.1">
+                                −100 ms
+                            </button>
+
+                            <button type="button" class="botao-sync" data-sync-target="lyrics" data-sync-delta="-0.01">
+                                −10 ms
+                            </button>
+
+                            <button type="button" class="botao-sync botao-sync-zerar" data-sync-target="lyrics" data-sync-reset="true">
+                                Zerar
+                            </button>
+
+                            <button type="button" class="botao-sync" data-sync-target="lyrics" data-sync-delta="0.01">
+                                +10 ms
+                            </button>
+
+                            <button type="button" class="botao-sync" data-sync-target="lyrics" data-sync-delta="0.1">
+                                +100 ms
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
@@ -452,6 +572,30 @@
 
         </section>
 
+
+
+        <!-- ==================================================
+             LETRA SINCRONIZADA
+             ================================================== -->
+
+        <section
+            id="painelLetra"
+            class="painel-letra"
+        >
+
+            <p class="rotulo">
+                LETRA
+            </p>
+
+            <div
+                id="letraAtual"
+                class="letra-atual sem-frase"
+                aria-live="polite"
+            >
+                ♪
+            </div>
+
+        </section>
 
 
         <!-- ==================================================

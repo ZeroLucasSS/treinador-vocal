@@ -2,5 +2,7 @@
     "title": "Tempo Perdido",
     "artist": "Legião Urbana",
     "difficulty": "intermediate",
-    "language": "pt-BR"
+    "language": "pt-BR",
+    "offset": 0,
+    "lyricsOffset": 0    
 }

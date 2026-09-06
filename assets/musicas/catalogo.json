@@ -14,6 +14,8 @@
                     "duration": 278,
                     "difficulty": "intermediate",
                     "language": "pt-BR",
+                    "offset": 0.0,
+                    "lyricsOffset": 0.0,
                     "files": {
                         "audio": "instrumental.mp3",
                         "midi": "voz.mid",
@@ -36,6 +38,8 @@
                     "duration": 300,
                     "difficulty": "intermediate",
                     "language": "pt-BR",
+                    "offset": 0.0,
+                    "lyricsOffset": 0.0,
                     "files": {
                         "audio": "instrumental.mp3",
                         "midi": "voz.mid",
