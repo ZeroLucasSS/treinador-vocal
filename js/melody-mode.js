@@ -125,17 +125,25 @@ const NOTE_TIME_MARGIN =
     0.12;
 
 
-const EXCELLENT_ONSET_MS =
-    120;
-
-
-const ACCEPTABLE_ONSET_MS =
-    300;
-
 
 /*
  * ============================================================
  * DIFICULDADES
+ * ============================================================
+ *
+ * tolerance:
+ * faixa considerada afinada/correta.
+ *
+ * near:
+ * faixa ainda considerada próxima da nota.
+ *
+ * requiredCoverage:
+ * porcentagem da duração MIDI que precisa ser efetivamente
+ * cantada para receber pontuação máxima de sustentação.
+ *
+ * A duração do MIDI pode não corresponder exatamente
+ * à duração natural de uma sílaba cantada, especialmente
+ * quando o MIDI foi obtido por conversão automática de voz.
  * ============================================================
  */
 
@@ -147,27 +155,54 @@ const DIFFICULTIES = {
             100,
 
         near:
-            175
+            175,
+
+        requiredCoverage:
+            0.35,
+
+        excellentOnsetMs:
+            300,
+
+        acceptableOnsetMs:
+            700
     },
 
 
     intermediate: {
 
         tolerance:
-            70,
+            50,
 
         near:
-            125
+            90,
+
+        requiredCoverage:
+            0.50,
+
+        excellentOnsetMs:
+            220,
+
+        acceptableOnsetMs:
+            500
     },
 
 
     advanced: {
 
         tolerance:
-            50,
+            15,
 
         near:
-            90
+            50,
+
+        requiredCoverage:
+            0.65,
+
+        excellentOnsetMs:
+            150,
+
+        acceptableOnsetMs:
+            350
     }
 };
 
@@ -3935,9 +3970,40 @@ function calculateNoteScores(
             );
 
 
+    /*
+    * ========================================================
+    * DURAÇÃO / SUSTENTAÇÃO
+    * ========================================================
+    *
+    * Não exigimos mais 100% da duração prevista pelo MIDI
+    * para conceder pontuação máxima.
+    *
+    * Isso torna o avaliador mais tolerante às imprecisões
+    * produzidas na conversão voz → MIDI.
+    *
+    * Exemplo no iniciante:
+    *
+    * requiredCoverage = 0.35
+    *
+    * 17,5% cantado → 50 pontos de duração
+    * 35% cantado   → 100 pontos
+    * 50% cantado   → 100 pontos
+    */
+    const requiredCoverage =
+        Math.max(
+            0.01,
+            difficulty.requiredCoverage ??
+                1
+        );
+
+
     const durationScore =
         clampScore(
-            coverage *
+            Math.min(
+                1,
+                coverage /
+                    requiredCoverage
+            ) *
             100
         );
 
@@ -3980,34 +4046,56 @@ function calculateTimingScore(
     }
 
 
+    const difficulty =
+        getCurrentDifficulty();
+
+
+    const excellentOnsetMs =
+        difficulty.excellentOnsetMs ??
+        300;
+
+
+    const acceptableOnsetMs =
+        difficulty.acceptableOnsetMs ??
+        700;
+
+
     const absolute =
         Math.abs(
             onset
         );
 
 
+    /*
+     * Entrada excelente.
+     */
     if (
         absolute <=
-        EXCELLENT_ONSET_MS
+        excellentOnsetMs
     ) {
 
         return 100;
     }
 
 
+    /*
+     * Entre excelente e aceitável:
+     *
+     * cai gradualmente de 100 para 50.
+     */
     if (
         absolute <=
-        ACCEPTABLE_ONSET_MS
+        acceptableOnsetMs
     ) {
 
         const ratio =
             (
                 absolute -
-                EXCELLENT_ONSET_MS
+                excellentOnsetMs
             ) /
             (
-                ACCEPTABLE_ONSET_MS -
-                EXCELLENT_ONSET_MS
+                acceptableOnsetMs -
+                excellentOnsetMs
             );
 
 
@@ -4019,13 +4107,20 @@ function calculateTimingScore(
     }
 
 
+    /*
+     * Após a faixa aceitável,
+     * a pontuação continua caindo,
+     * mas não despenca instantaneamente.
+     */
+    const excess =
+        absolute -
+        acceptableOnsetMs;
+
+
     return clampScore(
         50 -
-        (
-            absolute -
-            ACCEPTABLE_ONSET_MS
-        ) /
-        10
+        excess /
+            20
     );
 }
 

@@ -6,6 +6,24 @@
             "name": "Católicas",
             "songs": [
                 {
+                    "id": "gloria-a-deus-nas-alturas-ministerio-amor-e-adoracao",
+                    "title": "Gloria à Deus Nas Alturas",
+                    "artist": "Ministério Amor e Adoração",
+                    "genre": "catolicas",
+                    "folder": "catolicas/gloria-a-deus-nas-alturas-ministerio-amor-e-adoracao",
+                    "duration": 179,
+                    "difficulty": "beginner",
+                    "language": "pt-BR",
+                    "offset": 0.0,
+                    "lyricsOffset": 0.0,
+                    "files": {
+                        "audio": "instrumental.mp3",
+                        "midi": "voz.mid",
+                        "lyrics": "letra.srt",
+                        "cover": "capa.jpg"
+                    }
+                },
+                {
                     "id": "ninguem-te-ama-como-eu-marcos-andre",
                     "title": "Ninguém te ama como Eu",
                     "artist": "Marcos André",
@@ -13,6 +31,24 @@
                     "folder": "catolicas/ninguem-te-ama-como-eu-marcos-andre",
                     "duration": 278,
                     "difficulty": "intermediate",
+                    "language": "pt-BR",
+                    "offset": 0.0,
+                    "lyricsOffset": 0.0,
+                    "files": {
+                        "audio": "instrumental.mp3",
+                        "midi": "voz.mid",
+                        "lyrics": "letra.srt",
+                        "cover": "capa.jpg"
+                    }
+                },
+                {
+                    "id": "templo-vivo-diego-fernandes",
+                    "title": "Templo Vivo (Seja Bem-Vindo)",
+                    "artist": "Diego Fernandes",
+                    "genre": "catolicas",
+                    "folder": "catolicas/templo-vivo-diego-fernandes",
+                    "duration": 258,
+                    "difficulty": "beginner",
                     "language": "pt-BR",
                     "offset": 0.0,
                     "lyricsOffset": 0.0,
@@ -35,16 +71,16 @@
                     "artist": "Legião Urbana",
                     "genre": "rock-nacional",
                     "folder": "rock-nacional/tempo-perdido-legiao-urbana",
-                    "duration": 300,
+                    "duration": 230,
                     "difficulty": "intermediate",
                     "language": "pt-BR",
-                    "offset": 0.0,
+                    "offset": 0.25,
                     "lyricsOffset": 0.0,
                     "files": {
                         "audio": "instrumental.mp3",
                         "midi": "voz.mid",
                         "lyrics": "letra.srt",
-                        "cover": null
+                        "cover": "capa.jpg"
                     }
                 }
             ]
@@ -52,7 +88,26 @@
         {
             "id": "romanticas",
             "name": "Românticas",
-            "songs": []
+            "songs": [
+                {
+                    "id": "viver-e-ter-voce-pra-mim-robson-monteiro",
+                    "title": "Viver É Ter Você Pra Mim",
+                    "artist": "Robson Monteiro",
+                    "genre": "romanticas",
+                    "folder": "romanticas/viver-e-ter-voce-pra-mim-robson-monteiro",
+                    "duration": 280,
+                    "difficulty": "advanced",
+                    "language": "pt-BR",
+                    "offset": 0.0,
+                    "lyricsOffset": 0.0,
+                    "files": {
+                        "audio": "instrumental.mp3",
+                        "midi": "voz.mid",
+                        "lyrics": "letra.srt",
+                        "cover": "capa.jpg"
+                    }
+                }
+            ]
         }
     ]
 }
