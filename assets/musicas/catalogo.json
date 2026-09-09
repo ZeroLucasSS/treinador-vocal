@@ -24,6 +24,24 @@
                     }
                 },
                 {
+                    "id": "mistica-sublime-colo-de-deus",
+                    "title": "Mística Sublime",
+                    "artist": "Colo de Deus",
+                    "genre": "catolicas",
+                    "folder": "catolicas/mistica-sublime-colo-de-deus",
+                    "duration": 300,
+                    "difficulty": "intermediate",
+                    "language": "pt-BR",
+                    "offset": 0.0,
+                    "lyricsOffset": 0.0,
+                    "files": {
+                        "audio": "instrumental.mp3",
+                        "midi": "voz.mid",
+                        "lyrics": "letra.srt",
+                        "cover": "capa.jpg"
+                    }
+                },
+                {
                     "id": "ninguem-te-ama-como-eu-marcos-andre",
                     "title": "Ninguém te ama como Eu",
                     "artist": "Marcos André",
