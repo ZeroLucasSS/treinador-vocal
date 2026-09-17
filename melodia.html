@@ -128,14 +128,13 @@
 
 
                     <h1>
-                        Karaoke &amp; Pitch
+                        KaraoKê HQ
                     </h1>
 
 
                     <p class="descricao">
 
-                        Cante, acompanhe a melodia e descubra
-                        como sua voz se encaixa nota por nota.
+                        Cante. Acerte as notas. Evolua sua voz.
 
                     </p>
 
@@ -823,6 +822,28 @@
 
                     </div>
 
+
+
+                    <!-- =========================================
+                         COMBO / SEQUÊNCIA
+                         ========================================= -->
+
+                    <div
+                        id="comboAtual"
+                        class="combo-atual combo-inativo"
+                        aria-live="polite"
+                    >
+
+                        <span class="combo-rotulo">
+                            SEQUÊNCIA
+                        </span>
+
+                        <strong id="comboValor">
+                            ×0
+                        </strong>
+
+                    </div>
+
                 </section>
 
             </aside>
@@ -901,10 +922,36 @@
 
 
                         <div
+                            id="adesivoPalco"
                             class="adesivo-hq adesivo-superior"
                             aria-hidden="true"
                         >
                             SIGA O RITMO!
+                        </div>
+
+
+
+                        <!-- =====================================
+                             FEEDBACK GAMIFICADO TRANSITÓRIO
+                             ===================================== -->
+
+                        <div
+                            id="feedbackGamificado"
+                            class="feedback-gamificado oculto"
+                            aria-hidden="true"
+                        >
+
+                            <span
+                                class="feedback-gamificado-icone"
+                                aria-hidden="true"
+                            >
+                                ★
+                            </span>
+
+                            <strong id="feedbackGamificadoTexto">
+                                PERFEITO!
+                            </strong>
+
                         </div>
 
 
@@ -1216,6 +1263,7 @@
 
 
             <div
+                id="resultadoSeloFinal"
                 class="explosao-resultado"
                 aria-hidden="true"
             >
@@ -1340,6 +1388,43 @@
 
                     <strong id="resultadoOmitidas">
                         —
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ===============================================
+                 DESTAQUES GAMIFICADOS
+                 =============================================== -->
+
+            <div class="resultado-gamificacao">
+
+
+                <div class="resultado-gamificacao-cartao">
+
+                    <span>
+                        Melhor sequência
+                    </span>
+
+                    <strong id="resultadoMelhorCombo">
+                        0
+                    </strong>
+
+                </div>
+
+
+
+                <div class="resultado-gamificacao-cartao">
+
+                    <span>
+                        Notas excelentes
+                    </span>
+
+                    <strong id="resultadoExcelentes">
+                        0
                     </strong>
 
                 </div>

@@ -416,6 +416,48 @@ const elements = {
         ),
 
 
+    /*
+     * ========================================================
+     * GAMIFICAÇÃO
+     * ========================================================
+     */
+
+    currentCombo:
+        document.getElementById(
+            "comboAtual"
+        ),
+
+    comboValue:
+        document.getElementById(
+            "comboValor"
+        ),
+
+    stageSticker:
+        document.getElementById(
+            "adesivoPalco"
+        ),
+
+    gamifiedFeedback:
+        document.getElementById(
+            "feedbackGamificado"
+        ),
+
+    gamifiedFeedbackText:
+        document.getElementById(
+            "feedbackGamificadoTexto"
+        ),
+
+    gamifiedFeedbackIcon:
+        document.querySelector(
+            "#feedbackGamificado .feedback-gamificado-icone"
+        ),
+
+    scoreHighlight:
+        document.querySelector(
+            ".pontuacao-destaque"
+        ),
+
+
     result:
         document.getElementById(
             "resultado"
@@ -460,6 +502,26 @@ const elements = {
         document.getElementById(
             "resultadoOmitidas"
         ),
+
+
+    /*
+     * Gamificação do resultado final.
+     */
+    finalResultSticker:
+        document.getElementById(
+            "resultadoSeloFinal"
+        ),
+
+    resultBestCombo:
+        document.getElementById(
+            "resultadoMelhorCombo"
+        ),
+
+    resultExcellentNotes:
+        document.getElementById(
+            "resultadoExcelentes"
+        ),
+
 
     noteResultsList:
         document.getElementById(
@@ -579,6 +641,32 @@ function validateRequiredElements() {
         pontuacaoNotaAtual:
             elements.currentNoteScore,
 
+
+        /*
+         * Gamificação.
+         */
+        comboAtual:
+            elements.currentCombo,
+
+        comboValor:
+            elements.comboValue,
+
+        adesivoPalco:
+            elements.stageSticker,
+
+        feedbackGamificado:
+            elements.gamifiedFeedback,
+
+        feedbackGamificadoTexto:
+            elements.gamifiedFeedbackText,
+
+        feedbackGamificadoIcone:
+            elements.gamifiedFeedbackIcon,
+
+        pontuacaoDestaque:
+            elements.scoreHighlight,
+
+
         resultado:
             elements.result,
 
@@ -605,6 +693,15 @@ function validateRequiredElements() {
 
         resultadoOmitidas:
             elements.resultMissed,
+
+        resultadoSeloFinal:
+            elements.finalResultSticker,
+
+        resultadoMelhorCombo:
+            elements.resultBestCombo,
+
+        resultadoExcelentes:
+            elements.resultExcellentNotes,
 
         listaResultadosNotas:
             elements.noteResultsList,
@@ -839,6 +936,37 @@ let currentTargetIndex =
 
 let nextFinalizeIndex =
     0;
+
+
+/*
+ * ============================================================
+ * GAMIFICAÇÃO
+ * ============================================================
+ *
+ * A gamificação é exclusivamente visual.
+ *
+ * Ela NÃO modifica:
+ *
+ * - score da nota;
+ * - score final;
+ * - tolerâncias;
+ * - classificação de dificuldade.
+ */
+
+let currentCombo =
+    0;
+
+
+let bestCombo =
+    0;
+
+
+let gamifiedFeedbackTimer =
+    null;
+
+
+let stageStickerTimer =
+    null;
 
 
 /*
@@ -4215,6 +4343,12 @@ function finalizeNote(
         true;
 
 
+    /*
+     * ========================================================
+     * NOTA NÃO CANTADA
+     * ========================================================
+     */
+
     if (
         state.voiceSamples ===
         0
@@ -4262,9 +4396,24 @@ function finalizeNote(
 
         updateLiveStatistics();
 
+
+        /*
+         * Feedback visual da nota finalizada.
+         */
+        handleFinalizedNoteGamification(
+            state
+        );
+
+
         return;
     }
 
+
+    /*
+     * ========================================================
+     * MÉTRICAS CONSOLIDADAS
+     * ========================================================
+     */
 
     state.averageCents =
         calculateAverage(
@@ -4302,6 +4451,12 @@ function finalizeNote(
         scores.totalScore;
 
 
+    /*
+     * ========================================================
+     * CLASSIFICAÇÃO
+     * ========================================================
+     */
+
     if (
         state.score >=
         80
@@ -4325,6 +4480,12 @@ function finalizeNote(
     }
 
 
+    /*
+     * ========================================================
+     * PIANO ROLL
+     * ========================================================
+     */
+
     pianoRoll.setNoteResult(
         index,
         {
@@ -4337,7 +4498,826 @@ function finalizeNote(
     );
 
 
+    /*
+     * ========================================================
+     * INTERFACE
+     * ========================================================
+     */
+
     updateLiveStatistics();
+
+
+    /*
+     * ========================================================
+     * GAMIFICAÇÃO
+     * ========================================================
+     */
+
+    handleFinalizedNoteGamification(
+        state
+    );
+}
+
+
+/*
+ * ============================================================
+ * GAMIFICAÇÃO — NOTA FINALIZADA
+ * ============================================================
+ */
+
+function handleFinalizedNoteGamification(
+    state
+) {
+
+    if (
+        !state
+    ) {
+
+        return;
+    }
+
+
+    /*
+     * Primeiro atualizamos a sequência.
+     *
+     * A função retorna uma configuração especial
+     * quando um marco de combo é atingido.
+     */
+    const comboFeedback =
+        updateCombo(
+            state
+        );
+
+
+    /*
+     * Marcos de combo têm prioridade visual sobre
+     * o feedback normal da nota.
+     */
+    if (
+        comboFeedback
+    ) {
+
+        showGamifiedFeedback(
+            comboFeedback
+        );
+
+
+        updateStageSticker(
+            comboFeedback.text,
+            "estado-combo"
+        );
+
+
+        pulseScoreHighlight();
+
+
+        return;
+    }
+
+
+    /*
+     * Feedback pedagógico normal da nota.
+     */
+    const feedback =
+        getGamifiedFeedback(
+            state
+        );
+
+
+    if (
+        feedback
+    ) {
+
+        showGamifiedFeedback(
+            feedback
+        );
+
+
+        updateStageSticker(
+            feedback.stickerText ??
+                feedback.text,
+            feedback.stickerClass ??
+                "estado-ritmo"
+        );
+    }
+
+
+    /*
+     * O placar recebe pulso apenas quando houve
+     * um resultado positivo.
+     */
+    if (
+        state.status ===
+            "excellent"
+    ) {
+
+        pulseScoreHighlight();
+    }
+}
+
+
+/*
+ * ============================================================
+ * COMBO
+ * ============================================================
+ *
+ * Combo não altera a pontuação.
+ *
+ * Consideramos sequência apenas notas classificadas
+ * como excellent pelo avaliador existente.
+ */
+
+function updateCombo(
+    state
+) {
+
+    if (
+        state.status ===
+        "excellent"
+    ) {
+
+        currentCombo +=
+            1;
+
+
+        bestCombo =
+            Math.max(
+                bestCombo,
+                currentCombo
+            );
+
+    } else {
+
+        currentCombo =
+            0;
+    }
+
+
+    updateComboInterface();
+
+
+    /*
+     * Marcos visuais.
+     */
+    if (
+        currentCombo ===
+        3
+    ) {
+
+        return {
+            text:
+                "×3 COMBO!",
+
+            icon:
+                "★",
+
+            type:
+                "combo"
+        };
+    }
+
+
+    if (
+        currentCombo ===
+        5
+    ) {
+
+        return {
+            text:
+                "COMBO ×5!",
+
+            icon:
+                "🔥",
+
+            type:
+                "combo"
+        };
+    }
+
+
+    if (
+        currentCombo >=
+            10 &&
+        currentCombo %
+            5 ===
+            0
+    ) {
+
+        return {
+            text:
+                `SUPER COMBO ×${currentCombo}!`,
+
+            icon:
+                "⚡",
+
+            type:
+                "combo"
+        };
+    }
+
+
+    return null;
+}
+
+
+/*
+ * ============================================================
+ * INTERFACE DO COMBO
+ * ============================================================
+ */
+
+function updateComboInterface() {
+
+    elements.comboValue.textContent =
+        `×${currentCombo}`;
+
+
+    elements.currentCombo
+        .classList
+        .remove(
+            "combo-inativo",
+            "combo-ativo",
+            "combo-destaque"
+        );
+
+
+    if (
+        currentCombo <=
+        0
+    ) {
+
+        elements.currentCombo
+            .classList
+            .add(
+                "combo-inativo"
+            );
+
+
+        return;
+    }
+
+
+    if (
+        currentCombo >=
+        5
+    ) {
+
+        elements.currentCombo
+            .classList
+            .add(
+                "combo-destaque"
+            );
+
+        return;
+    }
+
+
+    elements.currentCombo
+        .classList
+        .add(
+            "combo-ativo"
+        );
+}
+
+
+/*
+ * ============================================================
+ * ESCOLHER FEEDBACK DA NOTA
+ * ============================================================
+ *
+ * O objetivo não é somente comemorar.
+ *
+ * Quando há problema, tentamos identificar qual dimensão
+ * teve pior desempenho:
+ *
+ * - afinação;
+ * - entrada/ritmo;
+ * - sustentação.
+ */
+
+function getGamifiedFeedback(
+    state
+) {
+
+    if (
+        !state
+    ) {
+
+        return null;
+    }
+
+
+    /*
+     * Nota omitida.
+     */
+    if (
+        state.status ===
+        "missed"
+    ) {
+
+        return {
+            text:
+                "TENTE A PRÓXIMA!",
+
+            icon:
+                "♪",
+
+            type:
+                "atencao",
+
+            stickerText:
+                "SIGA O RITMO!",
+
+            stickerClass:
+                "estado-atencao"
+        };
+    }
+
+
+    /*
+     * Excelente acima de 90.
+     */
+    if (
+        state.score >=
+        90
+    ) {
+
+        return {
+            text:
+                "PERFEITO!",
+
+            icon:
+                "★",
+
+            type:
+                "perfeito",
+
+            stickerText:
+                "PERFEITO!",
+
+            stickerClass:
+                "estado-perfeito"
+        };
+    }
+
+
+    /*
+     * Excelente entre 80 e 89.
+     */
+    if (
+        state.status ===
+        "excellent"
+    ) {
+
+        return {
+            text:
+                "MUITO BOM!",
+
+            icon:
+                "★",
+
+            type:
+                "bom",
+
+            stickerText:
+                "ISSO AÍ!",
+
+            stickerClass:
+                "estado-perfeito"
+        };
+    }
+
+
+    /*
+     * Descobrimos qual das três dimensões
+     * mais prejudicou a nota.
+     */
+    const weakest =
+        getWeakestNoteDimension(
+            state
+        );
+
+
+    /*
+     * Resultado parcial.
+     */
+    if (
+        state.status ===
+        "partial"
+    ) {
+
+        if (
+            weakest ===
+            "timing"
+        ) {
+
+            return {
+                text:
+                    "SIGA O RITMO!",
+
+                icon:
+                    "♫",
+
+                type:
+                    "atencao",
+
+                stickerText:
+                    "SIGA O RITMO!",
+
+                stickerClass:
+                    "estado-ritmo"
+            };
+        }
+
+
+        if (
+            weakest ===
+            "duration"
+        ) {
+
+            return {
+                text:
+                    "SEGURE A NOTA!",
+
+                icon:
+                    "♪",
+
+                type:
+                    "atencao",
+
+                stickerText:
+                    "SUSTENTE!",
+
+                stickerClass:
+                    "estado-atencao"
+            };
+        }
+
+
+        if (
+            weakest ===
+            "pitch"
+        ) {
+
+            return {
+                text:
+                    "QUASE!",
+
+                icon:
+                    "★",
+
+                type:
+                    "atencao",
+
+                stickerText:
+                    "QUASE!",
+
+                stickerClass:
+                    "estado-atencao"
+            };
+        }
+
+
+        return {
+            text:
+                "BOA!",
+
+            icon:
+                "★",
+
+            type:
+                "bom",
+
+            stickerText:
+                "BOA!",
+
+            stickerClass:
+                "estado-perfeito"
+        };
+    }
+
+
+    /*
+     * Resultado de erro.
+     */
+    if (
+        weakest ===
+        "timing"
+    ) {
+
+        return {
+            text:
+                "SIGA O RITMO!",
+
+            icon:
+                "♫",
+
+            type:
+                "atencao",
+
+            stickerText:
+                "SIGA O RITMO!",
+
+            stickerClass:
+                "estado-ritmo"
+        };
+    }
+
+
+    if (
+        weakest ===
+        "duration"
+    ) {
+
+        return {
+            text:
+                "SEGURE A NOTA!",
+
+            icon:
+                "♪",
+
+            type:
+                "atencao",
+
+            stickerText:
+                "SUSTENTE!",
+
+            stickerClass:
+                "estado-atencao"
+        };
+    }
+
+
+    return {
+        text:
+            "FORA DO TOM!",
+
+        icon:
+            "!",
+
+        type:
+            "erro",
+
+        stickerText:
+            "FORA DO TOM!",
+
+        stickerClass:
+            "estado-erro"
+    };
+}
+
+
+/*
+ * ============================================================
+ * PIOR DIMENSÃO DA NOTA
+ * ============================================================
+ */
+
+function getWeakestNoteDimension(
+    state
+) {
+
+    const values = [
+        {
+            type:
+                "pitch",
+
+            score:
+                Number(
+                    state.pitchScore
+                ) || 0
+        },
+
+        {
+            type:
+                "timing",
+
+            score:
+                Number(
+                    state.timingScore
+                ) || 0
+        },
+
+        {
+            type:
+                "duration",
+
+            score:
+                Number(
+                    state.durationScore
+                ) || 0
+        }
+    ];
+
+
+    values.sort(
+        (
+            a,
+            b
+        ) =>
+            a.score -
+            b.score
+    );
+
+
+    return values[
+        0
+    ].type;
+}
+
+
+/*
+ * ============================================================
+ * EXIBIR SELO GAMIFICADO
+ * ============================================================
+ */
+
+function showGamifiedFeedback(
+    config
+) {
+
+    if (
+        !config ||
+        !elements.gamifiedFeedback
+    ) {
+
+        return;
+    }
+
+
+    if (
+        gamifiedFeedbackTimer !==
+        null
+    ) {
+
+        window.clearTimeout(
+            gamifiedFeedbackTimer
+        );
+
+
+        gamifiedFeedbackTimer =
+            null;
+    }
+
+
+    elements.gamifiedFeedbackText.textContent =
+        config.text ??
+        "";
+
+
+    elements.gamifiedFeedbackIcon.textContent =
+        config.icon ??
+        "★";
+
+
+    /*
+     * Reinicia todas as classes visuais.
+     */
+    elements.gamifiedFeedback.className =
+        "feedback-gamificado";
+
+
+    if (
+        config.type
+    ) {
+
+        elements.gamifiedFeedback
+            .classList
+            .add(
+                config.type
+            );
+    }
+
+
+    /*
+     * Forçamos um reflow apenas para reiniciar
+     * a animação quando dois feedbacks aparecem
+     * em sequência.
+     */
+    void elements.gamifiedFeedback.offsetWidth;
+
+
+    elements.gamifiedFeedback
+        .classList
+        .add(
+            "exibir"
+        );
+
+
+    gamifiedFeedbackTimer =
+        window.setTimeout(
+            () => {
+
+                elements.gamifiedFeedback
+                    .classList
+                    .add(
+                        "oculto"
+                    );
+
+
+                elements.gamifiedFeedback
+                    .classList
+                    .remove(
+                        "exibir"
+                    );
+
+
+                gamifiedFeedbackTimer =
+                    null;
+            },
+            780
+        );
+}
+
+
+/*
+ * ============================================================
+ * ADESIVO DO PALCO
+ * ============================================================
+ */
+
+function updateStageSticker(
+    text,
+    stateClass =
+        "estado-ritmo"
+) {
+
+    if (
+        stageStickerTimer !==
+        null
+    ) {
+
+        window.clearTimeout(
+            stageStickerTimer
+        );
+
+
+        stageStickerTimer =
+            null;
+    }
+
+
+    elements.stageSticker.textContent =
+        text;
+
+
+    elements.stageSticker.className =
+        `adesivo-hq adesivo-superior ${stateClass}`;
+
+
+    stageStickerTimer =
+        window.setTimeout(
+            () => {
+
+                resetStageSticker();
+
+
+                stageStickerTimer =
+                    null;
+            },
+            1100
+        );
+}
+
+
+function resetStageSticker() {
+
+    elements.stageSticker.textContent =
+        "SIGA O RITMO!";
+
+
+    elements.stageSticker.className =
+        "adesivo-hq adesivo-superior estado-ritmo";
+}
+
+
+/*
+ * ============================================================
+ * PULSO DA PONTUAÇÃO
+ * ============================================================
+ */
+
+function pulseScoreHighlight() {
+
+    elements.scoreHighlight
+        .classList
+        .remove(
+            "pontuacao-pulso"
+        );
+
+
+    /*
+     * Reinicia a animação caso notas excelentes
+     * ocorram rapidamente em sequência.
+     */
+    void elements.scoreHighlight.offsetWidth;
+
+
+    elements.scoreHighlight
+        .classList
+        .add(
+            "pontuacao-pulso"
+        );
 }
 
 
@@ -5195,6 +6175,12 @@ function showResults() {
             : 0;
 
 
+    /*
+     * ========================================================
+     * PONTUAÇÃO FINAL
+     * ========================================================
+     */
+
     elements.finalScore.textContent =
         String(
             totalScore
@@ -5292,8 +6278,32 @@ function showResults() {
         );
 
 
+    /*
+     * ========================================================
+     * GAMIFICAÇÃO FINAL
+     * ========================================================
+     */
+
+    updateFinalGamification(
+        totalScore,
+        excellent.length
+    );
+
+
+    /*
+     * ========================================================
+     * DETALHAMENTO NOTA A NOTA
+     * ========================================================
+     */
+
     buildNoteResultsList();
 
+
+    /*
+     * ========================================================
+     * EXIBIR RESULTADO
+     * ========================================================
+     */
 
     elements.result
         .classList
@@ -5323,6 +6333,119 @@ function showResults() {
         },
         150
     );
+}
+
+
+/*
+ * ============================================================
+ * GAMIFICAÇÃO — RESULTADO FINAL
+ * ============================================================
+ */
+
+function updateFinalGamification(
+    totalScore,
+    excellentCount
+) {
+
+    elements.resultBestCombo.textContent =
+        String(
+            bestCombo
+        );
+
+
+    elements.resultExcellentNotes.textContent =
+        String(
+            excellentCount
+        );
+
+
+    /*
+     * Limpa classes de uma execução anterior.
+     */
+    elements.finalResultSticker.className =
+        "explosao-resultado";
+
+
+    let text =
+        "CONTINUE!";
+
+
+    let cssClass =
+        "resultado-continue";
+
+
+    /*
+     * A avaliação visual não interfere
+     * na pontuação real.
+     */
+    if (
+        totalScore >=
+        90
+    ) {
+
+        text =
+            "PERFEITO!";
+
+        cssClass =
+            "resultado-perfeito";
+
+    } else if (
+        totalScore >=
+        80
+    ) {
+
+        text =
+            "MANDOU BEM!";
+
+        cssClass =
+            "resultado-excelente";
+
+    } else if (
+        totalScore >=
+        70
+    ) {
+
+        text =
+            "MUITO BOM!";
+
+        cssClass =
+            "resultado-bom";
+
+    } else if (
+        totalScore >=
+        55
+    ) {
+
+        text =
+            "BOA!";
+
+        cssClass =
+            "resultado-bom";
+    }
+
+
+    elements.finalResultSticker.textContent =
+        text;
+
+
+    elements.finalResultSticker
+        .classList
+        .add(
+            cssClass
+        );
+
+
+    /*
+     * Reinicia a animação.
+     */
+    void elements.finalResultSticker.offsetWidth;
+
+
+    elements.finalResultSticker
+        .classList
+        .add(
+            "animar"
+        );
 }
 
 
@@ -5474,6 +6597,12 @@ function buildNoteResultsList() {
 
 function resetInterfaceStatistics() {
 
+    /*
+     * ========================================================
+     * ESTADO DA AVALIAÇÃO
+     * ========================================================
+     */
+
     noteStates =
         [];
 
@@ -5505,6 +6634,12 @@ function resetInterfaceStatistics() {
     currentSubtitleIndex =
         0;
 
+
+    /*
+     * ========================================================
+     * INTERFACE PRINCIPAL
+     * ========================================================
+     */
 
     elements.currentScore.textContent =
         "0";
@@ -5546,12 +6681,138 @@ function resetInterfaceStatistics() {
         "";
 
 
+    /*
+     * ========================================================
+     * GAMIFICAÇÃO
+     * ========================================================
+     */
+
+    resetGamification();
+
+
+    /*
+     * ========================================================
+     * KARAOKÊ / TEMPO
+     * ========================================================
+     */
+
     resetLyricsInterface();
 
 
     updateTimeInterface(
         0
     );
+}
+
+
+/*
+ * ============================================================
+ * RESET DA GAMIFICAÇÃO
+ * ============================================================
+ */
+
+function resetGamification() {
+
+    currentCombo =
+        0;
+
+
+    bestCombo =
+        0;
+
+
+    /*
+     * Cancela timers antigos.
+     */
+    if (
+        gamifiedFeedbackTimer !==
+        null
+    ) {
+
+        window.clearTimeout(
+            gamifiedFeedbackTimer
+        );
+
+
+        gamifiedFeedbackTimer =
+            null;
+    }
+
+
+    if (
+        stageStickerTimer !==
+        null
+    ) {
+
+        window.clearTimeout(
+            stageStickerTimer
+        );
+
+
+        stageStickerTimer =
+            null;
+    }
+
+
+    /*
+     * Combo.
+     */
+    elements.comboValue.textContent =
+        "×0";
+
+
+    elements.currentCombo.className =
+        "combo-atual combo-inativo";
+
+
+    /*
+     * Overlay do piano roll.
+     */
+    elements.gamifiedFeedback.className =
+        "feedback-gamificado oculto";
+
+
+    elements.gamifiedFeedbackText.textContent =
+        "PERFEITO!";
+
+
+    elements.gamifiedFeedbackIcon.textContent =
+        "★";
+
+
+    /*
+     * Adesivo.
+     */
+    resetStageSticker();
+
+
+    /*
+     * Pulso do placar.
+     */
+    elements.scoreHighlight
+        .classList
+        .remove(
+            "pontuacao-pulso"
+        );
+
+
+    /*
+     * Resultado final.
+     */
+    elements.resultBestCombo.textContent =
+        "0";
+
+
+    elements.resultExcellentNotes.textContent =
+        "0";
+
+
+    elements.finalResultSticker.textContent =
+        "POW!";
+
+
+    elements.finalResultSticker.className =
+        "explosao-resultado";
 }
 
 
