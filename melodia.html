@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
@@ -12,11 +13,16 @@
 
     <meta
         name="theme-color"
-        content="#101114"
+        content="#10abe1"
+    >
+
+    <meta
+        name="description"
+        content="Treinador vocal Aga-Kê Comics com piano roll, karaokê e avaliação de afinação em tempo real."
     >
 
     <title>
-        Treino de Música — Treinador Vocal
+        Treino Vocal — Aga-Kê Comics
     </title>
 
 
@@ -30,52 +36,162 @@
 
 <body>
 
+
+    <!-- =========================================================
+         FUNDO DECORATIVO
+         ========================================================= -->
+
+    <div
+        class="fundo-pop-art"
+        aria-hidden="true"
+    >
+    </div>
+
+
+
+    <!-- =========================================================
+         APLICAÇÃO
+         ========================================================= -->
+
     <main class="app">
 
-        <!-- ==================================================
-             CABEÇALHO
-             ================================================== -->
 
-        <header class="cabecalho">
+        <!-- =====================================================
+             CABEÇALHO / IDENTIDADE AGA-KÊ
+             ===================================================== -->
 
-            <a
-                href="./biblioteca.html"
-                class="voltar"
+        <header class="cabecalho-marca">
+
+
+            <!-- Fundo decorativo interno -->
+
+            <div
+                class="cabecalho-pop-fundo"
+                aria-hidden="true"
             >
-                ← Biblioteca
-            </a>
+            </div>
 
 
-            <p class="etapa">
-                TREINO COM BACKING TRACK
-            </p>
+
+            <!-- Navegação -->
+
+            <div class="cabecalho-topo">
+
+                <a
+                    href="./biblioteca.html"
+                    class="voltar voltar-hq"
+                    aria-label="Voltar para a biblioteca de músicas"
+                >
+
+                    <span aria-hidden="true">
+                        ←
+                    </span>
+
+                    <span>
+                        Biblioteca
+                    </span>
+
+                </a>
+
+            </div>
 
 
-            <h1>
-                Piano Roll
-            </h1>
+
+            <!-- Marca -->
+
+            <div class="marca-principal">
 
 
-            <p class="descricao">
-                Cante sobre o acompanhamento instrumental
-                enquanto o sistema compara sua voz com
-                a melodia vocal da música.
-            </p>
+                <!-- Logo horizontal / completa -->
+
+                <div class="marca-logo-horizontal">
+
+                    <img
+                        src="./assets/branding/logo-aga-ke-horizontal.png"
+                        alt="Aga-Kê Comics"
+                        class="logo-principal"
+                        width="340"
+                        decoding="async"
+                    >
+
+                </div>
+
+
+
+                <!-- Identificação do aplicativo -->
+
+                <div class="marca-texto">
+
+                    <p class="etapa">
+                        TREINADOR VOCAL
+                    </p>
+
+
+                    <h1>
+                        Karaoke &amp; Pitch
+                    </h1>
+
+
+                    <p class="descricao">
+
+                        Cante, acompanhe a melodia e descubra
+                        como sua voz se encaixa nota por nota.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- Selo Kê -->
+
+                <div
+                    class="marca-selo"
+                    aria-hidden="true"
+                >
+
+                    <img
+                        src="./assets/branding/logo-aga-ke-icone.png"
+                        alt=""
+                        class="selo-ke"
+                        width="90"
+                        height="90"
+                        decoding="async"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Notas decorativas -->
+
+            <div
+                class="decoracao-notas"
+                aria-hidden="true"
+            >
+
+                <span>♪</span>
+                <span>♫</span>
+                <span>♪</span>
+
+            </div>
 
         </header>
 
 
 
-        <!-- ==================================================
-             MÚSICA
-             ================================================== -->
+        <!-- =====================================================
+             IDENTIFICAÇÃO DA MÚSICA
+             ===================================================== -->
 
-        <section class="musica-base">
+        <section class="musica-base painel-hq">
 
-            <div>
+            <div class="musica-identificacao">
 
                 <p class="rotulo">
-                    MÚSICA
+                    AGORA NO PALCO
                 </p>
 
 
@@ -91,15 +207,26 @@
                     —
                 </p>
 
+
+                <p
+                    id="generoMusica"
+                    class="musica-genero"
+                >
+                </p>
+
             </div>
 
 
+
+            <!-- Status dos arquivos -->
+
             <div class="arquivos-musica">
 
-                <div class="arquivo-status">
+
+                <div class="arquivo-status arquivo-mp3">
 
                     <span>
-                        Instrumental MP3
+                        MP3
                     </span>
 
                     <strong id="statusBackingTrack">
@@ -109,10 +236,11 @@
                 </div>
 
 
-                <div class="arquivo-status">
+
+                <div class="arquivo-status arquivo-midi">
 
                     <span>
-                        Melodia vocal MIDI
+                        MIDI
                     </span>
 
                     <strong id="statusMidi">
@@ -122,10 +250,11 @@
                 </div>
 
 
-                <div class="arquivo-status">
+
+                <div class="arquivo-status arquivo-letra">
 
                     <span>
-                        Letra SRT
+                        LETRA
                     </span>
 
                     <strong id="statusLetra">
@@ -140,13 +269,16 @@
 
 
 
-        <!-- ==================================================
-             FONES
-             ================================================== -->
+        <!-- =====================================================
+             AVISO DE FONES
+             ===================================================== -->
 
-        <section class="aviso-fones">
+        <section class="aviso-fones painel-hq painel-amarelo">
 
-            <div class="icone-fones">
+            <div
+                class="icone-fones"
+                aria-hidden="true"
+            >
                 🎧
             </div>
 
@@ -154,15 +286,18 @@
             <div class="aviso-fones-texto">
 
                 <strong>
-                    Use fones de ouvido durante o treino
+                    Ei! Use fones de ouvido!
                 </strong>
 
 
                 <p>
+
                     O acompanhamento instrumental será reproduzido
                     enquanto o microfone analisa sua voz.
-                    Sem fones, o instrumental pode interferir
-                    na detecção da frequência cantada.
+
+                    Sem fones, o próprio instrumental pode entrar
+                    novamente no microfone e prejudicar a leitura.
+
                 </p>
 
 
@@ -185,218 +320,9 @@
 
 
 
-        <!-- ==================================================
-             CONFIGURAÇÃO
-             ================================================== -->
-
-        <section class="configuracao">
-
-            <div class="campo">
-
-                <label
-                    for="seletorTrilhaMidi"
-                    class="rotulo"
-                >
-                    TRILHA VOCAL DO MIDI
-                </label>
-
-
-                <select
-                    id="seletorTrilhaMidi"
-                    class="select"
-                    disabled
-                >
-
-                    <option>
-                        Carregando MIDI...
-                    </option>
-
-                </select>
-
-            </div>
-
-
-            <div class="campo">
-
-                <label
-                    for="seletorDificuldade"
-                    class="rotulo"
-                >
-                    DIFICULDADE
-                </label>
-
-
-                <select
-                    id="seletorDificuldade"
-                    class="select"
-                >
-
-                    <option value="beginner">
-                        Iniciante — ±100 cents
-                    </option>
-
-
-                    <option value="intermediate">
-                        Intermediário — ±50 cents
-                    </option>
-
-
-                    <option value="advanced">
-                        Avançado — ±15 cents
-                    </option>
-
-                </select>
-
-            </div>
-
-
-            <!-- ==============================================
-                 SINCRONIZAÇÃO
-                 ============================================== -->
-
-            <div class="sincronizacao">
-
-                <div class="sincronizacao-cabecalho">
-
-                    <div>
-                        <p class="rotulo">
-                            SINCRONIZAÇÃO
-                        </p>
-
-                        <strong>
-                            Ajuste fino da música
-                        </strong>
-                    </div>
-
-                    <p class="sincronizacao-ajuda">
-                        Valores positivos atrasam; valores negativos adiantam.
-                        Ajuste durante “Ouvir instrumental” e depois copie os
-                        valores finais para o musica.json.
-                    </p>
-
-                </div>
-
-
-                <div class="sincronizacao-linhas">
-
-                    <div class="sincronizacao-linha">
-
-                        <div class="sincronizacao-identificacao">
-                            <span>Melodia MIDI</span>
-
-                            <strong id="valorOffsetMidi">
-                                0 ms
-                            </strong>
-                        </div>
-
-                        <div class="sincronizacao-botoes">
-
-                            <button type="button" class="botao-sync" data-sync-target="midi" data-sync-delta="-0.1">
-                                −100 ms
-                            </button>
-
-                            <button type="button" class="botao-sync" data-sync-target="midi" data-sync-delta="-0.01">
-                                −10 ms
-                            </button>
-
-                            <button type="button" class="botao-sync botao-sync-zerar" data-sync-target="midi" data-sync-reset="true">
-                                Zerar
-                            </button>
-
-                            <button type="button" class="botao-sync" data-sync-target="midi" data-sync-delta="0.01">
-                                +10 ms
-                            </button>
-
-                            <button type="button" class="botao-sync" data-sync-target="midi" data-sync-delta="0.1">
-                                +100 ms
-                            </button>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="sincronizacao-linha">
-
-                        <div class="sincronizacao-identificacao">
-                            <span>Letra SRT</span>
-
-                            <strong id="valorOffsetLetra">
-                                0 ms
-                            </strong>
-                        </div>
-
-                        <div class="sincronizacao-botoes">
-
-                            <button type="button" class="botao-sync" data-sync-target="lyrics" data-sync-delta="-0.1">
-                                −100 ms
-                            </button>
-
-                            <button type="button" class="botao-sync" data-sync-target="lyrics" data-sync-delta="-0.01">
-                                −10 ms
-                            </button>
-
-                            <button type="button" class="botao-sync botao-sync-zerar" data-sync-target="lyrics" data-sync-reset="true">
-                                Zerar
-                            </button>
-
-                            <button type="button" class="botao-sync" data-sync-target="lyrics" data-sync-delta="0.01">
-                                +10 ms
-                            </button>
-
-                            <button type="button" class="botao-sync" data-sync-target="lyrics" data-sync-delta="0.1">
-                                +100 ms
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="botoes-configuracao">
-
-                <button
-                    id="botaoOuvir"
-                    class="botao-secundario"
-                    type="button"
-                    disabled
-                >
-                    🔊 Ouvir melodia MIDI
-                </button>
-
-
-                <button
-                    id="botaoOuvirInstrumental"
-                    class="botao-secundario"
-                    type="button"
-                    disabled
-                >
-                    🎧 Ouvir instrumental
-                </button>
-
-
-                <button
-                    id="botaoIniciar"
-                    class="botao-principal"
-                    type="button"
-                    disabled
-                >
-                    Iniciar treino
-                </button>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ==================================================
+        <!-- =====================================================
              ÁUDIO
-             ================================================== -->
+             ===================================================== -->
 
         <audio
             id="backingTrackAudio"
@@ -406,365 +332,897 @@
 
 
 
-        <!-- ==================================================
-             STATUS
-             ================================================== -->
+        <!-- =====================================================
+             ÁREA PRINCIPAL DO TREINO
+             ===================================================== -->
 
-        <section class="barra-status">
+        <div class="treino-layout">
 
-            <div class="status-item">
 
-                <span>
-                    Estado
-                </span>
+            <!-- =================================================
+                 COLUNA LATERAL
+                 ================================================= -->
 
-                <strong id="estado">
-                    Carregando
-                </strong>
+            <aside class="coluna-controles">
 
-            </div>
 
+                <!-- =============================================
+                     CONFIGURAÇÃO
+                     ============================================= -->
 
-            <div class="status-item">
+                <section class="configuracao painel-hq">
 
-                <span>
-                    Microfone
-                </span>
 
-                <strong id="estadoMicrofone">
-                    Desligado
-                </strong>
+                    <div class="titulo-painel-hq">
 
-            </div>
+                        <span
+                            class="numero-quadro"
+                            aria-hidden="true"
+                        >
+                            01
+                        </span>
 
 
-            <div class="status-item">
+                        <div>
 
-                <span>
-                    Backing Track
-                </span>
+                            <p class="rotulo">
+                                PREPARAÇÃO
+                            </p>
 
-                <strong id="estadoBacking">
-                    Parado
-                </strong>
+                            <h2>
+                                Ajuste o treino
+                            </h2>
 
-            </div>
+                        </div>
 
-
-            <div class="status-item">
-
-                <span>
-                    Progresso
-                </span>
-
-                <strong id="progressoMusica">
-                    0%
-                </strong>
-
-            </div>
-
-
-            <div class="status-item">
-
-                <span>
-                    Pontuação
-                </span>
-
-                <strong id="pontuacaoAtual">
-                    0
-                </strong>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ==================================================
-             PIANO ROLL
-             ================================================== -->
-
-        <section class="painel-piano-roll">
-
-            <div class="painel-cabecalho">
-
-                <div>
-
-                    <p class="rotulo">
-                        MELODIA VOCAL MIDI
-                    </p>
-
-
-                    <h2 id="nomeMelodia">
-                        Carregando...
-                    </h2>
-
-                </div>
-
-
-                <div class="legenda">
-
-                    <span>
-
-                        <i class="legenda-alvo"></i>
-
-                        Nota-alvo
-
-                    </span>
-
-
-                    <span>
-
-                        <i class="legenda-voz"></i>
-
-                        Sua voz
-
-                    </span>
-
-                </div>
-
-            </div>
-
-
-
-            <div
-                id="contador"
-                class="contador oculto"
-            >
-                3
-            </div>
-
-
-
-            <div class="canvas-container">
-
-                <canvas
-                    id="pianoRoll"
-                ></canvas>
-
-            </div>
-
-
-
-            <div class="linha-tempo">
-
-                <span id="tempoAtual">
-                    0:00
-                </span>
-
-
-                <div class="barra-tempo">
-
-                    <div
-                        id="barraTempo"
-                        class="barra-tempo-preenchimento"
-                    >
                     </div>
 
-                </div>
 
 
-                <span id="tempoTotal">
-                    0:00
-                </span>
+                    <!-- Trilha MIDI -->
 
-            </div>
+                    <div class="campo">
 
-        </section>
-
-
-
-        <!-- ==================================================
-            LETRA / KARAOKÊ
-            ================================================== -->
-
-        <section
-            id="painelLetra"
-            class="painel-letra"
-            aria-label="Letra sincronizada da música"
-        >
-
-            <div class="cabecalho-letra">
-
-                <p class="rotulo">
-                    LETRA
-                </p>
+                        <label
+                            for="seletorTrilhaMidi"
+                            class="rotulo"
+                        >
+                            TRILHA VOCAL DO MIDI
+                        </label>
 
 
-                <span
-                    class="indicador-karaoke"
-                    aria-hidden="true"
+                        <select
+                            id="seletorTrilhaMidi"
+                            class="select"
+                            disabled
+                        >
+
+                            <option>
+                                Carregando MIDI...
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- Dificuldade -->
+
+                    <div class="campo">
+
+                        <label
+                            for="seletorDificuldade"
+                            class="rotulo"
+                        >
+                            DIFICULDADE
+                        </label>
+
+
+                        <select
+                            id="seletorDificuldade"
+                            class="select"
+                        >
+
+                            <option value="beginner">
+                                Iniciante — ±100 cents
+                            </option>
+
+                            <option value="intermediate">
+                                Intermediário — ±70 cents
+                            </option>
+
+                            <option value="advanced">
+                                Avançado — ±50 cents
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         BOTÕES DE EXECUÇÃO
+                         ========================================= -->
+
+                    <div class="botoes-configuracao">
+
+
+                        <button
+                            id="botaoOuvir"
+                            class="botao-hq botao-ciano"
+                            type="button"
+                            disabled
+                        >
+
+                            <span
+                                class="botao-icone"
+                                aria-hidden="true"
+                            >
+                                ♪
+                            </span>
+
+                            <span>
+                                Ouvir melodia MIDI
+                            </span>
+
+                        </button>
+
+
+
+                        <button
+                            id="botaoOuvirInstrumental"
+                            class="botao-hq botao-ciano"
+                            type="button"
+                            disabled
+                        >
+
+                            <span
+                                class="botao-icone"
+                                aria-hidden="true"
+                            >
+                                🎧
+                            </span>
+
+                            <span>
+                                Ouvir instrumental
+                            </span>
+
+                        </button>
+
+
+
+                        <button
+                            id="botaoIniciar"
+                            class="botao-hq botao-vermelho botao-destaque"
+                            type="button"
+                            disabled
+                        >
+
+                            <span
+                                class="botao-icone"
+                                aria-hidden="true"
+                            >
+                                ▶
+                            </span>
+
+                            <span>
+                                Iniciar treino
+                            </span>
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         SINCRONIZAÇÃO
+                         ========================================= -->
+
+                    <div class="sincronizacao">
+
+
+                        <div class="sincronizacao-cabecalho">
+
+                            <div>
+
+                                <p class="rotulo">
+                                    SINCRONIZAÇÃO
+                                </p>
+
+                                <strong>
+                                    Ajuste fino
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <p class="sincronizacao-ajuda">
+
+                            Valores positivos atrasam;
+                            valores negativos adiantam.
+
+                        </p>
+
+
+
+                        <div class="sincronizacao-linhas">
+
+
+                            <!-- ===============================
+                                 MIDI + SÍLABAS
+                                 =============================== -->
+
+                            <div class="sincronizacao-linha">
+
+
+                                <div class="sincronizacao-identificacao">
+
+                                    <span>
+                                        MIDI + sílabas
+                                    </span>
+
+                                    <strong id="valorOffsetMidi">
+                                        0 ms
+                                    </strong>
+
+                                </div>
+
+
+
+                                <div class="sincronizacao-botoes">
+
+
+                                    <button
+                                        type="button"
+                                        class="botao-sync"
+                                        data-sync-target="midi"
+                                        data-sync-delta="-0.1"
+                                    >
+                                        −100
+                                    </button>
+
+
+                                    <button
+                                        type="button"
+                                        class="botao-sync"
+                                        data-sync-target="midi"
+                                        data-sync-delta="-0.01"
+                                    >
+                                        −10
+                                    </button>
+
+
+                                    <button
+                                        type="button"
+                                        class="botao-sync botao-sync-zerar"
+                                        data-sync-target="midi"
+                                        data-sync-reset="true"
+                                    >
+                                        0
+                                    </button>
+
+
+                                    <button
+                                        type="button"
+                                        class="botao-sync"
+                                        data-sync-target="midi"
+                                        data-sync-delta="0.01"
+                                    >
+                                        +10
+                                    </button>
+
+
+                                    <button
+                                        type="button"
+                                        class="botao-sync"
+                                        data-sync-target="midi"
+                                        data-sync-delta="0.1"
+                                    >
+                                        +100
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- ===============================
+                                 LETRA TRADICIONAL
+                                 =============================== -->
+
+                            <div class="sincronizacao-linha">
+
+
+                                <div class="sincronizacao-identificacao">
+
+                                    <span>
+                                        Letra tradicional
+                                    </span>
+
+                                    <strong id="valorOffsetLetra">
+                                        0 ms
+                                    </strong>
+
+                                </div>
+
+
+
+                                <div class="sincronizacao-botoes">
+
+
+                                    <button
+                                        type="button"
+                                        class="botao-sync"
+                                        data-sync-target="lyrics"
+                                        data-sync-delta="-0.1"
+                                    >
+                                        −100
+                                    </button>
+
+
+                                    <button
+                                        type="button"
+                                        class="botao-sync"
+                                        data-sync-target="lyrics"
+                                        data-sync-delta="-0.01"
+                                    >
+                                        −10
+                                    </button>
+
+
+                                    <button
+                                        type="button"
+                                        class="botao-sync botao-sync-zerar"
+                                        data-sync-target="lyrics"
+                                        data-sync-reset="true"
+                                    >
+                                        0
+                                    </button>
+
+
+                                    <button
+                                        type="button"
+                                        class="botao-sync"
+                                        data-sync-target="lyrics"
+                                        data-sync-delta="0.01"
+                                    >
+                                        +10
+                                    </button>
+
+
+                                    <button
+                                        type="button"
+                                        class="botao-sync"
+                                        data-sync-target="lyrics"
+                                        data-sync-delta="0.1"
+                                    >
+                                        +100
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =============================================
+                     PLACAR
+                     ============================================= -->
+
+                <section class="placar-hq painel-hq">
+
+
+                    <div class="titulo-painel-hq">
+
+                        <span
+                            class="numero-quadro"
+                            aria-hidden="true"
+                        >
+                            02
+                        </span>
+
+
+                        <div>
+
+                            <p class="rotulo">
+                                AO VIVO
+                            </p>
+
+                            <h2>
+                                Placar
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="barra-status">
+
+
+                        <div class="status-item">
+
+                            <span>
+                                Estado
+                            </span>
+
+                            <strong id="estado">
+                                Carregando
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="status-item">
+
+                            <span>
+                                Microfone
+                            </span>
+
+                            <strong id="estadoMicrofone">
+                                Desligado
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="status-item">
+
+                            <span>
+                                Backing
+                            </span>
+
+                            <strong id="estadoBacking">
+                                Parado
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="status-item">
+
+                            <span>
+                                Progresso
+                            </span>
+
+                            <strong id="progressoMusica">
+                                0%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="pontuacao-destaque">
+
+                        <span>
+                            PONTUAÇÃO
+                        </span>
+
+                        <strong id="pontuacaoAtual">
+                            0
+                        </strong>
+
+                    </div>
+
+                </section>
+
+            </aside>
+
+
+
+            <!-- =================================================
+                 PALCO PRINCIPAL
+                 ================================================= -->
+
+            <div class="coluna-palco">
+
+
+                <!-- =============================================
+                     PIANO ROLL
+                     ============================================= -->
+
+                <section class="painel-piano-roll painel-hq">
+
+
+                    <div class="painel-cabecalho">
+
+
+                        <div>
+
+                            <p class="rotulo">
+                                MELODIA VOCAL MIDI
+                            </p>
+
+
+                            <h2 id="nomeMelodia">
+                                Carregando...
+                            </h2>
+
+                        </div>
+
+
+
+                        <div
+                            class="legenda"
+                            aria-label="Legenda do piano roll"
+                        >
+
+                            <span>
+
+                                <i
+                                    class="legenda-alvo"
+                                    aria-hidden="true"
+                                >
+                                </i>
+
+                                Nota-alvo
+
+                            </span>
+
+
+                            <span>
+
+                                <i
+                                    class="legenda-voz"
+                                    aria-hidden="true"
+                                >
+                                </i>
+
+                                Sua voz
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="moldura-piano-roll">
+
+
+                        <div
+                            class="adesivo-hq adesivo-superior"
+                            aria-hidden="true"
+                        >
+                            SIGA O RITMO!
+                        </div>
+
+
+
+                        <div
+                            id="contador"
+                            class="contador oculto"
+                            aria-live="assertive"
+                        >
+                            3
+                        </div>
+
+
+
+                        <div class="canvas-container">
+
+                            <canvas
+                                id="pianoRoll"
+                                aria-label="Visualização da melodia vocal e da afinação"
+                            >
+                            </canvas>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="linha-tempo">
+
+                        <span id="tempoAtual">
+                            0:00
+                        </span>
+
+
+                        <div
+                            class="barra-tempo"
+                            aria-hidden="true"
+                        >
+
+                            <div
+                                id="barraTempo"
+                                class="barra-tempo-preenchimento"
+                            >
+                            </div>
+
+                        </div>
+
+
+                        <span id="tempoTotal">
+                            0:00
+                        </span>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =============================================
+                     KARAOKÊ
+                     ============================================= -->
+
+                <section
+                    id="painelLetra"
+                    class="painel-letra"
+                    aria-label="Letra sincronizada da música"
                 >
-                    KARAOKÊ
-                </span>
+
+
+                    <div class="cabecalho-letra">
+
+                        <p class="rotulo">
+                            KARAOKÊ
+                        </p>
+
+
+                        <span
+                            class="indicador-karaoke"
+                            aria-hidden="true"
+                        >
+                            ♪ AO VIVO
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="balao-fala">
+
+                        <div
+                            id="letraAtual"
+                            class="letra-atual sem-frase"
+                            aria-live="off"
+                            aria-atomic="false"
+                        >
+                            ♪
+                        </div>
+
+                    </div>
+
+
+
+                    <p class="ajuda-karaoke">
+
+                        A sílaba destacada acompanha
+                        a nota atual da melodia.
+
+                    </p>
+
+                </section>
+
+
+
+                <!-- =============================================
+                     AFINAÇÃO EM TEMPO REAL
+                     ============================================= -->
+
+                <section class="painel-feedback painel-hq">
+
+
+                    <div class="titulo-painel-hq">
+
+                        <span
+                            class="numero-quadro"
+                            aria-hidden="true"
+                        >
+                            03
+                        </span>
+
+
+                        <div>
+
+                            <p class="rotulo">
+                                SUA PERFORMANCE
+                            </p>
+
+                            <h2>
+                                Afinação em tempo real
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Comparação de notas -->
+
+                    <div class="nota-atual">
+
+
+                        <div class="nota-cartao">
+
+                            <span class="rotulo">
+                                NOTA ESPERADA
+                            </span>
+
+                            <strong id="notaEsperada">
+                                —
+                            </strong>
+
+                        </div>
+
+
+
+                        <div
+                            class="seta"
+                            aria-hidden="true"
+                        >
+                            ➜
+                        </div>
+
+
+
+                        <div class="nota-cartao">
+
+                            <span class="rotulo">
+                                SUA VOZ
+                            </span>
+
+                            <strong id="notaCantada">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Feedback principal -->
+
+                    <div
+                        id="feedback"
+                        class="feedback neutro"
+                        aria-live="polite"
+                    >
+                        Carregando música...
+                    </div>
+
+
+
+                    <!-- Métricas -->
+
+                    <div class="metricas">
+
+
+                        <div>
+
+                            <span>
+                                Erro atual
+                            </span>
+
+                            <strong id="erroAtual">
+                                —
+                            </strong>
+
+                        </div>
+
+
+
+                        <div>
+
+                            <span>
+                                Afinação
+                            </span>
+
+                            <strong id="precisao">
+                                —
+                            </strong>
+
+                        </div>
+
+
+
+                        <div>
+
+                            <span>
+                                Notas avaliadas
+                            </span>
+
+                            <strong id="notasAvaliadas">
+                                0
+                            </strong>
+
+                        </div>
+
+
+
+                        <div>
+
+                            <span>
+                                Entrada atual
+                            </span>
+
+                            <strong id="entradaAtual">
+                                —
+                            </strong>
+
+                        </div>
+
+
+
+                        <div>
+
+                            <span>
+                                Cobertura
+                            </span>
+
+                            <strong id="coberturaAtual">
+                                —
+                            </strong>
+
+                        </div>
+
+
+
+                        <div>
+
+                            <span>
+                                Nota atual
+                            </span>
+
+                            <strong id="pontuacaoNotaAtual">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </section>
 
             </div>
 
-
-            <div
-                id="letraAtual"
-                class="letra-atual sem-frase"
-                aria-live="off"
-                aria-atomic="false"
-            >
-                ♪
-            </div>
-
-
-            <p class="ajuda-karaoke">
-
-                A sílaba destacada acompanha
-                a nota atual da melodia.
-
-            </p>
-
-        </section>
-
-
-        <!-- ==================================================
-             FEEDBACK
-             ================================================== -->
-
-        <section class="painel-feedback">
-
-            <div class="nota-atual">
-
-                <div>
-
-                    <span class="rotulo">
-                        NOTA ESPERADA
-                    </span>
-
-                    <strong id="notaEsperada">
-                        —
-                    </strong>
-
-                </div>
-
-
-                <div class="seta">
-                    →
-                </div>
-
-
-                <div>
-
-                    <span class="rotulo">
-                        SUA VOZ
-                    </span>
-
-                    <strong id="notaCantada">
-                        —
-                    </strong>
-
-                </div>
-
-            </div>
+        </div>
 
 
 
-            <div
-                id="feedback"
-                class="feedback neutro"
-            >
-                Carregando música...
-            </div>
-
-
-
-            <div class="metricas">
-
-                <div>
-
-                    <span>
-                        Erro atual
-                    </span>
-
-                    <strong id="erroAtual">
-                        —
-                    </strong>
-
-                </div>
-
-
-                <div>
-
-                    <span>
-                        Afinação
-                    </span>
-
-                    <strong id="precisao">
-                        —
-                    </strong>
-
-                </div>
-
-
-                <div>
-
-                    <span>
-                        Notas avaliadas
-                    </span>
-
-                    <strong id="notasAvaliadas">
-                        0
-                    </strong>
-
-                </div>
-
-
-                <div>
-
-                    <span>
-                        Entrada atual
-                    </span>
-
-                    <strong id="entradaAtual">
-                        —
-                    </strong>
-
-                </div>
-
-
-                <div>
-
-                    <span>
-                        Cobertura
-                    </span>
-
-                    <strong id="coberturaAtual">
-                        —
-                    </strong>
-
-                </div>
-
-
-                <div>
-
-                    <span>
-                        Nota atual
-                    </span>
-
-                    <strong id="pontuacaoNotaAtual">
-                        —
-                    </strong>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ==================================================
-             RESULTADO
-             ================================================== -->
+        <!-- =====================================================
+             RESULTADO FINAL
+             ===================================================== -->
 
         <section
             id="resultado"
             class="resultado oculto"
         >
+
+
+            <div
+                class="explosao-resultado"
+                aria-hidden="true"
+            >
+                POW!
+            </div>
+
+
 
             <p class="rotulo">
                 TREINO CONCLUÍDO
@@ -774,6 +1232,7 @@
             <h2>
                 Resultado da música
             </h2>
+
 
 
             <div class="pontuacao-final">
@@ -789,6 +1248,7 @@
             </div>
 
 
+
             <p
                 id="avaliacaoFinal"
                 class="avaliacao-final"
@@ -796,7 +1256,11 @@
             </p>
 
 
+
+            <!-- Resumo -->
+
             <div class="resultado-grid">
+
 
                 <div>
 
@@ -809,6 +1273,7 @@
                     </strong>
 
                 </div>
+
 
 
                 <div>
@@ -824,6 +1289,7 @@
                 </div>
 
 
+
                 <div>
 
                     <span>
@@ -835,6 +1301,7 @@
                     </strong>
 
                 </div>
+
 
 
                 <div>
@@ -850,6 +1317,7 @@
                 </div>
 
 
+
                 <div>
 
                     <span>
@@ -861,6 +1329,7 @@
                     </strong>
 
                 </div>
+
 
 
                 <div>
@@ -879,11 +1348,23 @@
 
 
 
+            <!-- Detalhamento -->
+
             <div class="detalhamento-notas">
 
-                <p class="rotulo">
-                    DESEMPENHO NOTA A NOTA
-                </p>
+
+                <div class="titulo-detalhamento">
+
+                    <p class="rotulo">
+                        DESEMPENHO NOTA A NOTA
+                    </p>
+
+                    <span aria-hidden="true">
+                        ★
+                    </span>
+
+                </div>
+
 
 
                 <div
@@ -898,36 +1379,62 @@
 
             <button
                 id="botaoRepetir"
-                class="botao-principal"
+                class="botao-hq botao-vermelho botao-repetir"
                 type="button"
             >
-                Repetir treino
+                ↻ Repetir treino
             </button>
 
         </section>
 
 
 
-        <!-- ==================================================
+        <!-- =====================================================
              RODAPÉ
-             ================================================== -->
+             ===================================================== -->
 
         <footer class="rodape">
 
+
+            <img
+                src="./assets/branding/logo-aga-ke-icone.png"
+                alt=""
+                class="rodape-logo"
+                width="52"
+                height="52"
+                loading="lazy"
+                decoding="async"
+                aria-hidden="true"
+            >
+
+
             <p>
-                O instrumental e o MIDI são processados localmente.
-                O áudio captado pelo microfone não é enviado para servidores.
+
+                O instrumental, o MIDI e o áudio do microfone
+                são processados localmente no navegador.
+
             </p>
+
+
+            <strong>
+                Aga-Kê Comics • Treinador Vocal
+            </strong>
 
         </footer>
 
     </main>
 
 
+
+    <!-- =========================================================
+         JAVASCRIPT
+         ========================================================= -->
+
     <script
         type="module"
         src="./js/melody-mode.js"
-    ></script>
+    >
+    </script>
 
 </body>
 

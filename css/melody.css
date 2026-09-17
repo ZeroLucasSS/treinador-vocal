@@ -1,4 +1,34 @@
+/* ============================================================
+   melody.css
+   ============================================================
+
+   AGA-KÊ COMICS — KARAOKE & PITCH
+
+   Identidade:
+   - quadrinhos / pop-art;
+   - ciano, amarelo, vermelho e magenta;
+   - contornos pretos;
+   - sombras sólidas;
+   - painéis em estilo HQ;
+   - balão de karaokê;
+   - alta legibilidade;
+   - responsivo para desktop e mobile.
+
+   Compatível com:
+   - melodia.html atual;
+   - melody-mode.js;
+   - piano-roll.js;
+   - karaoke-engine.js.
+
+   ============================================================ */
+
+
+/* ============================================================
+   VARIÁVEIS
+   ============================================================ */
+
 :root {
+
     font-family:
         Inter,
         system-ui,
@@ -9,22 +39,125 @@
 
     color-scheme: dark;
 
-    --fundo: #101114;
-    --painel: #191b20;
-    --painel-2: #22252b;
-    --painel-3: #292d35;
 
-    --texto: #f5f5f5;
-    --secundario: #a9adb7;
+    /* --------------------------------------------------------
+       PALETA AGA-KÊ
+       -------------------------------------------------------- */
 
-    --borda: #30343c;
+    --aga-preto:
+        #171619;
 
-    --verde: #62dd8b;
-    --amarelo: #f4c95d;
-    --vermelho: #ff6b6b;
-    --azul: #68a8ff;
+    --aga-preto-2:
+        #232124;
+
+    --aga-grafite:
+        #302d31;
+
+    --aga-grafite-claro:
+        #403c41;
+
+    --aga-branco:
+        #fffdf5;
+
+    --aga-ciano:
+        #10abe1;
+
+    --aga-ciano-claro:
+        #39c9ef;
+
+    --aga-amarelo:
+        #fff018;
+
+    --aga-amarelo-claro:
+        #fff6a9;
+
+    --aga-vermelho:
+        #f33138;
+
+    --aga-vermelho-escuro:
+        #c91e29;
+
+    --aga-magenta:
+        #ac4d8a;
+
+    --aga-verde:
+        #3ad077;
+
+    --aga-laranja:
+        #ff8735;
+
+
+    /* --------------------------------------------------------
+       CORES FUNCIONAIS
+       -------------------------------------------------------- */
+
+    --fundo:
+        var(--aga-preto);
+
+    --painel:
+        var(--aga-preto-2);
+
+    --painel-2:
+        var(--aga-grafite);
+
+    --painel-3:
+        var(--aga-grafite-claro);
+
+    --texto:
+        var(--aga-branco);
+
+    --secundario:
+        #c9c2ca;
+
+    --borda:
+        #080808;
+
+    --azul:
+        var(--aga-ciano);
+
+    --amarelo:
+        var(--aga-amarelo);
+
+    --vermelho:
+        var(--aga-vermelho);
+
+    --verde:
+        var(--aga-verde);
+
+
+    /* --------------------------------------------------------
+       MEDIDAS
+       -------------------------------------------------------- */
+
+    --largura-app:
+        1240px;
+
+    --raio:
+        12px;
+
+    --raio-grande:
+        18px;
+
+    --contorno:
+        3px;
+
+    --contorno-fino:
+        2px;
+
+    --sombra-hq:
+        6px 6px 0 #080808;
+
+    --sombra-hq-grande:
+        8px 8px 0 #080808;
+
+    --sombra-hq-pequena:
+        3px 3px 0 #080808;
 }
 
+
+/* ============================================================
+   RESET
+   ============================================================ */
 
 * {
     box-sizing: border-box;
@@ -39,17 +172,23 @@ body {
 }
 
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
+    position: relative;
+
     min-height: 100vh;
 
-    background:
-        radial-gradient(
-            circle at top,
-            #20242b 0%,
-            var(--fundo) 50%
-        );
+    overflow-x: hidden;
 
-    color: var(--texto);
+    background:
+        var(--fundo);
+
+    color:
+        var(--texto);
 }
 
 
@@ -66,10 +205,25 @@ button {
 
 
 button:disabled,
-select:disabled {
+select:disabled,
+input:disabled {
     cursor: not-allowed;
 
-    opacity: 0.5;
+    opacity: 0.48;
+}
+
+
+img {
+    display: block;
+
+    max-width: 100%;
+
+    height: auto;
+}
+
+
+a {
+    color: inherit;
 }
 
 
@@ -78,15 +232,161 @@ select:disabled {
 }
 
 
-.app {
-    width: min(100%, 1050px);
+/* ============================================================
+   FUNDO POP-ART
+   ============================================================ */
 
-    margin: 0 auto;
+.fundo-pop-art {
+    position: fixed;
+
+    z-index: -10;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-color:
+        var(--aga-preto);
+
+    background-image:
+
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.075) 1px,
+            transparent 1px
+        ),
+
+        radial-gradient(
+            circle at 15% 8%,
+            rgba(16, 171, 225, 0.14),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 92% 30%,
+            rgba(243, 49, 56, 0.09),
+            transparent 28%
+        );
+
+    background-size:
+        10px 10px,
+        auto,
+        auto;
+}
+
+
+/* ============================================================
+   TIPOGRAFIA
+   ============================================================ */
+
+h1,
+h2,
+h3,
+.rotulo,
+.etapa,
+.numero-quadro,
+.botao-hq,
+.botao-sync,
+.feedback,
+.pontuacao-destaque,
+.indicador-karaoke,
+.adesivo-hq,
+.explosao-resultado {
+
+    font-family:
+        Impact,
+        Haettenschweiler,
+        "Arial Narrow Bold",
+        "Segoe UI",
+        sans-serif;
+}
+
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+
+h2 {
+    margin-bottom: 0;
+}
+
+
+.rotulo {
+    display: block;
+
+    margin:
+        0
+        0
+        6px;
+
+    color:
+        var(--aga-amarelo);
+
+    font-size:
+        0.69rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        0.10em;
+
+    text-transform:
+        uppercase;
+}
+
+
+/* ============================================================
+   ESTRUTURA PRINCIPAL
+   ============================================================ */
+
+.app {
+    position: relative;
+
+    width:
+        min(
+            calc(100% - 28px),
+            var(--largura-app)
+        );
+
+    margin:
+        0 auto;
 
     padding:
-        max(22px, env(safe-area-inset-top))
-        18px
-        max(36px, env(safe-area-inset-bottom));
+        max(
+            18px,
+            env(safe-area-inset-top)
+        )
+        0
+        max(
+            46px,
+            env(safe-area-inset-bottom)
+        );
+}
+
+
+/* ============================================================
+   PAINEL BASE HQ
+   ============================================================ */
+
+.painel-hq {
+    border:
+        var(--contorno)
+        solid
+        var(--borda);
+
+    border-radius:
+        var(--raio-grande);
+
+    background:
+        var(--painel);
+
+    box-shadow:
+        var(--sombra-hq);
 }
 
 
@@ -94,84 +394,366 @@ select:disabled {
    CABEÇALHO
    ============================================================ */
 
-.cabecalho {
-    margin-bottom: 24px;
+.cabecalho-marca {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    margin-bottom: 22px;
+
+    padding:
+        16px
+        22px
+        22px;
+
+    border:
+        4px solid
+        var(--borda);
+
+    border-radius:
+        20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--aga-ciano) 0%,
+            var(--aga-ciano) 63%,
+            var(--aga-amarelo) 63%,
+            var(--aga-amarelo) 100%
+        );
+
+    box-shadow:
+        var(--sombra-hq-grande);
+
+    color:
+        #111;
+}
+
+
+.cabecalho-pop-fundo {
+    position: absolute;
+
+    z-index: 0;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(0, 0, 0, 0.19) 1.3px,
+            transparent 1.3px
+        );
+
+    background-size:
+        11px 11px;
+
+    opacity: 0.34;
+}
+
+
+.cabecalho-topo {
+    position: relative;
+
+    z-index: 5;
+
+    display: flex;
+
+    justify-content: flex-start;
+
+    margin-bottom: 10px;
+}
+
+
+/* ============================================================
+   VOLTAR
+   ============================================================ */
+
+.voltar {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    min-height: 36px;
+
+    padding:
+        6px
+        12px;
+
+    border:
+        2px solid
+        #111;
+
+    border-radius:
+        7px;
+
+    background:
+        var(--aga-branco);
+
+    box-shadow:
+        3px 3px 0 #111;
+
+    color:
+        #111;
+
+    font-size:
+        0.78rem;
+
+    font-weight:
+        900;
+
+    text-decoration: none;
+
+    transition:
+        transform
+        90ms ease,
+        box-shadow
+        90ms ease;
+}
+
+
+.voltar:hover {
+    transform:
+        translate(
+            2px,
+            2px
+        );
+
+    box-shadow:
+        1px 1px 0 #111;
+}
+
+
+/* ============================================================
+   MARCA
+   ============================================================ */
+
+.marca-principal {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(190px, 320px)
+        minmax(0, 1fr)
+        104px;
+
+    align-items: center;
+
+    gap: 24px;
+}
+
+
+/* ============================================================
+   LOGO HORIZONTAL
+   ============================================================ */
+
+.marca-logo-horizontal {
+    width: 100%;
+
+    max-width: 320px;
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.logo-principal,
+.marca-logo-horizontal img {
+    display: block;
+
+    width: auto;
+
+    max-width: 100%;
+
+    height: auto;
+
+    max-height: 185px;
+
+    object-fit: contain;
+
+    object-position: center;
+}
+
+
+/* ============================================================
+   TEXTO DA MARCA
+   ============================================================ */
+
+.marca-texto {
+    min-width: 0;
 
     text-align: center;
 }
 
 
-.voltar {
-    display: inline-block;
-
-    margin-bottom: 20px;
-
-    color: var(--secundario);
-
-    text-decoration: none;
-
-    font-size: 0.86rem;
-    font-weight: 700;
-}
-
-
 .etapa {
-    margin: 0 0 7px;
+    margin:
+        0
+        0
+        6px;
 
-    color: var(--azul);
+    color:
+        #111;
 
-    font-size: 0.74rem;
-    font-weight: 900;
+    font-size:
+        0.78rem;
 
-    letter-spacing: 0.13em;
+    font-weight:
+        900;
+
+    letter-spacing:
+        0.13em;
 }
 
 
-h1 {
+.marca-texto h1 {
     margin: 0;
 
-    font-size: clamp(
-        2.2rem,
-        8vw,
-        3.5rem
-    );
+    color:
+        var(--aga-branco);
 
-    line-height: 1;
-}
+    font-size:
+        clamp(
+            2.4rem,
+            5.5vw,
+            4rem
+        );
 
+    line-height: 0.98;
 
-h2 {
-    margin: 0;
+    letter-spacing:
+        0.015em;
+
+    -webkit-text-stroke:
+        2px #111;
+
+    text-shadow:
+        4px 4px 0
+        var(--aga-vermelho);
 }
 
 
 .descricao {
-    max-width: 650px;
+    max-width: 560px;
 
-    margin: 14px auto 0;
+    margin:
+        13px
+        auto
+        0;
 
-    color: var(--secundario);
+    padding:
+        8px
+        12px;
 
-    line-height: 1.5;
-}
+    border:
+        2px solid
+        #111;
 
+    border-radius:
+        7px;
 
-.rotulo {
-    display: block;
+    background:
+        rgba(255, 255, 255, 0.91);
 
-    margin: 0 0 7px;
+    color:
+        #171717;
 
-    color: var(--secundario);
+    font-size:
+        0.82rem;
 
-    font-size: 0.68rem;
-    font-weight: 900;
+    font-weight:
+        750;
 
-    letter-spacing: 0.1em;
+    line-height:
+        1.45;
 }
 
 
 /* ============================================================
-   MÚSICA-BASE
+   SELO KÊ
+   ============================================================ */
+
+.marca-selo {
+    width: 104px;
+
+    height: 104px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.selo-ke,
+.marca-selo img {
+    width: 104px;
+
+    height: 104px;
+
+    max-width: 104px;
+
+    max-height: 104px;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    filter:
+        drop-shadow(
+            4px
+            4px
+            0
+            rgba(0, 0, 0, 0.8)
+        );
+}
+
+
+.decoracao-notas {
+    position: absolute;
+
+    z-index: 1;
+
+    right: 145px;
+
+    top: 28px;
+
+    display: flex;
+
+    gap: 8px;
+
+    color:
+        #111;
+
+    font-size:
+        1.3rem;
+
+    font-weight: 900;
+
+    opacity: 0.50;
+
+    pointer-events: none;
+}
+
+
+/* ============================================================
+   IDENTIFICAÇÃO DA MÚSICA
    ============================================================ */
 
 .musica-base {
@@ -179,57 +761,166 @@ h2 {
 
     grid-template-columns:
         minmax(0, 1fr)
-        auto;
+        minmax(220px, 285px);
 
     align-items: center;
 
-    gap: 20px;
+    gap: 22px;
 
-    margin-bottom: 14px;
+    margin-bottom: 18px;
 
-    padding: 18px;
+    padding:
+        18px
+        20px;
 
-    border: 1px solid var(--borda);
-    border-radius: 18px;
+    background:
+        linear-gradient(
+            135deg,
+            var(--painel) 0%,
+            var(--painel) 83%,
+            rgba(172, 77, 138, 0.35) 83%
+        );
+}
 
-    background: var(--painel);
+
+.musica-identificacao {
+    min-width: 0;
+}
+
+
+.musica-base h2 {
+    color:
+        var(--aga-branco);
+
+    font-size:
+        clamp(
+            1.7rem,
+            3.5vw,
+            2.35rem
+        );
+
+    line-height: 1;
+
+    text-transform: uppercase;
 }
 
 
 .musica-detalhes {
-    margin: 7px 0 0;
+    margin:
+        8px
+        0
+        0;
 
-    color: var(--secundario);
+    color:
+        var(--secundario);
 
-    line-height: 1.4;
+    font-size:
+        0.88rem;
+
+    font-weight:
+        750;
 }
 
+
+.musica-genero {
+    display: inline-block;
+
+    margin:
+        9px
+        0
+        0;
+
+    padding:
+        4px
+        8px;
+
+    border:
+        2px solid
+        #111;
+
+    border-radius:
+        5px;
+
+    background:
+        var(--aga-ciano);
+
+    color:
+        #111;
+
+    font-size:
+        0.67rem;
+
+    font-weight:
+        900;
+}
+
+
+/* ============================================================
+   STATUS DOS ARQUIVOS
+   ============================================================ */
 
 .arquivos-musica {
     display: grid;
 
     gap: 8px;
-
-    min-width: 230px;
 }
 
 
 .arquivo-status {
-    padding: 10px 12px;
+    padding:
+        9px
+        11px;
 
-    border: 1px solid var(--borda);
-    border-radius: 11px;
+    border:
+        2px solid
+        #080808;
 
-    background: var(--painel-2);
+    border-radius:
+        8px;
+
+    background:
+        var(--painel-2);
+
+    box-shadow:
+        3px 3px 0 #080808;
+}
+
+
+.arquivo-mp3,
+.arquivo-status:nth-child(1) {
+    border-left:
+        6px solid
+        var(--aga-ciano);
+}
+
+
+.arquivo-midi,
+.arquivo-status:nth-child(2) {
+    border-left:
+        6px solid
+        var(--aga-vermelho);
+}
+
+
+.arquivo-letra,
+.arquivo-status:nth-child(3) {
+    border-left:
+        6px solid
+        var(--aga-amarelo);
 }
 
 
 .arquivo-status span {
     display: block;
 
-    color: var(--secundario);
+    color:
+        var(--secundario);
 
-    font-size: 0.67rem;
+    font-size:
+        0.62rem;
+
+    font-weight:
+        800;
 }
 
 
@@ -238,7 +929,11 @@ h2 {
 
     margin-top: 3px;
 
-    font-size: 0.8rem;
+    color:
+        var(--aga-branco);
+
+    font-size:
+        0.78rem;
 }
 
 
@@ -253,40 +948,53 @@ h2 {
         auto
         minmax(0, 1fr);
 
+    align-items: start;
+
     gap: 15px;
 
-    margin-bottom: 14px;
+    margin-bottom: 18px;
 
-    padding: 17px;
-
-    border: 1px solid
-        rgba(244, 201, 93, 0.38);
-
-    border-radius: 17px;
+    padding:
+        15px
+        18px;
 
     background:
-        rgba(244, 201, 93, 0.07);
+        var(--aga-amarelo-claro);
+
+    color:
+        #181818;
 }
 
 
 .icone-fones {
-    font-size: 2rem;
+    font-size:
+        2rem;
 }
 
 
 .aviso-fones-texto > strong {
-    color: var(--amarelo);
+    color:
+        #111;
+
+    font-size:
+        0.95rem;
 }
 
 
 .aviso-fones-texto p {
-    margin: 6px 0 12px;
+    margin:
+        5px
+        0
+        10px;
 
-    color: var(--secundario);
+    color:
+        #343034;
 
-    line-height: 1.45;
+    font-size:
+        0.79rem;
 
-    font-size: 0.85rem;
+    line-height:
+        1.45;
 }
 
 
@@ -295,21 +1003,174 @@ h2 {
 
     align-items: center;
 
-    gap: 9px;
+    gap: 8px;
 
     cursor: pointer;
 
-    font-size: 0.85rem;
+    color:
+        #111;
 
-    font-weight: 750;
+    font-size:
+        0.80rem;
+
+    font-weight:
+        850;
 }
 
 
 .confirmacao-fones input {
     width: 18px;
+
     height: 18px;
 
-    accent-color: var(--verde);
+    flex: 0 0 auto;
+
+    accent-color:
+        var(--aga-vermelho);
+}
+
+
+/* ============================================================
+   LAYOUT PRINCIPAL DO TREINO
+   ============================================================
+ *
+ * minmax(0, ...) é essencial nas DUAS colunas.
+ *
+ * Isso impede que conteúdos com largura intrínseca,
+ * especialmente o canvas do piano roll, aumentem
+ * indefinidamente o tamanho do Grid.
+ * ============================================================ */
+
+.treino-layout {
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 320px)
+        minmax(0, 1fr);
+
+    align-items: start;
+
+    gap: 20px;
+
+    overflow: visible;
+}
+
+/*
+ * ============================================================
+ * PROTEÇÃO CONTRA OVERFLOW EM CSS GRID
+ * ============================================================
+ *
+ * Elementos de Grid usam min-width:auto por padrão.
+ *
+ * Isso pode fazer componentes como canvas, selects e textos
+ * longos forçarem uma coluna além do tamanho disponível.
+ */
+
+.treino-layout > *,
+.coluna-palco > *,
+.coluna-controles > * {
+    min-width: 0;
+
+    max-width: 100%;
+}
+
+.coluna-controles,
+.coluna-palco {
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
+}
+
+
+.coluna-controles {
+    display: grid;
+
+    gap: 18px;
+}
+
+
+.coluna-palco {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr);
+
+    gap: 20px;
+
+    overflow: hidden;
+}
+
+
+/* ============================================================
+   TÍTULOS DE PAINEL
+   ============================================================ */
+
+.titulo-painel-hq {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 16px;
+}
+
+
+.numero-quadro {
+    width: 42px;
+
+    height: 42px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 0 0 42px;
+
+    border:
+        3px solid
+        #080808;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--aga-amarelo);
+
+    box-shadow:
+        3px 3px 0 #080808;
+
+    color:
+        #111;
+
+    font-size:
+        1rem;
+}
+
+
+.titulo-painel-hq .rotulo {
+    margin-bottom: 2px;
+}
+
+
+.titulo-painel-hq h2 {
+    color:
+        var(--aga-branco);
+
+    font-size:
+        1.22rem;
+
+    line-height: 1.05;
 }
 
 
@@ -321,19 +1182,12 @@ h2 {
     display: grid;
 
     grid-template-columns:
-        minmax(0, 1fr)
-        minmax(0, 1fr);
+        1fr;
 
-    gap: 12px;
+    gap: 14px;
 
-    padding: 18px;
-
-    margin-bottom: 14px;
-
-    border: 1px solid var(--borda);
-    border-radius: 18px;
-
-    background: var(--painel);
+    padding:
+        17px;
 }
 
 
@@ -345,92 +1199,443 @@ h2 {
 .select {
     width: 100%;
 
-    min-height: 44px;
+    min-height: 45px;
 
-    padding: 12px 13px;
+    padding:
+        10px
+        11px;
 
-    border: 1px solid var(--borda);
-    border-radius: 11px;
+    border:
+        2px solid
+        #080808;
 
-    background: var(--painel-2);
+    border-radius:
+        7px;
 
-    color: var(--texto);
+    outline: none;
+
+    background:
+        var(--painel-2);
+
+    color:
+        var(--texto);
+
+    font-size:
+        0.78rem;
+
+    font-weight:
+        700;
+
+    box-shadow:
+        inset
+        0
+        -3px
+        0
+        rgba(0, 0, 0, 0.25);
 }
 
 
-.botoes-configuracao {
-    grid-column:
-        1 / -1;
+.select:focus-visible {
+    border-color:
+        var(--aga-ciano);
 
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 8px;
-}
-
-
-.botao-principal,
-.botao-secundario {
-    min-height: 46px;
-
-    padding: 11px 16px;
-
-    border-radius: 11px;
-
-    font-weight: 900;
-}
-
-
-.botao-principal {
-    border: 0;
-
-    background: var(--texto);
-
-    color: #111;
-}
-
-
-.botao-secundario {
-    border: 1px solid var(--borda);
-
-    background: var(--painel-3);
-
-    color: var(--texto);
-}
-
-
-.botao-principal.parar {
-    background: var(--vermelho);
-
-    color: #fff;
+    box-shadow:
+        0
+        0
+        0
+        3px
+        rgba(16, 171, 225, 0.23);
 }
 
 
 /* ============================================================
-   STATUS
+   BOTÕES PRINCIPAIS
    ============================================================ */
+
+.botoes-configuracao {
+    display: grid;
+
+    grid-template-columns:
+        1fr;
+
+    gap: 10px;
+}
+
+
+.botao-hq {
+    width: 100%;
+
+    min-height: 49px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    padding:
+        10px
+        12px;
+
+    border:
+        3px solid
+        #080808;
+
+    border-radius:
+        8px;
+
+    box-shadow:
+        4px 4px 0 #080808;
+
+    color:
+        #111;
+
+    font-size:
+        0.82rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        0.025em;
+
+    text-transform: uppercase;
+
+    transition:
+        transform
+        90ms ease,
+        box-shadow
+        90ms ease,
+        filter
+        90ms ease;
+}
+
+
+.botao-hq:hover:not(:disabled) {
+    filter:
+        brightness(1.07);
+}
+
+
+.botao-hq:active:not(:disabled) {
+    transform:
+        translate(
+            3px,
+            3px
+        );
+
+    box-shadow:
+        1px 1px 0 #080808;
+}
+
+
+.botao-icone {
+    display: inline-flex;
+
+    min-width: 22px;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size:
+        1.05rem;
+}
+
+
+.botao-ciano {
+    background:
+        var(--aga-ciano);
+
+    color:
+        #111;
+}
+
+
+.botao-vermelho {
+    background:
+        var(--aga-vermelho);
+
+    color:
+        #fff;
+}
+
+
+.botao-destaque {
+    min-height: 55px;
+
+    font-size:
+        0.9rem;
+
+    box-shadow:
+        5px 5px 0
+        #080808;
+}
+
+
+/*
+ * Compatibilidade com o estado alterado
+ * pelo JavaScript durante o treino.
+ */
+.botao-hq.parar,
+.botao-vermelho.parar,
+#botaoIniciar.parar {
+
+    background:
+        #9e1720;
+
+    color:
+        #fff;
+}
+
+
+/* ============================================================
+   SINCRONIZAÇÃO
+   ============================================================ */
+
+.sincronizacao {
+    padding:
+        13px;
+
+    border:
+        2px solid
+        #080808;
+
+    border-radius:
+        10px;
+
+    background:
+        var(--painel-2);
+}
+
+
+.sincronizacao-cabecalho {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 5px;
+}
+
+
+.sincronizacao-cabecalho strong {
+    color:
+        var(--aga-branco);
+
+    font-size:
+        0.88rem;
+}
+
+
+.sincronizacao-ajuda {
+    margin:
+        0
+        0
+        12px;
+
+    color:
+        var(--secundario);
+
+    font-size:
+        0.66rem;
+
+    line-height:
+        1.4;
+}
+
+
+.sincronizacao-linhas {
+    display: grid;
+
+    gap: 9px;
+}
+
+
+.sincronizacao-linha {
+    display: grid;
+
+    gap: 8px;
+
+    padding:
+        9px;
+
+    border:
+        2px solid
+        #080808;
+
+    border-radius:
+        8px;
+
+    background:
+        var(--painel);
+}
+
+
+.sincronizacao-identificacao {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+
+.sincronizacao-identificacao span {
+    color:
+        var(--secundario);
+
+    font-size:
+        0.67rem;
+
+    font-weight:
+        750;
+}
+
+
+.sincronizacao-identificacao strong {
+    color:
+        var(--aga-ciano);
+
+    font-size:
+        0.84rem;
+
+    font-variant-numeric:
+        tabular-nums;
+}
+
+
+.sincronizacao-botoes {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            5,
+            minmax(0, 1fr)
+        );
+
+    gap: 5px;
+}
+
+
+.botao-sync {
+    min-width: 0;
+
+    min-height: 34px;
+
+    padding:
+        5px
+        4px;
+
+    border:
+        2px solid
+        #080808;
+
+    border-radius:
+        5px;
+
+    background:
+        var(--painel-3);
+
+    box-shadow:
+        2px 2px 0 #080808;
+
+    color:
+        var(--texto);
+
+    font-size:
+        0.65rem;
+
+    font-weight:
+        900;
+
+    white-space: nowrap;
+
+    transition:
+        transform
+        80ms ease,
+        box-shadow
+        80ms ease,
+        background-color
+        80ms ease;
+}
+
+
+.botao-sync:hover:not(:disabled) {
+    background:
+        #504b51;
+}
+
+
+.botao-sync:active:not(:disabled) {
+    transform:
+        translate(
+            2px,
+            2px
+        );
+
+    box-shadow:
+        none;
+}
+
+
+.botao-sync-zerar {
+    background:
+        var(--aga-amarelo);
+
+    color:
+        #111;
+}
+
+
+/* ============================================================
+   PLACAR
+   ============================================================ */
+
+.placar-hq {
+    padding:
+        17px;
+}
+
 
 .barra-status {
     display: grid;
 
     grid-template-columns:
-        repeat(5, minmax(0, 1fr));
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
 
     gap: 8px;
 
-    margin-bottom: 14px;
+    margin-bottom: 13px;
 }
 
 
 .status-item {
-    padding: 11px;
+    min-width: 0;
 
-    border: 1px solid var(--borda);
-    border-radius: 13px;
+    padding:
+        9px
+        7px;
 
-    background: var(--painel);
+    border:
+        2px solid
+        #080808;
+
+    border-radius:
+        7px;
+
+    background:
+        var(--painel-2);
 
     text-align: center;
 }
@@ -439,16 +1644,147 @@ h2 {
 .status-item span {
     display: block;
 
-    margin-bottom: 4px;
+    margin-bottom: 3px;
 
-    color: var(--secundario);
+    color:
+        var(--secundario);
 
-    font-size: 0.66rem;
+    font-size:
+        0.57rem;
+
+    font-weight:
+        750;
+
+    text-transform: uppercase;
 }
 
 
 .status-item strong {
-    font-size: 0.9rem;
+    display: block;
+
+    overflow-wrap: anywhere;
+
+    color:
+        var(--aga-branco);
+
+    font-size:
+        0.74rem;
+
+    font-variant-numeric:
+        tabular-nums;
+}
+
+
+.status-item:nth-child(1) {
+    border-top:
+        4px solid
+        var(--aga-ciano);
+}
+
+
+.status-item:nth-child(2) {
+    border-top:
+        4px solid
+        var(--aga-verde);
+}
+
+
+.status-item:nth-child(3) {
+    border-top:
+        4px solid
+        var(--aga-magenta);
+}
+
+
+.status-item:nth-child(4) {
+    border-top:
+        4px solid
+        var(--aga-amarelo);
+}
+
+
+/* ============================================================
+   PONTUAÇÃO AO VIVO
+   ============================================================ */
+
+.pontuacao-destaque {
+    position: relative;
+
+    overflow: hidden;
+
+    display: grid;
+
+    place-items: center;
+
+    min-height: 115px;
+
+    padding:
+        12px;
+
+    border:
+        3px solid
+        #080808;
+
+    background:
+        var(--aga-amarelo);
+
+    clip-path:
+        polygon(
+            50% 0%,
+            59% 13%,
+            75% 5%,
+            78% 21%,
+            95% 16%,
+            88% 34%,
+            100% 44%,
+            88% 54%,
+            98% 71%,
+            80% 70%,
+            78% 91%,
+            60% 83%,
+            50% 100%,
+            40% 83%,
+            22% 92%,
+            20% 71%,
+            3% 73%,
+            12% 54%,
+            0% 44%,
+            13% 34%,
+            4% 17%,
+            23% 22%,
+            25% 5%,
+            41% 14%
+        );
+
+    color:
+        #111;
+
+    text-align: center;
+}
+
+
+.pontuacao-destaque span {
+    display: block;
+
+    align-self: end;
+
+    font-size:
+        0.65rem;
+
+    letter-spacing:
+        0.08em;
+}
+
+
+.pontuacao-destaque strong {
+    display: block;
+
+    align-self: start;
+
+    font-size:
+        3rem;
+
+    line-height: 0.95;
 
     font-variant-numeric:
         tabular-nums;
@@ -462,16 +1798,28 @@ h2 {
 .painel-piano-roll {
     position: relative;
 
-    padding: 20px;
+    width: 100%;
 
-    border: 1px solid var(--borda);
-    border-radius: 22px;
+    max-width: 100%;
 
-    background: var(--painel);
+    min-width: 0;
+
+    overflow: hidden;
+
+    padding: 18px;
+
+    border:
+        4px solid
+        #080808;
+
+    background:
+        var(--aga-branco);
 
     box-shadow:
-        0 24px 60px
-        rgba(0, 0, 0, 0.25);
+        var(--sombra-hq-grande);
+
+    color:
+        #111;
 }
 
 
@@ -479,11 +1827,33 @@ h2 {
     display: flex;
 
     align-items: flex-start;
+
     justify-content: space-between;
 
-    gap: 16px;
+    gap: 14px;
 
     margin-bottom: 14px;
+}
+
+
+.painel-piano-roll .rotulo {
+    color:
+        var(--aga-vermelho);
+}
+
+
+.painel-piano-roll h2 {
+    color:
+        #181518;
+
+    font-size:
+        clamp(
+            1.15rem,
+            2.5vw,
+            1.65rem
+        );
+
+    line-height: 1.1;
 }
 
 
@@ -492,11 +1862,20 @@ h2 {
 
     align-items: center;
 
-    gap: 14px;
+    justify-content: flex-end;
 
-    color: var(--secundario);
+    flex-wrap: wrap;
 
-    font-size: 0.72rem;
+    gap: 10px;
+
+    color:
+        #4b4549;
+
+    font-size:
+        0.68rem;
+
+    font-weight:
+        800;
 }
 
 
@@ -505,27 +1884,54 @@ h2 {
 
     align-items: center;
 
-    gap: 6px;
+    gap: 5px;
 }
 
 
 .legenda i {
-    width: 16px;
-    height: 8px;
+    width: 18px;
+
+    height: 9px;
 
     display: inline-block;
 
-    border-radius: 3px;
+    border:
+        2px solid
+        #111;
+
+    border-radius:
+        2px;
 }
 
 
 .legenda-alvo {
-    background: var(--azul);
+    background:
+        var(--aga-amarelo);
 }
 
 
 .legenda-voz {
-    background: var(--verde);
+    background:
+        var(--aga-ciano);
+}
+
+
+/* ============================================================
+   MOLDURA DO PIANO ROLL
+   ============================================================ */
+
+.moldura-piano-roll {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    margin-top: 6px;
 }
 
 
@@ -533,65 +1939,168 @@ h2 {
     position: relative;
 
     width: 100%;
-    height: min(56vh, 480px);
 
-    min-height: 310px;
+    max-width: 100%;
+
+    min-width: 0;
+
+    height:
+        min(
+            58vh,
+            510px
+        );
+
+    min-height: 340px;
 
     overflow: hidden;
 
-    border: 1px solid var(--borda);
-    border-radius: 15px;
+    border:
+        4px solid
+        #080808;
 
-    background: #121418;
+    border-radius:
+        4px;
+
+    background:
+        #151518;
+
+    box-shadow:
+        inset
+        0
+        0
+        30px
+        rgba(0, 0, 0, 0.55);
 }
 
 
 #pianoRoll {
     display: block;
 
-    width: 100%;
+    width: 100% !important;
+
+    max-width: 100% !important;
+
+    min-width: 0;
+
     height: 100%;
+
+    max-height: 100%;
 }
 
 
 /* ============================================================
-   CONTAGEM
+   ADESIVO HQ
+   ============================================================ */
+
+.adesivo-hq {
+    position: absolute;
+
+    z-index: 15;
+
+    padding:
+        6px
+        12px;
+
+    border:
+        3px solid
+        #080808;
+
+    background:
+        var(--aga-amarelo);
+
+    box-shadow:
+        4px 4px 0
+        var(--aga-vermelho);
+
+    color:
+        #111;
+
+    font-size:
+        0.82rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        0.04em;
+
+    transform:
+        rotate(-3deg);
+
+    pointer-events: none;
+}
+
+
+.adesivo-superior {
+    top: -10px;
+
+    right: 20px;
+}
+
+
+/* ============================================================
+   CONTADOR
    ============================================================ */
 
 .contador {
     position: absolute;
 
-    z-index: 10;
+    z-index: 30;
 
     left: 50%;
+
     top: 50%;
 
-    width: 130px;
-    height: 130px;
+    width: 140px;
+
+    height: 140px;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     transform:
-        translate(-50%, -50%);
+        translate(
+            -50%,
+            -50%
+        )
+        rotate(-3deg);
 
-    border: 2px solid
-        rgba(255, 255, 255, 0.75);
+    border:
+        5px solid
+        #080808;
 
     border-radius: 50%;
 
     background:
-        rgba(16, 17, 20, 0.92);
+        var(--aga-amarelo);
 
-    font-size: 4.5rem;
-    font-weight: 950;
+    box-shadow:
+        8px 8px 0
+        var(--aga-vermelho);
+
+    color:
+        #111;
+
+    font-family:
+        Impact,
+        "Arial Narrow Bold",
+        sans-serif;
+
+    font-size:
+        4.8rem;
+
+    font-weight:
+        950;
+
+    line-height: 1;
 }
 
 
 /* ============================================================
-   TEMPO
+   LINHA DO TEMPO
    ============================================================ */
 
 .linha-tempo {
@@ -606,11 +2115,16 @@ h2 {
 
     gap: 10px;
 
-    margin-top: 15px;
+    margin-top: 14px;
 
-    color: var(--secundario);
+    color:
+        #3a3539;
 
-    font-size: 0.76rem;
+    font-size:
+        0.72rem;
+
+    font-weight:
+        850;
 
     font-variant-numeric:
         tabular-nums;
@@ -618,680 +2132,91 @@ h2 {
 
 
 .barra-tempo {
-    height: 7px;
+    height: 10px;
 
     overflow: hidden;
 
-    border-radius: 999px;
+    border:
+        2px solid
+        #111;
 
-    background: var(--painel-2);
+    border-radius:
+        999px;
+
+    background:
+        #d7d0cc;
 }
 
 
 .barra-tempo-preenchimento {
     width: 0%;
+
     height: 100%;
 
     border-radius: inherit;
 
-    background: var(--azul);
-}
-
-
-/* ============================================================
-   FEEDBACK
-   ============================================================ */
-
-.painel-feedback {
-    margin-top: 14px;
-
-    padding: 20px;
-
-    border: 1px solid var(--borda);
-    border-radius: 18px;
-
-    background: var(--painel);
-}
-
-
-.nota-atual {
-    display: grid;
-
-    grid-template-columns:
-        1fr
-        auto
-        1fr;
-
-    align-items: center;
-
-    text-align: center;
-}
-
-
-.nota-atual strong {
-    display: block;
-
-    font-size: 2rem;
-}
-
-
-.seta {
-    color: var(--secundario);
-
-    font-size: 1.5rem;
-}
-
-
-.feedback {
-    margin-top: 18px;
-
-    padding: 14px;
-
-    border: 1px solid var(--borda);
-    border-radius: 12px;
-
-    text-align: center;
-
-    font-weight: 850;
-}
-
-
-.feedback.neutro {
-    background: var(--painel-2);
-
-    color: var(--secundario);
-}
-
-
-.feedback.correto {
-    border-color:
-        rgba(98, 221, 139, 0.4);
-
-    background:
-        rgba(98, 221, 139, 0.1);
-
-    color: var(--verde);
-}
-
-
-.feedback.proximo {
-    border-color:
-        rgba(244, 201, 93, 0.4);
-
-    background:
-        rgba(244, 201, 93, 0.1);
-
-    color: var(--amarelo);
-}
-
-
-.feedback.errado {
-    border-color:
-        rgba(255, 107, 107, 0.4);
-
-    background:
-        rgba(255, 107, 107, 0.1);
-
-    color: var(--vermelho);
-}
-
-
-/* ============================================================
-   MÉTRICAS
-   ============================================================ */
-
-.metricas {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 8px;
-
-    margin-top: 16px;
-}
-
-
-.metricas div {
-    padding: 12px;
-
-    border: 1px solid var(--borda);
-    border-radius: 12px;
-
-    background: var(--painel-2);
-
-    text-align: center;
-}
-
-
-.metricas span {
-    display: block;
-
-    color: var(--secundario);
-
-    font-size: 0.68rem;
-}
-
-
-.metricas strong {
-    display: block;
-
-    margin-top: 4px;
-}
-
-
-/* ============================================================
-   RESULTADO
-   ============================================================ */
-
-.resultado {
-    margin-top: 14px;
-
-    padding: 25px 20px;
-
-    border: 1px solid
-        rgba(98, 221, 139, 0.35);
-
-    border-radius: 20px;
-
     background:
         linear-gradient(
-            180deg,
-            rgba(98, 221, 139, 0.08),
-            transparent
-        ),
-        var(--painel);
-
-    text-align: center;
-}
-
-
-.pontuacao-final {
-    margin-top: 20px;
-}
-
-
-.pontuacao-final strong {
-    color: var(--verde);
-
-    font-size: clamp(
-        4.5rem,
-        20vw,
-        7rem
-    );
-
-    line-height: 1;
-}
-
-
-.pontuacao-final span {
-    color: var(--secundario);
-}
-
-
-.avaliacao-final {
-    max-width: 620px;
-
-    margin: 15px auto 0;
-
-    color: var(--secundario);
-
-    line-height: 1.5;
-}
-
-
-.resultado-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 9px;
-
-    margin-top: 24px;
-}
-
-
-.resultado-grid div {
-    padding: 14px;
-
-    border: 1px solid var(--borda);
-    border-radius: 12px;
-
-    background: var(--painel-2);
-}
-
-
-.resultado-grid span {
-    display: block;
-
-    color: var(--secundario);
-
-    font-size: 0.68rem;
-}
-
-
-.resultado-grid strong {
-    display: block;
-
-    margin-top: 5px;
+            90deg,
+            var(--aga-ciano),
+            var(--aga-magenta),
+            var(--aga-vermelho)
+        );
 }
 
 
 /* ============================================================
-   NOTA A NOTA
-   ============================================================ */
-
-.detalhamento-notas {
-    margin-top: 28px;
-
-    text-align: left;
-}
-
-
-.lista-resultados-notas {
-    display: grid;
-
-    gap: 9px;
-}
-
-
-.resultado-nota {
-    display: grid;
-
-    grid-template-columns:
-        78px
-        1fr
-        auto;
-
-    align-items: center;
-
-    gap: 14px;
-
-    padding: 13px 14px;
-
-    border: 1px solid var(--borda);
-    border-radius: 13px;
-
-    background: var(--painel-2);
-}
-
-
-.resultado-nota-indice {
-    font-weight: 900;
-}
-
-
-.resultado-nota-detalhes {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 5px 14px;
-
-    color: var(--secundario);
-
-    font-size: 0.74rem;
-}
-
-
-.resultado-nota-pontos {
-    min-width: 68px;
-
-    padding: 7px 10px;
-
-    border-radius: 999px;
-
-    text-align: center;
-
-    font-weight: 950;
-}
-
-
-.resultado-nota.excelente {
-    border-color:
-        rgba(98, 221, 139, 0.45);
-}
-
-
-.resultado-nota.excelente
-.resultado-nota-pontos {
-    background:
-        rgba(98, 221, 139, 0.14);
-
-    color: var(--verde);
-}
-
-
-.resultado-nota.parcial {
-    border-color:
-        rgba(244, 201, 93, 0.4);
-}
-
-
-.resultado-nota.parcial
-.resultado-nota-pontos {
-    background:
-        rgba(244, 201, 93, 0.13);
-
-    color: var(--amarelo);
-}
-
-
-.resultado-nota.erro {
-    border-color:
-        rgba(255, 107, 107, 0.4);
-}
-
-
-.resultado-nota.erro
-.resultado-nota-pontos {
-    background:
-        rgba(255, 107, 107, 0.13);
-
-    color: var(--vermelho);
-}
-
-
-.resultado-nota.omitida {
-    opacity: 0.72;
-}
-
-
-.resultado-nota.omitida
-.resultado-nota-pontos {
-    background:
-        rgba(255, 255, 255, 0.06);
-
-    color: var(--secundario);
-}
-
-
-.resultado > .botao-principal {
-    width: 100%;
-
-    margin-top: 22px;
-}
-
-
-/* ============================================================
-   RODAPÉ
-   ============================================================ */
-
-.rodape {
-    padding: 20px;
-
-    text-align: center;
-
-    color: #777d88;
-
-    font-size: 0.74rem;
-}
-
-
-/* ============================================================
-   RESPONSIVIDADE
-   ============================================================ */
-
-@media (max-width: 760px) {
-
-    .musica-base {
-        grid-template-columns: 1fr;
-    }
-
-
-    .arquivos-musica {
-        min-width: 0;
-    }
-
-
-    .configuracao {
-        grid-template-columns: 1fr;
-    }
-
-
-    .botoes-configuracao {
-        grid-column: auto;
-
-        grid-template-columns: 1fr;
-    }
-
-
-    .barra-status {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
-
-    .metricas {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
-
-    .resultado-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
-
-    .painel-cabecalho {
-        flex-direction: column;
-    }
-
-
-    .canvas-container {
-        height: 54vh;
-
-        min-height: 330px;
-    }
-}
-
-
-@media (max-width: 500px) {
-
-    .app {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-
-    .painel-piano-roll,
-    .painel-feedback {
-        padding: 14px;
-    }
-
-
-    .resultado-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    .resultado-nota {
-        grid-template-columns:
-            64px
-            1fr;
-    }
-
-
-    .resultado-nota-pontos {
-        grid-column:
-            1 / -1;
-    }
-}
-
-/* ============================================================
-   SINCRONIZAÇÃO MIDI / SRT
-   ============================================================ */
-
-.sincronizacao {
-    grid-column: 1 / -1;
-
-    padding: 15px;
-
-    border: 1px solid var(--borda);
-    border-radius: 14px;
-
-    background: var(--painel-2);
-}
-
-.sincronizacao-cabecalho {
-    display: flex;
-
-    align-items: flex-start;
-    justify-content: space-between;
-
-    gap: 18px;
-
-    margin-bottom: 14px;
-}
-
-.sincronizacao-cabecalho strong {
-    font-size: 0.95rem;
-}
-
-.sincronizacao-ajuda {
-    max-width: 520px;
-
-    margin: 0;
-
-    color: var(--secundario);
-
-    font-size: 0.73rem;
-    line-height: 1.45;
-
-    text-align: right;
-}
-
-.sincronizacao-linhas {
-    display: grid;
-
-    gap: 10px;
-}
-
-.sincronizacao-linha {
-    display: grid;
-
-    grid-template-columns: 150px minmax(0, 1fr);
-
-    align-items: center;
-
-    gap: 12px;
-
-    padding: 11px;
-
-    border: 1px solid var(--borda);
-    border-radius: 12px;
-
-    background: var(--painel);
-}
-
-.sincronizacao-identificacao span {
-    display: block;
-
-    color: var(--secundario);
-
-    font-size: 0.7rem;
-}
-
-.sincronizacao-identificacao strong {
-    display: block;
-
-    margin-top: 3px;
-
-    color: var(--azul);
-
-    font-size: 1rem;
-
-    font-variant-numeric: tabular-nums;
-}
-
-.sincronizacao-botoes {
-    display: grid;
-
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-
-    gap: 7px;
-}
-
-.botao-sync {
-    min-height: 38px;
-
-    padding: 8px 9px;
-
-    border: 1px solid var(--borda);
-    border-radius: 9px;
-
-    background: var(--painel-3);
-
-    color: var(--texto);
-
-    font-size: 0.74rem;
-    font-weight: 800;
-
-    white-space: nowrap;
-}
-
-.botao-sync:hover:not(:disabled) {
-    border-color: rgba(104, 168, 255, 0.65);
-}
-
-.botao-sync-zerar {
-    color: var(--amarelo);
-}
-
-
-/* ============================================================
-   LETRA / KARAOKÊ
+   KARAOKÊ
    ============================================================ */
 
 .painel-letra {
     position: relative;
 
-    min-height: 160px;
+    min-height: 180px;
 
     display: flex;
+
     flex-direction: column;
 
-    align-items: stretch;
     justify-content: center;
 
-    gap: 12px;
+    gap: 10px;
 
-    margin-top: 14px;
-    padding: 20px 24px 22px;
+    padding:
+        20px
+        24px;
 
-    overflow: hidden;
+    border:
+        4px solid
+        #080808;
 
-    border: 1px solid var(--borda);
-    border-radius: 18px;
+    border-radius:
+        16px;
 
-    background: var(--painel);
+    background:
+        var(--painel);
 
-    text-align: center;
+    box-shadow:
+        var(--sombra-hq);
+
+    color:
+        var(--texto);
 }
 
 
-/* ============================================================
-   CABEÇALHO
-   ============================================================ */
-
 .cabecalho-letra {
-    width: 100%;
-
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     gap: 12px;
 }
 
 
-.painel-letra .rotulo {
+.cabecalho-letra .rotulo {
     margin: 0;
-
-    text-align: left;
 }
 
 
@@ -1303,327 +2228,2232 @@ h2 {
     display: inline-flex;
 
     align-items: center;
+
     justify-content: center;
 
-    min-height: 25px;
+    padding:
+        5px
+        9px;
 
-    padding: 4px 9px;
+    border:
+        2px solid
+        #080808;
 
-    border: 1px solid
-        rgba(104, 168, 255, 0.30);
-
-    border-radius: 999px;
+    border-radius:
+        999px;
 
     background:
-        rgba(104, 168, 255, 0.08);
+        var(--aga-amarelo);
 
-    color: var(--azul);
+    box-shadow:
+        2px 2px 0 #080808;
 
-    font-size: 0.62rem;
-    font-weight: 900;
+    color:
+        #111;
 
-    letter-spacing: 0.08em;
+    font-size:
+        0.59rem;
 
-    opacity: 0.72;
+    font-weight:
+        900;
 
-    user-select: none;
+    letter-spacing:
+        0.07em;
 }
 
 
 /* ============================================================
-   ÁREA PRINCIPAL DA LETRA
+   BALÃO
+   ============================================================ */
+
+.balao-fala {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 112px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        22px
+        30px;
+
+    border:
+        4px solid
+        #080808;
+
+    border-radius:
+        48% 52% 48% 52% /
+        34% 38% 32% 36%;
+
+    background:
+        var(--aga-branco);
+
+    box-shadow:
+        5px 5px 0
+        var(--aga-ciano);
+
+    color:
+        #151515;
+}
+
+
+.balao-fala::after {
+    content: "";
+
+    position: absolute;
+
+    left: 40px;
+
+    bottom: -24px;
+
+    width: 36px;
+
+    height: 36px;
+
+    border-left:
+        4px solid
+        #080808;
+
+    border-bottom:
+        4px solid
+        #080808;
+
+    background:
+        var(--aga-branco);
+
+    transform:
+        skew(-24deg)
+        rotate(-20deg);
+}
+
+
+/* ============================================================
+   LETRA
    ============================================================ */
 
 .letra-atual {
+    position: relative;
+
+    z-index: 2;
+
     width: 100%;
 
-    min-height: 72px;
+    min-height: 62px;
 
     display: block;
 
-    padding: 8px 10px;
+    color:
+        #171417;
 
-    color: var(--texto);
+    font-family:
+        Impact,
+        Haettenschweiler,
+        "Arial Narrow Bold",
+        "Segoe UI",
+        sans-serif;
 
     font-size:
         clamp(
-            1.20rem,
-            3vw,
-            1.72rem
+            1.25rem,
+            2.5vw,
+            1.85rem
         );
 
-    font-weight: 750;
+    font-weight:
+        850;
 
-    line-height: 1.6;
+    line-height: 1.48;
+
+    letter-spacing:
+        0.01em;
 
     text-align: center;
 
-    white-space: pre-line;
+    white-space:
+        pre-line;
 
-    overflow-wrap: break-word;
-
-    transition:
-        color 160ms ease,
-        opacity 160ms ease;
+    overflow-wrap: anywhere;
 }
 
-
-/* ============================================================
-   SEM FRASE ATIVA
-   ============================================================ */
 
 .letra-atual.sem-frase {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
-    color: var(--secundario);
+    color:
+        #777176;
 
-    font-weight: 600;
+    font-family:
+        inherit;
 
-    opacity: 0.76;
+    font-weight:
+        600;
 }
 
 
 /* ============================================================
-   MODO KARAOKÊ ATIVO
+   SÍLABAS
    ============================================================ */
-
-.letra-atual.karaoke-ativo {
-    display: block;
-
-    color: var(--texto);
-
-    font-weight: 750;
-
-    opacity: 1;
-}
-
-
-/* ============================================================
-   SÍLABA BASE
-   ============================================================
- *
- * Cada sílaba mapeada pelo karaoke-engine.js
- * recebe esta classe.
- *
- * Os espaços e sinais de pontuação permanecem
- * como nós de texto normais e não são alterados.
- * ============================================================ */
 
 .karaoke-silaba {
     position: relative;
 
     display: inline;
 
-    border-radius: 5px;
+    border-radius:
+        3px;
 
     transition:
-        color 90ms linear,
-        opacity 90ms linear,
-        background-color 90ms linear,
-        text-shadow 90ms linear;
+        color
+        80ms linear,
+        opacity
+        80ms linear,
+        background-color
+        80ms linear;
 }
 
-
-/* ============================================================
-   SÍLABA FUTURA
-   ============================================================
- *
- * Ainda não chegou ao playhead.
- * ============================================================ */
 
 .karaoke-silaba-futura {
-    color: var(--texto);
+    color:
+        #252125;
 
-    opacity: 0.72;
+    opacity: 0.76;
 }
 
-
-/* ============================================================
-   SÍLABA JÁ CANTADA
-   ============================================================
- *
- * Mantemos visível para que o cantor conserve
- * o contexto da frase, mas com menor destaque.
- * ============================================================ */
 
 .karaoke-silaba-passada {
-    color: var(--secundario);
+    color:
+        #8b8288;
 
-    opacity: 0.62;
+    opacity: 0.67;
 }
 
 
-/* ============================================================
-   SÍLABA ATUAL
-   ============================================================
- *
- * Este é o principal elemento visual do karaokê.
- *
- * O destaque precisa ser forte o suficiente para
- * ser percebido rapidamente enquanto o usuário
- * também observa o piano roll.
- * ============================================================ */
-
 .karaoke-silaba-atual {
-    position: relative;
-
     padding:
-        0.08em
-        0.10em;
+        0.02em
+        0.08em;
 
-    color: var(--texto);
+    background:
+        var(--aga-amarelo);
+
+    color:
+        var(--aga-vermelho);
 
     opacity: 1;
 
-    font-weight: 950;
+    font-weight:
+        950;
 
-    background:
-        rgba(104, 168, 255, 0.16);
-
-    text-shadow:
-        0 0 14px
-        rgba(104, 168, 255, 0.42);
+    -webkit-text-stroke:
+        0.25px #111;
 }
 
 
-/*
- * Barra inferior da sílaba atual.
- *
- * Funciona como um pequeno playhead textual.
- */
 .karaoke-silaba-atual::after {
     content: "";
 
     position: absolute;
 
-    left: 8%;
-    right: 8%;
+    left: 5%;
 
-    bottom: -0.18em;
+    right: 5%;
 
-    height: 3px;
+    bottom: -0.16em;
 
-    border-radius: 999px;
+    height: 4px;
 
-    background: var(--azul);
+    border-radius:
+        999px;
+
+    background:
+        var(--aga-ciano);
 
     box-shadow:
-        0 0 8px
-        rgba(104, 168, 255, 0.55);
+        0 2px 0 #111;
 }
 
 
-/* ============================================================
-   AJUDA
-   ============================================================ */
-
 .ajuda-karaoke {
-    margin: 0;
+    margin:
+        7px
+        0
+        0;
 
-    color: var(--secundario);
+    color:
+        var(--secundario);
 
-    font-size: 0.70rem;
-    font-weight: 600;
+    font-size:
+        0.66rem;
+
+    font-weight:
+        700;
 
     line-height: 1.4;
 
-    opacity: 0.70;
+    text-align: center;
 }
 
 
 /* ============================================================
-   RESPONSIVIDADE
+   PAINEL DE FEEDBACK
    ============================================================ */
 
-@media (max-width: 760px) {
-
-    .painel-letra {
-        min-height: 145px;
-
-        padding:
-            16px
-            14px
-            18px;
-
-        gap: 10px;
-    }
-
-
-    .letra-atual {
-        min-height: 66px;
-
-        padding:
-            6px
-            4px;
-
-        font-size:
-            clamp(
-                1.08rem,
-                4.7vw,
-                1.38rem
-            );
-
-        line-height: 1.55;
-    }
-
-
-    .indicador-karaoke {
-        padding:
-            3px
-            7px;
-
-        font-size: 0.56rem;
-    }
-
-
-    .ajuda-karaoke {
-        font-size: 0.64rem;
-    }
-
-
-    .karaoke-silaba-atual::after {
-        height: 2px;
-    }
+.painel-feedback {
+    padding:
+        18px;
 }
 
 
-@media (max-width: 500px) {
+/* ============================================================
+   NOTAS
+   ============================================================ */
 
-    .painel-letra {
-        min-height: 138px;
+.nota-atual {
+    display: grid;
 
-        padding:
-            14px
-            10px
-            16px;
+    grid-template-columns:
+        1fr
+        auto
+        1fr;
 
-        border-radius: 15px;
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.nota-cartao {
+    min-width: 0;
+
+    padding:
+        12px;
+
+    border:
+        2px solid
+        #080808;
+
+    border-radius:
+        8px;
+
+    background:
+        var(--painel-2);
+
+    text-align: center;
+}
+
+
+.nota-cartao .rotulo {
+    color:
+        var(--secundario);
+}
+
+
+.nota-atual strong {
+    display: block;
+
+    color:
+        var(--aga-amarelo);
+
+    font-family:
+        Impact,
+        "Arial Narrow Bold",
+        sans-serif;
+
+    font-size:
+        clamp(
+            1.8rem,
+            4vw,
+            2.5rem
+        );
+
+    line-height: 1;
+}
+
+
+.seta {
+    color:
+        var(--aga-ciano);
+
+    font-size:
+        1.8rem;
+
+    font-weight:
+        950;
+}
+
+
+/* ============================================================
+   FEEDBACK DINÂMICO
+   ============================================================ */
+
+.feedback {
+    margin-top: 16px;
+
+    padding:
+        12px
+        14px;
+
+    border:
+        3px solid
+        #080808;
+
+    border-radius:
+        8px;
+
+    box-shadow:
+        4px 4px 0 #080808;
+
+    text-align: center;
+
+    font-size:
+        0.90rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        0.02em;
+
+    text-transform: uppercase;
+}
+
+
+.feedback.neutro {
+    background:
+        var(--painel-2);
+
+    color:
+        var(--secundario);
+}
+
+
+.feedback.correto {
+    background:
+        var(--aga-verde);
+
+    color:
+        #09160d;
+}
+
+
+.feedback.proximo {
+    background:
+        var(--aga-amarelo);
+
+    color:
+        #181408;
+}
+
+
+.feedback.errado {
+    background:
+        var(--aga-vermelho);
+
+    color:
+        #fff;
+}
+
+
+/* ============================================================
+   MÉTRICAS
+   ============================================================ */
+
+.metricas {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 8px;
+
+    margin-top: 16px;
+}
+
+
+.metricas > div {
+    min-width: 0;
+
+    padding:
+        10px
+        8px;
+
+    border:
+        2px solid
+        #080808;
+
+    border-radius:
+        7px;
+
+    background:
+        var(--painel-2);
+
+    text-align: center;
+}
+
+
+.metricas > div:nth-child(3n + 1) {
+    border-top:
+        4px solid
+        var(--aga-ciano);
+}
+
+
+.metricas > div:nth-child(3n + 2) {
+    border-top:
+        4px solid
+        var(--aga-amarelo);
+}
+
+
+.metricas > div:nth-child(3n + 3) {
+    border-top:
+        4px solid
+        var(--aga-vermelho);
+}
+
+
+.metricas span {
+    display: block;
+
+    color:
+        var(--secundario);
+
+    font-size:
+        0.60rem;
+
+    font-weight:
+        700;
+}
+
+
+.metricas strong {
+    display: block;
+
+    margin-top: 4px;
+
+    color:
+        var(--aga-branco);
+
+    font-size:
+        0.90rem;
+
+    font-variant-numeric:
+        tabular-nums;
+}
+
+
+/* ============================================================
+   RESULTADO FINAL
+   ============================================================ */
+
+.resultado {
+    position: relative;
+
+    overflow: hidden;
+
+    margin-top: 24px;
+
+    padding:
+        28px
+        24px;
+
+    border:
+        4px solid
+        #080808;
+
+    border-radius:
+        20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--aga-ciano) 0%,
+            var(--aga-ciano) 10%,
+            var(--painel) 10%,
+            var(--painel) 90%,
+            var(--aga-amarelo) 90%
+        );
+
+    box-shadow:
+        var(--sombra-hq-grande);
+
+    text-align: center;
+}
+
+
+.resultado > .rotulo {
+    margin-top: 7px;
+}
+
+
+.resultado h2 {
+    color:
+        var(--aga-branco);
+
+    font-size:
+        clamp(
+            1.5rem,
+            4vw,
+            2.3rem
+        );
+}
+
+
+/* ============================================================
+   EXPLOSÃO POW
+   ============================================================ */
+
+.explosao-resultado {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 110px;
+
+    min-height: 74px;
+
+    margin-bottom: 13px;
+
+    padding:
+        14px;
+
+    clip-path:
+        polygon(
+            50% 0%,
+            61% 18%,
+            79% 5%,
+            80% 28%,
+            100% 25%,
+            87% 46%,
+            100% 60%,
+            79% 64%,
+            82% 89%,
+            60% 79%,
+            50% 100%,
+            39% 79%,
+            18% 91%,
+            21% 67%,
+            0% 63%,
+            13% 47%,
+            0% 29%,
+            21% 29%,
+            20% 6%,
+            39% 18%
+        );
+
+    background:
+        var(--aga-vermelho);
+
+    color:
+        var(--aga-amarelo);
+
+    font-size:
+        1.75rem;
+
+    -webkit-text-stroke:
+        1px #111;
+
+    text-shadow:
+        2px 2px 0 #111;
+
+    transform:
+        rotate(-4deg);
+}
+
+
+/* ============================================================
+   PONTUAÇÃO FINAL
+   ============================================================ */
+
+.pontuacao-final {
+    margin-top: 18px;
+}
+
+
+.pontuacao-final strong {
+    color:
+        var(--aga-amarelo);
+
+    font-family:
+        Impact,
+        "Arial Narrow Bold",
+        sans-serif;
+
+    font-size:
+        clamp(
+            4.5rem,
+            14vw,
+            7.2rem
+        );
+
+    line-height: 0.95;
+
+    -webkit-text-stroke:
+        2px #111;
+
+    text-shadow:
+        5px 5px 0
+        var(--aga-vermelho);
+
+    font-variant-numeric:
+        tabular-nums;
+}
+
+
+.pontuacao-final span {
+    color:
+        var(--secundario);
+
+    font-size:
+        1rem;
+
+    font-weight:
+        800;
+}
+
+
+.avaliacao-final {
+    max-width: 660px;
+
+    margin:
+        17px
+        auto
+        0;
+
+    color:
+        #ddd6dc;
+
+    font-size:
+        0.88rem;
+
+    font-weight:
+        650;
+
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   GRID DE RESULTADOS
+   ============================================================ */
+
+.resultado-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 9px;
+
+    margin-top: 22px;
+}
+
+
+.resultado-grid > div {
+    min-width: 0;
+
+    padding:
+        12px;
+
+    border:
+        2px solid
+        #080808;
+
+    border-radius:
+        8px;
+
+    background:
+        var(--painel-2);
+
+    box-shadow:
+        3px 3px 0 #080808;
+}
+
+
+.resultado-grid span {
+    display: block;
+
+    color:
+        var(--secundario);
+
+    font-size:
+        0.63rem;
+
+    font-weight:
+        700;
+}
+
+
+.resultado-grid strong {
+    display: block;
+
+    margin-top: 5px;
+
+    color:
+        var(--aga-amarelo);
+
+    font-size:
+        1rem;
+
+    font-variant-numeric:
+        tabular-nums;
+}
+
+
+/* ============================================================
+   DETALHAMENTO
+   ============================================================ */
+
+.detalhamento-notas {
+    margin-top: 30px;
+
+    text-align: left;
+}
+
+
+.titulo-detalhamento {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 11px;
+}
+
+
+.titulo-detalhamento .rotulo {
+    margin: 0;
+}
+
+
+.titulo-detalhamento > span {
+    color:
+        var(--aga-amarelo);
+
+    font-size:
+        1.35rem;
+}
+
+
+.lista-resultados-notas {
+    display: grid;
+
+    gap: 8px;
+}
+
+
+/* ============================================================
+   RESULTADO NOTA A NOTA
+   ============================================================ */
+
+.resultado-nota {
+    display: grid;
+
+    grid-template-columns:
+        78px
+        minmax(0, 1fr)
+        auto;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding:
+        11px
+        12px;
+
+    border:
+        2px solid
+        #080808;
+
+    border-radius:
+        8px;
+
+    background:
+        var(--painel-2);
+
+    box-shadow:
+        2px 2px 0 #080808;
+}
+
+
+.resultado-nota-indice {
+    font-weight:
+        900;
+}
+
+
+.resultado-nota-detalhes {
+    min-width: 0;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap:
+        4px
+        12px;
+
+    color:
+        var(--secundario);
+
+    font-size:
+        0.70rem;
+}
+
+
+.resultado-nota-pontos {
+    min-width: 67px;
+
+    padding:
+        6px
+        9px;
+
+    border:
+        2px solid
+        #080808;
+
+    border-radius:
+        999px;
+
+    text-align: center;
+
+    font-weight:
+        950;
+
+    font-variant-numeric:
+        tabular-nums;
+}
+
+
+.resultado-nota.excelente {
+    border-color:
+        var(--aga-verde);
+}
+
+
+.resultado-nota.excelente
+.resultado-nota-pontos {
+
+    background:
+        var(--aga-verde);
+
+    color:
+        #07150b;
+}
+
+
+.resultado-nota.parcial {
+    border-color:
+        var(--aga-amarelo);
+}
+
+
+.resultado-nota.parcial
+.resultado-nota-pontos {
+
+    background:
+        var(--aga-amarelo);
+
+    color:
+        #151207;
+}
+
+
+.resultado-nota.erro {
+    border-color:
+        var(--aga-vermelho);
+}
+
+
+.resultado-nota.erro
+.resultado-nota-pontos {
+
+    background:
+        var(--aga-vermelho);
+
+    color:
+        #fff;
+}
+
+
+.resultado-nota.omitida {
+    opacity: 0.68;
+}
+
+
+.resultado-nota.omitida
+.resultado-nota-pontos {
+
+    background:
+        #4b474b;
+
+    color:
+        var(--secundario);
+}
+
+
+/* ============================================================
+   BOTÃO REPETIR
+   ============================================================ */
+
+.botao-repetir {
+    max-width: 440px;
+
+    margin:
+        24px
+        auto
+        0;
+}
+
+
+/* ============================================================
+   RODAPÉ
+   ============================================================ */
+
+.rodape {
+    margin-top: 34px;
+
+    padding:
+        22px
+        12px;
+
+    color:
+        #938b92;
+
+    font-size:
+        0.70rem;
+
+    line-height: 1.45;
+
+    text-align: center;
+}
+
+
+.rodape-logo {
+    width: 52px;
+
+    height: 52px;
+
+    max-width: 52px;
+
+    max-height: 52px;
+
+    margin:
+        0
+        auto
+        10px;
+
+    object-fit: contain;
+
+    object-position: center;
+}
+
+
+.rodape p {
+    margin:
+        0
+        auto
+        6px;
+
+    max-width: 620px;
+}
+
+
+.rodape strong {
+    color:
+        #bcb4bb;
+}
+
+
+/* ============================================================
+   FOCO / ACESSIBILIDADE
+   ============================================================ */
+
+button:focus-visible,
+select:focus-visible,
+input:focus-visible,
+a:focus-visible {
+
+    outline:
+        4px solid
+        var(--aga-amarelo);
+
+    outline-offset:
+        3px;
+}
+
+
+::selection {
+    background:
+        var(--aga-amarelo);
+
+    color:
+        #111;
+}
+
+
+/* ============================================================
+   RESPONSIVIDADE — NOTEBOOK / TABLET GRANDE
+   ============================================================ */
+
+@media (
+    max-width:
+    1050px
+) {
+
+    .marca-principal {
+        grid-template-columns:
+            minmax(170px, 260px)
+            minmax(0, 1fr)
+            86px;
+
+        gap: 18px;
     }
 
 
-    .cabecalho-letra {
-        gap: 8px;
+    .logo-principal,
+    .marca-logo-horizontal img {
+        max-height: 160px;
     }
 
 
-    .letra-atual {
-        font-size: 1.08rem;
+    .marca-selo {
+        width: 86px;
 
-        line-height: 1.5;
+        height: 86px;
     }
 
 
-    .ajuda-karaoke {
+    .selo-ke,
+    .marca-selo img {
+        width: 86px;
+
+        height: 86px;
+
+        max-width: 86px;
+
+        max-height: 86px;
+    }
+
+
+    .treino-layout {
+        grid-template-columns:
+            minmax(250px, 0.38fr)
+            minmax(0, 1fr);
+    }
+
+
+    .canvas-container {
+        min-height: 315px;
+    }
+
+
+    .decoracao-notas {
         display: none;
     }
 }
 
 
 /* ============================================================
-   ACESSIBILIDADE — MOVIMENTO REDUZIDO
+   RESPONSIVIDADE — TABLET
+   ============================================================ */
+
+@media (
+    max-width:
+    860px
+) {
+
+    .app {
+        width:
+            min(
+                calc(100% - 20px),
+                760px
+            );
+    }
+
+
+    /* --------------------------------------------------------
+       HEADER
+       -------------------------------------------------------- */
+
+    .cabecalho-marca {
+        padding:
+            14px
+            16px
+            19px;
+    }
+
+
+    .marca-principal {
+        grid-template-columns:
+            minmax(160px, 230px)
+            minmax(0, 1fr);
+
+        grid-template-areas:
+            "logo texto"
+            "logo selo";
+
+        align-items: center;
+
+        gap:
+            12px
+            18px;
+    }
+
+
+    .marca-logo-horizontal {
+        grid-area: logo;
+
+        max-width: 230px;
+    }
+
+
+    .marca-texto {
+        grid-area: texto;
+    }
+
+
+    .marca-selo {
+        grid-area: selo;
+
+        justify-self: center;
+
+        width: 64px;
+
+        height: 64px;
+    }
+
+
+    .selo-ke,
+    .marca-selo img {
+        width: 64px;
+
+        height: 64px;
+
+        max-width: 64px;
+
+        max-height: 64px;
+    }
+
+
+    .logo-principal,
+    .marca-logo-horizontal img {
+        max-height: 160px;
+    }
+
+
+    .marca-texto h1 {
+        font-size:
+            clamp(
+                2rem,
+                7vw,
+                3rem
+            );
+    }
+
+
+    /* --------------------------------------------------------
+       MÚSICA
+       -------------------------------------------------------- */
+
+    .musica-base {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .arquivos-musica {
+        grid-template-columns:
+            repeat(
+                3,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    /* --------------------------------------------------------
+       TREINO
+       -------------------------------------------------------- */
+
+    .treino-layout {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .coluna-controles {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 0.72fr);
+
+        align-items: start;
+    }
+
+
+    .configuracao {
+        min-height: 100%;
+    }
+
+
+    .placar-hq {
+        min-height: 100%;
+    }
+
+
+    .botoes-configuracao {
+        grid-template-columns:
+            repeat(
+                3,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    .botao-hq {
+        min-height: 54px;
+
+        padding-left: 7px;
+
+        padding-right: 7px;
+
+        font-size:
+            0.72rem;
+    }
+
+
+    .canvas-container {
+        height:
+            min(
+                56vh,
+                470px
+            );
+
+        min-height: 340px;
+    }
+}
+
+
+/* ============================================================
+   RESPONSIVIDADE — TABLET PEQUENO / CELULAR GRANDE
+   ============================================================ */
+
+@media (
+    max-width:
+    700px
+) {
+
+    .app {
+        width:
+            min(
+                calc(100% - 16px),
+                640px
+            );
+    }
+
+
+    /* --------------------------------------------------------
+       HEADER
+       -------------------------------------------------------- */
+
+    .cabecalho-marca {
+        box-shadow:
+            5px 5px 0 #080808;
+    }
+
+
+    .marca-principal {
+        grid-template-columns:
+            1fr;
+
+        grid-template-areas:
+            "logo"
+            "texto"
+            "selo";
+
+        justify-items: center;
+
+        gap: 10px;
+    }
+
+
+    .marca-logo-horizontal {
+        max-width: 230px;
+    }
+
+
+    .logo-principal,
+    .marca-logo-horizontal img {
+        max-height: 155px;
+    }
+
+
+    .marca-selo {
+        width: 58px;
+
+        height: 58px;
+    }
+
+
+    .selo-ke,
+    .marca-selo img {
+        width: 58px;
+
+        height: 58px;
+
+        max-width: 58px;
+
+        max-height: 58px;
+    }
+
+
+    .marca-texto {
+        width: 100%;
+    }
+
+
+    .marca-texto h1 {
+        font-size:
+            clamp(
+                2rem,
+                10vw,
+                2.9rem
+            );
+    }
+
+
+    .descricao {
+        max-width: 500px;
+
+        font-size:
+            0.76rem;
+    }
+
+
+    /* --------------------------------------------------------
+       MÚSICA
+       -------------------------------------------------------- */
+
+    .arquivos-musica {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    /* --------------------------------------------------------
+       FONES
+       -------------------------------------------------------- */
+
+    .aviso-fones {
+        grid-template-columns:
+            1fr;
+
+        gap: 8px;
+    }
+
+
+    /* --------------------------------------------------------
+       CONTROLES
+       -------------------------------------------------------- */
+
+    .coluna-controles {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .botoes-configuracao {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .botao-hq {
+        min-height: 50px;
+
+        font-size:
+            0.80rem;
+    }
+
+
+    /* --------------------------------------------------------
+       PIANO
+       -------------------------------------------------------- */
+
+    .painel-cabecalho {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .legenda {
+        justify-content: flex-start;
+    }
+
+
+    .painel-piano-roll {
+        padding: 14px;
+
+        box-shadow:
+            5px 5px 0 #080808;
+    }
+
+
+    .canvas-container {
+        height: 53vh;
+
+        min-height: 330px;
+    }
+
+
+    /* --------------------------------------------------------
+       KARAOKÊ
+       -------------------------------------------------------- */
+
+    .painel-letra {
+        padding:
+            17px
+            14px;
+    }
+
+
+    .balao-fala {
+        min-height: 105px;
+
+        padding:
+            20px
+            18px;
+    }
+
+
+    .letra-atual {
+        font-size:
+            clamp(
+                1.15rem,
+                5vw,
+                1.5rem
+            );
+    }
+
+
+    /* --------------------------------------------------------
+       FEEDBACK
+       -------------------------------------------------------- */
+
+    .metricas {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    /* --------------------------------------------------------
+       RESULTADOS
+       -------------------------------------------------------- */
+
+    .resultado-grid {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+}
+
+
+/* ============================================================
+   RESPONSIVIDADE — CELULAR
+   ============================================================ */
+
+@media (
+    max-width:
+    500px
+) {
+
+    .app {
+        width:
+            calc(100% - 12px);
+
+        padding-top:
+            max(
+                10px,
+                env(safe-area-inset-top)
+            );
+    }
+
+
+    /* --------------------------------------------------------
+       CABEÇALHO
+       -------------------------------------------------------- */
+
+    .cabecalho-marca {
+        margin-bottom: 16px;
+
+        padding:
+            11px
+            10px
+            17px;
+
+        border-width: 3px;
+
+        border-radius: 14px;
+    }
+
+
+    .cabecalho-topo {
+        margin-bottom: 8px;
+    }
+
+
+    .voltar {
+        min-height: 32px;
+
+        padding:
+            5px
+            9px;
+
+        font-size:
+            0.70rem;
+    }
+
+
+    .marca-logo-horizontal {
+        max-width: 195px;
+    }
+
+
+    .logo-principal,
+    .marca-logo-horizontal img {
+        max-width: 195px;
+
+        max-height: 140px;
+    }
+
+
+    .marca-selo {
+        width: 52px;
+
+        height: 52px;
+    }
+
+
+    .selo-ke,
+    .marca-selo img {
+        width: 52px;
+
+        height: 52px;
+
+        max-width: 52px;
+
+        max-height: 52px;
+    }
+
+
+    .marca-texto h1 {
+        font-size:
+            clamp(
+                1.8rem,
+                11vw,
+                2.45rem
+            );
+
+        -webkit-text-stroke:
+            1.3px #111;
+
+        text-shadow:
+            3px 3px 0
+            var(--aga-vermelho);
+    }
+
+
+    .etapa {
+        font-size:
+            0.65rem;
+    }
+
+
+    .descricao {
+        margin-top: 9px;
+
+        padding:
+            7px
+            9px;
+
+        font-size:
+            0.69rem;
+    }
+
+
+    /* --------------------------------------------------------
+       PAINÉIS
+       -------------------------------------------------------- */
+
+    .painel-hq {
+        border-width:
+            2px;
+
+        box-shadow:
+            4px 4px 0 #080808;
+    }
+
+
+    .musica-base {
+        gap: 13px;
+
+        margin-bottom: 14px;
+
+        padding:
+            14px;
+    }
+
+
+    .musica-base h2 {
+        font-size:
+            1.55rem;
+    }
+
+
+    .aviso-fones {
+        margin-bottom: 14px;
+
+        padding:
+            13px;
+    }
+
+
+    /* --------------------------------------------------------
+       CONFIGURAÇÃO
+       -------------------------------------------------------- */
+
+    .configuracao,
+    .placar-hq,
+    .painel-feedback {
+        padding:
+            14px;
+    }
+
+
+    .titulo-painel-hq {
+        gap: 9px;
+
+        margin-bottom: 13px;
+    }
+
+
+    .numero-quadro {
+        width: 35px;
+
+        height: 35px;
+
+        flex-basis: 35px;
+
+        font-size:
+            0.82rem;
+    }
+
+
+    .titulo-painel-hq h2 {
+        font-size:
+            1.08rem;
+    }
+
+
+    /* --------------------------------------------------------
+       SINCRONIZAÇÃO
+       -------------------------------------------------------- */
+
+    .sincronizacao {
+        padding:
+            10px;
+    }
+
+
+    .sincronizacao-botoes {
+        grid-template-columns:
+            repeat(
+                5,
+                65px
+            );
+
+        overflow-x: auto;
+
+        padding:
+            1px
+            1px
+            5px;
+    }
+
+
+    .botao-sync {
+        min-height: 33px;
+    }
+
+
+    /* --------------------------------------------------------
+       PLACAR
+       -------------------------------------------------------- */
+
+    .barra-status {
+        gap: 6px;
+    }
+
+
+    .status-item {
+        padding:
+            8px
+            5px;
+    }
+
+
+    .status-item span {
+        font-size:
+            0.54rem;
+    }
+
+
+    .status-item strong {
+        font-size:
+            0.68rem;
+    }
+
+
+    .pontuacao-destaque {
+        min-height: 105px;
+    }
+
+
+    .pontuacao-destaque strong {
+        font-size:
+            2.6rem;
+    }
+
+
+    /* --------------------------------------------------------
+       PIANO
+       -------------------------------------------------------- */
+
+    .painel-piano-roll {
+        padding:
+            10px;
+
+        border-width:
+            3px;
+    }
+
+
+    .canvas-container {
+        height:
+            50vh;
+
+        min-height:
+            310px;
+
+        border-width:
+            3px;
+    }
+
+
+    .adesivo-hq {
+        padding:
+            4px
+            8px;
+
+        font-size:
+            0.66rem;
+
+        box-shadow:
+            3px 3px 0
+            var(--aga-vermelho);
+    }
+
+
+    .adesivo-superior {
+        right: 8px;
+    }
+
+
+    .contador {
+        width: 110px;
+
+        height: 110px;
+
+        font-size:
+            3.8rem;
+    }
+
+
+    .linha-tempo {
+        gap: 6px;
+
+        font-size:
+            0.66rem;
+    }
+
+
+    /* --------------------------------------------------------
+       BALÃO
+       -------------------------------------------------------- */
+
+    .painel-letra {
+        min-height: 150px;
+
+        padding:
+            14px
+            10px;
+
+        border-width:
+            3px;
+
+        box-shadow:
+            4px 4px 0 #080808;
+    }
+
+
+    .cabecalho-letra {
+        gap: 7px;
+    }
+
+
+    .indicador-karaoke {
+        padding:
+            3px
+            6px;
+
+        font-size:
+            0.51rem;
+    }
+
+
+    .balao-fala {
+        min-height: 100px;
+
+        padding:
+            17px
+            11px;
+
+        border-width:
+            3px;
+
+        border-radius:
+            34% 38% 35% 40% /
+            24% 27% 25% 29%;
+
+        box-shadow:
+            4px 4px 0
+            var(--aga-ciano);
+    }
+
+
+    .balao-fala::after {
+        left: 25px;
+
+        width: 28px;
+
+        height: 28px;
+
+        bottom: -18px;
+
+        border-left-width:
+            3px;
+
+        border-bottom-width:
+            3px;
+    }
+
+
+    .letra-atual {
+        min-height: 55px;
+
+        font-size:
+            1.08rem;
+
+        line-height: 1.48;
+    }
+
+
+    .karaoke-silaba-atual::after {
+        height: 3px;
+    }
+
+
+    .ajuda-karaoke {
+        display: none;
+    }
+
+
+    /* --------------------------------------------------------
+       NOTAS
+       -------------------------------------------------------- */
+
+    .nota-atual {
+        gap: 5px;
+    }
+
+
+    .nota-cartao {
+        padding:
+            8px
+            4px;
+    }
+
+
+    .nota-cartao .rotulo {
+        font-size:
+            0.54rem;
+    }
+
+
+    .nota-atual strong {
+        font-size:
+            1.6rem;
+    }
+
+
+    .seta {
+        font-size:
+            1.25rem;
+    }
+
+
+    .feedback {
+        padding:
+            10px
+            8px;
+
+        font-size:
+            0.78rem;
+    }
+
+
+    /* --------------------------------------------------------
+       MÉTRICAS
+       -------------------------------------------------------- */
+
+    .metricas {
+        gap: 6px;
+    }
+
+
+    .metricas > div {
+        padding:
+            8px
+            5px;
+    }
+
+
+    /* --------------------------------------------------------
+       RESULTADO
+       -------------------------------------------------------- */
+
+    .resultado {
+        margin-top: 18px;
+
+        padding:
+            20px
+            12px;
+
+        border-width:
+            3px;
+
+        box-shadow:
+            5px 5px 0 #080808;
+    }
+
+
+    .explosao-resultado {
+        min-width: 92px;
+
+        min-height: 63px;
+
+        font-size:
+            1.4rem;
+    }
+
+
+    .pontuacao-final strong {
+        font-size:
+            clamp(
+                4rem,
+                24vw,
+                5.6rem
+            );
+    }
+
+
+    .resultado-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .resultado-nota {
+        grid-template-columns:
+            58px
+            minmax(0, 1fr);
+
+        gap: 7px;
+
+        padding:
+            9px;
+    }
+
+
+    .resultado-nota-pontos {
+        grid-column:
+            1 / -1;
+
+        width: 100%;
+    }
+
+
+    .resultado-nota-detalhes {
+        font-size:
+            0.65rem;
+    }
+
+
+    /* --------------------------------------------------------
+       RODAPÉ
+       -------------------------------------------------------- */
+
+    .rodape {
+        margin-top: 25px;
+
+        padding-left: 6px;
+
+        padding-right: 6px;
+    }
+
+
+    .rodape-logo {
+        width: 44px;
+
+        height: 44px;
+
+        max-width: 44px;
+
+        max-height: 44px;
+    }
+}
+
+
+/* ============================================================
+   CELULARES MUITO ESTREITOS
+   ============================================================ */
+
+@media (
+    max-width:
+    360px
+) {
+
+    .app {
+        width:
+            calc(100% - 8px);
+    }
+
+
+    .marca-logo-horizontal {
+        max-width:
+            175px;
+    }
+
+
+    .logo-principal,
+    .marca-logo-horizontal img {
+        max-width:
+            175px;
+
+        max-height:
+            125px;
+    }
+
+
+    .marca-texto h1 {
+        font-size:
+            1.72rem;
+    }
+
+
+    .marca-selo {
+        width: 46px;
+
+        height: 46px;
+    }
+
+
+    .selo-ke,
+    .marca-selo img {
+        width: 46px;
+
+        height: 46px;
+
+        max-width: 46px;
+
+        max-height: 46px;
+    }
+
+
+    .barra-status {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .sincronizacao-botoes {
+        grid-template-columns:
+            repeat(
+                5,
+                60px
+            );
+    }
+
+
+    .canvas-container {
+        min-height:
+            290px;
+    }
+
+
+    .letra-atual {
+        font-size:
+            1rem;
+    }
+
+
+    .metricas {
+        grid-template-columns:
+            1fr
+            1fr;
+    }
+}
+
+
+/* ============================================================
+   MOVIMENTO REDUZIDO
    ============================================================ */
 
 @media (
@@ -1631,26 +4461,23 @@ h2 {
     reduce
 ) {
 
-    .letra-atual,
-    .karaoke-silaba {
-        transition: none;
-    }
-}
-
-
-@media (max-width: 500px) {
-
-    .sincronizacao {
-        padding: 12px;
+    html {
+        scroll-behavior:
+            auto;
     }
 
-    .sincronizacao-botoes {
-        grid-template-columns: repeat(5, 70px);
-    }
 
-    .botao-sync {
-        padding-left: 6px;
-        padding-right: 6px;
-    }
+    *,
+    *::before,
+    *::after {
 
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+    }
 }
