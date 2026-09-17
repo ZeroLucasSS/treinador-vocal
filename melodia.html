@@ -575,25 +575,48 @@
 
 
         <!-- ==================================================
-             LETRA SINCRONIZADA
-             ================================================== -->
+            LETRA / KARAOKÊ
+            ================================================== -->
 
         <section
             id="painelLetra"
             class="painel-letra"
+            aria-label="Letra sincronizada da música"
         >
 
-            <p class="rotulo">
-                LETRA
-            </p>
+            <div class="cabecalho-letra">
+
+                <p class="rotulo">
+                    LETRA
+                </p>
+
+
+                <span
+                    class="indicador-karaoke"
+                    aria-hidden="true"
+                >
+                    KARAOKÊ
+                </span>
+
+            </div>
+
 
             <div
                 id="letraAtual"
                 class="letra-atual sem-frase"
-                aria-live="polite"
+                aria-live="off"
+                aria-atomic="false"
             >
                 ♪
             </div>
+
+
+            <p class="ajuda-karaoke">
+
+                A sílaba destacada acompanha
+                a nota atual da melodia.
+
+            </p>
 
         </section>
 

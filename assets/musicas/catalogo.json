@@ -20,6 +20,7 @@
                         "audio": "instrumental.mp3",
                         "midi": "voz.mid",
                         "lyrics": "letra.srt",
+                        "syllables": null,
                         "cover": "capa.jpg"
                     }
                 },
@@ -38,6 +39,7 @@
                         "audio": "instrumental.mp3",
                         "midi": "voz.mid",
                         "lyrics": "letra.srt",
+                        "syllables": null,
                         "cover": "capa.jpg"
                     }
                 },
@@ -56,6 +58,7 @@
                         "audio": "instrumental.mp3",
                         "midi": "voz.mid",
                         "lyrics": "letra.srt",
+                        "syllables": null,
                         "cover": "capa.jpg"
                     }
                 },
@@ -74,6 +77,7 @@
                         "audio": "instrumental.mp3",
                         "midi": "voz.mid",
                         "lyrics": "letra.srt",
+                        "syllables": null,
                         "cover": "capa.jpg"
                     }
                 }
@@ -98,6 +102,7 @@
                         "audio": "instrumental.mp3",
                         "midi": "voz.mid",
                         "lyrics": "letra.srt",
+                        "syllables": "voz_silabas.srt",
                         "cover": "capa.jpg"
                     }
                 }
@@ -122,6 +127,7 @@
                         "audio": "instrumental.mp3",
                         "midi": "voz.mid",
                         "lyrics": "letra.srt",
+                        "syllables": null,
                         "cover": "capa.jpg"
                     }
                 }

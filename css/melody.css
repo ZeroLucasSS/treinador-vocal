@@ -1242,20 +1242,26 @@ h2 {
 
 
 /* ============================================================
-   LETRA SINCRONIZADA
+   LETRA / KARAOKÊ
    ============================================================ */
 
 .painel-letra {
-    min-height: 142px;
+    position: relative;
+
+    min-height: 160px;
 
     display: flex;
     flex-direction: column;
 
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
 
+    gap: 12px;
+
     margin-top: 14px;
-    padding: 20px;
+    padding: 20px 24px 22px;
+
+    overflow: hidden;
 
     border: 1px solid var(--borda);
     border-radius: 18px;
@@ -1265,72 +1271,369 @@ h2 {
     text-align: center;
 }
 
-.painel-letra .rotulo {
-    align-self: stretch;
 
-    margin-bottom: 12px;
+/* ============================================================
+   CABEÇALHO
+   ============================================================ */
+
+.cabecalho-letra {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
 }
+
+
+.painel-letra .rotulo {
+    margin: 0;
+
+    text-align: left;
+}
+
+
+/* ============================================================
+   INDICADOR KARAOKÊ
+   ============================================================ */
+
+.indicador-karaoke {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 25px;
+
+    padding: 4px 9px;
+
+    border: 1px solid
+        rgba(104, 168, 255, 0.30);
+
+    border-radius: 999px;
+
+    background:
+        rgba(104, 168, 255, 0.08);
+
+    color: var(--azul);
+
+    font-size: 0.62rem;
+    font-weight: 900;
+
+    letter-spacing: 0.08em;
+
+    opacity: 0.72;
+
+    user-select: none;
+}
+
+
+/* ============================================================
+   ÁREA PRINCIPAL DA LETRA
+   ============================================================ */
 
 .letra-atual {
     width: 100%;
 
-    min-height: 60px;
+    min-height: 72px;
 
+    display: block;
+
+    padding: 8px 10px;
+
+    color: var(--texto);
+
+    font-size:
+        clamp(
+            1.20rem,
+            3vw,
+            1.72rem
+        );
+
+    font-weight: 750;
+
+    line-height: 1.6;
+
+    text-align: center;
+
+    white-space: pre-line;
+
+    overflow-wrap: break-word;
+
+    transition:
+        color 160ms ease,
+        opacity 160ms ease;
+}
+
+
+/* ============================================================
+   SEM FRASE ATIVA
+   ============================================================ */
+
+.letra-atual.sem-frase {
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    padding: 4px 10px;
-
-    color: var(--texto);
-
-    font-size: clamp(1.15rem, 3vw, 1.65rem);
-    font-weight: 800;
-    line-height: 1.45;
-
-    white-space: pre-line;
-
-    transition:
-        opacity 120ms ease,
-        color 120ms ease;
-}
-
-.letra-atual.sem-frase {
     color: var(--secundario);
 
     font-weight: 600;
+
+    opacity: 0.76;
 }
 
 
+/* ============================================================
+   MODO KARAOKÊ ATIVO
+   ============================================================ */
+
+.letra-atual.karaoke-ativo {
+    display: block;
+
+    color: var(--texto);
+
+    font-weight: 750;
+
+    opacity: 1;
+}
+
+
+/* ============================================================
+   SÍLABA BASE
+   ============================================================
+ *
+ * Cada sílaba mapeada pelo karaoke-engine.js
+ * recebe esta classe.
+ *
+ * Os espaços e sinais de pontuação permanecem
+ * como nós de texto normais e não são alterados.
+ * ============================================================ */
+
+.karaoke-silaba {
+    position: relative;
+
+    display: inline;
+
+    border-radius: 5px;
+
+    transition:
+        color 90ms linear,
+        opacity 90ms linear,
+        background-color 90ms linear,
+        text-shadow 90ms linear;
+}
+
+
+/* ============================================================
+   SÍLABA FUTURA
+   ============================================================
+ *
+ * Ainda não chegou ao playhead.
+ * ============================================================ */
+
+.karaoke-silaba-futura {
+    color: var(--texto);
+
+    opacity: 0.72;
+}
+
+
+/* ============================================================
+   SÍLABA JÁ CANTADA
+   ============================================================
+ *
+ * Mantemos visível para que o cantor conserve
+ * o contexto da frase, mas com menor destaque.
+ * ============================================================ */
+
+.karaoke-silaba-passada {
+    color: var(--secundario);
+
+    opacity: 0.62;
+}
+
+
+/* ============================================================
+   SÍLABA ATUAL
+   ============================================================
+ *
+ * Este é o principal elemento visual do karaokê.
+ *
+ * O destaque precisa ser forte o suficiente para
+ * ser percebido rapidamente enquanto o usuário
+ * também observa o piano roll.
+ * ============================================================ */
+
+.karaoke-silaba-atual {
+    position: relative;
+
+    padding:
+        0.08em
+        0.10em;
+
+    color: var(--texto);
+
+    opacity: 1;
+
+    font-weight: 950;
+
+    background:
+        rgba(104, 168, 255, 0.16);
+
+    text-shadow:
+        0 0 14px
+        rgba(104, 168, 255, 0.42);
+}
+
+
+/*
+ * Barra inferior da sílaba atual.
+ *
+ * Funciona como um pequeno playhead textual.
+ */
+.karaoke-silaba-atual::after {
+    content: "";
+
+    position: absolute;
+
+    left: 8%;
+    right: 8%;
+
+    bottom: -0.18em;
+
+    height: 3px;
+
+    border-radius: 999px;
+
+    background: var(--azul);
+
+    box-shadow:
+        0 0 8px
+        rgba(104, 168, 255, 0.55);
+}
+
+
+/* ============================================================
+   AJUDA
+   ============================================================ */
+
+.ajuda-karaoke {
+    margin: 0;
+
+    color: var(--secundario);
+
+    font-size: 0.70rem;
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    opacity: 0.70;
+}
+
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
 @media (max-width: 760px) {
 
-    .sincronizacao-cabecalho {
-        flex-direction: column;
+    .painel-letra {
+        min-height: 145px;
+
+        padding:
+            16px
+            14px
+            18px;
+
+        gap: 10px;
     }
 
-    .sincronizacao-ajuda {
-        max-width: none;
 
-        text-align: left;
+    .letra-atual {
+        min-height: 66px;
+
+        padding:
+            6px
+            4px;
+
+        font-size:
+            clamp(
+                1.08rem,
+                4.7vw,
+                1.38rem
+            );
+
+        line-height: 1.55;
     }
 
-    .sincronizacao-linha {
-        grid-template-columns: 1fr;
+
+    .indicador-karaoke {
+        padding:
+            3px
+            7px;
+
+        font-size: 0.56rem;
     }
 
-    .sincronizacao-botoes {
-        grid-template-columns: repeat(5, minmax(58px, 1fr));
 
-        overflow-x: auto;
-
-        padding-bottom: 2px;
+    .ajuda-karaoke {
+        font-size: 0.64rem;
     }
+
+
+    .karaoke-silaba-atual::after {
+        height: 2px;
+    }
+}
+
+
+@media (max-width: 500px) {
 
     .painel-letra {
-        min-height: 130px;
+        min-height: 138px;
 
-        padding: 16px 12px;
+        padding:
+            14px
+            10px
+            16px;
+
+        border-radius: 15px;
+    }
+
+
+    .cabecalho-letra {
+        gap: 8px;
+    }
+
+
+    .letra-atual {
+        font-size: 1.08rem;
+
+        line-height: 1.5;
+    }
+
+
+    .ajuda-karaoke {
+        display: none;
+    }
+}
+
+
+/* ============================================================
+   ACESSIBILIDADE — MOVIMENTO REDUZIDO
+   ============================================================ */
+
+@media (
+    prefers-reduced-motion:
+    reduce
+) {
+
+    .letra-atual,
+    .karaoke-silaba {
+        transition: none;
     }
 }
 
@@ -1350,7 +1653,4 @@ h2 {
         padding-right: 6px;
     }
 
-    .letra-atual {
-        font-size: 1.12rem;
-    }
 }

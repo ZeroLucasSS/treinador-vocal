@@ -75,8 +75,15 @@ import {
     getSongAudioUrl,
     getSongMidiUrl,
     getSongLyricsUrl,
+    getSongSyllablesUrl,
     getSongOffsets
 } from "./song-catalog.js";
+
+
+import {
+    buildKaraokeModel,
+    getKaraokeStateAtTime
+} from "./karaoke-engine.js";
 
 
 /*
@@ -707,6 +714,16 @@ let lyricsUrl =
 
 
 /*
+ * SRT silábico.
+ *
+ * Este arquivo pertence à mesma linha temporal
+ * do MIDI e utiliza melodyOffsetSeconds.
+ */
+let syllablesUrl =
+    null;
+
+
+/*
  * Positivo = atrasar MIDI.
  * Negativo = adiantar MIDI.
  */
@@ -728,6 +745,44 @@ let subtitles =
 
 let currentSubtitleIndex =
     0;
+
+
+/*
+ * ============================================================
+ * KARAOKÊ SILÁBICO
+ * ============================================================
+ */
+
+/*
+ * Conteúdo bruto de voz_silabas.srt.
+ */
+let syllableSubtitles =
+    [];
+
+
+/*
+ * Modelo construído pelo karaoke-engine.js.
+ *
+ * Contém:
+ *
+ * frase ↔ sílabas ↔ notas MIDI
+ */
+let karaokeModel =
+    null;
+
+
+/*
+ * Estado visual atualmente renderizado.
+ *
+ * Serve para evitar reconstruir o DOM da letra
+ * desnecessariamente em todos os frames.
+ */
+let renderedKaraokePhraseIndex =
+    null;
+
+
+let renderedKaraokeSyllableIndex =
+    null;
 
 
 let noteStates =
@@ -802,14 +857,23 @@ async function initialize() {
 
     try {
 
+        /*
+         * 1. Catálogo
+         */
         catalog =
             await loadCatalog();
 
 
+        /*
+         * 2. Descobre qual música foi solicitada.
+         */
         const songId =
             getSongIdFromUrl();
 
 
+        /*
+         * 3. Localiza a música.
+         */
         currentSong =
             findSongInCatalog(
                 catalog,
@@ -829,20 +893,53 @@ async function initialize() {
         }
 
 
+        /*
+         * 4. Prepara caminhos, offsets e interface.
+         */
         prepareSong(
             currentSong
         );
 
 
+        /*
+         * 5. MP3
+         */
         setupBackingTrack();
 
 
+        /*
+         * 6. MIDI
+         *
+         * Precisa ser carregado antes da construção
+         * do modelo de karaokê.
+         */
         await loadVocalMidi();
 
 
+        /*
+         * 7. Letra tradicional.
+         */
         await loadLyrics();
 
 
+        /*
+         * 8. Letra sílaba a sílaba.
+         */
+        await loadSyllables();
+
+
+        /*
+         * 9. Constrói:
+         *
+         * frase ↔ sílaba ↔ nota MIDI
+         */
+        rebuildKaraokeModel();
+
+
+        /*
+         * 10. Libera interface quando MP3 e MIDI
+         * estiverem realmente disponíveis.
+         */
         checkFilesReady();
 
 
@@ -1121,6 +1218,12 @@ function prepareSong(
 
     lyricsUrl =
         getSongLyricsUrl(
+            song
+        );
+
+
+    syllablesUrl =
+        getSongSyllablesUrl(
             song
         );
 
@@ -1407,6 +1510,25 @@ async function loadVocalMidi() {
  * ============================================================
  */
 
+/*
+ * ============================================================
+ * CARREGAR LETRA TRADICIONAL
+ * ============================================================
+ *
+ * letra.srt
+ *
+ * Responsável por preservar:
+ *
+ * - palavras completas;
+ * - espaços;
+ * - acentos;
+ * - pontuação;
+ * - organização das frases.
+ *
+ * Continua opcional.
+ * ============================================================
+ */
+
 async function loadLyrics() {
 
     subtitles =
@@ -1444,7 +1566,7 @@ async function loadLyrics() {
 
 
     elements.lyricsStatus.textContent =
-        "Lendo arquivo...";
+        "Lendo letra...";
 
 
     try {
@@ -1461,7 +1583,7 @@ async function loadLyrics() {
         ) {
 
             elements.lyricsStatus.textContent =
-                "Arquivo vazio";
+                "Letra vazia";
 
 
             elements.currentLyrics.textContent =
@@ -1484,7 +1606,7 @@ async function loadLyrics() {
     } catch (error) {
 
         console.warn(
-            "Não foi possível carregar a letra SRT:",
+            "Não foi possível carregar letra.srt:",
             error
         );
 
@@ -1494,7 +1616,7 @@ async function loadLyrics() {
 
 
         elements.lyricsStatus.textContent =
-            "Erro ao carregar";
+            "Erro na letra";
 
 
         elements.currentLyrics.textContent =
@@ -1507,7 +1629,296 @@ async function loadLyrics() {
     }
 
 
+    rebuildKaraokeModel();
+
+
     updateSyncControlsState();
+}
+
+
+/*
+ * ============================================================
+ * CARREGAR SRT SILÁBICO
+ * ============================================================
+ *
+ * voz_silabas.srt
+ *
+ * Cada entrada representa uma sílaba associada
+ * temporalmente a uma nota MIDI.
+ *
+ * O arquivo é opcional.
+ *
+ * Se não existir, o aplicativo continua funcionando
+ * com a legenda tradicional.
+ * ============================================================
+ */
+
+async function loadSyllables() {
+
+    syllableSubtitles =
+        [];
+
+
+    karaokeModel =
+        null;
+
+
+    renderedKaraokePhraseIndex =
+        null;
+
+
+    renderedKaraokeSyllableIndex =
+        null;
+
+
+    if (
+        !syllablesUrl
+    ) {
+
+        console.info(
+            "[KARAOKE] Música sem voz_silabas.srt. " +
+            "Usando legenda tradicional."
+        );
+
+
+        updateLyricsFileStatus();
+
+        return;
+    }
+
+
+    try {
+
+        syllableSubtitles =
+            await loadSrtFromUrl(
+                syllablesUrl
+            );
+
+
+        if (
+            syllableSubtitles.length ===
+            0
+        ) {
+
+            console.warn(
+                "[KARAOKE] voz_silabas.srt está vazio."
+            );
+
+
+            updateLyricsFileStatus();
+
+            return;
+        }
+
+
+        console.info(
+            `[KARAOKE] ${syllableSubtitles.length} sílaba(s) carregada(s).`
+        );
+
+
+    } catch (error) {
+
+        console.warn(
+            "[KARAOKE] Não foi possível carregar voz_silabas.srt:",
+            error
+        );
+
+
+        syllableSubtitles =
+            [];
+    }
+
+
+    rebuildKaraokeModel();
+
+
+    updateLyricsFileStatus();
+}
+
+
+/*
+ * ============================================================
+ * STATUS DOS ARQUIVOS DE LETRA
+ * ============================================================
+ */
+
+function updateLyricsFileStatus() {
+
+    if (
+        subtitles.length >
+            0 &&
+        syllableSubtitles.length >
+            0
+    ) {
+
+        elements.lyricsStatus.textContent =
+            (
+                `${subtitles.length} frase(s) · ` +
+                `${syllableSubtitles.length} sílaba(s)`
+            );
+
+
+        return;
+    }
+
+
+    if (
+        subtitles.length >
+        0
+    ) {
+
+        elements.lyricsStatus.textContent =
+            `${subtitles.length} frase(s)`;
+
+
+        return;
+    }
+
+
+    if (
+        syllableSubtitles.length >
+        0
+    ) {
+
+        elements.lyricsStatus.textContent =
+            `${syllableSubtitles.length} sílaba(s)`;
+
+
+        return;
+    }
+
+
+    elements.lyricsStatus.textContent =
+        "Não disponível";
+}
+
+
+/*
+ * ============================================================
+ * CONSTRUIR MODELO DO KARAOKÊ
+ * ============================================================
+ *
+ * IMPORTANTE:
+ *
+ * Utilizamos selectedTrack.notes,
+ * e NÃO selectedMelody.notes.
+ *
+ * Motivo:
+ *
+ * selectedMelody já possui melodyOffsetSeconds aplicado.
+ *
+ * voz_silabas.srt contém os tempos originais do MIDI.
+ *
+ * O offset será aplicado posteriormente por
+ * getKaraokeStateAtTime().
+ *
+ * Isso evita aplicar o offset duas vezes.
+ * ============================================================
+ */
+
+function rebuildKaraokeModel() {
+
+    karaokeModel =
+        null;
+
+
+    renderedKaraokePhraseIndex =
+        null;
+
+
+    renderedKaraokeSyllableIndex =
+        null;
+
+
+    /*
+     * Para o modo completo precisamos:
+     *
+     * frase + sílabas + MIDI.
+     */
+    if (
+        subtitles.length ===
+            0 ||
+        syllableSubtitles.length ===
+            0 ||
+        !selectedTrack ||
+        !Array.isArray(
+            selectedTrack.notes
+        ) ||
+        selectedTrack.notes.length ===
+            0
+    ) {
+
+        return;
+    }
+
+
+    try {
+
+        karaokeModel =
+            buildKaraokeModel({
+
+                phrases:
+                    subtitles,
+
+                syllables:
+                    syllableSubtitles,
+
+                /*
+                 * TEMPOS MIDI ORIGINAIS.
+                 */
+                notes:
+                    selectedTrack.notes
+            });
+
+
+        if (
+            !karaokeModel ||
+            !karaokeModel.valid
+        ) {
+
+            console.warn(
+                "[KARAOKE] O modelo não pôde ser validado. " +
+                "A legenda tradicional será utilizada."
+            );
+
+
+            karaokeModel =
+                null;
+
+
+            return;
+        }
+
+
+        console.info(
+            "[KARAOKE] Modelo ativado com sucesso.",
+            {
+                mode:
+                    karaokeModel.mode,
+
+                frases:
+                    karaokeModel.phrases.length,
+
+                silabas:
+                    karaokeModel.syllables.length,
+
+                pares:
+                    karaokeModel.pairs.length
+            }
+        );
+
+
+    } catch (error) {
+
+        console.error(
+            "[KARAOKE] Erro ao construir modelo:",
+            error
+        );
+
+
+        karaokeModel =
+            null;
+    }
 }
 
 
@@ -1613,6 +2024,13 @@ function selectMidiTrack(
 
 
     rebuildSelectedMelody();
+
+
+    /*
+    * A troca de trilha MIDI também exige
+    * reconstruir a relação nota ↔ sílaba.
+    */
+    rebuildKaraokeModel();
 
 
     resetInterfaceStatistics();
@@ -1784,6 +2202,21 @@ function setMidiOffset(
         );
     }
 
+    /*
+     * MIDI e sílabas compartilham offset.
+     */
+    renderedKaraokePhraseIndex =
+        null;
+
+
+    renderedKaraokeSyllableIndex =
+        null;
+
+
+    updateLyricsInterface(
+        backingSongTime
+    );
+
 
     updateSyncInterface();
 }
@@ -1825,9 +2258,24 @@ function setLyricsOffset(
         0;
 
 
-    updateLyricsInterface(
-        backingSongTime
-    );
+    /*
+     * No modo karaokê, o tempo principal da frase
+     * é determinado pela linha temporal vocal:
+     *
+     * MIDI + voz_silabas.srt.
+     *
+     * Portanto lyricsOffset permanece relevante
+     * somente para o fallback tradicional.
+     */
+    if (
+        !karaokeModel ||
+        !karaokeModel.valid
+    ) {
+
+        updateLyricsInterface(
+            backingSongTime
+        );
+    }
 
 
     updateSyncInterface();
@@ -5210,9 +5658,19 @@ function updateSyncControlsState() {
         !melodyPreviewPlaying;
 
 
+    /*
+    * lyricsOffset pertence à legenda tradicional.
+    *
+    * Quando o karaokê silábico está ativo,
+    * sílabas e MIDI compartilham melodyOffsetSeconds.
+    */
     const lyricsEnabled =
         subtitles.length >
             0 &&
+        !(
+            karaokeModel &&
+            karaokeModel.valid
+        ) &&
         !running &&
         !countdownRunning &&
         !melodyPreviewPlaying;
@@ -5310,7 +5768,393 @@ function formatOffsetMilliseconds(
  * ============================================================
  */
 
+/*
+ * ============================================================
+ * ATUALIZAR LETRA
+ * ============================================================
+ *
+ * Prioridade:
+ *
+ * 1. karaokê silábico;
+ * 2. legenda tradicional.
+ *
+ * ============================================================
+ */
+
 function updateLyricsInterface(
+    audioTime
+) {
+
+    /*
+     * ========================================================
+     * MODO KARAOKÊ
+     * ========================================================
+     */
+
+    if (
+        karaokeModel &&
+        karaokeModel.valid
+    ) {
+
+        updateKaraokeLyricsInterface(
+            audioTime
+        );
+
+
+        return;
+    }
+
+
+    /*
+     * ========================================================
+     * FALLBACK — LEGENDA TRADICIONAL
+     * ========================================================
+     */
+
+    updateLegacyLyricsInterface(
+        audioTime
+    );
+}
+
+
+/*
+ * ============================================================
+ * KARAOKÊ — ATUALIZAÇÃO EM TEMPO REAL
+ * ============================================================
+ */
+
+function updateKaraokeLyricsInterface(
+    audioTime
+) {
+
+    const state =
+        getKaraokeStateAtTime(
+            karaokeModel,
+            audioTime,
+            melodyOffsetSeconds
+        );
+
+
+    const phrase =
+        state.phrase;
+
+
+    const syllable =
+        state.syllable;
+
+
+    /*
+     * Estamos fora de qualquer frase.
+     */
+    if (
+        !phrase
+    ) {
+
+        if (
+            renderedKaraokePhraseIndex !==
+            null
+        ) {
+
+            elements.currentLyrics.textContent =
+                "♪";
+
+
+            elements.currentLyrics.classList.add(
+                "sem-frase"
+            );
+
+
+            elements.currentLyrics.classList.remove(
+                "karaoke-ativo"
+            );
+
+
+            renderedKaraokePhraseIndex =
+                null;
+
+
+            renderedKaraokeSyllableIndex =
+                null;
+        }
+
+
+        return;
+    }
+
+
+    const phraseChanged =
+        renderedKaraokePhraseIndex !==
+        phrase.index;
+
+
+    const currentSyllableIndex =
+        syllable
+            ? syllable.index
+            : null;
+
+
+    const syllableChanged =
+        renderedKaraokeSyllableIndex !==
+        currentSyllableIndex;
+
+
+    /*
+     * Não reconstruímos o DOM em todo frame.
+     */
+    if (
+        !phraseChanged &&
+        !syllableChanged
+    ) {
+
+        return;
+    }
+
+
+    renderKaraokePhrase(
+        phrase,
+        syllable,
+        state.sourceTime
+    );
+
+
+    renderedKaraokePhraseIndex =
+        phrase.index;
+
+
+    renderedKaraokeSyllableIndex =
+        currentSyllableIndex;
+}
+
+
+/*
+ * ============================================================
+ * RENDERIZAR FRASE DO KARAOKÊ
+ * ============================================================
+ */
+
+function renderKaraokePhrase(
+    phrase,
+    activeSyllable,
+    sourceTime
+) {
+
+    const container =
+        elements.currentLyrics;
+
+
+    /*
+     * Limpa a renderização anterior.
+     *
+     * Usamos nós DOM e textContent.
+     * Não utilizamos innerHTML com texto do SRT.
+     */
+    container.replaceChildren();
+
+
+    container.classList.remove(
+        "sem-frase"
+    );
+
+
+    container.classList.add(
+        "karaoke-ativo"
+    );
+
+
+    const text =
+        String(
+            phrase.text ||
+            ""
+        );
+
+
+    const mappedSyllables =
+        phrase.syllables
+            .filter(
+                syllable =>
+                    Number.isInteger(
+                        syllable.charStart
+                    ) &&
+                    Number.isInteger(
+                        syllable.charEnd
+                    ) &&
+                    syllable.charStart >=
+                        0 &&
+                    syllable.charEnd >
+                        syllable.charStart
+            )
+            .sort(
+                (
+                    first,
+                    second
+                ) =>
+                    first.charStart -
+                    second.charStart
+            );
+
+
+    /*
+     * Caso o alinhamento textual não tenha sido possível,
+     * mostramos a frase completa sem destaque.
+     */
+    if (
+        mappedSyllables.length ===
+        0
+    ) {
+
+        container.textContent =
+            text;
+
+
+        return;
+    }
+
+
+    let cursor =
+        0;
+
+
+    for (
+        const syllable of
+        mappedSyllables
+    ) {
+
+        /*
+         * Texto que existe antes da sílaba:
+         *
+         * espaços,
+         * vírgulas,
+         * pontuação etc.
+         */
+        if (
+            syllable.charStart >
+            cursor
+        ) {
+
+            container.appendChild(
+                document.createTextNode(
+                    text.slice(
+                        cursor,
+                        syllable.charStart
+                    )
+                )
+            );
+        }
+
+
+        const span =
+            document.createElement(
+                "span"
+            );
+
+
+        span.textContent =
+            text.slice(
+                syllable.charStart,
+                syllable.charEnd
+            );
+
+
+        span.classList.add(
+            "karaoke-silaba"
+        );
+
+
+        /*
+         * ====================================================
+         * SÍLABA ATUAL
+         * ====================================================
+         */
+
+        if (
+            activeSyllable &&
+            syllable.index ===
+                activeSyllable.index
+        ) {
+
+            span.classList.add(
+                "karaoke-silaba-atual"
+            );
+
+
+            span.setAttribute(
+                "aria-current",
+                "true"
+            );
+
+
+        /*
+         * ====================================================
+         * JÁ CANTADA
+         * ====================================================
+         */
+
+        } else if (
+            syllable.end <
+            sourceTime
+        ) {
+
+            span.classList.add(
+                "karaoke-silaba-passada"
+            );
+
+
+        /*
+         * ====================================================
+         * AINDA NÃO CANTADA
+         * ====================================================
+         */
+
+        } else {
+
+            span.classList.add(
+                "karaoke-silaba-futura"
+            );
+        }
+
+
+        container.appendChild(
+            span
+        );
+
+
+        cursor =
+            syllable.charEnd;
+    }
+
+
+    /*
+     * Restante do texto:
+     *
+     * normalmente pontuação final.
+     */
+    if (
+        cursor <
+        text.length
+    ) {
+
+        container.appendChild(
+            document.createTextNode(
+                text.slice(
+                    cursor
+                )
+            )
+        );
+    }
+}
+
+
+/*
+ * ============================================================
+ * LEGENDA TRADICIONAL
+ * ============================================================
+ *
+ * Compatibilidade com músicas que ainda não possuem
+ * voz_silabas.srt.
+ * ============================================================
+ */
+
+function updateLegacyLyricsInterface(
     audioTime
 ) {
 
@@ -5331,8 +6175,8 @@ function updateLyricsInterface(
 
 
     /*
-     * Caso o relógio volte para trás
-     * (reinício ou seek), reinicia a busca.
+     * Se o tempo voltou para trás,
+     * reinicia a busca.
      */
     if (
         currentSubtitleIndex >
@@ -5375,18 +6219,17 @@ function updateLyricsInterface(
             subtitle.end
     ) {
 
-        /*
-         * textContent preserva segurança.
-         *
-         * As quebras \n serão exibidas pelo CSS
-         * usando white-space: pre-line.
-         */
         elements.currentLyrics.textContent =
             subtitle.text;
 
 
         elements.currentLyrics.classList.remove(
             "sem-frase"
+        );
+
+
+        elements.currentLyrics.classList.remove(
+            "karaoke-ativo"
         );
 
 
@@ -5401,6 +6244,11 @@ function updateLyricsInterface(
     elements.currentLyrics.classList.add(
         "sem-frase"
     );
+
+
+    elements.currentLyrics.classList.remove(
+        "karaoke-ativo"
+    );
 }
 
 
@@ -5410,25 +6258,46 @@ function resetLyricsInterface() {
         0;
 
 
+    renderedKaraokePhraseIndex =
+        null;
+
+
+    renderedKaraokeSyllableIndex =
+        null;
+
+
+    elements.currentLyrics.replaceChildren();
+
+
+    /*
+     * Existe algum tipo de letra disponível.
+     */
     if (
-        subtitles.length ===
-        0
+        subtitles.length >
+            0 ||
+        syllableSubtitles.length >
+            0 ||
+        lyricsUrl ||
+        syllablesUrl
     ) {
 
         elements.currentLyrics.textContent =
-            lyricsUrl
-                ? "♪"
-                : "Letra não disponível";
+            "♪";
 
     } else {
 
         elements.currentLyrics.textContent =
-            "♪";
+            "Letra não disponível";
     }
 
 
     elements.currentLyrics.classList.add(
         "sem-frase"
+    );
+
+
+    elements.currentLyrics.classList.remove(
+        "karaoke-ativo"
     );
 }
 

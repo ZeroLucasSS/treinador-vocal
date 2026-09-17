@@ -22,6 +22,7 @@ assets/
     │       ├── instrumental.mp3
     │       ├── voz.mid
     │       ├── letra.srt
+    │       ├── voz_silabas.srt
     │       └── capa.jpg
     │
     └── pop-rock/
@@ -30,7 +31,26 @@ assets/
             ├── instrumental.mp3
             ├── voz.mid
             ├── letra.srt
+            ├── voz_silabas.srt
             └── capa.jpg
+
+
+------------------------------------------------------------
+ARQUIVOS
+------------------------------------------------------------
+
+OBRIGATÓRIOS:
+
+instrumental.mp3
+voz.mid
+musica.json
+
+
+OPCIONAIS:
+
+letra.srt
+voz_silabas.srt
+capa.jpg / capa.png / etc.
 
 
 ------------------------------------------------------------
@@ -38,41 +58,36 @@ EXEMPLO DE musica.json
 ------------------------------------------------------------
 
 {
-    "title": "Ninguém te ama como Eu",
-    "artist": "Marcos André",
+    "title": "Tempo Perdido",
+    "artist": "Legião Urbana",
     "difficulty": "intermediate",
     "language": "pt-BR",
-    "offset": -0.24,
+    "offset": 0,
     "lyricsOffset": 0
 }
 
 
 ------------------------------------------------------------
-CONVENÇÃO DOS OFFSETS
+OFFSETS
 ------------------------------------------------------------
 
-Unidade:
-    segundos
-
 offset:
-    sincronização MIDI ↔ MP3
+    sincronização do MIDI com o MP3.
+
+    O arquivo voz_silabas.srt utiliza o MESMO offset,
+    pois é produzido a partir da mesma linha temporal
+    utilizada para gerar o MIDI.
 
 lyricsOffset:
-    sincronização SRT ↔ MP3
+    sincronização independente da legenda tradicional
+    letra.srt com o MP3.
+
 
 Valor positivo:
-    atrasa o elemento.
+    atrasa.
 
 Valor negativo:
-    adianta o elemento.
-
-Exemplo:
-
-    "offset": -0.24
-
-significa:
-
-    adiantar o MIDI em 240 ms.
+    adianta.
 
 
 ------------------------------------------------------------
@@ -80,7 +95,7 @@ EXEMPLO OPCIONAL DE genero.json
 ------------------------------------------------------------
 
 {
-    "name": "Católicas"
+    "name": "Rock Nacional"
 }
 
 
@@ -91,10 +106,11 @@ O SCRIPT DETECTA AUTOMATICAMENTE
 - ID do gênero;
 - nome do gênero;
 - ID da música;
-- pasta;
+- pasta da música;
 - instrumental.mp3;
 - voz.mid;
 - letra.srt;
+- voz_silabas.srt;
 - capa;
 - duração do MP3.
 
@@ -174,6 +190,13 @@ MIDI_FILENAME = (
 
 LYRICS_FILENAME = (
     "letra.srt"
+)
+
+
+# NOVO:
+# legenda temporal sílaba a sílaba.
+SYLLABLES_FILENAME = (
+    "voz_silabas.srt"
 )
 
 
@@ -385,7 +408,7 @@ def load_existing_catalog() -> dict[str, Any]:
 
         with CATALOG_PATH.open(
             "r",
-            encoding="utf-8"
+            encoding="utf-8-sig"
         ) as file:
 
             data = json.load(
@@ -597,7 +620,7 @@ def scan_genres(
 
 
 # ============================================================
-# OBTER NOME DO GÊNERO
+# NOME DO GÊNERO
 # ============================================================
 
 def get_genre_name(
@@ -610,10 +633,6 @@ def get_genre_name(
         / GENRE_METADATA_FILENAME
     )
 
-
-    # --------------------------------------------------------
-    # 1. genero.json
-    # --------------------------------------------------------
 
     if metadata_path.exists():
 
@@ -635,10 +654,6 @@ def get_genre_name(
             return name
 
 
-    # --------------------------------------------------------
-    # 2. Nome já presente no catálogo
-    # --------------------------------------------------------
-
     if (
         genre_directory.name
         in existing_names
@@ -648,10 +663,6 @@ def get_genre_name(
             genre_directory.name
         ]
 
-
-    # --------------------------------------------------------
-    # 3. Gerar pelo slug
-    # --------------------------------------------------------
 
     return slug_to_display_name(
         genre_directory.name
@@ -857,7 +868,7 @@ def build_song_entry(
 
 
     # ========================================================
-    # OFFSET MIDI
+    # OFFSET DO MIDI + SÍLABAS
     # ========================================================
 
     offset = read_offset_field(
@@ -868,7 +879,7 @@ def build_song_entry(
 
 
     # ========================================================
-    # OFFSET DA LETRA
+    # OFFSET DA LETRA TRADICIONAL
     # ========================================================
 
     lyrics_offset = read_offset_field(
@@ -936,6 +947,12 @@ def build_song_entry(
     )
 
 
+    syllables_path = (
+        song_directory
+        / SYLLABLES_FILENAME
+    )
+
+
     cover_path = find_cover(
         song_directory
     )
@@ -997,13 +1014,17 @@ def build_song_entry(
         "language":
             language,
 
-        # Estes dois campos são SEMPRE escritos.
-        # Assim o catalogo.json fica explícito
-        # sobre a calibração de cada música.
 
+        # Não existem comentários em JSON.
+
+        # Estes campos são escritos explicitamente
+        # no objeto Python antes da serialização.
+
+        # Offset compartilhado por MIDI e SRT silábico.
         "offset":
             offset,
 
+        # Offset independente da legenda tradicional.
         "lyricsOffset":
             lyrics_offset,
 
@@ -1021,6 +1042,16 @@ def build_song_entry(
                     if (
                         lyrics_path.exists()
                         and lyrics_path.is_file()
+                    )
+                    else None
+                ),
+
+            "syllables":
+                (
+                    SYLLABLES_FILENAME
+                    if (
+                        syllables_path.exists()
+                        and syllables_path.is_file()
                     )
                     else None
                 ),
@@ -1051,15 +1082,8 @@ def read_offset_field(
     """
     Lê um offset temporal em segundos.
 
-    Valores válidos:
-
-        0
-        -0.24
-        0.350
-        "0.5"
-
     Se o campo não existir:
-        usa default.
+        usa o valor padrão.
 
     Se existir e for inválido:
         interrompe a geração.
@@ -1119,7 +1143,6 @@ def read_offset_field(
         )
 
 
-    # Evita -0.0 no JSON.
     if number == 0:
 
         return 0.0
@@ -1536,7 +1559,7 @@ def format_duration(
 
 
 # ============================================================
-# FORMATAR OFFSET PARA TERMINAL
+# FORMATAR OFFSET
 # ============================================================
 
 def format_offset(
@@ -1564,7 +1587,7 @@ def format_offset(
 
 
 # ============================================================
-# RESUMO DA MÚSICA
+# RESUMO DE UMA MÚSICA
 # ============================================================
 
 def print_song_summary(
@@ -1582,7 +1605,7 @@ def print_song_summary(
 
     print(
         "            "
-        "MIDI: "
+        "MIDI/sílabas: "
         f"{format_offset(song['offset'])}"
         " | "
         "Letra: "
@@ -1590,10 +1613,15 @@ def print_song_summary(
     )
 
 
-    if (
+    files = (
         song[
             "files"
-        ][
+        ]
+    )
+
+
+    if (
+        files[
             "lyrics"
         ]
         is None
@@ -1603,6 +1631,20 @@ def print_song_summary(
             "            "
             f"{Terminal.WARN} "
             "Sem letra.srt"
+        )
+
+
+    if (
+        files[
+            "syllables"
+        ]
+        is None
+    ):
+
+        print(
+            "            "
+            f"{Terminal.WARN} "
+            "Sem voz_silabas.srt"
         )
 
 
@@ -1644,6 +1686,38 @@ def print_summary(
         ][
             "lyrics"
         ]
+    )
+
+
+    syllables_count = sum(
+        1
+        for song
+        in songs
+        if song[
+            "files"
+        ][
+            "syllables"
+        ]
+    )
+
+
+    karaoke_count = sum(
+        1
+        for song
+        in songs
+        if (
+            song[
+                "files"
+            ][
+                "lyrics"
+            ]
+            and
+            song[
+                "files"
+            ][
+                "syllables"
+            ]
+        )
     )
 
 
@@ -1689,6 +1763,18 @@ def print_summary(
     print(
         f"Com letra SRT: "
         f"{lyrics_count}"
+    )
+
+
+    print(
+        f"Com SRT silábico: "
+        f"{syllables_count}"
+    )
+
+
+    print(
+        f"Preparadas para karaokê: "
+        f"{karaoke_count}"
     )
 
 

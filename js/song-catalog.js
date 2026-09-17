@@ -13,12 +13,23 @@
  * - listar músicas;
  * - localizar música pelo ID;
  * - construir URLs dos arquivos;
- * - fornecer URL da letra SRT;
+ * - fornecer URL da letra por frases;
+ * - fornecer URL da letra silábica;
  * - normalizar offsets de MIDI e letra;
  * - construir URL da tela de treino.
  *
- * O restante do aplicativo NÃO precisa conhecer
- * a estrutura física das pastas.
+ * IMPORTANTE:
+ *
+ * files.lyrics
+ *     → letra.srt
+ *     → frases/palavras completas.
+ *
+ * files.syllables
+ *     → voz_silabas.srt
+ *     → divisão sílaba a sílaba.
+ *
+ * O SRT silábico pertence à mesma linha temporal do MIDI.
+ * Portanto, ambos utilizam song.offset.
  *
  * ============================================================
  */
@@ -89,9 +100,6 @@ export async function loadSongCatalog() {
 /*
  * ============================================================
  * LIMPAR CACHE
- * ============================================================
- *
- * Útil principalmente para desenvolvimento.
  * ============================================================
  */
 
@@ -302,23 +310,20 @@ function normalizeSong(
             .trim(),
 
         /*
-         * ====================================================
-         * SINCRONIZAÇÃO
-         * ====================================================
+         * Offset do MIDI em relação ao MP3.
          *
-         * Sempre retornamos números.
-         *
-         * Dessa forma o restante do aplicativo
-         * nunca precisa lidar com undefined/null.
-         *
-         * Unidade:
-         * SEGUNDOS.
+         * O SRT silábico utiliza este mesmo offset,
+         * pois é produzido na mesma linha temporal
+         * que as notas MIDI.
          */
         offset:
             normalizeOffset(
                 song.offset
             ),
 
+        /*
+         * Offset independente da legenda tradicional.
+         */
         lyricsOffset:
             normalizeOffset(
                 song.lyricsOffset
@@ -345,6 +350,19 @@ function normalizeSong(
                     song.files.lyrics
                 ),
 
+            /*
+             * NOVO:
+             *
+             * voz_silabas.srt
+             *
+             * Continua sendo opcional para permitir
+             * músicas antigas sem o novo recurso.
+             */
+            syllables:
+                normalizeOptionalFileName(
+                    song.files.syllables
+                ),
+
             cover:
                 normalizeOptionalFileName(
                     song.files.cover
@@ -357,20 +375,6 @@ function normalizeSong(
 /*
  * ============================================================
  * NORMALIZAR OFFSET
- * ============================================================
- *
- * Exemplos válidos:
- *
- * 0
- * -0.25
- * 0.480
- * "0.25"
- *
- * Valores inválidos viram zero.
- *
- * Unidade:
- * segundos.
- *
  * ============================================================
  */
 
@@ -418,6 +422,13 @@ function normalizeOffset(
 /*
  * ============================================================
  * OBTER OFFSETS
+ * ============================================================
+ *
+ * midi:
+ *     usado pelo MIDI e pelo SRT silábico.
+ *
+ * lyrics:
+ *     usado somente pela legenda tradicional.
  * ============================================================
  */
 
@@ -910,7 +921,7 @@ export function getSongMidiUrl(
 
 /*
  * ============================================================
- * URL DA LETRA
+ * URL DA LETRA TRADICIONAL
  * ============================================================
  */
 
@@ -921,6 +932,23 @@ export function getSongLyricsUrl(
     return getSongFileUrl(
         song,
         "lyrics"
+    );
+}
+
+
+/*
+ * ============================================================
+ * URL DO SRT SILÁBICO
+ * ============================================================
+ */
+
+export function getSongSyllablesUrl(
+    song
+) {
+
+    return getSongFileUrl(
+        song,
+        "syllables"
     );
 }
 
@@ -944,7 +972,7 @@ export function getSongCoverUrl(
 
 /*
  * ============================================================
- * VERIFICAR SE POSSUI LETRA
+ * VERIFICAR SE POSSUI LETRA TRADICIONAL
  * ============================================================
  */
 
@@ -954,6 +982,47 @@ export function songHasLyrics(
 
     return Boolean(
         song?.files?.lyrics
+    );
+}
+
+
+/*
+ * ============================================================
+ * VERIFICAR SE POSSUI SRT SILÁBICO
+ * ============================================================
+ */
+
+export function songHasSyllables(
+    song
+) {
+
+    return Boolean(
+        song?.files?.syllables
+    );
+}
+
+
+/*
+ * ============================================================
+ * VERIFICAR SUPORTE A KARAOKÊ SILÁBICO
+ * ============================================================
+ *
+ * Por enquanto esta função apenas confirma
+ * a presença dos arquivos necessários.
+ *
+ * A validação nota ↔ sílaba será responsabilidade
+ * do futuro karaoke-engine.js.
+ * ============================================================
+ */
+
+export function songHasKaraokeData(
+    song
+) {
+
+    return Boolean(
+        song?.files?.midi &&
+        song?.files?.lyrics &&
+        song?.files?.syllables
     );
 }
 
