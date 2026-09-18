@@ -3,10 +3,17 @@
  * library.js
  * ============================================================
  *
- * Interface da biblioteca de músicas.
+ * AGA-KÊ COMICS — BIBLIOTECA HQ
  *
- * O conteúdo é construído dinamicamente
- * a partir de catalogo.json.
+ * Responsável por:
+ *
+ * - carregar o catálogo de músicas;
+ * - exibir gêneros como seções recolhíveis;
+ * - renderizar músicas sob demanda;
+ * - pesquisar por música, artista ou gênero;
+ * - exibir contadores da biblioteca;
+ * - controlar estados de carregamento, erro e busca vazia;
+ * - gerar os cards que levam ao KaraoKê HQ.
  *
  * ============================================================
  */
@@ -18,6 +25,94 @@ import {
     getSongTrainingUrl,
     formatSongDuration
 } from "./song-catalog.js";
+
+
+/*
+ * ============================================================
+ * CONFIGURAÇÕES
+ * ============================================================
+ */
+
+const SEARCH_DEBOUNCE_MS =
+    120;
+
+
+/*
+ * Ícones meramente visuais.
+ *
+ * Se um gênero não estiver nesta lista,
+ * utilizamos uma nota musical como fallback.
+ *
+ * Os nomes são normalizados antes da comparação.
+ */
+const GENRE_ICONS = {
+
+    rock:
+        "🎸",
+
+    pop:
+        "🎤",
+
+    sertanejo:
+        "🤠",
+
+    sertaneja:
+        "🤠",
+
+    catolica:
+        "✝",
+
+    catolicas:
+        "✝",
+
+    gospel:
+        "♫",
+
+    worship:
+        "♫",
+
+    mpb:
+        "🎶",
+
+    samba:
+        "🥁",
+
+    pagode:
+        "🥁",
+
+    funk:
+        "🎧",
+
+    eletronica:
+        "🎧",
+
+    eletronico:
+        "🎧",
+
+    jazz:
+        "🎷",
+
+    blues:
+        "🎷",
+
+    soul:
+        "🎙",
+
+    rap:
+        "🎙",
+
+    hiphop:
+        "🎙",
+
+    infantil:
+        "★",
+
+    classica:
+        "🎼",
+
+    classico:
+        "🎼"
+};
 
 
 /*
@@ -36,8 +131,74 @@ const elements = {
     catalog:
         document.getElementById(
             "catalogoMusicas"
+        ),
+
+
+    totalSongs:
+        document.getElementById(
+            "totalMusicasBiblioteca"
+        ),
+
+    totalGenres:
+        document.getElementById(
+            "totalGenerosBiblioteca"
+        ),
+
+
+    searchInput:
+        document.getElementById(
+            "campoBuscaBiblioteca"
+        ),
+
+    clearSearchButton:
+        document.getElementById(
+            "botaoLimparBusca"
+        ),
+
+    searchSummary:
+        document.getElementById(
+            "resumoBuscaBiblioteca"
+        ),
+
+
+    searchArea:
+        document.getElementById(
+            "areaResultadosBusca"
+        ),
+
+    searchGrid:
+        document.getElementById(
+            "gridResultadosBusca"
+        ),
+
+
+    noResults:
+        document.getElementById(
+            "estadoSemResultados"
         )
 };
+
+
+/*
+ * ============================================================
+ * ESTADO
+ * ============================================================
+ */
+
+let catalogData =
+    null;
+
+
+let genresWithSongs =
+    [];
+
+
+let allSongs =
+    [];
+
+
+let searchTimer =
+    null;
 
 
 /*
@@ -46,27 +207,147 @@ const elements = {
  * ============================================================
  */
 
+validateRequiredElements();
+
+
+bindEvents();
+
+
 initializeLibrary();
 
 
-async function initializeLibrary() {
+/*
+ * ============================================================
+ * VALIDAR ELEMENTOS
+ * ============================================================
+ */
 
-    try {
+function validateRequiredElements() {
 
-        const catalog =
-            await loadSongCatalog();
+    const required = {
+
+        estadoBiblioteca:
+            elements.state,
+
+        catalogoMusicas:
+            elements.catalog,
+
+        totalMusicasBiblioteca:
+            elements.totalSongs,
+
+        totalGenerosBiblioteca:
+            elements.totalGenres,
+
+        campoBuscaBiblioteca:
+            elements.searchInput,
+
+        botaoLimparBusca:
+            elements.clearSearchButton,
+
+        resumoBuscaBiblioteca:
+            elements.searchSummary,
+
+        areaResultadosBusca:
+            elements.searchArea,
+
+        gridResultadosBusca:
+            elements.searchGrid,
+
+        estadoSemResultados:
+            elements.noResults
+    };
 
 
-        renderCatalog(
-            catalog
+    const missing =
+        Object.entries(
+            required
+        )
+        .filter(
+            ([, element]) =>
+                !element
+        )
+        .map(
+            ([id]) =>
+                id
         );
 
 
-        elements.state
-            .classList
-            .add(
-                "oculto"
-            );
+    if (
+        missing.length >
+        0
+    ) {
+
+        throw new Error(
+            `Elementos obrigatórios da biblioteca não encontrados: ${missing.join(", ")}`
+        );
+    }
+}
+
+
+/*
+ * ============================================================
+ * EVENTOS
+ * ============================================================
+ */
+
+function bindEvents() {
+
+    elements.searchInput
+        .addEventListener(
+            "input",
+            handleSearchInput
+        );
+
+
+    elements.searchInput
+        .addEventListener(
+            "search",
+            () => {
+
+                performSearch(
+                    elements.searchInput.value
+                );
+            }
+        );
+
+
+    elements.clearSearchButton
+        .addEventListener(
+            "click",
+            clearSearch
+        );
+}
+
+
+/*
+ * ============================================================
+ * CARREGAR BIBLIOTECA
+ * ============================================================
+ */
+
+async function initializeLibrary() {
+
+    showLoadingState();
+
+
+    try {
+
+        catalogData =
+            await loadSongCatalog();
+
+
+        prepareCatalogData(
+            catalogData
+        );
+
+
+        updateLibraryCounters();
+
+
+        renderCatalog();
+
+
+        hideLibraryState();
 
 
     } catch (error) {
@@ -77,16 +358,228 @@ async function initializeLibrary() {
         );
 
 
-        elements.state.textContent =
-            `Não foi possível carregar a biblioteca: ${error.message}`;
-
-
-        elements.state
-            .classList
-            .add(
-                "erro"
-            );
+        showErrorState(
+            error
+        );
     }
+}
+
+
+/*
+ * ============================================================
+ * PREPARAR CATÁLOGO
+ * ============================================================
+ */
+
+function prepareCatalogData(
+    catalog
+) {
+
+    const genres =
+        Array.isArray(
+            catalog?.genres
+        )
+            ? catalog.genres
+            : [];
+
+
+    genresWithSongs =
+        genres.filter(
+            genre =>
+                Array.isArray(
+                    genre.songs
+                ) &&
+                genre.songs.length >
+                    0
+        );
+
+
+    /*
+     * Criamos uma lista plana apenas para busca.
+     *
+     * As músicas continuam pertencendo aos gêneros
+     * no catálogo original.
+     */
+    allSongs =
+        genresWithSongs.flatMap(
+            genre =>
+                genre.songs.map(
+                    song => ({
+
+                        ...song,
+
+                        genre:
+                            song.genre ||
+                            genre.id ||
+                            "",
+
+                        genreName:
+                            song.genreName ||
+                            genre.name ||
+                            genre.id ||
+                            "Sem categoria"
+                    })
+                )
+        );
+}
+
+
+/*
+ * ============================================================
+ * CONTADORES
+ * ============================================================
+ */
+
+function updateLibraryCounters() {
+
+    elements.totalSongs.textContent =
+        String(
+            allSongs.length
+        );
+
+
+    elements.totalGenres.textContent =
+        String(
+            genresWithSongs.length
+        );
+}
+
+
+/*
+ * ============================================================
+ * ESTADO — CARREGANDO
+ * ============================================================
+ */
+
+function showLoadingState() {
+
+    elements.state
+        .classList
+        .remove(
+            "oculto",
+            "erro"
+        );
+
+
+    elements.state.innerHTML =
+        "";
+
+
+    const icon =
+        document.createElement(
+            "span"
+        );
+
+
+    icon.className =
+        "estado-biblioteca-icone";
+
+
+    icon.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+
+    icon.textContent =
+        "♫";
+
+
+    const text =
+        document.createElement(
+            "span"
+        );
+
+
+    text.textContent =
+        "Carregando músicas...";
+
+
+    elements.state.append(
+        icon,
+        text
+    );
+}
+
+
+/*
+ * ============================================================
+ * ESTADO — ERRO
+ * ============================================================
+ */
+
+function showErrorState(
+    error
+) {
+
+    elements.state
+        .classList
+        .remove(
+            "oculto"
+        );
+
+
+    elements.state
+        .classList
+        .add(
+            "erro"
+        );
+
+
+    elements.state.textContent =
+        `Não foi possível carregar a biblioteca: ${
+            error?.message ||
+            "erro desconhecido."
+        }`;
+
+
+    elements.catalog.innerHTML =
+        "";
+
+
+    elements.searchArea
+        .classList
+        .add(
+            "oculto"
+        );
+
+
+    elements.noResults
+        .classList
+        .add(
+            "oculto"
+        );
+
+
+    elements.totalSongs.textContent =
+        "—";
+
+
+    elements.totalGenres.textContent =
+        "—";
+}
+
+
+/*
+ * ============================================================
+ * ESCONDER ESTADO
+ * ============================================================
+ */
+
+function hideLibraryState() {
+
+    elements.state
+        .classList
+        .add(
+            "oculto"
+        );
+
+
+    elements.state
+        .classList
+        .remove(
+            "erro"
+        );
 }
 
 
@@ -96,20 +589,10 @@ async function initializeLibrary() {
  * ============================================================
  */
 
-function renderCatalog(
-    catalog
-) {
+function renderCatalog() {
 
     elements.catalog.innerHTML =
         "";
-
-
-    const genresWithSongs =
-        catalog.genres.filter(
-            genre =>
-                genre.songs.length >
-                0
-        );
 
 
     if (
@@ -132,19 +615,28 @@ function renderCatalog(
     }
 
 
+    const fragment =
+        document.createDocumentFragment();
+
+
     genresWithSongs.forEach(
-        genre => {
+        (
+            genre,
+            index
+        ) => {
 
-            const section =
+            fragment.appendChild(
                 createGenreSection(
-                    genre
-                );
-
-
-            elements.catalog.appendChild(
-                section
+                    genre,
+                    index
+                )
             );
         }
+    );
+
+
+    elements.catalog.appendChild(
+        fragment
     );
 }
 
@@ -156,7 +648,8 @@ function renderCatalog(
  */
 
 function createGenreSection(
-    genre
+    genre,
+    index
 ) {
 
     const section =
@@ -169,17 +662,110 @@ function createGenreSection(
         "secao-genero";
 
 
+    section.dataset.genreId =
+        String(
+            genre.id ||
+            index
+        );
+
+
+    section.dataset.rendered =
+        "false";
+
+
     /*
-     * Cabeçalho
+     * ID usado por aria-controls.
      */
+    const contentId =
+        `genero-conteudo-${sanitizeId(
+            genre.id ||
+            genre.name ||
+            String(index)
+        )}-${index}`;
+
+
+    /*
+     * ========================================================
+     * CABEÇALHO CLICÁVEL
+     * ========================================================
+     */
+
     const header =
         document.createElement(
-            "div"
+            "button"
         );
 
 
     header.className =
         "genero-cabecalho";
+
+
+    header.type =
+        "button";
+
+
+    header.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+
+    header.setAttribute(
+        "aria-controls",
+        contentId
+    );
+
+
+    /*
+     * Ícone.
+     */
+    const icon =
+        document.createElement(
+            "span"
+        );
+
+
+    icon.className =
+        "genero-icone";
+
+
+    icon.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+
+    icon.textContent =
+        getGenreIcon(
+            genre
+        );
+
+
+    /*
+     * Identidade.
+     */
+    const identity =
+        document.createElement(
+            "span"
+        );
+
+
+    identity.className =
+        "genero-identidade";
+
+
+    const label =
+        document.createElement(
+            "span"
+        );
+
+
+    label.className =
+        "genero-etiqueta";
+
+
+    label.textContent =
+        "GÊNERO MUSICAL";
 
 
     const title =
@@ -189,7 +775,28 @@ function createGenreSection(
 
 
     title.textContent =
-        genre.name;
+        genre.name ||
+        genre.id ||
+        "Sem categoria";
+
+
+    identity.append(
+        label,
+        title
+    );
+
+
+    /*
+     * Ação.
+     */
+    const action =
+        document.createElement(
+            "span"
+        );
+
+
+    action.className =
+        "genero-acao";
 
 
     const count =
@@ -198,22 +805,99 @@ function createGenreSection(
         );
 
 
+    count.className =
+        "genero-contagem";
+
+
     count.textContent =
-        genre.songs.length ===
-            1
-                ? "1 música"
-                : `${genre.songs.length} músicas`;
+        formatSongCount(
+            genre.songs.length
+        );
+
+
+    const expand =
+        document.createElement(
+            "span"
+        );
+
+
+    expand.className =
+        "genero-expandir";
+
+
+    const expandText =
+        document.createElement(
+            "span"
+        );
+
+
+    expandText.className =
+        "genero-expandir-texto";
+
+
+    expandText.textContent =
+        "Explorar";
+
+
+    const arrow =
+        document.createElement(
+            "span"
+        );
+
+
+    arrow.className =
+        "genero-seta";
+
+
+    arrow.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+
+    arrow.textContent =
+        "▼";
+
+
+    expand.append(
+        expandText,
+        arrow
+    );
+
+
+    action.append(
+        count,
+        expand
+    );
 
 
     header.append(
-        title,
-        count
+        icon,
+        identity,
+        action
     );
 
 
     /*
-     * Grid
+     * ========================================================
+     * CONTEÚDO RECOLHÍVEL
+     * ========================================================
      */
+
+    const content =
+        document.createElement(
+            "div"
+        );
+
+
+    content.className =
+        "genero-conteudo";
+
+
+    content.id =
+        contentId;
+
+
     const grid =
         document.createElement(
             "div"
@@ -224,13 +908,27 @@ function createGenreSection(
         "grid-musicas";
 
 
-    genre.songs.forEach(
-        song => {
+    content.appendChild(
+        grid
+    );
 
-            grid.appendChild(
-                createSongCard(
-                    song
-                )
+
+    /*
+     * ========================================================
+     * EVENTO
+     * ========================================================
+     */
+
+    header.addEventListener(
+        "click",
+        () => {
+
+            toggleGenreSection(
+                section,
+                genre,
+                grid,
+                header,
+                expandText
             );
         }
     );
@@ -238,7 +936,7 @@ function createGenreSection(
 
     section.append(
         header,
-        grid
+        content
     );
 
 
@@ -248,13 +946,574 @@ function createGenreSection(
 
 /*
  * ============================================================
- * CRIAR CARD
+ * ABRIR / FECHAR GÊNERO
+ * ============================================================
+ */
+
+function toggleGenreSection(
+    section,
+    genre,
+    grid,
+    header,
+    expandText
+) {
+
+    const isOpen =
+        section.classList.contains(
+            "aberto"
+        );
+
+
+    if (
+        isOpen
+    ) {
+
+        closeGenreSection(
+            section,
+            header,
+            expandText
+        );
+
+        return;
+    }
+
+
+    openGenreSection(
+        section,
+        genre,
+        grid,
+        header,
+        expandText
+    );
+}
+
+
+/*
+ * ============================================================
+ * ABRIR GÊNERO
+ * ============================================================
+ */
+
+function openGenreSection(
+    section,
+    genre,
+    grid,
+    header,
+    expandText
+) {
+
+    /*
+     * Lazy rendering.
+     *
+     * Os cards só são construídos quando o gênero
+     * é aberto pela primeira vez.
+     */
+    if (
+        section.dataset.rendered !==
+        "true"
+    ) {
+
+        renderGenreSongs(
+            genre,
+            grid
+        );
+
+
+        section.dataset.rendered =
+            "true";
+    }
+
+
+    section.classList.add(
+        "aberto"
+    );
+
+
+    header.setAttribute(
+        "aria-expanded",
+        "true"
+    );
+
+
+    expandText.textContent =
+        "Recolher";
+}
+
+
+/*
+ * ============================================================
+ * FECHAR GÊNERO
+ * ============================================================
+ */
+
+function closeGenreSection(
+    section,
+    header,
+    expandText
+) {
+
+    section.classList.remove(
+        "aberto"
+    );
+
+
+    header.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+
+    expandText.textContent =
+        "Explorar";
+}
+
+
+/*
+ * ============================================================
+ * RENDERIZAR MÚSICAS DO GÊNERO
+ * ============================================================
+ */
+
+function renderGenreSongs(
+    genre,
+    grid
+) {
+
+    grid.innerHTML =
+        "";
+
+
+    const fragment =
+        document.createDocumentFragment();
+
+
+    genre.songs.forEach(
+        song => {
+
+            const preparedSong = {
+
+                ...song,
+
+                genre:
+                    song.genre ||
+                    genre.id ||
+                    "",
+
+                genreName:
+                    song.genreName ||
+                    genre.name ||
+                    genre.id ||
+                    ""
+            };
+
+
+            fragment.appendChild(
+                createSongCard(
+                    preparedSong
+                )
+            );
+        }
+    );
+
+
+    grid.appendChild(
+        fragment
+    );
+}
+
+
+/*
+ * ============================================================
+ * BUSCA — INPUT
+ * ============================================================
+ */
+
+function handleSearchInput() {
+
+    if (
+        searchTimer !==
+        null
+    ) {
+
+        window.clearTimeout(
+            searchTimer
+        );
+    }
+
+
+    searchTimer =
+        window.setTimeout(
+            () => {
+
+                searchTimer =
+                    null;
+
+
+                performSearch(
+                    elements.searchInput.value
+                );
+            },
+            SEARCH_DEBOUNCE_MS
+        );
+}
+
+
+/*
+ * ============================================================
+ * EXECUTAR BUSCA
+ * ============================================================
+ */
+
+function performSearch(
+    rawQuery
+) {
+
+    const query =
+        normalizeSearchText(
+            rawQuery
+        );
+
+
+    /*
+     * Campo vazio:
+     * voltamos à navegação por gênero.
+     */
+    if (
+        !query
+    ) {
+
+        showCatalogMode();
+
+        return;
+    }
+
+
+    const matches =
+        allSongs.filter(
+            song =>
+                songMatchesSearch(
+                    song,
+                    query
+                )
+        );
+
+
+    showSearchMode(
+        rawQuery,
+        matches
+    );
+}
+
+
+/*
+ * ============================================================
+ * VERIFICAR CORRESPONDÊNCIA DA BUSCA
+ * ============================================================
+ */
+
+function songMatchesSearch(
+    song,
+    normalizedQuery
+) {
+
+    const searchableFields = [
+
+        song.title,
+
+        song.artist,
+
+        song.genreName,
+
+        song.genre
+    ];
+
+
+    return searchableFields.some(
+        value =>
+            normalizeSearchText(
+                value
+            )
+            .includes(
+                normalizedQuery
+            )
+    );
+}
+
+
+/*
+ * ============================================================
+ * EXIBIR MODO DE BUSCA
+ * ============================================================
+ */
+
+function showSearchMode(
+    rawQuery,
+    matches
+) {
+
+    elements.clearSearchButton
+        .classList
+        .remove(
+            "oculto"
+        );
+
+
+    /*
+     * O catálogo por gêneros sai de cena.
+     */
+    elements.catalog
+        .classList
+        .add(
+            "oculto"
+        );
+
+
+    elements.searchGrid.innerHTML =
+        "";
+
+
+    /*
+     * Nenhum resultado.
+     */
+    if (
+        matches.length ===
+        0
+    ) {
+
+        elements.searchArea
+            .classList
+            .add(
+                "oculto"
+            );
+
+
+        elements.noResults
+            .classList
+            .remove(
+                "oculto"
+            );
+
+
+        updateSearchSummary(
+            rawQuery,
+            0
+        );
+
+
+        return;
+    }
+
+
+    /*
+     * Existem resultados.
+     */
+    elements.noResults
+        .classList
+        .add(
+            "oculto"
+        );
+
+
+    elements.searchArea
+        .classList
+        .remove(
+            "oculto"
+        );
+
+
+    const fragment =
+        document.createDocumentFragment();
+
+
+    matches.forEach(
+        song => {
+
+            fragment.appendChild(
+                createSongCard(
+                    song,
+                    {
+                        showGenre:
+                            true
+                    }
+                )
+            );
+        }
+    );
+
+
+    elements.searchGrid.appendChild(
+        fragment
+    );
+
+
+    updateSearchSummary(
+        rawQuery,
+        matches.length
+    );
+}
+
+
+/*
+ * ============================================================
+ * EXIBIR MODO CATÁLOGO
+ * ============================================================
+ */
+
+function showCatalogMode() {
+
+    elements.catalog
+        .classList
+        .remove(
+            "oculto"
+        );
+
+
+    elements.searchArea
+        .classList
+        .add(
+            "oculto"
+        );
+
+
+    elements.noResults
+        .classList
+        .add(
+            "oculto"
+        );
+
+
+    elements.searchGrid.innerHTML =
+        "";
+
+
+    elements.searchSummary
+        .classList
+        .add(
+            "oculto"
+        );
+
+
+    elements.searchSummary.textContent =
+        "";
+
+
+    elements.clearSearchButton
+        .classList
+        .add(
+            "oculto"
+        );
+}
+
+
+/*
+ * ============================================================
+ * RESUMO DA BUSCA
+ * ============================================================
+ */
+
+function updateSearchSummary(
+    rawQuery,
+    count
+) {
+
+    const cleanQuery =
+        String(
+            rawQuery ||
+            ""
+        )
+        .trim();
+
+
+    let message =
+        "";
+
+
+    if (
+        count ===
+        0
+    ) {
+
+        message =
+            `Nenhuma música encontrada para “${cleanQuery}”.`;
+
+    } else if (
+        count ===
+        1
+    ) {
+
+        message =
+            `1 música encontrada para “${cleanQuery}”.`;
+
+    } else {
+
+        message =
+            `${count} músicas encontradas para “${cleanQuery}”.`;
+    }
+
+
+    elements.searchSummary.textContent =
+        message;
+
+
+    elements.searchSummary
+        .classList
+        .remove(
+            "oculto"
+        );
+}
+
+
+/*
+ * ============================================================
+ * LIMPAR BUSCA
+ * ============================================================
+ */
+
+function clearSearch() {
+
+    if (
+        searchTimer !==
+        null
+    ) {
+
+        window.clearTimeout(
+            searchTimer
+        );
+
+
+        searchTimer =
+            null;
+    }
+
+
+    elements.searchInput.value =
+        "";
+
+
+    showCatalogMode();
+
+
+    elements.searchInput.focus();
+}
+
+
+/*
+ * ============================================================
+ * CRIAR CARD DE MÚSICA
  * ============================================================
  */
 
 function createSongCard(
-    song
+    song,
+    options =
+        {}
 ) {
+
+    const {
+        showGenre =
+            false
+    } = options;
+
 
     const article =
         document.createElement(
@@ -267,9 +1526,9 @@ function createSongCard(
 
 
     /*
-     * --------------------------------------------------------
+     * ========================================================
      * CAPA
-     * --------------------------------------------------------
+     * ========================================================
      */
 
     const cover =
@@ -311,6 +1570,10 @@ function createSongCard(
             "lazy";
 
 
+        image.decoding =
+            "async";
+
+
         image.addEventListener(
             "error",
             () => {
@@ -321,6 +1584,10 @@ function createSongCard(
 
                 cover.textContent =
                     "♫";
+            },
+            {
+                once:
+                    true
             }
         );
 
@@ -338,9 +1605,9 @@ function createSongCard(
 
 
     /*
-     * --------------------------------------------------------
+     * ========================================================
      * CONTEÚDO
-     * --------------------------------------------------------
+     * ========================================================
      */
 
     const content =
@@ -360,7 +1627,8 @@ function createSongCard(
 
 
     title.textContent =
-        song.title;
+        song.title ||
+        "Música sem título";
 
 
     const artist =
@@ -374,12 +1642,16 @@ function createSongCard(
 
 
     artist.textContent =
-        song.artist;
+        song.artist ||
+        "Artista não informado";
 
 
     /*
-     * Metadados
+     * ========================================================
+     * METADADOS
+     * ========================================================
      */
+
     const metadata =
         document.createElement(
             "div"
@@ -390,13 +1662,22 @@ function createSongCard(
         "metadados";
 
 
-    metadata.appendChild(
-        createMetadata(
-            formatSongDuration(
-                song.duration
+    const duration =
+        formatSongDuration(
+            song.duration
+        );
+
+
+    if (
+        duration
+    ) {
+
+        metadata.appendChild(
+            createMetadata(
+                duration
             )
-        )
-    );
+        );
+    }
 
 
     metadata.appendChild(
@@ -409,8 +1690,28 @@ function createSongCard(
 
 
     /*
-     * Botão
+     * Na busca é útil mostrar o gênero,
+     * pois os resultados misturam categorias.
      */
+    if (
+        showGenre &&
+        song.genreName
+    ) {
+
+        metadata.appendChild(
+            createMetadata(
+                song.genreName
+            )
+        );
+    }
+
+
+    /*
+     * ========================================================
+     * BOTÃO
+     * ========================================================
+     */
+
     const button =
         document.createElement(
             "a"
@@ -427,9 +1728,43 @@ function createSongCard(
         );
 
 
-    button.textContent =
-        "▶ Treinar";
+    const buttonIcon =
+        document.createElement(
+            "span"
+        );
 
+
+    buttonIcon.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+
+    buttonIcon.textContent =
+        "▶";
+
+
+    const buttonText =
+        document.createElement(
+            "span"
+        );
+
+
+    buttonText.textContent =
+        "Cantar agora";
+
+
+    button.append(
+        buttonIcon,
+        buttonText
+    );
+
+
+    /*
+     * ========================================================
+     * MONTAGEM
+     * ========================================================
+     */
 
     content.append(
         title,
@@ -451,7 +1786,7 @@ function createSongCard(
 
 /*
  * ============================================================
- * METADADO
+ * CRIAR METADADO
  * ============================================================
  */
 
@@ -470,7 +1805,10 @@ function createMetadata(
 
 
     span.textContent =
-        text;
+        String(
+            text ||
+            ""
+        );
 
 
     return span;
@@ -488,23 +1826,207 @@ function difficultyLabel(
 ) {
 
     switch (
-        difficulty
+        String(
+            difficulty ||
+            ""
+        )
+        .toLowerCase()
     ) {
 
         case "advanced":
-
             return "Avançado";
 
 
         case "intermediate":
-
             return "Intermediário";
 
 
         case "beginner":
-
         default:
-
             return "Iniciante";
     }
+}
+
+
+/*
+ * ============================================================
+ * CONTAGEM DE MÚSICAS
+ * ============================================================
+ */
+
+function formatSongCount(
+    count
+) {
+
+    const safeCount =
+        Number(
+            count
+        ) || 0;
+
+
+    return (
+        safeCount ===
+        1
+            ? "1 música"
+            : `${safeCount} músicas`
+    );
+}
+
+
+/*
+ * ============================================================
+ * ÍCONE DO GÊNERO
+ * ============================================================
+ */
+
+function getGenreIcon(
+    genre
+) {
+
+    const candidates = [
+
+        genre?.id,
+
+        genre?.name
+    ];
+
+
+    for (
+        const candidate of
+        candidates
+    ) {
+
+        const normalized =
+            normalizeGenreKey(
+                candidate
+            );
+
+
+        if (
+            normalized &&
+            GENRE_ICONS[
+                normalized
+            ]
+        ) {
+
+            return GENRE_ICONS[
+                normalized
+            ];
+        }
+
+
+        /*
+         * Permite IDs compostos:
+         *
+         * rock-nacional
+         * pop-rock
+         * musica-catolica
+         */
+        const matchedKey =
+            Object.keys(
+                GENRE_ICONS
+            )
+            .find(
+                key =>
+                    normalized.includes(
+                        key
+                    )
+            );
+
+
+        if (
+            matchedKey
+        ) {
+
+            return GENRE_ICONS[
+                matchedKey
+            ];
+        }
+    }
+
+
+    return "♫";
+}
+
+
+/*
+ * ============================================================
+ * NORMALIZAÇÃO PARA BUSCA
+ * ============================================================
+ */
+
+function normalizeSearchText(
+    value
+) {
+
+    return String(
+        value ||
+        ""
+    )
+    .normalize(
+        "NFD"
+    )
+    .replace(
+        /[\u0300-\u036f]/g,
+        ""
+    )
+    .toLocaleLowerCase(
+        "pt-BR"
+    )
+    .replace(
+        /\s+/g,
+        " "
+    )
+    .trim();
+}
+
+
+/*
+ * ============================================================
+ * NORMALIZAÇÃO DE CHAVE DE GÊNERO
+ * ============================================================
+ */
+
+function normalizeGenreKey(
+    value
+) {
+
+    return normalizeSearchText(
+        value
+    )
+    .replace(
+        /[^a-z0-9]+/g,
+        ""
+    );
+}
+
+
+/*
+ * ============================================================
+ * ID HTML SEGURO
+ * ============================================================
+ */
+
+function sanitizeId(
+    value
+) {
+
+    const normalized =
+        normalizeSearchText(
+            value
+        )
+        .replace(
+            /[^a-z0-9]+/g,
+            "-"
+        )
+        .replace(
+            /^-+|-+$/g,
+            ""
+        );
+
+
+    return (
+        normalized ||
+        "genero"
+    );
 }

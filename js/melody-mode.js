@@ -158,49 +158,52 @@ const DIFFICULTIES = {
 
     beginner: {
 
+        // MODO KARAOKÊ
         tolerance:
-            100,
+            150,
 
         near:
-            175,
-
-        requiredCoverage:
-            0.35,
-
-        excellentOnsetMs:
             300,
 
+        requiredCoverage:
+            0.25,
+
+        excellentOnsetMs:
+            450,
+
         acceptableOnsetMs:
-            700
+            1000
     },
 
 
     intermediate: {
 
+        // MODO TREINO
         tolerance:
-            50,
+            70,
 
         near:
-            90,
+            140,
 
         requiredCoverage:
-            0.50,
+            0.45,
 
         excellentOnsetMs:
-            220,
+            250,
 
         acceptableOnsetMs:
-            500
+            600
     },
 
 
     advanced: {
 
+        // MODO COVER
         tolerance:
-            15,
+            30,
 
         near:
-            50,
+            70,
 
         requiredCoverage:
             0.65,

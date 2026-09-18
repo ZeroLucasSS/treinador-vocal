@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
@@ -12,11 +13,16 @@
 
     <meta
         name="theme-color"
-        content="#101114"
+        content="#10abe1"
+    >
+
+    <meta
+        name="description"
+        content="Biblioteca HQ da Aga-Kê Comics: explore músicas por gênero e entre no KaraoKê HQ para treinar sua voz."
     >
 
     <title>
-        Biblioteca — Treinador Vocal
+        Biblioteca HQ — Aga-Kê Comics
     </title>
 
 
@@ -30,86 +36,600 @@
 
 <body>
 
+
+    <!-- =========================================================
+         FUNDO POP-ART
+         ========================================================= -->
+
+    <div
+        class="fundo-pop-art"
+        aria-hidden="true"
+    >
+    </div>
+
+
+
+    <!-- =========================================================
+         APLICAÇÃO
+         ========================================================= -->
+
     <main class="app">
 
-        <!-- ==================================================
-             CABEÇALHO
-             ================================================== -->
 
-        <header class="cabecalho">
+        <!-- =====================================================
+             CABEÇALHO / IDENTIDADE
+             ===================================================== -->
 
-            <a
-                href="./index.html"
-                class="voltar"
+        <header class="cabecalho-marca">
+
+
+            <div
+                class="cabecalho-pop-fundo"
+                aria-hidden="true"
             >
-                ← Exercícios
-            </a>
+            </div>
 
 
-            <p class="etapa">
-                TREINO COM MÚSICAS
-            </p>
+
+            <!-- Navegação -->
+
+            <div class="cabecalho-topo">
 
 
-            <h1>
-                Biblioteca
-            </h1>
+                <a
+                    href="./index.html"
+                    class="voltar voltar-hq"
+                    aria-label="Voltar para a página inicial"
+                >
+
+                    <span aria-hidden="true">
+                        ←
+                    </span>
+
+                    <span>
+                        Início
+                    </span>
+
+                </a>
 
 
-            <p class="descricao">
-                Escolha uma música e pratique sobre
-                o acompanhamento instrumental.
-            </p>
+
+                <a
+                    href="./exercicios.html"
+                    class="voltar voltar-hq"
+                    aria-label="Abrir o Treino Vocal HQ"
+                >
+
+                    <span aria-hidden="true">
+                        ♪
+                    </span>
+
+                    <span>
+                        Treino Vocal HQ
+                    </span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- Marca -->
+
+            <div class="marca-principal">
+
+
+                <div class="marca-logo-horizontal">
+
+                    <img
+                        src="./assets/branding/logo-aga-ke-horizontal.png"
+                        alt="Aga-Kê Comics"
+                        class="logo-principal"
+                        width="340"
+                        decoding="async"
+                    >
+
+                </div>
+
+
+
+                <div class="marca-texto">
+
+                    <p class="etapa">
+                        MÚSICAS PARA TREINAR
+                    </p>
+
+
+                    <h1>
+                        Biblioteca HQ
+                    </h1>
+
+
+                    <p class="descricao">
+
+                        Escolha um gênero, encontre sua música
+                        e entre no KaraoKê HQ.
+
+                    </p>
+
+                </div>
+
+
+
+                <div
+                    class="marca-selo"
+                    aria-hidden="true"
+                >
+
+                    <img
+                        src="./assets/branding/logo-aga-ke-icone.png"
+                        alt=""
+                        class="selo-ke"
+                        width="90"
+                        height="90"
+                        decoding="async"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="decoracao-notas"
+                aria-hidden="true"
+            >
+
+                <span>♪</span>
+                <span>♫</span>
+                <span>♬</span>
+
+            </div>
 
         </header>
 
 
 
-        <!-- ==================================================
-             STATUS
-             ================================================== -->
+        <!-- =====================================================
+             INTRODUÇÃO / RESUMO DA BIBLIOTECA
+             ===================================================== -->
 
-        <section
-            id="estadoBiblioteca"
-            class="estado-biblioteca"
-        >
-            Carregando músicas...
+        <section class="resumo-biblioteca painel-hq">
+
+
+            <div class="resumo-biblioteca-texto">
+
+                <p class="rotulo">
+                    SUA COLEÇÃO
+                </p>
+
+
+                <h2>
+                    Encontre seu próximo treino.
+                </h2>
+
+
+                <p>
+
+                    Explore a biblioteca por gênero
+                    ou use a busca para localizar rapidamente
+                    uma música ou artista.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="resumo-biblioteca-estatisticas">
+
+
+                <div class="estatistica-biblioteca">
+
+                    <span
+                        class="estatistica-biblioteca-icone"
+                        aria-hidden="true"
+                    >
+                        ♫
+                    </span>
+
+                    <div>
+
+                        <span>
+                            Músicas
+                        </span>
+
+                        <strong id="totalMusicasBiblioteca">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="estatistica-biblioteca">
+
+                    <span
+                        class="estatistica-biblioteca-icone"
+                        aria-hidden="true"
+                    >
+                        ★
+                    </span>
+
+                    <div>
+
+                        <span>
+                            Gêneros
+                        </span>
+
+                        <strong id="totalGenerosBiblioteca">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
 
 
 
-        <!-- ==================================================
-             CATÁLOGO
-             ================================================== -->
+        <!-- =====================================================
+             BUSCA
+             ===================================================== -->
 
-        <div
-            id="catalogoMusicas"
-            class="catalogo-musicas"
+        <section class="painel-busca painel-hq">
+
+
+            <div class="titulo-painel-hq">
+
+                <span
+                    class="numero-quadro"
+                    aria-hidden="true"
+                >
+                    01
+                </span>
+
+
+                <div>
+
+                    <p class="rotulo">
+                        BUSCAR
+                    </p>
+
+                    <h2>
+                        Encontre uma música
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="busca-container">
+
+
+                <span
+                    class="busca-icone"
+                    aria-hidden="true"
+                >
+                    🔎
+                </span>
+
+
+
+                <label
+                    for="campoBuscaBiblioteca"
+                    class="sr-only"
+                >
+                    Buscar música ou artista
+                </label>
+
+
+
+                <input
+                    id="campoBuscaBiblioteca"
+                    class="campo-busca"
+                    type="search"
+                    autocomplete="off"
+                    placeholder="Buscar música ou artista..."
+                >
+
+
+
+                <button
+                    id="botaoLimparBusca"
+                    class="botao-limpar-busca oculto"
+                    type="button"
+                    aria-label="Limpar busca"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+
+            <div
+                id="resumoBuscaBiblioteca"
+                class="resumo-busca oculto"
+                aria-live="polite"
+            >
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             STATUS / CARREGAMENTO
+             ===================================================== -->
+
+        <section
+            id="estadoBiblioteca"
+            class="estado-biblioteca"
+            aria-live="polite"
         >
-        </div>
+
+            <span
+                class="estado-biblioteca-icone"
+                aria-hidden="true"
+            >
+                ♫
+            </span>
+
+            <span>
+                Carregando músicas...
+            </span>
+
+        </section>
 
 
 
-        <!-- ==================================================
+        <!-- =====================================================
+             CATÁLOGO
+             ===================================================== -->
+
+        <section class="catalogo-area">
+
+
+            <div class="titulo-catalogo">
+
+
+                <div class="titulo-painel-hq">
+
+                    <span
+                        class="numero-quadro"
+                        aria-hidden="true"
+                    >
+                        02
+                    </span>
+
+
+                    <div>
+
+                        <p class="rotulo">
+                            EXPLORE
+                        </p>
+
+                        <h2>
+                            Escolha seu gênero
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <p class="catalogo-ajuda">
+
+                    Clique em um gênero para ver
+                    as músicas disponíveis.
+
+                </p>
+
+            </div>
+
+
+
+            <!--
+                O library.js continuará sendo responsável
+                por construir dinamicamente os gêneros e músicas.
+            -->
+
+            <div
+                id="catalogoMusicas"
+                class="catalogo-musicas"
+            >
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             RESULTADOS DA BUSCA
+             ===================================================== -->
+
+        <section
+            id="areaResultadosBusca"
+            class="area-resultados-busca oculto"
+        >
+
+
+            <div class="titulo-resultados-busca">
+
+                <p class="rotulo">
+                    RESULTADOS DA BUSCA
+                </p>
+
+
+                <h2>
+                    Músicas encontradas
+                </h2>
+
+            </div>
+
+
+
+            <div
+                id="gridResultadosBusca"
+                class="grid-musicas grid-resultados-busca"
+            >
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             NENHUM RESULTADO
+             ===================================================== -->
+
+        <section
+            id="estadoSemResultados"
+            class="sem-resultados painel-hq oculto"
+        >
+
+
+            <div
+                class="sem-resultados-explosao"
+                aria-hidden="true"
+            >
+                OPS!
+            </div>
+
+
+
+            <div>
+
+                <p class="rotulo">
+                    NADA POR AQUI
+                </p>
+
+
+                <h2>
+                    Nenhuma música encontrada.
+                </h2>
+
+
+                <p>
+
+                    Tente buscar por outro título,
+                    artista ou limpe a pesquisa
+                    para voltar aos gêneros.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CHAMADA PARA EXERCÍCIOS
+             ===================================================== -->
+
+        <section class="chamada-exercicios painel-hq">
+
+
+            <div class="chamada-exercicios-texto">
+
+                <p class="rotulo">
+                    QUER AQUECER PRIMEIRO?
+                </p>
+
+
+                <h2>
+                    Comece pelo Treino Vocal HQ.
+                </h2>
+
+
+                <p>
+
+                    Pratique notas, sustentação,
+                    intervalos e sequências antes
+                    de entrar em uma música completa.
+
+                </p>
+
+            </div>
+
+
+
+            <a
+                href="./exercicios.html"
+                class="botao-hq botao-amarelo"
+            >
+
+                <span aria-hidden="true">
+                    ♪
+                </span>
+
+                <span>
+                    Abrir exercícios
+                </span>
+
+            </a>
+
+        </section>
+
+
+
+        <!-- =====================================================
              RODAPÉ
-             ================================================== -->
+             ===================================================== -->
 
         <footer class="rodape">
 
+
+            <img
+                src="./assets/branding/logo-aga-ke-icone.png"
+                alt=""
+                class="rodape-logo"
+                width="52"
+                height="52"
+                loading="lazy"
+                decoding="async"
+                aria-hidden="true"
+            >
+
+
             <p>
+
                 As músicas disponíveis foram previamente
                 preparadas para o treinamento vocal.
+
             </p>
+
+
+            <strong>
+                Aga-Kê Comics • Biblioteca HQ
+            </strong>
 
         </footer>
 
     </main>
 
 
+
+    <!-- =========================================================
+         JAVASCRIPT
+         ========================================================= -->
+
     <script
         type="module"
         src="./js/library.js"
-    ></script>
+    >
+    </script>
 
 </body>
 

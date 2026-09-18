@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#fff018"
+    >
+
+    <meta
+        name="description"
+        content="Treino Vocal HQ da Aga-Kê Comics: exercícios de afinação, sustentação, intervalos e sequências com análise vocal em tempo real."
+    >
+
+    <title>
+        Treino Vocal HQ — Aga-Kê Comics
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="./css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         FUNDO DECORATIVO
+         ========================================================= -->
+
+    <div
+        class="fundo-pop-art"
+        aria-hidden="true"
+    >
+    </div>
+
+
+
+    <!-- =========================================================
+         APLICAÇÃO
+         ========================================================= -->
+
+    <main class="app">
+
+
+        <!-- =====================================================
+             CABEÇALHO / IDENTIDADE AGA-KÊ
+             ===================================================== -->
+
+        <header class="cabecalho-marca">
+
+
+            <!-- Fundo interno em retícula -->
+
+            <div
+                class="cabecalho-pop-fundo"
+                aria-hidden="true"
+            >
+            </div>
+
+
+
+            <!-- Navegação superior -->
+
+            <div class="cabecalho-topo">
+
+
+                <a
+                    href="./index.html"
+                    class="voltar voltar-hq"
+                    aria-label="Voltar para a página inicial"
+                >
+
+                    <span aria-hidden="true">
+                        ←
+                    </span>
+
+                    <span>
+                        Início
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="./biblioteca.html"
+                    class="voltar voltar-hq"
+                    aria-label="Abrir a biblioteca de músicas"
+                >
+
+                    <span aria-hidden="true">
+                        ♫
+                    </span>
+
+                    <span>
+                        Biblioteca
+                    </span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- Marca -->
+
+            <div class="marca-principal">
+
+
+                <!-- Logo horizontal -->
+
+                <div class="marca-logo-horizontal">
+
+                    <img
+                        src="./assets/branding/logo-aga-ke-horizontal.png"
+                        alt="Aga-Kê Comics"
+                        class="logo-principal"
+                        width="340"
+                        decoding="async"
+                    >
+
+                </div>
+
+
+
+                <!-- Nome da área -->
+
+                <div class="marca-texto">
+
+                    <p class="etapa">
+                        TREINAMENTO VOCAL
+                    </p>
+
+
+                    <h1>
+                        Treino Vocal HQ
+                    </h1>
+
+
+                    <p class="descricao">
+
+                        Exercite sua afinação, percepção
+                        e controle vocal nota por nota.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- Selo da marca -->
+
+                <div
+                    class="marca-selo"
+                    aria-hidden="true"
+                >
+
+                    <img
+                        src="./assets/branding/logo-aga-ke-icone.png"
+                        alt=""
+                        class="selo-ke"
+                        width="90"
+                        height="90"
+                        decoding="async"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Notas decorativas -->
+
+            <div
+                class="decoracao-notas"
+                aria-hidden="true"
+            >
+
+                <span>♪</span>
+                <span>♫</span>
+                <span>♬</span>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================================
+             INTRODUÇÃO DO MODO
+             ===================================================== -->
+
+        <section class="introducao-treino painel-hq">
+
+
+            <div class="introducao-treino-texto">
+
+                <p class="rotulo">
+                    SUA MISSÃO
+                </p>
+
+
+                <h2>
+                    Prepare a voz e entre no ritmo!
+                </h2>
+
+
+                <p>
+
+                    Escolha um tipo de exercício,
+                    defina o nível de dificuldade
+                    e complete sua sessão.
+
+                    O aplicativo escuta sua voz em tempo real
+                    e mostra o quanto você está próximo
+                    da nota desejada.
+
+                </p>
+
+            </div>
+
+
+
+            <div
+                class="introducao-selo"
+                aria-hidden="true"
+            >
+
+                <span>
+                    LET'S
+                </span>
+
+                <strong>
+                    SING!
+                </strong>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CONFIGURAÇÃO
+             ===================================================== -->
+
+        <section
+            id="configuracao"
+            class="configuracao painel-hq"
+        >
+
+
+            <!-- Cabeçalho da configuração -->
+
+            <div class="titulo-painel-hq">
+
+                <span
+                    class="numero-quadro"
+                    aria-hidden="true"
+                >
+                    01
+                </span>
+
+
+                <div>
+
+                    <p class="rotulo">
+                        PREPARAÇÃO
+                    </p>
+
+                    <h2>
+                        Monte sua sessão
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TIPO DE EXERCÍCIO
+                 ================================================= -->
+
+            <div class="grupo-configuracao">
+
+
+                <div class="grupo-configuracao-cabecalho">
+
+                    <p class="rotulo">
+                        TIPO DE EXERCÍCIO
+                    </p>
+
+                    <span class="dica-configuracao">
+                        Escolha sua missão
+                    </span>
+
+                </div>
+
+
+
+                <div class="selecao-exercicios">
+
+
+                    <button
+                        class="botao-exercicio ativo"
+                        data-exercise="single"
+                        type="button"
+                    >
+
+                        <span
+                            class="icone-exercicio"
+                            aria-hidden="true"
+                        >
+                            ♪
+                        </span>
+
+                        <span class="nome-exercicio">
+                            Nota única
+                        </span>
+
+                        <small>
+                            Acerte uma nota por vez
+                        </small>
+
+                    </button>
+
+
+
+                    <button
+                        class="botao-exercicio"
+                        data-exercise="sustain"
+                        type="button"
+                    >
+
+                        <span
+                            class="icone-exercicio"
+                            aria-hidden="true"
+                        >
+                            ▬
+                        </span>
+
+                        <span class="nome-exercicio">
+                            Sustentação
+                        </span>
+
+                        <small>
+                            Mantenha a nota firme
+                        </small>
+
+                    </button>
+
+
+
+                    <button
+                        class="botao-exercicio"
+                        data-exercise="interval"
+                        type="button"
+                    >
+
+                        <span
+                            class="icone-exercicio"
+                            aria-hidden="true"
+                        >
+                            ♫
+                        </span>
+
+                        <span class="nome-exercicio">
+                            Intervalos
+                        </span>
+
+                        <small>
+                            Salte entre duas notas
+                        </small>
+
+                    </button>
+
+
+
+                    <button
+                        class="botao-exercicio"
+                        data-exercise="sequence"
+                        type="button"
+                    >
+
+                        <span
+                            class="icone-exercicio"
+                            aria-hidden="true"
+                        >
+                            ♬
+                        </span>
+
+                        <span class="nome-exercicio">
+                            Sequência
+                        </span>
+
+                        <small>
+                            Siga uma série de notas
+                        </small>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 DIFICULDADE
+                 ================================================= -->
+
+            <div class="grupo-configuracao">
+
+
+                <div class="grupo-configuracao-cabecalho">
+
+                    <p class="rotulo">
+                        DIFICULDADE
+                    </p>
+
+                    <span class="dica-configuracao">
+                        Escolha seu desafio
+                    </span>
+
+                </div>
+
+
+
+                <div class="selecao-dificuldade">
+
+
+                    <button
+                        class="botao-dificuldade ativo"
+                        data-difficulty="beginner"
+                        type="button"
+                    >
+
+                        <span
+                            class="dificuldade-icone"
+                            aria-hidden="true"
+                        >
+                            ★
+                        </span>
+
+                        <strong>
+                            Iniciante
+                        </strong>
+
+                        <span>
+                            ±40 cents
+                        </span>
+
+                    </button>
+
+
+
+                    <button
+                        class="botao-dificuldade"
+                        data-difficulty="intermediate"
+                        type="button"
+                    >
+
+                        <span
+                            class="dificuldade-icone"
+                            aria-hidden="true"
+                        >
+                            ★★
+                        </span>
+
+                        <strong>
+                            Intermediário
+                        </strong>
+
+                        <span>
+                            ±25 cents
+                        </span>
+
+                    </button>
+
+
+
+                    <button
+                        class="botao-dificuldade"
+                        data-difficulty="advanced"
+                        type="button"
+                    >
+
+                        <span
+                            class="dificuldade-icone"
+                            aria-hidden="true"
+                        >
+                            ★★★
+                        </span>
+
+                        <strong>
+                            Avançado
+                        </strong>
+
+                        <span>
+                            ±15 cents
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RODADAS
+                 ================================================= -->
+
+            <div class="grupo-configuracao grupo-rodadas">
+
+
+                <label
+                    for="quantidadeRodadas"
+                    class="rotulo"
+                >
+                    RODADAS DA SESSÃO
+                </label>
+
+
+                <div class="rodadas-controle">
+
+                    <div class="rodadas-texto">
+
+                        <strong>
+                            Quanto você quer treinar?
+                        </strong>
+
+                        <span>
+                            Escolha a duração da sessão.
+                        </span>
+
+                    </div>
+
+
+                    <select
+                        id="quantidadeRodadas"
+                        class="select-rodadas"
+                    >
+
+                        <option value="3">
+                            3 rodadas
+                        </option>
+
+                        <option
+                            value="5"
+                            selected
+                        >
+                            5 rodadas
+                        </option>
+
+                        <option value="10">
+                            10 rodadas
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ESTATÍSTICAS DA SESSÃO
+             ===================================================== -->
+
+        <section
+            id="estatisticasSessao"
+            class="estatisticas-sessao oculto"
+            aria-label="Estatísticas da sessão"
+        >
+
+
+            <div class="estatistica">
+
+                <span
+                    class="estatistica-icone"
+                    aria-hidden="true"
+                >
+                    #
+                </span>
+
+                <span class="estatistica-rotulo">
+                    Rodada
+                </span>
+
+                <strong id="estatisticaRodada">
+                    1 / 5
+                </strong>
+
+            </div>
+
+
+
+            <div class="estatistica">
+
+                <span
+                    class="estatistica-icone"
+                    aria-hidden="true"
+                >
+                    ✓
+                </span>
+
+                <span class="estatistica-rotulo">
+                    Acertos
+                </span>
+
+                <strong id="estatisticaAcertos">
+                    0
+                </strong>
+
+            </div>
+
+
+
+            <div class="estatistica">
+
+                <span
+                    class="estatistica-icone"
+                    aria-hidden="true"
+                >
+                    ♪
+                </span>
+
+                <span class="estatistica-rotulo">
+                    Tentativas
+                </span>
+
+                <strong id="estatisticaTentativas">
+                    0
+                </strong>
+
+            </div>
+
+
+
+            <div class="estatistica">
+
+                <span
+                    class="estatistica-icone"
+                    aria-hidden="true"
+                >
+                    ★
+                </span>
+
+                <span class="estatistica-rotulo">
+                    Pontuação
+                </span>
+
+                <strong id="estatisticaPontuacao">
+                    0
+                </strong>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PAINEL PRINCIPAL
+             ===================================================== -->
+
+        <section class="painel painel-hq">
+
+
+            <!-- Cabeçalho -->
+
+            <div class="topo-painel">
+
+
+                <div class="titulo-painel-hq">
+
+                    <span
+                        class="numero-quadro"
+                        aria-hidden="true"
+                    >
+                        02
+                    </span>
+
+
+                    <div>
+
+                        <p class="rotulo">
+                            EXERCÍCIO
+                        </p>
+
+                        <h2 id="tituloExercicio">
+                            Nota única
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <div
+                    id="estadoMicrofone"
+                    class="estado-microfone"
+                >
+
+                    <span
+                        class="estado-microfone-ponto"
+                        aria-hidden="true"
+                    >
+                    </span>
+
+                    Microfone desligado
+
+                </div>
+
+            </div>
+
+
+
+            <p
+                id="descricaoExercicio"
+                class="descricao-exercicio"
+            >
+
+                Ouça uma nota e tente reproduzi-la corretamente.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 NOTA-ALVO
+                 ================================================= -->
+
+            <div class="alvo-container">
+
+
+                <div class="alvo-cabecalho">
+
+                    <p class="rotulo">
+                        NOTA-ALVO
+                    </p>
+
+                    <span
+                        class="adesivo-mini"
+                        aria-hidden="true"
+                    >
+                        SUA MISSÃO!
+                    </span>
+
+                </div>
+
+
+
+                <div class="nota-alvo-area">
+
+                    <span
+                        id="notaAlvo"
+                        class="nota-alvo"
+                    >
+                        —
+                    </span>
+
+                    <span
+                        id="oitavaAlvo"
+                        class="oitava-alvo"
+                    ></span>
+
+                </div>
+
+
+
+                <button
+                    id="botaoOuvirNota"
+                    class="botao-secundario botao-hq botao-ciano"
+                    type="button"
+                    disabled
+                >
+
+                    <span aria-hidden="true">
+                        🔊
+                    </span>
+
+                    <span>
+                        Ouvir referência
+                    </span>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SEQUÊNCIA VISUAL
+                 ================================================= -->
+
+            <div
+                id="sequenciaVisual"
+                class="sequencia-visual"
+            >
+            </div>
+
+
+
+            <div
+                class="divisor-hq"
+                aria-hidden="true"
+            >
+                <span>
+                    ★
+                </span>
+            </div>
+
+
+
+            <!-- =================================================
+                 NOTA DETECTADA
+                 ================================================= -->
+
+            <div class="deteccao">
+
+
+                <p class="rotulo">
+                    VOCÊ ESTÁ CANTANDO
+                </p>
+
+
+
+                <div class="nota-detectada-area">
+
+                    <span
+                        id="nota"
+                        class="nota"
+                    >
+                        —
+                    </span>
+
+                    <span
+                        id="oitava"
+                        class="oitava"
+                    ></span>
+
+                </div>
+
+
+
+                <div
+                    id="frequencia"
+                    class="frequencia"
+                >
+                    -- Hz
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 MEDIDOR DE AFINAÇÃO
+                 ================================================= -->
+
+            <div class="afinacao">
+
+
+                <div class="afinacao-titulo">
+
+                    <p class="rotulo">
+                        MEDIDOR DE AFINAÇÃO
+                    </p>
+
+                </div>
+
+
+
+                <div class="afinacao-rotulos">
+
+                    <span>
+                        ♭ Grave
+                    </span>
+
+                    <span>
+                        ✓ Correto
+                    </span>
+
+                    <span>
+                        Agudo ♯
+                    </span>
+
+                </div>
+
+
+
+                <div class="medidor">
+
+                    <div
+                        id="faixaCorreta"
+                        class="faixa-correta"
+                    >
+                    </div>
+
+
+                    <div
+                        class="linha-central"
+                        aria-hidden="true"
+                    >
+                    </div>
+
+
+                    <div
+                        id="indicador"
+                        class="indicador"
+                    >
+                    </div>
+
+                </div>
+
+
+
+                <div
+                    id="cents"
+                    class="cents"
+                >
+                    Aguardando...
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FEEDBACK
+                 ================================================= -->
+
+            <div
+                id="feedback"
+                class="feedback neutro"
+                aria-live="polite"
+            >
+
+                Configure a sessão e pressione “Iniciar sessão”.
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PROGRESSO DO EXERCÍCIO
+                 ================================================= -->
+
+            <div class="progresso-container">
+
+
+                <div class="progresso-cabecalho">
+
+                    <span>
+                        Exercício atual
+                    </span>
+
+                    <strong id="textoProgresso">
+                        0%
+                    </strong>
+
+                </div>
+
+
+
+                <div class="barra-progresso">
+
+                    <div
+                        id="barraProgresso"
+                        class="barra-progresso-preenchimento"
+                    >
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 DETALHES TÉCNICOS
+                 ================================================= -->
+
+            <div class="detalhes">
+
+
+                <div class="detalhe">
+
+                    <span
+                        class="detalhe-icone"
+                        aria-hidden="true"
+                    >
+                        ♪
+                    </span>
+
+                    <div>
+
+                        <span class="detalhe-titulo">
+                            Frequência-alvo
+                        </span>
+
+                        <span
+                            id="frequenciaAlvo"
+                            class="detalhe-valor"
+                        >
+                            —
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="detalhe">
+
+                    <span
+                        class="detalhe-icone"
+                        aria-hidden="true"
+                    >
+                        ±
+                    </span>
+
+                    <div>
+
+                        <span class="detalhe-titulo">
+                            Erro
+                        </span>
+
+                        <span
+                            id="erroCents"
+                            class="detalhe-valor"
+                        >
+                            —
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="detalhe">
+
+                    <span
+                        class="detalhe-icone"
+                        aria-hidden="true"
+                    >
+                        ◉
+                    </span>
+
+                    <div>
+
+                        <span class="detalhe-titulo">
+                            Sinal
+                        </span>
+
+                        <span
+                            id="nivelSinal"
+                            class="detalhe-valor"
+                        >
+                            —
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 BOTÃO PRINCIPAL
+                 ================================================= -->
+
+            <button
+                id="botaoPrincipal"
+                class="botao-principal botao-hq botao-vermelho botao-destaque"
+                type="button"
+            >
+
+                <span
+                    class="botao-principal-icone"
+                    aria-hidden="true"
+                >
+                    ▶
+                </span>
+
+                <span class="botao-principal-texto">
+                    Iniciar sessão
+                </span>
+
+            </button>
+
+
+
+            <p
+                id="mensagem"
+                class="mensagem"
+            >
+
+                Escolha o exercício, a dificuldade
+                e a quantidade de rodadas.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             RESULTADO DA SESSÃO
+             ===================================================== -->
+
+        <section
+            id="resultadoSessao"
+            class="resultado-sessao painel-hq oculto"
+        >
+
+
+            <div
+                class="explosao-resultado"
+                aria-hidden="true"
+            >
+                POW!
+            </div>
+
+
+
+            <p class="rotulo">
+                SESSÃO CONCLUÍDA
+            </p>
+
+
+            <h2>
+                Resultado do treino
+            </h2>
+
+
+
+            <div class="pontuacao-final">
+
+                <span
+                    id="pontuacaoFinal"
+                    class="numero-pontuacao"
+                >
+                    0
+                </span>
+
+                <span class="de-cem">
+                    / 100
+                </span>
+
+            </div>
+
+
+
+            <p
+                id="avaliacaoFinal"
+                class="avaliacao-final"
+            >
+            </p>
+
+
+
+            <!-- Resumo -->
+
+            <div class="resumo-final">
+
+
+                <div>
+
+                    <span
+                        class="resumo-final-icone"
+                        aria-hidden="true"
+                    >
+                        ✓
+                    </span>
+
+                    <span>
+                        Notas acertadas
+                    </span>
+
+                    <strong id="resultadoAcertos">
+                        0
+                    </strong>
+
+                </div>
+
+
+
+                <div>
+
+                    <span
+                        class="resumo-final-icone"
+                        aria-hidden="true"
+                    >
+                        ♪
+                    </span>
+
+                    <span>
+                        Tentativas
+                    </span>
+
+                    <strong id="resultadoTentativas">
+                        0
+                    </strong>
+
+                </div>
+
+
+
+                <div>
+
+                    <span
+                        class="resumo-final-icone"
+                        aria-hidden="true"
+                    >
+                        ±
+                    </span>
+
+                    <span>
+                        Erro médio
+                    </span>
+
+                    <strong id="resultadoPrecisao">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Resultado de cada rodada -->
+
+            <div class="resultado-rodadas-cabecalho">
+
+                <p class="rotulo">
+                    SUA JORNADA
+                </p>
+
+                <span aria-hidden="true">
+                    ★
+                </span>
+
+            </div>
+
+
+            <div
+                id="listaRodadas"
+                class="lista-rodadas"
+            >
+            </div>
+
+
+
+            <button
+                id="botaoNovaSessao"
+                class="botao-principal botao-hq botao-ciano"
+                type="button"
+            >
+
+                <span aria-hidden="true">
+                    ↻
+                </span>
+
+                <span>
+                    Iniciar nova sessão
+                </span>
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PRÓXIMO PASSO
+             ===================================================== -->
+
+        <section class="proximo-passo painel-hq">
+
+
+            <div class="proximo-passo-texto">
+
+                <p class="rotulo">
+                    QUER IR ALÉM?
+                </p>
+
+
+                <h2>
+                    Leve o treino para uma música completa.
+                </h2>
+
+
+                <p>
+
+                    Explore a biblioteca Aga-Kê,
+                    escolha uma canção e acompanhe
+                    sua voz no KaraoKê HQ.
+
+                </p>
+
+            </div>
+
+
+
+            <a
+                href="./biblioteca.html"
+                class="botao-hq botao-ciano botao-ir-biblioteca"
+            >
+
+                <span aria-hidden="true">
+                    ♫
+                </span>
+
+                <span>
+                    Abrir Biblioteca
+                </span>
+
+            </a>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             RODAPÉ
+             ===================================================== -->
+
+        <footer class="rodape">
+
+
+            <img
+                src="./assets/branding/logo-aga-ke-icone.png"
+                alt=""
+                class="rodape-logo"
+                width="52"
+                height="52"
+                loading="lazy"
+                decoding="async"
+                aria-hidden="true"
+            >
+
+
+            <p>
+
+                O áudio é processado localmente no aparelho.
+                Nenhuma gravação é enviada para servidores.
+
+            </p>
+
+
+            <strong>
+                Aga-Kê Comics • Treino Vocal HQ
+            </strong>
+
+        </footer>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+         ========================================================= -->
+
+    <script
+        type="module"
+        src="./js/app.js"
+    >
+    </script>
+
+</body>
+
+</html>
