@@ -47,71 +47,134 @@ const SEARCH_DEBOUNCE_MS =
  */
 const GENRE_ICONS = {
 
-    rock:
-        "🎸",
+    /* Rock / derivados */
+    rock: "🎸",
+    poprock: "🎸",
+    alternativo: "🎸",
+    indie: "🎸",
+    punk: "⚡",
+    metal: "🤘",
+    heavymetal: "🤘",
 
-    pop:
-        "🎤",
+    /* Pop */
+    pop: "🎤",
+    dancepop: "💃",
+    synthpop: "🎹",
 
-    sertanejo:
-        "🤠",
+    /* Sertanejo / country */
+    sertanejo: "🤠",
+    sertaneja: "🤠",
+    country: "🤠",
 
-    sertaneja:
-        "🤠",
+    /* Samba / Pagode */
+    samba: "🥁",
+    pagode: "🥁",
 
-    catolica:
-        "✝",
+    /* Reggae */
+    reggae: "🌴",
 
-    catolicas:
-        "✝",
+    /* Gospel / religioso */
+    gospel: "🙏",
+    worship: "🙌",
+    catolica: "✝",
+    catolicas: "✝",
+    cristao: "✝",
+    crista: "✝",
+    religioso: "✝",
 
-    gospel:
-        "♫",
+    /* Românticas */
+    romantica: "❤️",
+    romanticas: "❤️",
+    romantic: "❤️",
 
-    worship:
-        "♫",
+    /* MPB */
+    mpb: "🎶",
 
-    mpb:
-        "🎶",
+    /* Funk */
+    funk: "🔥",
 
-    samba:
-        "🥁",
+    /* Rap / Hip-Hop */
+    rap: "🎙️",
+    hiphop: "🎙️",
+    trap: "🎧",
 
-    pagode:
-        "🥁",
+    /* Eletrônica */
+    eletronica: "🎧",
+    eletronico: "🎧",
+    edm: "🎧",
+    house: "🎛️",
+    techno: "🎛️",
 
-    funk:
-        "🎧",
+    /* Jazz / Blues / Soul */
+    jazz: "🎷",
+    blues: "🎷",
+    soul: "🎙️",
+    rnb: "🎙️",
 
-    eletronica:
-        "🎧",
+    /* Forró / Nordeste */
+    forro: "💑",
+    baiao: "💑",
+    xote: "💑",
+    piseiro: "💑",
 
-    eletronico:
-        "🎧",
+    /* Axé */
+    axe: "☀️",
 
-    jazz:
-        "🎷",
+    /* Arrocha */
+    arrocha: "💔",
 
-    blues:
-        "🎷",
+    /* Brega */
+    brega: "💖",
 
-    soul:
-        "🎙",
+    /* Frevo */
+    frevo: "☂️",
 
-    rap:
-        "🎙",
+    /* Maracatu */
+    maracatu: "🥁",
 
-    hiphop:
-        "🎙",
+    /* Clássico */
+    classica: "🎼",
+    classico: "🎼",
+    opera: "🎼",
 
-    infantil:
-        "★",
+    /* Infantil */
+    infantil: "⭐",
 
-    classica:
-        "🎼",
+    /* Instrumental */
+    instrumental: "🎹",
 
-    classico:
-        "🎼"
+    /* Acústico */
+    acustico: "🎻",
+
+    /* Latina */
+    latina: "💃",
+    latin: "💃",
+    salsa: "💃",
+    merengue: "💃",
+    bachata: "💃",
+    reggaeton: "🔥",
+
+    /* Disco */
+    disco: "💿",
+
+    /* Lo-fi */
+    lofi: "🌙",
+
+    /* K-pop */
+    kpop: "✨",
+
+    /* Trilhas / soundtrack */
+    trilha: "🎬",
+    soundtrack: "🎬",
+
+    /* Folk */
+    folk: "🪕",
+
+    /* Outros estilos populares */
+    dance: "💃",
+    balada: "💫",
+    vozviolao: "🎸",
+    acapella: "🎤"
 };
 
 

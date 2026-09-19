@@ -6,25 +6,6 @@
             "name": "Católicas",
             "songs": [
                 {
-                    "id": "gloria-a-deus-nas-alturas-ministerio-amor-e-adoracao",
-                    "title": "Gloria à Deus Nas Alturas",
-                    "artist": "Ministério Amor e Adoração",
-                    "genre": "catolicas",
-                    "folder": "catolicas/gloria-a-deus-nas-alturas-ministerio-amor-e-adoracao",
-                    "duration": 179,
-                    "difficulty": "beginner",
-                    "language": "pt-BR",
-                    "offset": 0.0,
-                    "lyricsOffset": 0.0,
-                    "files": {
-                        "audio": "instrumental.mp3",
-                        "midi": "voz.mid",
-                        "lyrics": "letra.srt",
-                        "syllables": null,
-                        "cover": "capa.jpg"
-                    }
-                },
-                {
                     "id": "mistica-sublime-colo-de-deus",
                     "title": "Mística Sublime",
                     "artist": "Colo de Deus",
@@ -44,31 +25,12 @@
                     }
                 },
                 {
-                    "id": "ninguem-te-ama-como-eu-marcos-andre",
-                    "title": "Ninguém te ama como Eu",
-                    "artist": "Marcos André",
+                    "id": "mistica-sublime-colo-de-deus-ramon-e-rafael",
+                    "title": "Mística Sublime (by Ramon e Rafael)",
+                    "artist": "Colo de Deus",
                     "genre": "catolicas",
-                    "folder": "catolicas/ninguem-te-ama-como-eu-marcos-andre",
-                    "duration": 278,
-                    "difficulty": "intermediate",
-                    "language": "pt-BR",
-                    "offset": 0.0,
-                    "lyricsOffset": 0.0,
-                    "files": {
-                        "audio": "instrumental.mp3",
-                        "midi": "voz.mid",
-                        "lyrics": "letra.srt",
-                        "syllables": null,
-                        "cover": "capa.jpg"
-                    }
-                },
-                {
-                    "id": "templo-vivo-diego-fernandes",
-                    "title": "Templo Vivo (Seja Bem-Vindo)",
-                    "artist": "Diego Fernandes",
-                    "genre": "catolicas",
-                    "folder": "catolicas/templo-vivo-diego-fernandes",
-                    "duration": 258,
+                    "folder": "catolicas/mistica-sublime-colo-de-deus-ramon-e-rafael",
+                    "duration": 239,
                     "difficulty": "beginner",
                     "language": "pt-BR",
                     "offset": 0.0,
@@ -77,7 +39,7 @@
                         "audio": "instrumental.mp3",
                         "midi": "voz.mid",
                         "lyrics": "letra.srt",
-                        "syllables": null,
+                        "syllables": "voz_silabas.srt",
                         "cover": "capa.jpg"
                     }
                 }
@@ -119,7 +81,7 @@
                     "genre": "romanticas",
                     "folder": "romanticas/viver-e-ter-voce-pra-mim-robson-monteiro",
                     "duration": 280,
-                    "difficulty": "advanced",
+                    "difficulty": "intermediate",
                     "language": "pt-BR",
                     "offset": 0.0,
                     "lyricsOffset": 0.0,
@@ -127,7 +89,7 @@
                         "audio": "instrumental.mp3",
                         "midi": "voz.mid",
                         "lyrics": "letra.srt",
-                        "syllables": null,
+                        "syllables": "voz_silabas.srt",
                         "cover": "capa.jpg"
                     }
                 }

@@ -1735,7 +1735,7 @@ a:focus-visible {
         #080808;
 
     font-size:
-        2.5rem;
+        3rem;
 
     transform:
         rotate(-3deg);
@@ -1803,23 +1803,6 @@ a:focus-visible {
         3px
         0
         var(--aga-vermelho);
-}
-
-
-/* Compatibilidade com o JS atual, caso ainda use span simples */
-
-.genero-cabecalho > span {
-    color:
-        #111;
-
-    font-family:
-        var(--fonte-hq);
-
-    font-size:
-        0.75rem;
-
-    font-weight:
-        800;
 }
 
 
@@ -3239,7 +3222,7 @@ a:focus-visible {
             58px;
 
         font-size:
-            1.9rem;
+            2.2rem;
     }
 
 
