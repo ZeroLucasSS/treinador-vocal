@@ -480,6 +480,37 @@ export class MicrophoneAudio {
      * ========================================================
      */
 
+/*
+ * ========================================================
+ * ESCOLHER MELHOR MICROFONE
+ * ========================================================
+ *
+ * Ordem desejada:
+ *
+ * 1. Microfone USB dedicado
+ * 2. Microfone interno / integrado
+ * 3. Microfone comum
+ * 4. Entrada padrão
+ *
+ * Evitamos:
+ *
+ * - Bluetooth
+ * - Line In
+ * - Stereo Mix
+ * - entradas virtuais
+ * - áudio de monitor/desktop
+ *
+ * Isso permite:
+ *
+ * DESKTOP:
+ *     microfone USB → captura
+ *
+ * MOBILE:
+ *     microfone interno → captura
+ *     Bluetooth → reprodução
+ * ========================================================
+ */
+
     findPreferredInternalMicrophone(
         devices
     ) {
@@ -497,174 +528,369 @@ export class MicrophoneAudio {
 
 
         const candidates =
-            devices
-                .map(
-                    device => {
+            devices.map(
+                device => {
 
-                        const label =
-                            this.normalizeDeviceLabel(
-                                device.label
-                            );
-
-
-                        let score =
-                            0;
-
-
-                        /*
-                         * -------------------------------------
-                         * FORTE INDÍCIO DE BLUETOOTH
-                         * -------------------------------------
-                         */
-
-                        if (
-                            this.looksLikeBluetooth(
-                                label
-                            )
-                        ) {
-
-                            score -=
-                                1000;
-                        }
-
-
-                        /*
-                         * -------------------------------------
-                         * DISPOSITIVO "DEFAULT"
-                         *
-                         * Evitamos porque ele pode apontar
-                         * justamente para o headset Bluetooth.
-                         * -------------------------------------
-                         */
-
-                        if (
-                            device.deviceId ===
-                            "default"
-                        ) {
-
-                            score -=
-                                200;
-                        }
-
-
-                        if (
-                            label.includes(
-                                "default"
-                            ) ||
-                            label.includes(
-                                "padrao"
-                            )
-                        ) {
-
-                            score -=
-                                150;
-                        }
-
-
-                        /*
-                         * -------------------------------------
-                         * INDÍCIOS DE MICROFONE INTERNO
-                         * -------------------------------------
-                         */
-
-                        const internalKeywords = [
-
-                            "built in",
-                            "builtin",
-
-                            "internal",
-
-                            "interno",
-                            "interna",
-
-                            "phone",
-                            "smartphone",
-
-                            "device",
-                            "dispositivo",
-
-                            "handset",
-
-                            "bottom",
-                            "bottom mic",
-
-                            "top mic",
-
-                            "primary",
-                            "principal"
-                        ];
-
-
-                        internalKeywords.forEach(
-                            keyword => {
-
-                                if (
-                                    label.includes(
-                                        keyword
-                                    )
-                                ) {
-
-                                    score +=
-                                        100;
-                                }
-                            }
+                    const label =
+                        this.normalizeDeviceLabel(
+                            device.label
                         );
 
 
-                        /*
-                         * "Microphone" / "Microfone" sozinho
-                         * recebe um pequeno bônus.
-                         *
-                         * Não damos pontuação alta porque
-                         * alguns headsets também podem usar
-                         * esse nome genérico.
-                         */
-                        if (
-                            label.includes(
-                                "microphone"
-                            ) ||
-                            label.includes(
-                                "microfone"
-                            ) ||
-                            label.includes(
-                                "mic "
-                            ) ||
-                            label.endsWith(
-                                " mic"
-                            )
-                        ) {
-
-                            score +=
-                                20;
-                        }
+                    let score =
+                        0;
 
 
-                        /*
-                         * DeviceId físico é preferível ao alias
-                         * "default".
-                         */
-                        if (
-                            device.deviceId &&
-                            device.deviceId !==
-                                "default"
-                        ) {
+                    /*
+                    * ============================================
+                    * BLUETOOTH
+                    * ============================================
+                    *
+                    * Evitamos o microfone Bluetooth porque sua
+                    * ativação pode colocar o headset no perfil
+                    * de telefonia e interferir no instrumental.
+                    */
 
-                            score +=
-                                10;
-                        }
+                    if (
+                        this.looksLikeBluetooth(
+                            label
+                        )
+                    ) {
 
-
-                        return {
-
-                            device,
-
-                            label,
-
-                            score
-                        };
+                        score -=
+                            2000;
                     }
-                );
 
+
+                    /*
+                    * ============================================
+                    * MICROFONE USB
+                    * ============================================
+                    *
+                    * No desktop, um microfone USB dedicado deve
+                    * ter prioridade máxima.
+                    */
+
+                    const usbTerms = [
+
+                        "usb microphone",
+                        "usb mic",
+                        "microphone usb",
+                        "microfone usb",
+                        "usb audio",
+                        "usb audio device",
+
+                        "samson",
+                        "fifine",
+                        "hyperx",
+                        "maono",
+                        "blue yeti",
+                        "yeti",
+                        "razer seiren",
+                        "seiren",
+                        "audio technica",
+                        "audio-technica",
+                        "rode",
+                        "shure"
+                    ];
+
+
+                    usbTerms.forEach(
+                        term => {
+
+                            if (
+                                label.includes(
+                                    term
+                                )
+                            ) {
+
+                                score +=
+                                    500;
+                            }
+                        }
+                    );
+
+
+                    /*
+                    * USB sozinho já é um forte indicador de que
+                    * estamos diante de um dispositivo externo
+                    * escolhido pelo usuário.
+                    */
+
+                    if (
+                        label.includes(
+                            "usb"
+                        )
+                    ) {
+
+                        score +=
+                            300;
+                    }
+
+
+                    /*
+                    * ============================================
+                    * MICROFONE
+                    * ============================================
+                    */
+
+                    if (
+                        label.includes(
+                            "microphone"
+                        ) ||
+                        label.includes(
+                            "microfone"
+                        )
+                    ) {
+
+                        score +=
+                            120;
+                    }
+
+
+                    if (
+                        label.includes(
+                            " mic"
+                        ) ||
+                        label.startsWith(
+                            "mic "
+                        ) ||
+                        label.endsWith(
+                            " mic"
+                        )
+                    ) {
+
+                        score +=
+                            80;
+                    }
+
+
+                    /*
+                    * ============================================
+                    * MICROFONE INTERNO DO CELULAR / NOTEBOOK
+                    * ============================================
+                    */
+
+                    const internalTerms = [
+
+                        "built in",
+                        "built-in",
+                        "builtin",
+
+                        "internal",
+
+                        "interno",
+                        "interna",
+
+                        "integrated",
+                        "integrado",
+
+                        "primary microphone",
+                        "primary mic",
+
+                        "microfone principal",
+                        "microphone array",
+
+                        "array microphone",
+
+                        "bottom mic",
+                        "top mic"
+                    ];
+
+
+                    internalTerms.forEach(
+                        term => {
+
+                            if (
+                                label.includes(
+                                    term
+                                )
+                            ) {
+
+                                score +=
+                                    220;
+                            }
+                        }
+                    );
+
+
+                    /*
+                    * ============================================
+                    * LINE IN
+                    * ============================================
+                    *
+                    * "Line In" não é necessariamente um
+                    * microfone. No desktop devemos evitá-lo.
+                    */
+
+                    const lineInTerms = [
+
+                        "line in",
+                        "line-in",
+                        "entrada de linha",
+                        "entrada linha"
+                    ];
+
+
+                    lineInTerms.forEach(
+                        term => {
+
+                            if (
+                                label.includes(
+                                    term
+                                )
+                            ) {
+
+                                score -=
+                                    1200;
+                            }
+                        }
+                    );
+
+
+                    /*
+                    * ============================================
+                    * STEREO MIX / LOOPBACK
+                    * ============================================
+                    *
+                    * Esses dispositivos capturam áudio do próprio
+                    * computador, não a voz do usuário.
+                    */
+
+                    const loopbackTerms = [
+
+                        "stereo mix",
+                        "mixagem estereo",
+                        "mixagem estéreo",
+
+                        "what u hear",
+                        "what you hear",
+
+                        "loopback",
+
+                        "monitor of",
+
+                        "desktop audio",
+
+                        "wave out"
+                    ];
+
+
+                    loopbackTerms.forEach(
+                        term => {
+
+                            if (
+                                label.includes(
+                                    term
+                                )
+                            ) {
+
+                                score -=
+                                    1800;
+                            }
+                        }
+                    );
+
+
+                    /*
+                    * ============================================
+                    * DISPOSITIVOS VIRTUAIS
+                    * ============================================
+                    */
+
+                    const virtualTerms = [
+
+                        "virtual",
+                        "voicemeeter",
+                        "vb-audio",
+                        "vb audio",
+                        "cable output",
+                        "cable input",
+                        "obs virtual"
+                    ];
+
+
+                    virtualTerms.forEach(
+                        term => {
+
+                            if (
+                                label.includes(
+                                    term
+                                )
+                            ) {
+
+                                score -=
+                                    800;
+                            }
+                        }
+                    );
+
+
+                    /*
+                    * ============================================
+                    * DEFAULT
+                    * ============================================
+                    *
+                    * O alias "default" pode apontar para qualquer
+                    * entrada e, por isso, fica abaixo de um
+                    * dispositivo explicitamente identificado.
+                    */
+
+                    if (
+                        device.deviceId ===
+                        "default"
+                    ) {
+
+                        score -=
+                            100;
+                    }
+
+
+                    if (
+                        label ===
+                        "default" ||
+                        label.includes(
+                            "padrao"
+                        )
+                    ) {
+
+                        score -=
+                            80;
+                    }
+
+
+                    /*
+                    * ============================================
+                    * DEVICE ID REAL
+                    * ============================================
+                    */
+
+                    if (
+                        device.deviceId &&
+                        device.deviceId !==
+                            "default"
+                    ) {
+
+                        score +=
+                            10;
+                    }
+
+
+                    return {
+
+                        device,
+
+                        label,
+
+                        score
+                    };
+                }
+            );
+
+
+        /*
+        * Maior pontuação primeiro.
+        */
 
         candidates.sort(
             (
@@ -675,6 +901,12 @@ export class MicrophoneAudio {
                 a.score
         );
 
+
+        /*
+        * ================================================
+        * LOG DE DIAGNÓSTICO
+        * ================================================
+        */
 
         console.group(
             "🎤 Ranking de microfones"
@@ -709,14 +941,19 @@ export class MicrophoneAudio {
 
 
         /*
-         * Nunca escolhemos automaticamente um dispositivo que
-         * tenha forte indicação de Bluetooth.
-         */
+        * ================================================
+        * ESCOLHA
+        * ================================================
+        *
+        * Só aceitamos automaticamente dispositivos que
+        * não tenham sido fortemente penalizados.
+        */
+
         const best =
             candidates.find(
                 candidate =>
                     candidate.score >
-                    -500 &&
+                        -500 &&
                     !this.looksLikeBluetooth(
                         candidate.label
                     )
@@ -726,6 +963,11 @@ export class MicrophoneAudio {
         if (
             !best
         ) {
+
+            console.warn(
+                "Nenhum microfone adequado foi identificado."
+            );
+
 
             return null;
         }
