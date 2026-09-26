@@ -1432,6 +1432,175 @@ function prepareSong(
  * ============================================================
  */
 
+
+/*
+ * ============================================================
+ * DESBLOQUEAR ÁUDIO EM DISPOSITIVOS MÓVEIS
+ * ============================================================
+ *
+ * Safari/iOS e alguns navegadores Android exigem que a
+ * primeira reprodução de um elemento <audio> aconteça
+ * diretamente dentro de uma ação do usuário.
+ *
+ * No treino normal existe:
+ *
+ * clique
+ *   ↓
+ * microfone
+ *   ↓
+ * countdown
+ *   ↓
+ * audio.play()
+ *
+ * Nesse momento alguns navegadores já não consideram o
+ * play() parte do gesto original.
+ *
+ * Portanto fazemos uma reprodução silenciosa imediatamente
+ * após o clique e pausamos em seguida.
+ *
+ * Depois disso o mesmo elemento de áudio fica "desbloqueado"
+ * para a reprodução real após a contagem regressiva.
+ * ============================================================
+ */
+
+async function unlockBackingAudio() {
+
+    const audio =
+        elements.backingAudio;
+
+
+    if (
+        !audio ||
+        !audio.src
+    ) {
+
+        throw new Error(
+            "O instrumental ainda não foi preparado."
+        );
+    }
+
+
+    /*
+     * Se já desbloqueamos este elemento nesta página,
+     * não há necessidade de repetir todo o processo.
+     */
+    if (
+        audio.dataset.mobileUnlocked ===
+        "true"
+    ) {
+
+        return;
+    }
+
+
+    const previousMuted =
+        audio.muted;
+
+
+    const previousVolume =
+        audio.volume;
+
+
+    const previousTime =
+        Number.isFinite(
+            audio.currentTime
+        )
+            ? audio.currentTime
+            : 0;
+
+
+    try {
+
+        /*
+         * Muted é preferível a volume = 0 em dispositivos
+         * móveis, pois navegadores tratam mídia silenciada
+         * de maneira mais permissiva.
+         */
+        audio.muted =
+            true;
+
+
+        audio.volume =
+            0;
+
+
+        /*
+         * IMPORTANTE:
+         *
+         * Esta chamada precisa acontecer enquanto ainda
+         * estamos diretamente dentro do clique do usuário.
+         */
+        const playPromise =
+            audio.play();
+
+
+        if (
+            playPromise &&
+            typeof playPromise.then ===
+            "function"
+        ) {
+
+            await playPromise;
+        }
+
+
+        /*
+         * Uma vez aceito o play(), o elemento foi liberado.
+         */
+        audio.pause();
+
+
+        try {
+
+            audio.currentTime =
+                previousTime;
+
+        } catch (error) {
+
+            /*
+             * Alguns navegadores podem não permitir seek
+             * enquanto os metadados ainda não estão totalmente
+             * disponíveis. Isso não impede o desbloqueio.
+             */
+            console.debug(
+                "Não foi possível restaurar o tempo durante o desbloqueio:",
+                error
+            );
+        }
+
+
+        audio.dataset.mobileUnlocked =
+            "true";
+
+
+        console.info(
+            "Backing track desbloqueado para reprodução móvel."
+        );
+
+
+    } catch (error) {
+
+        console.warn(
+            "Não foi possível desbloquear o backing track:",
+            error
+        );
+
+
+        throw error;
+
+
+    } finally {
+
+        audio.muted =
+            previousMuted;
+
+
+        audio.volume =
+            previousVolume;
+    }
+}
+
+
 function setupBackingTrack() {
 
     elements.backingAudio.onloadedmetadata =
@@ -2609,10 +2778,54 @@ elements.startButton.addEventListener(
 
             await stopTraining();
 
-        } else {
-
-            await startTraining();
+            return;
         }
+
+
+        /*
+         * ====================================================
+         * DESBLOQUEIO DE ÁUDIO MOBILE
+         * ====================================================
+         *
+         * Precisa acontecer AQUI, diretamente no clique,
+         * antes de:
+         *
+         * - microphone.start()
+         * - countdown()
+         * - qualquer espera assíncrona prolongada
+         *
+         * Isso é especialmente importante em:
+         *
+         * - Safari / iPhone / iPad
+         * - Chrome Android
+         * - dispositivos com fones Bluetooth
+         * ====================================================
+         */
+
+        try {
+
+            await unlockBackingAudio();
+
+
+        } catch (error) {
+
+            console.error(
+                "Falha ao liberar reprodução do instrumental:",
+                error
+            );
+
+
+            setFeedback(
+                "O navegador bloqueou a reprodução do instrumental. Toque novamente em iniciar.",
+                "errado"
+            );
+
+
+            return;
+        }
+
+
+        await startTraining();
     }
 );
 
@@ -3541,7 +3754,47 @@ async function startTraining() {
             0;
 
 
-        await elements.backingAudio.play();
+        /*
+        * ============================================================
+        * INICIAR BACKING TRACK
+        * ============================================================
+        *
+        * O elemento já deve ter sido desbloqueado pelo clique
+        * do usuário antes da chamada de startTraining().
+        *
+        * Mesmo assim tratamos especificamente uma eventual
+        * falha de reprodução para não confundi-la com erro
+        * de permissão do microfone.
+        * ============================================================
+        */
+
+        try {
+
+            await elements.backingAudio.play();
+
+
+        } catch (audioError) {
+
+            console.error(
+                "Erro ao iniciar backing track durante o treino:",
+                audioError
+            );
+
+
+            setFeedback(
+                "O instrumental não pôde ser reproduzido. Toque novamente em iniciar.",
+                "errado"
+            );
+
+
+            throw new Error(
+                `Falha na reprodução do instrumental: ${
+                    audioError.message ||
+                    audioError.name ||
+                    "erro desconhecido"
+                }`
+            );
+        }
 
 
         running =
