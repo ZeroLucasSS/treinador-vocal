@@ -3574,6 +3574,93 @@ function createNoteStates() {
  * ============================================================
  */
 
+
+/*
+ * ============================================================
+ * CONFIGURAR SESSÃO DE ÁUDIO PARA PLAYBACK + MICROFONE
+ * ============================================================
+ *
+ * Em navegadores compatíveis, especialmente Safari/iOS,
+ * informamos explicitamente que esta página precisa:
+ *
+ * - reproduzir áudio;
+ * - capturar microfone;
+ * - fazer ambas as coisas simultaneamente.
+ *
+ * Isso ajuda o sistema operacional a escolher corretamente
+ * a rota de áudio, inclusive com headsets Bluetooth.
+ * ============================================================
+ */
+
+function configurePlayAndRecordAudioSession() {
+
+    try {
+
+        if (
+            "audioSession" in navigator &&
+            navigator.audioSession
+        ) {
+
+            /*
+             * Primeiro voltamos ao modo automático.
+             *
+             * Em alguns dispositivos iOS isso ajuda a forçar
+             * uma nova avaliação da rota de áudio.
+             */
+            navigator.audioSession.type =
+                "auto";
+
+
+            console.info(
+                "AudioSession definida temporariamente como auto."
+            );
+
+        }
+
+    } catch (error) {
+
+        console.warn(
+            "Não foi possível redefinir AudioSession:",
+            error
+        );
+    }
+}
+
+
+/*
+ * ============================================================
+ * ATIVAR MODO PLAY-AND-RECORD
+ * ============================================================
+ */
+
+function activatePlayAndRecordAudioSession() {
+
+    try {
+
+        if (
+            "audioSession" in navigator &&
+            navigator.audioSession
+        ) {
+
+            navigator.audioSession.type =
+                "play-and-record";
+
+
+            console.info(
+                "AudioSession definida como play-and-record."
+            );
+        }
+
+    } catch (error) {
+
+        console.warn(
+            "Não foi possível ativar play-and-record:",
+            error
+        );
+    }
+}
+
+
 async function startTraining() {
 
     if (
@@ -3664,17 +3751,44 @@ async function startTraining() {
 
     try {
 
+        /*
+        * ========================================================
+        * PREPARAR ROTEAMENTO DE ÁUDIO MOBILE
+        * ========================================================
+        */
+
+        configurePlayAndRecordAudioSession();
+
+
+        /*
+        * Abrimos o microfone primeiro.
+        *
+        * É nesse momento que o sistema pode mudar o perfil
+        * Bluetooth de reprodução para headset/telefonia.
+        */
         await microphone.start();
 
 
         /*
-         * IMPORTANTE:
-         *
-         * primeiro reseta.
-         * depois cria os estados.
-         */
-        resetInterfaceStatistics();
+        * Agora declaramos explicitamente que precisamos
+        * reproduzir E gravar simultaneamente.
+        *
+        * Em iOS isso pode forçar uma correção da rota
+        * de entrada/saída após o getUserMedia().
+        */
+        activatePlayAndRecordAudioSession();
 
+
+        /*
+        * IMPORTANTE:
+        *
+        * mantenha esta ordem:
+        *
+        * 1. resetInterfaceStatistics()
+        * 2. createNoteStates()
+        */
+
+        resetInterfaceStatistics();
 
         createNoteStates();
 
