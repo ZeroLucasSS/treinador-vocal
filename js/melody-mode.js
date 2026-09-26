@@ -45,7 +45,9 @@ import {
     frequencyToMidiFloat,
     midiToFrequency,
     midiToNoteName,
-    midiToOctave
+    midiToOctave,
+    isMidiInScale,
+    isSamePitchClass
 } from "./music-theory.js";
 
 
@@ -72,6 +74,8 @@ import {
 
 
 import {
+    loadSongCatalog,
+    findSongById,
     getSongAudioUrl,
     getSongMidiUrl,
     getSongLyricsUrl,
@@ -84,16 +88,6 @@ import {
     buildKaraokeModel,
     getKaraokeStateAtTime
 } from "./karaoke-engine.js";
-
-
-/*
- * ============================================================
- * CATÁLOGO
- * ============================================================
- */
-
-const CATALOG_URL =
-    "./assets/musicas/catalogo.json";
 
 
 /*
@@ -132,6 +126,38 @@ const NOTE_TIME_MARGIN =
     0.12;
 
 
+/*
+ * ============================================================
+ * AVALIAÇÃO MUSICAL ALTERNATIVA
+ * ============================================================
+ */
+
+
+/*
+ * Uma nota alternativa pertencente à tonalidade pode receber
+ * no máximo 70% do crédito de pitch de uma reprodução literal
+ * da melodia.
+ *
+ * Exemplo:
+ *
+ * afinação perfeita da nota alternativa:
+ *
+ * 100 × 0.70 = 70 pontos de pitch
+ */
+const SCALE_ALTERNATIVE_PITCH_FACTOR =
+    0.70;
+
+
+/*
+ * Uma classificação precisa representar pelo menos 60%
+ * das amostras da nota para ser considerada predominante.
+ *
+ * Isso evita que execuções muito instáveis sejam rotuladas
+ * artificialmente como "alternativa tonal".
+ */
+const DOMINANT_CLASSIFICATION_MIN_RATIO =
+    0.60;
+
 
 /*
  * ============================================================
@@ -165,6 +191,22 @@ const DIFFICULTIES = {
         near:
             300,
 
+        /*
+         * Afinação interna da nota realmente cantada.
+         *
+         * Exemplo:
+         *
+         * usuário canta A4 + 18 cents
+         *
+         * mesmo que o alvo MIDI seja C5,
+         * estes valores medem a qualidade do A4.
+         */
+        tuningTolerance:
+            40,
+
+        tuningNear:
+            50,
+
         requiredCoverage:
             0.25,
 
@@ -185,6 +227,12 @@ const DIFFICULTIES = {
         near:
             140,
 
+        tuningTolerance:
+            25,
+
+        tuningNear:
+            45,
+
         requiredCoverage:
             0.45,
 
@@ -204,6 +252,12 @@ const DIFFICULTIES = {
 
         near:
             70,
+
+        tuningTolerance:
+            15,
+
+        tuningNear:
+            35,
 
         requiredCoverage:
             0.65,
@@ -481,25 +535,62 @@ const elements = {
             "resultadoPrecisao"
         ),
 
+
     resultError:
         document.getElementById(
             "resultadoErro"
         ),
 
+
+    /*
+    * ========================================================
+    * CLASSIFICAÇÃO MUSICAL DO RESULTADO
+    * ========================================================
+    */
+
+    /*
+    * Melodia original:
+    *
+    * exactMelody
+    * +
+    * octaveMelody
+    */
     resultNotes:
         document.getElementById(
             "resultadoNotas"
         ),
+
+
+    /*
+    * Nota diferente da melodia,
+    * mas pertencente à tonalidade.
+    */
+    resultAlternatives:
+        document.getElementById(
+            "resultadoAlternativas"
+        ),
+
+
+    /*
+    * Nota predominante fora da tonalidade.
+    */
+    resultOutOfKey:
+        document.getElementById(
+            "resultadoForaDoTom"
+        ),
+
 
     resultOnset:
         document.getElementById(
             "resultadoEntrada"
         ),
 
+
     resultCoverage:
         document.getElementById(
             "resultadoCobertura"
         ),
+
 
     resultMissed:
         document.getElementById(
@@ -682,20 +773,34 @@ function validateRequiredElements() {
         resultadoPrecisao:
             elements.resultAccuracy,
 
+
         resultadoErro:
             elements.resultError,
+
 
         resultadoNotas:
             elements.resultNotes,
 
+
+        resultadoAlternativas:
+            elements.resultAlternatives,
+
+
+        resultadoForaDoTom:
+            elements.resultOutOfKey,
+
+
         resultadoEntrada:
             elements.resultOnset,
+
 
         resultadoCobertura:
             elements.resultCoverage,
 
+
         resultadoOmitidas:
             elements.resultMissed,
+
 
         resultadoSeloFinal:
             elements.finalResultSticker,
@@ -989,24 +1094,53 @@ async function initialize() {
     try {
 
         /*
-         * 1. Catálogo
+         * ====================================================
+         * 1. CATÁLOGO
+         * ====================================================
+         *
+         * O carregamento e a normalização agora pertencem
+         * exclusivamente ao song-catalog.js.
+         *
+         * Isso garante que:
+         *
+         * - key;
+         * - mode;
+         * - difficulty;
+         * - language;
+         * - offsets;
+         * - arquivos;
+         * - gênero;
+         *
+         * cheguem ao melody-mode.js já normalizados.
+         * ====================================================
          */
+
         catalog =
-            await loadCatalog();
+            await loadSongCatalog();
 
 
         /*
-         * 2. Descobre qual música foi solicitada.
+         * ====================================================
+         * 2. ID SOLICITADO NA URL
+         * ====================================================
          */
+
         const songId =
             getSongIdFromUrl();
 
 
         /*
-         * 3. Localiza a música.
+         * ====================================================
+         * 3. LOCALIZAR MÚSICA
+         * ====================================================
+         *
+         * Também delegamos essa responsabilidade
+         * ao song-catalog.js.
+         * ====================================================
          */
+
         currentSong =
-            findSongInCatalog(
+            findSongById(
                 catalog,
                 songId
             );
@@ -1025,52 +1159,98 @@ async function initialize() {
 
 
         /*
-         * 4. Prepara caminhos, offsets e interface.
+         * Diagnóstico útil durante esta etapa de evolução.
          */
+        console.info(
+            "🎵 Música carregada pelo song-catalog:",
+            {
+                id:
+                    currentSong.id,
+
+                title:
+                    currentSong.title,
+
+                genre:
+                    currentSong.genre,
+
+                genreName:
+                    currentSong.genreName,
+
+                key:
+                    currentSong.key,
+
+                mode:
+                    currentSong.mode
+            }
+        );
+
+
+        /*
+         * ====================================================
+         * 4. PREPARAR MÚSICA
+         * ====================================================
+         */
+
         prepareSong(
             currentSong
         );
 
 
         /*
+         * ====================================================
          * 5. MP3
+         * ====================================================
          */
+
         setupBackingTrack();
 
 
         /*
+         * ====================================================
          * 6. MIDI
+         * ====================================================
          *
          * Precisa ser carregado antes da construção
          * do modelo de karaokê.
+         * ====================================================
          */
+
         await loadVocalMidi();
 
 
         /*
-         * 7. Letra tradicional.
+         * ====================================================
+         * 7. LETRA TRADICIONAL
+         * ====================================================
          */
+
         await loadLyrics();
 
 
         /*
-         * 8. Letra sílaba a sílaba.
+         * ====================================================
+         * 8. LETRA SILÁBICA
+         * ====================================================
          */
+
         await loadSyllables();
 
 
         /*
-         * 9. Constrói:
-         *
-         * frase ↔ sílaba ↔ nota MIDI
+         * ====================================================
+         * 9. MODELO DO KARAOKÊ
+         * ====================================================
          */
+
         rebuildKaraokeModel();
 
 
         /*
-         * 10. Libera interface quando MP3 e MIDI
-         * estiverem realmente disponíveis.
+         * ====================================================
+         * 10. LIBERAR INTERFACE
+         * ====================================================
          */
+
         checkFilesReady();
 
 
@@ -1136,54 +1316,6 @@ function setLoadingState() {
 
 /*
  * ============================================================
- * CATÁLOGO
- * ============================================================
- */
-
-async function loadCatalog() {
-
-    const response =
-        await fetch(
-            CATALOG_URL,
-            {
-                cache:
-                    "no-cache"
-            }
-        );
-
-
-    if (
-        !response.ok
-    ) {
-
-        throw new Error(
-            `Não foi possível carregar catalogo.json (${response.status}).`
-        );
-    }
-
-
-    const data =
-        await response.json();
-
-
-    if (
-        !data ||
-        typeof data !==
-            "object"
-    ) {
-
-        throw new Error(
-            "O catálogo de músicas é inválido."
-        );
-    }
-
-
-    return data;
-}
-
-
-/*
- * ============================================================
  * ID DA MÚSICA
  * ============================================================
  */
@@ -1210,104 +1342,6 @@ function getSongIdFromUrl() {
             ? value.trim()
             : null
     );
-}
-
-
-/*
- * ============================================================
- * LOCALIZAR MÚSICA
- * ============================================================
- */
-
-function findSongInCatalog(
-    catalogData,
-    songId
-) {
-
-    if (
-        !songId
-    ) {
-
-        return null;
-    }
-
-
-    if (
-        Array.isArray(
-            catalogData.songs
-        )
-    ) {
-
-        const song =
-            catalogData.songs.find(
-                item =>
-                    item.id ===
-                    songId
-            );
-
-
-        if (
-            song
-        ) {
-
-            return song;
-        }
-    }
-
-
-    if (
-        Array.isArray(
-            catalogData.genres
-        )
-    ) {
-
-        for (
-            const genre of
-            catalogData.genres
-        ) {
-
-            if (
-                !Array.isArray(
-                    genre.songs
-                )
-            ) {
-
-                continue;
-            }
-
-
-            const song =
-                genre.songs.find(
-                    item =>
-                        item.id ===
-                        songId
-                );
-
-
-            if (
-                song
-            ) {
-
-                return {
-
-                    ...song,
-
-                    genre:
-                        song.genre ||
-                        genre.id ||
-                        "",
-
-                    genreName:
-                        song.genreName ||
-                        genre.name ||
-                        ""
-                };
-            }
-        }
-    }
-
-
-    return null;
 }
 
 
@@ -1366,6 +1400,65 @@ function prepareSong(
 
         throw new Error(
             `A música "${song.id}" não possui os arquivos obrigatórios de áudio e MIDI.`
+        );
+    }
+
+
+    /*
+     * ========================================================
+     * TONALIDADE
+     * ========================================================
+     *
+     * Enviamos a tonalidade da música ao piano roll.
+     *
+     * O PianoRoll é responsável somente pela representação
+     * visual da escala.
+     *
+     * Isso NÃO modifica:
+     *
+     * - pontuação;
+     * - cents;
+     * - tolerâncias;
+     * - resultado das notas;
+     * - combo.
+     * ========================================================
+     */
+
+    if (
+        song.key &&
+        song.mode
+    ) {
+
+        pianoRoll.setKeySignature(
+            song.key,
+            song.mode
+        );
+
+
+        console.info(
+            "🎼 Tonalidade da música:",
+            {
+                key:
+                    song.key,
+
+                mode:
+                    song.mode
+            }
+        );
+
+    } else {
+
+        /*
+         * Fallback defensivo.
+         *
+         * Se uma música antiga não possuir tonalidade,
+         * simplesmente não mostramos as linhas.
+         */
+        pianoRoll.clearKeySignature();
+
+
+        console.warn(
+            `A música "${song.id}" não possui key/mode.`
         );
     }
 
@@ -3517,23 +3610,145 @@ function createNoteStates() {
                 voiceSamples:
                     0,
 
+                /*
+                 * Estes contadores continuam representando
+                 * proximidade da MELodia original.
+                 */
                 correctSamples:
                     0,
 
                 nearSamples:
                     0,
 
+
+                /*
+                 * ====================================================
+                 * ERRO DE AFINAÇÃO REAL
+                 * ====================================================
+                 *
+                 * centsValues agora representa o erro em relação
+                 * à NOTA REALMENTE CANTADA.
+                 *
+                 * Exemplo:
+                 *
+                 * A4 + 8 cents
+                 *
+                 * armazena:
+                 *
+                 * 8
+                 */
                 centsValues:
                     [],
+
+
+                /*
+                 * Distância em cents até a nota MIDI original.
+                 *
+                 * É preservada como informação de fidelidade
+                 * à melodia.
+                 */
+                melodyCentsValues:
+                    [],
+
+
+                /*
+                 * Pontuação musical calculada para cada amostra.
+                 *
+                 * Aqui já entram:
+                 *
+                 * exactMelody       × 1.00
+                 * octaveMelody      × 1.00
+                 * scaleAlternative  × 0.70
+                 * outOfKey          × 0.00
+                 */
+                samplePitchScores:
+                    [],
+
 
                 voicedTime:
                     0,
 
+
+                /*
+                 * ====================================================
+                 * CLASSIFICAÇÃO MUSICAL
+                 * ====================================================
+                 */
+
+                voiceClassifications: {
+
+                    exactMelody:
+                        0,
+
+                    octaveMelody:
+                        0,
+
+                    scaleAlternative:
+                        0,
+
+                    outOfKey:
+                        0
+                },
+
+
+                /*
+                 * Quantas vezes cada MIDI arredondado foi detectado.
+                 *
+                 * Exemplo:
+                 *
+                 * {
+                 *     69: 18,
+                 *     67: 3
+                 * }
+                 *
+                 * permitirá concluir que A4 (MIDI 69)
+                 * foi a nota predominante.
+                 */
+                sungMidiCounts:
+                    Object.create(
+                        null
+                    ),
+
+
+                dominantVoiceClassification:
+                    null,
+
+                dominantVoiceRatio:
+                    0,
+
+                dominantSungMidi:
+                    null,
+
+
                 finalized:
                     false,
 
+                /*
+                * Classificação tradicional de desempenho.
+                *
+                * Continua sendo usada por:
+                *
+                * - combo;
+                * - gamificação;
+                * - estatísticas;
+                * - resultado numérico.
+                */
                 status:
                     "pending",
+
+
+                /*
+                * Estado exclusivamente visual da barra.
+                *
+                * Pode assumir também:
+                *
+                * "alternative"
+                *
+                * sem alterar state.status.
+                */
+                visualStatus:
+                    "pending",
+
 
                 score:
                     0,
@@ -3541,7 +3756,21 @@ function createNoteStates() {
                 onsetErrorMs:
                     null,
 
+
+                /*
+                 * Erro médio de afinação da nota realmente cantada.
+                 */
                 averageCents:
+                    null,
+
+
+                /*
+                 * Distância média até a melodia original.
+                 *
+                 * Guardamos separadamente para uso futuro
+                 * nos resultados detalhados.
+                 */
+                averageMelodyCents:
                     null,
 
                 coverage:
@@ -4172,6 +4401,7 @@ function processMicrophone(
         elements.sungNote.textContent =
             "—";
 
+
         return;
     }
 
@@ -4191,6 +4421,7 @@ function processMicrophone(
 
         elements.sungNote.textContent =
             "—";
+
 
         return;
     }
@@ -4218,7 +4449,7 @@ function processMicrophone(
 
     if (
         midiFloat ===
-        null ||
+            null ||
         !Number.isFinite(
             midiFloat
         )
@@ -4227,6 +4458,12 @@ function processMicrophone(
         return;
     }
 
+
+    /*
+     * ========================================================
+     * TRAÇADO DA VOZ
+     * ========================================================
+     */
 
     if (
         timestamp -
@@ -4245,14 +4482,36 @@ function processMicrophone(
     }
 
 
+    /*
+     * ========================================================
+     * NOTA CANTADA NA INTERFACE
+     * ========================================================
+     */
+
     updateSungNote(
         midiFloat
     );
 
 
+    /*
+     * ========================================================
+     * AVALIAÇÃO
+     * ========================================================
+     *
+     * Além da frequência, agora enviamos também o MIDI
+     * fracionário detectado.
+     *
+     * A pontuação continua usando frequency normalmente.
+     *
+     * midiFloat será utilizado apenas para a nova
+     * classificação musical.
+     * ========================================================
+     */
+
     evaluateVoiceSample(
         frequency,
-        currentSongTime
+        currentSongTime,
+        midiFloat
     );
 }
 
@@ -4360,13 +4619,557 @@ function getEvaluationTarget(
 
 /*
  * ============================================================
+ * CLASSIFICAÇÃO MUSICAL DA VOZ
+ * ============================================================
+ */
+
+function classifyVoicePitch(
+    midiFloat,
+    targetMidi
+) {
+
+    const sungMidi =
+        Math.round(
+            Number(
+                midiFloat
+            )
+        );
+
+
+    const expectedMidi =
+        Math.round(
+            Number(
+                targetMidi
+            )
+        );
+
+
+    if (
+        !Number.isFinite(
+            sungMidi
+        ) ||
+        !Number.isFinite(
+            expectedMidi
+        )
+    ) {
+
+        return null;
+    }
+
+
+    /*
+     * ========================================================
+     * 1. MELODIA EXATA
+     * ========================================================
+     *
+     * Mesma nota e mesma oitava.
+     *
+     * Exemplo:
+     *
+     * alvo: C5
+     * voz:  C5
+     */
+
+    if (
+        sungMidi ===
+        expectedMidi
+    ) {
+
+        return "exactMelody";
+    }
+
+
+    /*
+     * ========================================================
+     * 2. MESMA NOTA EM OUTRA OITAVA
+     * ========================================================
+     *
+     * Exemplo:
+     *
+     * alvo: C5
+     * voz:  C4
+     */
+
+    if (
+        isSamePitchClass(
+            sungMidi,
+            expectedMidi
+        )
+    ) {
+
+        return "octaveMelody";
+    }
+
+
+    /*
+     * ========================================================
+     * 3. ALTERNATIVA TONAL
+     * ========================================================
+     */
+
+    if (
+        currentSong?.key &&
+        currentSong?.mode &&
+        isMidiInScale(
+            sungMidi,
+            currentSong.key,
+            currentSong.mode
+        )
+    ) {
+
+        return "scaleAlternative";
+    }
+
+
+    /*
+     * ========================================================
+     * 4. FORA DO TOM
+     * ========================================================
+     */
+
+    return "outOfKey";
+}
+
+
+/*
+ * ============================================================
+ * REGISTRAR CLASSIFICAÇÃO
+ * ============================================================
+ */
+
+function registerVoiceClassification(
+    state,
+    classification
+) {
+
+    if (
+        !state ||
+        !classification ||
+        !state.voiceClassifications
+    ) {
+
+        return;
+    }
+
+
+    if (
+        !Object.prototype.hasOwnProperty.call(
+            state.voiceClassifications,
+            classification
+        )
+    ) {
+
+        return;
+    }
+
+
+    state.voiceClassifications[
+        classification
+    ]++;
+}
+
+
+/*
+ * ============================================================
+ * REGISTRAR MIDI REALMENTE CANTADO
+ * ============================================================
+ */
+
+function registerSungMidi(
+    state,
+    midiFloat
+) {
+
+    if (
+        !state
+    ) {
+
+        return;
+    }
+
+
+    const sungMidi =
+        Math.round(
+            Number(
+                midiFloat
+            )
+        );
+
+
+    if (
+        !Number.isFinite(
+            sungMidi
+        )
+    ) {
+
+        return;
+    }
+
+
+    const key =
+        String(
+            sungMidi
+        );
+
+
+    state.sungMidiCounts[
+        key
+    ] =
+        (
+            state.sungMidiCounts[
+                key
+            ] ||
+            0
+        ) +
+        1;
+}
+
+
+/*
+ * ============================================================
+ * MIDI CANTADO PREDOMINANTE
+ * ============================================================
+ */
+
+function getDominantSungMidi(
+    state
+) {
+
+    if (
+        !state ||
+        !state.sungMidiCounts
+    ) {
+
+        return null;
+    }
+
+
+    const entries =
+        Object.entries(
+            state.sungMidiCounts
+        );
+
+
+    if (
+        entries.length ===
+        0
+    ) {
+
+        return null;
+    }
+
+
+    entries.sort(
+        (
+            a,
+            b
+        ) =>
+            Number(
+                b[1]
+            ) -
+            Number(
+                a[1]
+            )
+    );
+
+
+    const midi =
+        Number(
+            entries[0][0]
+        );
+
+
+    return Number.isFinite(
+        midi
+    )
+        ? midi
+        : null;
+}
+
+
+/*
+ * ============================================================
+ * CLASSIFICAÇÃO PREDOMINANTE
+ * ============================================================
+ *
+ * Uma categoria somente é considerada predominante quando
+ * representa pelo menos 60% das amostras válidas.
+ *
+ * Caso contrário:
+ *
+ * classification = null
+ *
+ * A pontuação continua funcionando normalmente pela média
+ * das amostras; apenas não rotulamos a execução como uma
+ * categoria musical estável.
+ * ============================================================
+ */
+
+function getDominantVoiceClassificationSummary(
+    state
+) {
+
+    if (
+        !state ||
+        !state.voiceClassifications
+    ) {
+
+        return {
+            classification:
+                null,
+
+            ratio:
+                0
+        };
+    }
+
+
+    const entries =
+        Object.entries(
+            state.voiceClassifications
+        );
+
+
+    const total =
+        entries.reduce(
+            (
+                sum,
+                [, count]
+            ) =>
+                sum +
+                Number(
+                    count ||
+                    0
+                ),
+            0
+        );
+
+
+    if (
+        total <=
+        0
+    ) {
+
+        return {
+            classification:
+                null,
+
+            ratio:
+                0
+        };
+    }
+
+
+    entries.sort(
+        (
+            a,
+            b
+        ) =>
+            Number(
+                b[1]
+            ) -
+            Number(
+                a[1]
+            )
+    );
+
+
+    const [
+        classification,
+        count
+    ] =
+        entries[0];
+
+
+    const ratio =
+        Number(
+            count
+        ) /
+        total;
+
+
+    return {
+
+        classification:
+            ratio >=
+            DOMINANT_CLASSIFICATION_MIN_RATIO
+                ? classification
+                : null,
+
+        ratio
+    };
+}
+
+
+/*
+ * ============================================================
+ * PONTUAÇÃO DE PITCH DE UMA ÚNICA AMOSTRA
+ * ============================================================
+ *
+ * Primeiro avaliamos quão afinada está a NOTA REALMENTE
+ * cantada.
+ *
+ * Depois aplicamos o valor musical daquela escolha:
+ *
+ * exactMelody       → × 1.00
+ * octaveMelody      → × 1.00
+ * scaleAlternative  → × 0.70
+ * outOfKey          → × 0.00
+ * ============================================================
+ */
+
+function calculateSamplePitchScore(
+    classification,
+    absoluteTuningCents,
+    difficulty
+) {
+
+    if (
+        !classification ||
+        !Number.isFinite(
+            absoluteTuningCents
+        )
+    ) {
+
+        return 0;
+    }
+
+
+    const tolerance =
+        Math.max(
+            1,
+            Number(
+                difficulty.tuningTolerance ??
+                30
+            )
+        );
+
+
+    const near =
+        Math.max(
+            tolerance +
+                1,
+            Number(
+                difficulty.tuningNear ??
+                50
+            )
+        );
+
+
+    let tuningScore =
+        0;
+
+
+    /*
+     * Dentro da região afinada:
+     *
+     * 0 cents         → 100
+     * limite tolerance → 80
+     */
+    if (
+        absoluteTuningCents <=
+        tolerance
+    ) {
+
+        tuningScore =
+            100 -
+            (
+                absoluteTuningCents /
+                tolerance
+            ) *
+            20;
+
+    } else if (
+        absoluteTuningCents <=
+        near
+    ) {
+
+        /*
+         * Região de aproximação:
+         *
+         * tolerance → 80
+         * near      → 0
+         */
+
+        const ratio =
+            (
+                absoluteTuningCents -
+                tolerance
+            ) /
+            (
+                near -
+                tolerance
+            );
+
+
+        tuningScore =
+            80 *
+            (
+                1 -
+                ratio
+            );
+
+    } else {
+
+        tuningScore =
+            0;
+    }
+
+
+    let musicalFactor =
+        0;
+
+
+    switch (
+        classification
+    ) {
+
+        case "exactMelody":
+
+        case "octaveMelody":
+
+            musicalFactor =
+                1;
+
+            break;
+
+
+        case "scaleAlternative":
+
+            musicalFactor =
+                SCALE_ALTERNATIVE_PITCH_FACTOR;
+
+            break;
+
+
+        case "outOfKey":
+
+        default:
+
+            musicalFactor =
+                0;
+
+            break;
+    }
+
+
+    return clampScore(
+        tuningScore *
+        musicalFactor
+    );
+}
+
+
+/*
+ * ============================================================
  * AVALIAÇÃO DA VOZ
  * ============================================================
  */
 
 function evaluateVoiceSample(
     frequency,
-    time
+    time,
+    midiFloat
 ) {
 
     const target =
@@ -4425,13 +5228,68 @@ function evaluateVoiceSample(
         getCurrentDifficulty();
 
 
+    /*
+     * ========================================================
+     * NOTA REALMENTE CANTADA
+     * ========================================================
+     */
+
+    const sungMidi =
+        Math.round(
+            midiFloat
+        );
+
+
+    const sungFrequency =
+        midiToFrequency(
+            sungMidi
+        );
+
+
+    /*
+     * ========================================================
+     * ERRO DE AFINAÇÃO REAL
+     * ========================================================
+     *
+     * Mede a frequência contra o centro da nota que o cantor
+     * realmente está produzindo.
+     *
+     * Exemplo:
+     *
+     * A4 + 7 cents
+     *
+     * → tuningCents = +7
+     */
+
+    const tuningCents =
+        1200 *
+        Math.log2(
+            frequency /
+            sungFrequency
+        );
+
+
+    const absTuningCents =
+        Math.abs(
+            tuningCents
+        );
+
+
+    /*
+     * ========================================================
+     * DISTÂNCIA ATÉ A MELODIA ORIGINAL
+     * ========================================================
+     *
+     * Guardamos separadamente.
+     */
+
     const targetFrequency =
         midiToFrequency(
             note.midi
         );
 
 
-    const cents =
+    const melodyCents =
         1200 *
         Math.log2(
             frequency /
@@ -4439,15 +5297,62 @@ function evaluateVoiceSample(
         );
 
 
-    const absCents =
+    const absMelodyCents =
         Math.abs(
-            cents
+            melodyCents
         );
 
 
     /*
-     * Entrada.
+     * ========================================================
+     * CLASSIFICAÇÃO MUSICAL
+     * ========================================================
      */
+
+    const voiceClassification =
+        classifyVoicePitch(
+            midiFloat,
+            note.midi
+        );
+
+
+    registerVoiceClassification(
+        state,
+        voiceClassification
+    );
+
+
+    registerSungMidi(
+        state,
+        midiFloat
+    );
+
+
+    /*
+     * ========================================================
+     * SCORE DE PITCH DA AMOSTRA
+     * ========================================================
+     */
+
+    const samplePitchScore =
+        calculateSamplePitchScore(
+            voiceClassification,
+            absTuningCents,
+            difficulty
+        );
+
+
+    state.samplePitchScores.push(
+        samplePitchScore
+    );
+
+
+    /*
+     * ========================================================
+     * ENTRADA
+     * ========================================================
+     */
+
     if (
         state.firstVoiceTime ===
         null
@@ -4467,8 +5372,11 @@ function evaluateVoiceSample(
 
 
     /*
-     * Cobertura / sustentação.
+     * ========================================================
+     * COBERTURA / SUSTENTAÇÃO
+     * ========================================================
      */
+
     if (
         state.lastSampleTime !==
         null
@@ -4528,40 +5436,80 @@ function evaluateVoiceSample(
     state.voiceSamples++;
 
 
+    /*
+     * centsValues agora representa a afinação real
+     * da nota escolhida.
+     */
     state.centsValues.push(
-        absCents
+        absTuningCents
     );
 
 
+    /*
+     * Distância para a melodia original continua disponível
+     * separadamente.
+     */
+    state.melodyCentsValues.push(
+        absMelodyCents
+    );
+
+
+    /*
+     * ========================================================
+     * CONTADORES DE FIDELIDADE À MELODIA
+     * ========================================================
+     *
+     * Apenas melodia exata ou adaptação de oitava contam
+     * como reprodução da nota melódica.
+     */
+
+    const isMelodicNote =
+        voiceClassification ===
+            "exactMelody" ||
+        voiceClassification ===
+            "octaveMelody";
+
+
     if (
-        absCents <=
-        difficulty.tolerance
+        isMelodicNote &&
+        absTuningCents <=
+            difficulty.tuningTolerance
     ) {
 
         state.correctSamples++;
 
     } else if (
-        absCents <=
-        difficulty.near
+        isMelodicNote &&
+        absTuningCents <=
+            difficulty.tuningNear
     ) {
 
         state.nearSamples++;
     }
 
 
-    const roundedCents =
+    /*
+     * ========================================================
+     * INTERFACE — ERRO ATUAL
+     * ========================================================
+     *
+     * Agora mostramos o erro de afinação da nota realmente
+     * cantada, e não a distância brutal até a nota MIDI.
+     */
+
+    const roundedTuningCents =
         Math.round(
-            cents
+            tuningCents
         );
 
 
     elements.currentError.textContent =
         `${
-            roundedCents >
+            roundedTuningCents >
             0
                 ? "+"
                 : ""
-        }${roundedCents} cents`;
+        }${roundedTuningCents} cents`;
 
 
     elements.currentOnset.textContent =
@@ -4602,38 +5550,108 @@ function evaluateVoiceSample(
         `${liveScores.pitchScore}%`;
 
 
-    if (
-        absCents <=
-        difficulty.tolerance
+    /*
+     * ========================================================
+     * FEEDBACK MUSICAL
+     * ========================================================
+     */
+
+    switch (
+        voiceClassification
     ) {
 
-        setFeedback(
-            "Afinado!",
-            "correto"
-        );
+        case "exactMelody": {
 
-    } else if (
-        absCents <=
-        difficulty.near
-    ) {
+            if (
+                absTuningCents <=
+                difficulty.tuningTolerance
+            ) {
 
-        setFeedback(
-            cents <
-                0
-                ? "Quase — suba um pouco."
-                : "Quase — desça um pouco.",
-            "proximo"
-        );
+                setFeedback(
+                    "Afinado!",
+                    "correto"
+                );
 
-    } else {
+            } else {
 
-        setFeedback(
-            cents <
-                0
-                ? "Abaixo da nota — suba a voz."
-                : "Acima da nota — desça a voz.",
-            "errado"
-        );
+                setFeedback(
+                    tuningCents <
+                        0
+                        ? "Quase — suba um pouco."
+                        : "Quase — desça um pouco.",
+                    "proximo"
+                );
+            }
+
+            break;
+        }
+
+
+        case "octaveMelody": {
+
+            if (
+                absTuningCents <=
+                difficulty.tuningTolerance
+            ) {
+
+                setFeedback(
+                    "Mesma nota em outra oitava.",
+                    "correto"
+                );
+
+            } else {
+
+                setFeedback(
+                    tuningCents <
+                        0
+                        ? "Outra oitava — suba um pouco."
+                        : "Outra oitava — desça um pouco.",
+                    "proximo"
+                );
+            }
+
+            break;
+        }
+
+
+        case "scaleAlternative": {
+
+            if (
+                absTuningCents <=
+                difficulty.tuningNear
+            ) {
+
+                setFeedback(
+                    "Nota alternativa dentro do tom.",
+                    "proximo"
+                );
+
+            } else {
+
+                setFeedback(
+                    tuningCents <
+                        0
+                        ? "Alternativa no tom — suba um pouco."
+                        : "Alternativa no tom — desça um pouco.",
+                    "proximo"
+                );
+            }
+
+            break;
+        }
+
+
+        case "outOfKey":
+
+        default: {
+
+            setFeedback(
+                "Nota fora da tonalidade.",
+                "errado"
+            );
+
+            break;
+        }
     }
 }
 
@@ -4728,11 +5746,19 @@ function finalizeNote(
             "missed";
 
 
+        state.visualStatus =
+            "missed";
+
+
         state.score =
             0;
 
 
         state.averageCents =
+            null;
+
+
+        state.averageMelodyCents =
             null;
 
 
@@ -4752,6 +5778,18 @@ function finalizeNote(
             0;
 
 
+        state.dominantVoiceClassification =
+            null;
+
+
+        state.dominantVoiceRatio =
+            0;
+
+
+        state.dominantSungMidi =
+            null;
+
+
         pianoRoll.setNoteResult(
             index,
             {
@@ -4767,9 +5805,6 @@ function finalizeNote(
         updateLiveStatistics();
 
 
-        /*
-         * Feedback visual da nota finalizada.
-         */
         handleFinalizedNoteGamification(
             state
         );
@@ -4781,14 +5816,26 @@ function finalizeNote(
 
     /*
      * ========================================================
-     * MÉTRICAS CONSOLIDADAS
+     * AFINAÇÃO CONSOLIDADA
      * ========================================================
      */
 
     state.averageCents =
-        calculateAverage(
-            state.centsValues
-        );
+        state.centsValues.length >
+            0
+            ? calculateAverage(
+                state.centsValues
+            )
+            : null;
+
+
+    state.averageMelodyCents =
+        state.melodyCentsValues.length >
+            0
+            ? calculateAverage(
+                state.melodyCentsValues
+            )
+            : null;
 
 
     state.coverage =
@@ -4796,6 +5843,44 @@ function finalizeNote(
             state
         );
 
+
+    /*
+     * ========================================================
+     * CLASSIFICAÇÃO MUSICAL PREDOMINANTE
+     * ========================================================
+     */
+
+    const classificationSummary =
+        getDominantVoiceClassificationSummary(
+            state
+        );
+
+
+    state.dominantVoiceClassification =
+        classificationSummary.classification;
+
+
+    state.dominantVoiceRatio =
+        classificationSummary.ratio;
+
+
+    /*
+     * ========================================================
+     * NOTA REALMENTE CANTADA
+     * ========================================================
+     */
+
+    state.dominantSungMidi =
+        getDominantSungMidi(
+            state
+        );
+
+
+    /*
+     * ========================================================
+     * SCORES
+     * ========================================================
+     */
 
     const scores =
         calculateNoteScores(
@@ -4823,8 +5908,18 @@ function finalizeNote(
 
     /*
      * ========================================================
-     * CLASSIFICAÇÃO
+     * CLASSIFICAÇÃO TRADICIONAL DO SCORE
      * ========================================================
+     *
+     * Mantemos por enquanto:
+     *
+     * excellent
+     * partial
+     * error
+     *
+     * No próximo passo, piano-roll.js combinará isso com
+     * dominantVoiceClassification para mostrar o ciano
+     * das alternativas tonais.
      */
 
     if (
@@ -4851,16 +5946,106 @@ function finalizeNote(
 
 
     /*
-     * ========================================================
-     * PIANO ROLL
-     * ========================================================
-     */
+    * ========================================================
+    * ESTADO VISUAL DA BARRA
+    * ========================================================
+    *
+    * A classificação numérica e a classificação visual
+    * são deliberadamente independentes.
+    *
+    *
+    * state.status
+    *
+    *     excellent
+    *     partial
+    *     error
+    *     missed
+    *
+    * continua representando a QUALIDADE DA EXECUÇÃO.
+    *
+    *
+    * state.visualStatus
+    *
+    * pode assumir também:
+    *
+    *     alternative
+    *
+    * e representa a NATUREZA MUSICAL da execução no
+    * piano roll.
+    *
+    *
+    * Portanto:
+    *
+    * scaleAlternative predominante
+    *     → barra roxa
+    *
+    * exactMelody
+    * octaveMelody
+    * classificação instável
+    *     → mantém verde / amarelo / vermelho conforme score
+    *
+    *
+    * IMPORTANTE:
+    *
+    * Esta decisão NÃO modifica:
+    *
+    * - state.status;
+    * - state.score;
+    * - pitchScore;
+    * - timingScore;
+    * - durationScore;
+    * - combo;
+    * - gamificação.
+    * ========================================================
+    */
+
+    let visualStatus =
+        state.status;
+
+
+    /*
+    * Uma alternativa tonal somente recebe o estado visual
+    * especial quando ela foi suficientemente predominante.
+    *
+    * Essa segurança já está embutida em:
+    *
+    * dominantVoiceClassification
+    *
+    * porque getDominantVoiceClassificationSummary()
+    * exige o limite definido em:
+    *
+    * DOMINANT_CLASSIFICATION_MIN_RATIO.
+    */
+    if (
+        state.dominantVoiceClassification ===
+        "scaleAlternative"
+    ) {
+
+        visualStatus =
+            "alternative";
+    }
+
+
+    /*
+    * Guardamos também no estado da nota para que,
+    * futuramente, o resultado final possa consultar
+    * exatamente como a barra foi apresentada.
+    */
+    state.visualStatus =
+        visualStatus;
+
+
+    /*
+    * ========================================================
+    * PIANO ROLL
+    * ========================================================
+    */
 
     pianoRoll.setNoteResult(
         index,
         {
             status:
-                state.status,
+                state.visualStatus,
 
             score:
                 state.score
@@ -4869,19 +6054,43 @@ function finalizeNote(
 
 
     /*
-     * ========================================================
-     * INTERFACE
-     * ========================================================
+     * Diagnóstico temporário útil durante os testes.
      */
+    console.debug(
+        "🎤 Nota vocal finalizada:",
+        {
+            expectedMidi:
+                state.midi,
+
+            sungMidi:
+                state.dominantSungMidi,
+
+            classification:
+                state.dominantVoiceClassification,
+
+            classificationRatio:
+                Math.round(
+                    state.dominantVoiceRatio *
+                    100
+                ),
+
+            performanceStatus:
+                state.status,
+
+            visualStatus:
+                state.visualStatus,
+
+            pitchScore:
+                state.pitchScore,
+
+            totalScore:
+                state.score
+        }
+    );
+
 
     updateLiveStatistics();
 
-
-    /*
-     * ========================================================
-     * GAMIFICAÇÃO
-     * ========================================================
-     */
 
     handleFinalizedNoteGamification(
         state
@@ -5709,53 +6918,56 @@ function calculateNoteScores(
         getCurrentDifficulty();
 
 
-    const averageCents =
-        state.centsValues.length >
-        0
-            ? calculateAverage(
-                state.centsValues
-            )
-            : difficulty.near;
+    /*
+     * ========================================================
+     * PITCH
+     * ========================================================
+     *
+     * Cada amostra já foi avaliada musicalmente.
+     *
+     * Exemplos:
+     *
+     * exactMelody:
+     *     até 100
+     *
+     * octaveMelody:
+     *     até 100
+     *
+     * scaleAlternative:
+     *     até 70
+     *
+     * outOfKey:
+     *     0
+     */
 
-
-    const meanErrorScore =
-        Math.max(
-            0,
-            Math.min(
-                100,
-                100 *
-                (
-                    1 -
-                    averageCents /
-                        difficulty.near
+    const pitchScore =
+        state.samplePitchScores.length >
+            0
+            ? clampScore(
+                calculateAverage(
+                    state.samplePitchScores
                 )
             )
-        );
-
-
-    const correctRatio =
-        state.voiceSamples >
-        0
-            ? state.correctSamples /
-                state.voiceSamples
             : 0;
 
 
-    const pitchScore =
-        clampScore(
-            meanErrorScore *
-                0.55 +
-            correctRatio *
-                100 *
-                0.45
-        );
-
+    /*
+     * ========================================================
+     * TIMING
+     * ========================================================
+     */
 
     const timingScore =
         calculateTimingScore(
             state.onsetErrorMs
         );
 
+
+    /*
+     * ========================================================
+     * COBERTURA
+     * ========================================================
+     */
 
     const coverage =
         finalized
@@ -5769,24 +6981,11 @@ function calculateNoteScores(
 
 
     /*
-    * ========================================================
-    * DURAÇÃO / SUSTENTAÇÃO
-    * ========================================================
-    *
-    * Não exigimos mais 100% da duração prevista pelo MIDI
-    * para conceder pontuação máxima.
-    *
-    * Isso torna o avaliador mais tolerante às imprecisões
-    * produzidas na conversão voz → MIDI.
-    *
-    * Exemplo no iniciante:
-    *
-    * requiredCoverage = 0.35
-    *
-    * 17,5% cantado → 50 pontos de duração
-    * 35% cantado   → 100 pontos
-    * 50% cantado   → 100 pontos
-    */
+     * ========================================================
+     * DURAÇÃO / SUSTENTAÇÃO
+     * ========================================================
+     */
+
     const requiredCoverage =
         Math.max(
             0.01,
@@ -5805,6 +7004,18 @@ function calculateNoteScores(
             100
         );
 
+
+    /*
+     * ========================================================
+     * SCORE FINAL DA NOTA
+     * ========================================================
+     *
+     * Mantemos os pesos existentes:
+     *
+     * pitch    60%
+     * timing   20%
+     * duração  20%
+     */
 
     const totalScore =
         clampScore(
@@ -6507,6 +7718,12 @@ function showResults() {
         noteStates.length;
 
 
+    /*
+     * ========================================================
+     * NOTAS CANTADAS
+     * ========================================================
+     */
+
     const sung =
         noteStates.filter(
             state =>
@@ -6514,6 +7731,12 @@ function showResults() {
                 0
         );
 
+
+    /*
+     * ========================================================
+     * NOTAS NÃO CANTADAS
+     * ========================================================
+     */
 
     const missed =
         noteStates.filter(
@@ -6523,6 +7746,19 @@ function showResults() {
         );
 
 
+    /*
+     * ========================================================
+     * NOTAS EXCELENTES
+     * ========================================================
+     *
+     * Esta classificação continua sendo usada pela
+     * gamificação.
+     *
+     * Ela representa QUALIDADE da execução, e não
+     * natureza musical da nota.
+     * ========================================================
+     */
+
     const excellent =
         noteStates.filter(
             state =>
@@ -6530,6 +7766,114 @@ function showResults() {
                 "excellent"
         );
 
+
+    /*
+     * ========================================================
+     * CLASSIFICAÇÃO MUSICAL
+     * ========================================================
+     *
+     * Cada nota finalizada já possui:
+     *
+     * dominantVoiceClassification
+     *
+     * com um dos seguintes valores:
+     *
+     * exactMelody
+     * octaveMelody
+     * scaleAlternative
+     * outOfKey
+     * null
+     *
+     *
+     * A classificação só existe quando uma categoria
+     * atingiu a predominância mínima configurada.
+     * ========================================================
+     */
+
+
+    /*
+     * --------------------------------------------------------
+     * NOTAS DA MELODIA
+     * --------------------------------------------------------
+     *
+     * Incluímos:
+     *
+     * exactMelody
+     *     nota MIDI original.
+     *
+     * octaveMelody
+     *     mesma nota musical em outra oitava.
+     */
+
+    const melodyNotes =
+        noteStates.filter(
+            state =>
+                state.dominantVoiceClassification ===
+                    "exactMelody" ||
+                state.dominantVoiceClassification ===
+                    "octaveMelody"
+        );
+
+
+    /*
+     * --------------------------------------------------------
+     * NOTAS ALTERNATIVAS
+     * --------------------------------------------------------
+     *
+     * Outra nota musical, porém pertencente
+     * à tonalidade da música.
+     */
+
+    const alternativeNotes =
+        noteStates.filter(
+            state =>
+                state.dominantVoiceClassification ===
+                    "scaleAlternative"
+        );
+
+
+    /*
+     * --------------------------------------------------------
+     * FORA DO TOM
+     * --------------------------------------------------------
+     */
+
+    const outOfKeyNotes =
+        noteStates.filter(
+            state =>
+                state.dominantVoiceClassification ===
+                    "outOfKey"
+        );
+
+
+    /*
+     * --------------------------------------------------------
+     * CLASSIFICAÇÃO INSTÁVEL
+     * --------------------------------------------------------
+     *
+     * A nota foi cantada, mas nenhuma categoria musical
+     * atingiu o percentual mínimo de predominância.
+     *
+     * Não existe cartão específico para ela neste momento.
+     *
+     * Guardamos apenas para diagnóstico.
+     */
+
+    const unstableNotes =
+        noteStates.filter(
+            state =>
+                state.voiceSamples >
+                    0 &&
+                state.dominantVoiceClassification ===
+                    null
+        );
+
+
+    /*
+     * ========================================================
+     * PONTUAÇÃO TOTAL
+     * ========================================================
+     */
 
     const totalScore =
         total >
@@ -6557,6 +7901,12 @@ function showResults() {
         );
 
 
+    /*
+     * ========================================================
+     * PONTUAÇÃO DE AFINAÇÃO
+     * ========================================================
+     */
+
     elements.resultAccuracy.textContent =
         sung.length >
         0
@@ -6570,6 +7920,19 @@ function showResults() {
             )}%`
             : "—";
 
+
+    /*
+     * ========================================================
+     * ERRO MÉDIO DE AFINAÇÃO
+     * ========================================================
+     *
+     * averageCents representa o erro da nota realmente
+     * cantada em relação ao centro daquela própria nota.
+     *
+     * Portanto uma alternativa tonal afinada não recebe
+     * um erro gigantesco apenas por não ser a nota MIDI.
+     * ========================================================
+     */
 
     const errorStates =
         sung.filter(
@@ -6592,9 +7955,45 @@ function showResults() {
             : "—";
 
 
-    elements.resultNotes.textContent =
-        `${excellent.length} / ${total}`;
+    /*
+     * ========================================================
+     * RESULTADO MUSICAL
+     * ========================================================
+     */
 
+
+    /*
+     * Melodia original + adaptação de oitava.
+     */
+    elements.resultNotes.textContent =
+        String(
+            melodyNotes.length
+        );
+
+
+    /*
+     * Alternativas pertencentes ao tom.
+     */
+    elements.resultAlternatives.textContent =
+        String(
+            alternativeNotes.length
+        );
+
+
+    /*
+     * Execuções predominantemente fora do tom.
+     */
+    elements.resultOutOfKey.textContent =
+        String(
+            outOfKeyNotes.length
+        );
+
+
+    /*
+     * ========================================================
+     * ENTRADA MÉDIA
+     * ========================================================
+     */
 
     const onsetStates =
         sung.filter(
@@ -6621,6 +8020,12 @@ function showResults() {
             : "—";
 
 
+    /*
+     * ========================================================
+     * COBERTURA MÉDIA
+     * ========================================================
+     */
+
     elements.resultCoverage.textContent =
         total >
         0
@@ -6636,16 +8041,65 @@ function showResults() {
             : "—";
 
 
+    /*
+     * ========================================================
+     * NOTAS NÃO CANTADAS
+     * ========================================================
+     */
+
     elements.resultMissed.textContent =
         String(
             missed.length
         );
 
 
+    /*
+     * ========================================================
+     * AVALIAÇÃO TEXTUAL FINAL
+     * ========================================================
+     */
+
     elements.finalEvaluation.textContent =
         getFinalEvaluation(
             totalScore
         );
+
+
+    /*
+     * ========================================================
+     * DIAGNÓSTICO DA NOVA CLASSIFICAÇÃO
+     * ========================================================
+     *
+     * Útil principalmente durante os primeiros testes.
+     * ========================================================
+     */
+
+    console.info(
+        "🎼 Resumo musical da execução:",
+        {
+
+            totalNotes:
+                total,
+
+            sungNotes:
+                sung.length,
+
+            melodyNotes:
+                melodyNotes.length,
+
+            alternativeNotes:
+                alternativeNotes.length,
+
+            outOfKeyNotes:
+                outOfKeyNotes.length,
+
+            missedNotes:
+                missed.length,
+
+            unstableNotes:
+                unstableNotes.length
+        }
+    );
 
 
     /*
@@ -7046,6 +8500,61 @@ function resetInterfaceStatistics() {
     elements.currentNoteScore.textContent =
         "—";
 
+
+    /*
+     * ========================================================
+     * RESULTADO FINAL
+     * ========================================================
+     *
+     * Limpamos também todos os dados da execução anterior.
+     * ========================================================
+     */
+
+    elements.finalScore.textContent =
+        "0";
+
+
+    elements.finalEvaluation.textContent =
+        "";
+
+
+    elements.resultAccuracy.textContent =
+        "—";
+
+
+    elements.resultError.textContent =
+        "—";
+
+
+    elements.resultNotes.textContent =
+        "—";
+
+
+    elements.resultAlternatives.textContent =
+        "—";
+
+
+    elements.resultOutOfKey.textContent =
+        "—";
+
+
+    elements.resultOnset.textContent =
+        "—";
+
+
+    elements.resultCoverage.textContent =
+        "—";
+
+
+    elements.resultMissed.textContent =
+        "—";
+
+
+    /*
+     * ========================================================
+     * DETALHAMENTO NOTA A NOTA
+     * ========================================================
+     */
 
     elements.noteResultsList.innerHTML =
         "";

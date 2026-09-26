@@ -241,6 +241,124 @@ VALID_DIFFICULTIES = {
 
 
 # ============================================================
+# TONALIDADES
+# ============================================================
+#
+# Internamente o aplicativo trabalha com sustenidos.
+#
+# O musica.json poderá utilizar:
+#
+#     C
+#     C#
+#     Db
+#     D
+#     ...
+#
+# O gerador converte grafias enarmônicas para a
+# representação interna adotada pelo music-theory.js.
+# ============================================================
+
+NOTE_ALIASES = {
+
+    "C":
+        "C",
+
+    "B#":
+        "C",
+
+
+    "C#":
+        "C#",
+
+    "DB":
+        "C#",
+
+
+    "D":
+        "D",
+
+
+    "D#":
+        "D#",
+
+    "EB":
+        "D#",
+
+
+    "E":
+        "E",
+
+    "FB":
+        "E",
+
+
+    "F":
+        "F",
+
+    "E#":
+        "F",
+
+
+    "F#":
+        "F#",
+
+    "GB":
+        "F#",
+
+
+    "G":
+        "G",
+
+
+    "G#":
+        "G#",
+
+    "AB":
+        "G#",
+
+
+    "A":
+        "A",
+
+
+    "A#":
+        "A#",
+
+    "BB":
+        "A#",
+
+
+    "B":
+        "B",
+
+    "CB":
+        "B",
+}
+
+
+VALID_MODES = {
+    "major",
+    "minor",
+}
+
+
+MODE_ALIASES = {
+
+    "major":
+        "major",
+
+    "maior":
+        "major",
+
+    "minor":
+        "minor",
+
+    "menor":
+        "minor",
+}
+
+
+# ============================================================
 # TERMINAL
 # ============================================================
 
@@ -739,6 +857,10 @@ def scan_songs(
 # CONSTRUIR REGISTRO DA MÚSICA
 # ============================================================
 
+# ============================================================
+# CONSTRUIR REGISTRO DA MÚSICA
+# ============================================================
+
 def build_song_entry(
     genre_id: str,
     song_directory: Path
@@ -846,6 +968,54 @@ def build_song_entry(
             "Valores permitidos:\n"
             "beginner, intermediate ou advanced."
         )
+
+
+    # ========================================================
+    # TONALIDADE
+    # ========================================================
+    #
+    # Campo obrigatório.
+    #
+    # Exemplos aceitos:
+    #
+    #     C
+    #     C#
+    #     Db
+    #     Bb
+    #
+    # O valor é convertido para a representação interna
+    # baseada em sustenidos.
+    # ========================================================
+
+    key = normalize_music_key(
+        metadata.get(
+            "key"
+        )
+    )
+
+
+    # ========================================================
+    # MODO
+    # ========================================================
+    #
+    # Campo obrigatório.
+    #
+    # Valores oficiais:
+    #
+    #     major
+    #     minor
+    #
+    # Também aceitamos:
+    #
+    #     maior
+    #     menor
+    # ========================================================
+
+    mode = normalize_music_mode(
+        metadata.get(
+            "mode"
+        )
+    )
 
 
     # ========================================================
@@ -1015,10 +1185,20 @@ def build_song_entry(
             language,
 
 
-        # Não existem comentários em JSON.
+        # ====================================================
+        # TONALIDADE
+        # ====================================================
 
-        # Estes campos são escritos explicitamente
-        # no objeto Python antes da serialização.
+        "key":
+            key,
+
+        "mode":
+            mode,
+
+
+        # ====================================================
+        # SINCRONIZAÇÃO
+        # ====================================================
 
         # Offset compartilhado por MIDI e SRT silábico.
         "offset":
@@ -1027,6 +1207,11 @@ def build_song_entry(
         # Offset independente da legenda tradicional.
         "lyricsOffset":
             lyrics_offset,
+
+
+        # ====================================================
+        # ARQUIVOS
+        # ====================================================
 
         "files": {
 
@@ -1067,6 +1252,177 @@ def build_song_entry(
 
 
     return result
+
+
+# ============================================================
+# NORMALIZAR TONALIDADE
+# ============================================================
+
+def normalize_music_key(
+    value: Any
+) -> str:
+
+    """
+    Normaliza a tônica informada em musica.json.
+
+    Exemplos:
+
+        C   -> C
+        c   -> C
+        C#  -> C#
+        Db  -> C#
+        Eb  -> D#
+        Bb  -> A#
+
+    O aplicativo utiliza sustenidos internamente.
+
+    O campo é obrigatório.
+    """
+
+    if value is None:
+
+        raise CatalogGenerationError(
+            'O campo "key" é obrigatório '
+            f"em {SONG_METADATA_FILENAME}."
+        )
+
+
+    text = str(
+        value
+    ).strip()
+
+
+    if not text:
+
+        raise CatalogGenerationError(
+            'O campo "key" é obrigatório '
+            f"em {SONG_METADATA_FILENAME}."
+        )
+
+
+    text = (
+        text
+        .replace(
+            "♯",
+            "#"
+        )
+        .replace(
+            "♭",
+            "b"
+        )
+    )
+
+
+    if len(text) == 1:
+
+        normalized_lookup = (
+            text.upper()
+        )
+
+    else:
+
+        normalized_lookup = (
+            text[0].upper()
+            +
+            text[1:].upper()
+        )
+
+
+    normalized = (
+        NOTE_ALIASES.get(
+            normalized_lookup
+        )
+    )
+
+
+    if normalized is None:
+
+        raise CatalogGenerationError(
+            "Tonalidade inválida: "
+            f'"{value}".\n\n'
+            'O campo "key" deve conter uma nota válida, '
+            "por exemplo:\n\n"
+            "C, C#, Db, D, Eb, E, F, F#, Gb, "
+            "G, Ab, A, Bb ou B."
+        )
+
+
+    return normalized
+
+
+# ============================================================
+# NORMALIZAR MODO
+# ============================================================
+
+def normalize_music_mode(
+    value: Any
+) -> str:
+
+    """
+    Normaliza o modo informado em musica.json.
+
+    Valores oficiais:
+
+        major
+        minor
+
+    Também aceitamos:
+
+        maior
+        menor
+
+    O catalogo.json sempre recebe:
+
+        major
+        minor
+    """
+
+    if value is None:
+
+        raise CatalogGenerationError(
+            'O campo "mode" é obrigatório '
+            f"em {SONG_METADATA_FILENAME}."
+        )
+
+
+    text = (
+        str(
+            value
+        )
+        .strip()
+        .casefold()
+    )
+
+
+    if not text:
+
+        raise CatalogGenerationError(
+            'O campo "mode" é obrigatório '
+            f"em {SONG_METADATA_FILENAME}."
+        )
+
+
+    normalized = (
+        MODE_ALIASES.get(
+            text
+        )
+    )
+
+
+    if (
+        normalized is None
+        or normalized not in VALID_MODES
+    ):
+
+        raise CatalogGenerationError(
+            "Modo musical inválido: "
+            f'"{value}".\n\n'
+            "Valores permitidos:\n\n"
+            "major ou minor."
+        )
+
+
+    return normalized
 
 
 # ============================================================
@@ -1600,6 +1956,23 @@ def print_song_summary(
         f"{song['title']} — "
         f"{song['artist']} "
         f"({format_duration(song['duration'])})"
+    )
+
+
+    mode_label = (
+        "maior"
+        if song[
+            "mode"
+        ] == "major"
+        else "menor"
+    )
+
+
+    print(
+        "            "
+        "Tom: "
+        f"{song['key']} "
+        f"{mode_label}"
     )
 
 

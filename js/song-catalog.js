@@ -253,6 +253,56 @@ function normalizeSong(
     }
 
 
+    /*
+     * ========================================================
+     * TONALIDADE
+     * ========================================================
+     */
+
+    const key =
+        normalizeSongKey(
+            song.key
+        );
+
+
+    if (
+        !key
+    ) {
+
+        throw new Error(
+            `A música "${id}" não possui uma tonalidade válida em "key".`
+        );
+    }
+
+
+    /*
+     * ========================================================
+     * MODO
+     * ========================================================
+     */
+
+    const mode =
+        normalizeSongMode(
+            song.mode
+        );
+
+
+    if (
+        !mode
+    ) {
+
+        throw new Error(
+            `A música "${id}" não possui um modo válido em "mode".`
+        );
+    }
+
+
+    /*
+     * ========================================================
+     * REGISTRO NORMALIZADO
+     * ========================================================
+     */
+
     return {
 
         id,
@@ -309,25 +359,51 @@ function normalizeSong(
             )
             .trim(),
 
+
         /*
+         * ====================================================
+         * TONALIDADE
+         * ====================================================
+         */
+
+        key,
+
+        mode,
+
+
+        /*
+         * ====================================================
+         * SINCRONIZAÇÃO
+         * ====================================================
+         *
          * Offset do MIDI em relação ao MP3.
          *
          * O SRT silábico utiliza este mesmo offset,
          * pois é produzido na mesma linha temporal
          * que as notas MIDI.
          */
+
         offset:
             normalizeOffset(
                 song.offset
             ),
 
+
         /*
          * Offset independente da legenda tradicional.
          */
+
         lyricsOffset:
             normalizeOffset(
                 song.lyricsOffset
             ),
+
+
+        /*
+         * ====================================================
+         * ARQUIVOS
+         * ====================================================
+         */
 
         files: {
 
@@ -351,13 +427,12 @@ function normalizeSong(
                 ),
 
             /*
-             * NOVO:
-             *
              * voz_silabas.srt
              *
              * Continua sendo opcional para permitir
-             * músicas antigas sem o novo recurso.
+             * músicas sem o recurso de karaokê silábico.
              */
+
             syllables:
                 normalizeOptionalFileName(
                     song.files.syllables
@@ -682,6 +757,233 @@ function normalizeDifficulty(
         default:
 
             return "beginner";
+    }
+}
+
+
+/*
+ * ============================================================
+ * NORMALIZAR TONALIDADE
+ * ============================================================
+ *
+ * O catalogo.json já deverá chegar normalizado pelo
+ * gerar_catalogo.py.
+ *
+ * Mesmo assim, esta camada faz uma validação defensiva
+ * para garantir que o restante do aplicativo sempre
+ * receba uma tonalidade consistente.
+ *
+ * Representação interna:
+ *
+ * C
+ * C#
+ * D
+ * D#
+ * E
+ * F
+ * F#
+ * G
+ * G#
+ * A
+ * A#
+ * B
+ *
+ * Também aceitamos bemóis como fallback:
+ *
+ * Db → C#
+ * Eb → D#
+ * Gb → F#
+ * Ab → G#
+ * Bb → A#
+ * ============================================================
+ */
+
+function normalizeSongKey(
+    value
+) {
+
+    if (
+        typeof value !==
+        "string"
+    ) {
+
+        return null;
+    }
+
+
+    let key =
+        value
+            .trim()
+            .toUpperCase();
+
+
+    if (
+        !key
+    ) {
+
+        return null;
+    }
+
+
+    /*
+     * Símbolos Unicode.
+     */
+    key =
+        key
+            .replace(
+                /♯/g,
+                "#"
+            )
+            .replace(
+                /♭/g,
+                "B"
+            );
+
+
+    const aliases = {
+
+        "C":
+            "C",
+
+        "B#":
+            "C",
+
+
+        "C#":
+            "C#",
+
+        "DB":
+            "C#",
+
+
+        "D":
+            "D",
+
+
+        "D#":
+            "D#",
+
+        "EB":
+            "D#",
+
+
+        "E":
+            "E",
+
+        "FB":
+            "E",
+
+
+        "F":
+            "F",
+
+        "E#":
+            "F",
+
+
+        "F#":
+            "F#",
+
+        "GB":
+            "F#",
+
+
+        "G":
+            "G",
+
+
+        "G#":
+            "G#",
+
+        "AB":
+            "G#",
+
+
+        "A":
+            "A",
+
+
+        "A#":
+            "A#",
+
+        "BB":
+            "A#",
+
+
+        "B":
+            "B",
+
+        "CB":
+            "B"
+    };
+
+
+    return (
+        aliases[
+            key
+        ] ||
+        null
+    );
+}
+
+
+/*
+ * ============================================================
+ * NORMALIZAR MODO
+ * ============================================================
+ *
+ * Forma interna:
+ *
+ * major
+ * minor
+ *
+ * Também aceitamos:
+ *
+ * maior
+ * menor
+ *
+ * como fallback defensivo.
+ * ============================================================
+ */
+
+function normalizeSongMode(
+    value
+) {
+
+    if (
+        typeof value !==
+        "string"
+    ) {
+
+        return null;
+    }
+
+
+    const mode =
+        value
+            .trim()
+            .toLowerCase();
+
+
+    switch (
+        mode
+    ) {
+
+        case "major":
+        case "maior":
+
+            return "major";
+
+
+        case "minor":
+        case "menor":
+
+            return "minor";
+
+
+        default:
+
+            return null;
     }
 }
 

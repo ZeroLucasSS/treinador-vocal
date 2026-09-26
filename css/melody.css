@@ -2372,6 +2372,62 @@ h2 {
 }
 
 
+/*
+ * ============================================================
+ * LEGENDA — NOTAS DA TONALIDADE
+ * ============================================================
+ *
+ * Representa as linhas horizontais discretas desenhadas
+ * pelo piano-roll.js nas notas pertencentes ao tom.
+ *
+ * Como as linhas reais usam ciano com baixa opacidade,
+ * o marcador também é mais suave que os demais itens
+ * da legenda.
+ * ============================================================
+ */
+
+.legenda-tonalidade {
+    position: relative;
+
+    background:
+        rgba(
+            51,
+            213,
+            255,
+            0.15
+        );
+}
+
+
+/*
+ * Linha central reproduz visualmente a indicação
+ * existente dentro do canvas.
+ */
+.legenda-tonalidade::after {
+    content: "";
+
+    position: absolute;
+
+    left: 1px;
+    right: 1px;
+
+    top: 50%;
+
+    height: 1px;
+
+    background:
+        rgba(
+            51,
+            213,
+            255,
+            0.85
+        );
+
+    transform:
+        translateY(-50%);
+}
+
+
 /* ============================================================
    MOLDURA DO PIANO ROLL
    ============================================================ */
@@ -4093,6 +4149,95 @@ h2 {
 
     font-variant-numeric:
         tabular-nums;
+}
+
+
+/*
+ * ============================================================
+ * RESULTADO — CLASSIFICAÇÃO MUSICAL
+ * ============================================================
+ *
+ * Estas três métricas representam a natureza musical
+ * das notas cantadas:
+ *
+ * - melodia original / adaptação de oitava;
+ * - alternativa pertencente ao tom;
+ * - nota fora da tonalidade.
+ * ============================================================
+ */
+
+
+/*
+ * ------------------------------------------------------------
+ * NOTAS DA MELODIA
+ * ------------------------------------------------------------
+ *
+ * Verde mantém associação visual com as notas
+ * corretamente reproduzidas no piano roll.
+ */
+
+.resultado-card-melodia {
+    border-left:
+        6px solid
+        var(--aga-verde) !important;
+}
+
+
+.resultado-card-melodia strong {
+    color:
+        var(--aga-verde);
+}
+
+
+/*
+ * ------------------------------------------------------------
+ * NOTAS ALTERNATIVAS
+ * ------------------------------------------------------------
+ *
+ * Roxo corresponde ao novo estado visual "alternative"
+ * utilizado pelo piano-roll.js.
+ */
+
+.resultado-card-alternativas {
+    border-left:
+        6px solid
+        #c084fc !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--painel-2) 0%,
+            var(--painel-2) 76%,
+            rgba(192, 132, 252, 0.10) 100%
+        ) !important;
+}
+
+
+.resultado-card-alternativas strong {
+    color:
+        #c084fc;
+}
+
+
+/*
+ * ------------------------------------------------------------
+ * FORA DO TOM
+ * ------------------------------------------------------------
+ *
+ * Vermelho mantém associação direta com o estado
+ * de erro do piano roll.
+ */
+
+.resultado-card-fora-tom {
+    border-left:
+        6px solid
+        var(--aga-vermelho) !important;
+}
+
+
+.resultado-card-fora-tom strong {
+    color:
+        var(--aga-vermelho);
 }
 
 

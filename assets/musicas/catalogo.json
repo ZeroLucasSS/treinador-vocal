@@ -14,6 +14,8 @@
                     "duration": 300,
                     "difficulty": "intermediate",
                     "language": "pt-BR",
+                    "key": "C",
+                    "mode": "major",
                     "offset": 0.0,
                     "lyricsOffset": 0.0,
                     "files": {
@@ -33,6 +35,8 @@
                     "duration": 239,
                     "difficulty": "beginner",
                     "language": "pt-BR",
+                    "key": "A",
+                    "mode": "major",
                     "offset": 0.0,
                     "lyricsOffset": 0.0,
                     "files": {
@@ -58,6 +62,8 @@
                     "duration": 230,
                     "difficulty": "intermediate",
                     "language": "pt-BR",
+                    "key": "E",
+                    "mode": "minor",
                     "offset": 0.25,
                     "lyricsOffset": 0.0,
                     "files": {
@@ -83,6 +89,8 @@
                     "duration": 280,
                     "difficulty": "intermediate",
                     "language": "pt-BR",
+                    "key": "F",
+                    "mode": "major",
                     "offset": 0.0,
                     "lyricsOffset": 0.0,
                     "files": {

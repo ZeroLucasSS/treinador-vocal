@@ -912,6 +912,19 @@
 
                             </span>
 
+
+                            <span>
+
+                                <i
+                                    class="legenda-tonalidade"
+                                    aria-hidden="true"
+                                >
+                                </i>
+
+                                Notas do tom
+
+                            </span>
+
                         </div>
 
                     </div>
@@ -1305,10 +1318,16 @@
 
 
 
-            <!-- Resumo -->
+            <!-- =====================================================
+                RESUMO DO RESULTADO
+                ===================================================== -->
 
             <div class="resultado-grid">
 
+
+                <!-- ================================================
+                    PONTUAÇÃO DE AFINAÇÃO
+                    ================================================ -->
 
                 <div>
 
@@ -1324,6 +1343,10 @@
 
 
 
+                <!-- ================================================
+                    ERRO MÉDIO
+                    ================================================ -->
+
                 <div>
 
                     <span>
@@ -1338,10 +1361,18 @@
 
 
 
-                <div>
+                <!-- ================================================
+                    NOTAS DA MELODIA
+                    ================================================
+                    
+                    Mantemos o ID resultadoNotas para preservar
+                    compatibilidade com o melody-mode.js atual.
+                    ================================================ -->
+
+                <div class="resultado-card-melodia">
 
                     <span>
-                        Notas acertadas
+                        Notas da melodia
                     </span>
 
                     <strong id="resultadoNotas">
@@ -1351,6 +1382,46 @@
                 </div>
 
 
+
+                <!-- ================================================
+                    NOTAS ALTERNATIVAS
+                    ================================================ -->
+
+                <div class="resultado-card-alternativas">
+
+                    <span>
+                        Notas alternativas
+                    </span>
+
+                    <strong id="resultadoAlternativas">
+                        —
+                    </strong>
+
+                </div>
+
+
+
+                <!-- ================================================
+                    FORA DO TOM
+                    ================================================ -->
+
+                <div class="resultado-card-fora-tom">
+
+                    <span>
+                        Fora do tom
+                    </span>
+
+                    <strong id="resultadoForaDoTom">
+                        —
+                    </strong>
+
+                </div>
+
+
+
+                <!-- ================================================
+                    ENTRADA MÉDIA
+                    ================================================ -->
 
                 <div>
 
@@ -1366,6 +1437,10 @@
 
 
 
+                <!-- ================================================
+                    COBERTURA MÉDIA
+                    ================================================ -->
+
                 <div>
 
                     <span>
@@ -1380,6 +1455,10 @@
 
 
 
+                <!-- ================================================
+                    NOTAS NÃO CANTADAS
+                    ================================================ -->
+
                 <div>
 
                     <span>
@@ -1391,6 +1470,7 @@
                     </strong>
 
                 </div>
+
 
             </div>
 

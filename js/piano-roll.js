@@ -39,7 +39,11 @@
 
 import {
     midiToNoteName,
-    midiToOctave
+    midiToOctave,
+    midiToPitchClass,
+    normalizeNoteName,
+    normalizeScaleMode,
+    getScalePitchClasses
 } from "./music-theory.js";
 
 
@@ -238,23 +242,26 @@ export class PianoRoll {
 
 
     /*
-     * ========================================================
-     * MELODIA
-     * ========================================================
-     */
+    * ========================================================
+    * MELODIA
+    * ========================================================
+    */
 
     setMelody(
         melody
     ) {
 
         this.melody =
-            melody || null;
+            melody ||
+            null;
 
 
         /*
-         * Recalcula automaticamente
-         * a faixa vertical necessária.
-         */
+        * ====================================================
+        * RECALCULAR FAIXA VERTICAL
+        * ====================================================
+        */
+
         if (
             this.melody &&
             Array.isArray(
@@ -286,18 +293,19 @@ export class PianoRoll {
             ) {
 
                 /*
-                 * Margem de três semitons acima
-                 * e abaixo da melodia.
-                 *
-                 * Isso permite visualizar desvios
-                 * da voz sem cortar imediatamente
-                 * o traçado.
-                 */
+                * Margem de três semitons acima
+                * e abaixo da melodia.
+                *
+                * Isso permite visualizar desvios
+                * da voz sem cortar imediatamente
+                * o traçado.
+                */
                 this.minMidi =
                     Math.floor(
                         Math.min(
                             ...midis
-                        ) - 3
+                        ) -
+                        3
                     );
 
 
@@ -305,13 +313,14 @@ export class PianoRoll {
                     Math.ceil(
                         Math.max(
                             ...midis
-                        ) + 3
+                        ) +
+                        3
                     );
 
 
                 /*
-                 * Garante faixa vertical mínima.
-                 */
+                * Garante faixa vertical mínima.
+                */
                 const minimumRange =
                     12;
 
@@ -354,6 +363,24 @@ export class PianoRoll {
         }
 
 
+        /*
+        * ====================================================
+        * RESET DO TEMPO E DADOS DE EXECUÇÃO
+        * ====================================================
+        *
+        * IMPORTANTE:
+        *
+        * NÃO limpamos:
+        *
+        * - keySignature;
+        * - scalePitchClasses;
+        * - tonicPitchClass.
+        *
+        * A tonalidade pertence à música atual e deve
+        * sobreviver à seleção/reconstrução da trilha MIDI.
+        * ====================================================
+        */
+
         this.currentTime =
             0;
 
@@ -370,10 +397,209 @@ export class PianoRoll {
 
 
     /*
-     * ========================================================
-     * RESULTADOS DAS BARRAS
-     * ========================================================
-     */
+    * ========================================================
+    * TONALIDADE
+    * ========================================================
+    *
+    * Informa ao piano roll qual é a tonalidade da música.
+    *
+    * Exemplo:
+    *
+    * pianoRoll.setKeySignature(
+    *     "C",
+    *     "major"
+    * );
+    *
+    *
+    * IMPORTANTE:
+    *
+    * Esta informação é exclusivamente visual neste estágio.
+    *
+    * Ela NÃO modifica:
+    *
+    * - score;
+    * - classificação das notas;
+    * - combo;
+    * - precisão;
+    * - cents;
+    * - resultado final.
+    * ========================================================
+    */
+
+    setKeySignature(
+        key,
+        mode
+    ) {
+
+        const normalizedKey =
+            normalizeNoteName(
+                key
+            );
+
+
+        const normalizedMode =
+            normalizeScaleMode(
+                mode
+            );
+
+
+        /*
+        * Se a informação for inválida, simplesmente
+        * removemos a camada de tonalidade.
+        *
+        * Não lançamos erro porque o piano roll deve
+        * continuar funcionando normalmente mesmo sem
+        * esses metadados.
+        */
+        if (
+            !normalizedKey ||
+            !normalizedMode
+        ) {
+
+            console.warn(
+                "PianoRoll: tonalidade inválida.",
+                {
+                    key,
+                    mode
+                }
+            );
+
+
+            this.clearKeySignature();
+
+
+            return;
+        }
+
+
+        const pitchClasses =
+            getScalePitchClasses(
+                normalizedKey,
+                normalizedMode
+            );
+
+
+        if (
+            !Array.isArray(
+                pitchClasses
+            ) ||
+            pitchClasses.length ===
+                0
+        ) {
+
+            console.warn(
+                "PianoRoll: não foi possível gerar a escala.",
+                {
+                    key:
+                        normalizedKey,
+
+                    mode:
+                        normalizedMode
+                }
+            );
+
+
+            this.clearKeySignature();
+
+
+            return;
+        }
+
+
+        this.keySignature = {
+
+            key:
+                normalizedKey,
+
+            mode:
+                normalizedMode
+        };
+
+
+        this.scalePitchClasses =
+            [
+                ...pitchClasses
+            ];
+
+
+        /*
+        * O primeiro pitch class retornado pela escala
+        * corresponde à tônica.
+        */
+        this.tonicPitchClass =
+            pitchClasses[0];
+
+
+        console.info(
+            "🎼 PianoRoll: tonalidade configurada:",
+            {
+                key:
+                    normalizedKey,
+
+                mode:
+                    normalizedMode,
+
+                pitchClasses:
+                    [
+                        ...pitchClasses
+                    ]
+            }
+        );
+
+
+        this.draw();
+    }
+
+
+    /*
+    * ========================================================
+    * LIMPAR TONALIDADE
+    * ========================================================
+    */
+
+    clearKeySignature() {
+
+        this.keySignature =
+            null;
+
+
+        this.scalePitchClasses =
+            [];
+
+
+        this.tonicPitchClass =
+            null;
+
+
+        this.draw();
+    }
+
+
+    /*
+    * ========================================================
+    * VERIFICAR SE EXISTE TONALIDADE
+    * ========================================================
+    */
+
+    hasKeySignature() {
+
+        return (
+            this.keySignature !==
+                null &&
+            Array.isArray(
+                this.scalePitchClasses
+            ) &&
+            this.scalePitchClasses.length >
+                0
+        );
+    }
+
+
+    /*
+    * ========================================================
+    * RESULTADOS DAS BARRAS
+    * ========================================================
+    */
 
     setNoteResult(
         index,
@@ -385,8 +611,9 @@ export class PianoRoll {
                 index
             ) ||
             index <
-            0
+                0
         ) {
+
             return;
         }
 
@@ -394,11 +621,44 @@ export class PianoRoll {
         if (
             !result ||
             typeof result !==
-            "object"
+                "object"
         ) {
+
             return;
         }
 
+
+        /*
+        * ====================================================
+        * STATUS VISUAIS ACEITOS
+        * ====================================================
+        *
+        * pending
+        *     nota ainda não consolidada
+        *
+        * excellent
+        *     melodia original com bom desempenho
+        *
+        * partial
+        *     melodia original com desempenho parcial
+        *
+        * error
+        *     execução insuficiente / fora do tom
+        *
+        * missed
+        *     nenhuma voz válida detectada
+        *
+        * alternative
+        *     nota alternativa pertencente à tonalidade
+        *
+        * IMPORTANTE:
+        *
+        * "alternative" é apenas um ESTADO VISUAL.
+        *
+        * A pontuação numérica continua sendo calculada
+        * exclusivamente pelo melody-mode.js.
+        * ====================================================
+        */
 
         const allowedStatuses =
             new Set([
@@ -406,7 +666,8 @@ export class PianoRoll {
                 "excellent",
                 "partial",
                 "error",
-                "missed"
+                "missed",
+                "alternative"
             ]);
 
 
@@ -448,12 +709,17 @@ export class PianoRoll {
 
 
         /*
-         * Redesenho imediato.
-         *
-         * Isso é importante porque permite que
-         * uma barra troque de azul para sua cor
-         * definitiva assim que a avaliação terminar.
-         */
+        * Redesenho imediato.
+        *
+        * Assim que a nota é finalizada,
+        * sua barra troca de azul para:
+        *
+        * verde
+        * amarelo
+        * vermelho
+        * cinza
+        * roxo
+        */
         this.draw();
     }
 
@@ -824,21 +1090,30 @@ export class PianoRoll {
 
 
     /*
-     * ========================================================
-     * DESENHO PRINCIPAL
-     * ========================================================
-     */
+    * ========================================================
+    * DESENHO PRINCIPAL
+    * ========================================================
+    */
 
     draw() {
 
         if (
             !this.ctx ||
-            this.width <= 0 ||
-            this.height <= 0
+            this.width <=
+                0 ||
+            this.height <=
+                0
         ) {
+
             return;
         }
 
+
+        /*
+        * ====================================================
+        * 1. LIMPEZA
+        * ====================================================
+        */
 
         this.ctx.clearRect(
             0,
@@ -848,14 +1123,50 @@ export class PianoRoll {
         );
 
 
+        /*
+        * ====================================================
+        * 2. FUNDO
+        * ====================================================
+        */
+
         this.drawBackground();
 
+
+        /*
+        * ====================================================
+        * 3. GRADE MUSICAL
+        * ====================================================
+        */
 
         this.drawHorizontalGrid();
 
 
         this.drawVerticalGrid();
 
+
+        /*
+        * ====================================================
+        * 4. GUIAS DA TONALIDADE
+        * ====================================================
+        *
+        * Desenhadas APÓS a grade, mas ANTES:
+        *
+        * - das barras MIDI;
+        * - da trajetória da voz;
+        * - do playhead.
+        *
+        * Assim permanecem visíveis, porém discretas.
+        * ====================================================
+        */
+
+        this.drawScaleGuides();
+
+
+        /*
+        * ====================================================
+        * 5. BARRAS DA MELODIA
+        * ====================================================
+        */
 
         if (
             this.melody &&
@@ -868,8 +1179,20 @@ export class PianoRoll {
         }
 
 
+        /*
+        * ====================================================
+        * 6. VOZ
+        * ====================================================
+        */
+
         this.drawVoice();
 
+
+        /*
+        * ====================================================
+        * 7. PLAYHEAD
+        * ====================================================
+        */
 
         this.drawPlayhead();
     }
@@ -1028,6 +1351,162 @@ export class PianoRoll {
                     y
                 );
             }
+        }
+
+
+        this.ctx.restore();
+    }
+
+
+    /*
+    * ========================================================
+    * GUIAS VISUAIS DA TONALIDADE
+    * ========================================================
+    *
+    * Desenha linhas horizontais extremamente discretas
+    * nas notas pertencentes à tonalidade da música.
+    *
+    * Objetivo:
+    *
+    * - orientar visualmente;
+    * - não competir com a melodia;
+    * - não poluir o piano roll;
+    * - preservar o visual original.
+    *
+    * IMPORTANTE:
+    *
+    * Esta função é exclusivamente visual.
+    *
+    * Não interfere em:
+    *
+    * - score;
+    * - pitch;
+    * - cents;
+    * - avaliação;
+    * - classificação;
+    * - combo;
+    * - resultado final.
+    * ========================================================
+    */
+
+    drawScaleGuides() {
+
+        if (
+            !this.hasKeySignature()
+        ) {
+
+            return;
+        }
+
+
+        this.ctx.save();
+
+
+        /*
+        * Linha muito fina e discreta.
+        */
+        this.ctx.lineWidth =
+            1;
+
+
+        this.ctx.lineCap =
+            "butt";
+
+
+        this.ctx.shadowBlur =
+            0;
+
+
+        this.ctx.setLineDash(
+            []
+        );
+
+
+        /*
+        * ====================================================
+        * PERCORRER TODAS AS NOTAS MIDI VISÍVEIS
+        * ====================================================
+        */
+
+        for (
+            let midi =
+                this.minMidi;
+            midi <=
+                this.maxMidi;
+            midi++
+        ) {
+
+            const pitchClass =
+                midiToPitchClass(
+                    midi
+                );
+
+
+            if (
+                pitchClass ===
+                null
+            ) {
+
+                continue;
+            }
+
+
+            /*
+            * Ignora notas que não pertencem
+            * à tonalidade atual.
+            */
+            if (
+                !this.scalePitchClasses.includes(
+                    pitchClass
+                )
+            ) {
+
+                continue;
+            }
+
+
+            const y =
+                this.midiToY(
+                    midi
+                );
+
+
+            /*
+            * ====================================================
+            * LINHA DA TONALIDADE
+            * ====================================================
+            *
+            * Mantemos todas as notas com a mesma aparência.
+            *
+            * Isso evita chamar atenção excessiva para a tônica
+            * e mantém o piano roll visualmente limpo.
+            *
+            * Opacidade:
+            *
+            * 0.15
+            * ====================================================
+            */
+
+            this.ctx.strokeStyle =
+                "rgba(51, 213, 255, 0.15)";
+
+
+            this.ctx.beginPath();
+
+
+            this.ctx.moveTo(
+                0,
+                y
+            );
+
+
+            this.ctx.lineTo(
+                this.width,
+                y
+            );
+
+
+            this.ctx.stroke();
         }
 
 
@@ -1444,10 +1923,10 @@ export class PianoRoll {
 
 
     /*
-     * ========================================================
-     * COR DAS NOTAS
-     * ========================================================
-     */
+    * ========================================================
+    * COR DAS NOTAS
+    * ========================================================
+    */
 
     getNoteColor(
         result,
@@ -1455,8 +1934,8 @@ export class PianoRoll {
     ) {
 
         /*
-         * Resultado consolidado sempre vence.
-         */
+        * Resultado consolidado sempre vence.
+        */
         if (
             result
         ) {
@@ -1465,12 +1944,24 @@ export class PianoRoll {
                 result.status
             ) {
 
+                /*
+                * =================================================
+                * MELODIA ORIGINAL — EXCELENTE
+                * =================================================
+                */
+
                 case "excellent":
 
                     return (
                         "rgba(98,221,139,0.92)"
                     );
 
+
+                /*
+                * =================================================
+                * MELODIA ORIGINAL — PARCIAL
+                * =================================================
+                */
 
                 case "partial":
 
@@ -1479,6 +1970,12 @@ export class PianoRoll {
                     );
 
 
+                /*
+                * =================================================
+                * ERRO / FORA DO TOM
+                * =================================================
+                */
+
                 case "error":
 
                     return (
@@ -1486,12 +1983,50 @@ export class PianoRoll {
                     );
 
 
+                /*
+                * =================================================
+                * NOTA NÃO CANTADA
+                * =================================================
+                */
+
                 case "missed":
 
                     return (
                         "rgba(120,126,138,0.48)"
                     );
 
+
+                /*
+                * =================================================
+                * NOTA ALTERNATIVA DA TONALIDADE
+                * =================================================
+                *
+                * Roxo:
+                *
+                * - não se confunde com o azul do MIDI;
+                * - não se confunde com o ciano das linhas do tom;
+                * - não invade o significado já consolidado de
+                *   verde / amarelo / vermelho.
+                *
+                * Representa:
+                *
+                * "Você não cantou a nota original,
+                * mas escolheu uma nota válida dentro do tom."
+                * =================================================
+                */
+
+                case "alternative":
+
+                    return (
+                        "rgba(192,132,252,0.94)"
+                    );
+
+
+                /*
+                * =================================================
+                * AINDA NÃO AVALIADA
+                * =================================================
+                */
 
                 case "pending":
 
@@ -1503,8 +2038,8 @@ export class PianoRoll {
 
 
         /*
-         * Barra atualmente atravessando o playhead.
-         */
+        * Barra atualmente atravessando o playhead.
+        */
         if (
             active
         ) {
@@ -1516,8 +2051,8 @@ export class PianoRoll {
 
 
         /*
-         * Barras ainda não avaliadas.
-         */
+        * Barras ainda não avaliadas.
+        */
         return (
             "rgba(104,168,255,0.62)"
         );
@@ -1985,10 +2520,10 @@ export class PianoRoll {
 
 
     /*
-     * ========================================================
-     * LIMPEZA
-     * ========================================================
-     */
+    * ========================================================
+    * LIMPEZA
+    * ========================================================
+    */
 
     destroy() {
 
@@ -2019,6 +2554,22 @@ export class PianoRoll {
 
 
         this.melody =
+            null;
+
+
+        /*
+        * Limpa também a informação musical
+        * da tonalidade.
+        */
+        this.keySignature =
+            null;
+
+
+        this.scalePitchClasses =
+            [];
+
+
+        this.tonicPitchClass =
             null;
     }
 }
