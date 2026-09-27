@@ -31,6 +31,16 @@
         href="./css/melody.css"
     >
 
+
+    <!-- =========================================================
+         MODO FESTA — ESTILOS DESKTOP
+         ========================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="./css/party-mode.css"
+    >
+
 </head>
 
 
@@ -1593,6 +1603,29 @@
 
     <!-- =========================================================
          JAVASCRIPT
+         ========================================================= -->
+
+    <!-- =========================================================
+         MODO FESTA
+         =========================================================
+
+         Carregado antes do melody-mode.js para deixar a camada
+         de entretenimento pronta antes das futuras integrações
+         por eventos customizados.
+
+         O módulo cria seu próprio botão e permanece desacoplado
+         da lógica musical principal.
+         ========================================================= -->
+
+    <script
+        type="module"
+        src="./js/party-mode.js"
+    >
+    </script>
+
+
+    <!-- =========================================================
+         MODO MELODIA / TREINO VOCAL
          ========================================================= -->
 
     <script

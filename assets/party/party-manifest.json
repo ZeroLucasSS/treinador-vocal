@@ -1,0 +1,51 @@
+{
+    "version": 2,
+
+    "memes": {
+
+        "good": [
+            "./memes/good/good-01.mp4",
+            "./memes/good/good-02.mp4",
+            "./memes/good/good-03.mp4",
+            "./memes/good/good-04.mp4"
+        ],
+
+        "great": [
+            "./memes/great/great-01.mp4",
+            "./memes/great/great-02.mp4",
+            "./memes/great/great-03.mp4",
+            "./memes/great/great-04.mp4"
+        ],
+
+        "struggling": [
+            "./memes/struggling/struggling-01.mp4",
+            "./memes/struggling/struggling-02.mp4",
+            "./memes/struggling/struggling-03.mp4",
+            "./memes/struggling/struggling-04.mp4"
+        ],
+
+        "comeback": [
+            "./memes/comeback/comeback-01.mp4",
+            "./memes/comeback/comeback-02.mp4"
+        ]
+    },
+
+    "sounds": {
+
+        "good": [
+            "./sounds/good/good-01.mp3"
+        ],
+
+        "great": [
+            "./sounds/great/great-01.mp3"
+        ],
+
+        "struggling": [
+            "./sounds/struggling/struggling-01.mp3"
+        ],
+
+        "comeback": [
+            "./sounds/comeback/comeback-01.mp3"
+        ]
+    }
+}

@@ -159,6 +159,283 @@ const DOMINANT_CLASSIFICATION_MIN_RATIO =
     0.60;
 
 
+
+
+/*
+ * ============================================================
+ * EVENTOS PÚBLICOS DO TREINO
+ * ============================================================
+ *
+ * O melody-mode.js continua sem conhecer o PartyMode.
+ *
+ * Ele apenas publica eventos neutros no document.
+ *
+ * Qualquer módulo interessado pode escutá-los sem criar
+ * dependência direta com a lógica musical principal.
+ * ============================================================
+ */
+
+const KARAOKE_EVENTS = {
+
+    sessionStarted:
+        "karaoke:session-started",
+
+    noteFinalized:
+        "karaoke:note-finalized",
+
+    comboUpdated:
+        "karaoke:combo-updated",
+
+    sessionEnded:
+        "karaoke:session-ended",
+
+    sessionStopped:
+        "karaoke:session-stopped"
+};
+
+
+/*
+ * ============================================================
+ * DISPARAR EVENTO DO TREINO
+ * ============================================================
+ */
+
+function dispatchKaraokeEvent(
+    eventName,
+    detail =
+        {}
+) {
+
+    if (
+        !eventName
+    ) {
+
+        return;
+    }
+
+
+    document.dispatchEvent(
+        new CustomEvent(
+            eventName,
+            {
+                detail
+            }
+        )
+    );
+}
+
+
+/*
+ * ============================================================
+ * DETALHES DE UMA NOTA FINALIZADA
+ * ============================================================
+ *
+ * Criamos um objeto simples e independente.
+ *
+ * O PartyMode NÃO recebe a referência original do noteState,
+ * portanto não poderá alterar acidentalmente a avaliação.
+ * ============================================================
+ */
+
+function buildKaraokeNoteEventDetail(
+    state
+) {
+
+    if (
+        !state
+    ) {
+
+        return null;
+    }
+
+
+    return {
+
+        noteIndex:
+            state.index,
+
+        expectedMidi:
+            state.midi,
+
+        sungMidi:
+            state.dominantSungMidi,
+
+        score:
+            state.score,
+
+        pitchScore:
+            state.pitchScore,
+
+        timingScore:
+            state.timingScore,
+
+        durationScore:
+            state.durationScore,
+
+        status:
+            state.status,
+
+        visualStatus:
+            state.visualStatus,
+
+        classification:
+            state.dominantVoiceClassification,
+
+        classificationRatio:
+            state.dominantVoiceRatio,
+
+        coverage:
+            state.coverage,
+
+        onsetErrorMs:
+            state.onsetErrorMs,
+
+        averageCents:
+            state.averageCents,
+
+        voiceSamples:
+            state.voiceSamples,
+
+        combo:
+            currentCombo,
+
+        bestCombo:
+            bestCombo,
+
+        songTime:
+            currentSongTime,
+
+        songId:
+            currentSong?.id ??
+            null,
+
+        songTitle:
+            currentSong?.title ??
+            null
+    };
+}
+
+
+/*
+ * ============================================================
+ * RESUMO DA SESSÃO
+ * ============================================================
+ */
+
+function buildKaraokeSessionSummary() {
+
+    const total =
+        noteStates.length;
+
+
+    const sung =
+        noteStates.filter(
+            state =>
+                state.voiceSamples >
+                0
+        );
+
+
+    const missed =
+        noteStates.filter(
+            state =>
+                state.status ===
+                "missed"
+        );
+
+
+    const melodyNotes =
+        noteStates.filter(
+            state =>
+                state.dominantVoiceClassification ===
+                    "exactMelody" ||
+                state.dominantVoiceClassification ===
+                    "octaveMelody"
+        );
+
+
+    const alternativeNotes =
+        noteStates.filter(
+            state =>
+                state.dominantVoiceClassification ===
+                "scaleAlternative"
+        );
+
+
+    const outOfKeyNotes =
+        noteStates.filter(
+            state =>
+                state.dominantVoiceClassification ===
+                "outOfKey"
+        );
+
+
+    const unstableNotes =
+        noteStates.filter(
+            state =>
+                state.voiceSamples >
+                    0 &&
+                state.dominantVoiceClassification ===
+                    null
+        );
+
+
+    const totalScore =
+        total >
+        0
+            ? Math.round(
+                calculateAverage(
+                    noteStates.map(
+                        state =>
+                            state.score
+                    )
+                )
+            )
+            : 0;
+
+
+    return {
+
+        songId:
+            currentSong?.id ??
+            null,
+
+        songTitle:
+            currentSong?.title ??
+            null,
+
+        totalNotes:
+            total,
+
+        sungNotes:
+            sung.length,
+
+        melodyNotes:
+            melodyNotes.length,
+
+        alternativeNotes:
+            alternativeNotes.length,
+
+        outOfKeyNotes:
+            outOfKeyNotes.length,
+
+        missedNotes:
+            missed.length,
+
+        unstableNotes:
+            unstableNotes.length,
+
+        totalScore,
+
+        bestCombo,
+
+        songTime:
+            currentSongTime
+    };
+}
+
+
+
 /*
  * ============================================================
  * DIFICULDADES
@@ -4156,6 +4433,54 @@ async function startTraining() {
             0;
 
 
+        /*
+        * ========================================================
+        * EVENTO — SESSÃO INICIADA
+        * ========================================================
+        *
+        * Somente publicamos depois que:
+        *
+        * - microfone foi preparado;
+        * - countdown terminou;
+        * - backing track conseguiu tocar;
+        * - running passou para true.
+        *
+        * Assim evitamos criar uma sessão falsa caso o início falhe.
+        * ========================================================
+        */
+
+        dispatchKaraokeEvent(
+            KARAOKE_EVENTS.sessionStarted,
+            {
+                songId:
+                    currentSong?.id ??
+                    null,
+
+                songTitle:
+                    currentSong?.title ??
+                    null,
+
+                artist:
+                    currentSong?.artist ??
+                    null,
+
+                key:
+                    currentSong?.key ??
+                    null,
+
+                mode:
+                    currentSong?.mode ??
+                    null,
+
+                singingMode:
+                    elements.difficultySelect.value,
+
+                totalNotes:
+                    noteStates.length
+            }
+        );
+
+
         elements.state.textContent =
             "Cantando";
 
@@ -5810,6 +6135,20 @@ function finalizeNote(
         );
 
 
+        /*
+        * Mesmo uma nota omitida é informação importante
+        * para o PartyMode.
+        *
+        * Neste ponto o combo já foi atualizado.
+        */
+        dispatchKaraokeEvent(
+            KARAOKE_EVENTS.noteFinalized,
+            buildKaraokeNoteEventDetail(
+                state
+            )
+        );
+
+
         return;
     }
 
@@ -6095,6 +6434,31 @@ function finalizeNote(
     handleFinalizedNoteGamification(
         state
     );
+
+
+    /*
+    * ========================================================
+    * EVENTO — NOTA FINALIZADA
+    * ========================================================
+    *
+    * Disparamos somente DEPOIS da gamificação porque
+    * handleFinalizedNoteGamification() atualiza o combo.
+    *
+    * Assim o PartyMode já recebe:
+    *
+    * combo
+    * bestCombo
+    *
+    * em seus valores finais para esta nota.
+    * ========================================================
+    */
+
+    dispatchKaraokeEvent(
+        KARAOKE_EVENTS.noteFinalized,
+        buildKaraokeNoteEventDetail(
+            state
+        )
+    );
 }
 
 
@@ -6206,6 +6570,18 @@ function handleFinalizedNoteGamification(
  * como excellent pelo avaliador existente.
  */
 
+/*
+ * ============================================================
+ * COMBO
+ * ============================================================
+ *
+ * Combo não altera a pontuação.
+ *
+ * Consideramos sequência apenas notas classificadas
+ * como excellent pelo avaliador existente.
+ * ============================================================
+ */
+
 function updateCombo(
     state
 ) {
@@ -6236,14 +6612,56 @@ function updateCombo(
 
 
     /*
-     * Marcos visuais.
+     * ========================================================
+     * EVENTO — COMBO ATUALIZADO
+     * ========================================================
+     *
+     * É publicado em toda nota finalizada.
+     *
+     * Isso é útil inclusive quando o combo volta para zero.
+     * ========================================================
      */
+
+    dispatchKaraokeEvent(
+        KARAOKE_EVENTS.comboUpdated,
+        {
+            combo:
+                currentCombo,
+
+            bestCombo:
+                bestCombo,
+
+            noteIndex:
+                state.index,
+
+            noteScore:
+                state.score,
+
+            noteStatus:
+                state.status,
+
+            classification:
+                state.dominantVoiceClassification,
+
+            songTime:
+                currentSongTime
+        }
+    );
+
+
+    /*
+     * ========================================================
+     * MARCOS VISUAIS
+     * ========================================================
+     */
+
     if (
         currentCombo ===
         3
     ) {
 
         return {
+
             text:
                 "×3 COMBO!",
 
@@ -6262,6 +6680,7 @@ function updateCombo(
     ) {
 
         return {
+
             text:
                 "COMBO ×5!",
 
@@ -6283,6 +6702,7 @@ function updateCombo(
     ) {
 
         return {
+
             text:
                 `SUPER COMBO ×${currentCombo}!`,
 
@@ -7574,6 +7994,18 @@ async function finishTraining() {
 
 
     showResults();
+
+
+    /*
+    * ========================================================
+    * EVENTO — SESSÃO CONCLUÍDA
+    * ========================================================
+    */
+
+    dispatchKaraokeEvent(
+        KARAOKE_EVENTS.sessionEnded,
+        buildKaraokeSessionSummary()
+    );
 }
 
 
@@ -7702,6 +8134,26 @@ async function stopTraining() {
     setFeedback(
         "Treino interrompido.",
         "neutro"
+    );
+
+
+    /*
+    * Não tratamos interrupção como final feliz da música.
+    *
+    * O PartyMode pode apenas limpar seu estado interno,
+    * sem futuramente disparar uma celebração de encerramento.
+    */
+    dispatchKaraokeEvent(
+        KARAOKE_EVENTS.sessionStopped,
+        {
+            songId:
+                currentSong?.id ??
+                null,
+
+            songTitle:
+                currentSong?.title ??
+                null
+        }
     );
 }
 
