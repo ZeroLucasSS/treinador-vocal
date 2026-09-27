@@ -52,6 +52,34 @@
             ]
         },
         {
+            "id": "rock-internacional",
+            "name": "Rock Internacional",
+            "songs": [
+                {
+                    "id": "dont-stop-belilevin-journey",
+                    "title": "Don't Stop Believin'",
+                    "artist": "Journey",
+                    "genre": "rock-internacional",
+                    "folder": "rock-internacional/dont-stop-belilevin-journey",
+                    "duration": 250,
+                    "difficulty": "intermediate",
+                    "language": "en-US",
+                    "key": "E",
+                    "mode": "major",
+                    "offset": 0.0,
+                    "lyricsOffset": 0.0,
+                    "files": {
+                        "audio": "instrumental.mp3",
+                        "midi": "voz.mid",
+                        "lyrics": "letra.srt",
+                        "syllables": "voz_silabas.srt",
+                        "cover": null,
+                        "backgroundVideo": "background.mp4"
+                    }
+                }
+            ]
+        },
+        {
             "id": "rock-nacional",
             "name": "Rock Nacional",
             "songs": [
