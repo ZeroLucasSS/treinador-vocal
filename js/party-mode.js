@@ -19,6 +19,7 @@
  * 5. Overlay visual por estado
  * 6. Partículas / confete / fogos no lado DIREITO
  * 7. Eventos festivos por CHECKPOINTS da música
+ * 8. Vídeo de fundo opcional por música
  * ============================================================
  */
 
@@ -109,6 +110,23 @@ const PARTY_CONFIG = {
         flashCooldownMs: 2600
     },
 
+    /*
+     * VÍDEO DE FUNDO POR MÚSICA
+     * -------------------------
+     * Opcional. Recebido via karaoke:session-started
+     * (event.detail.backgroundVideo).
+     *
+     * Não é sincronizado com o MP3: apenas toca em loop,
+     * sempre muted, enquanto treino + Modo Festa estiverem
+     * ativos. Qualquer falha volta ao background CSS.
+     */
+    backgroundVideo: {
+        elementId: "partyBackgroundVideo",
+        bodyClass: "party-mode-has-background-video",
+        visibleClass: "is-visible",
+        fadeMs: 700
+    },
+
     particles: {
 
         stageId:
@@ -181,6 +199,11 @@ export class PartyModeController {
             visuals: {
                 ...PARTY_CONFIG.visuals,
                 ...(config.visuals || {})
+            },
+
+            backgroundVideo: {
+                ...PARTY_CONFIG.backgroundVideo,
+                ...(config.backgroundVideo || {})
             },
 
             particles: {
@@ -271,6 +294,25 @@ export class PartyModeController {
 
         this.liveParticles = new Set();
 
+        /*
+         * Vídeo de fundo opcional por música.
+         *
+         * playToken invalida resultados atrasados de play()
+         * quando o vídeo é pausado/parado antes de resolver.
+         */
+        this.backgroundVideoElement = null;
+        this.backgroundVideoUrl = null;
+        this.backgroundVideoReady = false;
+        this.backgroundVideoFailed = false;
+        this.backgroundVideoVisible = false;
+        this.backgroundVideoPlayToken = 0;
+
+        this.boundHandleBackgroundVideoLoaded =
+            this.handleBackgroundVideoLoaded.bind(this);
+
+        this.boundHandleBackgroundVideoError =
+            this.handleBackgroundVideoError.bind(this);
+
         this.boundHandleResize =
             this.handleResize.bind(this);
 
@@ -327,6 +369,7 @@ export class PartyModeController {
             this.loadPreference();
 
         this.createToggleButton();
+        this.createBackgroundVideo();
         this.createVisualOverlay();
         this.createMemeStage();
         this.createParticleStage();
@@ -1296,6 +1339,14 @@ export class PartyModeController {
             );
 
             void this.ensureManifestLoaded();
+
+            /*
+             * Ativado no meio da música:
+             * o vídeo já foi preparado no session-started.
+             */
+            if (this.sessionActive) {
+                this.playBackgroundVideo();
+            }
         }
 
         if (
@@ -1313,6 +1364,12 @@ export class PartyModeController {
             this.clearParticles();
 
             this.resetVisualEnvironment();
+
+            /*
+             * Mantém src/URL para permitir retomada
+             * se o Modo Festa for reativado.
+             */
+            this.pauseBackgroundVideo();
         }
 
         if (persist) {
@@ -1609,12 +1666,22 @@ export class PartyModeController {
             this.sessionInfo?.totalNotes
         );
 
+        /*
+         * Preparado mesmo com o Modo Festa desligado,
+         * para permitir ativação no meio da música.
+         */
+        this.prepareBackgroundVideo(
+            this.sessionInfo?.backgroundVideo
+        );
+
         if (this.isActive()) {
             this.setVisualState(
                 "warming-up"
             );
 
             void this.ensureManifestLoaded();
+
+            this.playBackgroundVideo();
         }
 
         console.info(
@@ -1776,6 +1843,8 @@ export class PartyModeController {
         this.sessionActive =
             false;
 
+        this.stopBackgroundVideo();
+
         this.lastSessionSummary = {
             ...(
                 event?.detail ||
@@ -1834,6 +1903,8 @@ export class PartyModeController {
     handleSessionStopped() {
         this.sessionActive =
             false;
+
+        this.stopBackgroundVideo();
 
         this.hideMeme(
             true
@@ -5113,6 +5184,447 @@ export class PartyModeController {
 
     /*
      * ========================================================
+     * VÍDEO DE FUNDO POR MÚSICA
+     * ========================================================
+     *
+     * Camada opcional abaixo do party-visual-overlay.
+     *
+     * - não sincroniza com o MP3;
+     * - sempre muted / loop / playsinline;
+     * - nunca é requisito para o treino;
+     * - qualquer falha volta ao background CSS.
+     * ========================================================
+     */
+
+    createBackgroundVideo() {
+        const settings =
+            this.config.backgroundVideo;
+
+        const existing =
+            document.getElementById(
+                settings.elementId
+            );
+
+        const video =
+            existing ||
+            document.createElement(
+                "video"
+            );
+
+        video.id =
+            settings.elementId;
+
+        video.classList.add(
+            "party-background-video"
+        );
+
+        video.muted =
+            true;
+
+        video.defaultMuted =
+            true;
+
+        video.loop =
+            true;
+
+        video.playsInline =
+            true;
+
+        video.controls =
+            false;
+
+        video.preload =
+            "metadata";
+
+        video.disablePictureInPicture =
+            true;
+
+        video.disableRemotePlayback =
+            true;
+
+        video.tabIndex =
+            -1;
+
+        video.setAttribute(
+            "muted",
+            ""
+        );
+
+        video.setAttribute(
+            "playsinline",
+            ""
+        );
+
+        video.setAttribute(
+            "webkit-playsinline",
+            ""
+        );
+
+        video.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        video.style.setProperty(
+            "--party-background-video-fade",
+            `${Math.max(0, Number(settings.fadeMs) || 0)}ms`
+        );
+
+        video.addEventListener(
+            "loadeddata",
+            this.boundHandleBackgroundVideoLoaded
+        );
+
+        video.addEventListener(
+            "error",
+            this.boundHandleBackgroundVideoError
+        );
+
+        if (!existing) {
+            document.body.appendChild(
+                video
+            );
+        }
+
+        this.backgroundVideoElement =
+            video;
+    }
+
+    prepareBackgroundVideo(url) {
+        const video =
+            this.backgroundVideoElement;
+
+        const normalizedUrl =
+            typeof url ===
+            "string"
+                ? url.trim()
+                : "";
+
+        if (
+            !video ||
+            !normalizedUrl
+        ) {
+            this.clearBackgroundVideo();
+
+            return false;
+        }
+
+        /*
+         * Mesma música: não recarrega.
+         * Se falhou antes, tentamos novamente nesta sessão.
+         */
+        if (
+            normalizedUrl ===
+                this.backgroundVideoUrl &&
+            !this.backgroundVideoFailed
+        ) {
+            return true;
+        }
+
+        this.backgroundVideoPlayToken += 1;
+
+        this.setBackgroundVideoVisible(
+            false
+        );
+
+        video.pause();
+
+        this.backgroundVideoUrl =
+            normalizedUrl;
+
+        this.backgroundVideoReady =
+            false;
+
+        this.backgroundVideoFailed =
+            false;
+
+        video.src =
+            normalizedUrl;
+
+        video.load();
+
+        return true;
+    }
+
+    playBackgroundVideo() {
+        const video =
+            this.backgroundVideoElement;
+
+        if (
+            !video ||
+            !this.backgroundVideoUrl ||
+            this.backgroundVideoFailed ||
+            !this.sessionActive ||
+            !this.isActive()
+        ) {
+            return false;
+        }
+
+        video.muted =
+            true;
+
+        video.defaultMuted =
+            true;
+
+        video.loop =
+            true;
+
+        video.playsInline =
+            true;
+
+        this.backgroundVideoPlayToken += 1;
+
+        const playToken =
+            this.backgroundVideoPlayToken;
+
+        let playResult;
+
+        try {
+            playResult =
+                video.play();
+
+        } catch (error) {
+            this.handleBackgroundVideoError(
+                error
+            );
+
+            return false;
+        }
+
+        if (
+            !playResult ||
+            typeof playResult.then !==
+            "function"
+        ) {
+            this.setBackgroundVideoVisible(
+                true
+            );
+
+            return true;
+        }
+
+        playResult
+            .then(
+                () => {
+                    if (
+                        playToken !==
+                        this.backgroundVideoPlayToken
+                    ) {
+                        return;
+                    }
+
+                    if (
+                        !this.sessionActive ||
+                        !this.isActive()
+                    ) {
+                        video.pause();
+
+                        return;
+                    }
+
+                    this.backgroundVideoReady =
+                        true;
+
+                    this.setBackgroundVideoVisible(
+                        true
+                    );
+                }
+            )
+            .catch(
+                error => {
+                    if (
+                        playToken !==
+                        this.backgroundVideoPlayToken
+                    ) {
+                        return;
+                    }
+
+                    /*
+                     * AbortError = play() interrompido por
+                     * pause()/troca de src. Não é falha do asset.
+                     */
+                    if (
+                        error?.name ===
+                        "AbortError"
+                    ) {
+                        return;
+                    }
+
+                    this.handleBackgroundVideoError(
+                        error
+                    );
+                }
+            );
+
+        return true;
+    }
+
+    pauseBackgroundVideo() {
+        this.backgroundVideoPlayToken += 1;
+
+        this.setBackgroundVideoVisible(
+            false
+        );
+
+        const video =
+            this.backgroundVideoElement;
+
+        if (
+            video &&
+            !video.paused
+        ) {
+            video.pause();
+        }
+    }
+
+    stopBackgroundVideo() {
+        this.pauseBackgroundVideo();
+
+        const video =
+            this.backgroundVideoElement;
+
+        if (!video) {
+            return;
+        }
+
+        try {
+            video.currentTime =
+                0;
+
+        } catch (error) {
+            /*
+             * Sem metadata ainda: nada a resetar.
+             */
+        }
+    }
+
+    clearBackgroundVideo() {
+        this.pauseBackgroundVideo();
+
+        const video =
+            this.backgroundVideoElement;
+
+        if (video) {
+            /*
+             * removeAttribute em vez de src = "",
+             * que dispararia um evento de erro.
+             */
+            video.removeAttribute(
+                "src"
+            );
+
+            try {
+                video.load();
+
+            } catch (error) {
+                /*
+                 * Defensivo: alguns navegadores podem
+                 * rejeitar load() sem fonte.
+                 */
+            }
+        }
+
+        this.backgroundVideoUrl =
+            null;
+
+        this.backgroundVideoReady =
+            false;
+
+        this.backgroundVideoFailed =
+            false;
+    }
+
+    handleBackgroundVideoLoaded() {
+        if (!this.backgroundVideoUrl) {
+            return;
+        }
+
+        this.backgroundVideoReady =
+            true;
+    }
+
+    handleBackgroundVideoError(error) {
+        /*
+         * Sem URL = elemento vazio (clear/destroy).
+         * Já falhou = evita avisos duplicados.
+         */
+        if (
+            !this.backgroundVideoUrl ||
+            this.backgroundVideoFailed
+        ) {
+            return;
+        }
+
+        const mediaError =
+            this.backgroundVideoElement?.error ||
+            null;
+
+        console.warn(
+            "🎉 PartyMode: vídeo de fundo indisponível. Usando background CSS.",
+            {
+                url:
+                    this.backgroundVideoUrl,
+
+                error:
+                    error?.name ||
+                    error?.message ||
+                    error?.type ||
+                    error,
+
+                mediaErrorCode:
+                    mediaError?.code ??
+                    null
+            }
+        );
+
+        this.backgroundVideoFailed =
+            true;
+
+        this.backgroundVideoReady =
+            false;
+
+        this.pauseBackgroundVideo();
+    }
+
+    /*
+     * A classe do body só é aplicada quando o vídeo está
+     * realmente tocando e visível. Assim o overlay só fica
+     * translúcido quando existe vídeo por trás dele.
+     */
+    setBackgroundVideoVisible(visible) {
+        const settings =
+            this.config.backgroundVideo;
+
+        const video =
+            this.backgroundVideoElement;
+
+        const shouldShow =
+            Boolean(
+                visible
+            ) &&
+            Boolean(
+                video
+            ) &&
+            !this.backgroundVideoFailed;
+
+        this.backgroundVideoVisible =
+            shouldShow;
+
+        if (video) {
+            video.classList.toggle(
+                settings.visibleClass,
+                shouldShow
+            );
+        }
+
+        document.body.classList.toggle(
+            settings.bodyClass,
+            shouldShow
+        );
+    }
+
+    /*
+     * ========================================================
      * ESTADO PÚBLICO / TESTES
      * ========================================================
      */
@@ -5242,6 +5754,20 @@ export class PartyModeController {
                 Boolean(
                     this.partyManifest
                 ),
+
+            backgroundVideo: {
+                url:
+                    this.backgroundVideoUrl,
+
+                ready:
+                    this.backgroundVideoReady,
+
+                failed:
+                    this.backgroundVideoFailed,
+
+                visible:
+                    this.backgroundVideoVisible
+            },
 
             performance:
                 this.getPerformanceState()
@@ -5848,6 +6374,24 @@ export class PartyModeController {
 
         this.resetVisualEnvironment();
 
+        this.clearBackgroundVideo();
+
+        if (
+            this.backgroundVideoElement
+        ) {
+            this.backgroundVideoElement.removeEventListener(
+                "loadeddata",
+                this.boundHandleBackgroundVideoLoaded
+            );
+
+            this.backgroundVideoElement.removeEventListener(
+                "error",
+                this.boundHandleBackgroundVideoError
+            );
+
+            this.backgroundVideoElement.remove();
+        }
+
         if (
             this.visualOverlay
         ) {
@@ -5877,6 +6421,9 @@ export class PartyModeController {
             this.button.remove();
         }
 
+        this.backgroundVideoElement =
+            null;
+
         this.visualOverlay =
             null;
 
@@ -5899,7 +6446,8 @@ export class PartyModeController {
             this.config.bodyAvailableClass,
             this.config.bodyEnabledClass,
             this.config.bodyDisabledClass,
-            this.config.bodyReducedMotionClass
+            this.config.bodyReducedMotionClass,
+            this.config.backgroundVideo.bodyClass
         );
 
         if (

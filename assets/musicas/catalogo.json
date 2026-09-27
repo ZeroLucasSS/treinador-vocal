@@ -23,7 +23,8 @@
                         "midi": "voz.mid",
                         "lyrics": "letra.srt",
                         "syllables": null,
-                        "cover": "capa.jpg"
+                        "cover": "capa.jpg",
+                        "backgroundVideo": null
                     }
                 },
                 {
@@ -44,7 +45,8 @@
                         "midi": "voz.mid",
                         "lyrics": "letra.srt",
                         "syllables": "voz_silabas.srt",
-                        "cover": "capa.jpg"
+                        "cover": "capa.jpg",
+                        "backgroundVideo": null
                     }
                 }
             ]
@@ -71,7 +73,8 @@
                         "midi": "voz.mid",
                         "lyrics": "letra.srt",
                         "syllables": "voz_silabas.srt",
-                        "cover": "capa.jpg"
+                        "cover": "capa.jpg",
+                        "backgroundVideo": "background.mp4"
                     }
                 }
             ]
@@ -98,7 +101,8 @@
                         "midi": "voz.mid",
                         "lyrics": "letra.srt",
                         "syllables": "voz_silabas.srt",
-                        "cover": "capa.jpg"
+                        "cover": "capa.jpg",
+                        "backgroundVideo": null
                     }
                 }
             ]

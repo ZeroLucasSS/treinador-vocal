@@ -441,6 +441,18 @@ function normalizeSong(
             cover:
                 normalizeOptionalFileName(
                     song.files.cover
+                ),
+
+            /*
+             * background.mp4
+             *
+             * Vídeo de fundo opcional, consumido
+             * somente pelo Modo Festa.
+             */
+
+            backgroundVideo:
+                normalizeOptionalFileName(
+                    song.files.backgroundVideo
                 )
         }
     };
@@ -1268,6 +1280,23 @@ export function getSongCoverUrl(
     return getSongFileUrl(
         song,
         "cover"
+    );
+}
+
+
+/*
+ * ============================================================
+ * URL DO VÍDEO DE FUNDO
+ * ============================================================
+ */
+
+export function getSongBackgroundVideoUrl(
+    song
+) {
+
+    return getSongFileUrl(
+        song,
+        "backgroundVideo"
     );
 }
 

@@ -80,6 +80,7 @@ import {
     getSongMidiUrl,
     getSongLyricsUrl,
     getSongSyllablesUrl,
+    getSongBackgroundVideoUrl,
     getSongOffsets
 } from "./song-catalog.js";
 
@@ -1206,6 +1207,16 @@ let syllablesUrl =
 
 
 /*
+ * Vídeo de fundo opcional.
+ *
+ * Apenas repassado ao Modo Festa via
+ * karaoke:session-started.
+ */
+let backgroundVideoUrl =
+    null;
+
+
+/*
  * Positivo = atrasar MIDI.
  * Negativo = adiantar MIDI.
  */
@@ -1666,6 +1677,12 @@ function prepareSong(
 
     syllablesUrl =
         getSongSyllablesUrl(
+            song
+        );
+
+
+    backgroundVideoUrl =
+        getSongBackgroundVideoUrl(
             song
         );
 
@@ -4476,7 +4493,11 @@ async function startTraining() {
                     elements.difficultySelect.value,
 
                 totalNotes:
-                    noteStates.length
+                    noteStates.length,
+
+                backgroundVideo:
+                    backgroundVideoUrl ??
+                    null
             }
         );
 

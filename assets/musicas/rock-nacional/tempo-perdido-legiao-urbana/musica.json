@@ -6,5 +6,6 @@
     "key": "E",
     "mode": "minor",
     "offset": 0.25,
-    "lyricsOffset": 0    
+    "lyricsOffset": 0,
+    "backgroundVideo": "background.mp4"
 }

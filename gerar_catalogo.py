@@ -208,6 +208,18 @@ COVER_FILENAMES = (
 )
 
 
+# ============================================================
+# VÍDEO DE FUNDO OPCIONAL — MODO FESTA
+# ============================================================
+
+BACKGROUND_VIDEO_EXTENSIONS = {
+    ".mp4",
+    ".webm",
+    ".mov",
+    ".m4v",
+}
+
+
 DEFAULT_DIFFICULTY = (
     "beginner"
 )
@@ -1129,6 +1141,16 @@ def build_song_entry(
 
 
     # ========================================================
+    # VÍDEO DE FUNDO OPCIONAL — MODO FESTA
+    # ========================================================
+
+    background_video = read_background_video_field(
+        metadata,
+        song_directory
+    )
+
+
+    # ========================================================
     # DURAÇÃO
     # ========================================================
 
@@ -1247,6 +1269,13 @@ def build_song_entry(
                     if cover_path
                     else None
                 ),
+
+            # =================================================
+            # VÍDEO DE FUNDO DO MODO FESTA
+            # =================================================
+
+            "backgroundVideo":
+                background_video,
         },
     }
 
@@ -1508,6 +1537,175 @@ def read_offset_field(
         number,
         6
     )
+
+
+# ============================================================
+# LER VÍDEO DE FUNDO OPCIONAL
+# ============================================================
+
+def read_background_video_field(
+    metadata: dict[str, Any],
+    song_directory: Path
+) -> str | None:
+
+    """
+    Lê o campo opcional "backgroundVideo" de musica.json.
+
+    Exemplo:
+
+        "backgroundVideo": "background.mp4"
+
+    O caminho informado é sempre relativo à pasta da música.
+
+    Se o campo não existir ou estiver vazio:
+        retorna None.
+
+    Se o campo existir:
+        valida o caminho;
+        valida a extensão;
+        valida a existência do arquivo;
+        valida se realmente é um arquivo.
+
+    O catalogo.json recebe o caminho relativo normalizado.
+
+    Exemplo:
+
+        "backgroundVideo": "background.mp4"
+    """
+
+    value = metadata.get(
+        "backgroundVideo"
+    )
+
+
+    # ========================================================
+    # CAMPO NÃO INFORMADO
+    # ========================================================
+
+    if (
+        value is None
+        or str(value).strip() == ""
+    ):
+
+        return None
+
+
+    # ========================================================
+    # NORMALIZAR CAMINHO
+    # ========================================================
+
+    raw_path = (
+        str(value)
+        .strip()
+        .replace(
+            "\\",
+            "/"
+        )
+    )
+
+
+    relative_path = Path(
+        raw_path
+    )
+
+
+    # ========================================================
+    # IMPEDIR CAMINHO ABSOLUTO
+    # ========================================================
+
+    if relative_path.is_absolute():
+
+        raise CatalogGenerationError(
+            'O campo "backgroundVideo" precisa usar '
+            "um caminho relativo à pasta da música.\n"
+            f"Valor recebido: {value!r}"
+        )
+
+
+    # ========================================================
+    # IMPEDIR SAÍDA DA PASTA DA MÚSICA
+    # ========================================================
+
+    if ".." in relative_path.parts:
+
+        raise CatalogGenerationError(
+            'O campo "backgroundVideo" não pode sair '
+            "da pasta da música usando '..'.\n"
+            f"Valor recebido: {value!r}"
+        )
+
+
+    # ========================================================
+    # VALIDAR EXTENSÃO
+    # ========================================================
+
+    suffix = (
+        relative_path
+        .suffix
+        .casefold()
+    )
+
+
+    if (
+        suffix
+        not in BACKGROUND_VIDEO_EXTENSIONS
+    ):
+
+        allowed = ", ".join(
+            sorted(
+                BACKGROUND_VIDEO_EXTENSIONS
+            )
+        )
+
+
+        raise CatalogGenerationError(
+            'Extensão inválida em "backgroundVideo".\n'
+            f"Valor recebido: {value!r}\n"
+            f"Extensões permitidas: {allowed}"
+        )
+
+
+    # ========================================================
+    # CAMINHO REAL
+    # ========================================================
+
+    video_path = (
+        song_directory
+        / relative_path
+    )
+
+
+    # ========================================================
+    # VALIDAR EXISTÊNCIA
+    # ========================================================
+
+    if not video_path.exists():
+
+        raise CatalogGenerationError(
+            'O arquivo declarado em "backgroundVideo" '
+            "não foi encontrado.\n"
+            f"Arquivo: {raw_path}"
+        )
+
+
+    # ========================================================
+    # VALIDAR ARQUIVO
+    # ========================================================
+
+    if not video_path.is_file():
+
+        raise CatalogGenerationError(
+            'O caminho declarado em "backgroundVideo" '
+            "não é um arquivo válido.\n"
+            f"Caminho: {raw_path}"
+        )
+
+
+    # ========================================================
+    # RETORNO
+    # ========================================================
+
+    return relative_path.as_posix()
 
 
 # ============================================================
@@ -2021,6 +2219,19 @@ def print_song_summary(
         )
 
 
+    if (
+        files.get(
+            "backgroundVideo"
+        )
+    ):
+
+        print(
+            "            "
+            f"{Terminal.OK} "
+            "Vídeo de fundo: "
+            f"{files['backgroundVideo']}"
+        )
+
 # ============================================================
 # RESUMO FINAL
 # ============================================================
@@ -2071,6 +2282,18 @@ def print_summary(
         ][
             "syllables"
         ]
+    )
+
+
+    background_video_count = sum(
+        1
+        for song
+        in songs
+        if song[
+            "files"
+        ].get(
+            "backgroundVideo"
+        )
     )
 
 
@@ -2143,6 +2366,12 @@ def print_summary(
         f"Com SRT silábico: "
         f"{syllables_count}"
     )
+
+
+    print(
+        f"Com vídeo de fundo: "
+        f"{background_video_count}"
+    )    
 
 
     print(

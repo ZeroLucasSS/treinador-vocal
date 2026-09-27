@@ -24,6 +24,8 @@
  *
  * background da página
  *        ↓
+ * party-background-video   (opcional, por música)
+ *        ↓
  * party-visual-overlay
  *        ↓
  * aplicação
@@ -1355,6 +1357,98 @@ body.party-mode-enabled
 
 /*
  * ============================================================
+ * VÍDEO DE FUNDO POR MÚSICA
+ * ============================================================
+ *
+ * Criado dinamicamente pelo party-mode.js.
+ *
+ * Fica abaixo do party-visual-overlay e acima do
+ * background da página.
+ *
+ * Só aparece com .is-visible, aplicada pelo JS quando
+ * o vídeo está realmente tocando.
+ * ============================================================
+ */
+
+.party-background-video {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    z-index:
+        300;
+
+    width:
+        100vw;
+
+    height:
+        100vh;
+
+    object-fit:
+        cover;
+
+    object-position:
+        center;
+
+    pointer-events:
+        none;
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    transform:
+        scale(1.03);
+
+    background:
+        transparent;
+
+    transition:
+        opacity
+        var(--party-background-video-fade, 700ms)
+        ease,
+        transform
+        var(--party-background-video-fade, 700ms)
+        ease,
+        visibility
+        0s
+        linear
+        var(--party-background-video-fade, 700ms);
+}
+
+
+.party-background-video.is-visible {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+    transform:
+        scale(1);
+
+    transition:
+        opacity
+        var(--party-background-video-fade, 700ms)
+        ease,
+        transform
+        var(--party-background-video-fade, 700ms)
+        ease,
+        visibility
+        0s
+        linear
+        0s;
+}
+
+
+/*
+ * ============================================================
  * PARTY MODE DESLIGADO
  * ============================================================
  */
@@ -1367,6 +1461,17 @@ body:not(.party-mode-enabled)
 
     visibility:
         hidden;
+}
+
+
+body:not(.party-mode-enabled)
+.party-background-video {
+
+    opacity:
+        0 !important;
+
+    visibility:
+        hidden !important;
 }
 
 
@@ -1726,6 +1831,116 @@ body.party-mode-enabled
 
 /*
  * ============================================================
+ * COM VÍDEO DE FUNDO
+ * ============================================================
+ *
+ * body.party-mode-has-background-video só existe enquanto
+ * o vídeo está tocando e visível.
+ *
+ * Nesse caso o vídeo vira a camada principal e o overlay
+ * fica translúcido: os gradientes continuam os mesmos,
+ * apenas com menos opacidade, para o estado seguir
+ * perceptível.
+ *
+ * Sem essa classe, todas as regras acima permanecem
+ * exatamente como fallback.
+ * ============================================================
+ */
+
+body.party-mode-enabled.party-mode-has-background-video
+.party-visual-overlay[data-state="idle"] {
+
+    opacity:
+        0.40;
+}
+
+
+body.party-mode-enabled.party-mode-has-background-video
+.party-visual-overlay[data-state="warming-up"] {
+
+    opacity:
+        0.34;
+}
+
+
+body.party-mode-enabled.party-mode-has-background-video
+.party-visual-overlay[data-state="neutral"] {
+
+    opacity:
+        0.30;
+}
+
+
+body.party-mode-enabled.party-mode-has-background-video
+.party-visual-overlay[data-state="good"] {
+
+    opacity:
+        0.32;
+}
+
+
+body.party-mode-enabled.party-mode-has-background-video
+.party-visual-overlay[data-state="great"] {
+
+    opacity:
+        0.40;
+}
+
+
+body.party-mode-enabled.party-mode-has-background-video
+.party-visual-overlay[data-state="struggling"] {
+
+    opacity:
+        0.36;
+}
+
+
+body.party-mode-enabled.party-mode-has-background-video
+.party-visual-overlay[data-state="comeback"] {
+
+    opacity:
+        0.40;
+}
+
+
+/*
+ * Retícula HQ com vídeo.
+ *
+ * Como o overlay inteiro fica translúcido, os pontos
+ * ficam mais fortes e em blend normal para continuarem
+ * visíveis sobre o vídeo (resultado final mais suave
+ * que no fallback, mas presente).
+ */
+
+body.party-mode-enabled.party-mode-has-background-video
+.party-visual-overlay::before {
+
+    background-image:
+
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.62) 1.4px,
+            transparent 1.4px
+        ),
+
+        repeating-linear-gradient(
+            125deg,
+            rgba(255, 255, 255, 0.08) 0,
+            rgba(255, 255, 255, 0.08) 2px,
+            transparent 2px,
+            transparent 26px
+        );
+
+    opacity:
+        1;
+
+    mix-blend-mode:
+        normal;
+}
+
+
+/*
+ * ============================================================
  * FLASH DE CELEBRAÇÃO
  * ============================================================
  *
@@ -1822,6 +2037,22 @@ body.party-mode-enabled
             transparent
             76%
         );
+}
+
+
+/*
+ * Flash com vídeo de fundo.
+ *
+ * O flash (::after) herda a opacidade do overlay.
+ * Durante o flash o overlay sobe temporariamente para
+ * que a explosão de luz continue forte sobre o vídeo.
+ */
+
+body.party-mode-enabled.party-mode-has-background-video
+.party-visual-overlay.party-visual-flash {
+
+    opacity:
+        0.78;
 }
 
 
@@ -2312,6 +2543,23 @@ body.party-mode-reduced-motion
 }
 
 
+/*
+ * Vídeo continua tocando; apenas sem fade/zoom.
+ */
+
+body.party-mode-reduced-motion
+.party-background-video,
+body.party-mode-reduced-motion
+.party-background-video.is-visible {
+
+    transform:
+        none !important;
+
+    transition:
+        none !important;
+}
+
+
 @media (
     prefers-reduced-motion:
     reduce
@@ -2342,6 +2590,17 @@ body.party-mode-reduced-motion
         opacity:
             0.45;
     }
+
+
+    .party-background-video,
+    .party-background-video.is-visible {
+
+        transform:
+            none !important;
+
+        transition:
+            none !important;
+    }
 }
 
 
@@ -2358,6 +2617,7 @@ body.party-mode-reduced-motion
 
     .party-mode-toggle,
     .party-meme-stage,
+    .party-background-video,
     .party-visual-overlay,
     .party-particle-stage {
 
