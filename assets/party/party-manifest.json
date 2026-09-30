@@ -14,14 +14,18 @@
             "./memes/great/great-01.mp4",
             "./memes/great/great-02.mp4",
             "./memes/great/great-03.mp4",
-            "./memes/great/great-04.mp4"
+            "./memes/great/great-04.mp4",
+            "./memes/great/great-05.mp4"
         ],
 
         "struggling": [
             "./memes/struggling/struggling-01.mp4",
             "./memes/struggling/struggling-02.mp4",
             "./memes/struggling/struggling-03.mp4",
-            "./memes/struggling/struggling-04.mp4"
+            "./memes/struggling/struggling-04.mp4",
+            "./memes/struggling/struggling-05.mp4",
+            "./memes/struggling/struggling-06.mp4",
+            "./memes/struggling/struggling-07.mp4"
         ],
 
         "comeback": [
@@ -33,19 +37,26 @@
     "sounds": {
 
         "good": [
-            "./sounds/good/good-01.mp3"
+            "./sounds/good/good-01.mp3",
+            "./sounds/good/good-02.mp3",
+            "./sounds/good/good-03.mp3"            
         ],
 
         "great": [
-            "./sounds/great/great-01.mp3"
+            "./sounds/great/great-01.mp3",
+            "./sounds/great/great-02.mp3"           
         ],
 
         "struggling": [
-            "./sounds/struggling/struggling-01.mp3"
+            "./sounds/struggling/struggling-01.mp3",
+            "./sounds/struggling/struggling-02.mp3",
+            "./sounds/struggling/struggling-03.mp3",
+            "./sounds/struggling/struggling-04.mp3"            
         ],
 
         "comeback": [
-            "./sounds/comeback/comeback-01.mp3"
+            "./sounds/comeback/comeback-01.mp3",
+            "./sounds/comeback/comeback-02.mp3"            
         ]
     }
 }

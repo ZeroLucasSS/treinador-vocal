@@ -22,7 +22,7 @@
                         "audio": "instrumental.mp3",
                         "midi": "voz.mid",
                         "lyrics": "letra.srt",
-                        "syllables": null,
+                        "syllables": "voz_silabas.srt",
                         "cover": "capa.jpg",
                         "backgroundVideo": null
                     }
@@ -47,6 +47,34 @@
                         "syllables": "voz_silabas.srt",
                         "cover": "capa.jpg",
                         "backgroundVideo": null
+                    }
+                }
+            ]
+        },
+        {
+            "id": "nerd-geek",
+            "name": "Música Geek",
+            "songs": [
+                {
+                    "id": "goku-dbz-saiyajin-r4nyzin",
+                    "title": "Goku (Dragon Ball Z) Saiyajin - M4rkin",
+                    "artist": "R4nyzin",
+                    "genre": "nerd-geek",
+                    "folder": "nerd-geek/goku-dbz-saiyajin-r4nyzin",
+                    "duration": 300,
+                    "difficulty": "advanced",
+                    "language": "pt-BR",
+                    "key": "B",
+                    "mode": "minor",
+                    "offset": 0.0,
+                    "lyricsOffset": 0.0,
+                    "files": {
+                        "audio": "instrumental.mp3",
+                        "midi": "voz.mid",
+                        "lyrics": "letra.srt",
+                        "syllables": "voz_silabas.srt",
+                        "cover": "capa.jpg",
+                        "backgroundVideo": "background.mp4"
                     }
                 }
             ]

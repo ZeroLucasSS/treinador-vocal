@@ -663,6 +663,7 @@ export class PianoRoll {
         const allowedStatuses =
             new Set([
                 "pending",
+                "optional",
                 "excellent",
                 "partial",
                 "error",
@@ -680,7 +681,7 @@ export class PianoRoll {
 
 
         const score =
-            Number.isFinite(
+            status !== "optional" && result.score != null && Number.isFinite(
                 Number(
                     result.score
                 )
@@ -1949,6 +1950,9 @@ export class PianoRoll {
                 * MELODIA ORIGINAL — EXCELENTE
                 * =================================================
                 */
+
+                case "optional":
+                    return "rgba(148,163,184,0.48)";
 
                 case "excellent":
 

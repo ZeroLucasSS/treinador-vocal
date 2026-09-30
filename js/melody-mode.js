@@ -1,3 +1,5 @@
+import { isOptionalNote, getEvaluationWindow, findVoiceTarget, isPositivePerformance } from "./evaluation-rules.js";
+
 /*
  * ============================================================
  * melody-mode.js
@@ -127,6 +129,10 @@ const NOTE_TIME_MARGIN =
     0.12;
 
 
+const TRANSIENT_NOTE_MAX_DURATION =
+    0.18;
+
+
 /*
  * ============================================================
  * AVALIAÇÃO MUSICAL ALTERNATIVA
@@ -252,6 +258,8 @@ function buildKaraokeNoteEventDetail(
 
     return {
 
+        optional: state.optional,
+
         noteIndex:
             state.index,
 
@@ -263,6 +271,8 @@ function buildKaraokeNoteEventDetail(
 
         score:
             state.score,
+
+        performanceScore: state.performanceScore,
 
         pitchScore:
             state.pitchScore,
@@ -287,6 +297,19 @@ function buildKaraokeNoteEventDetail(
 
         coverage:
             state.coverage,
+
+        expectedDuration:
+            state.expectedDuration,
+
+        requiredCoverage:
+            getRequiredCoverageForNote(
+                state.expectedDuration,
+                getCurrentDifficulty()
+            ),
+
+        transient:
+            state.expectedDuration > 0 &&
+            state.expectedDuration <= TRANSIENT_NOTE_MAX_DURATION,
 
         onsetErrorMs:
             state.onsetErrorMs,
@@ -325,12 +348,14 @@ function buildKaraokeNoteEventDetail(
 
 function buildKaraokeSessionSummary() {
 
+    const evaluatedStates = noteStates.filter(state => !state.optional);
+
     const total =
-        noteStates.length;
+        evaluatedStates.length;
 
 
     const sung =
-        noteStates.filter(
+        evaluatedStates.filter(
             state =>
                 state.voiceSamples >
                 0
@@ -338,7 +363,7 @@ function buildKaraokeSessionSummary() {
 
 
     const missed =
-        noteStates.filter(
+        evaluatedStates.filter(
             state =>
                 state.status ===
                 "missed"
@@ -346,7 +371,7 @@ function buildKaraokeSessionSummary() {
 
 
     const melodyNotes =
-        noteStates.filter(
+        evaluatedStates.filter(
             state =>
                 state.dominantVoiceClassification ===
                     "exactMelody" ||
@@ -356,7 +381,7 @@ function buildKaraokeSessionSummary() {
 
 
     const alternativeNotes =
-        noteStates.filter(
+        evaluatedStates.filter(
             state =>
                 state.dominantVoiceClassification ===
                 "scaleAlternative"
@@ -364,7 +389,7 @@ function buildKaraokeSessionSummary() {
 
 
     const outOfKeyNotes =
-        noteStates.filter(
+        evaluatedStates.filter(
             state =>
                 state.dominantVoiceClassification ===
                 "outOfKey"
@@ -372,7 +397,7 @@ function buildKaraokeSessionSummary() {
 
 
     const unstableNotes =
-        noteStates.filter(
+        evaluatedStates.filter(
             state =>
                 state.voiceSamples >
                     0 &&
@@ -386,7 +411,7 @@ function buildKaraokeSessionSummary() {
         0
             ? Math.round(
                 calculateAverage(
-                    noteStates.map(
+                    evaluatedStates.map(
                         state =>
                             state.score
                     )
@@ -404,6 +429,9 @@ function buildKaraokeSessionSummary() {
         songTitle:
             currentSong?.title ??
             null,
+
+        optionalNotes: noteStates.length - total,
+        hasEvaluation: total > 0,
 
         totalNotes:
             total,
@@ -449,8 +477,14 @@ function buildKaraokeSessionSummary() {
  * faixa ainda considerada próxima da nota.
  *
  * requiredCoverage:
- * porcentagem da duração MIDI que precisa ser efetivamente
- * cantada para receber pontuação máxima de sustentação.
+ * cobertura máxima exigida, aproximada em notas longas.
+ *
+ * minimumCoverage:
+ * cobertura mínima da curva após a região transitória.
+ *
+ * coverageTau:
+ * constante de tempo em segundos para o crescimento exponencial.
+ * Notas de até 180 ms satisfazem duração com uma amostra vocal.
  *
  * A duração do MIDI pode não corresponder exatamente
  * à duração natural de uma sílaba cantada, especialmente
@@ -486,7 +520,13 @@ const DIFFICULTIES = {
             50,
 
         requiredCoverage:
-            0.25,
+            0.18,
+
+        minimumCoverage:
+            0.03,
+
+        coverageTau:
+            0.55,
 
         excellentOnsetMs:
             450,
@@ -499,6 +539,38 @@ const DIFFICULTIES = {
     intermediate: {
 
         // MODO TREINO
+        tolerance:
+            150,
+
+        near:
+            300,
+
+        tuningTolerance:
+            40,
+
+        tuningNear:
+            50,
+
+        requiredCoverage:
+            0.25,
+
+        minimumCoverage:
+            0.04,
+
+        coverageTau:
+            0.55,
+
+        excellentOnsetMs:
+            450,
+
+        acceptableOnsetMs:
+            1000
+    },
+
+
+    advanced: {
+
+        // MODO COVER
         tolerance:
             70,
 
@@ -514,37 +586,17 @@ const DIFFICULTIES = {
         requiredCoverage:
             0.45,
 
+        minimumCoverage:
+            0.08,
+
+        coverageTau:
+            0.6,
+
         excellentOnsetMs:
             250,
 
         acceptableOnsetMs:
             600
-    },
-
-
-    advanced: {
-
-        // MODO COVER
-        tolerance:
-            30,
-
-        near:
-            70,
-
-        tuningTolerance:
-            15,
-
-        tuningNear:
-            35,
-
-        requiredCoverage:
-            0.65,
-
-        excellentOnsetMs:
-            150,
-
-        acceptableOnsetMs:
-            350
     }
 };
 
@@ -3879,6 +3931,8 @@ function createNoteStates() {
 
                 index,
 
+                optional: isOptionalNote(note.duration, elements.difficultySelect.value),
+
                 midi:
                     note.midi,
 
@@ -3957,6 +4011,10 @@ function createNoteStates() {
                  */
                 samplePitchScores:
                     [],
+
+                // Afinação sem desconto pela escolha de uma alternativa tonal.
+                samplePerformanceScores: [],
+                performanceScore: 0,
 
 
                 voicedTime:
@@ -4331,6 +4389,11 @@ async function startTraining() {
 
         pianoRoll.clearNoteResults();
 
+        noteStates.filter(state => state.optional).forEach(state => {
+            pianoRoll.setNoteResult(state.index, { status: "optional", score: null });
+        });
+        updateLiveStatistics();
+
 
         resetLyricsInterface();
 
@@ -4493,7 +4556,9 @@ async function startTraining() {
                     elements.difficultySelect.value,
 
                 totalNotes:
-                    noteStates.length,
+                    noteStates.filter(state => !state.optional).length,
+
+                optionalNotes: noteStates.filter(state => state.optional).length,
 
                 backgroundVideo:
                     backgroundVideoUrl ??
@@ -5519,8 +5584,9 @@ function evaluateVoiceSample(
 ) {
 
     const target =
-        getEvaluationTarget(
-            time
+        findVoiceTarget(
+            selectedMelody.notes, noteStates, time, midiFloat,
+            elements.difficultySelect.value, nextFinalizeIndex
         );
 
 
@@ -5569,6 +5635,14 @@ function evaluateVoiceSample(
         return;
     }
 
+
+    if (state.optional) {
+        elements.currentNoteScore.textContent = "Opcional";
+        elements.currentError.textContent = "—";
+        elements.currentOnset.textContent = "—";
+        elements.currentCoverage.textContent = "—";
+        return;
+    }
 
     const difficulty =
         getCurrentDifficulty();
@@ -5692,6 +5766,14 @@ function evaluateVoiceSample(
         samplePitchScore
     );
 
+    state.samplePerformanceScores.push(
+        calculateSamplePitchScore(
+            voiceClassification === "scaleAlternative" ? "exactMelody" : voiceClassification,
+            absTuningCents,
+            difficulty
+        )
+    );
+
 
     /*
      * ========================================================
@@ -5740,17 +5822,21 @@ function evaluateVoiceSample(
                 MAX_VOICED_SAMPLE_GAP
         ) {
 
+            const evaluationWindow = getEvaluationWindow(
+                selectedMelody.notes, index, elements.difficultySelect.value
+            );
+
             const intervalStart =
                 Math.max(
                     state.lastSampleTime,
-                    state.expectedStart
+                    evaluationWindow.start
                 );
 
 
             const intervalEnd =
                 Math.min(
                     time,
-                    state.expectedEnd
+                    evaluationWindow.end
                 );
 
 
@@ -6024,9 +6110,11 @@ function finalizeExpiredNotes(
 
 
         const evaluationEnd =
-            note.start +
-            note.duration +
-            NOTE_TIME_MARGIN;
+            Math.max(
+                note.start + note.duration + NOTE_TIME_MARGIN,
+                getEvaluationWindow(selectedMelody.notes, nextFinalizeIndex,
+                    elements.difficultySelect.value).end
+            );
 
 
         if (
@@ -6075,6 +6163,17 @@ function finalizeNote(
 
     state.finalized =
         true;
+
+    if (state.optional) {
+        state.status = "optional";
+        state.visualStatus = "optional";
+        state.score = null;
+        state.performanceScore = null;
+        pianoRoll.setNoteResult(index, { status: "optional", score: null });
+        updateLiveStatistics();
+        dispatchKaraokeEvent(KARAOKE_EVENTS.noteFinalized, buildKaraokeNoteEventDetail(state));
+        return;
+    }
 
 
     /*
@@ -6265,6 +6364,8 @@ function finalizeNote(
     state.score =
         scores.totalScore;
 
+    state.performanceScore = scores.performanceScore;
+
 
     /*
      * ========================================================
@@ -6443,6 +6544,25 @@ function finalizeNote(
             pitchScore:
                 state.pitchScore,
 
+            expectedDuration:
+                state.expectedDuration,
+
+            coverage:
+                state.coverage,
+
+            requiredCoverage:
+                getRequiredCoverageForNote(
+                    state.expectedDuration,
+                    getCurrentDifficulty()
+                ),
+
+            durationScore:
+                state.durationScore,
+
+            transient:
+                state.expectedDuration > 0 &&
+                state.expectedDuration <= TRANSIENT_NOTE_MAX_DURATION,
+
             totalScore:
                 state.score
         }
@@ -6570,10 +6690,7 @@ function handleFinalizedNoteGamification(
      * O placar recebe pulso apenas quando houve
      * um resultado positivo.
      */
-    if (
-        state.status ===
-            "excellent"
-    ) {
+    if (isPositivePerformance(state, elements.difficultySelect.value)) {
 
         pulseScoreHighlight();
     }
@@ -6587,8 +6704,7 @@ function handleFinalizedNoteGamification(
  *
  * Combo não altera a pontuação.
  *
- * Consideramos sequência apenas notas classificadas
- * como excellent pelo avaliador existente.
+ * Alternativas tonais bem executadas também mantêm a sequência.
  */
 
 /*
@@ -6598,8 +6714,7 @@ function handleFinalizedNoteGamification(
  *
  * Combo não altera a pontuação.
  *
- * Consideramos sequência apenas notas classificadas
- * como excellent pelo avaliador existente.
+ * Alternativas tonais bem executadas também mantêm a sequência.
  * ============================================================
  */
 
@@ -6607,10 +6722,9 @@ function updateCombo(
     state
 ) {
 
-    if (
-        state.status ===
-        "excellent"
-    ) {
+    if (!state || state.optional || state.status === "optional") return null;
+
+    if (isPositivePerformance(state, elements.difficultySelect.value)) {
 
         currentCombo +=
             1;
@@ -6882,12 +6996,9 @@ function getGamifiedFeedback(
 
 
     /*
-     * Excelente entre 80 e 89.
+     * Execução positiva, incluindo alternativas tonais bem cantadas.
      */
-    if (
-        state.status ===
-        "excellent"
-    ) {
+    if (isPositivePerformance(state, elements.difficultySelect.value)) {
 
         return {
             text:
@@ -7427,22 +7538,11 @@ function calculateNoteScores(
      * ========================================================
      */
 
-    const requiredCoverage =
-        Math.max(
-            0.01,
-            difficulty.requiredCoverage ??
-                1
-        );
-
-
     const durationScore =
-        clampScore(
-            Math.min(
-                1,
-                coverage /
-                    requiredCoverage
-            ) *
-            100
+        calculateDurationScore(
+            state,
+            coverage,
+            difficulty
         );
 
 
@@ -7468,8 +7568,17 @@ function calculateNoteScores(
                 0.20
         );
 
+    // Apenas alternativas predominantes recebem crédito musical integral
+    // para combo/festa. Erros, duração e entrada continuam sendo avaliados.
+    const performancePitchScore = state.samplePerformanceScores?.length > 0
+        ? calculateAverage(state.samplePerformanceScores) : pitchScore;
+    const performanceScore = state.dominantVoiceClassification === "scaleAlternative"
+        ? clampScore(performancePitchScore * 0.60 + timingScore * 0.20 + durationScore * 0.20)
+        : totalScore;
 
     return {
+
+        performanceScore,
 
         pitchScore,
 
@@ -7479,6 +7588,123 @@ function calculateNoteScores(
 
         totalScore
     };
+}
+
+
+/*
+ * Cobertura exigida cresce suavemente após a região transitória.
+ * Para diagnóstico, notas transitórias mostram o mínimo da curva;
+ * seu score de duração depende apenas da presença de amostras.
+ */
+function getRequiredCoverageForNote(
+    expectedDuration,
+    difficulty
+) {
+
+    const maxCoverage =
+        Math.max(
+            0,
+            Math.min(
+                1,
+                Number.isFinite(difficulty?.requiredCoverage)
+                    ? difficulty.requiredCoverage
+                    : 1
+            )
+        );
+
+
+    const minCoverage =
+        Math.max(
+            0,
+            Math.min(
+                maxCoverage,
+                Number.isFinite(difficulty?.minimumCoverage)
+                    ? difficulty.minimumCoverage
+                    : maxCoverage
+            )
+        );
+
+
+    const tau =
+        Number.isFinite(difficulty?.coverageTau) &&
+        difficulty.coverageTau > 0
+            ? difficulty.coverageTau
+            : 0.60;
+
+
+    // Duração inválida não reduz a exigência de cobertura.
+    if (
+        !Number.isFinite(expectedDuration) ||
+        expectedDuration <= 0
+    ) {
+
+        return maxCoverage;
+    }
+
+
+    const effectiveDuration =
+        Math.max(
+            0,
+            expectedDuration -
+                TRANSIENT_NOTE_MAX_DURATION
+        );
+
+
+    return minCoverage +
+        (maxCoverage - minCoverage) *
+        (1 - Math.exp(-effectiveDuration / tau));
+}
+
+
+function calculateDurationScore(
+    state,
+    coverage,
+    difficulty
+) {
+
+    if (
+        !state ||
+        !Number.isFinite(state.expectedDuration) ||
+        state.expectedDuration <= 0
+    ) {
+
+        return 0;
+    }
+
+
+    if (
+        state.expectedDuration <=
+        TRANSIENT_NOTE_MAX_DURATION
+    ) {
+
+        return state.voiceSamples > 0
+            ? 100
+            : 0;
+    }
+
+
+    if (
+        !Number.isFinite(coverage) ||
+        coverage <= 0
+    ) {
+
+        return 0;
+    }
+
+
+    const requiredCoverage =
+        getRequiredCoverageForNote(
+            state.expectedDuration,
+            difficulty
+        );
+
+
+    return clampScore(
+        Math.min(
+            1,
+            coverage / Math.max(Number.EPSILON, requiredCoverage)
+        ) * 100
+    );
 }
 
 
@@ -7670,9 +7896,9 @@ function updateExpectedNoteInterface(
 
     elements.expectedNote.textContent =
         target
-            ? formatMidi(
-                target.note.midi
-            )
+            ? formatMidi(target.note.midi) +
+                (isOptionalNote(target.note.duration, elements.difficultySelect.value)
+                    ? " · opcional" : "")
             : "—";
 
 
@@ -7728,7 +7954,7 @@ function updateLiveStatistics() {
     const finalized =
         noteStates.filter(
             state =>
-                state.finalized
+                state.finalized && !state.optional
         );
 
 
@@ -7744,7 +7970,7 @@ function updateLiveStatistics() {
     ) {
 
         elements.currentScore.textContent =
-            "0";
+            "—";
 
         return;
     }
@@ -8187,8 +8413,10 @@ async function stopTraining() {
 
 function showResults() {
 
+    const evaluatedStates = noteStates.filter(state => !state.optional);
+
     const total =
-        noteStates.length;
+        evaluatedStates.length;
 
 
     /*
@@ -8198,7 +8426,7 @@ function showResults() {
      */
 
     const sung =
-        noteStates.filter(
+        evaluatedStates.filter(
             state =>
                 state.voiceSamples >
                 0
@@ -8212,7 +8440,7 @@ function showResults() {
      */
 
     const missed =
-        noteStates.filter(
+        evaluatedStates.filter(
             state =>
                 state.status ===
                 "missed"
@@ -8233,7 +8461,7 @@ function showResults() {
      */
 
     const excellent =
-        noteStates.filter(
+        evaluatedStates.filter(
             state =>
                 state.status ===
                 "excellent"
@@ -8279,7 +8507,7 @@ function showResults() {
      */
 
     const melodyNotes =
-        noteStates.filter(
+        evaluatedStates.filter(
             state =>
                 state.dominantVoiceClassification ===
                     "exactMelody" ||
@@ -8298,7 +8526,7 @@ function showResults() {
      */
 
     const alternativeNotes =
-        noteStates.filter(
+        evaluatedStates.filter(
             state =>
                 state.dominantVoiceClassification ===
                     "scaleAlternative"
@@ -8312,7 +8540,7 @@ function showResults() {
      */
 
     const outOfKeyNotes =
-        noteStates.filter(
+        evaluatedStates.filter(
             state =>
                 state.dominantVoiceClassification ===
                     "outOfKey"
@@ -8333,7 +8561,7 @@ function showResults() {
      */
 
     const unstableNotes =
-        noteStates.filter(
+        evaluatedStates.filter(
             state =>
                 state.voiceSamples >
                     0 &&
@@ -8353,7 +8581,7 @@ function showResults() {
         0
             ? Math.round(
                 calculateAverage(
-                    noteStates.map(
+                    evaluatedStates.map(
                         state =>
                             state.score
                     )
@@ -8369,9 +8597,7 @@ function showResults() {
      */
 
     elements.finalScore.textContent =
-        String(
-            totalScore
-        );
+        total > 0 ? String(totalScore) : "—";
 
 
     /*
@@ -8504,7 +8730,7 @@ function showResults() {
         0
             ? `${Math.round(
                 calculateAverage(
-                    noteStates.map(
+                    evaluatedStates.map(
                         state =>
                             state.coverage
                     )
@@ -8533,9 +8759,8 @@ function showResults() {
      */
 
     elements.finalEvaluation.textContent =
-        getFinalEvaluation(
-            totalScore
-        );
+        total > 0 ? getFinalEvaluation(totalScore) :
+            "Esta música só tem notas opcionais neste modo. Sem avaliação de pontos.";
 
 
     /*
@@ -8592,6 +8817,11 @@ function showResults() {
      * DETALHAMENTO NOTA A NOTA
      * ========================================================
      */
+
+    if (total === 0) {
+        elements.finalResultSticker.textContent = "SEM AVALIAÇÃO";
+        elements.finalResultSticker.className = "explosao-resultado";
+    }
 
     buildNoteResultsList();
 
@@ -8802,7 +9032,9 @@ function buildNoteResultsList() {
                 "resultado-nota-detalhes";
 
 
-            if (
+            if (state.optional) {
+                appendDetail(details, "Nota opcional — não participa da pontuação");
+            } else if (
                 state.status ===
                 "missed"
             ) {
@@ -8867,7 +9099,7 @@ function buildNoteResultsList() {
 
 
             score.textContent =
-                `${state.score} pts`;
+                state.optional ? "—" : `${state.score} pts`;
 
 
             item.append(

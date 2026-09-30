@@ -356,6 +356,138 @@
 
 
                 <!-- =============================================
+                     PLACAR
+                     ============================================= -->
+
+                <section class="placar-hq painel-hq">
+
+
+                    <div class="titulo-painel-hq">
+
+                        <span
+                            class="numero-quadro"
+                            aria-hidden="true"
+                        >
+                            01
+                        </span>
+
+
+                        <div>
+
+                            <p class="rotulo">
+                                AO VIVO
+                            </p>
+
+                            <h2>
+                                Placar
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="barra-status">
+
+
+                        <div class="status-item">
+
+                            <span>
+                                Estado
+                            </span>
+
+                            <strong id="estado">
+                                Carregando
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="status-item">
+
+                            <span>
+                                Microfone
+                            </span>
+
+                            <strong id="estadoMicrofone">
+                                Desligado
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="status-item">
+
+                            <span>
+                                Backing
+                            </span>
+
+                            <strong id="estadoBacking">
+                                Parado
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="status-item">
+
+                            <span>
+                                Progresso
+                            </span>
+
+                            <strong id="progressoMusica">
+                                0%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="pontuacao-destaque">
+
+                        <span>
+                            PONTUAÇÃO
+                        </span>
+
+                        <strong id="pontuacaoAtual">
+                            0
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         COMBO / SEQUÊNCIA
+                         ========================================= -->
+
+                    <div
+                        id="comboAtual"
+                        class="combo-atual combo-inativo"
+                        aria-live="polite"
+                    >
+
+                        <span class="combo-rotulo">
+                            SEQUÊNCIA
+                        </span>
+
+                        <strong id="comboValor">
+                            ×0
+                        </strong>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =============================================
                      CONFIGURAÇÃO
                      ============================================= -->
 
@@ -368,7 +500,7 @@
                             class="numero-quadro"
                             aria-hidden="true"
                         >
-                            01
+                            02
                         </span>
 
 
@@ -442,7 +574,7 @@
                             </option>
 
                             <option value="advanced">
-                                Cover — máxima precisão
+                                Cover — maior precisão
                             </option>
 
                         </select>
@@ -724,138 +856,6 @@
 
                 </section>
 
-
-
-                <!-- =============================================
-                     PLACAR
-                     ============================================= -->
-
-                <section class="placar-hq painel-hq">
-
-
-                    <div class="titulo-painel-hq">
-
-                        <span
-                            class="numero-quadro"
-                            aria-hidden="true"
-                        >
-                            02
-                        </span>
-
-
-                        <div>
-
-                            <p class="rotulo">
-                                AO VIVO
-                            </p>
-
-                            <h2>
-                                Placar
-                            </h2>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="barra-status">
-
-
-                        <div class="status-item">
-
-                            <span>
-                                Estado
-                            </span>
-
-                            <strong id="estado">
-                                Carregando
-                            </strong>
-
-                        </div>
-
-
-
-                        <div class="status-item">
-
-                            <span>
-                                Microfone
-                            </span>
-
-                            <strong id="estadoMicrofone">
-                                Desligado
-                            </strong>
-
-                        </div>
-
-
-
-                        <div class="status-item">
-
-                            <span>
-                                Backing
-                            </span>
-
-                            <strong id="estadoBacking">
-                                Parado
-                            </strong>
-
-                        </div>
-
-
-
-                        <div class="status-item">
-
-                            <span>
-                                Progresso
-                            </span>
-
-                            <strong id="progressoMusica">
-                                0%
-                            </strong>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="pontuacao-destaque">
-
-                        <span>
-                            PONTUAÇÃO
-                        </span>
-
-                        <strong id="pontuacaoAtual">
-                            0
-                        </strong>
-
-                    </div>
-
-
-
-                    <!-- =========================================
-                         COMBO / SEQUÊNCIA
-                         ========================================= -->
-
-                    <div
-                        id="comboAtual"
-                        class="combo-atual combo-inativo"
-                        aria-live="polite"
-                    >
-
-                        <span class="combo-rotulo">
-                            SEQUÊNCIA
-                        </span>
-
-                        <strong id="comboValor">
-                            ×0
-                        </strong>
-
-                    </div>
-
-                </section>
-
             </aside>
 
 
@@ -896,6 +896,10 @@
                             class="legenda"
                             aria-label="Legenda do piano roll"
                         >
+
+                            <span><i class="legenda-opcional" aria-hidden="true"></i>
+                                Não conta pontos
+                            </span>
 
                             <span>
 

@@ -1,3 +1,5 @@
+import { getGreatThreshold, isPositivePerformance } from "./evaluation-rules.js";
+
 /*
  * ============================================================
  * party-mode.js
@@ -75,6 +77,7 @@ const PARTY_CONFIG = {
         displayDurationMs: 3800,
         exitDurationMs: 520,
         avoidRecentCount: 2,
+        videoVolume: 0.42,
 
         /*
          * Palco grande: ocupa a faixa da borda esquerda até
@@ -87,21 +90,28 @@ const PARTY_CONFIG = {
     },
 
     sounds: {
-        volume: 0.30,
+        volume: 0.80,
         maximumDurationMs: 6500,
         avoidRecentCount: 2,
 
         /*
-         * Som agora acompanha os checkpoints.
+         * A frequência vem da cadência sonora independente.
          * Cooldown é apenas uma trava de segurança contra
          * chamadas manuais ou eventos duplicados.
          */
         cooldownMs: 2200,
 
         duckingEnabled: true,
-        duckingFactor: 0.84,
-        duckingFadeMs: 140,
-        duckingRestoreMs: 420
+        duckingFactor: 0.72,
+        duckingFadeMs: 160,
+        duckingRestoreMs: 550
+    },
+
+    soundCadence: {
+        ratio: 0.11,
+        minNotes: 18,
+        maxNotes: 28,
+        fallbackNotes: 23
     },
 
     visuals: {
@@ -196,6 +206,11 @@ export class PartyModeController {
                 ...(config.sounds || {})
             },
 
+            soundCadence: {
+                ...PARTY_CONFIG.soundCadence,
+                ...(config.soundCadence || {})
+            },
+
             visuals: {
                 ...PARTY_CONFIG.visuals,
                 ...(config.visuals || {})
@@ -269,6 +284,11 @@ export class PartyModeController {
         this.lastCheckpointCategory = null;
         this.lastCheckpointFinalized = 0;
 
+        this.soundEventSize =
+            this.config.soundCadence.fallbackNotes;
+        this.nextSoundEventAt = this.soundEventSize;
+        this.lastSoundCategory = null;
+
         this.partyManifest = null;
         this.manifestPromise = null;
 
@@ -278,6 +298,7 @@ export class PartyModeController {
         this.memeHideTimer = null;
         this.memeRemoveTimer = null;
         this.memeAnimation = null;
+        this.memeRequestToken = 0;
 
         this.soundActive = false;
         this.activeSound = null;
@@ -285,6 +306,7 @@ export class PartyModeController {
         this.lastSoundAt = 0;
         this.recentSoundUrls = [];
         this.soundStopTimer = null;
+        this.soundRequestToken = 0;
         this.backingOriginalVolume = null;
         this.duckingAnimationFrame = null;
 
@@ -1666,6 +1688,10 @@ export class PartyModeController {
             this.sessionInfo?.totalNotes
         );
 
+        this.configureSoundCadence(
+            this.sessionInfo?.totalNotes
+        );
+
         /*
          * Preparado mesmo com o Modo Festa desligado,
          * para permitir ativação no meio da música.
@@ -1706,13 +1732,13 @@ export class PartyModeController {
         const detail =
             event?.detail;
 
-        if (!detail) {
+        if (!detail || detail.optional || detail.status === "optional") {
             return;
         }
 
         const score =
             Number(
-                detail.score
+                Number.isFinite(detail.performanceScore) ? detail.performanceScore : detail.score
             );
 
         if (
@@ -1724,6 +1750,9 @@ export class PartyModeController {
         }
 
         const entry = {
+            // A festa usa qualidade de execução; preserva o placar para diagnóstico.
+            melodyScore: this.toFiniteNumberOrNull(detail.score),
+            performanceScore: score,
             noteIndex:
                 detail.noteIndex ??
                 null,
@@ -1808,6 +1837,8 @@ export class PartyModeController {
 
         this.updatePerformanceDiagnosis();
 
+        this.maybeRunSoundEvent();
+
         this.maybeRunCheckpoint();
     }
 
@@ -1845,12 +1876,21 @@ export class PartyModeController {
 
         this.stopBackgroundVideo();
 
+        this.hideMeme(true);
+        this.stopPartySound(true);
+        this.clearParticles();
+
         this.lastSessionSummary = {
             ...(
                 event?.detail ||
                 {}
             )
         };
+
+        if (this.lastSessionSummary.hasEvaluation === false) {
+            this.resetVisualEnvironment();
+            return;
+        }
 
         if (this.isActive()) {
             /*
@@ -2012,9 +2052,73 @@ export class PartyModeController {
         this.lastCheckpointFinalized =
             0;
 
+        this.lastSoundCategory =
+            null;
+
         this.configureCheckpoints(
             this.sessionInfo?.totalNotes
         );
+
+        this.configureSoundCadence(
+            this.sessionInfo?.totalNotes
+        );
+    }
+
+    configureSoundCadence(totalNotesValue) {
+        const totalNotes = Number(totalNotesValue);
+        const cfg = this.config.soundCadence;
+        const finiteOr = (value, fallback) => {
+            const numeric = Number(value);
+            return Number.isFinite(numeric) ? numeric : fallback;
+        };
+
+        const minNotes = Math.max(1, finiteOr(cfg.minNotes, 18));
+        const maxNotes = Math.max(minNotes, finiteOr(cfg.maxNotes, 28));
+        const size = Number.isFinite(totalNotes) && totalNotes > 0
+            ? totalNotes * finiteOr(cfg.ratio, 0.11)
+            : finiteOr(cfg.fallbackNotes, 23);
+
+        this.soundEventSize = Math.max(
+            1,
+            Math.round(Math.min(maxNotes, Math.max(minNotes, size)))
+        );
+        this.nextSoundEventAt = this.soundEventSize;
+    }
+
+    getSoundEventCategory() {
+        const diagnosis = this.performanceDiagnosis;
+
+        if (
+            this.lastSoundCategory === "struggling" &&
+            diagnosis.trend === "rising" &&
+            diagnosis.recentAverage >= this.config.performance.goodScore
+        ) {
+            return "comeback";
+        }
+
+        return ["great", "good", "struggling"].includes(diagnosis.state)
+            ? diagnosis.state
+            : "good";
+    }
+
+    maybeRunSoundEvent() {
+        if (
+            !this.isActive() ||
+            !this.sessionActive ||
+            this.sessionStats.finalized < this.nextSoundEventAt
+        ) {
+            return;
+        }
+
+        const category = this.getSoundEventCategory();
+        this.lastSoundCategory = category;
+
+        while (this.nextSoundEventAt <= this.sessionStats.finalized) {
+            this.nextSoundEventAt += this.soundEventSize;
+        }
+
+        // Eventos normais respeitam o cooldown de segurança.
+        void this.showRandomSound(category);
     }
 
     configureCheckpoints(totalNotesValue) {
@@ -2305,7 +2409,7 @@ export class PartyModeController {
         /*
          * Um checkpoint é um ACONTECIMENTO.
          *
-         * Meme, som, partículas e flash partem
+         * Meme, partículas e flash partem
          * da mesma decisão, sem reagir a cada nota.
          */
 
@@ -2325,20 +2429,6 @@ export class PartyModeController {
                 )
             );
         }
-
-        /*
-         * forceEvent = true:
-         * checkpoint real sempre pode disparar seu som.
-         */
-        tasks.push(
-            this.showRandomSound(
-                category,
-                {
-                    forceEvent:
-                        true
-                }
-            )
-        );
 
         await Promise.allSettled(
             tasks
@@ -2400,7 +2490,7 @@ export class PartyModeController {
 
         if (
             weighted >=
-            cfg.greatAverage
+            getGreatThreshold(this.sessionInfo?.singingMode, cfg.greatAverage, true)
         ) {
             return "great";
         }
@@ -2468,7 +2558,7 @@ export class PartyModeController {
      * ========================================================
      * DIAGNÓSTICO CONTÍNUO
      *
-     * Serve apenas ao ambiente visual.
+     * Atualiza o ambiente visual e informa a categoria sonora.
      *
      * NÃO dispara memes e sons.
      * ========================================================
@@ -2512,9 +2602,7 @@ export class PartyModeController {
 
         const positiveCount =
             recent.filter(
-                item =>
-                    item.status ===
-                    "excellent"
+                item => isPositivePerformance(item, this.sessionInfo?.singingMode)
             ).length;
 
         const errorCount =
@@ -2594,7 +2682,7 @@ export class PartyModeController {
 
         } else if (
             recentAverage >=
-                cfg.greatScore &&
+                getGreatThreshold(this.sessionInfo?.singingMode, cfg.greatScore) &&
             positiveRatio >=
                 0.65
         ) {
@@ -2670,6 +2758,7 @@ export class PartyModeController {
             return false;
         }
 
+        const requestToken = this.memeRequestToken;
         let manifest;
 
         try {
@@ -2682,6 +2771,13 @@ export class PartyModeController {
                 error
             );
 
+            return false;
+        }
+
+        if (
+            requestToken !== this.memeRequestToken ||
+            !this.isActive()
+        ) {
             return false;
         }
 
@@ -2826,6 +2922,7 @@ export class PartyModeController {
     ) {
         if (
             !url ||
+            !this.isActive() ||
             !this.memeStage ||
             !this.memeMediaContainer ||
             this.memeActive
@@ -2837,12 +2934,26 @@ export class PartyModeController {
 
         this.positionMemeStage();
 
+        const requestToken = ++this.memeRequestToken;
+
         const media =
             await this.createMemeMedia(
                 url
             );
 
         if (!media) {
+            return false;
+        }
+
+        if (
+            requestToken !== this.memeRequestToken ||
+            !this.isActive()
+        ) {
+            if (media.tagName === "VIDEO") {
+                media.pause();
+                media.removeAttribute("src");
+                media.load();
+            }
             return false;
         }
 
@@ -2979,10 +3090,30 @@ export class PartyModeController {
 
             } catch (error) {
                 console.debug(
-                    "PartyMode: autoplay do meme não iniciou imediatamente.",
+                    "PartyMode: reprodução com áudio falhou; tentando meme mudo.",
                     error
                 );
+
+                if (requestToken !== this.memeRequestToken) {
+                    return false;
+                }
+
+                media.muted = true;
+                media.volume = 0;
+
+                try {
+                    await media.play();
+                } catch (mutedError) {
+                    console.debug(
+                        "PartyMode: reprodução muda do meme também falhou.",
+                        mutedError
+                    );
+                }
             }
+        }
+
+        if (requestToken !== this.memeRequestToken) {
+            return false;
         }
 
         this.recentMemeUrls.push(
@@ -3089,13 +3220,15 @@ export class PartyModeController {
             url;
 
         video.muted =
-            true;
+            false;
 
         video.defaultMuted =
-            true;
+            false;
 
         video.volume =
-            0;
+            this.clampVolume(
+                this.config.memes.videoVolume
+            );
 
         video.playsInline =
             true;
@@ -3133,6 +3266,8 @@ export class PartyModeController {
     hideMeme(
         immediate = false
     ) {
+        this.memeRequestToken += 1;
+
         if (!this.memeStage) {
             return;
         }
@@ -3552,6 +3687,7 @@ export class PartyModeController {
             return false;
         }
 
+        const requestToken = this.soundRequestToken;
         let manifest;
 
         try {
@@ -3564,6 +3700,13 @@ export class PartyModeController {
                 error
             );
 
+            return false;
+        }
+
+        if (
+            requestToken !== this.soundRequestToken ||
+            !this.isActive()
+        ) {
             return false;
         }
 
@@ -3698,6 +3841,9 @@ export class PartyModeController {
         this.soundActive =
             true;
 
+        // Reserva o cooldown antes do play assíncrono.
+        this.lastSoundAt = now;
+
         this.activeSound =
             audio;
 
@@ -3706,8 +3852,11 @@ export class PartyModeController {
 
         audio.addEventListener(
             "ended",
-            () =>
-                this.finishPartySound(),
+            () => {
+                if (this.activeSound === audio) {
+                    this.finishPartySound();
+                }
+            },
             {
                 once:
                     true
@@ -3717,6 +3866,10 @@ export class PartyModeController {
         audio.addEventListener(
             "error",
             () => {
+                if (this.activeSound !== audio) {
+                    return;
+                }
+
                 console.warn(
                     "🎉 Erro ao reproduzir efeito:",
                     url
@@ -3742,8 +3895,14 @@ export class PartyModeController {
                 error
             );
 
-            this.finishPartySound();
+            if (this.activeSound === audio) {
+                this.finishPartySound();
+            }
 
+            return false;
+        }
+
+        if (this.activeSound !== audio) {
             return false;
         }
 
@@ -3835,6 +3994,8 @@ export class PartyModeController {
     stopPartySound(
         immediate = false
     ) {
+        this.soundRequestToken += 1;
+
         this.clearSoundTimer();
 
         if (
@@ -4357,6 +4518,10 @@ export class PartyModeController {
             i < count;
             i += 1
         ) {
+            if (this.liveParticles.size >= this.config.particles.maxAlive) {
+                return;
+            }
+
             const particle =
                 document.createElement(
                     "span"
@@ -4388,9 +4553,9 @@ export class PartyModeController {
                 360;
 
             const duration =
-                1200 +
+                3200 +
                 Math.random() *
-                1300;
+                2000;
 
             Object.assign(
                 particle.style,
@@ -4603,6 +4768,10 @@ export class PartyModeController {
                     1
             ) {
 
+                if (this.liveParticles.size >= this.config.particles.maxAlive) {
+                    return;
+                }
+
                 const particle =
                     document.createElement(
                         "span"
@@ -4766,13 +4935,13 @@ export class PartyModeController {
                         ],
                         {
                             duration:
-                                1200 +
+                                2200 +
                                 Math.random() *
-                                650,
+                                1200,
 
                             delay:
                                 burst *
-                                    190,
+                                    300,
 
                             easing:
                                 "cubic-bezier(.12,.66,.22,1)",
@@ -4822,6 +4991,10 @@ export class PartyModeController {
             i < count;
             i += 1
         ) {
+            if (this.liveParticles.size >= this.config.particles.maxAlive) {
+                return;
+            }
+
             const particle =
                 document.createElement(
                     "span"
@@ -4923,9 +5096,9 @@ export class PartyModeController {
                     ],
                     {
                         duration:
-                            850 +
+                            1600 +
                             Math.random() *
-                            500,
+                            800,
 
                         easing:
                             "cubic-bezier(.18,.75,.25,1)",
@@ -5739,6 +5912,12 @@ export class PartyModeController {
             activeSoundUrl:
                 this.activeSoundUrl,
 
+            soundCadence: {
+                size: this.soundEventSize,
+                nextAt: this.nextSoundEventAt,
+                lastCategory: this.lastSoundCategory
+            },
+
             visualState:
                 this.currentVisualState,
 
@@ -6096,14 +6275,6 @@ export class PartyModeController {
                 [
                     this.showRandomMeme(
                         category
-                    ),
-
-                    this.showRandomSound(
-                        category,
-                        {
-                            forceEvent:
-                                true
-                        }
                     )
                 ]
             );

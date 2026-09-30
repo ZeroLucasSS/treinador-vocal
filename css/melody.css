@@ -2362,13 +2362,13 @@ h2 {
 
 .legenda-alvo {
     background:
-        var(--aga-amarelo);
+        #68a8ff;
 }
 
 
 .legenda-voz {
     background:
-        var(--aga-ciano);
+        #62dd8b;
 }
 
 
@@ -5977,4 +5977,8 @@ a:focus-visible {
         animation:
             none !important;
     }
+}
+
+.legenda-opcional {
+    background: rgba(148, 163, 184, 0.48);
 }
