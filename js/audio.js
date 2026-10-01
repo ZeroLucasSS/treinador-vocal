@@ -357,7 +357,7 @@ export class MicrophoneAudio {
 
 
         this.audioContext =
-            new AudioContextClass();
+            new AudioContextClass({ latencyHint: "interactive" });
 
 
         /*
@@ -419,17 +419,9 @@ export class MicrophoneAudio {
 
 
         /*
-         * NÃO conectamos o analyser ao destination.
-         *
-         * Portanto:
-         *
-         * microfone → análise
-         *
-         * e NÃO:
-         *
-         * microfone → fones
-         *
-         * Isso evita eco e microfonia.
+         * A análise permanece independente da reprodução.
+         * O retorno opcional (voice-monitor.js) conecta um ramo
+         * separado da source à saída, com volume próprio.
          */
         this.running =
             true;

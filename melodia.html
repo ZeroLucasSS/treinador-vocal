@@ -294,34 +294,12 @@
 
             <div class="aviso-fones-texto">
 
-                <strong>
-                    Ei! Use fones de ouvido!
-                </strong>
-
-
-                <p>
-
-                    O acompanhamento instrumental será reproduzido
-                    enquanto o microfone analisa sua voz.
-
-                    Sem fones, o próprio instrumental pode entrar
-                    novamente no microfone e prejudicar a leitura.
-
-                </p>
-
-
-                <label class="confirmacao-fones">
-
-                    <input
-                        id="confirmarFones"
-                        type="checkbox"
-                    >
-
-                    <span>
-                        Entendi e estou usando fones de ouvido.
-                    </span>
-
-                </label>
+                <label for="modoEscuta" class="rotulo">COMO VOCÊ VAI OUVIR?</label>
+                <select id="modoEscuta" class="select" aria-describedby="ajudaModoEscuta">
+                    <option value="headphones">Fones de ouvido</option>
+                    <option value="speakers">Caixas de som</option>
+                </select>
+                <p id="ajudaModoEscuta">Fones reduzem a entrada do instrumental no microfone e favorecem a avaliação.</p>
 
             </div>
 
@@ -676,6 +654,20 @@
                         <button id="autorizarMicrofone" class="botao-hq botao-ciano" type="button">Autorizar microfone</button>
                         <button id="autorizarSaidaAudio" class="botao-hq botao-ciano" type="button" hidden>Escolher outra saída</button>
                         <p id="estadoDispositivosAudio" class="ajuda-dispositivos" role="status" aria-live="polite"></p>
+                    </div>
+
+                    <div class="retorno-voz" role="group" aria-label="Voz nas caixas ou fones">
+                        <p class="rotulo">VOZ NAS CAIXAS OU FONES</p>
+                        <label class="opcao-retorno" for="reproduzirVoz">
+                            <input id="reproduzirVoz" type="checkbox" aria-describedby="estadoRetornoVoz">
+                            Reproduzir minha voz
+                        </label>
+                        <label for="volumeVoz">Volume da voz: <output id="valorVolumeVoz" for="volumeVoz">20%</output></label>
+                        <input id="volumeVoz" type="range" min="0" max="100" step="1" value="20">
+                        <button id="testarVoz" class="botao-hq botao-ciano" type="button">Testar voz</button>
+                        <button id="silenciarVoz" class="botao-hq botao-vermelho" type="button" disabled>Silenciar voz</button>
+                        <p id="estadoRetornoVoz" class="ajuda-dispositivos" role="status" aria-live="polite">Retorno desligado.</p>
+                        <p class="ajuda-dispositivos">Comece com volume baixo. Ao encerrar, o retorno será desligado. Bluetooth pode causar atraso na voz.</p>
                     </div>
 
                     <!-- =========================================

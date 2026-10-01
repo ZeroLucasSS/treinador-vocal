@@ -3,6 +3,7 @@ export class AudioOutputRouter {
     constructor() {
         this.deviceId = "";
         this.targets = new Set();
+        this.beforeChange = new Set();
     }
 
     get supported() {
@@ -30,6 +31,8 @@ export class AudioOutputRouter {
     }
 
     async select(deviceId) {
+        // Silence microphone monitoring before any output (including fallback) changes.
+        for (const callback of this.beforeChange) callback();
         const previous = this.deviceId;
         const targets = [...this.targets].filter(target => target.state !== "closed");
         const results = await Promise.allSettled(targets.map(target => this.apply(target, deviceId)));
@@ -242,7 +245,7 @@ export class AudioDeviceControls {
         this.outputButton.hidden = !audioOutput.supported || !this.media?.selectAudioOutput;
         this.outputButton.disabled = disabled;
         this.help.textContent = audioOutput.supported
-            ? "A seleção se aplica ao instrumental, à melodia MIDI e aos efeitos."
+            ? "A seleção se aplica ao instrumental, à melodia MIDI, aos efeitos e ao retorno da voz."
             : "A saída de áudio é controlada pelo sistema. Altere nas configurações do aparelho.";
         const capture = this.activeTrack
             ? `Em uso: ${this.microphone.selectedDeviceLabel || "Microfone do sistema"}.`

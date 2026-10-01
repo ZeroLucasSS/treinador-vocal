@@ -1,3 +1,4 @@
+import { VoiceMonitor } from "./voice-monitor.js";
 import { audioOutput, AudioDeviceControls } from "./audio-devices.js";
 import { isOptionalNote, getEvaluationWindow, findVoiceTarget, isPositivePerformance } from "./evaluation-rules.js";
 
@@ -667,9 +668,9 @@ const elements = {
             "botaoIniciar"
         ),
 
-    headphoneConfirmation:
+    listeningMode:
         document.getElementById(
-            "confirmarFones"
+            "modoEscuta"
         ),
 
 
@@ -988,8 +989,8 @@ function validateRequiredElements() {
         botaoIniciar:
             elements.startButton,
 
-        confirmarFones:
-            elements.headphoneConfirmation,
+        modoEscuta:
+            elements.listeningMode,
 
         backingTrackAudio:
             elements.backingAudio,
@@ -1425,12 +1426,19 @@ let stageStickerTimer =
  */
 
 let audioDeviceControls = null;
+let voiceMonitor = null;
+let voiceTesting = false;
+let trainingPreparing = false;
+let captureVersion = 0;
+let microphoneOpening = null;
 
 initialize();
 
 
 async function initialize() {
 
+    voiceMonitor = new VoiceMonitor({ microphone, onTest: toggleVoiceTest });
+    voiceMonitor.init();
     audioDeviceControls = new AudioDeviceControls({
         microphone,
         prepareOutput: () => toneGenerator.ensureContext(),
@@ -1439,7 +1447,9 @@ async function initialize() {
             stopMelodyPreview();
         },
         onCaptureLost: async message => {
-            await stopTraining();
+            voiceMonitor.mute(message);
+            if (voiceTesting) await stopVoiceTest();
+            else await stopTraining();
             setFeedback(message, "errado");
         }
     });
@@ -3129,7 +3139,7 @@ function checkFilesReady() {
 
 
         setFeedback(
-            "Instrumental e melodia vocal carregados. Use fones de ouvido para iniciar o treino.",
+            "Instrumental e melodia vocal carregados. Confira os dispositivos e inicie o treino.",
             "neutro"
         );
     }
@@ -3227,10 +3237,11 @@ elements.startButton.addEventListener(
     "click",
     async () => {
 
-        if (audioDeviceControls?.busy) return;
+        if (audioDeviceControls?.busy || voiceTesting) return;
 
         if (
             running ||
+            trainingPreparing ||
             countdownRunning
         ) {
 
@@ -3397,7 +3408,7 @@ document.querySelectorAll(
 
 async function startBackingPreview() {
 
-    if (audioDeviceControls?.busy) return;
+    if (audioDeviceControls?.busy || voiceTesting) return;
 
     if (
         !Number.isFinite(
@@ -3665,7 +3676,7 @@ function stopBackingPreview() {
 
 async function startMelodyPreview() {
 
-    if (audioDeviceControls?.busy) return;
+    if (audioDeviceControls?.busy || voiceTesting) return;
 
     if (
         !selectedMelody
@@ -4266,9 +4277,55 @@ function activatePlayAndRecordAudioSession() {
 }
 
 
+async function toggleVoiceTest() {
+    if (voiceTesting) return stopVoiceTest();
+    if (running || countdownRunning || trainingPreparing || backingPreviewPlaying ||
+        melodyPreviewPlaying || audioDeviceControls?.busy) return;
+    const version = ++captureVersion;
+    voiceTesting = true;
+    lockControls(true);
+    elements.startButton.disabled = true;
+    voiceMonitor.setTestState("starting");
+    await voiceMonitor.setEnabled(true);
+    try {
+        configurePlayAndRecordAudioSession();
+        microphoneOpening = microphone.start(audioDeviceControls?.inputId || null);
+        await microphoneOpening;
+        if (version !== captureVersion) return;
+        microphoneOpening = null;
+        activatePlayAndRecordAudioSession();
+        audioDeviceControls.captureStarted();
+        await voiceMonitor.attach();
+        if (version !== captureVersion) return;
+        voiceMonitor.setTestState("active");
+        elements.microphoneState.textContent = "Teste de voz";
+    } catch (error) {
+        if (version !== captureVersion) return;
+        await stopVoiceTest();
+        voiceMonitor.mute(`Não foi possível testar a voz: ${error.message}`);
+    }
+}
+
+async function stopVoiceTest() {
+    captureVersion++;
+    voiceMonitor.detach();
+    voiceMonitor.setTestState("starting");
+    try {
+        if (microphoneOpening) await microphoneOpening.catch(() => {});
+        microphoneOpening = null;
+        audioDeviceControls.captureStopped();
+        await microphone.stop();
+    } finally {
+        voiceTesting = false;
+        voiceMonitor.setTestState("idle");
+        elements.microphoneState.textContent = "Desligado";
+        lockControls(false);
+    }
+}
+
 async function startTraining() {
 
-    if (audioDeviceControls?.busy) return;
+    if (audioDeviceControls?.busy || voiceTesting) return;
 
     if (
         !selectedMelody
@@ -4301,27 +4358,17 @@ async function startTraining() {
 
 
     if (
-        !elements.headphoneConfirmation.checked
-    ) {
-
-        setFeedback(
-            "Confirme que está usando fones de ouvido antes de iniciar.",
-            "proximo"
-        );
-
-
-        return;
-    }
-
-
-    if (
         running ||
+        trainingPreparing ||
         countdownRunning
     ) {
 
         return;
     }
 
+
+    const version = ++captureVersion;
+    trainingPreparing = true;
 
     stopBackingPreview();
 
@@ -4373,7 +4420,10 @@ async function startTraining() {
         * É nesse momento que o sistema pode mudar o perfil
         * Bluetooth de reprodução para headset/telefonia.
         */
-        await microphone.start(audioDeviceControls?.inputId || null);
+        microphoneOpening = microphone.start(audioDeviceControls?.inputId || null);
+        await microphoneOpening;
+        if (version !== captureVersion) return;
+        microphoneOpening = null;
         audioDeviceControls?.captureStarted();
         if (microphone.stream?.getAudioTracks()[0]?.readyState === "ended") {
             throw new Error("O microfone foi desconectado. Atualize os dispositivos e tente novamente.");
@@ -4388,6 +4438,9 @@ async function startTraining() {
         * de entrada/saída após o getUserMedia().
         */
         activatePlayAndRecordAudioSession();
+        await voiceMonitor?.attach();
+        if (version !== captureVersion) return;
+        trainingPreparing = false;
 
 
         /*
@@ -4619,6 +4672,9 @@ async function startTraining() {
 
 
     } catch (error) {
+
+        if (version !== captureVersion) return;
+        trainingPreparing = false;
 
         console.error(
             "Erro ao iniciar treino:",
@@ -8216,6 +8272,7 @@ async function finishTraining() {
 
     try {
 
+        voiceMonitor?.detach();
         audioDeviceControls?.captureStopped();
         await microphone.stop();
 
@@ -8296,6 +8353,15 @@ async function finishTraining() {
 
 async function stopTraining() {
 
+    captureVersion++;
+    elements.startButton.disabled = true;
+    trainingPreparing = false;
+    voiceMonitor?.detach();
+    if (microphoneOpening) {
+        await microphoneOpening.catch(() => {});
+        microphoneOpening = null;
+    }
+
     running =
         false;
 
@@ -8341,6 +8407,7 @@ async function stopTraining() {
 
     try {
 
+        voiceMonitor?.detach();
         audioDeviceControls?.captureStopped();
         await microphone.stop();
 
@@ -9444,6 +9511,7 @@ function lockControls(
 ) {
 
     audioDeviceControls?.setLocked(locked);
+    voiceMonitor?.setLocked(locked);
 
     elements.trackSelect.disabled =
         locked;
@@ -10761,6 +10829,9 @@ window.addEventListener(
         elements.backingAudio.pause();
 
 
+        captureVersion++;
+        voiceMonitor?.destroy();
+        microphoneOpening?.then(() => microphone.stop()).catch(() => {});
         audioDeviceControls?.destroy();
         audioOutput.unregister(elements.backingAudio);
         microphone.stop();
