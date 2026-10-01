@@ -66,7 +66,7 @@ export class MicrophoneAudio {
      * ========================================================
      */
 
-    async start() {
+    async start(preferredDeviceId = null) {
 
         if (
             this.running
@@ -95,6 +95,8 @@ export class MicrophoneAudio {
 
         this.selectedDeviceLabel =
             null;
+
+        this.selectionFallback = false;
 
 
         /*
@@ -181,9 +183,9 @@ export class MicrophoneAudio {
              */
 
             const selectedDevice =
-                this.findPreferredInternalMicrophone(
-                    audioInputs
-                );
+                preferredDeviceId
+                    ? { deviceId: preferredDeviceId, label: audioInputs.find(device => device.deviceId === preferredDeviceId)?.label }
+                    : this.findPreferredInternalMicrophone(audioInputs);
 
 
             /*
@@ -267,6 +269,8 @@ export class MicrophoneAudio {
 
 
                 } catch (deviceError) {
+
+                    this.selectionFallback = Boolean(preferredDeviceId);
 
                     console.warn(
                         "Não foi possível abrir explicitamente o microfone escolhido.",

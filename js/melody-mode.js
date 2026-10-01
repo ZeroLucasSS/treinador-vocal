@@ -1,3 +1,4 @@
+import { audioOutput, AudioDeviceControls } from "./audio-devices.js";
 import { isOptionalNote, getEvaluationWindow, findVoiceTarget, isPositivePerformance } from "./evaluation-rules.js";
 
 /*
@@ -1423,11 +1424,27 @@ let stageStickerTimer =
  * ============================================================
  */
 
+let audioDeviceControls = null;
+
 initialize();
 
 
 async function initialize() {
 
+    audioDeviceControls = new AudioDeviceControls({
+        microphone,
+        prepareOutput: () => toneGenerator.ensureContext(),
+        beforeChange: () => {
+            stopBackingPreview();
+            stopMelodyPreview();
+        },
+        onCaptureLost: async message => {
+            await stopTraining();
+            setFeedback(message, "errado");
+        }
+    });
+    audioDeviceControls.init();
+    await audioOutput.register(elements.backingAudio);
     setLoadingState();
 
 
@@ -3210,6 +3227,8 @@ elements.startButton.addEventListener(
     "click",
     async () => {
 
+        if (audioDeviceControls?.busy) return;
+
         if (
             running ||
             countdownRunning
@@ -3378,6 +3397,8 @@ document.querySelectorAll(
 
 async function startBackingPreview() {
 
+    if (audioDeviceControls?.busy) return;
+
     if (
         !Number.isFinite(
             elements.backingAudio.duration
@@ -3463,6 +3484,7 @@ async function startBackingPreview() {
 
     try {
 
+        await audioOutput.apply(elements.backingAudio);
         await elements.backingAudio.play();
 
 
@@ -3642,6 +3664,8 @@ function stopBackingPreview() {
  */
 
 async function startMelodyPreview() {
+
+    if (audioDeviceControls?.busy) return;
 
     if (
         !selectedMelody
@@ -4244,6 +4268,8 @@ function activatePlayAndRecordAudioSession() {
 
 async function startTraining() {
 
+    if (audioDeviceControls?.busy) return;
+
     if (
         !selectedMelody
     ) {
@@ -4347,7 +4373,11 @@ async function startTraining() {
         * É nesse momento que o sistema pode mudar o perfil
         * Bluetooth de reprodução para headset/telefonia.
         */
-        await microphone.start();
+        await microphone.start(audioDeviceControls?.inputId || null);
+        audioDeviceControls?.captureStarted();
+        if (microphone.stream?.getAudioTracks()[0]?.readyState === "ended") {
+            throw new Error("O microfone foi desconectado. Atualize os dispositivos e tente novamente.");
+        }
 
 
         /*
@@ -4470,6 +4500,7 @@ async function startTraining() {
 
         try {
 
+            await audioOutput.apply(elements.backingAudio);
             await elements.backingAudio.play();
 
 
@@ -8185,6 +8216,7 @@ async function finishTraining() {
 
     try {
 
+        audioDeviceControls?.captureStopped();
         await microphone.stop();
 
     } catch (error) {
@@ -8309,6 +8341,7 @@ async function stopTraining() {
 
     try {
 
+        audioDeviceControls?.captureStopped();
         await microphone.stop();
 
     } catch {
@@ -9409,6 +9442,8 @@ function resetGamification() {
 function lockControls(
     locked
 ) {
+
+    audioDeviceControls?.setLocked(locked);
 
     elements.trackSelect.disabled =
         locked;
@@ -10726,6 +10761,8 @@ window.addEventListener(
         elements.backingAudio.pause();
 
 
+        audioDeviceControls?.destroy();
+        audioOutput.unregister(elements.backingAudio);
         microphone.stop();
 
 

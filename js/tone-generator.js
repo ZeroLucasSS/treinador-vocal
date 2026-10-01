@@ -1,3 +1,5 @@
+import { audioOutput } from "./audio-devices.js";
+
 /*
  * ============================================================
  * tone-generator.js
@@ -75,6 +77,8 @@ export class ToneGenerator {
             );
         }
 
+
+        await audioOutput.register(this.audioContext);
 
         if (
             this.audioContext.state ===
@@ -247,6 +251,7 @@ export class ToneGenerator {
             "closed"
         ) {
 
+            audioOutput.unregister(this.audioContext);
             await this.audioContext.close();
         }
 

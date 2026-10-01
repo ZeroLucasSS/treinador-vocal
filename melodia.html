@@ -520,69 +520,6 @@
 
 
 
-                    <!-- Trilha MIDI -->
-
-                    <div class="campo">
-
-                        <label
-                            for="seletorTrilhaMidi"
-                            class="rotulo"
-                        >
-                            TRILHA VOCAL DO MIDI
-                        </label>
-
-
-                        <select
-                            id="seletorTrilhaMidi"
-                            class="select"
-                            disabled
-                        >
-
-                            <option>
-                                Carregando MIDI...
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-
-                    <!-- Dificuldade -->
-
-                    <div class="campo">
-
-                        <label
-                            for="seletorDificuldade"
-                            class="rotulo"
-                        >
-                            MODO DE CANTO
-                        </label>
-
-
-                        <select
-                            id="seletorDificuldade"
-                            class="select"
-                        >
-
-                            <option value="beginner">
-                                Karaokê — diversão e liberdade
-                            </option>
-
-                            <option value="intermediate">
-                                Treino — foco na afinação
-                            </option>
-
-                            <option value="advanced">
-                                Cover — maior precisão
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-
                     <!-- =========================================
                          BOTÕES DE EXECUÇÃO
                          ========================================= -->
@@ -657,6 +594,89 @@
                     </div>
 
 
+
+                    <!-- Trilha MIDI -->
+
+                    <div class="campo" hidden>
+
+                        <label
+                            for="seletorTrilhaMidi"
+                            class="rotulo"
+                        >
+                            TRILHA VOCAL DO MIDI
+                        </label>
+
+
+                        <select
+                            id="seletorTrilhaMidi"
+                            class="select"
+                            disabled
+                        >
+
+                            <option>
+                                Carregando MIDI...
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- Dificuldade -->
+
+                    <div class="campo">
+
+                        <label
+                            for="seletorDificuldade"
+                            class="rotulo"
+                        >
+                            MODO DE CANTO
+                        </label>
+
+
+                        <select
+                            id="seletorDificuldade"
+                            class="select"
+                        >
+
+                            <option value="beginner">
+                                Karaokê — diversão e liberdade
+                            </option>
+
+                            <option value="intermediate">
+                                Treino — foco na afinação
+                            </option>
+
+                            <option value="advanced">
+                                Cover — maior precisão
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="dispositivos-audio" aria-label="Dispositivos de áudio">
+                        <div class="campo">
+                            <label for="seletorMicrofone" class="rotulo">MICROFONE</label>
+                            <select id="seletorMicrofone" class="select" aria-describedby="estadoDispositivosAudio">
+                                <option value="">Automático — identificar ao iniciar</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="seletorSaidaAudio" class="rotulo">SAÍDA DE ÁUDIO</label>
+                            <select id="seletorSaidaAudio" class="select" aria-describedby="ajudaSaidaAudio">
+                                <option value="">Automático — Padrão do sistema</option>
+                            </select>
+                            <p id="ajudaSaidaAudio" class="ajuda-dispositivos"></p>
+                        </div>
+                        <button id="atualizarDispositivosAudio" class="botao-hq botao-ciano" type="button">Atualizar dispositivos</button>
+                        <button id="autorizarMicrofone" class="botao-hq botao-ciano" type="button">Autorizar microfone</button>
+                        <button id="autorizarSaidaAudio" class="botao-hq botao-ciano" type="button" hidden>Escolher outra saída</button>
+                        <p id="estadoDispositivosAudio" class="ajuda-dispositivos" role="status" aria-live="polite"></p>
+                    </div>
 
                     <!-- =========================================
                          SINCRONIZAÇÃO

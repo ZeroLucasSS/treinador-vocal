@@ -1,3 +1,4 @@
+import { audioOutput } from "./audio-devices.js";
 import { getGreatThreshold, isPositivePerformance } from "./evaluation-rules.js";
 
 /*
@@ -3086,6 +3087,11 @@ export class PartyModeController {
                 media.currentTime =
                     0;
 
+                await audioOutput.register(media);
+                if (requestToken !== this.memeRequestToken) {
+                    audioOutput.unregister(media);
+                    return false;
+                }
                 await media.play();
 
             } catch (error) {
@@ -3425,6 +3431,7 @@ export class PartyModeController {
             );
 
         if (video) {
+            audioOutput.unregister(video);
             video.pause();
 
             video.removeAttribute(
@@ -3886,6 +3893,11 @@ export class PartyModeController {
         this.applyBackingDucking();
 
         try {
+            await audioOutput.register(audio);
+            if (this.activeSound !== audio) {
+                audioOutput.unregister(audio);
+                return false;
+            }
             await audio.play();
 
         } catch (error) {
@@ -3965,6 +3977,7 @@ export class PartyModeController {
             this.activeSound
         ) {
             try {
+                audioOutput.unregister(this.activeSound);
                 this.activeSound.pause();
             } catch {
                 // Nada.
@@ -4002,6 +4015,7 @@ export class PartyModeController {
             this.activeSound
         ) {
             try {
+                audioOutput.unregister(this.activeSound);
                 this.activeSound.pause();
 
                 this.activeSound.currentTime =

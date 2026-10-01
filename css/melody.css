@@ -5982,3 +5982,10 @@ a:focus-visible {
 .legenda-opcional {
     background: rgba(148, 163, 184, 0.48);
 }
+
+/* Seleção de áudio: a mesma disposição no celular e no computador. */
+.dispositivos-audio { display: grid; gap: 12px; min-width: 0; }
+.dispositivos-audio .campo { display: grid; gap: 6px; }
+.ajuda-dispositivos { margin: 0; font-size: .85rem; line-height: 1.5; overflow-wrap: anywhere; }
+.dispositivos-audio [hidden], .configuracao > [hidden] { display: none; }
+.dispositivos-audio select:disabled { opacity: .65; }
