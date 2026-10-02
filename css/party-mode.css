@@ -2750,3 +2750,38 @@ and
             42px;
     }
 }
+/* A legenda pertence ao mesmo cartão e acompanha sua animação. */
+.party-meme-caption {
+    position: relative;
+    z-index: 2;
+    margin: 14px 0 0;
+    color: #111;
+    font-family: var(--fonte-hq, sans-serif);
+    font-size: clamp(24px, 3vw, 44px);
+    font-weight: 900;
+    line-height: 1.1;
+    text-align: center;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+    text-wrap: balance;
+    text-shadow: 2px 2px 0 var(--party-caption-accent, #ffe600);
+}
+.party-meme-caption:empty { display: none; }
+.party-meme-stage[data-category="good"] { --party-caption-accent: var(--party-verde-neon); }
+.party-meme-stage[data-category="great"] { --party-caption-accent: var(--party-amarelo); }
+.party-meme-stage[data-category="struggling"] { --party-caption-accent: var(--party-rosa); }
+.party-meme-stage[data-category="comeback"] { --party-caption-accent: var(--party-roxo); }
+.party-meme-stage .party-meme-media {
+    box-sizing: border-box;
+    max-height: var(--party-meme-media-max-height, 64vh);
+}
+.party-meme-announcement {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}

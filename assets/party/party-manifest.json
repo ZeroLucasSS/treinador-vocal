@@ -34,6 +34,29 @@
         ]
     },
 
+    "captions": {
+        "good": [
+            "Está indo bem!",
+            "Continue assim!",
+            "Mandou bem!"
+        ],
+        "great": [
+            "Parabéns!",
+            "Que demais!",
+            "Incrível!"
+        ],
+        "struggling": [
+            "Continue tentando!",
+            "Não desista ainda!",
+            "Você consegue!"
+        ],
+        "comeback": [
+            "Boa recuperação!",
+            "Você está voltando!",
+            "É isso aí!"
+        ]
+    },
+
     "sounds": {
 
         "good": [

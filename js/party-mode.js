@@ -296,6 +296,9 @@ export class PartyModeController {
         this.memeActive = false;
         this.activeMemeUrl = null;
         this.recentMemeUrls = [];
+        this.recentCaptions = {};
+        this.memeCaption = null;
+        this.memeAnnouncement = null;
         this.memeHideTimer = null;
         this.memeRemoveTimer = null;
         this.memeAnimation = null;
@@ -614,6 +617,7 @@ export class PartyModeController {
                     ".party-meme-media"
                 );
 
+            this.createMemeCaption();
             this.applyMemeStageRuntimeStyle();
 
             return;
@@ -678,6 +682,7 @@ export class PartyModeController {
                 ".party-meme-media"
             );
 
+        this.createMemeCaption();
         this.applyMemeStageRuntimeStyle();
         this.positionMemeStage();
     }
@@ -1251,6 +1256,8 @@ export class PartyModeController {
                 "100%";
         }
 
+        this.fitMemeHeight();
+
         if (
             !this.memeStageAvailable &&
             this.memeActive
@@ -1258,6 +1265,12 @@ export class PartyModeController {
             this.hideMeme(
                 true
             );
+            // Recalculate without the removed caption so shorter future memes
+            // remain eligible after a window resize.
+            this.positionMemeStage();
+            // Recalculate without the removed caption so shorter future memes
+            // remain eligible after a window resize.
+            this.positionMemeStage();
         }
     }
 
@@ -2826,8 +2839,61 @@ export class PartyModeController {
 
         return this.showMeme(
             selectedUrl,
-            category
+            category,
+            this.chooseMemeCaption(category, manifest)
         );
+    }
+
+    createMemeCaption() {
+        this.memeCaption = this.memeCard.querySelector(".party-meme-caption");
+        if (!this.memeCaption) {
+            this.memeCaption = document.createElement("p");
+            this.memeCaption.className = "party-meme-caption";
+            this.memeCard.appendChild(this.memeCaption);
+        }
+        // The visual stage is aria-hidden; announce each event outside it.
+        this.memeAnnouncement = document.getElementById("partyMemeAnnouncement");
+        if (!this.memeAnnouncement) {
+            this.memeAnnouncement = document.createElement("div");
+            this.memeAnnouncement.id = "partyMemeAnnouncement";
+            this.memeAnnouncement.className = "party-meme-announcement";
+            this.memeAnnouncement.setAttribute("role", "status");
+            this.memeAnnouncement.setAttribute("aria-live", "polite");
+            this.memeAnnouncement.setAttribute("aria-atomic", "true");
+            document.body.appendChild(this.memeAnnouncement);
+        }
+    }
+
+    chooseMemeCaption(category, manifest) {
+        const defaults = {
+            good: "Está indo bem!",
+            great: "Incrível!",
+            struggling: "Continue tentando!",
+            comeback: "Boa recuperação!"
+        };
+        const raw = manifest?.captions?.[category];
+        const pool = Array.isArray(raw) ? [...new Set(raw
+            .filter(value => typeof value === "string")
+            .map(value => value.trim().replace(/\s+/g, " "))
+            .filter(value => value.length > 0 && value.length <= 120))] : [];
+        return this.chooseNonRepeatingAsset(pool, this.recentCaptions[category] || [], 2)
+            || defaults[category] || "Continue cantando!";
+    }
+
+    fitMemeHeight() {
+        if (!this.memeCaption || !this.memeStageAvailable) return;
+        const cardStyle = getComputedStyle(this.memeCard);
+        const spacing = ["paddingTop", "paddingBottom", "borderTopWidth", "borderBottomWidth"]
+            .reduce((sum, key) => sum + (parseFloat(cardStyle[key]) || 0), 0);
+        // Reserve room for rotation, shadow and the caption before sizing the video.
+        const reserve = this.memeCard.offsetWidth * 0.1 + 32;
+        const available = window.innerHeight - this.config.memes.top - reserve;
+        const height = Math.floor(Math.min(window.innerHeight * 0.64,
+            available - spacing - this.memeCaption.offsetHeight - 18));
+        this.memeStageAvailable = height >= 80;
+        this.memeStage.dataset.available = String(this.memeStageAvailable);
+        this.memeStage.style.setProperty("--party-meme-media-max-height", `${Math.max(0, height)}px`);
+        this.memeMediaContainer.style.minHeight = `${Math.max(0, Math.min(250, height))}px`;
     }
 
     chooseNonRepeatingAsset(
@@ -2919,7 +2985,8 @@ export class PartyModeController {
 
     async showMeme(
         url,
-        category
+        category,
+        caption = this.chooseMemeCaption(category, this.partyManifest)
     ) {
         if (
             !url ||
@@ -2959,9 +3026,15 @@ export class PartyModeController {
         }
 
         this.memeMediaContainer
-            .replaceChildren(
-                media
-            );
+            .replaceChildren(media);
+        this.memeCaption.textContent = caption;
+        this.memeStage.dataset.category = category;
+        this.positionMemeStage();
+        if (!this.memeStageAvailable) {
+            this.removeCurrentMemeMedia();
+            this.positionMemeStage();
+            return false;
+        }
 
         /*
          * Meme propositalmente maior.
@@ -2976,7 +3049,7 @@ export class PartyModeController {
                     "100%",
 
                 maxHeight:
-                    "64vh",
+                    "calc(var(--party-meme-media-max-height, 64vh) - 6px)",
 
                 objectFit:
                     "contain"
@@ -3122,9 +3195,10 @@ export class PartyModeController {
             return false;
         }
 
-        this.recentMemeUrls.push(
-            url
-        );
+        this.recentMemeUrls.push(url);
+        const history = this.recentCaptions[category] || [];
+        this.recentCaptions[category] = [...history, caption].slice(-2);
+        this.memeAnnouncement.textContent = caption;
 
         const maxRecent =
             Math.max(
@@ -3150,6 +3224,7 @@ export class PartyModeController {
             this.config.events.memeShown,
             {
                 category,
+                caption,
                 url
             }
         );
@@ -3419,6 +3494,8 @@ export class PartyModeController {
     }
 
     removeCurrentMemeMedia() {
+        if (this.memeCaption) this.memeCaption.textContent = "";
+        if (this.memeAnnouncement) this.memeAnnouncement.textContent = "";
         if (
             !this.memeMediaContainer
         ) {
@@ -6583,6 +6660,9 @@ export class PartyModeController {
             this.visualOverlay.remove();
         }
 
+        this.memeAnnouncement?.remove();
+        this.memeAnnouncement = null;
+        this.memeCaption = null;
         if (
             this.memeStage
         ) {

@@ -1,6 +1,14 @@
 # treinador-vocal
 Web-app para treinamento de afinação vocal em tempo real.
 
+## Frases dos memes
+
+Cadastre as frases em `assets/party/party-manifest.json`, na seção opcional `captions`, com listas para `good`, `great`, `struggling` e `comeback`. Cada meme recebe uma frase da mesma categoria, exibida abaixo do vídeo e anunciada uma vez para leitores de tela. Vídeo e frase compartilham a duração e o encerramento do evento.
+
+Prefira frases curtas, como “Continue assim!” e “Boa recuperação!”. Entradas vazias, valores que não sejam texto e frases com mais de 120 caracteres são ignorados. Espaços são normalizados e duplicatas removidas antes do sorteio. Se não houver frases válidas, uma mensagem padrão da categoria é usada. O conteúdo é exibido como texto simples, sem interpretar HTML.
+
+O sorteio evita as duas últimas frases daquela categoria quando possível; uma frase única pode se repetir. As listas existentes de memes e sons e a versão 2 do manifesto permanecem compatíveis. A altura do vídeo se adapta ao espaço da legenda e da janela, mantendo as regras atuais de disponibilidade do Modo Festa.
+
 ## Dispositivos de áudio
 
 No card **02 — Ajuste o treino**, os botões de reprodução e início aparecem antes do modo de canto e dos seletores de microfone e saída. A trilha MIDI continua sendo selecionada internamente, com seu campo oculto.

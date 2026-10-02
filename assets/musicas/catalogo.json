@@ -117,7 +117,7 @@
                     "artist": "Legião Urbana",
                     "genre": "rock-nacional",
                     "folder": "rock-nacional/tempo-perdido-legiao-urbana",
-                    "duration": 230,
+                    "duration": 300,
                     "difficulty": "intermediate",
                     "language": "pt-BR",
                     "key": "E",
@@ -149,6 +149,84 @@
                     "difficulty": "intermediate",
                     "language": "pt-BR",
                     "key": "F",
+                    "mode": "major",
+                    "offset": 0.0,
+                    "lyricsOffset": 0.0,
+                    "files": {
+                        "audio": "instrumental.mp3",
+                        "midi": "voz.mid",
+                        "lyrics": "letra.srt",
+                        "syllables": "voz_silabas.srt",
+                        "cover": "capa.jpg",
+                        "backgroundVideo": null
+                    }
+                }
+            ]
+        },
+        {
+            "id": "samba-pagode",
+            "name": "Samba & Pagode",
+            "songs": [
+                {
+                    "id": "livre-pra-voar-exaltasamba",
+                    "title": "Livre Pra Voar",
+                    "artist": "Exaltassamba",
+                    "genre": "samba-pagode",
+                    "folder": "samba-pagode/livre-pra-voar-exaltasamba",
+                    "duration": 221,
+                    "difficulty": "advanced",
+                    "language": "pt-BR",
+                    "key": "A",
+                    "mode": "minor",
+                    "offset": 0.0,
+                    "lyricsOffset": 0.0,
+                    "files": {
+                        "audio": "instrumental.mp3",
+                        "midi": "voz.mid",
+                        "lyrics": "letra.srt",
+                        "syllables": "voz_silabas.srt",
+                        "cover": "capa.jpg",
+                        "backgroundVideo": "background.mp4"
+                    }
+                },
+                {
+                    "id": "ta-vendo-aquela-lua-exaltasamba",
+                    "title": "Tá Vendo Aquela Lua",
+                    "artist": "Exaltassamba",
+                    "genre": "samba-pagode",
+                    "folder": "samba-pagode/ta-vendo-aquela-lua-exaltasamba",
+                    "duration": 196,
+                    "difficulty": "advanced",
+                    "language": "pt-BR",
+                    "key": "G",
+                    "mode": "major",
+                    "offset": 0.0,
+                    "lyricsOffset": 0.0,
+                    "files": {
+                        "audio": "instrumental.mp3",
+                        "midi": "voz.mid",
+                        "lyrics": "letra.srt",
+                        "syllables": "voz_silabas.srt",
+                        "cover": "capa.jpg",
+                        "backgroundVideo": "background.mp4"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "sertanejo",
+            "name": "Sertanejo",
+            "songs": [
+                {
+                    "id": "evidencias-chitaozinho-xororo",
+                    "title": "Evidências",
+                    "artist": "Chitãozinho & Xororó",
+                    "genre": "sertanejo",
+                    "folder": "sertanejo/evidencias-chitaozinho-xororo",
+                    "duration": 299,
+                    "difficulty": "intermediate",
+                    "language": "pt-BR",
+                    "key": "E",
                     "mode": "major",
                     "offset": 0.0,
                     "lyricsOffset": 0.0,
