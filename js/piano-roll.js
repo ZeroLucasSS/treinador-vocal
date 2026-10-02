@@ -704,7 +704,8 @@ export class PianoRoll {
             index,
             {
                 status,
-                score
+                score,
+                sung: status === "optional" && result.sung === true
             }
         );
 
@@ -1952,7 +1953,9 @@ export class PianoRoll {
                 */
 
                 case "optional":
-                    return "rgba(148,163,184,0.48)";
+                    if (result.sung) return "rgba(75,225,245,0.96)";
+                    // Sem voz, mantém o mesmo azul das demais notas pendentes.
+                    break;
 
                 case "excellent":
 

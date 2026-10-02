@@ -2845,12 +2845,14 @@ export class PartyModeController {
     }
 
     createMemeCaption() {
-        this.memeCaption = this.memeCard.querySelector(".party-meme-caption");
+        this.memeCaption = this.memeStage.querySelector(".party-meme-caption");
         if (!this.memeCaption) {
             this.memeCaption = document.createElement("p");
             this.memeCaption.className = "party-meme-caption";
-            this.memeCard.appendChild(this.memeCaption);
+
         }
+        // A sibling of the photograph: the lettering floats over its lower edge.
+        this.memeStage.appendChild(this.memeCaption);
         // The visual stage is aria-hidden; announce each event outside it.
         this.memeAnnouncement = document.getElementById("partyMemeAnnouncement");
         if (!this.memeAnnouncement) {
@@ -2862,6 +2864,18 @@ export class PartyModeController {
             this.memeAnnouncement.setAttribute("aria-atomic", "true");
             document.body.appendChild(this.memeAnnouncement);
         }
+    }
+
+    renderMemeCaption(caption) {
+        const words = caption.split(/\s+/);
+        const nodes = [];
+        words.forEach((word, index) => {
+            if (index) nodes.push(document.createTextNode(" "));
+            const span = document.createElement("span");
+            span.textContent = word;
+            nodes.push(span);
+        });
+        this.memeCaption.replaceChildren(...nodes);
     }
 
     chooseMemeCaption(category, manifest) {
@@ -2885,11 +2899,15 @@ export class PartyModeController {
         const cardStyle = getComputedStyle(this.memeCard);
         const spacing = ["paddingTop", "paddingBottom", "borderTopWidth", "borderBottomWidth"]
             .reduce((sum, key) => sum + (parseFloat(cardStyle[key]) || 0), 0);
-        // Reserve room for rotation, shadow and the caption before sizing the video.
+        const captionStyle = getComputedStyle(this.memeCaption);
+        const captionHeight = Math.max(0, this.memeCaption.offsetHeight +
+            (parseFloat(captionStyle.marginTop) || 0) +
+            (parseFloat(captionStyle.marginBottom) || 0));
+        // Reserve room for the independent lettering, its overlap and shadows.
         const reserve = this.memeCard.offsetWidth * 0.1 + 32;
         const available = window.innerHeight - this.config.memes.top - reserve;
         const height = Math.floor(Math.min(window.innerHeight * 0.64,
-            available - spacing - this.memeCaption.offsetHeight - 18));
+            available - spacing - captionHeight - 18));
         this.memeStageAvailable = height >= 80;
         this.memeStage.dataset.available = String(this.memeStageAvailable);
         this.memeStage.style.setProperty("--party-meme-media-max-height", `${Math.max(0, height)}px`);
@@ -3027,7 +3045,7 @@ export class PartyModeController {
 
         this.memeMediaContainer
             .replaceChildren(media);
-        this.memeCaption.textContent = caption;
+        this.renderMemeCaption(caption);
         this.memeStage.dataset.category = category;
         this.positionMemeStage();
         if (!this.memeStageAvailable) {

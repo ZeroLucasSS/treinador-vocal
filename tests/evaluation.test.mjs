@@ -271,3 +271,39 @@ test('yellow-only karaoke reaches good but not great; errors and optional notes 
         assert.equal(run(`isPositivePerformance({ status: 'partial', score: ${score} }, 'advanced')`), false);
     }
 });
+
+
+test('unscored notes start in normal blue and turn cyan only when sung, keeping a null score', () => {
+    const context = vm.createContext({});
+    vm.runInContext(script(source('piano-roll')), context);
+    const run = text => vm.runInContext(text, context);
+    run(`const roll = Object.create(PianoRoll.prototype);
+        roll.noteResults = new Map(); roll.draw = () => {};
+        roll.setNoteResult(0, { status: 'optional', score: null });`);
+    for (const active of [false, true]) {
+        assert.equal(run(`roll.getNoteColor(roll.noteResults.get(0), ${active})`),
+            run(`roll.getNoteColor(null, ${active})`));
+    }
+    run(`roll.setNoteResult(0, { status: 'optional', score: 100, sung: true });`);
+    assert.equal(run('roll.noteResults.get(0).score'), null);
+    assert.equal(run('roll.getNoteColor(roll.noteResults.get(0), false)'), 'rgba(75,225,245,0.96)');
+});
+
+test('singing an unscored note updates its visual state but never points, combo or party performance', () => {
+    const { run } = fixture();
+    run(`prepare([{ start: 0, duration: .2, midi: 60 }, { start: 1, duration: .2, midi: 60 }]);
+        currentCombo = 5;
+        evaluateVoiceSample(midiToFrequency(60), .1, 60);`);
+    assert.equal(run('noteStates[0].optionalSung'), true);
+    assert.equal(run('pianoRoll.results.get(0).sung'), true);
+    assert.equal(run('currentCombo'), 5);
+    run(`finalizeNote(0); finalizeNote(1);
+        partyMode.handleNoteFinalized({ detail: buildKaraokeNoteEventDetail(noteStates[0]) });`);
+    assert.equal(run('pianoRoll.results.get(0).sung'), true);
+    assert.equal(run('pianoRoll.results.get(1).sung'), false);
+    assert.equal(run('noteStates[0].score'), null);
+    assert.equal(run('noteStates[0].performanceScore'), null);
+    assert.equal(run('buildKaraokeSessionSummary().totalNotes'), 0);
+    assert.equal(run('partyMode.performanceHistory.length'), 0);
+    assert.equal(run('currentCombo'), 5);
+});

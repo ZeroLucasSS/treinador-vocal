@@ -2750,27 +2750,53 @@ and
             42px;
     }
 }
-/* A legenda pertence ao mesmo cartão e acompanha sua animação. */
+/* Letreiro independente: fora da fotografia, sobreposto apenas à borda inferior. */
+.party-meme-stage { container-type: inline-size; }
+.party-meme-stage .party-meme-card { padding: 12px; }
 .party-meme-caption {
     position: relative;
-    z-index: 2;
-    margin: 14px 0 0;
-    color: #111;
-    font-family: var(--fonte-hq, sans-serif);
-    font-size: clamp(24px, 3vw, 44px);
-    font-weight: 900;
-    line-height: 1.1;
+    z-index: 3;
+    margin: -28px -6px 0;
+    padding: 0 8px 14px;
+    color: #ffe83d;
+    font-family: var(--fonte-impacto, Impact, sans-serif);
+    font-size: clamp(44px, 5.3vw, 88px);
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: .025em;
+    line-height: 1.02;
     text-align: center;
     text-transform: uppercase;
     overflow-wrap: anywhere;
     text-wrap: balance;
-    text-shadow: 2px 2px 0 var(--party-caption-accent, #ffe600);
+    -webkit-text-stroke: 2.5px #251039;
+    paint-order: stroke fill;
+    text-shadow: 3px 4px 0 #251039, 5px 6px 0 #fff, 8px 10px 0 #251039,
+        10px 14px 14px rgb(22 5 43 / 45%);
+    transform: rotate(-3deg) skewX(-4deg);
+    transform-origin: center top;
 }
+@supports (font-size: 1cqw) {
+    .party-meme-caption { font-size: clamp(42px, 12cqw, 88px); }
+}
+.party-meme-caption span { color: #ffe83d; }
+.party-meme-caption span:nth-child(4n + 2) { color: #44efff; }
+.party-meme-caption span:nth-child(4n + 3) { color: #ff70ca; }
+.party-meme-caption span:nth-child(4n + 4) { color: #98ff65; }
+.party-meme-stage[data-category="great"] .party-meme-caption span:first-child { color: #ffe83d; }
+.party-meme-stage[data-category="good"] .party-meme-caption span:first-child { color: #98ff65; }
+.party-meme-stage[data-category="comeback"] .party-meme-caption span:first-child { color: #ff70ca; }
+.party-meme-stage[data-category="struggling"] .party-meme-caption span:first-child { color: #44efff; }
 .party-meme-caption:empty { display: none; }
-.party-meme-stage[data-category="good"] { --party-caption-accent: var(--party-verde-neon); }
-.party-meme-stage[data-category="great"] { --party-caption-accent: var(--party-amarelo); }
-.party-meme-stage[data-category="struggling"] { --party-caption-accent: var(--party-rosa); }
-.party-meme-stage[data-category="comeback"] { --party-caption-accent: var(--party-roxo); }
+.party-meme-stage.is-visible .party-meme-caption { animation: party-caption-pop 460ms cubic-bezier(.16, 1, .3, 1) both; }
+@keyframes party-caption-pop {
+    from { opacity: 0; transform: translateY(18px) rotate(3deg) skewX(-4deg) scale(.75); }
+    to { opacity: 1; transform: translateY(0) rotate(-3deg) skewX(-4deg) scale(1); }
+}
+body.party-mode-reduced-motion .party-meme-caption { animation: none !important; }
+@media (prefers-reduced-motion: reduce) {
+    .party-meme-stage.is-visible .party-meme-caption { animation: none; }
+}
 .party-meme-stage .party-meme-media {
     box-sizing: border-box;
     max-height: var(--party-meme-media-max-height, 64vh);

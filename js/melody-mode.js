@@ -3967,6 +3967,7 @@ function createNoteStates() {
                 index,
 
                 optional: isOptionalNote(note.duration, elements.difficultySelect.value),
+                optionalSung: false,
 
                 midi:
                     note.midi,
@@ -5724,7 +5725,12 @@ function evaluateVoiceSample(
 
 
     if (state.optional) {
-        elements.currentNoteScore.textContent = "Opcional";
+        // Feedback visual independente: esta captura não gera pontos ou combo.
+        if (!state.optionalSung && Number.isFinite(frequency) && frequency > 0 && Number.isFinite(midiFloat)) {
+            state.optionalSung = true;
+            pianoRoll.setNoteResult(index, { status: "optional", score: null, sung: true });
+        }
+        elements.currentNoteScore.textContent = "Sem pontos";
         elements.currentError.textContent = "—";
         elements.currentOnset.textContent = "—";
         elements.currentCoverage.textContent = "—";
@@ -6256,7 +6262,7 @@ function finalizeNote(
         state.visualStatus = "optional";
         state.score = null;
         state.performanceScore = null;
-        pianoRoll.setNoteResult(index, { status: "optional", score: null });
+        pianoRoll.setNoteResult(index, { status: "optional", score: null, sung: state.optionalSung });
         updateLiveStatistics();
         dispatchKaraokeEvent(KARAOKE_EVENTS.noteFinalized, buildKaraokeNoteEventDetail(state));
         return;
