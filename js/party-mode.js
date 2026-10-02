@@ -1,3 +1,4 @@
+import { PartyAudio } from "./party-audio.js";
 import { audioOutput } from "./audio-devices.js";
 import { getGreatThreshold, isPositivePerformance } from "./evaluation-rules.js";
 
@@ -3923,8 +3924,10 @@ export class PartyModeController {
             );
         }
 
-        const audio =
-            new Audio();
+        const captureContext = audioOutput.captureContext;
+        const audio = captureContext && captureContext.state !== "closed"
+            ? new PartyAudio(captureContext)
+            : new Audio();
 
         audio.src =
             url;
@@ -3988,7 +3991,9 @@ export class PartyModeController {
         this.applyBackingDucking();
 
         try {
-            await audioOutput.register(audio);
+            // Buffered effects already use the registered capture context and
+            // selected output, independently of the microphone monitor volume.
+            if (!audio.usesAudioContext) await audioOutput.register(audio);
             if (this.activeSound !== audio) {
                 audioOutput.unregister(audio);
                 return false;

@@ -59,6 +59,7 @@ export class VoiceMonitor {
                 audioOutput.unregister(context);
                 return;
             }
+            audioOutput.captureContext = context;
             source.connect(this.gain);
             this.gain.connect(context.destination);
             context.addEventListener("sinkchange", this.routeChanged);
@@ -118,6 +119,7 @@ export class VoiceMonitor {
     release() {
         this.version++;
         if (this.context) {
+            if (audioOutput.captureContext === this.context) audioOutput.captureContext = null;
             this.context.removeEventListener("sinkchange", this.routeChanged);
             this.context.removeEventListener("statechange", this.contextChanged);
             audioOutput.unregister(this.context);

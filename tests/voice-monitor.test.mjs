@@ -146,3 +146,15 @@ test('volume and mute remain accessible during training; test remains stoppable'
     assert.equal(f.elements.get('testarVoz').disabled, false);
     assert.equal(f.elements.get('testarVoz').textContent, 'Encerrar teste de voz');
 });
+
+
+test('capture context remains available to effects when muted and is cleared on detach', async () => {
+    const f = fixture();
+    await f.monitor.attach();
+    assert.equal(f.router.captureContext, f.context);
+    await f.monitor.setEnabled(true);
+    f.monitor.mute();
+    assert.equal(f.router.captureContext, f.context);
+    f.monitor.detach();
+    assert.equal(f.router.captureContext, null);
+});

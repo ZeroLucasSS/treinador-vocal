@@ -2,6 +2,7 @@
 export class AudioOutputRouter {
     constructor() {
         this.deviceId = "";
+        this.captureContext = null;
         this.targets = new Set();
         this.beforeChange = new Set();
     }

@@ -61,8 +61,7 @@
 
         "good": [
             "./sounds/good/good-01.mp3",
-            "./sounds/good/good-02.mp3",
-            "./sounds/good/good-03.mp3"            
+            "./sounds/good/good-02.mp3"
         ],
 
         "great": [
