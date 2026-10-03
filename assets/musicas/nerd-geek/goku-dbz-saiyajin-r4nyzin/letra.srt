@@ -1,195 +1,423 @@
 1
-00:00:01,390 --> 00:00:08,390
-Dizem que eu caí na terra, de nada disso me lembro, dizem que bati a cabeça,
+00:00:01,831 --> 00:00:03,693
+Dizem que eu caí na Terra
 
 2
-00:00:08,390 --> 00:00:16,690
-e isso me mudou por dentro, a cobrança veio, ele disse ser meu irmão, nesse dia
+00:00:04,272 --> 00:00:06,214
+De nada disso me lembro
 
 3
-00:00:16,690 --> 00:00:23,410
-eu morri e ele anunciou uma invasão, foi a primeira vez que eu ouvi, sobre esses
+00:00:06,677 --> 00:00:08,535
+Dizem que bati a cabeça
 
 4
-00:00:23,410 --> 00:00:28,210
-tais Saiyajins, quando elevo o meu que é mais de oito mil, um poder que esse tal
+00:00:08,971 --> 00:00:11,013
+E isso me mudou por dentro
 
 5
-00:00:28,210 --> 00:00:33,030
-príncipe nunca viu, quem será que vai ganhar?
+00:00:11,624 --> 00:00:13,597
+A cobrança veio
 
 6
-00:00:33,890 --> 00:00:41,870
-Galick Ho contra Kamehameha, pouparei a vida dele, quero te ver de novo, em
+00:00:14,018 --> 00:00:15,589
+Ele diz ser meu irmão
 
 7
-00:00:41,870 --> 00:00:45,750
-Namekusei o oponente é outro, com um só golpe Rikum foi e depois foi Ginyu também,
+00:00:15,929 --> 00:00:17,752
+Nesse dia, eu morri
 
 8
-00:00:45,750 --> 00:00:51,270
-Acho que não entenderão que meu poder vai além, Vegeta chora e eu te prometo, com
+00:00:18,013 --> 00:00:20,245
+E ele anunciou uma invasão
 
 9
-00:00:51,270 --> 00:00:56,470
-Freeza não, não tenho medo, sua angústia devia ser imensa pra isso ter me
+00:00:20,335 --> 00:00:21,803
+Foi a primeira vez que eu ouvi
 
 10
-00:00:56,470 --> 00:01:01,930
-implorado, ele disse que eu sou a lenda do super Saiyajin lendário, por que
+00:00:22,883 --> 00:00:24,099
+Sobre esses tais Saiyajins
 
 11
-00:01:01,930 --> 00:01:03,830
-envolveu quem eu amo assim?
+00:00:24,805 --> 00:00:27,003
+Quando elevo meu Ki é mais de 8 mil
 
 12
-00:01:03,910 --> 00:01:06,250
-Por que você matou o Kuririn?
+00:00:27,243 --> 00:00:29,508
+Um poder que esse tal príncipe nunca viu
 
 13
-00:01:06,450 --> 00:01:15,270
-Freeza sente meu poder fluir, eleva, eleva o ki! Será humilhado, pelo Saiyajin!
+00:00:30,006 --> 00:00:32,670
+Quem será que vai ganhar?
 
 14
-00:01:15,890 --> 00:01:23,910
-Preciso elevar o ki, nunca viram um guerreiro assim, esse é o poder de um super
+00:00:33,890 --> 00:00:38,496
+Galick Ho contra Kamehameha!
 
 15
-00:01:23,910 --> 00:01:31,130
-saiyajin, vocês não conseguirão me enfrentar, o meu poder se elevar, Goku
+00:00:38,756 --> 00:00:41,239
+Pouparei a vida dele, quero te ver de novo
 
 16
-00:01:31,130 --> 00:01:37,670
-Kamehameha! Morri de uma doença Isso é confesso Logo ao chegar na terra
+00:00:41,519 --> 00:00:43,495
+Em Namekusei, o oponente é outro
 
 17
-00:01:37,670 --> 00:01:42,550
-Guerreiro do futuro Androides nos aniquilarão Então começa o treinamento Vamos
+00:00:43,521 --> 00:00:45,796
+Com um só golpe Rikum foi, depois foi Ginyu também
 
 18
-00:01:42,550 --> 00:01:50,710
-todos guerreiros então Todos juntos pra sala do tempo O tempo passa diferente
+00:00:45,976 --> 00:00:48,397
+Acho que não entenderam que meu poder vai além
 
 19
-00:01:50,710 --> 00:01:56,610
-aqui Se eu prometo que eu vou te matar Quando eu elevar meu Ki Eu juro
+00:00:48,777 --> 00:00:50,957
+Vegeta chora, e eu te prometo
 
 20
-00:01:56,610 --> 00:02:03,890
-que irei voltar Se estou mais forte que o céu Me diga Não Você não está
+00:00:51,177 --> 00:00:53,279
+Com Freeza não, não tenho medo
 
 21
-00:02:03,890 --> 00:02:12,010
-Mas isso não me preocupa Um torneio, céu, te prometo que Tem um guerreiro que
+00:00:53,600 --> 00:00:57,485
+Sua angústia devia ser imensa, pra isso ter me implorado
 
 22
-00:02:12,010 --> 00:02:17,490
-cê não vence Eu desisto, venha, meu filho E mostre para o céu todo seu poder
+00:00:57,785 --> 00:01:01,389
+Ele diz que eu sou a lenda do Super Saiyajin Lendário
 
 23
-00:02:17,490 --> 00:02:25,390
-Acho que errei como um pai Me perdoe, filho Farei o que for capaz Será meu
+00:01:01,500 --> 00:01:03,885
+Por que envolveu quem eu amo assim?
 
 24
-00:02:25,390 --> 00:02:33,810
-sacrifício Seu desintegro é venido ao celular Pelo seu Kamehameha Autorizado a
+00:01:03,925 --> 00:01:05,985
+Por que cê matou o Kuririn?
 
 25
-00:02:33,810 --> 00:02:39,750
-voltar pra terra Nesse torneio eu também vou lutar Mas guerreiros inesperados
+00:01:06,214 --> 00:01:08,558
+Freeza, sente meu poder fluir
 
 26
+00:01:08,578 --> 00:01:11,148
+Eleva, eleva o Ki
+
+27
+00:01:11,168 --> 00:01:12,609
+Será humilhado!
+
+28
+00:01:12,705 --> 00:01:15,890
+Pelo Saiyajin!
+
+29
+00:01:15,890 --> 00:01:23,910
+Preciso elevar o Ki! Nunca viram um guerreiro assim Esse é o poder De um Super
+
+30
+00:01:24,090 --> 00:01:25,270
+Saiyajin!
+
+31
+00:01:25,472 --> 00:01:27,215
+Vocês não conseguirão me enfrentar
+
+32
+00:01:27,275 --> 00:01:30,439
+O meu poder se elevar
+
+33
+00:01:30,700 --> 00:01:31,481
+Goku! Kamehameha!
+
+34
+00:01:34,153 --> 00:01:36,388
+Morri de uma doença? Isso é constrangedor
+
+35
+00:01:36,408 --> 00:01:38,714
+Logo ao chegar na Terra, guerreiro do Futuro
+
+36
+00:01:38,812 --> 00:01:40,094
+Androides nos aniquilarão
+
+37
+00:01:40,354 --> 00:01:41,995
+Então começa o treinamento
+
+38
+00:01:42,229 --> 00:01:46,036
+Vamos todos os guerreiros então
+
+39
+00:01:46,395 --> 00:01:48,937
+Todos juntos pra Sala do Tempo!
+
+40
+00:01:48,957 --> 00:01:51,637
+O tempo passa diferente aqui
+
+41
+00:01:51,982 --> 00:01:53,886
+Cell, prometo que eu vou te matar
+
+42
+00:01:54,206 --> 00:01:55,978
+Quando eu elevar meu Ki
+
+43
+00:01:56,269 --> 00:01:58,473
+Eu juro que irei voltar
+
+44
+00:01:58,673 --> 00:02:00,444
+Se estou mais forte que o Cell?
+
+45
+00:02:00,545 --> 00:02:01,260
+Me diga
+
+46
+00:02:01,620 --> 00:02:02,640
+Não, você não está
+
+47
+00:02:04,411 --> 00:02:06,775
+Mas isso não me preocupa
+
+48
+00:02:08,505 --> 00:02:10,340
+Um torneio, Cell, te prometo que
+
+49
+00:02:10,888 --> 00:02:13,044
+Tem um guerreiro que cê não vence
+
+50
+00:02:13,312 --> 00:02:15,336
+Eu desisto, venha, meu filho
+
+51
+00:02:15,624 --> 00:02:17,539
+E mostre para o Cell todo o seu poder!
+
+52
+00:02:17,739 --> 00:02:20,142
+Acho que errei como um pai
+
+53
+00:02:20,194 --> 00:02:22,197
+Me perdoe, filho
+
+54
+00:02:22,525 --> 00:02:24,829
+Farei o que for capaz
+
+55
+00:02:24,928 --> 00:02:27,723
+Será meu sacrifício!
+
+56
+00:02:27,787 --> 00:02:30,117
+Cell desintegrado em nível celular
+
+57
+00:02:30,528 --> 00:02:32,380
+Pelo seu Kamehameha
+
+58
+00:02:32,840 --> 00:02:35,189
+Autorizado a voltar pra Terra
+
+59
+00:02:35,229 --> 00:02:37,269
+Nesse torneio eu também vou lutar
+
+60
+00:02:38,108 --> 00:02:39,730
+Mas guerreiros inesperados
+
+61
 00:02:39,750 --> 00:02:47,850
 Que acabam estragando a festa Com um poder ilimitado Carregam um M na testa O
 
-27
+62
 00:02:47,850 --> 00:02:53,230
-Majin Boo voltou e quer destruição Não me diga que Vegeta você não Se entregou
+Majin Boo voltou e quer destruição Não me diga que, Vegeta você não Se entregou
 
-28
+63
 00:02:53,230 --> 00:02:57,770
-pro mal, cê quer me vencer Mas saiba afinal eu sou bem mais forte que você
+pro mal, cê quer me vencer? Mas saiba afinal, eu sou bem mais forte que você!
 
-29
+64
 00:02:58,810 --> 00:02:59,970
 Matando pessoas?
 
-30
+65
 00:03:00,370 --> 00:03:05,930
 Você não é isso Pense em sua mulher e no seu filho Após seu sacrifício,
 
-31
-00:03:06,150 --> 00:03:13,070
-elevando mais uma vez Esse é o Super Sayajin nível 3 Precisamos nos fundir para
+66
+00:03:06,199 --> 00:03:07,441
+elevando mais uma vez
 
-32
-00:03:13,070 --> 00:03:18,670
-vencer o Majin Vegeta pega o brinco, Botarai Não é o suficiente, mas não será
+67
+00:03:07,762 --> 00:03:10,245
+Esse é o Super Saiyajin Nível Três!
 
-33
-00:03:18,670 --> 00:03:20,850
-extensão Genkidama!
+68
+00:03:11,727 --> 00:03:14,219
+Precisamos nos fundir para vencer o Majin
 
-34
+69
+00:03:14,459 --> 00:03:16,762
+Vegeta pega o Brinco Potara aí
+
+70
+00:03:16,982 --> 00:03:19,284
+Não é o suficiente, mas não será a extinção
+
+71
+00:03:19,805 --> 00:03:20,706
+Genki Dama!
+
+72
 00:03:21,130 --> 00:03:23,290
-Todos juntos levantem as mãos!
+Todos juntos! Levantem as mãos!
 
-35
-00:03:24,970 --> 00:03:33,170
-Nunca virão guerreiros assim Esse é o poder de um Super Sayajin Vocês não
+73
+00:03:25,758 --> 00:03:26,058
+elevar o Ki!
 
-36
-00:03:33,170 --> 00:03:42,430
-conseguirão me enfrentar O meu poder se eleva Goku Kamehameha Tantos inimigos
+74
+00:03:26,058 --> 00:03:27,613
+Nunca viram um guerreiro assim
 
-37
+75
+00:03:27,641 --> 00:03:29,976
+Esse é o poder
+
+76
+00:03:30,217 --> 00:03:32,547
+De um Super Sayajin!
+
+77
+00:03:32,760 --> 00:03:34,913
+Vocês não conseguirão me enfrentar
+
+78
+00:03:35,634 --> 00:03:37,637
+O meu poder se elevar
+
+79
+00:03:37,977 --> 00:03:41,602
+Goku! Kamehameha!
+
+80
+00:03:41,629 --> 00:03:42,430
+Tantos inimigos
+
+81
 00:03:42,430 --> 00:03:47,290
 me trouxeram aqui Nessa arena, tenho que elevar o Ki Os guerreiros mais fortes
 
-38
-00:03:47,290 --> 00:03:51,650
-de vários universos Mas contra a girância e pro que não estou nem perto Levanto
+82
+00:03:47,337 --> 00:03:48,639
+de vários universos
 
-39
-00:03:51,650 --> 00:03:56,410
-as mãos novamente, ele está na minha frente Evitou o meu poder, tudo acaba aqui
+83
+00:03:48,819 --> 00:03:51,002
+Mas contra Jiren, sinto que não estou nem perto
 
-40
+84
+00:03:51,102 --> 00:03:52,804
+Levanto as mãos novamente
+
+85
+00:03:52,864 --> 00:03:54,066
+Ele está na minha frente
+
+86
+00:03:54,286 --> 00:03:56,008
+Revidou meu poder, tudo acaba
+
+87
 00:03:56,410 --> 00:03:57,150
-Não!
+Não!)
 
-41
-00:03:57,510 --> 00:04:06,580
-Só existe limite Se deixar existir Migate no Goku!
+88
+00:03:57,611 --> 00:04:00,553
+Só existe limite se deixar existir
 
-42
-00:04:06,860 --> 00:04:11,020
-Quebrando o meu limite, cê não pode me tocar Desvio facilmente sem pensar em
+89
+00:04:00,573 --> 00:04:00,993
+Migatte no Gokui
 
-43
-00:04:11,020 --> 00:04:15,660
-desviar Você dizia ser o mais forte desse unibraço Mas acho que meu instinto é
+90
+00:04:01,093 --> 00:04:12,107
+Quebrando meus limites, cê não pode me tocar
 
-44
+91
+00:04:12,147 --> 00:04:13,329
+Desvio facilmente sem pensar em desviar
+
+92
+00:04:13,349 --> 00:04:14,490
+Você dizia ser o mais forte desse universo
+
+93
+00:04:14,510 --> 00:04:15,611
+Mas acho que meu instinto é
+
+94
 00:04:15,660 --> 00:04:22,100
-superior Descobri do poder que eu sou capaz Tudo que cê faz não adianta mais
+superior! Descobri do poder que eu sou capaz Tudo que cê faz não adianta mais
 
-45
-00:04:22,100 --> 00:04:26,520
-Migate completo, essa batalha é nossa Obrigado por ter me dado uma luta
+95
+00:04:22,200 --> 00:04:24,617
+Migatte completo, essa batalha é nossa
 
-46
+96
+00:04:24,864 --> 00:04:26,500
+Obrigado por ter me dado uma luta
+
+97
 00:04:26,520 --> 00:04:36,100
-fervorosa Quem vencerá é o universo 7 E Jiren conhecerá a mim
+fervorosa! Quem vencerá é o Universo 7 E Jiren conhecerá a mim
 
-47
-00:04:36,100 --> 00:04:45,560
-A sua derrota virá Preciso elevar o Ki Nunca virá um guerreiro assim
+98
+00:04:36,230 --> 00:04:37,031
+A sua derrota virá
 
-48
-00:04:45,560 --> 00:04:54,080
-Esse é o poder de um Super Saiyajin Vocês não conseguirão me enfrentar O meu
+99
+00:04:37,051 --> 00:04:37,371
+Pelo Saiyajin!
 
-49
-00:04:54,080 --> 00:04:58,000
-poder se eleva Goku Kamehameha
+100
+00:04:37,411 --> 00:04:38,152
+Preciso elevar o Ki!
+
+101
+00:04:43,828 --> 00:04:45,810
+Nunca viram um guerreiro assim
+
+102
+00:04:45,930 --> 00:04:48,093
+Esse é o poder
+
+103
+00:04:48,353 --> 00:04:50,675
+De um Super Sayajin! (Hey)
+
+104
+00:04:50,949 --> 00:04:53,152
+Vocês não conseguirão me enfrentar
+
+105
+00:04:53,873 --> 00:04:55,996
+O meu poder se elevar
+
+106
+00:04:56,016 --> 00:04:56,617
+Goku! Kamehameha!

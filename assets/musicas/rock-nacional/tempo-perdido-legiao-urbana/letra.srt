@@ -1,95 +1,119 @@
 1
 00:00:20,230 --> 00:00:30,030
-Todos os dias, quando acordo, não tenho mais o tempo que
+Todos os dias quando acordo Não tenho mais o tempo que
 
 2
 00:00:30,030 --> 00:00:33,690
-passou, mas tenho muito tempo.
+passou Mas tenho muito tempo
 
 3
-00:00:35,890 --> 00:00:40,390
-Temos todo o tempo do mundo.
+00:00:36,271 --> 00:00:40,674
+Temos todo o tempo do mundo
 
 4
-00:00:42,430 --> 00:00:50,510
-Todos os dias, antes de dormir, lembro e esqueço como foi o dia.
+00:00:42,415 --> 00:00:44,737
+Todos os dias
 
 5
-00:00:51,510 --> 00:01:00,450
-Sempre em frente, não temos tempo a perder.
+00:00:44,817 --> 00:00:46,479
+Antes de dormir
 
 6
-00:01:01,870 --> 00:01:11,290
-Nosso suor sagrado é bem mais belo que esse sangue amargo
+00:00:47,299 --> 00:00:51,122
+Lembro e esqueço como foi o dia
 
 7
-00:01:11,290 --> 00:01:14,930
-e tão sério.
+00:00:52,483 --> 00:00:54,385
+Sempre em frente
 
 8
-00:01:15,930 --> 00:01:26,590
-E selvagem, selvagem,
+00:00:57,067 --> 00:01:00,610
+Não temos tempo a perder
 
 9
-00:01:27,530 --> 00:01:31,590
-selvagem.
+00:01:01,870 --> 00:01:11,290
+Nosso suor sagrado É bem mais belo que esse sangue amargo
 
 10
-00:01:43,010 --> 00:01:48,610
-Veja o sol dessa manhã tão cinza.
+00:01:11,290 --> 00:01:14,930
+E tão sério
 
 11
-00:01:49,610 --> 00:01:56,270
-A tempestade que chega é da cor dos teus olhos.
+00:01:15,930 --> 00:01:26,590
+E selvagem Selvagem
 
 12
-00:02:00,670 --> 00:02:06,410
-Castanhos, então me abraça forte.
+00:01:27,530 --> 00:01:31,590
+Selvagem
 
 13
-00:02:09,350 --> 00:02:13,210
-Me diz mais uma vez que já estamos.
+00:01:43,870 --> 00:01:48,872
+Veja o sol dessa manhã tão cinza
 
 14
-00:02:13,210 --> 00:02:18,390
-Distantes de tudo.
+00:01:50,733 --> 00:01:56,495
+A tempestade que chega é da cor dos teus olhos
 
 15
-00:02:18,400 --> 00:02:34,920
-Temos nosso próprio tempo, temos nosso próprio tempo, temos nosso próprio tempo.
+00:01:58,636 --> 00:02:02,817
+Castanhos
 
 16
-00:02:34,930 --> 00:02:40,290
-Não tenho medo do escuro.
+00:02:03,537 --> 00:02:06,378
+Então me abraça forte
 
 17
-00:02:41,210 --> 00:02:50,070
-Mas deixe as luzes acesas
+00:02:09,319 --> 00:02:13,481
+Me diz mais uma vez que já estamos
 
 18
-00:02:50,070 --> 00:02:51,410
-agora.
+00:02:14,261 --> 00:02:18,662
+Distantes de tudo
 
 19
-00:02:55,520 --> 00:03:00,540
-O que foi escondido é o que se escondeu.
+00:02:20,003 --> 00:02:24,304
+Temos nosso próprio tempo
 
 20
-00:03:00,760 --> 00:03:05,580
-E o que foi prometido, ninguém prometeu.
+00:02:25,165 --> 00:02:29,606
+Temos nosso próprio tempo
 
 21
-00:03:05,980 --> 00:03:08,580
-Nem foi tempo perdido.
+00:02:30,366 --> 00:02:34,508
+Temos nosso próprio tempo
 
 22
-00:03:09,580 --> 00:03:15,800
-Somos tão jovens.
+00:02:34,928 --> 00:02:40,230
+Não tenho medo do escuro
 
 23
-00:03:16,180 --> 00:03:20,480
-Tão jovens.
+00:02:41,210 --> 00:02:50,070
+Mas deixe as luzes Acesas
 
 24
+00:02:50,070 --> 00:02:51,410
+Agora
+
+25
+00:02:55,520 --> 00:03:00,540
+O que foi escondido é o que se escondeu
+
+26
+00:03:00,760 --> 00:03:05,580
+E o que foi prometido, ninguém prometeu
+
+27
+00:03:05,980 --> 00:03:08,580
+Nem foi tempo perdido
+
+28
+00:03:09,580 --> 00:03:15,800
+Somos tão jovens
+
+29
+00:03:16,180 --> 00:03:20,480
+Tão jovens
+
+30
 00:03:21,500 --> 00:03:23,760
-Tão jovens.
+Tão jovens

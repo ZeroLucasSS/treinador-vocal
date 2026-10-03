@@ -16,7 +16,7 @@ dei um papo e você nem deu resposta
 
 5
 00:00:22,100 --> 00:00:24,860
-Tudo bem, um dia vai e o outro
+Tudo bem um dia vai e o outro
 
 6
 00:00:24,860 --> 00:00:28,300
@@ -24,34 +24,34 @@ vem Você deve estar pensando em outro alguém
 
 7
 00:00:28,300 --> 00:00:32,080
-Mas se ele te merecesse, não estaria aqui
+Mas se ele te merecesse não estaria aqui (
 
 8
 00:00:32,080 --> 00:00:36,060
-Não, não, não Ou talvez você não queira
+Não, não, não) Ou talvez você não queira
 
 9
 00:00:36,060 --> 00:00:40,100
 se envolver Magoada, tá com medo de sofrer
 
 10
-00:00:40,100 --> 00:00:42,440
-Se me der uma chance, não vai se
+00:00:40,440 --> 00:00:43,905
+Se me der uma chance não vai se arrepender (
 
 11
-00:00:42,440 --> 00:00:47,760
-arrepender Não, não, não Tá vendo aquela lua
+00:00:43,925 --> 00:00:46,349
+Não, não, não, não, não)
 
 12
-00:00:47,760 --> 00:00:50,080
-que brilha lá no céu Se você me
+00:00:46,429 --> 00:00:49,053
+Tá vendo aquela lua que brilha lá no céu?
 
 13
-00:00:50,080 --> 00:00:51,980
-pedir, eu vou buscar só pra te dar
+00:00:49,393 --> 00:00:51,977
+Se você me pedir eu vou buscar só para te dar
 
 14
-00:00:51,980 --> 00:00:54,080
+00:00:52,317 --> 00:00:54,020
 Se bem que o brilho dela nem se
 
 15
@@ -60,7 +60,7 @@ compara ao seu Deixa eu te dar um
 
 16
 00:00:56,100 --> 00:00:58,600
-beijo, vou mostrar o tempo que perdeu Que
+beijo vou mostrar o tempo que perdeu Que
 
 17
 00:00:58,600 --> 00:01:02,040
@@ -68,7 +68,7 @@ coisa louca, eu já sabia Enquanto eu me
 
 18
 00:01:02,040 --> 00:01:06,060
-arrumava, algo me dizia Você vai encontrar alguém
+arrumava Algo me dizia Você vai encontrar Alguém
 
 19
 00:01:06,060 --> 00:01:08,720
@@ -80,7 +80,7 @@ noite pro dia Tá vendo aquela lua que
 
 21
 00:01:11,420 --> 00:01:13,840
-brilha lá no céu Se você me pedir,
+brilha lá no céu? Se você me pedir
 
 22
 00:01:13,960 --> 00:01:15,820
@@ -92,7 +92,7 @@ bem que o brilho dela nem se compara
 
 24
 00:01:17,900 --> 00:01:19,740
-ao seu Deixa eu te dar um beijo,
+ao seu Deixa eu te dar um beijo
 
 25
 00:01:19,820 --> 00:01:22,360
@@ -100,132 +100,144 @@ vou mostrar o tempo que perdeu Que coisa
 
 26
 00:01:22,360 --> 00:01:26,000
-louca, eu já sabia Enquanto eu me arrumava,
+louca, eu já sabia Enquanto eu me arrumava
 
 27
 00:01:26,080 --> 00:01:29,720
-algo me dizia Você vai encontrar alguém que
+algo me dizia Você vai encontrar Alguém que
 
 28
-00:01:29,720 --> 00:01:32,380
-vai mudar A sua vida inteira da noite
+00:01:29,780 --> 00:01:30,461
+vai mudar
 
 29
-00:01:32,380 --> 00:01:40,520
-pro dia Te filmando, eu tava quieto no
+00:01:30,721 --> 00:01:32,263
+A sua vida inteira da noite pro dia
 
 30
-00:01:40,520 --> 00:01:44,980
-meu canto Cabelo bem cortado, perfume exalando Daquele
+00:01:32,283 --> 00:01:38,311
+E esse alguém, sou eu!
 
 31
-00:01:44,980 --> 00:01:47,320
-jeito que eu sei que você gosta Mas
+00:01:38,912 --> 00:01:41,195
+Te filmando, eu tava quieto no meu canto
 
 32
-00:01:47,320 --> 00:01:49,180
-eu te dei um papo e você nem
+00:01:41,275 --> 00:01:44,179
+Cabelo bem cortado, perfume exalando
 
 33
-00:01:49,180 --> 00:01:52,140
-deu resposta, não Tudo bem, um dia vai
+00:01:44,600 --> 00:01:46,986
+Daquele jeito que eu sei que você gosta
 
 34
+00:01:47,166 --> 00:01:49,874
+Mas eu te dei um papo e você não deu resposta, não
+
+35
+00:01:49,894 --> 00:01:50,395
+Tudo bem um dia vai
+
+36
 00:01:52,140 --> 00:01:55,360
 e outro vem Você deve estar pensando em
 
-35
-00:01:55,360 --> 00:01:58,500
-outro alguém Mas se ele te merecesse, não
-
-36
-00:01:58,500 --> 00:02:03,180
-estaria aqui Não, não, não Ou talvez você
-
 37
+00:01:55,360 --> 00:01:58,500
+outro alguém Mas se ele te merecesse não
+
+38
+00:01:58,500 --> 00:02:03,180
+estaria aqui (Não, não, não) Ou talvez você
+
+39
 00:02:03,180 --> 00:02:06,760
 não queira se envolver Magoada, tá com medo
 
-38
-00:02:06,760 --> 00:02:09,560
-de sofrer Se me der uma chance, não
-
-39
-00:02:09,560 --> 00:02:13,620
-vai se arrepender Não, não, não Quero ver!
-
 40
-00:02:14,180 --> 00:02:16,620
-Tá vendo aquela lua que brilha lá no
+00:02:06,900 --> 00:02:07,822
+de sofrer
 
 41
-00:02:16,620 --> 00:02:18,860
-céu Se você me pedir, eu vou buscar
+00:02:08,203 --> 00:02:10,708
+Se me der uma chance não vai se arrepender (
 
 42
-00:02:18,860 --> 00:02:20,640
-só pra te dar Se bem que o
+00:02:10,728 --> 00:02:12,692
+Não, não, não, não, não)
 
 43
-00:02:20,640 --> 00:02:23,200
-brilho dela nem se compara ao seu Deixa
+00:02:12,933 --> 00:02:17,142
+Tá vendo aquela lua que brilha lá no céu?
 
 44
-00:02:23,200 --> 00:02:25,000
-eu te dar um beijo, vou mostrar o
+00:02:17,162 --> 00:02:19,810
+Se você me pedir eu vou buscar só para te dar
 
 45
+00:02:20,111 --> 00:02:22,779
+Se bem que o brilho dela nem se compara ao seu
+
+46
+00:02:23,019 --> 00:02:23,200
+Deixa
+
+47
+00:02:23,200 --> 00:02:25,000
+eu te dar um beijo vou mostrar o
+
+48
 00:02:25,000 --> 00:02:28,040
 tempo que perdeu Que coisa louca, eu já
 
-46
+49
 00:02:28,040 --> 00:02:31,920
-sabia Enquanto eu me arrumava, algo me dizia
+sabia Enquanto eu me arrumava Algo me dizia
 
-47
+50
 00:02:31,920 --> 00:02:35,240
-Você vai encontrar alguém que vai mudar A
+Você vai encontrar Alguém que vai mudar A
 
-48
+51
 00:02:35,240 --> 00:02:37,780
 sua vida inteira da noite pro dia Tá
 
-49
+52
 00:02:37,780 --> 00:02:40,080
-vendo aquela lua que brilha lá no céu
+vendo aquela lua que brilha lá no céu?
 
-50
+53
 00:02:40,080 --> 00:02:42,720
-Se você me pedir, eu vou buscar só
+Se você me pedir eu vou buscar só
 
-51
+54
 00:02:42,720 --> 00:02:44,380
 pra te dar Se bem que o brilho
 
-52
+55
 00:02:44,380 --> 00:02:46,780
 dela nem se compara ao seu Deixa eu
 
-53
+56
 00:02:46,780 --> 00:02:48,640
-te dar um beijo, vou mostrar o tempo
+te dar um beijo vou mostrar o tempo
 
-54
+57
 00:02:48,640 --> 00:02:52,180
 que perdeu Que coisa louca, eu já sabia
 
-55
-00:02:52,180 --> 00:02:55,880
-Enquanto eu me arrumava, algo me dizia Você
-
-56
-00:02:55,880 --> 00:02:58,940
-vai encontrar alguém que vai mudar A sua
-
-57
-00:02:58,940 --> 00:03:07,390
-vida inteira da noite pro dia Te filmando,
-
 58
+00:02:52,180 --> 00:02:55,880
+Enquanto eu me arrumava Algo me dizia Você
+
+59
+00:02:55,880 --> 00:02:58,940
+vai encontrar Alguém que vai mudar A sua
+
+60
+00:02:58,940 --> 00:03:07,390
+vida inteira da noite pro dia Te filmando
+
+61
 00:03:07,490 --> 00:03:10,370
 eu tava quieto no meu canto

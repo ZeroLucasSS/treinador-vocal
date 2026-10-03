@@ -4,140 +4,200 @@ Toda vez que o sol esconde a tarde
 
 2
 00:00:13,200 --> 00:00:17,160
-E a lua cede o azul do céu
+e a lua cede o azul do céu
 
 3
 00:00:17,160 --> 00:00:22,780
-Você chega assim, meu bem, sem me avisar
+você chega assim meu bem sem me avisar
 
 4
-00:00:22,780 --> 00:00:30,820
-Toca meu coração e reacende em mim Toda
+00:00:23,521 --> 00:00:27,163
+toca meu coração
 
 5
-00:00:30,820 --> 00:00:37,060
-emoção de amar Que um grande amor nos
+00:00:27,186 --> 00:00:34,496
+e reacende em mim toda a emoção de amar
 
 6
-00:00:37,060 --> 00:00:43,740
-faz viver Simplesmente sinto nesse instante Que te
+00:00:35,305 --> 00:00:39,290
+que um grande amor nos faz viver
 
 7
-00:00:43,740 --> 00:00:47,940
-quero tanto e te preciso E quando penso
+00:00:39,733 --> 00:00:42,974
+Simplesmente sinto neste instante
 
 8
-00:00:47,940 --> 00:00:55,620
-então em ter você aqui Chora meu coração
+00:00:43,355 --> 00:00:46,559
+que te quero tanto e te preciso
 
 9
-00:00:56,420 --> 00:01:01,880
-Porque você não quis voltar a mim O
+00:00:46,859 --> 00:00:52,001
+e quando penso então em ter você aqui
 
 10
-00:01:01,880 --> 00:01:06,140
-amor é mesmo assim Vem sempre e traz
+00:00:52,881 --> 00:00:56,502
+chora meu coração
 
 11
-00:01:06,140 --> 00:01:12,200
-felicidade Quando dói, dói pra valer E a
+00:00:56,892 --> 00:01:01,319
+porque você não quis voltar pra mim
 
 12
-00:01:12,200 --> 00:01:17,600
-gente perde a ilusão Mas quando bem, faz
+00:01:01,739 --> 00:01:04,430
+O amor é mesmo assim
 
 13
-00:01:17,600 --> 00:01:24,220
-tanto bem Liberta os sonhos e paixão Porque
+00:01:04,684 --> 00:01:08,545
+nem sempre traz felicidade
 
 14
-00:01:24,220 --> 00:01:31,940
-você não vem Volta, amor, me deixa ser
+00:01:08,825 --> 00:01:11,690
+quando dói, dói pra valer
 
 15
-00:01:31,940 --> 00:01:40,720
-feliz Pra sempre ir com
+00:01:11,979 --> 00:01:15,345
+e a gente perde a ilusão
 
 16
-00:01:40,720 --> 00:01:48,920
-você Viver é ter você pra mim Porque
+00:01:15,427 --> 00:01:19,011
+mas quando vem faz tanto bem
 
 17
-00:01:48,920 --> 00:01:58,780
-você não traz o sol Que faz amanhecer
+00:01:19,283 --> 00:01:23,428
+liberta os sonhos e paixão
 
 18
-00:02:03,160 --> 00:02:09,880
-Acende o azul do céu Pra nunca mais
+00:01:23,719 --> 00:01:28,375
+Por que você não vem
 
 19
+00:01:28,870 --> 00:01:30,110
+volta amor
+
+20
+00:01:30,428 --> 00:01:37,115
+me deixa ser feliz
+
+21
+00:01:37,512 --> 00:01:42,823
+pra sempre com você
+
+22
+00:01:43,283 --> 00:01:48,115
+viver é ter você pra mim
+
+23
+00:01:48,555 --> 00:01:55,847
+Por que você não traz o sol
+
+24
+00:01:56,177 --> 00:02:02,833
+que faça amanhecer
+
+25
+00:02:03,334 --> 00:02:08,255
+acende o azul do céu
+
+26
+00:02:08,577 --> 00:02:09,860
+pra nunca mais
+
+27
 00:02:09,880 --> 00:02:18,220
 ter que dizer adeus Toda vez que o
 
-20
+28
 00:02:18,220 --> 00:02:22,320
-sol esconde a tarde E a lua cede
+sol esconde a tarde e a lua cede
 
-21
+29
 00:02:22,320 --> 00:02:26,140
-o azul do céu Você chega assim, meu
+o azul do céu você chega assim meu
 
-22
+30
 00:02:26,140 --> 00:02:34,420
-bem, sem me avisar Toca meu coração e
+bem sem me avisar toca meu coração e
 
-23
-00:02:34,420 --> 00:02:42,040
-reacende em mim Toda emoção de amar Que
+31
+00:02:34,480 --> 00:02:41,439
+reacende em mim toda a emoção de amar
 
-24
+32
+00:02:41,960 --> 00:02:42,040
+que
+
+33
 00:02:42,040 --> 00:02:47,040
 um grande amor nos faz viver O amor
 
-25
-00:02:47,040 --> 00:02:52,640
-é mesmo assim Vem sempre e traz felicidade
-
-26
-00:02:52,640 --> 00:02:57,360
-Quando dói, dói pra valer E a gente
-
-27
-00:02:57,360 --> 00:03:02,880
-perde a ilusão Mas quando bem, faz tanto
-
-28
-00:03:02,880 --> 00:03:10,300
-bem Liberta os sonhos e paixão Porque você
-
-29
-00:03:10,300 --> 00:03:18,380
-não vem Volta, amor, me deixa ser feliz
-
-30
-00:03:18,380 --> 00:03:28,360
-Pra sempre ir com você Viver
-
-31
-00:03:28,360 --> 00:03:35,240
-é ter você pra mim Porque você não
-
-32
-00:03:35,240 --> 00:03:49,360
-traz o sol Que faz amanhecer Acende
-
-33
-00:03:49,360 --> 00:03:54,980
-o azul do céu Pra nunca mais ter
-
 34
-00:03:54,980 --> 00:04:02,920
-que dizer adeus Porque você não vem pra
+00:02:47,427 --> 00:02:49,109
+é mesmo assim
 
 35
-00:04:02,920 --> 00:04:14,460
-mim Só sei amar você Faz
+00:02:49,350 --> 00:02:50,871
+nem sempre traz
 
 36
+00:02:52,640 --> 00:02:57,360
+quando dói, dói pra valer e a gente
+
+37
+00:02:57,566 --> 00:03:00,009
+perde a ilusão
+
+38
+00:03:00,089 --> 00:03:03,673
+mas quando vem faz tanto bem
+
+39
+00:03:03,942 --> 00:03:08,127
+liberta sonhos e paixão
+
+40
+00:03:08,378 --> 00:03:10,220
+Por que você
+
+41
+00:03:10,300 --> 00:03:18,380
+não vem volta amor me deixa ser feliz
+
+42
+00:03:22,164 --> 00:03:27,531
+pra sempre com você
+
+43
+00:03:27,939 --> 00:03:32,724
+viver é ter você pra mim
+
+44
+00:03:33,197 --> 00:03:40,465
+Por que você não traz o sol
+
+45
+00:03:40,806 --> 00:03:42,273
+que faça amanhecer
+
+46
+00:03:42,293 --> 00:03:42,574
+acende
+
+47
+00:03:49,360 --> 00:03:54,980
+o azul do céu pra nunca mais ter
+
+48
+00:03:55,069 --> 00:03:58,764
+que dizer adeus
+
+49
+00:03:59,104 --> 00:04:02,900
+Por que você não vem pra
+
+50
+00:04:02,920 --> 00:04:14,460
+mim Só sei amar você faz
+
+51
 00:04:14,460 --> 00:04:23,820
-alguém feliz assim Traz você pra mim Amor
+alguém feliz assim traz você pra mim amor

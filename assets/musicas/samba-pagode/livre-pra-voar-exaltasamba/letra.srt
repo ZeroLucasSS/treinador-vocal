@@ -1,231 +1,283 @@
 1
-00:00:06,730 --> 00:00:08,210
-Vamos cantar!
-
-2
 00:00:28,910 --> 00:00:32,850
 Quando a gente se encontrar Tudo vai ser
 
-3
+2
 00:00:32,850 --> 00:00:36,610
 tão perfeito Eu quero te curtir demais E
 
+3
+00:00:36,650 --> 00:00:37,692
+eu vou aliviar
+
 4
-00:00:36,610 --> 00:00:39,370
-eu vou aliviar esse aperto no meu peito
+00:00:37,872 --> 00:00:39,455
+Esse aperto no meu peito
 
 5
-00:00:39,370 --> 00:00:42,830
-Que bondade não dá mais Se no telefone
+00:00:39,875 --> 00:00:41,638
+Que vontade, não dá mais
 
 6
-00:00:42,830 --> 00:00:45,870
-é bom, imagine aqui bem perto Eu sentindo
+00:00:41,959 --> 00:00:43,181
+Se no telefone é bom
 
 7
-00:00:45,870 --> 00:00:48,690
-o teu calor Sem medo de ser feliz,
+00:00:43,361 --> 00:00:44,944
+Imagina aqui bem perto
 
 8
-00:00:48,810 --> 00:00:51,490
-tô com o coração aberto Com você eu
+00:00:45,384 --> 00:00:47,087
+Eu sentindo o teu calor
 
 9
-00:00:51,490 --> 00:00:53,350
-tô esperto Já me acostumei com o seu
+00:00:47,448 --> 00:00:48,710
+Sem medo de ser feliz
 
 10
-00:00:53,350 --> 00:00:56,290
-jeitinho De falar no telefone besteirinhas pra me
+00:00:48,810 --> 00:00:51,490
+Tô com o coração aberto Com você eu
 
 11
-00:00:56,290 --> 00:00:59,270
-provocar Quando eu te pegar, cê tá perdida
+00:00:51,490 --> 00:00:53,350
+tô esperto Já me acostumei Com o seu
 
 12
-00:00:59,270 --> 00:01:01,070
-Vai se arrepender de um dia ter me
+00:00:53,350 --> 00:00:56,290
+jeitinho De falar no telefone Besteirinhas prá me
 
 13
-00:01:01,070 --> 00:01:04,069
-tirado do meu lugar Peço, por favor, não
+00:00:56,290 --> 00:00:59,270
+provocar Quando eu te pegar Cê tá perdida,
 
 14
-00:01:04,069 --> 00:01:06,330
-se apaixone Pois não sou aquele homem que
+00:00:59,270 --> 00:01:01,070
+vai se arrepender De um dia ter me
 
 15
+00:01:01,070 --> 00:01:04,069
+tirado do meu lugar Peço, por favor não
+
+16
+00:01:04,069 --> 00:01:06,330
+se apaixone Pois não sou aquele homem Que
+
+17
 00:01:06,330 --> 00:01:08,850
 um dia o seu pai sonhou Eu só
 
-16
-00:01:08,850 --> 00:01:11,530
-tenho cara de santinho, sempre faço com jeitinho
-
-17
-00:01:11,530 --> 00:01:16,430
-Coitada de quem acreditou Eu prometo te dar
-
 18
-00:01:16,430 --> 00:01:17,710
-carinho, vem!
+00:01:08,850 --> 00:01:11,530
+tenho cara de santinho Sempre faço com jeitinho
 
 19
-00:01:18,110 --> 00:01:20,850
-Mas gosto de ser sozinho, livre pra voar
+00:01:11,610 --> 00:01:13,831
+Coitada de quem acreditou
 
 20
-00:01:20,850 --> 00:01:23,290
-Quem sabe, quem sabe o outro dia a
+00:01:14,413 --> 00:01:17,197
+Eu prometo te dar carinho
 
 21
-00:01:23,290 --> 00:01:26,770
-gente possa se encontrar de novo Eu prometo
+00:01:17,252 --> 00:01:19,840
+Mas gosto de ser sozinho
 
 22
-00:01:26,770 --> 00:01:28,870
-te dar carinho, vem!
+00:01:19,880 --> 00:01:20,881
+Livre pra voar
 
 23
-00:01:28,870 --> 00:01:32,150
-Mas gosto de ser sozinho, livre pra voar
+00:01:21,034 --> 00:01:23,163
+Quem sabe um outro dia
 
 24
-00:01:32,870 --> 00:01:34,410
-Quem sabe, quem sabe o outro dia a
+00:01:23,203 --> 00:01:25,867
+A gente possa se encontrar de novo
 
 25
-00:01:34,410 --> 00:01:38,050
-gente possa se encontrar Lê, lê, lê, lê,
+00:01:26,347 --> 00:01:27,396
+Prometo te dar carinho
 
 26
-00:01:38,050 --> 00:01:41,550
-lê, lê, lê, lê, lê, lê...
+00:01:29,135 --> 00:01:30,798
+Mas gosto de ser sozinho
 
 27
-00:01:44,170 --> 00:01:46,890
-Vamos juntos, palma na mão, vê!
+00:01:30,837 --> 00:01:32,340
+Livre pra voar
 
 28
-00:01:47,770 --> 00:01:50,290
-Lê, lê, lê, lê, lê, lê, lê, lê,
+00:01:33,041 --> 00:01:34,019
+Quem sabe um outro dia
 
 29
-00:01:50,490 --> 00:01:53,550
-lê, lê...
+00:01:34,139 --> 00:01:46,219
+A gente possa se encontrar
 
 30
-00:01:57,970 --> 00:02:00,430
-Quando a gente se encontrar, tudo vai ser
+00:01:46,279 --> 00:01:59,870
+Quando a gente se encontrar
 
 31
+00:01:59,967 --> 00:02:00,410
+Tudo vai ser
+
+32
 00:02:00,430 --> 00:02:04,170
 tão perfeito Eu quero te curtir demais E
 
-32
-00:02:04,170 --> 00:02:06,890
-eu vou aliviar esse aperto no meu peito
-
 33
-00:02:06,890 --> 00:02:10,270
-Que vontade não dá mais Se no telefone
+00:02:04,170 --> 00:02:06,890
+eu vou aliviar Esse aperto no meu peito
 
 34
-00:02:10,270 --> 00:02:13,350
-é bom, imagine aqui bem perto Eu sentindo
+00:02:06,890 --> 00:02:10,270
+Que vontade, não dá mais Se no telefone
 
 35
-00:02:13,350 --> 00:02:16,310
-teu calor Sem medo de ser feliz, tô
+00:02:10,330 --> 00:02:10,611
+é bom
 
 36
-00:02:16,310 --> 00:02:19,070
-com o coração aberto Com você eu tô
+00:02:10,832 --> 00:02:12,337
+Imagine aqui bem perto
 
 37
-00:02:19,070 --> 00:02:21,410
-esperto, já me acostumei com seu jeitinho De
+00:02:12,879 --> 00:02:14,604
+Eu sentindo o teu calor
 
 38
-00:02:21,410 --> 00:02:25,250
-falar no telefone besteirinhas pra me provocar Quando
+00:02:14,905 --> 00:02:16,210
+Sem medo de ser feliz
 
 39
-00:02:25,250 --> 00:02:27,010
-eu te pegar, cê tá perdida Vai se
+00:02:16,230 --> 00:02:17,793
+Tô com o coração aberto
 
 40
-00:02:27,010 --> 00:02:29,050
-arrepender de um dia ter me tirado do
+00:02:18,234 --> 00:02:19,537
+Com você eu tô esperto
 
 41
-00:02:29,050 --> 00:02:32,070
-meu lugar Peço por favor, não se apaixone
+00:02:19,617 --> 00:02:20,439
+Já me acostumei
 
 42
-00:02:32,070 --> 00:02:34,090
-Pois não sou aquele homem que um dia
+00:02:20,479 --> 00:02:21,241
+Com o seu jeitinho
 
 43
-00:02:34,090 --> 00:02:37,230
-o seu pai sonhou Eu faço com jeitinho
+00:02:21,321 --> 00:02:22,644
+De falar no telefone
 
 44
-00:02:37,230 --> 00:02:42,510
-gostoso Coitada de quem acreditou no refrão Eu
+00:02:22,684 --> 00:02:24,548
+Besteirinhas pra me provocar
 
 45
-00:02:42,510 --> 00:02:46,270
-prometo te dar carinho Mas gosto de ser
+00:02:25,090 --> 00:02:25,250
+Quando
 
 46
-00:02:46,270 --> 00:02:48,670
-sozinho, livre pra voar Quem sabe um outro
+00:02:25,250 --> 00:02:27,010
+eu te pegar Cê tá perdida Vai se
 
 47
-00:02:48,670 --> 00:02:56,390
-dia, de novo Prometo te dar carinho Mas
+00:02:27,010 --> 00:02:29,050
+arrepender de um dia ter me tirado Do
 
 48
-00:02:56,390 --> 00:02:58,970
-gosto de ser sozinho, livre pra voar Quem
+00:02:29,050 --> 00:02:32,070
+meu lugar Peço, por favor não se apaixone
 
 49
-00:02:58,970 --> 00:03:01,210
-sabe, quem sabe Quem sabe um outro dia
+00:02:32,150 --> 00:02:33,372
+Pois não sou aquele homem
 
 50
-00:03:01,210 --> 00:03:04,970
-a gente possa se encontrar Eu prometo te
+00:02:33,652 --> 00:02:35,475
+Que um dia o seu pai sonhou
 
 51
-00:03:04,970 --> 00:03:09,050
-dar carinho Mas gosto de ser sozinho, livre
+00:02:35,495 --> 00:02:38,139
+Eu só tenho cara de santinho
 
 52
-00:03:09,050 --> 00:03:12,350
-pra voar Quem sabe um outro dia a
+00:02:38,159 --> 00:02:39,601
+Sempre faço com jeitinho
 
 53
+00:02:39,641 --> 00:02:41,103
+Coitada de quem acreditou
+
+54
+00:02:41,363 --> 00:02:44,768
+Eu prometo te dar carinho
+
+55
+00:02:45,349 --> 00:02:47,031
+Mas gosto de ser sozinho
+
+56
+00:02:47,071 --> 00:02:47,752
+Livre pra voar
+
+57
+00:02:47,892 --> 00:02:51,836
+Quem sabe um outro dia
+
+58
+00:02:51,898 --> 00:02:54,279
+A gente possa se encontrar de novo
+
+59
+00:02:54,419 --> 00:02:55,740
+Prometo te dar carinho
+
+60
+00:02:56,241 --> 00:02:57,926
+Mas gosto de ser sozinho
+
+61
+00:02:57,966 --> 00:02:58,683
+Livre pra voar
+
+62
+00:02:58,787 --> 00:03:01,306
+Quem sabe um outro dia
+
+63
+00:03:01,326 --> 00:03:02,643
+A gente possa se encontrar
+
+64
+00:03:03,128 --> 00:03:04,830
+Eu prometo te
+
+65
+00:03:04,970 --> 00:03:09,050
+dar carinho Mas gosto de ser sozinho Livre
+
+66
+00:03:09,050 --> 00:03:12,350
+pra voar Quem sabe um outro dia A
+
+67
 00:03:12,350 --> 00:03:15,870
 gente possa se encontrar de novo Prometo te
 
-54
+68
 00:03:15,870 --> 00:03:19,930
-dar carinho Mas gosto de ser sozinho, livre
+dar carinho Mas gosto de ser sozinho Livre
 
-55
-00:03:19,930 --> 00:03:23,150
-pra voar Quem sabe um outro dia a
+69
+00:03:20,070 --> 00:03:21,211
+pra voar
 
-56
-00:03:23,150 --> 00:03:26,270
-gente possa se encontrar Quando a gente se
+70
+00:03:21,891 --> 00:03:22,991
+Quem sabe um outro dia
 
-57
-00:03:26,270 --> 00:03:29,470
-encontrar, tudo vai ser tão perfeito Eu quero
-
-58
-00:03:29,470 --> 00:03:38,630
-te curtir demais Valeu!
+71
+00:03:23,011 --> 00:03:24,812
+A gente possa se encontrar
