@@ -1,0 +1,2621 @@
+{
+  "versao": 5,
+  "status": "pendente",
+  "estrategia": "preservar_corrigir_inserir",
+  "motor": "whisperx",
+  "duracao_audio": 300.0424375,
+  "scores_sao_probabilidades": false,
+  "aprovacao_musical_automatica": false,
+  "parametros": {
+    "score_minimo": 0.3,
+    "janela_maxima": 90.0,
+    "score_suporte_insercao": 0.1,
+    "atividade_minima_insercao": 0.2,
+    "margem": 0.4,
+    "margem_aplicada": false
+  },
+  "total_palavras_txt": 230,
+  "total_palavras_srt": 168,
+  "metricas": {
+    "palavras_publicadas": 230,
+    "blocos_srt_auditados": 30,
+    "blocos_srt_descartados": 0,
+    "blocos_texto_corrigido": 27,
+    "blocos_inseridos": 14,
+    "palavras_txt_sem_tempo": 7,
+    "palavras_txt_nao_pesquisadas": 7,
+    "palavras_txt_pesquisadas_sem_tempo": 0,
+    "palavras_baixa_confianca": 5,
+    "tentativas_acusticas": 5
+  },
+  "comparacao": {
+    "consultas": [
+      {
+        "bloco_srt": 1,
+        "inicio": 5.58,
+        "fim": 20.87,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Mística sublime, te receber, ter comunhão, Ter",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 2,
+        "inicio": 20.87,
+        "fim": 28.47,
+        "txt_inicio": 7,
+        "txt_fim": 15,
+        "score": 1.0,
+        "texto": "correndo em mim Teu sangue, Deus Estou em",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 3,
+        "inicio": 28.47,
+        "fim": 29.81,
+        "txt_inicio": 15,
+        "txt_fim": 16,
+        "score": 1.0,
+        "texto": "comunhão",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 4,
+        "inicio": 34.81,
+        "fim": 42.19,
+        "txt_inicio": 16,
+        "txt_fim": 24,
+        "score": 1.0,
+        "texto": "Alguém dirá que um Deus tão grande assim",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 5,
+        "inicio": 42.19,
+        "fim": 48.05,
+        "txt_inicio": 24,
+        "txt_fim": 29,
+        "score": 1.0,
+        "texto": "Não se dará por mim?",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 6,
+        "inicio": 49.55,
+        "fim": 55.41,
+        "txt_inicio": 29,
+        "txt_fim": 37,
+        "score": 1.0,
+        "texto": "O que os meus olhos veem Não é",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 7,
+        "inicio": 55.41,
+        "fim": 60.69,
+        "txt_inicio": 37,
+        "txt_fim": 41,
+        "score": 0.9473684210526316,
+        "texto": "o que minh'alma diz",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 8,
+        "inicio": 64.37,
+        "fim": 79.45,
+        "txt_inicio": 41,
+        "txt_fim": 49,
+        "score": 0.9772727272727273,
+        "texto": "Mística sublime, Te receber E ter comunhão Ter",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 9,
+        "inicio": 79.45,
+        "fim": 87.19,
+        "txt_inicio": 49,
+        "txt_fim": 57,
+        "score": 1.0,
+        "texto": "correndo em mim Teu sangue, Deus Estou em",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 10,
+        "inicio": 87.19,
+        "fim": 89.21,
+        "txt_inicio": 57,
+        "txt_fim": 58,
+        "score": 1.0,
+        "texto": "comunhão,",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 11,
+        "inicio": 93.79,
+        "fim": 101.47,
+        "txt_inicio": 59,
+        "txt_fim": 67,
+        "score": 1.0,
+        "texto": "Alguém dirá que um Deus tão grande assim",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 12,
+        "inicio": 101.47,
+        "fim": 107.73,
+        "txt_inicio": 67,
+        "txt_fim": 72,
+        "score": 1.0,
+        "texto": "Não se dará por mim?",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 13,
+        "inicio": 108.39,
+        "fim": 114.63,
+        "txt_inicio": 72,
+        "txt_fim": 80,
+        "score": 1.0,
+        "texto": "O que os meus olhos veem Não é",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 14,
+        "inicio": 114.63,
+        "fim": 120.57,
+        "txt_inicio": 80,
+        "txt_fim": 84,
+        "score": 0.9473684210526316,
+        "texto": "o que minh'alma diz,",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 15,
+        "inicio": 120.57,
+        "fim": 126.43,
+        "txt_inicio": 84,
+        "txt_fim": 92,
+        "score": 0.9830508474576272,
+        "texto": "e ela diz Já não é mais vinho,",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 16,
+        "inicio": 127.27,
+        "fim": 128.35,
+        "txt_inicio": 92,
+        "txt_fim": 93,
+        "score": 1.0,
+        "texto": "não",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 17,
+        "inicio": 130.14,
+        "fim": 138.93,
+        "txt_inicio": 93,
+        "txt_fim": 101,
+        "score": 1.0,
+        "texto": "É o sangue do meu Deus Já não",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 18,
+        "inicio": 138.93,
+        "fim": 142.27,
+        "txt_inicio": 101,
+        "txt_fim": 105,
+        "score": 1.0,
+        "texto": "é mais pão aqui",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 19,
+        "inicio": 142.27,
+        "fim": 150.37,
+        "txt_inicio": 105,
+        "txt_fim": 113,
+        "score": 1.0,
+        "texto": "É o corpo do meu Amor Do meu",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 20,
+        "inicio": 150.37,
+        "fim": 151.35,
+        "txt_inicio": 113,
+        "txt_fim": 114,
+        "score": 1.0,
+        "texto": "Amor",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 21,
+        "inicio": 152.71,
+        "fim": 161.17,
+        "txt_inicio": 114,
+        "txt_fim": 122,
+        "score": 1.0,
+        "texto": "Nesse lugar eu posso dizer Que estás dentro",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 22,
+        "inicio": 161.17,
+        "fim": 162.81,
+        "txt_inicio": 122,
+        "txt_fim": 124,
+        "score": 1.0,
+        "texto": "de mim",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 23,
+        "inicio": 162.81,
+        "fim": 171.09,
+        "txt_inicio": 124,
+        "txt_fim": 132,
+        "score": 1.0,
+        "texto": "E eu dentro de você Nesse lugar eu",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 24,
+        "inicio": 171.09,
+        "fim": 176.87,
+        "txt_inicio": 132,
+        "txt_fim": 139,
+        "score": 1.0,
+        "texto": "posso dizer Que estás dentro de mim",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 25,
+        "inicio": 207.14,
+        "fim": 213.02,
+        "txt_inicio": 178,
+        "txt_fim": 186,
+        "score": 1.0,
+        "texto": "E eu dentro de você Agora nós dois",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 26,
+        "inicio": 213.02,
+        "fim": 215.58,
+        "txt_inicio": 186,
+        "txt_fim": 188,
+        "score": 1.0,
+        "texto": "somos um",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 27,
+        "inicio": 243.04,
+        "fim": 250.94,
+        "txt_inicio": 206,
+        "txt_fim": 210,
+        "score": 1.0,
+        "texto": "Somos um Somos um",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 28,
+        "inicio": 259.74,
+        "fim": 265.0,
+        "txt_inicio": 212,
+        "txt_fim": 219,
+        "score": 1.0,
+        "texto": "Eu e você Só eu e você",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 29,
+        "inicio": 270.9,
+        "fim": 280.58,
+        "txt_inicio": 219,
+        "txt_fim": 223,
+        "score": 1.0,
+        "texto": "Somos um Somos um",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 30,
+        "inicio": 285.57,
+        "fim": 289.09,
+        "txt_inicio": 223,
+        "txt_fim": 227,
+        "score": 1.0,
+        "texto": "Somos um, somos um",
+        "aviso": null
+      }
+    ],
+    "regioes": [
+      {
+        "indices": [
+          0
+        ],
+        "inicio": 5.58,
+        "fim": 20.87,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Mística sublime, te receber, ter comunhão, Ter"
+      },
+      {
+        "indices": [
+          1
+        ],
+        "inicio": 20.87,
+        "fim": 28.47,
+        "txt_inicio": 7,
+        "txt_fim": 15,
+        "texto": "correndo em mim Teu sangue, Deus Estou em"
+      },
+      {
+        "indices": [
+          2
+        ],
+        "inicio": 28.47,
+        "fim": 29.81,
+        "txt_inicio": 15,
+        "txt_fim": 16,
+        "texto": "comunhão"
+      },
+      {
+        "indices": [
+          3
+        ],
+        "inicio": 34.81,
+        "fim": 42.19,
+        "txt_inicio": 16,
+        "txt_fim": 24,
+        "texto": "Alguém dirá que um Deus tão grande assim"
+      },
+      {
+        "indices": [
+          4
+        ],
+        "inicio": 42.19,
+        "fim": 48.05,
+        "txt_inicio": 24,
+        "txt_fim": 29,
+        "texto": "Não se dará por mim?"
+      },
+      {
+        "indices": [
+          5
+        ],
+        "inicio": 49.55,
+        "fim": 55.41,
+        "txt_inicio": 29,
+        "txt_fim": 37,
+        "texto": "O que os meus olhos veem Não é"
+      },
+      {
+        "indices": [
+          6
+        ],
+        "inicio": 55.41,
+        "fim": 60.69,
+        "txt_inicio": 37,
+        "txt_fim": 41,
+        "texto": "o que minh'alma diz"
+      },
+      {
+        "indices": [
+          7
+        ],
+        "inicio": 64.37,
+        "fim": 79.45,
+        "txt_inicio": 41,
+        "txt_fim": 49,
+        "texto": "Mística sublime, Te receber E ter comunhão Ter"
+      },
+      {
+        "indices": [
+          8
+        ],
+        "inicio": 79.45,
+        "fim": 87.19,
+        "txt_inicio": 49,
+        "txt_fim": 57,
+        "texto": "correndo em mim Teu sangue, Deus Estou em"
+      },
+      {
+        "indices": [
+          9
+        ],
+        "inicio": 87.19,
+        "fim": 89.21,
+        "txt_inicio": 57,
+        "txt_fim": 58,
+        "texto": "comunhão,"
+      },
+      {
+        "indices": [
+          10
+        ],
+        "inicio": 93.79,
+        "fim": 101.47,
+        "txt_inicio": 59,
+        "txt_fim": 67,
+        "texto": "Alguém dirá que um Deus tão grande assim"
+      },
+      {
+        "indices": [
+          11
+        ],
+        "inicio": 101.47,
+        "fim": 107.73,
+        "txt_inicio": 67,
+        "txt_fim": 72,
+        "texto": "Não se dará por mim?"
+      },
+      {
+        "indices": [
+          12
+        ],
+        "inicio": 108.39,
+        "fim": 114.63,
+        "txt_inicio": 72,
+        "txt_fim": 80,
+        "texto": "O que os meus olhos veem Não é"
+      },
+      {
+        "indices": [
+          13
+        ],
+        "inicio": 114.63,
+        "fim": 120.57,
+        "txt_inicio": 80,
+        "txt_fim": 84,
+        "texto": "o que minh'alma diz,"
+      },
+      {
+        "indices": [
+          14
+        ],
+        "inicio": 120.57,
+        "fim": 126.43,
+        "txt_inicio": 84,
+        "txt_fim": 92,
+        "texto": "e ela diz Já não é mais vinho,"
+      },
+      {
+        "indices": [
+          15
+        ],
+        "inicio": 127.27,
+        "fim": 128.35,
+        "txt_inicio": 92,
+        "txt_fim": 93,
+        "texto": "não"
+      },
+      {
+        "indices": [
+          16
+        ],
+        "inicio": 130.14,
+        "fim": 138.93,
+        "txt_inicio": 93,
+        "txt_fim": 101,
+        "texto": "É o sangue do meu Deus Já não"
+      },
+      {
+        "indices": [
+          17
+        ],
+        "inicio": 138.93,
+        "fim": 142.27,
+        "txt_inicio": 101,
+        "txt_fim": 105,
+        "texto": "é mais pão aqui"
+      },
+      {
+        "indices": [
+          18
+        ],
+        "inicio": 142.27,
+        "fim": 150.37,
+        "txt_inicio": 105,
+        "txt_fim": 113,
+        "texto": "É o corpo do meu Amor Do meu"
+      },
+      {
+        "indices": [
+          19
+        ],
+        "inicio": 150.37,
+        "fim": 151.35,
+        "txt_inicio": 113,
+        "txt_fim": 114,
+        "texto": "Amor"
+      },
+      {
+        "indices": [
+          20
+        ],
+        "inicio": 152.71,
+        "fim": 161.17,
+        "txt_inicio": 114,
+        "txt_fim": 122,
+        "texto": "Nesse lugar eu posso dizer Que estás dentro"
+      },
+      {
+        "indices": [
+          21
+        ],
+        "inicio": 161.17,
+        "fim": 162.81,
+        "txt_inicio": 122,
+        "txt_fim": 124,
+        "texto": "de mim"
+      },
+      {
+        "indices": [
+          22
+        ],
+        "inicio": 162.81,
+        "fim": 171.09,
+        "txt_inicio": 124,
+        "txt_fim": 132,
+        "texto": "E eu dentro de você Nesse lugar eu"
+      },
+      {
+        "indices": [
+          23
+        ],
+        "inicio": 171.09,
+        "fim": 176.87,
+        "txt_inicio": 132,
+        "txt_fim": 139,
+        "texto": "posso dizer Que estás dentro de mim"
+      },
+      {
+        "indices": [
+          24
+        ],
+        "inicio": 207.14,
+        "fim": 213.02,
+        "txt_inicio": 178,
+        "txt_fim": 186,
+        "texto": "E eu dentro de você Agora nós dois"
+      },
+      {
+        "indices": [
+          25
+        ],
+        "inicio": 213.02,
+        "fim": 215.58,
+        "txt_inicio": 186,
+        "txt_fim": 188,
+        "texto": "somos um"
+      },
+      {
+        "indices": [
+          26
+        ],
+        "inicio": 243.04,
+        "fim": 250.94,
+        "txt_inicio": 206,
+        "txt_fim": 210,
+        "texto": "Somos um Somos um"
+      },
+      {
+        "indices": [
+          27
+        ],
+        "inicio": 259.74,
+        "fim": 265.0,
+        "txt_inicio": 212,
+        "txt_fim": 219,
+        "texto": "Eu e você Só eu e você"
+      },
+      {
+        "indices": [
+          28
+        ],
+        "inicio": 270.9,
+        "fim": 280.58,
+        "txt_inicio": 219,
+        "txt_fim": 223,
+        "texto": "Somos um Somos um"
+      },
+      {
+        "indices": [
+          29
+        ],
+        "inicio": 285.57,
+        "fim": 289.09,
+        "txt_inicio": 223,
+        "txt_fim": 227,
+        "texto": "Somos um, somos um"
+      }
+    ],
+    "tokens_txt_sem_correspondencia": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      58,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      210,
+      211,
+      227,
+      228,
+      229
+    ],
+    "parametros": {
+      "score_consulta_minimo": 0.65,
+      "margem_ambiguidade": 0.025,
+      "bonus_por_extremidade": 0.02,
+      "score_contexto_minimo": 0.85
+    }
+  },
+  "auditoria_estrutura": [
+    {
+      "bloco_srt": 1,
+      "inicio_original": 5.58,
+      "fim_original": 20.87,
+      "texto_original": "Mística sublime, te receber, ter comunhão, Ter",
+      "texto_publicado": "Mística sublime, te receber, ter comunhão, ter",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 2,
+      "inicio_original": 20.87,
+      "fim_original": 28.47,
+      "texto_original": "correndo em mim teu sangue, Deus, estou em",
+      "texto_publicado": "Correndo em mim teu sangue, deus estou em",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 3,
+      "inicio_original": 28.47,
+      "fim_original": 29.81,
+      "texto_original": "comunhão.",
+      "texto_publicado": "Comunhão",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 4,
+      "inicio_original": 34.81,
+      "fim_original": 42.19,
+      "texto_original": "Alguém dirá que um Deus tão grande assim",
+      "texto_publicado": "Alguém dirá que um deus tão grande assim",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 5,
+      "inicio_original": 42.19,
+      "fim_original": 48.05,
+      "texto_original": "não se dará por mim.",
+      "texto_publicado": "Não se dará por mim?",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 6,
+      "inicio_original": 49.55,
+      "fim_original": 55.41,
+      "texto_original": "O que os meus olhos veem não é",
+      "texto_publicado": "O que os meus olhos veem não é",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 7,
+      "inicio_original": 55.41,
+      "fim_original": 60.69,
+      "texto_original": "o que minha alma diz.",
+      "texto_publicado": "O que minh'alma diz",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 8,
+      "inicio_original": 64.37,
+      "fim_original": 79.45,
+      "texto_original": "Mística sublime, te receber, ter comunhão, Ter",
+      "texto_publicado": "Mística sublime, te receber e ter comunhão ter",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 9,
+      "inicio_original": 79.45,
+      "fim_original": 87.19,
+      "texto_original": "correndo em mim teu sangue, Deus, estou em",
+      "texto_publicado": "Correndo em mim teu sangue, deus estou em",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 10,
+      "inicio_original": 87.19,
+      "fim_original": 89.21,
+      "texto_original": "comunhão.",
+      "texto_publicado": "Comunhão,",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 11,
+      "inicio_original": 93.79,
+      "fim_original": 101.47,
+      "texto_original": "Alguém dirá que um Deus tão grande assim",
+      "texto_publicado": "Alguém dirá que um deus tão grande assim",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 12,
+      "inicio_original": 101.47,
+      "fim_original": 107.73,
+      "texto_original": "não se dará por mim.",
+      "texto_publicado": "Não se dará por mim?",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 13,
+      "inicio_original": 108.39,
+      "fim_original": 114.63,
+      "texto_original": "O que os meus olhos veem não é",
+      "texto_publicado": "O que os meus olhos veem não é",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 14,
+      "inicio_original": 114.63,
+      "fim_original": 120.57,
+      "texto_original": "o que minha alma diz.",
+      "texto_publicado": "O que minh'alma diz,",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 15,
+      "inicio_original": 120.57,
+      "fim_original": 126.43,
+      "texto_original": "Se ela diz, já não é mais vinho,",
+      "texto_publicado": "E ela diz já não é mais vinho,",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 16,
+      "inicio_original": 127.27,
+      "fim_original": 128.35,
+      "texto_original": "não.",
+      "texto_publicado": "Não",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 17,
+      "inicio_original": 130.14,
+      "fim_original": 138.93,
+      "texto_original": "É o sangue do meu Deus, já não",
+      "texto_publicado": "É o sangue do meu deus já não",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 18,
+      "inicio_original": 138.93,
+      "fim_original": 142.27,
+      "texto_original": "é mais pão aqui.",
+      "texto_publicado": "É mais pão aqui",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 19,
+      "inicio_original": 142.27,
+      "fim_original": 150.37,
+      "texto_original": "É o corpo do meu amor, do meu",
+      "texto_publicado": "É o corpo do meu amor do meu",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 20,
+      "inicio_original": 150.37,
+      "fim_original": 151.35,
+      "texto_original": "amor.",
+      "texto_publicado": "Amor",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 21,
+      "inicio_original": 152.71,
+      "fim_original": 161.17,
+      "texto_original": "Nesse lugar, eu posso dizer que estás dentro",
+      "texto_publicado": "Nesse lugar eu posso dizer que estás dentro",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 22,
+      "inicio_original": 161.17,
+      "fim_original": 162.81,
+      "texto_original": "de mim.",
+      "texto_publicado": "De mim",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 23,
+      "inicio_original": 162.81,
+      "fim_original": 171.09,
+      "texto_original": "E eu dentro de você, nesse lugar, eu",
+      "texto_publicado": "E eu dentro de você nesse lugar eu",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 24,
+      "inicio_original": 171.09,
+      "fim_original": 176.87,
+      "texto_original": "posso dizer que estás dentro de mim.",
+      "texto_publicado": "Posso dizer que estás dentro de mim",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 25,
+      "inicio_original": 207.14,
+      "fim_original": 213.02,
+      "texto_original": "E eu dentro de você, agora nós dois",
+      "texto_publicado": "E eu dentro de você agora nós dois",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 26,
+      "inicio_original": 213.02,
+      "fim_original": 215.58,
+      "texto_original": "somos um.",
+      "texto_publicado": "Somos um",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 27,
+      "inicio_original": 243.04,
+      "fim_original": 250.94,
+      "texto_original": "Somos um, somos um.",
+      "texto_publicado": "Somos um somos um",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 28,
+      "inicio_original": 259.74,
+      "fim_original": 265.0,
+      "texto_original": "Eu e você, só eu e você.",
+      "texto_publicado": "Eu e você só eu e você",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 29,
+      "inicio_original": 270.9,
+      "fim_original": 280.58,
+      "texto_original": "Somos um, somos um.",
+      "texto_publicado": "Somos um somos um",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 30,
+      "inicio_original": 285.57,
+      "fim_original": 289.09,
+      "texto_original": "Somos um, somos um.",
+      "texto_publicado": "Somos um, somos um",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    }
+  ],
+  "recuperacoes": [
+    {
+      "id": 1,
+      "txt_inicio": 58,
+      "txt_fim": 59,
+      "inicio": 89.21,
+      "fim": 93.79,
+      "bloco_anterior": 10,
+      "bloco_seguinte": 11,
+      "limite_busca": 30.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "recuperado",
+      "tentativas": [
+        {
+          "janela": [
+            89.21,
+            93.79
+          ],
+          "texto": "oh",
+          "palavras": [
+            {
+              "texto": "oh",
+              "inicio": 91.4,
+              "fim": 91.58,
+              "score": 0.437
+            }
+          ]
+        }
+      ],
+      "inseridos": [
+        {
+          "inicio": 91.4,
+          "fim": 91.58,
+          "texto": "oh",
+          "origem": "insercao_acustica",
+          "lacuna": 1,
+          "txt_inicio": 58,
+          "txt_fim": 59,
+          "score_minimo": 0.437,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        }
+      ],
+      "tokens_recuperados": [
+        58
+      ],
+      "texto": "oh"
+    },
+    {
+      "id": 2,
+      "txt_inicio": 139,
+      "txt_fim": 178,
+      "inicio": 176.87,
+      "fim": 207.14,
+      "bloco_anterior": 24,
+      "bloco_seguinte": 25,
+      "limite_busca": 78.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "recuperado",
+      "tentativas": [
+        {
+          "janela": [
+            176.87,
+            207.14
+          ],
+          "texto": "E eu dentro de você E eu dentro de você E eu dentro de você E eu dentro de você E eu dentro de você Eu dentro de você E eu dentro de você E eu dentro de você",
+          "palavras": [
+            {
+              "texto": "E",
+              "inicio": 178.01,
+              "fim": 178.03,
+              "score": 0.008
+            },
+            {
+              "texto": "eu",
+              "inicio": 178.05,
+              "fim": 178.29,
+              "score": 0.802
+            },
+            {
+              "texto": "dentro",
+              "inicio": 178.431,
+              "fim": 179.031,
+              "score": 0.914
+            },
+            {
+              "texto": "de",
+              "inicio": 179.111,
+              "fim": 179.231,
+              "score": 0.984
+            },
+            {
+              "texto": "você",
+              "inicio": 179.331,
+              "fim": 180.891,
+              "score": 1.0
+            },
+            {
+              "texto": "E",
+              "inicio": 180.911,
+              "fim": 180.931,
+              "score": 0.0
+            },
+            {
+              "texto": "eu",
+              "inicio": 181.612,
+              "fim": 181.852,
+              "score": 0.752
+            },
+            {
+              "texto": "dentro",
+              "inicio": 182.032,
+              "fim": 182.612,
+              "score": 0.912
+            },
+            {
+              "texto": "de",
+              "inicio": 182.672,
+              "fim": 182.812,
+              "score": 0.928
+            },
+            {
+              "texto": "você",
+              "inicio": 182.912,
+              "fim": 185.173,
+              "score": 0.94
+            },
+            {
+              "texto": "E",
+              "inicio": 185.233,
+              "fim": 185.473,
+              "score": 0.811
+            },
+            {
+              "texto": "eu",
+              "inicio": 185.553,
+              "fim": 185.633,
+              "score": 0.394
+            },
+            {
+              "texto": "dentro",
+              "inicio": 185.713,
+              "fim": 186.333,
+              "score": 0.747
+            },
+            {
+              "texto": "de",
+              "inicio": 186.393,
+              "fim": 186.613,
+              "score": 0.776
+            },
+            {
+              "texto": "você",
+              "inicio": 186.673,
+              "fim": 186.893,
+              "score": 0.557
+            },
+            {
+              "texto": "E",
+              "inicio": 187.133,
+              "fim": 187.193,
+              "score": 0.67
+            },
+            {
+              "texto": "eu",
+              "inicio": 189.074,
+              "fim": 189.274,
+              "score": 0.955
+            },
+            {
+              "texto": "dentro",
+              "inicio": 189.414,
+              "fim": 190.034,
+              "score": 0.816
+            },
+            {
+              "texto": "de",
+              "inicio": 190.094,
+              "fim": 190.274,
+              "score": 0.676
+            },
+            {
+              "texto": "você",
+              "inicio": 190.354,
+              "fim": 192.535,
+              "score": 0.923
+            },
+            {
+              "texto": "E",
+              "inicio": 192.615,
+              "fim": 192.775,
+              "score": 0.792
+            },
+            {
+              "texto": "eu",
+              "inicio": 192.875,
+              "fim": 192.955,
+              "score": 0.392
+            },
+            {
+              "texto": "dentro",
+              "inicio": 193.035,
+              "fim": 193.636,
+              "score": 0.754
+            },
+            {
+              "texto": "de",
+              "inicio": 193.736,
+              "fim": 193.856,
+              "score": 0.676
+            },
+            {
+              "texto": "você",
+              "inicio": 194.216,
+              "fim": 194.876,
+              "score": 0.58
+            },
+            {
+              "texto": "Eu",
+              "inicio": 196.376,
+              "fim": 196.577,
+              "score": 0.752
+            },
+            {
+              "texto": "dentro",
+              "inicio": 196.737,
+              "fim": 197.357,
+              "score": 0.863
+            },
+            {
+              "texto": "de",
+              "inicio": 197.417,
+              "fim": 197.577,
+              "score": 0.942
+            },
+            {
+              "texto": "você",
+              "inicio": 197.657,
+              "fim": 198.697,
+              "score": 0.994
+            },
+            {
+              "texto": "E",
+              "inicio": 200.018,
+              "fim": 200.158,
+              "score": 0.885
+            },
+            {
+              "texto": "eu",
+              "inicio": 200.258,
+              "fim": 200.338,
+              "score": 0.261
+            },
+            {
+              "texto": "dentro",
+              "inicio": 200.438,
+              "fim": 201.058,
+              "score": 0.763
+            },
+            {
+              "texto": "de",
+              "inicio": 201.138,
+              "fim": 201.298,
+              "score": 0.684
+            },
+            {
+              "texto": "você",
+              "inicio": 201.378,
+              "fim": 201.598,
+              "score": 0.604
+            },
+            {
+              "texto": "E",
+              "inicio": 201.838,
+              "fim": 201.918,
+              "score": 0.709
+            },
+            {
+              "texto": "eu",
+              "inicio": 203.799,
+              "fim": 203.979,
+              "score": 0.669
+            },
+            {
+              "texto": "dentro",
+              "inicio": 204.139,
+              "fim": 204.719,
+              "score": 0.878
+            },
+            {
+              "texto": "de",
+              "inicio": 204.799,
+              "fim": 204.939,
+              "score": 0.806
+            },
+            {
+              "texto": "você",
+              "inicio": 205.059,
+              "fim": 205.559,
+              "score": 0.993
+            }
+          ]
+        }
+      ],
+      "inseridos": [
+        {
+          "inicio": 178.01,
+          "fim": 180.891,
+          "texto": "E eu dentro de você",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 139,
+          "txt_fim": 144,
+          "score_minimo": 0.008,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 1
+        },
+        {
+          "inicio": 180.911,
+          "fim": 185.173,
+          "texto": "E eu dentro de você",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 144,
+          "txt_fim": 149,
+          "score_minimo": 0.0,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 1
+        },
+        {
+          "inicio": 185.233,
+          "fim": 186.893,
+          "texto": "E eu dentro de você",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 149,
+          "txt_fim": 154,
+          "score_minimo": 0.394,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 187.133,
+          "fim": 192.535,
+          "texto": "E eu dentro de você",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 154,
+          "txt_fim": 159,
+          "score_minimo": 0.67,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 192.615,
+          "fim": 194.876,
+          "texto": "E eu dentro de você",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 159,
+          "txt_fim": 164,
+          "score_minimo": 0.392,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 196.376,
+          "fim": 198.697,
+          "texto": "Eu dentro de você",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 164,
+          "txt_fim": 168,
+          "score_minimo": 0.752,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 200.018,
+          "fim": 201.598,
+          "texto": "E eu dentro de você",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 168,
+          "txt_fim": 173,
+          "score_minimo": 0.261,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 1
+        },
+        {
+          "inicio": 201.838,
+          "fim": 205.559,
+          "texto": "E eu dentro de você",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 173,
+          "txt_fim": 178,
+          "score_minimo": 0.669,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        }
+      ],
+      "tokens_recuperados": [
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177
+      ],
+      "texto": "E eu dentro de você E eu dentro de você E eu dentro de você E eu dentro de você E eu dentro de você Eu dentro de você E eu dentro de você E eu dentro de você"
+    },
+    {
+      "id": 3,
+      "txt_inicio": 188,
+      "txt_fim": 206,
+      "inicio": 215.58,
+      "fim": 243.04,
+      "bloco_anterior": 26,
+      "bloco_seguinte": 27,
+      "limite_busca": 36.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "recuperado",
+      "tentativas": [
+        {
+          "janela": [
+            215.58,
+            243.04
+          ],
+          "texto": "Agora nós dois somos um Agora nós dois somos um oh oh Agora nós dois somos um um",
+          "palavras": [
+            {
+              "texto": "Agora",
+              "inicio": 218.442,
+              "fim": 219.203,
+              "score": 0.877
+            },
+            {
+              "texto": "nós",
+              "inicio": 219.303,
+              "fim": 219.723,
+              "score": 0.82
+            },
+            {
+              "texto": "dois",
+              "inicio": 219.763,
+              "fim": 220.283,
+              "score": 0.57
+            },
+            {
+              "texto": "somos",
+              "inicio": 220.444,
+              "fim": 222.265,
+              "score": 0.922
+            },
+            {
+              "texto": "um",
+              "inicio": 222.285,
+              "fim": 222.785,
+              "score": 0.907
+            },
+            {
+              "texto": "Agora",
+              "inicio": 225.767,
+              "fim": 226.528,
+              "score": 0.9
+            },
+            {
+              "texto": "nós",
+              "inicio": 226.628,
+              "fim": 227.028,
+              "score": 0.834
+            },
+            {
+              "texto": "dois",
+              "inicio": 227.088,
+              "fim": 227.589,
+              "score": 0.798
+            },
+            {
+              "texto": "somos",
+              "inicio": 227.769,
+              "fim": 227.889,
+              "score": 0.23
+            },
+            {
+              "texto": "um",
+              "inicio": 228.049,
+              "fim": 228.209,
+              "score": 0.425
+            },
+            {
+              "texto": "oh",
+              "inicio": 228.489,
+              "fim": 228.589,
+              "score": 0.362
+            },
+            {
+              "texto": "oh",
+              "inicio": 229.21,
+              "fim": 229.39,
+              "score": 0.626
+            },
+            {
+              "texto": "Agora",
+              "inicio": 233.053,
+              "fim": 233.773,
+              "score": 0.912
+            },
+            {
+              "texto": "nós",
+              "inicio": 233.873,
+              "fim": 234.274,
+              "score": 0.832
+            },
+            {
+              "texto": "dois",
+              "inicio": 234.334,
+              "fim": 234.854,
+              "score": 0.79
+            },
+            {
+              "texto": "somos",
+              "inicio": 235.034,
+              "fim": 236.855,
+              "score": 0.892
+            },
+            {
+              "texto": "um",
+              "inicio": 238.257,
+              "fim": 238.297,
+              "score": 0.021
+            },
+            {
+              "texto": "um",
+              "inicio": 238.317,
+              "fim": 238.537,
+              "score": 0.45
+            }
+          ]
+        }
+      ],
+      "inseridos": [
+        {
+          "inicio": 218.442,
+          "fim": 222.785,
+          "texto": "Agora nós dois somos um",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 188,
+          "txt_fim": 193,
+          "score_minimo": 0.57,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 225.767,
+          "fim": 229.39,
+          "texto": "Agora nós dois somos um (oh oh)",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 193,
+          "txt_fim": 200,
+          "score_minimo": 0.23,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 1
+        },
+        {
+          "inicio": 233.053,
+          "fim": 238.537,
+          "texto": "Agora nós dois somos um, um",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 200,
+          "txt_fim": 206,
+          "score_minimo": 0.021,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 1
+        }
+      ],
+      "tokens_recuperados": [
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "texto": "Agora nós dois somos um Agora nós dois somos um (oh oh) Agora nós dois somos um, um"
+    },
+    {
+      "id": 4,
+      "txt_inicio": 210,
+      "txt_fim": 212,
+      "inicio": 250.94,
+      "fim": 259.74,
+      "bloco_anterior": 27,
+      "bloco_seguinte": 28,
+      "limite_busca": 30.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "recuperado",
+      "tentativas": [
+        {
+          "janela": [
+            250.94,
+            259.74
+          ],
+          "texto": "Somos um",
+          "palavras": [
+            {
+              "texto": "Somos",
+              "inicio": 252.203,
+              "fim": 252.624,
+              "score": 0.386
+            },
+            {
+              "texto": "um",
+              "inicio": 252.644,
+              "fim": 252.704,
+              "score": 0.499
+            }
+          ]
+        }
+      ],
+      "inseridos": [
+        {
+          "inicio": 252.203,
+          "fim": 252.704,
+          "texto": "Somos um",
+          "origem": "insercao_acustica",
+          "lacuna": 4,
+          "txt_inicio": 210,
+          "txt_fim": 212,
+          "score_minimo": 0.386,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        }
+      ],
+      "tokens_recuperados": [
+        210,
+        211
+      ],
+      "texto": "Somos um"
+    },
+    {
+      "id": 5,
+      "txt_inicio": 227,
+      "txt_fim": 230,
+      "inicio": 289.09,
+      "fim": 300.0424375,
+      "bloco_anterior": 30,
+      "bloco_seguinte": null,
+      "limite_busca": 30.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "recuperado",
+      "tentativas": [
+        {
+          "janela": [
+            289.09,
+            300.0424375
+          ],
+          "texto": "Oh oh oh",
+          "palavras": [
+            {
+              "texto": "Oh",
+              "inicio": 292.434,
+              "fim": 294.817,
+              "score": 0.927
+            },
+            {
+              "texto": "oh",
+              "inicio": 294.977,
+              "fim": 295.497,
+              "score": 0.862
+            },
+            {
+              "texto": "oh",
+              "inicio": 295.597,
+              "fim": 295.798,
+              "score": 0.388
+            }
+          ]
+        }
+      ],
+      "inseridos": [
+        {
+          "inicio": 292.434,
+          "fim": 295.798,
+          "texto": "Oh, oh, oh",
+          "origem": "insercao_acustica",
+          "lacuna": 5,
+          "txt_inicio": 227,
+          "txt_fim": 230,
+          "score_minimo": 0.388,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        }
+      ],
+      "tokens_recuperados": [
+        227,
+        228,
+        229
+      ],
+      "texto": "Oh, oh, oh"
+    }
+  ],
+  "tentativas": [
+    {
+      "janela": [
+        89.21,
+        93.79
+      ],
+      "texto": "oh",
+      "palavras": [
+        {
+          "texto": "oh",
+          "inicio": 91.4,
+          "fim": 91.58,
+          "score": 0.437
+        }
+      ],
+      "lacuna": 1
+    },
+    {
+      "janela": [
+        176.87,
+        207.14
+      ],
+      "texto": "E eu dentro de você E eu dentro de você E eu dentro de você E eu dentro de você E eu dentro de você Eu dentro de você E eu dentro de você E eu dentro de você",
+      "palavras": [
+        {
+          "texto": "E",
+          "inicio": 178.01,
+          "fim": 178.03,
+          "score": 0.008
+        },
+        {
+          "texto": "eu",
+          "inicio": 178.05,
+          "fim": 178.29,
+          "score": 0.802
+        },
+        {
+          "texto": "dentro",
+          "inicio": 178.431,
+          "fim": 179.031,
+          "score": 0.914
+        },
+        {
+          "texto": "de",
+          "inicio": 179.111,
+          "fim": 179.231,
+          "score": 0.984
+        },
+        {
+          "texto": "você",
+          "inicio": 179.331,
+          "fim": 180.891,
+          "score": 1.0
+        },
+        {
+          "texto": "E",
+          "inicio": 180.911,
+          "fim": 180.931,
+          "score": 0.0
+        },
+        {
+          "texto": "eu",
+          "inicio": 181.612,
+          "fim": 181.852,
+          "score": 0.752
+        },
+        {
+          "texto": "dentro",
+          "inicio": 182.032,
+          "fim": 182.612,
+          "score": 0.912
+        },
+        {
+          "texto": "de",
+          "inicio": 182.672,
+          "fim": 182.812,
+          "score": 0.928
+        },
+        {
+          "texto": "você",
+          "inicio": 182.912,
+          "fim": 185.173,
+          "score": 0.94
+        },
+        {
+          "texto": "E",
+          "inicio": 185.233,
+          "fim": 185.473,
+          "score": 0.811
+        },
+        {
+          "texto": "eu",
+          "inicio": 185.553,
+          "fim": 185.633,
+          "score": 0.394
+        },
+        {
+          "texto": "dentro",
+          "inicio": 185.713,
+          "fim": 186.333,
+          "score": 0.747
+        },
+        {
+          "texto": "de",
+          "inicio": 186.393,
+          "fim": 186.613,
+          "score": 0.776
+        },
+        {
+          "texto": "você",
+          "inicio": 186.673,
+          "fim": 186.893,
+          "score": 0.557
+        },
+        {
+          "texto": "E",
+          "inicio": 187.133,
+          "fim": 187.193,
+          "score": 0.67
+        },
+        {
+          "texto": "eu",
+          "inicio": 189.074,
+          "fim": 189.274,
+          "score": 0.955
+        },
+        {
+          "texto": "dentro",
+          "inicio": 189.414,
+          "fim": 190.034,
+          "score": 0.816
+        },
+        {
+          "texto": "de",
+          "inicio": 190.094,
+          "fim": 190.274,
+          "score": 0.676
+        },
+        {
+          "texto": "você",
+          "inicio": 190.354,
+          "fim": 192.535,
+          "score": 0.923
+        },
+        {
+          "texto": "E",
+          "inicio": 192.615,
+          "fim": 192.775,
+          "score": 0.792
+        },
+        {
+          "texto": "eu",
+          "inicio": 192.875,
+          "fim": 192.955,
+          "score": 0.392
+        },
+        {
+          "texto": "dentro",
+          "inicio": 193.035,
+          "fim": 193.636,
+          "score": 0.754
+        },
+        {
+          "texto": "de",
+          "inicio": 193.736,
+          "fim": 193.856,
+          "score": 0.676
+        },
+        {
+          "texto": "você",
+          "inicio": 194.216,
+          "fim": 194.876,
+          "score": 0.58
+        },
+        {
+          "texto": "Eu",
+          "inicio": 196.376,
+          "fim": 196.577,
+          "score": 0.752
+        },
+        {
+          "texto": "dentro",
+          "inicio": 196.737,
+          "fim": 197.357,
+          "score": 0.863
+        },
+        {
+          "texto": "de",
+          "inicio": 197.417,
+          "fim": 197.577,
+          "score": 0.942
+        },
+        {
+          "texto": "você",
+          "inicio": 197.657,
+          "fim": 198.697,
+          "score": 0.994
+        },
+        {
+          "texto": "E",
+          "inicio": 200.018,
+          "fim": 200.158,
+          "score": 0.885
+        },
+        {
+          "texto": "eu",
+          "inicio": 200.258,
+          "fim": 200.338,
+          "score": 0.261
+        },
+        {
+          "texto": "dentro",
+          "inicio": 200.438,
+          "fim": 201.058,
+          "score": 0.763
+        },
+        {
+          "texto": "de",
+          "inicio": 201.138,
+          "fim": 201.298,
+          "score": 0.684
+        },
+        {
+          "texto": "você",
+          "inicio": 201.378,
+          "fim": 201.598,
+          "score": 0.604
+        },
+        {
+          "texto": "E",
+          "inicio": 201.838,
+          "fim": 201.918,
+          "score": 0.709
+        },
+        {
+          "texto": "eu",
+          "inicio": 203.799,
+          "fim": 203.979,
+          "score": 0.669
+        },
+        {
+          "texto": "dentro",
+          "inicio": 204.139,
+          "fim": 204.719,
+          "score": 0.878
+        },
+        {
+          "texto": "de",
+          "inicio": 204.799,
+          "fim": 204.939,
+          "score": 0.806
+        },
+        {
+          "texto": "você",
+          "inicio": 205.059,
+          "fim": 205.559,
+          "score": 0.993
+        }
+      ],
+      "lacuna": 2
+    },
+    {
+      "janela": [
+        215.58,
+        243.04
+      ],
+      "texto": "Agora nós dois somos um Agora nós dois somos um oh oh Agora nós dois somos um um",
+      "palavras": [
+        {
+          "texto": "Agora",
+          "inicio": 218.442,
+          "fim": 219.203,
+          "score": 0.877
+        },
+        {
+          "texto": "nós",
+          "inicio": 219.303,
+          "fim": 219.723,
+          "score": 0.82
+        },
+        {
+          "texto": "dois",
+          "inicio": 219.763,
+          "fim": 220.283,
+          "score": 0.57
+        },
+        {
+          "texto": "somos",
+          "inicio": 220.444,
+          "fim": 222.265,
+          "score": 0.922
+        },
+        {
+          "texto": "um",
+          "inicio": 222.285,
+          "fim": 222.785,
+          "score": 0.907
+        },
+        {
+          "texto": "Agora",
+          "inicio": 225.767,
+          "fim": 226.528,
+          "score": 0.9
+        },
+        {
+          "texto": "nós",
+          "inicio": 226.628,
+          "fim": 227.028,
+          "score": 0.834
+        },
+        {
+          "texto": "dois",
+          "inicio": 227.088,
+          "fim": 227.589,
+          "score": 0.798
+        },
+        {
+          "texto": "somos",
+          "inicio": 227.769,
+          "fim": 227.889,
+          "score": 0.23
+        },
+        {
+          "texto": "um",
+          "inicio": 228.049,
+          "fim": 228.209,
+          "score": 0.425
+        },
+        {
+          "texto": "oh",
+          "inicio": 228.489,
+          "fim": 228.589,
+          "score": 0.362
+        },
+        {
+          "texto": "oh",
+          "inicio": 229.21,
+          "fim": 229.39,
+          "score": 0.626
+        },
+        {
+          "texto": "Agora",
+          "inicio": 233.053,
+          "fim": 233.773,
+          "score": 0.912
+        },
+        {
+          "texto": "nós",
+          "inicio": 233.873,
+          "fim": 234.274,
+          "score": 0.832
+        },
+        {
+          "texto": "dois",
+          "inicio": 234.334,
+          "fim": 234.854,
+          "score": 0.79
+        },
+        {
+          "texto": "somos",
+          "inicio": 235.034,
+          "fim": 236.855,
+          "score": 0.892
+        },
+        {
+          "texto": "um",
+          "inicio": 238.257,
+          "fim": 238.297,
+          "score": 0.021
+        },
+        {
+          "texto": "um",
+          "inicio": 238.317,
+          "fim": 238.537,
+          "score": 0.45
+        }
+      ],
+      "lacuna": 3
+    },
+    {
+      "janela": [
+        250.94,
+        259.74
+      ],
+      "texto": "Somos um",
+      "palavras": [
+        {
+          "texto": "Somos",
+          "inicio": 252.203,
+          "fim": 252.624,
+          "score": 0.386
+        },
+        {
+          "texto": "um",
+          "inicio": 252.644,
+          "fim": 252.704,
+          "score": 0.499
+        }
+      ],
+      "lacuna": 4
+    },
+    {
+      "janela": [
+        289.09,
+        300.0424375
+      ],
+      "texto": "Oh oh oh",
+      "palavras": [
+        {
+          "texto": "Oh",
+          "inicio": 292.434,
+          "fim": 294.817,
+          "score": 0.927
+        },
+        {
+          "texto": "oh",
+          "inicio": 294.977,
+          "fim": 295.497,
+          "score": 0.862
+        },
+        {
+          "texto": "oh",
+          "inicio": 295.597,
+          "fim": 295.798,
+          "score": 0.388
+        }
+      ],
+      "lacuna": 5
+    }
+  ],
+  "pendencias": [
+    {
+      "bloco_srt": 1,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "lacuna": 2,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "E eu dentro de você"
+    },
+    {
+      "lacuna": 2,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "E eu dentro de você"
+    },
+    {
+      "lacuna": 2,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "E eu dentro de você"
+    },
+    {
+      "lacuna": 3,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "Agora nós dois somos um (oh oh)"
+    },
+    {
+      "lacuna": 3,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "Agora nós dois somos um, um"
+    },
+    {
+      "motivo": "texto_txt_sem_tempo",
+      "tokens_txt": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "blocos": [
+    {
+      "inicio": 5.58,
+      "fim": 20.87,
+      "texto": "Mística sublime, te receber, ter comunhão, ter",
+      "origem": "original_preservado",
+      "bloco_original": 1
+    },
+    {
+      "inicio": 20.87,
+      "fim": 28.47,
+      "texto": "Correndo em mim teu sangue, deus estou em",
+      "origem": "texto_corrigido",
+      "bloco_original": 2
+    },
+    {
+      "inicio": 28.47,
+      "fim": 29.81,
+      "texto": "Comunhão",
+      "origem": "texto_corrigido",
+      "bloco_original": 3
+    },
+    {
+      "inicio": 34.81,
+      "fim": 42.19,
+      "texto": "Alguém dirá que um deus tão grande assim",
+      "origem": "original_preservado",
+      "bloco_original": 4
+    },
+    {
+      "inicio": 42.19,
+      "fim": 48.05,
+      "texto": "Não se dará por mim?",
+      "origem": "texto_corrigido",
+      "bloco_original": 5
+    },
+    {
+      "inicio": 49.55,
+      "fim": 55.41,
+      "texto": "O que os meus olhos veem não é",
+      "origem": "texto_corrigido",
+      "bloco_original": 6
+    },
+    {
+      "inicio": 55.41,
+      "fim": 60.69,
+      "texto": "O que minh'alma diz",
+      "origem": "texto_corrigido",
+      "bloco_original": 7
+    },
+    {
+      "inicio": 64.37,
+      "fim": 79.45,
+      "texto": "Mística sublime, te receber e ter comunhão ter",
+      "origem": "texto_corrigido",
+      "bloco_original": 8
+    },
+    {
+      "inicio": 79.45,
+      "fim": 87.19,
+      "texto": "Correndo em mim teu sangue, deus estou em",
+      "origem": "texto_corrigido",
+      "bloco_original": 9
+    },
+    {
+      "inicio": 87.19,
+      "fim": 89.21,
+      "texto": "Comunhão,",
+      "origem": "texto_corrigido",
+      "bloco_original": 10
+    },
+    {
+      "inicio": 91.4,
+      "fim": 91.58,
+      "texto": "Oh",
+      "origem": "insercao_acustica",
+      "lacuna": 1,
+      "txt_inicio": 58,
+      "txt_fim": 59,
+      "score_minimo": 0.437,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 93.79,
+      "fim": 101.47,
+      "texto": "Alguém dirá que um deus tão grande assim",
+      "origem": "original_preservado",
+      "bloco_original": 11
+    },
+    {
+      "inicio": 101.47,
+      "fim": 107.73,
+      "texto": "Não se dará por mim?",
+      "origem": "texto_corrigido",
+      "bloco_original": 12
+    },
+    {
+      "inicio": 108.39,
+      "fim": 114.63,
+      "texto": "O que os meus olhos veem não é",
+      "origem": "texto_corrigido",
+      "bloco_original": 13
+    },
+    {
+      "inicio": 114.63,
+      "fim": 120.57,
+      "texto": "O que minh'alma diz,",
+      "origem": "texto_corrigido",
+      "bloco_original": 14
+    },
+    {
+      "inicio": 120.57,
+      "fim": 126.43,
+      "texto": "E ela diz já não é mais vinho,",
+      "origem": "texto_corrigido",
+      "bloco_original": 15
+    },
+    {
+      "inicio": 127.27,
+      "fim": 128.35,
+      "texto": "Não",
+      "origem": "texto_corrigido",
+      "bloco_original": 16
+    },
+    {
+      "inicio": 130.14,
+      "fim": 138.93,
+      "texto": "É o sangue do meu deus já não",
+      "origem": "texto_corrigido",
+      "bloco_original": 17
+    },
+    {
+      "inicio": 138.93,
+      "fim": 142.27,
+      "texto": "É mais pão aqui",
+      "origem": "texto_corrigido",
+      "bloco_original": 18
+    },
+    {
+      "inicio": 142.27,
+      "fim": 150.37,
+      "texto": "É o corpo do meu amor do meu",
+      "origem": "texto_corrigido",
+      "bloco_original": 19
+    },
+    {
+      "inicio": 150.37,
+      "fim": 151.35,
+      "texto": "Amor",
+      "origem": "texto_corrigido",
+      "bloco_original": 20
+    },
+    {
+      "inicio": 152.71,
+      "fim": 161.17,
+      "texto": "Nesse lugar eu posso dizer que estás dentro",
+      "origem": "texto_corrigido",
+      "bloco_original": 21
+    },
+    {
+      "inicio": 161.17,
+      "fim": 162.81,
+      "texto": "De mim",
+      "origem": "texto_corrigido",
+      "bloco_original": 22
+    },
+    {
+      "inicio": 162.81,
+      "fim": 171.09,
+      "texto": "E eu dentro de você nesse lugar eu",
+      "origem": "texto_corrigido",
+      "bloco_original": 23
+    },
+    {
+      "inicio": 171.09,
+      "fim": 176.87,
+      "texto": "Posso dizer que estás dentro de mim",
+      "origem": "texto_corrigido",
+      "bloco_original": 24
+    },
+    {
+      "inicio": 178.01,
+      "fim": 180.891,
+      "texto": "E eu dentro de você",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 139,
+      "txt_fim": 144,
+      "score_minimo": 0.008,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 1
+    },
+    {
+      "inicio": 180.911,
+      "fim": 185.173,
+      "texto": "E eu dentro de você",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 144,
+      "txt_fim": 149,
+      "score_minimo": 0.0,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 1
+    },
+    {
+      "inicio": 185.233,
+      "fim": 186.893,
+      "texto": "E eu dentro de você",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 149,
+      "txt_fim": 154,
+      "score_minimo": 0.394,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 187.133,
+      "fim": 192.535,
+      "texto": "E eu dentro de você",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 154,
+      "txt_fim": 159,
+      "score_minimo": 0.67,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 192.615,
+      "fim": 194.876,
+      "texto": "E eu dentro de você",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 159,
+      "txt_fim": 164,
+      "score_minimo": 0.392,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 196.376,
+      "fim": 198.697,
+      "texto": "Eu dentro de você",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 164,
+      "txt_fim": 168,
+      "score_minimo": 0.752,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 200.018,
+      "fim": 201.598,
+      "texto": "E eu dentro de você",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 168,
+      "txt_fim": 173,
+      "score_minimo": 0.261,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 1
+    },
+    {
+      "inicio": 201.838,
+      "fim": 205.559,
+      "texto": "E eu dentro de você",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 173,
+      "txt_fim": 178,
+      "score_minimo": 0.669,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 207.14,
+      "fim": 213.02,
+      "texto": "E eu dentro de você agora nós dois",
+      "origem": "texto_corrigido",
+      "bloco_original": 25
+    },
+    {
+      "inicio": 213.02,
+      "fim": 215.58,
+      "texto": "Somos um",
+      "origem": "texto_corrigido",
+      "bloco_original": 26
+    },
+    {
+      "inicio": 218.442,
+      "fim": 222.785,
+      "texto": "Agora nós dois somos um",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 188,
+      "txt_fim": 193,
+      "score_minimo": 0.57,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 225.767,
+      "fim": 229.39,
+      "texto": "Agora nós dois somos um (oh oh)",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 193,
+      "txt_fim": 200,
+      "score_minimo": 0.23,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 1
+    },
+    {
+      "inicio": 233.053,
+      "fim": 238.537,
+      "texto": "Agora nós dois somos um, um",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 200,
+      "txt_fim": 206,
+      "score_minimo": 0.021,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 1
+    },
+    {
+      "inicio": 243.04,
+      "fim": 250.94,
+      "texto": "Somos um somos um",
+      "origem": "texto_corrigido",
+      "bloco_original": 27
+    },
+    {
+      "inicio": 252.203,
+      "fim": 252.704,
+      "texto": "Somos um",
+      "origem": "insercao_acustica",
+      "lacuna": 4,
+      "txt_inicio": 210,
+      "txt_fim": 212,
+      "score_minimo": 0.386,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 259.74,
+      "fim": 265.0,
+      "texto": "Eu e você só eu e você",
+      "origem": "texto_corrigido",
+      "bloco_original": 28
+    },
+    {
+      "inicio": 270.9,
+      "fim": 280.58,
+      "texto": "Somos um somos um",
+      "origem": "texto_corrigido",
+      "bloco_original": 29
+    },
+    {
+      "inicio": 285.57,
+      "fim": 289.09,
+      "texto": "Somos um, somos um",
+      "origem": "texto_corrigido",
+      "bloco_original": 30
+    },
+    {
+      "inicio": 292.434,
+      "fim": 295.798,
+      "texto": "Oh, oh, oh",
+      "origem": "insercao_acustica",
+      "lacuna": 5,
+      "txt_inicio": 227,
+      "txt_fim": 230,
+      "score_minimo": 0.388,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    }
+  ],
+  "configuracao_motor": {
+    "idioma": "pt",
+    "dispositivo": "cpu",
+    "modelo_solicitado": null
+  },
+  "fontes": {
+    "txt": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\catolicas\\mistica-sublime-colo-de-deus\\letra.txt",
+      "sha256": "287b59c235108cd31f0dbdc58f3e0ad39227a91ee6b2e0815a5aece707de6e37"
+    },
+    "srt": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\catolicas\\mistica-sublime-colo-de-deus\\letra.srt",
+      "sha256": "5be3ae21fbace833f907bb54d65244f1fd2e8ff06598a5567d1301a0c70a10d1"
+    },
+    "voz": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\catolicas\\mistica-sublime-colo-de-deus\\voz.mp3",
+      "sha256": "a8c8274d7b6875d7498785af45231ac385724ab57571fdd16efe87322c2e2cef"
+    }
+  },
+  "resumo_avisos": [
+    "Bloco 1: consulta txt ambigua original preservado.",
+    "Inserção em 00:02:58,010: 1 palavra(s) com baixa confiança; mantidas.",
+    "Inserção em 00:03:00,911: 1 palavra(s) com baixa confiança; mantidas.",
+    "Inserção em 00:03:20,018: 1 palavra(s) com baixa confiança; mantidas.",
+    "Inserção em 00:03:45,767: 1 palavra(s) com baixa confiança; mantidas.",
+    "Inserção em 00:03:53,053: 1 palavra(s) com baixa confiança; mantidas.",
+    "TXT linha 1, sem tempo: Mística sublime Te receber",
+    "TXT linha 2, sem tempo: Ter comunhão",
+    "TXT linha 3, sem tempo: Ter"
+  ]
+}

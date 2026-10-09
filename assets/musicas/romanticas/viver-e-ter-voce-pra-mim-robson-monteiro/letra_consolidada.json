@@ -1,0 +1,1550 @@
+{
+  "versao": 5,
+  "status": "pendente",
+  "estrategia": "preservar_corrigir_inserir",
+  "motor": "whisperx",
+  "duracao_audio": 279.8498125,
+  "scores_sao_probabilidades": false,
+  "aprovacao_musical_automatica": false,
+  "parametros": {
+    "score_minimo": 0.3,
+    "janela_maxima": 90.0,
+    "score_suporte_insercao": 0.1,
+    "atividade_minima_insercao": 0.2,
+    "margem": 0.4,
+    "margem_aplicada": false
+  },
+  "total_palavras_txt": 282,
+  "total_palavras_srt": 280,
+  "metricas": {
+    "palavras_publicadas": 285,
+    "blocos_srt_auditados": 36,
+    "blocos_srt_descartados": 0,
+    "blocos_texto_corrigido": 28,
+    "blocos_inseridos": 0,
+    "palavras_txt_sem_tempo": 47,
+    "palavras_txt_nao_pesquisadas": 47,
+    "palavras_txt_pesquisadas_sem_tempo": 0,
+    "palavras_baixa_confianca": 0,
+    "tentativas_acusticas": 0
+  },
+  "comparacao": {
+    "consultas": [
+      {
+        "bloco_srt": 1,
+        "inicio": 9.76,
+        "fim": 13.2,
+        "txt_inicio": 0,
+        "txt_fim": 8,
+        "score": 1.0,
+        "texto": "Toda vez que o sol esconde a tarde",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 2,
+        "inicio": 13.2,
+        "fim": 17.16,
+        "txt_inicio": 8,
+        "txt_fim": 16,
+        "score": 1.0,
+        "texto": "e a lua cede o azul do céu",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 3,
+        "inicio": 17.16,
+        "fim": 22.78,
+        "txt_inicio": 16,
+        "txt_fim": 24,
+        "score": 1.0,
+        "texto": "você chega assim meu bem sem me avisar",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 4,
+        "inicio": 22.78,
+        "fim": 30.82,
+        "txt_inicio": 24,
+        "txt_fim": 32,
+        "score": 0.9743589743589743,
+        "texto": "toca meu coração e reacende em mim toda",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 5,
+        "inicio": 30.82,
+        "fim": 37.06,
+        "txt_inicio": 33,
+        "txt_fim": 41,
+        "score": 1.0,
+        "texto": "emoção de amar que um grande amor nos",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 6,
+        "inicio": 37.06,
+        "fim": 43.74,
+        "txt_inicio": 41,
+        "txt_fim": 49,
+        "score": 0.98,
+        "texto": "faz viver Simplesmente sinto neste instante que te",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 7,
+        "inicio": 43.74,
+        "fim": 47.94,
+        "txt_inicio": 49,
+        "txt_fim": 57,
+        "score": 1.0,
+        "texto": "quero tanto e te preciso e quando penso",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 8,
+        "inicio": 47.94,
+        "fim": 55.62,
+        "txt_inicio": 57,
+        "txt_fim": 65,
+        "score": 1.0,
+        "texto": "então em ter você aqui chora meu coração",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 9,
+        "inicio": 56.42,
+        "fim": 61.88,
+        "txt_inicio": 65,
+        "txt_fim": 73,
+        "score": 0.9722222222222221,
+        "texto": "porque você não quis voltar pra mim O",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 10,
+        "inicio": 61.88,
+        "fim": 66.14,
+        "txt_inicio": 73,
+        "txt_fim": 80,
+        "score": 0.9428571428571427,
+        "texto": "amor é mesmo assim nem sempre traz",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 11,
+        "inicio": 66.14,
+        "fim": 72.2,
+        "txt_inicio": 80,
+        "txt_fim": 88,
+        "score": 1.0,
+        "texto": "felicidade quando dói, dói pra valer e a",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 12,
+        "inicio": 72.2,
+        "fim": 77.6,
+        "txt_inicio": 88,
+        "txt_fim": 96,
+        "score": 0.9743589743589743,
+        "texto": "gente perde a ilusão mas quando vem faz",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 13,
+        "inicio": 77.6,
+        "fim": 84.22,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "tanto bem Liberta os sonhos e paixão Porque",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 14,
+        "inicio": 84.22,
+        "fim": 91.94,
+        "txt_inicio": 105,
+        "txt_fim": 113,
+        "score": 1.0,
+        "texto": "você não vem volta amor me deixa ser",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 15,
+        "inicio": 91.94,
+        "fim": 100.72,
+        "txt_inicio": 113,
+        "txt_fim": 117,
+        "score": 0.9302325581395349,
+        "texto": "feliz pra sempre com",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 16,
+        "inicio": 100.72,
+        "fim": 108.92,
+        "txt_inicio": 117,
+        "txt_fim": 126,
+        "score": 0.9863013698630136,
+        "texto": "você viver é ter você pra mim Por que",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 17,
+        "inicio": 108.92,
+        "fim": 118.78,
+        "txt_inicio": 126,
+        "txt_fim": 134,
+        "score": 0.96,
+        "texto": "você não traz o sol que faça amanhecer",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 18,
+        "inicio": 123.16,
+        "fim": 129.88,
+        "txt_inicio": 134,
+        "txt_fim": 142,
+        "score": 1.0,
+        "texto": "acende o azul do céu pra nunca mais",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 19,
+        "inicio": 129.88,
+        "fim": 138.22,
+        "txt_inicio": 142,
+        "txt_fim": 150,
+        "score": 1.0,
+        "texto": "ter que dizer adeus Toda vez que o",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 20,
+        "inicio": 138.22,
+        "fim": 142.32,
+        "txt_inicio": 150,
+        "txt_fim": 158,
+        "score": 1.0,
+        "texto": "sol esconde a tarde e a lua cede",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 21,
+        "inicio": 142.32,
+        "fim": 146.14,
+        "txt_inicio": 158,
+        "txt_fim": 166,
+        "score": 1.0,
+        "texto": "o azul do céu você chega assim meu",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 22,
+        "inicio": 146.14,
+        "fim": 154.42,
+        "txt_inicio": 166,
+        "txt_fim": 174,
+        "score": 1.0,
+        "texto": "bem sem me avisar toca meu coração e",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 23,
+        "inicio": 154.42,
+        "fim": 162.04,
+        "txt_inicio": 174,
+        "txt_fim": 183,
+        "score": 0.975,
+        "texto": "reacende em mim toda a emoção de amar que",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 24,
+        "inicio": 162.04,
+        "fim": 167.04,
+        "txt_inicio": 183,
+        "txt_fim": 191,
+        "score": 1.0,
+        "texto": "um grande amor nos faz viver O amor",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 25,
+        "inicio": 167.04,
+        "fim": 172.64,
+        "txt_inicio": 191,
+        "txt_fim": 198,
+        "score": 0.951219512195122,
+        "texto": "é mesmo assim nem sempre traz felicidade",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 26,
+        "inicio": 172.64,
+        "fim": 177.36,
+        "txt_inicio": 198,
+        "txt_fim": 206,
+        "score": 1.0,
+        "texto": "quando dói, dói pra valer e a gente",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 27,
+        "inicio": 177.36,
+        "fim": 182.88,
+        "txt_inicio": 206,
+        "txt_fim": 214,
+        "score": 0.9743589743589743,
+        "texto": "perde a ilusão mas quando vem faz tanto",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 28,
+        "inicio": 182.88,
+        "fim": 190.3,
+        "txt_inicio": 97,
+        "txt_fim": 106,
+        "score": 0.9882352941176471,
+        "texto": "bem liberta os sonhos e paixão Por que você",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 29,
+        "inicio": 190.3,
+        "fim": 198.38,
+        "txt_inicio": 106,
+        "txt_fim": 114,
+        "score": 1.0,
+        "texto": "não vem volta amor me deixa ser feliz",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 30,
+        "inicio": 198.38,
+        "fim": 208.36,
+        "txt_inicio": 114,
+        "txt_fim": 119,
+        "score": 0.9433962264150944,
+        "texto": "pra sempre com você viver",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 31,
+        "inicio": 208.36,
+        "fim": 215.24,
+        "txt_inicio": 119,
+        "txt_fim": 128,
+        "score": 0.9855072463768118,
+        "texto": "é ter você pra mim Por que você não",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 32,
+        "inicio": 215.24,
+        "fim": 229.36,
+        "txt_inicio": 128,
+        "txt_fim": 135,
+        "score": 0.9577464788732395,
+        "texto": "traz o sol que faça amanhecer acende",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 33,
+        "inicio": 229.36,
+        "fim": 234.98,
+        "txt_inicio": 135,
+        "txt_fim": 143,
+        "score": 1.0,
+        "texto": "o azul do céu pra nunca mais ter",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 34,
+        "inicio": 234.98,
+        "fim": 242.92,
+        "txt_inicio": 259,
+        "txt_fim": 268,
+        "score": 0.9873417721518988,
+        "texto": "que dizer adeus Por que você não vem pra",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 35,
+        "inicio": 242.92,
+        "fim": 254.46,
+        "txt_inicio": 268,
+        "txt_fim": 274,
+        "score": 1.0,
+        "texto": "mim Só sei amar você faz",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 36,
+        "inicio": 254.46,
+        "fim": 263.82,
+        "txt_inicio": 274,
+        "txt_fim": 282,
+        "score": 1.0,
+        "texto": "alguém feliz assim traz você pra mim amor",
+        "aviso": null
+      }
+    ],
+    "regioes": [
+      {
+        "indices": [
+          0
+        ],
+        "inicio": 9.76,
+        "fim": 13.2,
+        "txt_inicio": 0,
+        "txt_fim": 8,
+        "texto": "Toda vez que o sol esconde a tarde"
+      },
+      {
+        "indices": [
+          1
+        ],
+        "inicio": 13.2,
+        "fim": 17.16,
+        "txt_inicio": 8,
+        "txt_fim": 16,
+        "texto": "e a lua cede o azul do céu"
+      },
+      {
+        "indices": [
+          2
+        ],
+        "inicio": 17.16,
+        "fim": 22.78,
+        "txt_inicio": 16,
+        "txt_fim": 24,
+        "texto": "você chega assim meu bem sem me avisar"
+      },
+      {
+        "indices": [
+          3
+        ],
+        "inicio": 22.78,
+        "fim": 30.82,
+        "txt_inicio": 24,
+        "txt_fim": 32,
+        "texto": "toca meu coração e reacende em mim toda"
+      },
+      {
+        "indices": [
+          4
+        ],
+        "inicio": 30.82,
+        "fim": 37.06,
+        "txt_inicio": 33,
+        "txt_fim": 41,
+        "texto": "emoção de amar que um grande amor nos"
+      },
+      {
+        "indices": [
+          5
+        ],
+        "inicio": 37.06,
+        "fim": 43.74,
+        "txt_inicio": 41,
+        "txt_fim": 49,
+        "texto": "faz viver Simplesmente sinto neste instante que te"
+      },
+      {
+        "indices": [
+          6
+        ],
+        "inicio": 43.74,
+        "fim": 47.94,
+        "txt_inicio": 49,
+        "txt_fim": 57,
+        "texto": "quero tanto e te preciso e quando penso"
+      },
+      {
+        "indices": [
+          7
+        ],
+        "inicio": 47.94,
+        "fim": 55.62,
+        "txt_inicio": 57,
+        "txt_fim": 65,
+        "texto": "então em ter você aqui chora meu coração"
+      },
+      {
+        "indices": [
+          8
+        ],
+        "inicio": 56.42,
+        "fim": 61.88,
+        "txt_inicio": 65,
+        "txt_fim": 73,
+        "texto": "porque você não quis voltar pra mim O"
+      },
+      {
+        "indices": [
+          9
+        ],
+        "inicio": 61.88,
+        "fim": 66.14,
+        "txt_inicio": 73,
+        "txt_fim": 80,
+        "texto": "amor é mesmo assim nem sempre traz"
+      },
+      {
+        "indices": [
+          10
+        ],
+        "inicio": 66.14,
+        "fim": 72.2,
+        "txt_inicio": 80,
+        "txt_fim": 88,
+        "texto": "felicidade quando dói, dói pra valer e a"
+      },
+      {
+        "indices": [
+          11
+        ],
+        "inicio": 72.2,
+        "fim": 77.6,
+        "txt_inicio": 88,
+        "txt_fim": 96,
+        "texto": "gente perde a ilusão mas quando vem faz"
+      },
+      {
+        "indices": [
+          12
+        ],
+        "inicio": 77.6,
+        "fim": 84.22,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "tanto bem Liberta os sonhos e paixão Porque"
+      },
+      {
+        "indices": [
+          13
+        ],
+        "inicio": 84.22,
+        "fim": 91.94,
+        "txt_inicio": 105,
+        "txt_fim": 113,
+        "texto": "você não vem volta amor me deixa ser"
+      },
+      {
+        "indices": [
+          14
+        ],
+        "inicio": 91.94,
+        "fim": 100.72,
+        "txt_inicio": 113,
+        "txt_fim": 117,
+        "texto": "feliz pra sempre com"
+      },
+      {
+        "indices": [
+          15
+        ],
+        "inicio": 100.72,
+        "fim": 108.92,
+        "txt_inicio": 117,
+        "txt_fim": 126,
+        "texto": "você viver é ter você pra mim Por que"
+      },
+      {
+        "indices": [
+          16
+        ],
+        "inicio": 108.92,
+        "fim": 118.78,
+        "txt_inicio": 126,
+        "txt_fim": 134,
+        "texto": "você não traz o sol que faça amanhecer"
+      },
+      {
+        "indices": [
+          17
+        ],
+        "inicio": 123.16,
+        "fim": 129.88,
+        "txt_inicio": 134,
+        "txt_fim": 142,
+        "texto": "acende o azul do céu pra nunca mais"
+      },
+      {
+        "indices": [
+          18
+        ],
+        "inicio": 129.88,
+        "fim": 138.22,
+        "txt_inicio": 142,
+        "txt_fim": 150,
+        "texto": "ter que dizer adeus Toda vez que o"
+      },
+      {
+        "indices": [
+          19
+        ],
+        "inicio": 138.22,
+        "fim": 142.32,
+        "txt_inicio": 150,
+        "txt_fim": 158,
+        "texto": "sol esconde a tarde e a lua cede"
+      },
+      {
+        "indices": [
+          20
+        ],
+        "inicio": 142.32,
+        "fim": 146.14,
+        "txt_inicio": 158,
+        "txt_fim": 166,
+        "texto": "o azul do céu você chega assim meu"
+      },
+      {
+        "indices": [
+          21
+        ],
+        "inicio": 146.14,
+        "fim": 154.42,
+        "txt_inicio": 166,
+        "txt_fim": 174,
+        "texto": "bem sem me avisar toca meu coração e"
+      },
+      {
+        "indices": [
+          22
+        ],
+        "inicio": 154.42,
+        "fim": 162.04,
+        "txt_inicio": 174,
+        "txt_fim": 183,
+        "texto": "reacende em mim toda a emoção de amar que"
+      },
+      {
+        "indices": [
+          23
+        ],
+        "inicio": 162.04,
+        "fim": 167.04,
+        "txt_inicio": 183,
+        "txt_fim": 191,
+        "texto": "um grande amor nos faz viver O amor"
+      },
+      {
+        "indices": [
+          24
+        ],
+        "inicio": 167.04,
+        "fim": 172.64,
+        "txt_inicio": 191,
+        "txt_fim": 198,
+        "texto": "é mesmo assim nem sempre traz felicidade"
+      },
+      {
+        "indices": [
+          25
+        ],
+        "inicio": 172.64,
+        "fim": 177.36,
+        "txt_inicio": 198,
+        "txt_fim": 206,
+        "texto": "quando dói, dói pra valer e a gente"
+      },
+      {
+        "indices": [
+          26
+        ],
+        "inicio": 177.36,
+        "fim": 182.88,
+        "txt_inicio": 206,
+        "txt_fim": 214,
+        "texto": "perde a ilusão mas quando vem faz tanto"
+      },
+      {
+        "indices": [
+          27
+        ],
+        "inicio": 182.88,
+        "fim": 190.3,
+        "txt_inicio": 97,
+        "txt_fim": 106,
+        "texto": "bem liberta os sonhos e paixão Por que você"
+      },
+      {
+        "indices": [
+          28
+        ],
+        "inicio": 190.3,
+        "fim": 198.38,
+        "txt_inicio": 106,
+        "txt_fim": 114,
+        "texto": "não vem volta amor me deixa ser feliz"
+      },
+      {
+        "indices": [
+          29
+        ],
+        "inicio": 198.38,
+        "fim": 208.36,
+        "txt_inicio": 114,
+        "txt_fim": 119,
+        "texto": "pra sempre com você viver"
+      },
+      {
+        "indices": [
+          30
+        ],
+        "inicio": 208.36,
+        "fim": 215.24,
+        "txt_inicio": 119,
+        "txt_fim": 128,
+        "texto": "é ter você pra mim Por que você não"
+      },
+      {
+        "indices": [
+          31
+        ],
+        "inicio": 215.24,
+        "fim": 229.36,
+        "txt_inicio": 128,
+        "txt_fim": 135,
+        "texto": "traz o sol que faça amanhecer acende"
+      },
+      {
+        "indices": [
+          32
+        ],
+        "inicio": 229.36,
+        "fim": 234.98,
+        "txt_inicio": 135,
+        "txt_fim": 143,
+        "texto": "o azul do céu pra nunca mais ter"
+      },
+      {
+        "indices": [
+          33
+        ],
+        "inicio": 234.98,
+        "fim": 242.92,
+        "txt_inicio": 259,
+        "txt_fim": 268,
+        "texto": "que dizer adeus Por que você não vem pra"
+      },
+      {
+        "indices": [
+          34
+        ],
+        "inicio": 242.92,
+        "fim": 254.46,
+        "txt_inicio": 268,
+        "txt_fim": 274,
+        "texto": "mim Só sei amar você faz"
+      },
+      {
+        "indices": [
+          35
+        ],
+        "inicio": 254.46,
+        "fim": 263.82,
+        "txt_inicio": 274,
+        "txt_fim": 282,
+        "texto": "alguém feliz assim traz você pra mim amor"
+      }
+    ],
+    "tokens_txt_sem_correspondencia": [
+      32,
+      96,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244,
+      245,
+      246,
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258
+    ],
+    "parametros": {
+      "score_consulta_minimo": 0.65,
+      "margem_ambiguidade": 0.025,
+      "bonus_por_extremidade": 0.02,
+      "score_contexto_minimo": 0.85
+    }
+  },
+  "auditoria_estrutura": [
+    {
+      "bloco_srt": 1,
+      "inicio_original": 9.76,
+      "fim_original": 13.2,
+      "texto_original": "Toda vez que o sol esconde a tarde",
+      "texto_publicado": "Toda vez que o sol esconde a tarde",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 2,
+      "inicio_original": 13.2,
+      "fim_original": 17.16,
+      "texto_original": "E a lua cede o azul do céu",
+      "texto_publicado": "E a lua cede o azul do céu",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 3,
+      "inicio_original": 17.16,
+      "fim_original": 22.78,
+      "texto_original": "Você chega assim, meu bem, sem me avisar",
+      "texto_publicado": "Você chega assim meu bem sem me avisar",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 4,
+      "inicio_original": 22.78,
+      "fim_original": 30.82,
+      "texto_original": "Taca meu coração e reacende em mim Toda",
+      "texto_publicado": "Toca meu coração e reacende em mim toda",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 5,
+      "inicio_original": 30.82,
+      "fim_original": 37.06,
+      "texto_original": "emoção de amar Que um grande amor nos",
+      "texto_publicado": "Emoção de amar que um grande amor nos",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 6,
+      "inicio_original": 37.06,
+      "fim_original": 43.74,
+      "texto_original": "faz viver Simplesmente sinto nesse instante Que te",
+      "texto_publicado": "Faz viver simplesmente sinto neste instante que te",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 7,
+      "inicio_original": 43.74,
+      "fim_original": 47.94,
+      "texto_original": "quero tanto e te preciso E quando penso",
+      "texto_publicado": "Quero tanto e te preciso e quando penso",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 8,
+      "inicio_original": 47.94,
+      "fim_original": 55.62,
+      "texto_original": "então em ter você aqui Chora meu coração",
+      "texto_publicado": "Então em ter você aqui chora meu coração",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 9,
+      "inicio_original": 56.42,
+      "fim_original": 61.88,
+      "texto_original": "Porque você não quis voltar a mim O",
+      "texto_publicado": "Porque você não quis voltar pra mim o",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 10,
+      "inicio_original": 61.88,
+      "fim_original": 66.14,
+      "texto_original": "amor é mesmo assim Vem sempre e traz",
+      "texto_publicado": "Amor é mesmo assim vem sempre e traz",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 11,
+      "inicio_original": 66.14,
+      "fim_original": 72.2,
+      "texto_original": "felicidade Quando dói, dói pra valer E a",
+      "texto_publicado": "Felicidade quando dói, dói pra valer e a",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 12,
+      "inicio_original": 72.2,
+      "fim_original": 77.6,
+      "texto_original": "gente perde a ilusão Mas quando bem, faz",
+      "texto_publicado": "Gente perde a ilusão mas quando vem faz",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 13,
+      "inicio_original": 77.6,
+      "fim_original": 84.22,
+      "texto_original": "tanto bem Liberta os sonhos e paixão Porque",
+      "texto_publicado": "Tanto bem liberta os sonhos e paixão porque",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 14,
+      "inicio_original": 84.22,
+      "fim_original": 91.94,
+      "texto_original": "você não vem Volta, amor, me deixa ser",
+      "texto_publicado": "Você não vem volta amor me deixa ser",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 15,
+      "inicio_original": 91.94,
+      "fim_original": 100.72,
+      "texto_original": "feliz Pra sempre ir com",
+      "texto_publicado": "Feliz pra sempre ir com",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 16,
+      "inicio_original": 100.72,
+      "fim_original": 108.92,
+      "texto_original": "você Viver é ter você pra mim Porque",
+      "texto_publicado": "Você viver é ter você pra mim por que",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 17,
+      "inicio_original": 108.92,
+      "fim_original": 118.78,
+      "texto_original": "você não traz o sol Que faz amanhecer",
+      "texto_publicado": "Você não traz o sol que faça amanhecer",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 18,
+      "inicio_original": 123.16,
+      "fim_original": 129.88,
+      "texto_original": "Acende o azul do céu Pra nunca mais",
+      "texto_publicado": "Acende o azul do céu pra nunca mais",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 19,
+      "inicio_original": 129.88,
+      "fim_original": 138.22,
+      "texto_original": "ter que dizer adeus Toda vez que o",
+      "texto_publicado": "Ter que dizer adeus toda vez que o",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 20,
+      "inicio_original": 138.22,
+      "fim_original": 142.32,
+      "texto_original": "sol esconde a tarde E a lua cede",
+      "texto_publicado": "Sol esconde a tarde e a lua cede",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 21,
+      "inicio_original": 142.32,
+      "fim_original": 146.14,
+      "texto_original": "o azul do céu Você chega assim, meu",
+      "texto_publicado": "O azul do céu você chega assim meu",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 22,
+      "inicio_original": 146.14,
+      "fim_original": 154.42,
+      "texto_original": "bem, sem me avisar Toca meu coração e",
+      "texto_publicado": "Bem sem me avisar toca meu coração e",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 23,
+      "inicio_original": 154.42,
+      "fim_original": 162.04,
+      "texto_original": "reacende em mim Toda emoção de amar Que",
+      "texto_publicado": "Reacende em mim toda a emoção de amar que",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 24,
+      "inicio_original": 162.04,
+      "fim_original": 167.04,
+      "texto_original": "um grande amor nos faz viver O amor",
+      "texto_publicado": "Um grande amor nos faz viver o amor",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 25,
+      "inicio_original": 167.04,
+      "fim_original": 172.64,
+      "texto_original": "é mesmo assim Vem sempre e traz felicidade",
+      "texto_publicado": "É mesmo assim vem sempre e traz felicidade",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 26,
+      "inicio_original": 172.64,
+      "fim_original": 177.36,
+      "texto_original": "Quando dói, dói pra valer E a gente",
+      "texto_publicado": "Quando dói, dói pra valer e a gente",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 27,
+      "inicio_original": 177.36,
+      "fim_original": 182.88,
+      "texto_original": "perde a ilusão Mas quando bem, faz tanto",
+      "texto_publicado": "Perde a ilusão mas quando vem faz tanto",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 28,
+      "inicio_original": 182.88,
+      "fim_original": 190.3,
+      "texto_original": "bem Liberta os sonhos e paixão Porque você",
+      "texto_publicado": "Bem liberta os sonhos e paixão por que você",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 29,
+      "inicio_original": 190.3,
+      "fim_original": 198.38,
+      "texto_original": "não vem Volta, amor, me deixa ser feliz",
+      "texto_publicado": "Não vem volta amor me deixa ser feliz",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 30,
+      "inicio_original": 198.38,
+      "fim_original": 208.36,
+      "texto_original": "Pra sempre ir com você Viver",
+      "texto_publicado": "Pra sempre ir com você viver",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 31,
+      "inicio_original": 208.36,
+      "fim_original": 215.24,
+      "texto_original": "é ter você pra mim Porque você não",
+      "texto_publicado": "É ter você pra mim por que você não",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 32,
+      "inicio_original": 215.24,
+      "fim_original": 229.36,
+      "texto_original": "traz o sol Que faz amanhecer Acende",
+      "texto_publicado": "Traz o sol que faça amanhecer acende",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 33,
+      "inicio_original": 229.36,
+      "fim_original": 234.98,
+      "texto_original": "o azul do céu Pra nunca mais ter",
+      "texto_publicado": "O azul do céu pra nunca mais ter",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 34,
+      "inicio_original": 234.98,
+      "fim_original": 242.92,
+      "texto_original": "que dizer adeus Porque você não vem pra",
+      "texto_publicado": "Que dizer adeus por que você não vem pra",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 35,
+      "inicio_original": 242.92,
+      "fim_original": 254.46,
+      "texto_original": "mim Só sei amar você Faz",
+      "texto_publicado": "Mim só sei amar você faz",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 36,
+      "inicio_original": 254.46,
+      "fim_original": 263.82,
+      "texto_original": "alguém feliz assim Traz você pra mim Amor",
+      "texto_publicado": "Alguém feliz assim traz você pra mim amor",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    }
+  ],
+  "recuperacoes": [
+    {
+      "id": 1,
+      "txt_inicio": 32,
+      "txt_fim": 33,
+      "inicio": 30.82,
+      "fim": 30.82,
+      "bloco_anterior": 4,
+      "bloco_seguinte": 5,
+      "limite_busca": 30.0,
+      "motivo_nao_pesquisado": "sem_espaco_temporal_entre_blocos",
+      "estado": "nao_pesquisado",
+      "tentativas": [],
+      "inseridos": [],
+      "tokens_recuperados": []
+    },
+    {
+      "id": 2,
+      "txt_inicio": 143,
+      "txt_fim": 259,
+      "inicio": 234.98,
+      "fim": 234.98,
+      "bloco_anterior": 33,
+      "bloco_seguinte": 34,
+      "limite_busca": 90.0,
+      "motivo_nao_pesquisado": "sem_espaco_temporal_entre_blocos",
+      "estado": "nao_pesquisado",
+      "tentativas": [],
+      "inseridos": [],
+      "tokens_recuperados": []
+    }
+  ],
+  "tentativas": [],
+  "pendencias": [
+    {
+      "bloco_srt": 10,
+      "motivo": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 13,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 15,
+      "motivo": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 25,
+      "motivo": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 30,
+      "motivo": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "lacuna": 1,
+      "motivo": "nao_pesquisado",
+      "detalhe": "sem_espaco_temporal_entre_blocos"
+    },
+    {
+      "lacuna": 2,
+      "motivo": "nao_pesquisado",
+      "detalhe": "sem_espaco_temporal_entre_blocos"
+    },
+    {
+      "motivo": "texto_txt_sem_tempo",
+      "tokens_txt": [
+        32,
+        96,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258
+      ]
+    }
+  ],
+  "blocos": [
+    {
+      "inicio": 9.76,
+      "fim": 13.2,
+      "texto": "Toda vez que o sol esconde a tarde",
+      "origem": "original_preservado",
+      "bloco_original": 1
+    },
+    {
+      "inicio": 13.2,
+      "fim": 17.16,
+      "texto": "E a lua cede o azul do céu",
+      "origem": "texto_corrigido",
+      "bloco_original": 2
+    },
+    {
+      "inicio": 17.16,
+      "fim": 22.78,
+      "texto": "Você chega assim meu bem sem me avisar",
+      "origem": "texto_corrigido",
+      "bloco_original": 3
+    },
+    {
+      "inicio": 22.78,
+      "fim": 30.82,
+      "texto": "Toca meu coração e reacende em mim toda",
+      "origem": "texto_corrigido",
+      "bloco_original": 4
+    },
+    {
+      "inicio": 30.82,
+      "fim": 37.06,
+      "texto": "Emoção de amar que um grande amor nos",
+      "origem": "texto_corrigido",
+      "bloco_original": 5
+    },
+    {
+      "inicio": 37.06,
+      "fim": 43.74,
+      "texto": "Faz viver simplesmente sinto neste instante que te",
+      "origem": "texto_corrigido",
+      "bloco_original": 6
+    },
+    {
+      "inicio": 43.74,
+      "fim": 47.94,
+      "texto": "Quero tanto e te preciso e quando penso",
+      "origem": "texto_corrigido",
+      "bloco_original": 7
+    },
+    {
+      "inicio": 47.94,
+      "fim": 55.62,
+      "texto": "Então em ter você aqui chora meu coração",
+      "origem": "texto_corrigido",
+      "bloco_original": 8
+    },
+    {
+      "inicio": 56.42,
+      "fim": 61.88,
+      "texto": "Porque você não quis voltar pra mim o",
+      "origem": "texto_corrigido",
+      "bloco_original": 9
+    },
+    {
+      "inicio": 61.88,
+      "fim": 66.14,
+      "texto": "Amor é mesmo assim vem sempre e traz",
+      "origem": "original_preservado",
+      "bloco_original": 10
+    },
+    {
+      "inicio": 66.14,
+      "fim": 72.2,
+      "texto": "Felicidade quando dói, dói pra valer e a",
+      "origem": "texto_corrigido",
+      "bloco_original": 11
+    },
+    {
+      "inicio": 72.2,
+      "fim": 77.6,
+      "texto": "Gente perde a ilusão mas quando vem faz",
+      "origem": "texto_corrigido",
+      "bloco_original": 12
+    },
+    {
+      "inicio": 77.6,
+      "fim": 84.22,
+      "texto": "Tanto bem liberta os sonhos e paixão porque",
+      "origem": "original_preservado",
+      "bloco_original": 13
+    },
+    {
+      "inicio": 84.22,
+      "fim": 91.94,
+      "texto": "Você não vem volta amor me deixa ser",
+      "origem": "texto_corrigido",
+      "bloco_original": 14
+    },
+    {
+      "inicio": 91.94,
+      "fim": 100.72,
+      "texto": "Feliz pra sempre ir com",
+      "origem": "original_preservado",
+      "bloco_original": 15
+    },
+    {
+      "inicio": 100.72,
+      "fim": 108.92,
+      "texto": "Você viver é ter você pra mim por que",
+      "origem": "texto_corrigido",
+      "bloco_original": 16
+    },
+    {
+      "inicio": 108.92,
+      "fim": 118.78,
+      "texto": "Você não traz o sol que faça amanhecer",
+      "origem": "texto_corrigido",
+      "bloco_original": 17
+    },
+    {
+      "inicio": 123.16,
+      "fim": 129.88,
+      "texto": "Acende o azul do céu pra nunca mais",
+      "origem": "texto_corrigido",
+      "bloco_original": 18
+    },
+    {
+      "inicio": 129.88,
+      "fim": 138.22,
+      "texto": "Ter que dizer adeus toda vez que o",
+      "origem": "original_preservado",
+      "bloco_original": 19
+    },
+    {
+      "inicio": 138.22,
+      "fim": 142.32,
+      "texto": "Sol esconde a tarde e a lua cede",
+      "origem": "texto_corrigido",
+      "bloco_original": 20
+    },
+    {
+      "inicio": 142.32,
+      "fim": 146.14,
+      "texto": "O azul do céu você chega assim meu",
+      "origem": "texto_corrigido",
+      "bloco_original": 21
+    },
+    {
+      "inicio": 146.14,
+      "fim": 154.42,
+      "texto": "Bem sem me avisar toca meu coração e",
+      "origem": "texto_corrigido",
+      "bloco_original": 22
+    },
+    {
+      "inicio": 154.42,
+      "fim": 162.04,
+      "texto": "Reacende em mim toda a emoção de amar que",
+      "origem": "texto_corrigido",
+      "bloco_original": 23
+    },
+    {
+      "inicio": 162.04,
+      "fim": 167.04,
+      "texto": "Um grande amor nos faz viver o amor",
+      "origem": "original_preservado",
+      "bloco_original": 24
+    },
+    {
+      "inicio": 167.04,
+      "fim": 172.64,
+      "texto": "É mesmo assim vem sempre e traz felicidade",
+      "origem": "original_preservado",
+      "bloco_original": 25
+    },
+    {
+      "inicio": 172.64,
+      "fim": 177.36,
+      "texto": "Quando dói, dói pra valer e a gente",
+      "origem": "texto_corrigido",
+      "bloco_original": 26
+    },
+    {
+      "inicio": 177.36,
+      "fim": 182.88,
+      "texto": "Perde a ilusão mas quando vem faz tanto",
+      "origem": "texto_corrigido",
+      "bloco_original": 27
+    },
+    {
+      "inicio": 182.88,
+      "fim": 190.3,
+      "texto": "Bem liberta os sonhos e paixão por que você",
+      "origem": "texto_corrigido",
+      "bloco_original": 28
+    },
+    {
+      "inicio": 190.3,
+      "fim": 198.38,
+      "texto": "Não vem volta amor me deixa ser feliz",
+      "origem": "texto_corrigido",
+      "bloco_original": 29
+    },
+    {
+      "inicio": 198.38,
+      "fim": 208.36,
+      "texto": "Pra sempre ir com você viver",
+      "origem": "original_preservado",
+      "bloco_original": 30
+    },
+    {
+      "inicio": 208.36,
+      "fim": 215.24,
+      "texto": "É ter você pra mim por que você não",
+      "origem": "texto_corrigido",
+      "bloco_original": 31
+    },
+    {
+      "inicio": 215.24,
+      "fim": 229.36,
+      "texto": "Traz o sol que faça amanhecer acende",
+      "origem": "texto_corrigido",
+      "bloco_original": 32
+    },
+    {
+      "inicio": 229.36,
+      "fim": 234.98,
+      "texto": "O azul do céu pra nunca mais ter",
+      "origem": "texto_corrigido",
+      "bloco_original": 33
+    },
+    {
+      "inicio": 234.98,
+      "fim": 242.92,
+      "texto": "Que dizer adeus por que você não vem pra",
+      "origem": "texto_corrigido",
+      "bloco_original": 34
+    },
+    {
+      "inicio": 242.92,
+      "fim": 254.46,
+      "texto": "Mim só sei amar você faz",
+      "origem": "texto_corrigido",
+      "bloco_original": 35
+    },
+    {
+      "inicio": 254.46,
+      "fim": 263.82,
+      "texto": "Alguém feliz assim traz você pra mim amor",
+      "origem": "texto_corrigido",
+      "bloco_original": 36
+    }
+  ],
+  "configuracao_motor": {
+    "idioma": "pt",
+    "dispositivo": "cpu",
+    "modelo_solicitado": null
+  },
+  "fontes": {
+    "txt": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\romanticas\\viver-e-ter-voce-pra-mim-robson-monteiro\\letra.txt",
+      "sha256": "09aede7bf7065759431cc61e0a81246bfadf9efa9c96128701852a1d6248ed11"
+    },
+    "srt": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\romanticas\\viver-e-ter-voce-pra-mim-robson-monteiro\\letra.srt",
+      "sha256": "2714640f8eda172f871e000e887d0fdeb9fdef6be84e9f26a33cca6cd33f420e"
+    },
+    "voz": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\romanticas\\viver-e-ter-voce-pra-mim-robson-monteiro\\voz.mp3",
+      "sha256": "a7253b4316c17865e98fab7f399d0fa5d8fa9179214d300cbea41ea77efb0ef6"
+    }
+  },
+  "resumo_avisos": [
+    "Bloco 10: texto exclusivo srt preservado.",
+    "Bloco 13: consulta txt ambigua original preservado.",
+    "Bloco 15: texto exclusivo srt preservado.",
+    "Bloco 25: texto exclusivo srt preservado.",
+    "Bloco 30: texto exclusivo srt preservado.",
+    "Lacuna 1: nao pesquisado (00:00:30,820–00:00:30,820).",
+    "Lacuna 2: nao pesquisado (00:03:54,980–00:03:54,980).",
+    "TXT linha 5, sem tempo: a",
+    "TXT linha 16, sem tempo: tanto",
+    "TXT linha 37, sem tempo: bem",
+    "TXT linha 38, sem tempo: liberta sonhos e paixão",
+    "TXT linha 39, sem tempo: Por que você não vem",
+    "TXT linha 40, sem tempo: volta amor",
+    "TXT linha 41, sem tempo: me deixa ser feliz",
+    "TXT linha 42, sem tempo: pra sempre com você",
+    "TXT linha 43, sem tempo: viver é ter você pra mim",
+    "TXT linha 44, sem tempo: Por que você não traz o sol",
+    "TXT linha 45, sem tempo: que faça amanhecer",
+    "TXT linha 46, sem tempo: acende o azul do céu",
+    "TXT linha 47, sem tempo: pra nunca mais ter"
+  ]
+}

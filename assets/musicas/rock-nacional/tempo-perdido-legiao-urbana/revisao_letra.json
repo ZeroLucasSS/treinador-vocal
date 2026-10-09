@@ -1,0 +1,226 @@
+{
+  "versao": 1,
+  "fontes": {
+    "consolidada": "5d88e9cb7918f48ee48beefa878f2206fa440d0a09c425f4e5bdcfbc06e500b9",
+    "txt": "a01bf708eb819fcb8f319af1d3b0cc0c42d55b26a12df1b343b2bcf6693f2903",
+    "srt": "2ae808faff2108c74f996c7eb23ca976a5de16e7c56eed18bc42cf23e0becf4e",
+    "voz": "20ca3dbabb6856b2849b2d0900f21bc63041151e71827bbd27f405718bcfd6fc"
+  },
+  "criado": "2026-10-09T00:26:29.977863+00:00",
+  "blocos": [
+    {
+      "id": "srt:1",
+      "inicio": 20.23,
+      "fim": 28.67,
+      "texto": "Todos os dias quando acordo não tenho mais",
+      "palavras": []
+    },
+    {
+      "id": "srt:2",
+      "inicio": 28.67,
+      "fim": 33.69,
+      "texto": "O tempo que passou mas tenho muito tempo",
+      "palavras": []
+    },
+    {
+      "id": "srt:3",
+      "inicio": 35.89,
+      "fim": 40.39,
+      "texto": "Temos todo o tempo do mundo",
+      "palavras": []
+    },
+    {
+      "id": "srt:4",
+      "inicio": 42.43,
+      "fim": 47.93,
+      "texto": "Todos os dias antes de dormir lembro e",
+      "palavras": []
+    },
+    {
+      "id": "srt:5",
+      "inicio": 47.93,
+      "fim": 50.51,
+      "texto": "Esqueço como foi o dia",
+      "palavras": []
+    },
+    {
+      "id": "srt:6",
+      "inicio": 51.51,
+      "fim": 60.45,
+      "texto": "Sempre em frente não temos tempo a perder",
+      "palavras": []
+    },
+    {
+      "id": "srt:7",
+      "inicio": 61.87,
+      "fim": 68.77,
+      "texto": "Nosso suor sagrado é bem mais belo que",
+      "palavras": []
+    },
+    {
+      "id": "srt:8",
+      "inicio": 68.77,
+      "fim": 74.93,
+      "texto": "Esse sangue amargo e tão sério",
+      "palavras": []
+    },
+    {
+      "id": "srt:9",
+      "inicio": 75.93,
+      "fim": 86.59,
+      "texto": "E selvagem selvagem",
+      "palavras": []
+    },
+    {
+      "id": "srt:10",
+      "inicio": 87.53,
+      "fim": 91.59,
+      "texto": "Selvagem",
+      "palavras": []
+    },
+    {
+      "id": "srt:11",
+      "inicio": 103.01,
+      "fim": 108.61,
+      "texto": "Veja o sol dessa manhã tão cinza",
+      "palavras": []
+    },
+    {
+      "id": "srt:12",
+      "inicio": 109.61,
+      "fim": 115.09,
+      "texto": "A tempestade que chega é da cor dos",
+      "palavras": []
+    },
+    {
+      "id": "srt:13",
+      "inicio": 115.09,
+      "fim": 116.27,
+      "texto": "Teus olhos",
+      "palavras": []
+    },
+    {
+      "id": "srt:14",
+      "inicio": 120.67,
+      "fim": 126.41,
+      "texto": "Castanhos então me abraça forte",
+      "palavras": []
+    },
+    {
+      "id": "srt:15",
+      "inicio": 129.35,
+      "fim": 133.21,
+      "texto": "Me diz mais uma vez que já estamos",
+      "palavras": []
+    },
+    {
+      "id": "srt:16",
+      "inicio": 133.21,
+      "fim": 138.39,
+      "texto": "Distantes de tudo",
+      "palavras": []
+    },
+    {
+      "id": "srt:17",
+      "inicio": 139.972,
+      "fim": 144.297,
+      "texto": "Temos nosso próprio tempo",
+      "palavras": []
+    },
+    {
+      "id": "srt:18",
+      "inicio": 145.138,
+      "fim": 149.604,
+      "texto": "Temos nosso próprio tempo",
+      "palavras": []
+    },
+    {
+      "id": "srt:19",
+      "inicio": 150.344,
+      "fim": 154.409,
+      "texto": "Temos nosso próprio tempo",
+      "palavras": []
+    },
+    {
+      "id": "srt:20",
+      "inicio": 154.93,
+      "fim": 160.29,
+      "texto": "Não tenho medo do escuro",
+      "palavras": []
+    },
+    {
+      "id": "srt:21",
+      "inicio": 161.21,
+      "fim": 170.07,
+      "texto": "Mas deixe as luzes acesas",
+      "palavras": []
+    },
+    {
+      "id": "srt:22",
+      "inicio": 170.07,
+      "fim": 171.41,
+      "texto": "Agora",
+      "palavras": []
+    },
+    {
+      "id": "srt:23",
+      "inicio": 175.52,
+      "fim": 179.62,
+      "texto": "O que foi escondido é o que se",
+      "palavras": []
+    },
+    {
+      "id": "srt:24",
+      "inicio": 179.62,
+      "fim": 180.54,
+      "texto": "Escondeu",
+      "palavras": []
+    },
+    {
+      "id": "srt:25",
+      "inicio": 180.76,
+      "fim": 185.58,
+      "texto": "E o que foi prometido, ninguém prometeu",
+      "palavras": []
+    },
+    {
+      "id": "srt:26",
+      "inicio": 185.98,
+      "fim": 188.58,
+      "texto": "Nem foi tempo perdido",
+      "palavras": []
+    },
+    {
+      "id": "srt:27",
+      "inicio": 189.58,
+      "fim": 195.8,
+      "texto": "Somos tão jovens",
+      "palavras": []
+    },
+    {
+      "id": "srt:28",
+      "inicio": 196.18,
+      "fim": 200.48,
+      "texto": "Tão jovens",
+      "palavras": []
+    },
+    {
+      "id": "srt:29",
+      "inicio": 201.5,
+      "fim": 203.76,
+      "texto": "Tão jovens",
+      "palavras": []
+    }
+  ],
+  "decisoes": {},
+  "rascunhos": {},
+  "historico": [],
+  "revisoes_anteriores": [],
+  "atualizado": "2026-10-09T00:26:30.040601+00:00",
+  "pendencias": [],
+  "resumo": {
+    "ocorrencias_pendentes": 0,
+    "blocos": 29,
+    "palavras_confirmadas": 0
+  }
+}

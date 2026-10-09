@@ -1,0 +1,1888 @@
+{
+  "versao": 1,
+  "fontes": {
+    "consolidada": "b6d13be1afc520deba9e444639b26ceb154563679677c5d5f263ae146b064c86",
+    "txt": "287b59c235108cd31f0dbdc58f3e0ad39227a91ee6b2e0815a5aece707de6e37",
+    "srt": "5be3ae21fbace833f907bb54d65244f1fd2e8ff06598a5567d1301a0c70a10d1",
+    "voz": "a8c8274d7b6875d7498785af45231ac385724ab57571fdd16efe87322c2e2cef"
+  },
+  "criado": "2026-10-09T01:28:27.874335+00:00",
+  "blocos": [
+    {
+      "id": "srt:1",
+      "inicio": 5.58,
+      "fim": 20.87,
+      "texto": "Mística sublime, te receber, ter comunhão, ter",
+      "palavras": []
+    },
+    {
+      "id": "srt:2",
+      "inicio": 20.87,
+      "fim": 28.47,
+      "texto": "Correndo em mim teu sangue, deus estou em",
+      "palavras": []
+    },
+    {
+      "id": "srt:3",
+      "inicio": 28.47,
+      "fim": 29.81,
+      "texto": "Comunhão",
+      "palavras": []
+    },
+    {
+      "id": "srt:4",
+      "inicio": 34.81,
+      "fim": 42.19,
+      "texto": "Alguém dirá que um deus tão grande assim",
+      "palavras": []
+    },
+    {
+      "id": "srt:5",
+      "inicio": 42.19,
+      "fim": 48.05,
+      "texto": "Não se dará por mim?",
+      "palavras": []
+    },
+    {
+      "id": "srt:6",
+      "inicio": 49.55,
+      "fim": 55.41,
+      "texto": "O que os meus olhos veem não é",
+      "palavras": []
+    },
+    {
+      "id": "srt:7",
+      "inicio": 55.41,
+      "fim": 60.69,
+      "texto": "O que minh'alma diz",
+      "palavras": []
+    },
+    {
+      "id": "srt:8",
+      "inicio": 64.37,
+      "fim": 79.45,
+      "texto": "Mística sublime, te receber e ter comunhão ter",
+      "palavras": []
+    },
+    {
+      "id": "srt:9",
+      "inicio": 79.45,
+      "fim": 87.19,
+      "texto": "Correndo em mim teu sangue, deus estou em",
+      "palavras": []
+    },
+    {
+      "id": "srt:10",
+      "inicio": 87.19,
+      "fim": 89.21,
+      "texto": "Comunhão,",
+      "palavras": []
+    },
+    {
+      "id": "srt:11",
+      "inicio": 91.4,
+      "fim": 91.58,
+      "texto": "Oh",
+      "palavras": []
+    },
+    {
+      "id": "srt:12",
+      "inicio": 93.79,
+      "fim": 101.47,
+      "texto": "Alguém dirá que um deus tão grande assim",
+      "palavras": []
+    },
+    {
+      "id": "srt:13",
+      "inicio": 101.47,
+      "fim": 107.73,
+      "texto": "Não se dará por mim?",
+      "palavras": []
+    },
+    {
+      "id": "srt:14",
+      "inicio": 108.39,
+      "fim": 114.63,
+      "texto": "O que os meus olhos veem não é",
+      "palavras": []
+    },
+    {
+      "id": "srt:15",
+      "inicio": 114.63,
+      "fim": 120.57,
+      "texto": "O que minh'alma diz,",
+      "palavras": []
+    },
+    {
+      "id": "srt:16",
+      "inicio": 120.57,
+      "fim": 126.43,
+      "texto": "E ela diz já não é mais vinho,",
+      "palavras": []
+    },
+    {
+      "id": "srt:17",
+      "inicio": 127.27,
+      "fim": 128.35,
+      "texto": "Não",
+      "palavras": []
+    },
+    {
+      "id": "srt:18",
+      "inicio": 130.14,
+      "fim": 138.93,
+      "texto": "É o sangue do meu deus já não",
+      "palavras": []
+    },
+    {
+      "id": "srt:19",
+      "inicio": 138.93,
+      "fim": 142.27,
+      "texto": "É mais pão aqui",
+      "palavras": []
+    },
+    {
+      "id": "srt:20",
+      "inicio": 142.27,
+      "fim": 150.37,
+      "texto": "É o corpo do meu amor do meu",
+      "palavras": []
+    },
+    {
+      "id": "srt:21",
+      "inicio": 150.37,
+      "fim": 151.35,
+      "texto": "Amor",
+      "palavras": []
+    },
+    {
+      "id": "srt:22",
+      "inicio": 152.71,
+      "fim": 161.17,
+      "texto": "Nesse lugar eu posso dizer que estás dentro",
+      "palavras": []
+    },
+    {
+      "id": "srt:23",
+      "inicio": 161.17,
+      "fim": 162.81,
+      "texto": "De mim",
+      "palavras": []
+    },
+    {
+      "id": "srt:24",
+      "inicio": 162.81,
+      "fim": 171.09,
+      "texto": "E eu dentro de você nesse lugar eu",
+      "palavras": []
+    },
+    {
+      "id": "srt:25",
+      "inicio": 171.09,
+      "fim": 176.87,
+      "texto": "Posso dizer que estás dentro de mim",
+      "palavras": []
+    },
+    {
+      "id": "srt:26",
+      "inicio": 178.01,
+      "fim": 180.891,
+      "texto": "E eu dentro de você",
+      "palavras": []
+    },
+    {
+      "id": "srt:27",
+      "inicio": 180.911,
+      "fim": 185.173,
+      "texto": "E eu dentro de você",
+      "palavras": []
+    },
+    {
+      "id": "srt:28",
+      "inicio": 185.233,
+      "fim": 186.893,
+      "texto": "E eu dentro de você",
+      "palavras": []
+    },
+    {
+      "id": "srt:29",
+      "inicio": 187.133,
+      "fim": 192.535,
+      "texto": "E eu dentro de você",
+      "palavras": []
+    },
+    {
+      "id": "srt:30",
+      "inicio": 192.615,
+      "fim": 194.876,
+      "texto": "E eu dentro de você",
+      "palavras": []
+    },
+    {
+      "id": "srt:31",
+      "inicio": 196.376,
+      "fim": 198.697,
+      "texto": "Eu dentro de você",
+      "palavras": []
+    },
+    {
+      "id": "srt:32",
+      "inicio": 200.018,
+      "fim": 201.598,
+      "texto": "E eu dentro de você",
+      "palavras": []
+    },
+    {
+      "id": "srt:33",
+      "inicio": 201.838,
+      "fim": 205.559,
+      "texto": "E eu dentro de você",
+      "palavras": []
+    },
+    {
+      "id": "srt:34",
+      "inicio": 207.14,
+      "fim": 213.02,
+      "texto": "E eu dentro de você agora nós dois",
+      "palavras": []
+    },
+    {
+      "id": "srt:35",
+      "inicio": 213.02,
+      "fim": 215.58,
+      "texto": "Somos um",
+      "palavras": []
+    },
+    {
+      "id": "srt:36",
+      "inicio": 218.442,
+      "fim": 222.785,
+      "texto": "Agora nós dois somos um",
+      "palavras": []
+    },
+    {
+      "id": "srt:37",
+      "inicio": 225.767,
+      "fim": 229.39,
+      "texto": "Agora nós dois somos um (oh oh)",
+      "palavras": []
+    },
+    {
+      "id": "srt:38",
+      "inicio": 233.053,
+      "fim": 238.537,
+      "texto": "Agora nós dois somos um, um",
+      "palavras": []
+    },
+    {
+      "id": "srt:39",
+      "inicio": 243.04,
+      "fim": 250.94,
+      "texto": "Somos um somos um",
+      "palavras": []
+    },
+    {
+      "id": "srt:40",
+      "inicio": 252.203,
+      "fim": 252.704,
+      "texto": "Somos um",
+      "palavras": []
+    },
+    {
+      "id": "srt:41",
+      "inicio": 259.74,
+      "fim": 265.0,
+      "texto": "Eu e você só eu e você",
+      "palavras": []
+    },
+    {
+      "id": "srt:42",
+      "inicio": 270.9,
+      "fim": 280.58,
+      "texto": "Somos um somos um",
+      "palavras": []
+    },
+    {
+      "id": "srt:43",
+      "inicio": 285.57,
+      "fim": 289.09,
+      "texto": "Somos um, somos um",
+      "palavras": []
+    },
+    {
+      "id": "srt:44",
+      "inicio": 292.434,
+      "fim": 295.798,
+      "texto": "Oh, oh, oh",
+      "palavras": []
+    }
+  ],
+  "decisoes": {
+    "txt:0:4": {
+      "acao": "associar",
+      "alvos": [
+        "srt:1"
+      ],
+      "novos": [],
+      "data": "2026-10-09T01:28:56.037508+00:00"
+    },
+    "txt:4:6": {
+      "acao": "associar",
+      "alvos": [
+        "srt:1"
+      ],
+      "novos": [],
+      "data": "2026-10-09T01:29:10.750649+00:00"
+    },
+    "txt:6:7": {
+      "acao": "descartar",
+      "alvos": [],
+      "novos": [],
+      "data": "2026-10-09T01:29:24.904575+00:00"
+    },
+    "pendencia:srt:1": {
+      "acao": "associar",
+      "alvos": [
+        "srt:1"
+      ],
+      "novos": [],
+      "data": "2026-10-09T01:29:37.850696+00:00"
+    }
+  },
+  "rascunhos": {
+    "txt:0:4": {
+      "texto": "Mística sublime, Te receber",
+      "inicio": "00:05,580",
+      "fim": "00:20,870",
+      "palavras": [
+        {
+          "texto": "Mística",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "sublime",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "Te",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "receber",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        }
+      ],
+      "alvos": []
+    },
+    "txt:4:6": {
+      "texto": "Ter comunhão",
+      "inicio": "00:28,470",
+      "fim": "00:29,810",
+      "palavras": [
+        {
+          "texto": "Ter",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "comunhão",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        }
+      ],
+      "alvos": []
+    },
+    "txt:6:7": {
+      "texto": "Ter",
+      "inicio": "02:30,370",
+      "fim": "02:31,350",
+      "palavras": [
+        {
+          "texto": "Ter",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        }
+      ],
+      "alvos": []
+    },
+    "pendencia:srt:1": {
+      "texto": "Mística sublime, te receber, ter comunhão, ter",
+      "inicio": "00:05,580",
+      "fim": "00:20,870",
+      "palavras": [
+        {
+          "texto": "Mística",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "sublime",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "te",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "receber",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "ter",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "comunhão",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "ter",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        }
+      ],
+      "alvos": []
+    },
+    "editar:srt:1": {
+      "texto": "Mística sublime, te receber, ter comunhão, ter",
+      "inicio": "00:05,580",
+      "fim": "00:20,870",
+      "palavras": [
+        {
+          "texto": "Mística",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "sublime",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "te",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "receber",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "ter",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "comunhão",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "ter",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        }
+      ],
+      "alvos": [
+        "srt:1"
+      ]
+    }
+  },
+  "historico": [
+    {
+      "item": "txt:0:4",
+      "decisao": {
+        "acao": "associar",
+        "alvos": [
+          "srt:1"
+        ],
+        "novos": [],
+        "data": "2026-10-09T01:28:56.037508+00:00"
+      },
+      "blocos_antes": [
+        {
+          "id": "srt:1",
+          "inicio": 5.58,
+          "fim": 20.87,
+          "texto": "Mística sublime, te receber, ter comunhão, ter",
+          "palavras": []
+        },
+        {
+          "id": "srt:2",
+          "inicio": 20.87,
+          "fim": 28.47,
+          "texto": "Correndo em mim teu sangue, deus estou em",
+          "palavras": []
+        },
+        {
+          "id": "srt:3",
+          "inicio": 28.47,
+          "fim": 29.81,
+          "texto": "Comunhão",
+          "palavras": []
+        },
+        {
+          "id": "srt:4",
+          "inicio": 34.81,
+          "fim": 42.19,
+          "texto": "Alguém dirá que um deus tão grande assim",
+          "palavras": []
+        },
+        {
+          "id": "srt:5",
+          "inicio": 42.19,
+          "fim": 48.05,
+          "texto": "Não se dará por mim?",
+          "palavras": []
+        },
+        {
+          "id": "srt:6",
+          "inicio": 49.55,
+          "fim": 55.41,
+          "texto": "O que os meus olhos veem não é",
+          "palavras": []
+        },
+        {
+          "id": "srt:7",
+          "inicio": 55.41,
+          "fim": 60.69,
+          "texto": "O que minh'alma diz",
+          "palavras": []
+        },
+        {
+          "id": "srt:8",
+          "inicio": 64.37,
+          "fim": 79.45,
+          "texto": "Mística sublime, te receber e ter comunhão ter",
+          "palavras": []
+        },
+        {
+          "id": "srt:9",
+          "inicio": 79.45,
+          "fim": 87.19,
+          "texto": "Correndo em mim teu sangue, deus estou em",
+          "palavras": []
+        },
+        {
+          "id": "srt:10",
+          "inicio": 87.19,
+          "fim": 89.21,
+          "texto": "Comunhão,",
+          "palavras": []
+        },
+        {
+          "id": "srt:11",
+          "inicio": 91.4,
+          "fim": 91.58,
+          "texto": "Oh",
+          "palavras": []
+        },
+        {
+          "id": "srt:12",
+          "inicio": 93.79,
+          "fim": 101.47,
+          "texto": "Alguém dirá que um deus tão grande assim",
+          "palavras": []
+        },
+        {
+          "id": "srt:13",
+          "inicio": 101.47,
+          "fim": 107.73,
+          "texto": "Não se dará por mim?",
+          "palavras": []
+        },
+        {
+          "id": "srt:14",
+          "inicio": 108.39,
+          "fim": 114.63,
+          "texto": "O que os meus olhos veem não é",
+          "palavras": []
+        },
+        {
+          "id": "srt:15",
+          "inicio": 114.63,
+          "fim": 120.57,
+          "texto": "O que minh'alma diz,",
+          "palavras": []
+        },
+        {
+          "id": "srt:16",
+          "inicio": 120.57,
+          "fim": 126.43,
+          "texto": "E ela diz já não é mais vinho,",
+          "palavras": []
+        },
+        {
+          "id": "srt:17",
+          "inicio": 127.27,
+          "fim": 128.35,
+          "texto": "Não",
+          "palavras": []
+        },
+        {
+          "id": "srt:18",
+          "inicio": 130.14,
+          "fim": 138.93,
+          "texto": "É o sangue do meu deus já não",
+          "palavras": []
+        },
+        {
+          "id": "srt:19",
+          "inicio": 138.93,
+          "fim": 142.27,
+          "texto": "É mais pão aqui",
+          "palavras": []
+        },
+        {
+          "id": "srt:20",
+          "inicio": 142.27,
+          "fim": 150.37,
+          "texto": "É o corpo do meu amor do meu",
+          "palavras": []
+        },
+        {
+          "id": "srt:21",
+          "inicio": 150.37,
+          "fim": 151.35,
+          "texto": "Amor",
+          "palavras": []
+        },
+        {
+          "id": "srt:22",
+          "inicio": 152.71,
+          "fim": 161.17,
+          "texto": "Nesse lugar eu posso dizer que estás dentro",
+          "palavras": []
+        },
+        {
+          "id": "srt:23",
+          "inicio": 161.17,
+          "fim": 162.81,
+          "texto": "De mim",
+          "palavras": []
+        },
+        {
+          "id": "srt:24",
+          "inicio": 162.81,
+          "fim": 171.09,
+          "texto": "E eu dentro de você nesse lugar eu",
+          "palavras": []
+        },
+        {
+          "id": "srt:25",
+          "inicio": 171.09,
+          "fim": 176.87,
+          "texto": "Posso dizer que estás dentro de mim",
+          "palavras": []
+        },
+        {
+          "id": "srt:26",
+          "inicio": 178.01,
+          "fim": 180.891,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:27",
+          "inicio": 180.911,
+          "fim": 185.173,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:28",
+          "inicio": 185.233,
+          "fim": 186.893,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:29",
+          "inicio": 187.133,
+          "fim": 192.535,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:30",
+          "inicio": 192.615,
+          "fim": 194.876,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:31",
+          "inicio": 196.376,
+          "fim": 198.697,
+          "texto": "Eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:32",
+          "inicio": 200.018,
+          "fim": 201.598,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:33",
+          "inicio": 201.838,
+          "fim": 205.559,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:34",
+          "inicio": 207.14,
+          "fim": 213.02,
+          "texto": "E eu dentro de você agora nós dois",
+          "palavras": []
+        },
+        {
+          "id": "srt:35",
+          "inicio": 213.02,
+          "fim": 215.58,
+          "texto": "Somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:36",
+          "inicio": 218.442,
+          "fim": 222.785,
+          "texto": "Agora nós dois somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:37",
+          "inicio": 225.767,
+          "fim": 229.39,
+          "texto": "Agora nós dois somos um (oh oh)",
+          "palavras": []
+        },
+        {
+          "id": "srt:38",
+          "inicio": 233.053,
+          "fim": 238.537,
+          "texto": "Agora nós dois somos um, um",
+          "palavras": []
+        },
+        {
+          "id": "srt:39",
+          "inicio": 243.04,
+          "fim": 250.94,
+          "texto": "Somos um somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:40",
+          "inicio": 252.203,
+          "fim": 252.704,
+          "texto": "Somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:41",
+          "inicio": 259.74,
+          "fim": 265.0,
+          "texto": "Eu e você só eu e você",
+          "palavras": []
+        },
+        {
+          "id": "srt:42",
+          "inicio": 270.9,
+          "fim": 280.58,
+          "texto": "Somos um somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:43",
+          "inicio": 285.57,
+          "fim": 289.09,
+          "texto": "Somos um, somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:44",
+          "inicio": 292.434,
+          "fim": 295.798,
+          "texto": "Oh, oh, oh",
+          "palavras": []
+        }
+      ],
+      "decisoes_antes": {}
+    },
+    {
+      "item": "txt:4:6",
+      "decisao": {
+        "acao": "associar",
+        "alvos": [
+          "srt:1"
+        ],
+        "novos": [],
+        "data": "2026-10-09T01:29:10.750649+00:00"
+      },
+      "blocos_antes": [
+        {
+          "id": "srt:1",
+          "inicio": 5.58,
+          "fim": 20.87,
+          "texto": "Mística sublime, te receber, ter comunhão, ter",
+          "palavras": []
+        },
+        {
+          "id": "srt:2",
+          "inicio": 20.87,
+          "fim": 28.47,
+          "texto": "Correndo em mim teu sangue, deus estou em",
+          "palavras": []
+        },
+        {
+          "id": "srt:3",
+          "inicio": 28.47,
+          "fim": 29.81,
+          "texto": "Comunhão",
+          "palavras": []
+        },
+        {
+          "id": "srt:4",
+          "inicio": 34.81,
+          "fim": 42.19,
+          "texto": "Alguém dirá que um deus tão grande assim",
+          "palavras": []
+        },
+        {
+          "id": "srt:5",
+          "inicio": 42.19,
+          "fim": 48.05,
+          "texto": "Não se dará por mim?",
+          "palavras": []
+        },
+        {
+          "id": "srt:6",
+          "inicio": 49.55,
+          "fim": 55.41,
+          "texto": "O que os meus olhos veem não é",
+          "palavras": []
+        },
+        {
+          "id": "srt:7",
+          "inicio": 55.41,
+          "fim": 60.69,
+          "texto": "O que minh'alma diz",
+          "palavras": []
+        },
+        {
+          "id": "srt:8",
+          "inicio": 64.37,
+          "fim": 79.45,
+          "texto": "Mística sublime, te receber e ter comunhão ter",
+          "palavras": []
+        },
+        {
+          "id": "srt:9",
+          "inicio": 79.45,
+          "fim": 87.19,
+          "texto": "Correndo em mim teu sangue, deus estou em",
+          "palavras": []
+        },
+        {
+          "id": "srt:10",
+          "inicio": 87.19,
+          "fim": 89.21,
+          "texto": "Comunhão,",
+          "palavras": []
+        },
+        {
+          "id": "srt:11",
+          "inicio": 91.4,
+          "fim": 91.58,
+          "texto": "Oh",
+          "palavras": []
+        },
+        {
+          "id": "srt:12",
+          "inicio": 93.79,
+          "fim": 101.47,
+          "texto": "Alguém dirá que um deus tão grande assim",
+          "palavras": []
+        },
+        {
+          "id": "srt:13",
+          "inicio": 101.47,
+          "fim": 107.73,
+          "texto": "Não se dará por mim?",
+          "palavras": []
+        },
+        {
+          "id": "srt:14",
+          "inicio": 108.39,
+          "fim": 114.63,
+          "texto": "O que os meus olhos veem não é",
+          "palavras": []
+        },
+        {
+          "id": "srt:15",
+          "inicio": 114.63,
+          "fim": 120.57,
+          "texto": "O que minh'alma diz,",
+          "palavras": []
+        },
+        {
+          "id": "srt:16",
+          "inicio": 120.57,
+          "fim": 126.43,
+          "texto": "E ela diz já não é mais vinho,",
+          "palavras": []
+        },
+        {
+          "id": "srt:17",
+          "inicio": 127.27,
+          "fim": 128.35,
+          "texto": "Não",
+          "palavras": []
+        },
+        {
+          "id": "srt:18",
+          "inicio": 130.14,
+          "fim": 138.93,
+          "texto": "É o sangue do meu deus já não",
+          "palavras": []
+        },
+        {
+          "id": "srt:19",
+          "inicio": 138.93,
+          "fim": 142.27,
+          "texto": "É mais pão aqui",
+          "palavras": []
+        },
+        {
+          "id": "srt:20",
+          "inicio": 142.27,
+          "fim": 150.37,
+          "texto": "É o corpo do meu amor do meu",
+          "palavras": []
+        },
+        {
+          "id": "srt:21",
+          "inicio": 150.37,
+          "fim": 151.35,
+          "texto": "Amor",
+          "palavras": []
+        },
+        {
+          "id": "srt:22",
+          "inicio": 152.71,
+          "fim": 161.17,
+          "texto": "Nesse lugar eu posso dizer que estás dentro",
+          "palavras": []
+        },
+        {
+          "id": "srt:23",
+          "inicio": 161.17,
+          "fim": 162.81,
+          "texto": "De mim",
+          "palavras": []
+        },
+        {
+          "id": "srt:24",
+          "inicio": 162.81,
+          "fim": 171.09,
+          "texto": "E eu dentro de você nesse lugar eu",
+          "palavras": []
+        },
+        {
+          "id": "srt:25",
+          "inicio": 171.09,
+          "fim": 176.87,
+          "texto": "Posso dizer que estás dentro de mim",
+          "palavras": []
+        },
+        {
+          "id": "srt:26",
+          "inicio": 178.01,
+          "fim": 180.891,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:27",
+          "inicio": 180.911,
+          "fim": 185.173,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:28",
+          "inicio": 185.233,
+          "fim": 186.893,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:29",
+          "inicio": 187.133,
+          "fim": 192.535,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:30",
+          "inicio": 192.615,
+          "fim": 194.876,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:31",
+          "inicio": 196.376,
+          "fim": 198.697,
+          "texto": "Eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:32",
+          "inicio": 200.018,
+          "fim": 201.598,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:33",
+          "inicio": 201.838,
+          "fim": 205.559,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:34",
+          "inicio": 207.14,
+          "fim": 213.02,
+          "texto": "E eu dentro de você agora nós dois",
+          "palavras": []
+        },
+        {
+          "id": "srt:35",
+          "inicio": 213.02,
+          "fim": 215.58,
+          "texto": "Somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:36",
+          "inicio": 218.442,
+          "fim": 222.785,
+          "texto": "Agora nós dois somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:37",
+          "inicio": 225.767,
+          "fim": 229.39,
+          "texto": "Agora nós dois somos um (oh oh)",
+          "palavras": []
+        },
+        {
+          "id": "srt:38",
+          "inicio": 233.053,
+          "fim": 238.537,
+          "texto": "Agora nós dois somos um, um",
+          "palavras": []
+        },
+        {
+          "id": "srt:39",
+          "inicio": 243.04,
+          "fim": 250.94,
+          "texto": "Somos um somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:40",
+          "inicio": 252.203,
+          "fim": 252.704,
+          "texto": "Somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:41",
+          "inicio": 259.74,
+          "fim": 265.0,
+          "texto": "Eu e você só eu e você",
+          "palavras": []
+        },
+        {
+          "id": "srt:42",
+          "inicio": 270.9,
+          "fim": 280.58,
+          "texto": "Somos um somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:43",
+          "inicio": 285.57,
+          "fim": 289.09,
+          "texto": "Somos um, somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:44",
+          "inicio": 292.434,
+          "fim": 295.798,
+          "texto": "Oh, oh, oh",
+          "palavras": []
+        }
+      ],
+      "decisoes_antes": {
+        "txt:0:4": {
+          "acao": "associar",
+          "alvos": [
+            "srt:1"
+          ],
+          "novos": [],
+          "data": "2026-10-09T01:28:56.037508+00:00"
+        }
+      }
+    },
+    {
+      "item": "txt:6:7",
+      "decisao": {
+        "acao": "descartar",
+        "alvos": [],
+        "novos": [],
+        "data": "2026-10-09T01:29:24.904575+00:00"
+      },
+      "blocos_antes": [
+        {
+          "id": "srt:1",
+          "inicio": 5.58,
+          "fim": 20.87,
+          "texto": "Mística sublime, te receber, ter comunhão, ter",
+          "palavras": []
+        },
+        {
+          "id": "srt:2",
+          "inicio": 20.87,
+          "fim": 28.47,
+          "texto": "Correndo em mim teu sangue, deus estou em",
+          "palavras": []
+        },
+        {
+          "id": "srt:3",
+          "inicio": 28.47,
+          "fim": 29.81,
+          "texto": "Comunhão",
+          "palavras": []
+        },
+        {
+          "id": "srt:4",
+          "inicio": 34.81,
+          "fim": 42.19,
+          "texto": "Alguém dirá que um deus tão grande assim",
+          "palavras": []
+        },
+        {
+          "id": "srt:5",
+          "inicio": 42.19,
+          "fim": 48.05,
+          "texto": "Não se dará por mim?",
+          "palavras": []
+        },
+        {
+          "id": "srt:6",
+          "inicio": 49.55,
+          "fim": 55.41,
+          "texto": "O que os meus olhos veem não é",
+          "palavras": []
+        },
+        {
+          "id": "srt:7",
+          "inicio": 55.41,
+          "fim": 60.69,
+          "texto": "O que minh'alma diz",
+          "palavras": []
+        },
+        {
+          "id": "srt:8",
+          "inicio": 64.37,
+          "fim": 79.45,
+          "texto": "Mística sublime, te receber e ter comunhão ter",
+          "palavras": []
+        },
+        {
+          "id": "srt:9",
+          "inicio": 79.45,
+          "fim": 87.19,
+          "texto": "Correndo em mim teu sangue, deus estou em",
+          "palavras": []
+        },
+        {
+          "id": "srt:10",
+          "inicio": 87.19,
+          "fim": 89.21,
+          "texto": "Comunhão,",
+          "palavras": []
+        },
+        {
+          "id": "srt:11",
+          "inicio": 91.4,
+          "fim": 91.58,
+          "texto": "Oh",
+          "palavras": []
+        },
+        {
+          "id": "srt:12",
+          "inicio": 93.79,
+          "fim": 101.47,
+          "texto": "Alguém dirá que um deus tão grande assim",
+          "palavras": []
+        },
+        {
+          "id": "srt:13",
+          "inicio": 101.47,
+          "fim": 107.73,
+          "texto": "Não se dará por mim?",
+          "palavras": []
+        },
+        {
+          "id": "srt:14",
+          "inicio": 108.39,
+          "fim": 114.63,
+          "texto": "O que os meus olhos veem não é",
+          "palavras": []
+        },
+        {
+          "id": "srt:15",
+          "inicio": 114.63,
+          "fim": 120.57,
+          "texto": "O que minh'alma diz,",
+          "palavras": []
+        },
+        {
+          "id": "srt:16",
+          "inicio": 120.57,
+          "fim": 126.43,
+          "texto": "E ela diz já não é mais vinho,",
+          "palavras": []
+        },
+        {
+          "id": "srt:17",
+          "inicio": 127.27,
+          "fim": 128.35,
+          "texto": "Não",
+          "palavras": []
+        },
+        {
+          "id": "srt:18",
+          "inicio": 130.14,
+          "fim": 138.93,
+          "texto": "É o sangue do meu deus já não",
+          "palavras": []
+        },
+        {
+          "id": "srt:19",
+          "inicio": 138.93,
+          "fim": 142.27,
+          "texto": "É mais pão aqui",
+          "palavras": []
+        },
+        {
+          "id": "srt:20",
+          "inicio": 142.27,
+          "fim": 150.37,
+          "texto": "É o corpo do meu amor do meu",
+          "palavras": []
+        },
+        {
+          "id": "srt:21",
+          "inicio": 150.37,
+          "fim": 151.35,
+          "texto": "Amor",
+          "palavras": []
+        },
+        {
+          "id": "srt:22",
+          "inicio": 152.71,
+          "fim": 161.17,
+          "texto": "Nesse lugar eu posso dizer que estás dentro",
+          "palavras": []
+        },
+        {
+          "id": "srt:23",
+          "inicio": 161.17,
+          "fim": 162.81,
+          "texto": "De mim",
+          "palavras": []
+        },
+        {
+          "id": "srt:24",
+          "inicio": 162.81,
+          "fim": 171.09,
+          "texto": "E eu dentro de você nesse lugar eu",
+          "palavras": []
+        },
+        {
+          "id": "srt:25",
+          "inicio": 171.09,
+          "fim": 176.87,
+          "texto": "Posso dizer que estás dentro de mim",
+          "palavras": []
+        },
+        {
+          "id": "srt:26",
+          "inicio": 178.01,
+          "fim": 180.891,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:27",
+          "inicio": 180.911,
+          "fim": 185.173,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:28",
+          "inicio": 185.233,
+          "fim": 186.893,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:29",
+          "inicio": 187.133,
+          "fim": 192.535,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:30",
+          "inicio": 192.615,
+          "fim": 194.876,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:31",
+          "inicio": 196.376,
+          "fim": 198.697,
+          "texto": "Eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:32",
+          "inicio": 200.018,
+          "fim": 201.598,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:33",
+          "inicio": 201.838,
+          "fim": 205.559,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:34",
+          "inicio": 207.14,
+          "fim": 213.02,
+          "texto": "E eu dentro de você agora nós dois",
+          "palavras": []
+        },
+        {
+          "id": "srt:35",
+          "inicio": 213.02,
+          "fim": 215.58,
+          "texto": "Somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:36",
+          "inicio": 218.442,
+          "fim": 222.785,
+          "texto": "Agora nós dois somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:37",
+          "inicio": 225.767,
+          "fim": 229.39,
+          "texto": "Agora nós dois somos um (oh oh)",
+          "palavras": []
+        },
+        {
+          "id": "srt:38",
+          "inicio": 233.053,
+          "fim": 238.537,
+          "texto": "Agora nós dois somos um, um",
+          "palavras": []
+        },
+        {
+          "id": "srt:39",
+          "inicio": 243.04,
+          "fim": 250.94,
+          "texto": "Somos um somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:40",
+          "inicio": 252.203,
+          "fim": 252.704,
+          "texto": "Somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:41",
+          "inicio": 259.74,
+          "fim": 265.0,
+          "texto": "Eu e você só eu e você",
+          "palavras": []
+        },
+        {
+          "id": "srt:42",
+          "inicio": 270.9,
+          "fim": 280.58,
+          "texto": "Somos um somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:43",
+          "inicio": 285.57,
+          "fim": 289.09,
+          "texto": "Somos um, somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:44",
+          "inicio": 292.434,
+          "fim": 295.798,
+          "texto": "Oh, oh, oh",
+          "palavras": []
+        }
+      ],
+      "decisoes_antes": {
+        "txt:0:4": {
+          "acao": "associar",
+          "alvos": [
+            "srt:1"
+          ],
+          "novos": [],
+          "data": "2026-10-09T01:28:56.037508+00:00"
+        },
+        "txt:4:6": {
+          "acao": "associar",
+          "alvos": [
+            "srt:1"
+          ],
+          "novos": [],
+          "data": "2026-10-09T01:29:10.750649+00:00"
+        }
+      }
+    },
+    {
+      "item": "pendencia:srt:1",
+      "decisao": {
+        "acao": "associar",
+        "alvos": [
+          "srt:1"
+        ],
+        "novos": [],
+        "data": "2026-10-09T01:29:37.850696+00:00"
+      },
+      "blocos_antes": [
+        {
+          "id": "srt:1",
+          "inicio": 5.58,
+          "fim": 20.87,
+          "texto": "Mística sublime, te receber, ter comunhão, ter",
+          "palavras": []
+        },
+        {
+          "id": "srt:2",
+          "inicio": 20.87,
+          "fim": 28.47,
+          "texto": "Correndo em mim teu sangue, deus estou em",
+          "palavras": []
+        },
+        {
+          "id": "srt:3",
+          "inicio": 28.47,
+          "fim": 29.81,
+          "texto": "Comunhão",
+          "palavras": []
+        },
+        {
+          "id": "srt:4",
+          "inicio": 34.81,
+          "fim": 42.19,
+          "texto": "Alguém dirá que um deus tão grande assim",
+          "palavras": []
+        },
+        {
+          "id": "srt:5",
+          "inicio": 42.19,
+          "fim": 48.05,
+          "texto": "Não se dará por mim?",
+          "palavras": []
+        },
+        {
+          "id": "srt:6",
+          "inicio": 49.55,
+          "fim": 55.41,
+          "texto": "O que os meus olhos veem não é",
+          "palavras": []
+        },
+        {
+          "id": "srt:7",
+          "inicio": 55.41,
+          "fim": 60.69,
+          "texto": "O que minh'alma diz",
+          "palavras": []
+        },
+        {
+          "id": "srt:8",
+          "inicio": 64.37,
+          "fim": 79.45,
+          "texto": "Mística sublime, te receber e ter comunhão ter",
+          "palavras": []
+        },
+        {
+          "id": "srt:9",
+          "inicio": 79.45,
+          "fim": 87.19,
+          "texto": "Correndo em mim teu sangue, deus estou em",
+          "palavras": []
+        },
+        {
+          "id": "srt:10",
+          "inicio": 87.19,
+          "fim": 89.21,
+          "texto": "Comunhão,",
+          "palavras": []
+        },
+        {
+          "id": "srt:11",
+          "inicio": 91.4,
+          "fim": 91.58,
+          "texto": "Oh",
+          "palavras": []
+        },
+        {
+          "id": "srt:12",
+          "inicio": 93.79,
+          "fim": 101.47,
+          "texto": "Alguém dirá que um deus tão grande assim",
+          "palavras": []
+        },
+        {
+          "id": "srt:13",
+          "inicio": 101.47,
+          "fim": 107.73,
+          "texto": "Não se dará por mim?",
+          "palavras": []
+        },
+        {
+          "id": "srt:14",
+          "inicio": 108.39,
+          "fim": 114.63,
+          "texto": "O que os meus olhos veem não é",
+          "palavras": []
+        },
+        {
+          "id": "srt:15",
+          "inicio": 114.63,
+          "fim": 120.57,
+          "texto": "O que minh'alma diz,",
+          "palavras": []
+        },
+        {
+          "id": "srt:16",
+          "inicio": 120.57,
+          "fim": 126.43,
+          "texto": "E ela diz já não é mais vinho,",
+          "palavras": []
+        },
+        {
+          "id": "srt:17",
+          "inicio": 127.27,
+          "fim": 128.35,
+          "texto": "Não",
+          "palavras": []
+        },
+        {
+          "id": "srt:18",
+          "inicio": 130.14,
+          "fim": 138.93,
+          "texto": "É o sangue do meu deus já não",
+          "palavras": []
+        },
+        {
+          "id": "srt:19",
+          "inicio": 138.93,
+          "fim": 142.27,
+          "texto": "É mais pão aqui",
+          "palavras": []
+        },
+        {
+          "id": "srt:20",
+          "inicio": 142.27,
+          "fim": 150.37,
+          "texto": "É o corpo do meu amor do meu",
+          "palavras": []
+        },
+        {
+          "id": "srt:21",
+          "inicio": 150.37,
+          "fim": 151.35,
+          "texto": "Amor",
+          "palavras": []
+        },
+        {
+          "id": "srt:22",
+          "inicio": 152.71,
+          "fim": 161.17,
+          "texto": "Nesse lugar eu posso dizer que estás dentro",
+          "palavras": []
+        },
+        {
+          "id": "srt:23",
+          "inicio": 161.17,
+          "fim": 162.81,
+          "texto": "De mim",
+          "palavras": []
+        },
+        {
+          "id": "srt:24",
+          "inicio": 162.81,
+          "fim": 171.09,
+          "texto": "E eu dentro de você nesse lugar eu",
+          "palavras": []
+        },
+        {
+          "id": "srt:25",
+          "inicio": 171.09,
+          "fim": 176.87,
+          "texto": "Posso dizer que estás dentro de mim",
+          "palavras": []
+        },
+        {
+          "id": "srt:26",
+          "inicio": 178.01,
+          "fim": 180.891,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:27",
+          "inicio": 180.911,
+          "fim": 185.173,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:28",
+          "inicio": 185.233,
+          "fim": 186.893,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:29",
+          "inicio": 187.133,
+          "fim": 192.535,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:30",
+          "inicio": 192.615,
+          "fim": 194.876,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:31",
+          "inicio": 196.376,
+          "fim": 198.697,
+          "texto": "Eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:32",
+          "inicio": 200.018,
+          "fim": 201.598,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:33",
+          "inicio": 201.838,
+          "fim": 205.559,
+          "texto": "E eu dentro de você",
+          "palavras": []
+        },
+        {
+          "id": "srt:34",
+          "inicio": 207.14,
+          "fim": 213.02,
+          "texto": "E eu dentro de você agora nós dois",
+          "palavras": []
+        },
+        {
+          "id": "srt:35",
+          "inicio": 213.02,
+          "fim": 215.58,
+          "texto": "Somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:36",
+          "inicio": 218.442,
+          "fim": 222.785,
+          "texto": "Agora nós dois somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:37",
+          "inicio": 225.767,
+          "fim": 229.39,
+          "texto": "Agora nós dois somos um (oh oh)",
+          "palavras": []
+        },
+        {
+          "id": "srt:38",
+          "inicio": 233.053,
+          "fim": 238.537,
+          "texto": "Agora nós dois somos um, um",
+          "palavras": []
+        },
+        {
+          "id": "srt:39",
+          "inicio": 243.04,
+          "fim": 250.94,
+          "texto": "Somos um somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:40",
+          "inicio": 252.203,
+          "fim": 252.704,
+          "texto": "Somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:41",
+          "inicio": 259.74,
+          "fim": 265.0,
+          "texto": "Eu e você só eu e você",
+          "palavras": []
+        },
+        {
+          "id": "srt:42",
+          "inicio": 270.9,
+          "fim": 280.58,
+          "texto": "Somos um somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:43",
+          "inicio": 285.57,
+          "fim": 289.09,
+          "texto": "Somos um, somos um",
+          "palavras": []
+        },
+        {
+          "id": "srt:44",
+          "inicio": 292.434,
+          "fim": 295.798,
+          "texto": "Oh, oh, oh",
+          "palavras": []
+        }
+      ],
+      "decisoes_antes": {
+        "txt:0:4": {
+          "acao": "associar",
+          "alvos": [
+            "srt:1"
+          ],
+          "novos": [],
+          "data": "2026-10-09T01:28:56.037508+00:00"
+        },
+        "txt:4:6": {
+          "acao": "associar",
+          "alvos": [
+            "srt:1"
+          ],
+          "novos": [],
+          "data": "2026-10-09T01:29:10.750649+00:00"
+        },
+        "txt:6:7": {
+          "acao": "descartar",
+          "alvos": [],
+          "novos": [],
+          "data": "2026-10-09T01:29:24.904575+00:00"
+        }
+      }
+    }
+  ],
+  "revisoes_anteriores": [],
+  "atualizado": "2026-10-09T01:30:32.718789+00:00",
+  "pendencias": [],
+  "resumo": {
+    "ocorrencias_pendentes": 0,
+    "blocos": 44,
+    "palavras_confirmadas": 0
+  }
+}

@@ -1,0 +1,3284 @@
+{
+  "versao": 5,
+  "status": "pendente",
+  "estrategia": "preservar_corrigir_inserir",
+  "motor": "whisperx",
+  "duracao_audio": 299.978625,
+  "scores_sao_probabilidades": false,
+  "aprovacao_musical_automatica": false,
+  "parametros": {
+    "score_minimo": 0.3,
+    "janela_maxima": 90.0,
+    "score_suporte_insercao": 0.1,
+    "atividade_minima_insercao": 0.2,
+    "margem": 0.4,
+    "margem_aplicada": false
+  },
+  "total_palavras_txt": 626,
+  "total_palavras_srt": 621,
+  "metricas": {
+    "palavras_publicadas": 628,
+    "blocos_srt_auditados": 80,
+    "blocos_srt_descartados": 0,
+    "blocos_texto_corrigido": 48,
+    "blocos_inseridos": 1,
+    "palavras_txt_sem_tempo": 58,
+    "palavras_txt_nao_pesquisadas": 58,
+    "palavras_txt_pesquisadas_sem_tempo": 0,
+    "palavras_baixa_confianca": 0,
+    "tentativas_acusticas": 1
+  },
+  "comparacao": {
+    "consultas": [
+      {
+        "bloco_srt": 1,
+        "inicio": 1.3900000000000001,
+        "fim": 4.61,
+        "txt_inicio": 0,
+        "txt_fim": 8,
+        "score": 1.0,
+        "texto": "Dizem que eu caí na Terra De nada",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 2,
+        "inicio": 4.61,
+        "fim": 8.39,
+        "txt_inicio": 8,
+        "txt_fim": 16,
+        "score": 1.0,
+        "texto": "disso me lembro Dizem que bati a cabeça",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 3,
+        "inicio": 8.39,
+        "fim": 12.49,
+        "txt_inicio": 16,
+        "txt_fim": 24,
+        "score": 1.0,
+        "texto": "E isso me mudou por dentro A cobrança",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 4,
+        "inicio": 12.49,
+        "fim": 16.69,
+        "txt_inicio": 24,
+        "txt_fim": 32,
+        "score": 0.9459459459459459,
+        "texto": "veio Ele diz ser meu irmão Nesse dia,",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 5,
+        "inicio": 16.69,
+        "fim": 20.51,
+        "txt_inicio": 32,
+        "txt_fim": 40,
+        "score": 1.0,
+        "texto": "eu morri E ele anunciou uma invasão Foi",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 6,
+        "inicio": 20.51,
+        "fim": 23.41,
+        "txt_inicio": 40,
+        "txt_fim": 48,
+        "score": 1.0,
+        "texto": "a primeira vez que eu ouvi Sobre esses",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 7,
+        "inicio": 23.41,
+        "fim": 26.31,
+        "txt_inicio": 48,
+        "txt_fim": 56,
+        "score": 0.8292682926829268,
+        "texto": "tais Saiyajins Quando elevo meu Ki é mais",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 8,
+        "inicio": 26.31,
+        "fim": 28.21,
+        "txt_inicio": 56,
+        "txt_fim": 64,
+        "score": 0.9206349206349206,
+        "texto": "de 8 mil Um poder que esse tal",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 9,
+        "inicio": 28.21,
+        "fim": 33.03,
+        "txt_inicio": 64,
+        "txt_fim": 72,
+        "score": 1.0,
+        "texto": "príncipe nunca viu Quem será que vai ganhar?",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 10,
+        "inicio": 33.89,
+        "fim": 39.53,
+        "txt_inicio": 72,
+        "txt_fim": 79,
+        "score": 0.9069767441860467,
+        "texto": "Galick Ho contra Kamehameha! Pouparei a vida",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 11,
+        "inicio": 39.53,
+        "fim": 41.87,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "dele Quero te ver de novo Ainda me",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 12,
+        "inicio": 41.87,
+        "fim": 44.05,
+        "txt_inicio": 86,
+        "txt_fim": 95,
+        "score": 0.9024390243902439,
+        "texto": "Namekusei, o oponente é outro Com um só golpe",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 13,
+        "inicio": 44.05,
+        "fim": 45.75,
+        "txt_inicio": 95,
+        "txt_fim": 101,
+        "score": 0.8285714285714285,
+        "texto": "Rikum foi, depois foi Ginyu também",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 14,
+        "inicio": 45.75,
+        "fim": 47.87,
+        "txt_inicio": 101,
+        "txt_fim": 109,
+        "score": 0.975609756097561,
+        "texto": "Acho que não entenderam que meu poder vai",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 15,
+        "inicio": 47.87,
+        "fim": 51.63,
+        "txt_inicio": 109,
+        "txt_fim": 118,
+        "score": 0.9767441860465115,
+        "texto": "além Vegeta chora, e eu te prometo Com Freeza",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 16,
+        "inicio": 51.63,
+        "fim": 55.01,
+        "txt_inicio": 118,
+        "txt_fim": 126,
+        "score": 1.0,
+        "texto": "não, não tenho medo Sua angústia devia ser",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 17,
+        "inicio": 55.01,
+        "fim": 58.15,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "imensa Pra isso ter me implorado Ele disse",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 18,
+        "inicio": 58.15,
+        "fim": 60.43,
+        "txt_inicio": 134,
+        "txt_fim": 142,
+        "score": 1.0,
+        "texto": "que eu sou a lenda do Super Saiyajin",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 19,
+        "inicio": 60.43,
+        "fim": 63.83,
+        "txt_inicio": 142,
+        "txt_fim": 150,
+        "score": 1.0,
+        "texto": "Lendário Por que envolveu quem eu amo assim?",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 20,
+        "inicio": 63.91,
+        "fim": 66.25,
+        "txt_inicio": 150,
+        "txt_fim": 156,
+        "score": 0.962962962962963,
+        "texto": "Por que cê matou o Kuririn?",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 21,
+        "inicio": 66.45,
+        "fim": 70.61,
+        "txt_inicio": 156,
+        "txt_fim": 164,
+        "score": 1.0,
+        "texto": "Freeza, sente meu poder fluir Eleva, eleva o",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 22,
+        "inicio": 70.61,
+        "fim": 77.53,
+        "txt_inicio": 164,
+        "txt_fim": 172,
+        "score": 1.0,
+        "texto": "Ki Será humilhado! Pelo Saiyajin! Preciso elevar o",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 23,
+        "inicio": 77.53,
+        "fim": 81.45,
+        "txt_inicio": 172,
+        "txt_fim": 180,
+        "score": 0.9873417721518988,
+        "texto": "Ki! Nunca viram um guerreiro assim Esse é",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 24,
+        "inicio": 81.45,
+        "fim": 85.89,
+        "txt_inicio": 180,
+        "txt_fim": 188,
+        "score": 1.0,
+        "texto": "o poder De um Super Saiyajin! Vocês não",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 25,
+        "inicio": 85.89,
+        "fim": 90.35,
+        "txt_inicio": 188,
+        "txt_fim": 196,
+        "score": 0.989010989010989,
+        "texto": "conseguirão me enfrentar O meu poder se elevar",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 26,
+        "inicio": 90.35,
+        "fim": 95.79,
+        "txt_inicio": 196,
+        "txt_fim": 204,
+        "score": 1.0,
+        "texto": "Goku! Kamehameha! Morri de uma doença? Isso é",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 27,
+        "inicio": 95.79,
+        "fim": 98.31,
+        "txt_inicio": 204,
+        "txt_fim": 212,
+        "score": 0.8842105263157894,
+        "texto": "constrangedor Logo ao chegar na Terra, guerreiro do",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 28,
+        "inicio": 98.31,
+        "fim": 101.85,
+        "txt_inicio": 212,
+        "txt_fim": 220,
+        "score": 1.0,
+        "texto": "Futuro Androides nos aniquilarão Então começa o treinamento",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 29,
+        "inicio": 101.85,
+        "fim": 107.83,
+        "txt_inicio": 220,
+        "txt_fim": 229,
+        "score": 0.970873786407767,
+        "texto": "Vamos todos os guerreiros então Todos juntos pra Sala",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 30,
+        "inicio": 107.83,
+        "fim": 112.07,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "do tempo O tempo passa diferente aqui Se",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 31,
+        "inicio": 112.07,
+        "fim": 114.31,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "eu prometo que eu vou te matar Quando",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 32,
+        "inicio": 114.31,
+        "fim": 117.61,
+        "txt_inicio": 244,
+        "txt_fim": 252,
+        "score": 1.0,
+        "texto": "eu elevar meu Ki Eu juro que irei",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 33,
+        "inicio": 117.61,
+        "fim": 120.45,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "voltar Se estou mais forte que o céu",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 34,
+        "inicio": 120.45,
+        "fim": 124.97,
+        "txt_inicio": 260,
+        "txt_fim": 268,
+        "score": 1.0,
+        "texto": "Me diga Não, você não está Mas isso",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 35,
+        "inicio": 124.97,
+        "fim": 129.93,
+        "txt_inicio": 268,
+        "txt_fim": 276,
+        "score": 0.963855421686747,
+        "texto": "não me preocupa Um torneio, Cell, te prometo",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 36,
+        "inicio": 129.93,
+        "fim": 132.87,
+        "txt_inicio": 276,
+        "txt_fim": 284,
+        "score": 1.0,
+        "texto": "que Tem um guerreiro que cê não vence",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 37,
+        "inicio": 132.87,
+        "fim": 136.17,
+        "txt_inicio": 284,
+        "txt_fim": 292,
+        "score": 1.0,
+        "texto": "Eu desisto, venha, meu filho E mostre para",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 38,
+        "inicio": 136.17,
+        "fim": 138.35,
+        "txt_inicio": 292,
+        "txt_fim": 301,
+        "score": 0.9315068493150684,
+        "texto": "o Cell todo o seu poder! Acho que errei",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 39,
+        "inicio": 138.35,
+        "fim": 142.99,
+        "txt_inicio": 301,
+        "txt_fim": 309,
+        "score": 1.0,
+        "texto": "como um pai Me perdoe, filho Farei o",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 40,
+        "inicio": 142.99,
+        "fim": 148.49,
+        "txt_inicio": 309,
+        "txt_fim": 317,
+        "score": 0.9292929292929293,
+        "texto": "que for capaz Será meu sacrifício! Cell desintegrado",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 41,
+        "inicio": 148.49,
+        "fim": 153.59,
+        "txt_inicio": 317,
+        "txt_fim": 324,
+        "score": 0.8865979381443299,
+        "texto": "em nível celular Pelo seu Kamehameha Autorizado",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 42,
+        "inicio": 153.59,
+        "fim": 156.57,
+        "txt_inicio": 324,
+        "txt_fim": 332,
+        "score": 1.0,
+        "texto": "a voltar pra Terra Nesse torneio eu também",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 43,
+        "inicio": 156.57,
+        "fim": 161.41,
+        "txt_inicio": 332,
+        "txt_fim": 340,
+        "score": 1.0,
+        "texto": "vou lutar Mas guerreiros inesperados Que acabam estragando",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 44,
+        "inicio": 161.41,
+        "fim": 165.95,
+        "txt_inicio": 340,
+        "txt_fim": 348,
+        "score": 1.0,
+        "texto": "a festa Com um poder ilimitado Carregam um",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 45,
+        "inicio": 165.95,
+        "fim": 168.99,
+        "txt_inicio": 348,
+        "txt_fim": 356,
+        "score": 1.0,
+        "texto": "M na testa O Majin Boo voltou e",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 46,
+        "inicio": 168.99,
+        "fim": 172.09,
+        "txt_inicio": 356,
+        "txt_fim": 364,
+        "score": 1.0,
+        "texto": "quer destruição Não me diga que, Vegeta você",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 47,
+        "inicio": 172.09,
+        "fim": 174.43,
+        "txt_inicio": 364,
+        "txt_fim": 372,
+        "score": 1.0,
+        "texto": "não Se entregou pro mal, cê quer me",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 48,
+        "inicio": 174.43,
+        "fim": 176.91,
+        "txt_inicio": 372,
+        "txt_fim": 380,
+        "score": 1.0,
+        "texto": "vencer? Mas saiba afinal, eu sou bem mais",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 49,
+        "inicio": 176.91,
+        "fim": 179.97,
+        "txt_inicio": 380,
+        "txt_fim": 385,
+        "score": 1.0,
+        "texto": "forte que você! Matando pessoas?",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 50,
+        "inicio": 180.37,
+        "fim": 183.31,
+        "txt_inicio": 385,
+        "txt_fim": 393,
+        "score": 1.0,
+        "texto": "Você não é isso Pense em sua mulher",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 51,
+        "inicio": 183.31,
+        "fim": 186.61,
+        "txt_inicio": 393,
+        "txt_fim": 401,
+        "score": 1.0,
+        "texto": "e no seu filho Após seu sacrifício, elevando",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 52,
+        "inicio": 186.61,
+        "fim": 189.13,
+        "txt_inicio": 401,
+        "txt_fim": 409,
+        "score": 0.9859154929577465,
+        "texto": "mais uma vez Esse é o Super Saiyajin",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 53,
+        "inicio": 189.13,
+        "fim": 193.67,
+        "txt_inicio": 409,
+        "txt_fim": 417,
+        "score": 0.9438202247191011,
+        "texto": "Nível Três! Precisamos nos fundir para vencer o",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 54,
+        "inicio": 193.67,
+        "fim": 197.29,
+        "txt_inicio": 417,
+        "txt_fim": 426,
+        "score": 0.951219512195122,
+        "texto": "Majin Vegeta pega o Brinco Potara aí Não é",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 55,
+        "inicio": 197.29,
+        "fim": 200.85,
+        "txt_inicio": 426,
+        "txt_fim": 435,
+        "score": 0.923076923076923,
+        "texto": "o suficiente, mas não será a extinção Genki Dama!",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 56,
+        "inicio": 201.13,
+        "fim": 203.29,
+        "txt_inicio": 435,
+        "txt_fim": 440,
+        "score": 1.0,
+        "texto": "Todos juntos! Levantem as mãos!",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 57,
+        "inicio": 204.97,
+        "fim": 209.87,
+        "txt_inicio": 444,
+        "txt_fim": 453,
+        "score": 0.9318181818181819,
+        "texto": "Nunca viram um guerreiro assim Esse é o poder",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 58,
+        "inicio": 209.87,
+        "fim": 214.05,
+        "txt_inicio": 453,
+        "txt_fim": 461,
+        "score": 1.0,
+        "texto": "De um Super Sayajin! Vocês não conseguirão me",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 59,
+        "inicio": 214.05,
+        "fim": 221.17,
+        "txt_inicio": 461,
+        "txt_fim": 469,
+        "score": 0.989247311827957,
+        "texto": "enfrentar O meu poder se elevar Goku! Kamehameha!",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 60,
+        "inicio": 221.17,
+        "fim": 224.79,
+        "txt_inicio": 469,
+        "txt_fim": 477,
+        "score": 1.0,
+        "texto": "Tantos inimigos me trouxeram aqui Nessa arena, tenho",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 61,
+        "inicio": 224.79,
+        "fim": 227.29,
+        "txt_inicio": 477,
+        "txt_fim": 485,
+        "score": 1.0,
+        "texto": "que elevar o Ki Os guerreiros mais fortes",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 62,
+        "inicio": 227.29,
+        "fim": 229.75,
+        "txt_inicio": 485,
+        "txt_fim": 491,
+        "score": 0.8607594936708861,
+        "texto": "de vários universos Mas contra Jiren,",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 63,
+        "inicio": 229.75,
+        "fim": 231.89,
+        "txt_inicio": 491,
+        "txt_fim": 499,
+        "score": 0.923076923076923,
+        "texto": "sinto que não estou nem perto Levanto as",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 64,
+        "inicio": 231.89,
+        "fim": 234.79,
+        "txt_inicio": 499,
+        "txt_fim": 507,
+        "score": 0.967741935483871,
+        "texto": "mãos novamente Ele está na minha frente Revidou",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 65,
+        "inicio": 234.79,
+        "fim": 237.15,
+        "txt_inicio": 507,
+        "txt_fim": 513,
+        "score": 0.9666666666666667,
+        "texto": "meu poder, tudo acaba aqui? (Não!)",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 66,
+        "inicio": 237.51,
+        "fim": 246.24,
+        "txt_inicio": 513,
+        "txt_fim": 521,
+        "score": 0.9887640449438202,
+        "texto": "Só existe limite se deixar existir Migatte no",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 67,
+        "inicio": 246.24,
+        "fim": 246.58,
+        "txt_inicio": 624,
+        "txt_fim": 625,
+        "score": 1.0,
+        "texto": "Goku!",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 68,
+        "inicio": 246.86,
+        "fim": 248.72,
+        "txt_inicio": 522,
+        "txt_fim": 529,
+        "score": 0.9459459459459459,
+        "texto": "Quebrando meus limites, cê não pode me",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 69,
+        "inicio": 248.72,
+        "fim": 252.04,
+        "txt_inicio": 529,
+        "txt_fim": 537,
+        "score": 1.0,
+        "texto": "tocar Desvio facilmente sem pensar em desviar Você",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 70,
+        "inicio": 252.04,
+        "fim": 254.44,
+        "txt_inicio": 537,
+        "txt_fim": 545,
+        "score": 0.926829268292683,
+        "texto": "dizia ser o mais forte desse universo Mas",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 71,
+        "inicio": 254.44,
+        "fim": 257.66,
+        "txt_inicio": 545,
+        "txt_fim": 553,
+        "score": 1.0,
+        "texto": "acho que meu instinto é superior! Descobri do",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 72,
+        "inicio": 257.66,
+        "fim": 260.5,
+        "txt_inicio": 553,
+        "txt_fim": 561,
+        "score": 1.0,
+        "texto": "poder que eu sou capaz Tudo que cê",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 73,
+        "inicio": 260.5,
+        "fim": 264.08,
+        "txt_inicio": 561,
+        "txt_fim": 569,
+        "score": 0.98989898989899,
+        "texto": "faz não adianta mais Migatte completo, essa batalha",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 74,
+        "inicio": 264.08,
+        "fim": 266.3,
+        "txt_inicio": 569,
+        "txt_fim": 577,
+        "score": 1.0,
+        "texto": "é nossa Obrigado por ter me dado uma",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 75,
+        "inicio": 266.3,
+        "fim": 272.24,
+        "txt_inicio": 577,
+        "txt_fim": 585,
+        "score": 1.0,
+        "texto": "luta fervorosa! Quem vencerá é o Universo 7",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 76,
+        "inicio": 272.24,
+        "fim": 277.62,
+        "txt_inicio": 585,
+        "txt_fim": 593,
+        "score": 1.0,
+        "texto": "E Jiren conhecerá a mim A sua derrota",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 77,
+        "inicio": 277.62,
+        "fim": 284.56,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "virá Preciso elevar o Ki Nunca virá um",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 78,
+        "inicio": 284.56,
+        "fim": 288.94,
+        "txt_inicio": 603,
+        "txt_fim": 611,
+        "score": 1.0,
+        "texto": "guerreiro assim Esse é o poder De um",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 79,
+        "inicio": 288.94,
+        "fim": 293.94,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Super Saiyajin Vocês não conseguirão me enfrentar O",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 80,
+        "inicio": 293.94,
+        "fim": 298.0,
+        "txt_inicio": 620,
+        "txt_fim": 626,
+        "score": 0.9855072463768118,
+        "texto": "meu poder se elevar Goku! Kamehameha!",
+        "aviso": null
+      }
+    ],
+    "regioes": [
+      {
+        "indices": [
+          0
+        ],
+        "inicio": 1.3900000000000001,
+        "fim": 4.61,
+        "txt_inicio": 0,
+        "txt_fim": 8,
+        "texto": "Dizem que eu caí na Terra De nada"
+      },
+      {
+        "indices": [
+          1
+        ],
+        "inicio": 4.61,
+        "fim": 8.39,
+        "txt_inicio": 8,
+        "txt_fim": 16,
+        "texto": "disso me lembro Dizem que bati a cabeça"
+      },
+      {
+        "indices": [
+          2
+        ],
+        "inicio": 8.39,
+        "fim": 12.49,
+        "txt_inicio": 16,
+        "txt_fim": 24,
+        "texto": "E isso me mudou por dentro A cobrança"
+      },
+      {
+        "indices": [
+          3
+        ],
+        "inicio": 12.49,
+        "fim": 16.69,
+        "txt_inicio": 24,
+        "txt_fim": 32,
+        "texto": "veio Ele diz ser meu irmão Nesse dia,"
+      },
+      {
+        "indices": [
+          4
+        ],
+        "inicio": 16.69,
+        "fim": 20.51,
+        "txt_inicio": 32,
+        "txt_fim": 40,
+        "texto": "eu morri E ele anunciou uma invasão Foi"
+      },
+      {
+        "indices": [
+          5
+        ],
+        "inicio": 20.51,
+        "fim": 23.41,
+        "txt_inicio": 40,
+        "txt_fim": 48,
+        "texto": "a primeira vez que eu ouvi Sobre esses"
+      },
+      {
+        "indices": [
+          6
+        ],
+        "inicio": 23.41,
+        "fim": 26.31,
+        "txt_inicio": 48,
+        "txt_fim": 56,
+        "texto": "tais Saiyajins Quando elevo meu Ki é mais"
+      },
+      {
+        "indices": [
+          7
+        ],
+        "inicio": 26.31,
+        "fim": 28.21,
+        "txt_inicio": 56,
+        "txt_fim": 64,
+        "texto": "de 8 mil Um poder que esse tal"
+      },
+      {
+        "indices": [
+          8
+        ],
+        "inicio": 28.21,
+        "fim": 33.03,
+        "txt_inicio": 64,
+        "txt_fim": 72,
+        "texto": "príncipe nunca viu Quem será que vai ganhar?"
+      },
+      {
+        "indices": [
+          9
+        ],
+        "inicio": 33.89,
+        "fim": 39.53,
+        "txt_inicio": 72,
+        "txt_fim": 79,
+        "texto": "Galick Ho contra Kamehameha! Pouparei a vida"
+      },
+      {
+        "indices": [
+          10
+        ],
+        "inicio": 39.53,
+        "fim": 41.87,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "dele Quero te ver de novo Ainda me"
+      },
+      {
+        "indices": [
+          11
+        ],
+        "inicio": 41.87,
+        "fim": 44.05,
+        "txt_inicio": 86,
+        "txt_fim": 95,
+        "texto": "Namekusei, o oponente é outro Com um só golpe"
+      },
+      {
+        "indices": [
+          12
+        ],
+        "inicio": 44.05,
+        "fim": 45.75,
+        "txt_inicio": 95,
+        "txt_fim": 101,
+        "texto": "Rikum foi, depois foi Ginyu também"
+      },
+      {
+        "indices": [
+          13
+        ],
+        "inicio": 45.75,
+        "fim": 47.87,
+        "txt_inicio": 101,
+        "txt_fim": 109,
+        "texto": "Acho que não entenderam que meu poder vai"
+      },
+      {
+        "indices": [
+          14
+        ],
+        "inicio": 47.87,
+        "fim": 51.63,
+        "txt_inicio": 109,
+        "txt_fim": 118,
+        "texto": "além Vegeta chora, e eu te prometo Com Freeza"
+      },
+      {
+        "indices": [
+          15
+        ],
+        "inicio": 51.63,
+        "fim": 55.01,
+        "txt_inicio": 118,
+        "txt_fim": 126,
+        "texto": "não, não tenho medo Sua angústia devia ser"
+      },
+      {
+        "indices": [
+          16
+        ],
+        "inicio": 55.01,
+        "fim": 58.15,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "imensa Pra isso ter me implorado Ele disse"
+      },
+      {
+        "indices": [
+          17
+        ],
+        "inicio": 58.15,
+        "fim": 60.43,
+        "txt_inicio": 134,
+        "txt_fim": 142,
+        "texto": "que eu sou a lenda do Super Saiyajin"
+      },
+      {
+        "indices": [
+          18
+        ],
+        "inicio": 60.43,
+        "fim": 63.83,
+        "txt_inicio": 142,
+        "txt_fim": 150,
+        "texto": "Lendário Por que envolveu quem eu amo assim?"
+      },
+      {
+        "indices": [
+          19
+        ],
+        "inicio": 63.91,
+        "fim": 66.25,
+        "txt_inicio": 150,
+        "txt_fim": 156,
+        "texto": "Por que cê matou o Kuririn?"
+      },
+      {
+        "indices": [
+          20
+        ],
+        "inicio": 66.45,
+        "fim": 70.61,
+        "txt_inicio": 156,
+        "txt_fim": 164,
+        "texto": "Freeza, sente meu poder fluir Eleva, eleva o"
+      },
+      {
+        "indices": [
+          21
+        ],
+        "inicio": 70.61,
+        "fim": 77.53,
+        "txt_inicio": 164,
+        "txt_fim": 172,
+        "texto": "Ki Será humilhado! Pelo Saiyajin! Preciso elevar o"
+      },
+      {
+        "indices": [
+          22
+        ],
+        "inicio": 77.53,
+        "fim": 81.45,
+        "txt_inicio": 172,
+        "txt_fim": 180,
+        "texto": "Ki! Nunca viram um guerreiro assim Esse é"
+      },
+      {
+        "indices": [
+          23
+        ],
+        "inicio": 81.45,
+        "fim": 85.89,
+        "txt_inicio": 180,
+        "txt_fim": 188,
+        "texto": "o poder De um Super Saiyajin! Vocês não"
+      },
+      {
+        "indices": [
+          24
+        ],
+        "inicio": 85.89,
+        "fim": 90.35,
+        "txt_inicio": 188,
+        "txt_fim": 196,
+        "texto": "conseguirão me enfrentar O meu poder se elevar"
+      },
+      {
+        "indices": [
+          25
+        ],
+        "inicio": 90.35,
+        "fim": 95.79,
+        "txt_inicio": 196,
+        "txt_fim": 204,
+        "texto": "Goku! Kamehameha! Morri de uma doença? Isso é"
+      },
+      {
+        "indices": [
+          26
+        ],
+        "inicio": 95.79,
+        "fim": 98.31,
+        "txt_inicio": 204,
+        "txt_fim": 212,
+        "texto": "constrangedor Logo ao chegar na Terra, guerreiro do"
+      },
+      {
+        "indices": [
+          27
+        ],
+        "inicio": 98.31,
+        "fim": 101.85,
+        "txt_inicio": 212,
+        "txt_fim": 220,
+        "texto": "Futuro Androides nos aniquilarão Então começa o treinamento"
+      },
+      {
+        "indices": [
+          28
+        ],
+        "inicio": 101.85,
+        "fim": 107.83,
+        "txt_inicio": 220,
+        "txt_fim": 229,
+        "texto": "Vamos todos os guerreiros então Todos juntos pra Sala"
+      },
+      {
+        "indices": [
+          29
+        ],
+        "inicio": 107.83,
+        "fim": 112.07,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "do tempo O tempo passa diferente aqui Se"
+      },
+      {
+        "indices": [
+          30
+        ],
+        "inicio": 112.07,
+        "fim": 114.31,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "eu prometo que eu vou te matar Quando"
+      },
+      {
+        "indices": [
+          31
+        ],
+        "inicio": 114.31,
+        "fim": 117.61,
+        "txt_inicio": 244,
+        "txt_fim": 252,
+        "texto": "eu elevar meu Ki Eu juro que irei"
+      },
+      {
+        "indices": [
+          32
+        ],
+        "inicio": 117.61,
+        "fim": 120.45,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "voltar Se estou mais forte que o céu"
+      },
+      {
+        "indices": [
+          33
+        ],
+        "inicio": 120.45,
+        "fim": 124.97,
+        "txt_inicio": 260,
+        "txt_fim": 268,
+        "texto": "Me diga Não, você não está Mas isso"
+      },
+      {
+        "indices": [
+          34
+        ],
+        "inicio": 124.97,
+        "fim": 129.93,
+        "txt_inicio": 268,
+        "txt_fim": 276,
+        "texto": "não me preocupa Um torneio, Cell, te prometo"
+      },
+      {
+        "indices": [
+          35
+        ],
+        "inicio": 129.93,
+        "fim": 132.87,
+        "txt_inicio": 276,
+        "txt_fim": 284,
+        "texto": "que Tem um guerreiro que cê não vence"
+      },
+      {
+        "indices": [
+          36
+        ],
+        "inicio": 132.87,
+        "fim": 136.17,
+        "txt_inicio": 284,
+        "txt_fim": 292,
+        "texto": "Eu desisto, venha, meu filho E mostre para"
+      },
+      {
+        "indices": [
+          37
+        ],
+        "inicio": 136.17,
+        "fim": 138.35,
+        "txt_inicio": 292,
+        "txt_fim": 301,
+        "texto": "o Cell todo o seu poder! Acho que errei"
+      },
+      {
+        "indices": [
+          38
+        ],
+        "inicio": 138.35,
+        "fim": 142.99,
+        "txt_inicio": 301,
+        "txt_fim": 309,
+        "texto": "como um pai Me perdoe, filho Farei o"
+      },
+      {
+        "indices": [
+          39
+        ],
+        "inicio": 142.99,
+        "fim": 148.49,
+        "txt_inicio": 309,
+        "txt_fim": 317,
+        "texto": "que for capaz Será meu sacrifício! Cell desintegrado"
+      },
+      {
+        "indices": [
+          40
+        ],
+        "inicio": 148.49,
+        "fim": 153.59,
+        "txt_inicio": 317,
+        "txt_fim": 324,
+        "texto": "em nível celular Pelo seu Kamehameha Autorizado"
+      },
+      {
+        "indices": [
+          41
+        ],
+        "inicio": 153.59,
+        "fim": 156.57,
+        "txt_inicio": 324,
+        "txt_fim": 332,
+        "texto": "a voltar pra Terra Nesse torneio eu também"
+      },
+      {
+        "indices": [
+          42
+        ],
+        "inicio": 156.57,
+        "fim": 161.41,
+        "txt_inicio": 332,
+        "txt_fim": 340,
+        "texto": "vou lutar Mas guerreiros inesperados Que acabam estragando"
+      },
+      {
+        "indices": [
+          43
+        ],
+        "inicio": 161.41,
+        "fim": 165.95,
+        "txt_inicio": 340,
+        "txt_fim": 348,
+        "texto": "a festa Com um poder ilimitado Carregam um"
+      },
+      {
+        "indices": [
+          44
+        ],
+        "inicio": 165.95,
+        "fim": 168.99,
+        "txt_inicio": 348,
+        "txt_fim": 356,
+        "texto": "M na testa O Majin Boo voltou e"
+      },
+      {
+        "indices": [
+          45
+        ],
+        "inicio": 168.99,
+        "fim": 172.09,
+        "txt_inicio": 356,
+        "txt_fim": 364,
+        "texto": "quer destruição Não me diga que, Vegeta você"
+      },
+      {
+        "indices": [
+          46
+        ],
+        "inicio": 172.09,
+        "fim": 174.43,
+        "txt_inicio": 364,
+        "txt_fim": 372,
+        "texto": "não Se entregou pro mal, cê quer me"
+      },
+      {
+        "indices": [
+          47
+        ],
+        "inicio": 174.43,
+        "fim": 176.91,
+        "txt_inicio": 372,
+        "txt_fim": 380,
+        "texto": "vencer? Mas saiba afinal, eu sou bem mais"
+      },
+      {
+        "indices": [
+          48
+        ],
+        "inicio": 176.91,
+        "fim": 179.97,
+        "txt_inicio": 380,
+        "txt_fim": 385,
+        "texto": "forte que você! Matando pessoas?"
+      },
+      {
+        "indices": [
+          49
+        ],
+        "inicio": 180.37,
+        "fim": 183.31,
+        "txt_inicio": 385,
+        "txt_fim": 393,
+        "texto": "Você não é isso Pense em sua mulher"
+      },
+      {
+        "indices": [
+          50
+        ],
+        "inicio": 183.31,
+        "fim": 186.61,
+        "txt_inicio": 393,
+        "txt_fim": 401,
+        "texto": "e no seu filho Após seu sacrifício, elevando"
+      },
+      {
+        "indices": [
+          51
+        ],
+        "inicio": 186.61,
+        "fim": 189.13,
+        "txt_inicio": 401,
+        "txt_fim": 409,
+        "texto": "mais uma vez Esse é o Super Saiyajin"
+      },
+      {
+        "indices": [
+          52
+        ],
+        "inicio": 189.13,
+        "fim": 193.67,
+        "txt_inicio": 409,
+        "txt_fim": 417,
+        "texto": "Nível Três! Precisamos nos fundir para vencer o"
+      },
+      {
+        "indices": [
+          53
+        ],
+        "inicio": 193.67,
+        "fim": 197.29,
+        "txt_inicio": 417,
+        "txt_fim": 426,
+        "texto": "Majin Vegeta pega o Brinco Potara aí Não é"
+      },
+      {
+        "indices": [
+          54
+        ],
+        "inicio": 197.29,
+        "fim": 200.85,
+        "txt_inicio": 426,
+        "txt_fim": 435,
+        "texto": "o suficiente, mas não será a extinção Genki Dama!"
+      },
+      {
+        "indices": [
+          55
+        ],
+        "inicio": 201.13,
+        "fim": 203.29,
+        "txt_inicio": 435,
+        "txt_fim": 440,
+        "texto": "Todos juntos! Levantem as mãos!"
+      },
+      {
+        "indices": [
+          56
+        ],
+        "inicio": 204.97,
+        "fim": 209.87,
+        "txt_inicio": 444,
+        "txt_fim": 453,
+        "texto": "Nunca viram um guerreiro assim Esse é o poder"
+      },
+      {
+        "indices": [
+          57
+        ],
+        "inicio": 209.87,
+        "fim": 214.05,
+        "txt_inicio": 453,
+        "txt_fim": 461,
+        "texto": "De um Super Sayajin! Vocês não conseguirão me"
+      },
+      {
+        "indices": [
+          58
+        ],
+        "inicio": 214.05,
+        "fim": 221.17,
+        "txt_inicio": 461,
+        "txt_fim": 469,
+        "texto": "enfrentar O meu poder se elevar Goku! Kamehameha!"
+      },
+      {
+        "indices": [
+          59
+        ],
+        "inicio": 221.17,
+        "fim": 224.79,
+        "txt_inicio": 469,
+        "txt_fim": 477,
+        "texto": "Tantos inimigos me trouxeram aqui Nessa arena, tenho"
+      },
+      {
+        "indices": [
+          60
+        ],
+        "inicio": 224.79,
+        "fim": 227.29,
+        "txt_inicio": 477,
+        "txt_fim": 485,
+        "texto": "que elevar o Ki Os guerreiros mais fortes"
+      },
+      {
+        "indices": [
+          61
+        ],
+        "inicio": 227.29,
+        "fim": 229.75,
+        "txt_inicio": 485,
+        "txt_fim": 491,
+        "texto": "de vários universos Mas contra Jiren,"
+      },
+      {
+        "indices": [
+          62
+        ],
+        "inicio": 229.75,
+        "fim": 231.89,
+        "txt_inicio": 491,
+        "txt_fim": 499,
+        "texto": "sinto que não estou nem perto Levanto as"
+      },
+      {
+        "indices": [
+          63
+        ],
+        "inicio": 231.89,
+        "fim": 234.79,
+        "txt_inicio": 499,
+        "txt_fim": 507,
+        "texto": "mãos novamente Ele está na minha frente Revidou"
+      },
+      {
+        "indices": [
+          64
+        ],
+        "inicio": 234.79,
+        "fim": 237.15,
+        "txt_inicio": 507,
+        "txt_fim": 513,
+        "texto": "meu poder, tudo acaba aqui? (Não!)"
+      },
+      {
+        "indices": [
+          65
+        ],
+        "inicio": 237.51,
+        "fim": 246.24,
+        "txt_inicio": 513,
+        "txt_fim": 521,
+        "texto": "Só existe limite se deixar existir Migatte no"
+      },
+      {
+        "indices": [
+          66
+        ],
+        "inicio": 246.24,
+        "fim": 246.58,
+        "txt_inicio": 624,
+        "txt_fim": 625,
+        "texto": "Goku!"
+      },
+      {
+        "indices": [
+          67
+        ],
+        "inicio": 246.86,
+        "fim": 248.72,
+        "txt_inicio": 522,
+        "txt_fim": 529,
+        "texto": "Quebrando meus limites, cê não pode me"
+      },
+      {
+        "indices": [
+          68
+        ],
+        "inicio": 248.72,
+        "fim": 252.04,
+        "txt_inicio": 529,
+        "txt_fim": 537,
+        "texto": "tocar Desvio facilmente sem pensar em desviar Você"
+      },
+      {
+        "indices": [
+          69
+        ],
+        "inicio": 252.04,
+        "fim": 254.44,
+        "txt_inicio": 537,
+        "txt_fim": 545,
+        "texto": "dizia ser o mais forte desse universo Mas"
+      },
+      {
+        "indices": [
+          70
+        ],
+        "inicio": 254.44,
+        "fim": 257.66,
+        "txt_inicio": 545,
+        "txt_fim": 553,
+        "texto": "acho que meu instinto é superior! Descobri do"
+      },
+      {
+        "indices": [
+          71
+        ],
+        "inicio": 257.66,
+        "fim": 260.5,
+        "txt_inicio": 553,
+        "txt_fim": 561,
+        "texto": "poder que eu sou capaz Tudo que cê"
+      },
+      {
+        "indices": [
+          72
+        ],
+        "inicio": 260.5,
+        "fim": 264.08,
+        "txt_inicio": 561,
+        "txt_fim": 569,
+        "texto": "faz não adianta mais Migatte completo, essa batalha"
+      },
+      {
+        "indices": [
+          73
+        ],
+        "inicio": 264.08,
+        "fim": 266.3,
+        "txt_inicio": 569,
+        "txt_fim": 577,
+        "texto": "é nossa Obrigado por ter me dado uma"
+      },
+      {
+        "indices": [
+          74
+        ],
+        "inicio": 266.3,
+        "fim": 272.24,
+        "txt_inicio": 577,
+        "txt_fim": 585,
+        "texto": "luta fervorosa! Quem vencerá é o Universo 7"
+      },
+      {
+        "indices": [
+          75
+        ],
+        "inicio": 272.24,
+        "fim": 277.62,
+        "txt_inicio": 585,
+        "txt_fim": 593,
+        "texto": "E Jiren conhecerá a mim A sua derrota"
+      },
+      {
+        "indices": [
+          76
+        ],
+        "inicio": 277.62,
+        "fim": 284.56,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "virá Preciso elevar o Ki Nunca virá um"
+      },
+      {
+        "indices": [
+          77
+        ],
+        "inicio": 284.56,
+        "fim": 288.94,
+        "txt_inicio": 603,
+        "txt_fim": 611,
+        "texto": "guerreiro assim Esse é o poder De um"
+      },
+      {
+        "indices": [
+          78
+        ],
+        "inicio": 288.94,
+        "fim": 293.94,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Super Saiyajin Vocês não conseguirão me enfrentar O"
+      },
+      {
+        "indices": [
+          79
+        ],
+        "inicio": 293.94,
+        "fim": 298.0,
+        "txt_inicio": 620,
+        "txt_fim": 626,
+        "texto": "meu poder se elevar Goku! Kamehameha!"
+      }
+    ],
+    "tokens_txt_sem_correspondencia": [
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258,
+      259,
+      440,
+      441,
+      442,
+      443,
+      521,
+      593,
+      594,
+      595,
+      596,
+      597,
+      598,
+      599,
+      600,
+      601,
+      602,
+      611,
+      612,
+      613,
+      614,
+      615,
+      616,
+      617,
+      618,
+      619
+    ],
+    "parametros": {
+      "score_consulta_minimo": 0.65,
+      "margem_ambiguidade": 0.025,
+      "bonus_por_extremidade": 0.02,
+      "score_contexto_minimo": 0.85
+    }
+  },
+  "auditoria_estrutura": [
+    {
+      "bloco_srt": 1,
+      "inicio_original": 1.3900000000000001,
+      "fim_original": 4.61,
+      "texto_original": "Dizem que eu caí na terra De nada",
+      "texto_publicado": "Dizem que eu caí na terra de nada",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 2,
+      "inicio_original": 4.61,
+      "fim_original": 8.39,
+      "texto_original": "disso me lembro Dizem que bati a cabeça",
+      "texto_publicado": "Disso me lembro dizem que bati a cabeça",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 3,
+      "inicio_original": 8.39,
+      "fim_original": 12.49,
+      "texto_original": "E isso me mudou por dentro A cobrança",
+      "texto_publicado": "E isso me mudou por dentro a cobrança",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 4,
+      "inicio_original": 12.49,
+      "fim_original": 16.69,
+      "texto_original": "veio Ele disse ser meu irmão Nesse dia",
+      "texto_publicado": "Veio ele diz ser meu irmão nesse dia,",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 5,
+      "inicio_original": 16.69,
+      "fim_original": 20.51,
+      "texto_original": "eu morri E ele anunciou uma invasão Foi",
+      "texto_publicado": "Eu morri e ele anunciou uma invasão foi",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 6,
+      "inicio_original": 20.51,
+      "fim_original": 23.41,
+      "texto_original": "a primeira vez que eu ouvi Sobre esses",
+      "texto_publicado": "A primeira vez que eu ouvi sobre esses",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 7,
+      "inicio_original": 23.41,
+      "fim_original": 26.31,
+      "texto_original": "tassaiagens Quando elevo o meu que é mais",
+      "texto_publicado": "Tassaiagens quando elevo o meu que é mais",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 8,
+      "inicio_original": 26.31,
+      "fim_original": 28.21,
+      "texto_original": "de oito mil Um poder que esse tal",
+      "texto_publicado": "De 8 mil um poder que esse tal",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 9,
+      "inicio_original": 28.21,
+      "fim_original": 33.03,
+      "texto_original": "príncipe nunca viu Quem será que vai ganhar?",
+      "texto_publicado": "Príncipe nunca viu quem será que vai ganhar?",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 10,
+      "inicio_original": 33.89,
+      "fim_original": 39.53,
+      "texto_original": "Galic ou contra Kamehameha Bom, parei a vida",
+      "texto_publicado": "Galick ho contra kamehameha! pouparei a vida",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 11,
+      "inicio_original": 39.53,
+      "fim_original": 41.87,
+      "texto_original": "dele Quero te ver de novo Ainda me",
+      "texto_publicado": "Dele quero te ver de novo ainda me",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 12,
+      "inicio_original": 41.87,
+      "fim_original": 44.05,
+      "texto_original": "acusei O oponente é outro Com só golpe",
+      "texto_publicado": "Namekusei, o oponente é outro com um só golpe",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 13,
+      "inicio_original": 44.05,
+      "fim_original": 45.75,
+      "texto_original": "rico Um foi e depois foi dinho também",
+      "texto_publicado": "Rico um foi e depois foi dinho também",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 14,
+      "inicio_original": 45.75,
+      "fim_original": 47.87,
+      "texto_original": "Acho que não entenderão Que meu poder vai",
+      "texto_publicado": "Acho que não entenderam que meu poder vai",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 15,
+      "inicio_original": 47.87,
+      "fim_original": 51.63,
+      "texto_original": "além Vegeta chora Eu te prometo Com Freeza",
+      "texto_publicado": "Além vegeta chora, e eu te prometo com freeza",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 16,
+      "inicio_original": 51.63,
+      "fim_original": 55.01,
+      "texto_original": "não Não tenho medo Sua angústia devia ser",
+      "texto_publicado": "Não, não tenho medo sua angústia devia ser",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 17,
+      "inicio_original": 55.01,
+      "fim_original": 58.15,
+      "texto_original": "imensa Pra isso ter me implorado Ele disse",
+      "texto_publicado": "Imensa pra isso ter me implorado ele disse",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 18,
+      "inicio_original": 58.15,
+      "fim_original": 60.43,
+      "texto_original": "que eu sou a lenda Do super saiyajin",
+      "texto_publicado": "Que eu sou a lenda do super saiyajin",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 19,
+      "inicio_original": 60.43,
+      "fim_original": 63.83,
+      "texto_original": "lendário Por que envolveu quem eu amo assim?",
+      "texto_publicado": "Lendário por que envolveu quem eu amo assim?",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 20,
+      "inicio_original": 63.91,
+      "fim_original": 66.25,
+      "texto_original": "Por que você matou o Kuririn?",
+      "texto_publicado": "Por que cê matou o kuririn?",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 21,
+      "inicio_original": 66.45,
+      "fim_original": 70.61,
+      "texto_original": "Freeza Sente meu poder fluir Eleva Eleva o",
+      "texto_publicado": "Freeza, sente meu poder fluir eleva, eleva o",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 22,
+      "inicio_original": 70.61,
+      "fim_original": 77.53,
+      "texto_original": "Ki Será humilhado Pelo saiyajin Preciso elevar o",
+      "texto_publicado": "Ki será humilhado! pelo saiyajin! preciso elevar o",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 23,
+      "inicio_original": 77.53,
+      "fim_original": 81.45,
+      "texto_original": "Ki Nunca virá um guerreiro assim Esse é",
+      "texto_publicado": "Ki! nunca viram um guerreiro assim esse é",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 24,
+      "inicio_original": 81.45,
+      "fim_original": 85.89,
+      "texto_original": "o poder De um super saiyajin Vocês não",
+      "texto_publicado": "O poder de um super saiyajin! vocês não",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 25,
+      "inicio_original": 85.89,
+      "fim_original": 90.35,
+      "texto_original": "conseguirão me enfrentar O meu poder se eleva",
+      "texto_publicado": "Conseguirão me enfrentar o meu poder se elevar",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 26,
+      "inicio_original": 90.35,
+      "fim_original": 95.79,
+      "texto_original": "Goku Kamehameha Morri de uma doença Isso é",
+      "texto_publicado": "Goku! kamehameha! morri de uma doença? isso é",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 27,
+      "inicio_original": 95.79,
+      "fim_original": 98.31,
+      "texto_original": "confesso Logo ao chegar na terra Guerreiro do",
+      "texto_publicado": "Constrangedor logo ao chegar na terra, guerreiro do",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 28,
+      "inicio_original": 98.31,
+      "fim_original": 101.85,
+      "texto_original": "futuro Androides nos aniquilarão Então começa o treinamento",
+      "texto_publicado": "Futuro androides nos aniquilarão então começa o treinamento",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 29,
+      "inicio_original": 101.85,
+      "fim_original": 107.83,
+      "texto_original": "Vamos todos guerreiros então Todos juntos pra sala",
+      "texto_publicado": "Vamos todos os guerreiros então todos juntos pra sala",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 30,
+      "inicio_original": 107.83,
+      "fim_original": 112.07,
+      "texto_original": "do tempo O tempo passa diferente aqui Se",
+      "texto_publicado": "Do tempo o tempo passa diferente aqui se",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 31,
+      "inicio_original": 112.07,
+      "fim_original": 114.31,
+      "texto_original": "eu prometo que eu vou te matar Quando",
+      "texto_publicado": "Eu prometo que eu vou te matar quando",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 32,
+      "inicio_original": 114.31,
+      "fim_original": 117.61,
+      "texto_original": "eu elevar meu Ki Eu juro que irei",
+      "texto_publicado": "Eu elevar meu ki eu juro que irei",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 33,
+      "inicio_original": 117.61,
+      "fim_original": 120.45,
+      "texto_original": "voltar Se estou mais forte que o céu",
+      "texto_publicado": "Voltar se estou mais forte que o céu",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 34,
+      "inicio_original": 120.45,
+      "fim_original": 124.97,
+      "texto_original": "Me diga Não Você não está Mas isso",
+      "texto_publicado": "Me diga não, você não está mas isso",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 35,
+      "inicio_original": 124.97,
+      "fim_original": 129.93,
+      "texto_original": "não me preocupa Um torneio, céu, te prometo",
+      "texto_publicado": "Não me preocupa um torneio, cell, te prometo",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 36,
+      "inicio_original": 129.93,
+      "fim_original": 132.87,
+      "texto_original": "que Tem um guerreiro que cê não vence",
+      "texto_publicado": "Que tem um guerreiro que cê não vence",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 37,
+      "inicio_original": 132.87,
+      "fim_original": 136.17,
+      "texto_original": "Eu desisto, venha, meu filho E mostre para",
+      "texto_publicado": "Eu desisto, venha, meu filho e mostre para",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 38,
+      "inicio_original": 136.17,
+      "fim_original": 138.35,
+      "texto_original": "o céu todo seu poder Acho que errei",
+      "texto_publicado": "O cell todo o seu poder! acho que errei",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 39,
+      "inicio_original": 138.35,
+      "fim_original": 142.99,
+      "texto_original": "como um pai Me perdoe, filho Farei o",
+      "texto_publicado": "Como um pai me perdoe, filho farei o",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 40,
+      "inicio_original": 142.99,
+      "fim_original": 148.49,
+      "texto_original": "que for capaz Será meu sacrifício Seu desintegro",
+      "texto_publicado": "Que for capaz será meu sacrifício! cell desintegrado",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 41,
+      "inicio_original": 148.49,
+      "fim_original": 153.59,
+      "texto_original": "é venido ao celular Pelo seu Kamehameha Autorizado",
+      "texto_publicado": "Em nível celular pelo seu kamehameha autorizado",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 42,
+      "inicio_original": 153.59,
+      "fim_original": 156.57,
+      "texto_original": "a voltar pra terra Nesse torneio eu também",
+      "texto_publicado": "A voltar pra terra nesse torneio eu também",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 43,
+      "inicio_original": 156.57,
+      "fim_original": 161.41,
+      "texto_original": "vou lutar Mas guerreiros inesperados Que acabam estragando",
+      "texto_publicado": "Vou lutar mas guerreiros inesperados que acabam estragando",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 44,
+      "inicio_original": 161.41,
+      "fim_original": 165.95,
+      "texto_original": "a festa Com um poder ilimitado Carregam um",
+      "texto_publicado": "A festa com um poder ilimitado carregam um",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 45,
+      "inicio_original": 165.95,
+      "fim_original": 168.99,
+      "texto_original": "M na testa O Majin Boo voltou e",
+      "texto_publicado": "M na testa o majin boo voltou e",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 46,
+      "inicio_original": 168.99,
+      "fim_original": 172.09,
+      "texto_original": "quer destruição Não me diga que Vegeta você",
+      "texto_publicado": "Quer destruição não me diga que, vegeta você",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 47,
+      "inicio_original": 172.09,
+      "fim_original": 174.43,
+      "texto_original": "não Se entregou pro mal, cê quer me",
+      "texto_publicado": "Não se entregou pro mal, cê quer me",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 48,
+      "inicio_original": 174.43,
+      "fim_original": 176.91,
+      "texto_original": "vencer Mas saiba afinal eu sou bem mais",
+      "texto_publicado": "Vencer? mas saiba afinal, eu sou bem mais",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 49,
+      "inicio_original": 176.91,
+      "fim_original": 179.97,
+      "texto_original": "forte que você Matando pessoas?",
+      "texto_publicado": "Forte que você! matando pessoas?",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 50,
+      "inicio_original": 180.37,
+      "fim_original": 183.31,
+      "texto_original": "Você não é isso Pense em sua mulher",
+      "texto_publicado": "Você não é isso pense em sua mulher",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 51,
+      "inicio_original": 183.31,
+      "fim_original": 186.61,
+      "texto_original": "e no seu filho Após seu sacrifício, elevando",
+      "texto_publicado": "E no seu filho após seu sacrifício, elevando",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 52,
+      "inicio_original": 186.61,
+      "fim_original": 189.13,
+      "texto_original": "mais uma vez Esse é o Super Sayajin",
+      "texto_publicado": "Mais uma vez esse é o super saiyajin",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 53,
+      "inicio_original": 189.13,
+      "fim_original": 193.67,
+      "texto_original": "nível 3 Precisamos nos fundir para vencer o",
+      "texto_publicado": "Nível três! precisamos nos fundir para vencer o",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 54,
+      "inicio_original": 193.67,
+      "fim_original": 197.29,
+      "texto_original": "Majin Vegeta pega o brinco, Botarai Não é",
+      "texto_publicado": "Majin vegeta pega o brinco potara aí não é",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 55,
+      "inicio_original": 197.29,
+      "fim_original": 200.85,
+      "texto_original": "o suficiente, mas não será extensão Genkidama!",
+      "texto_publicado": "O suficiente, mas não será a extinção genki dama!",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 56,
+      "inicio_original": 201.13,
+      "fim_original": 203.29,
+      "texto_original": "Todos juntos levantem as mãos!",
+      "texto_publicado": "Todos juntos! levantem as mãos!",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 57,
+      "inicio_original": 204.97,
+      "fim_original": 209.87,
+      "texto_original": "Nunca virão guerreiros assim Esse é o poder",
+      "texto_publicado": "Nunca viram um guerreiro assim esse é o poder",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 58,
+      "inicio_original": 209.87,
+      "fim_original": 214.05,
+      "texto_original": "de um Super Sayajin Vocês não conseguirão me",
+      "texto_publicado": "De um super sayajin! vocês não conseguirão me",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 59,
+      "inicio_original": 214.05,
+      "fim_original": 221.17,
+      "texto_original": "enfrentar O meu poder se eleva Goku Kamehameha",
+      "texto_publicado": "Enfrentar o meu poder se elevar goku! kamehameha!",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 60,
+      "inicio_original": 221.17,
+      "fim_original": 224.79,
+      "texto_original": "Tantos inimigos me trouxeram aqui Nessa arena, tenho",
+      "texto_publicado": "Tantos inimigos me trouxeram aqui nessa arena, tenho",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 61,
+      "inicio_original": 224.79,
+      "fim_original": 227.29,
+      "texto_original": "que elevar o Ki Os guerreiros mais fortes",
+      "texto_publicado": "Que elevar o ki os guerreiros mais fortes",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 62,
+      "inicio_original": 227.29,
+      "fim_original": 229.75,
+      "texto_original": "de vários universos Mas contra a girância e",
+      "texto_publicado": "De vários universos mas contra jiren,",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 63,
+      "inicio_original": 229.75,
+      "fim_original": 231.89,
+      "texto_original": "pro que não estou nem perto Levanto as",
+      "texto_publicado": "Sinto que não estou nem perto levanto as",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 64,
+      "inicio_original": 231.89,
+      "fim_original": 234.79,
+      "texto_original": "mãos novamente, ele está na minha frente Evitou",
+      "texto_publicado": "Mãos novamente ele está na minha frente revidou",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 65,
+      "inicio_original": 234.79,
+      "fim_original": 237.15,
+      "texto_original": "o meu poder, tudo acaba aqui Não!",
+      "texto_publicado": "O meu poder, tudo acaba aqui não!",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 66,
+      "inicio_original": 237.51,
+      "fim_original": 246.24,
+      "texto_original": "Só existe limite Se deixar existir Migate no",
+      "texto_publicado": "Só existe limite se deixar existir migatte no",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 67,
+      "inicio_original": 246.24,
+      "fim_original": 246.58,
+      "texto_original": "Goku!",
+      "texto_publicado": "Goku!",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 68,
+      "inicio_original": 246.86,
+      "fim_original": 248.72,
+      "texto_original": "Quebrando o meu limite, cê não pode me",
+      "texto_publicado": "Quebrando meus limites, cê não pode me",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 69,
+      "inicio_original": 248.72,
+      "fim_original": 252.04,
+      "texto_original": "tocar Desvio facilmente sem pensar em desviar Você",
+      "texto_publicado": "Tocar desvio facilmente sem pensar em desviar você",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 70,
+      "inicio_original": 252.04,
+      "fim_original": 254.44,
+      "texto_original": "dizia ser o mais forte desse unibraço Mas",
+      "texto_publicado": "Dizia ser o mais forte desse universo mas",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 71,
+      "inicio_original": 254.44,
+      "fim_original": 257.66,
+      "texto_original": "acho que meu instinto é superior Descobri do",
+      "texto_publicado": "Acho que meu instinto é superior! descobri do",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 72,
+      "inicio_original": 257.66,
+      "fim_original": 260.5,
+      "texto_original": "poder que eu sou capaz Tudo que cê",
+      "texto_publicado": "Poder que eu sou capaz tudo que cê",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 73,
+      "inicio_original": 260.5,
+      "fim_original": 264.08,
+      "texto_original": "faz não adianta mais Migate completo, essa batalha",
+      "texto_publicado": "Faz não adianta mais migatte completo, essa batalha",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 74,
+      "inicio_original": 264.08,
+      "fim_original": 266.3,
+      "texto_original": "é nossa Obrigado por ter me dado uma",
+      "texto_publicado": "É nossa obrigado por ter me dado uma",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 75,
+      "inicio_original": 266.3,
+      "fim_original": 272.24,
+      "texto_original": "luta fervorosa Quem vencerá é o universo 7",
+      "texto_publicado": "Luta fervorosa! quem vencerá é o universo 7",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 76,
+      "inicio_original": 272.24,
+      "fim_original": 277.62,
+      "texto_original": "E Jiren conhecerá a mim A sua derrota",
+      "texto_publicado": "E jiren conhecerá a mim a sua derrota",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 77,
+      "inicio_original": 277.62,
+      "fim_original": 284.56,
+      "texto_original": "virá Preciso elevar o Ki Nunca virá um",
+      "texto_publicado": "Virá preciso elevar o ki nunca virá um",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 78,
+      "inicio_original": 284.56,
+      "fim_original": 288.94,
+      "texto_original": "guerreiro assim Esse é o poder de um",
+      "texto_publicado": "Guerreiro assim esse é o poder de um",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 79,
+      "inicio_original": 288.94,
+      "fim_original": 293.94,
+      "texto_original": "Super Saiyajin Vocês não conseguirão me enfrentar O",
+      "texto_publicado": "Super saiyajin vocês não conseguirão me enfrentar o",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 80,
+      "inicio_original": 293.94,
+      "fim_original": 298.0,
+      "texto_original": "meu poder se eleva Goku Kamehameha",
+      "texto_publicado": "Meu poder se elevar goku! kamehameha!",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    }
+  ],
+  "recuperacoes": [
+    {
+      "id": 1,
+      "txt_inicio": 440,
+      "txt_fim": 444,
+      "inicio": 203.29,
+      "fim": 204.97,
+      "bloco_anterior": 56,
+      "bloco_seguinte": 57,
+      "limite_busca": 30.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "recuperado",
+      "tentativas": [
+        {
+          "janela": [
+            203.29,
+            204.97
+          ],
+          "texto": "Preciso elevar o Ki",
+          "palavras": [
+            {
+              "texto": "Preciso",
+              "inicio": 203.29,
+              "fim": 203.897,
+              "score": 0.587
+            },
+            {
+              "texto": "elevar",
+              "inicio": 204.039,
+              "fim": 204.666,
+              "score": 0.636
+            },
+            {
+              "texto": "o",
+              "inicio": 204.727,
+              "fim": 204.828,
+              "score": 0.8
+            },
+            {
+              "texto": "Ki",
+              "inicio": 204.849,
+              "fim": 204.97,
+              "score": 0.4
+            }
+          ]
+        }
+      ],
+      "inseridos": [
+        {
+          "inicio": 203.29,
+          "fim": 204.97,
+          "texto": "Preciso elevar o Ki!",
+          "origem": "insercao_acustica",
+          "lacuna": 1,
+          "txt_inicio": 440,
+          "txt_fim": 444,
+          "score_minimo": 0.4,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        }
+      ],
+      "tokens_recuperados": [
+        440,
+        441,
+        442,
+        443
+      ],
+      "texto": "Preciso elevar o Ki!"
+    },
+    {
+      "id": 2,
+      "txt_inicio": 521,
+      "txt_fim": 624,
+      "inicio": 246.24,
+      "fim": 246.24,
+      "bloco_anterior": 66,
+      "bloco_seguinte": 67,
+      "limite_busca": 90.0,
+      "motivo_nao_pesquisado": "sem_espaco_temporal_entre_blocos",
+      "estado": "nao_pesquisado",
+      "tentativas": [],
+      "inseridos": [],
+      "tokens_recuperados": []
+    }
+  ],
+  "tentativas": [
+    {
+      "janela": [
+        203.29,
+        204.97
+      ],
+      "texto": "Preciso elevar o Ki",
+      "palavras": [
+        {
+          "texto": "Preciso",
+          "inicio": 203.29,
+          "fim": 203.897,
+          "score": 0.587
+        },
+        {
+          "texto": "elevar",
+          "inicio": 204.039,
+          "fim": 204.666,
+          "score": 0.636
+        },
+        {
+          "texto": "o",
+          "inicio": 204.727,
+          "fim": 204.828,
+          "score": 0.8
+        },
+        {
+          "texto": "Ki",
+          "inicio": 204.849,
+          "fim": 204.97,
+          "score": 0.4
+        }
+      ],
+      "lacuna": 1
+    }
+  ],
+  "pendencias": [
+    {
+      "bloco_srt": 7,
+      "motivo": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 11,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 13,
+      "motivo": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 17,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 30,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 31,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 33,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 65,
+      "motivo": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 77,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 79,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "lacuna": 2,
+      "motivo": "nao_pesquisado",
+      "detalhe": "sem_espaco_temporal_entre_blocos"
+    },
+    {
+      "motivo": "texto_txt_sem_tempo",
+      "tokens_txt": [
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        521,
+        593,
+        594,
+        595,
+        596,
+        597,
+        598,
+        599,
+        600,
+        601,
+        602,
+        611,
+        612,
+        613,
+        614,
+        615,
+        616,
+        617,
+        618,
+        619
+      ]
+    }
+  ],
+  "blocos": [
+    {
+      "inicio": 1.3900000000000001,
+      "fim": 4.61,
+      "texto": "Dizem que eu caí na terra de nada",
+      "origem": "texto_corrigido",
+      "bloco_original": 1
+    },
+    {
+      "inicio": 4.61,
+      "fim": 8.39,
+      "texto": "Disso me lembro dizem que bati a cabeça",
+      "origem": "original_preservado",
+      "bloco_original": 2
+    },
+    {
+      "inicio": 8.39,
+      "fim": 12.49,
+      "texto": "E isso me mudou por dentro a cobrança",
+      "origem": "original_preservado",
+      "bloco_original": 3
+    },
+    {
+      "inicio": 12.49,
+      "fim": 16.69,
+      "texto": "Veio ele diz ser meu irmão nesse dia,",
+      "origem": "texto_corrigido",
+      "bloco_original": 4
+    },
+    {
+      "inicio": 16.69,
+      "fim": 20.51,
+      "texto": "Eu morri e ele anunciou uma invasão foi",
+      "origem": "original_preservado",
+      "bloco_original": 5
+    },
+    {
+      "inicio": 20.51,
+      "fim": 23.41,
+      "texto": "A primeira vez que eu ouvi sobre esses",
+      "origem": "original_preservado",
+      "bloco_original": 6
+    },
+    {
+      "inicio": 23.41,
+      "fim": 26.31,
+      "texto": "Tassaiagens quando elevo o meu que é mais",
+      "origem": "original_preservado",
+      "bloco_original": 7
+    },
+    {
+      "inicio": 26.31,
+      "fim": 28.21,
+      "texto": "De 8 mil um poder que esse tal",
+      "origem": "texto_corrigido",
+      "bloco_original": 8
+    },
+    {
+      "inicio": 28.21,
+      "fim": 33.03,
+      "texto": "Príncipe nunca viu quem será que vai ganhar?",
+      "origem": "original_preservado",
+      "bloco_original": 9
+    },
+    {
+      "inicio": 33.89,
+      "fim": 39.53,
+      "texto": "Galick ho contra kamehameha! pouparei a vida",
+      "origem": "texto_corrigido",
+      "bloco_original": 10
+    },
+    {
+      "inicio": 39.53,
+      "fim": 41.87,
+      "texto": "Dele quero te ver de novo ainda me",
+      "origem": "original_preservado",
+      "bloco_original": 11
+    },
+    {
+      "inicio": 41.87,
+      "fim": 44.05,
+      "texto": "Namekusei, o oponente é outro com um só golpe",
+      "origem": "texto_corrigido",
+      "bloco_original": 12
+    },
+    {
+      "inicio": 44.05,
+      "fim": 45.75,
+      "texto": "Rico um foi e depois foi dinho também",
+      "origem": "original_preservado",
+      "bloco_original": 13
+    },
+    {
+      "inicio": 45.75,
+      "fim": 47.87,
+      "texto": "Acho que não entenderam que meu poder vai",
+      "origem": "texto_corrigido",
+      "bloco_original": 14
+    },
+    {
+      "inicio": 47.87,
+      "fim": 51.63,
+      "texto": "Além vegeta chora, e eu te prometo com freeza",
+      "origem": "texto_corrigido",
+      "bloco_original": 15
+    },
+    {
+      "inicio": 51.63,
+      "fim": 55.01,
+      "texto": "Não, não tenho medo sua angústia devia ser",
+      "origem": "texto_corrigido",
+      "bloco_original": 16
+    },
+    {
+      "inicio": 55.01,
+      "fim": 58.15,
+      "texto": "Imensa pra isso ter me implorado ele disse",
+      "origem": "original_preservado",
+      "bloco_original": 17
+    },
+    {
+      "inicio": 58.15,
+      "fim": 60.43,
+      "texto": "Que eu sou a lenda do super saiyajin",
+      "origem": "texto_corrigido",
+      "bloco_original": 18
+    },
+    {
+      "inicio": 60.43,
+      "fim": 63.83,
+      "texto": "Lendário por que envolveu quem eu amo assim?",
+      "origem": "texto_corrigido",
+      "bloco_original": 19
+    },
+    {
+      "inicio": 63.91,
+      "fim": 66.25,
+      "texto": "Por que cê matou o kuririn?",
+      "origem": "texto_corrigido",
+      "bloco_original": 20
+    },
+    {
+      "inicio": 66.45,
+      "fim": 70.61,
+      "texto": "Freeza, sente meu poder fluir eleva, eleva o",
+      "origem": "texto_corrigido",
+      "bloco_original": 21
+    },
+    {
+      "inicio": 70.61,
+      "fim": 77.53,
+      "texto": "Ki será humilhado! pelo saiyajin! preciso elevar o",
+      "origem": "texto_corrigido",
+      "bloco_original": 22
+    },
+    {
+      "inicio": 77.53,
+      "fim": 81.45,
+      "texto": "Ki! nunca viram um guerreiro assim esse é",
+      "origem": "texto_corrigido",
+      "bloco_original": 23
+    },
+    {
+      "inicio": 81.45,
+      "fim": 85.89,
+      "texto": "O poder de um super saiyajin! vocês não",
+      "origem": "texto_corrigido",
+      "bloco_original": 24
+    },
+    {
+      "inicio": 85.89,
+      "fim": 90.35,
+      "texto": "Conseguirão me enfrentar o meu poder se elevar",
+      "origem": "texto_corrigido",
+      "bloco_original": 25
+    },
+    {
+      "inicio": 90.35,
+      "fim": 95.79,
+      "texto": "Goku! kamehameha! morri de uma doença? isso é",
+      "origem": "texto_corrigido",
+      "bloco_original": 26
+    },
+    {
+      "inicio": 95.79,
+      "fim": 98.31,
+      "texto": "Constrangedor logo ao chegar na terra, guerreiro do",
+      "origem": "texto_corrigido",
+      "bloco_original": 27
+    },
+    {
+      "inicio": 98.31,
+      "fim": 101.85,
+      "texto": "Futuro androides nos aniquilarão então começa o treinamento",
+      "origem": "texto_corrigido",
+      "bloco_original": 28
+    },
+    {
+      "inicio": 101.85,
+      "fim": 107.83,
+      "texto": "Vamos todos os guerreiros então todos juntos pra sala",
+      "origem": "texto_corrigido",
+      "bloco_original": 29
+    },
+    {
+      "inicio": 107.83,
+      "fim": 112.07,
+      "texto": "Do tempo o tempo passa diferente aqui se",
+      "origem": "original_preservado",
+      "bloco_original": 30
+    },
+    {
+      "inicio": 112.07,
+      "fim": 114.31,
+      "texto": "Eu prometo que eu vou te matar quando",
+      "origem": "original_preservado",
+      "bloco_original": 31
+    },
+    {
+      "inicio": 114.31,
+      "fim": 117.61,
+      "texto": "Eu elevar meu ki eu juro que irei",
+      "origem": "original_preservado",
+      "bloco_original": 32
+    },
+    {
+      "inicio": 117.61,
+      "fim": 120.45,
+      "texto": "Voltar se estou mais forte que o céu",
+      "origem": "original_preservado",
+      "bloco_original": 33
+    },
+    {
+      "inicio": 120.45,
+      "fim": 124.97,
+      "texto": "Me diga não, você não está mas isso",
+      "origem": "texto_corrigido",
+      "bloco_original": 34
+    },
+    {
+      "inicio": 124.97,
+      "fim": 129.93,
+      "texto": "Não me preocupa um torneio, cell, te prometo",
+      "origem": "texto_corrigido",
+      "bloco_original": 35
+    },
+    {
+      "inicio": 129.93,
+      "fim": 132.87,
+      "texto": "Que tem um guerreiro que cê não vence",
+      "origem": "original_preservado",
+      "bloco_original": 36
+    },
+    {
+      "inicio": 132.87,
+      "fim": 136.17,
+      "texto": "Eu desisto, venha, meu filho e mostre para",
+      "origem": "original_preservado",
+      "bloco_original": 37
+    },
+    {
+      "inicio": 136.17,
+      "fim": 138.35,
+      "texto": "O cell todo o seu poder! acho que errei",
+      "origem": "texto_corrigido",
+      "bloco_original": 38
+    },
+    {
+      "inicio": 138.35,
+      "fim": 142.99,
+      "texto": "Como um pai me perdoe, filho farei o",
+      "origem": "original_preservado",
+      "bloco_original": 39
+    },
+    {
+      "inicio": 142.99,
+      "fim": 148.49,
+      "texto": "Que for capaz será meu sacrifício! cell desintegrado",
+      "origem": "texto_corrigido",
+      "bloco_original": 40
+    },
+    {
+      "inicio": 148.49,
+      "fim": 153.59,
+      "texto": "Em nível celular pelo seu kamehameha autorizado",
+      "origem": "texto_corrigido",
+      "bloco_original": 41
+    },
+    {
+      "inicio": 153.59,
+      "fim": 156.57,
+      "texto": "A voltar pra terra nesse torneio eu também",
+      "origem": "texto_corrigido",
+      "bloco_original": 42
+    },
+    {
+      "inicio": 156.57,
+      "fim": 161.41,
+      "texto": "Vou lutar mas guerreiros inesperados que acabam estragando",
+      "origem": "original_preservado",
+      "bloco_original": 43
+    },
+    {
+      "inicio": 161.41,
+      "fim": 165.95,
+      "texto": "A festa com um poder ilimitado carregam um",
+      "origem": "original_preservado",
+      "bloco_original": 44
+    },
+    {
+      "inicio": 165.95,
+      "fim": 168.99,
+      "texto": "M na testa o majin boo voltou e",
+      "origem": "original_preservado",
+      "bloco_original": 45
+    },
+    {
+      "inicio": 168.99,
+      "fim": 172.09,
+      "texto": "Quer destruição não me diga que, vegeta você",
+      "origem": "texto_corrigido",
+      "bloco_original": 46
+    },
+    {
+      "inicio": 172.09,
+      "fim": 174.43,
+      "texto": "Não se entregou pro mal, cê quer me",
+      "origem": "original_preservado",
+      "bloco_original": 47
+    },
+    {
+      "inicio": 174.43,
+      "fim": 176.91,
+      "texto": "Vencer? mas saiba afinal, eu sou bem mais",
+      "origem": "texto_corrigido",
+      "bloco_original": 48
+    },
+    {
+      "inicio": 176.91,
+      "fim": 179.97,
+      "texto": "Forte que você! matando pessoas?",
+      "origem": "texto_corrigido",
+      "bloco_original": 49
+    },
+    {
+      "inicio": 180.37,
+      "fim": 183.31,
+      "texto": "Você não é isso pense em sua mulher",
+      "origem": "original_preservado",
+      "bloco_original": 50
+    },
+    {
+      "inicio": 183.31,
+      "fim": 186.61,
+      "texto": "E no seu filho após seu sacrifício, elevando",
+      "origem": "original_preservado",
+      "bloco_original": 51
+    },
+    {
+      "inicio": 186.61,
+      "fim": 189.13,
+      "texto": "Mais uma vez esse é o super saiyajin",
+      "origem": "texto_corrigido",
+      "bloco_original": 52
+    },
+    {
+      "inicio": 189.13,
+      "fim": 193.67,
+      "texto": "Nível três! precisamos nos fundir para vencer o",
+      "origem": "texto_corrigido",
+      "bloco_original": 53
+    },
+    {
+      "inicio": 193.67,
+      "fim": 197.29,
+      "texto": "Majin vegeta pega o brinco potara aí não é",
+      "origem": "texto_corrigido",
+      "bloco_original": 54
+    },
+    {
+      "inicio": 197.29,
+      "fim": 200.85,
+      "texto": "O suficiente, mas não será a extinção genki dama!",
+      "origem": "texto_corrigido",
+      "bloco_original": 55
+    },
+    {
+      "inicio": 201.13,
+      "fim": 203.29,
+      "texto": "Todos juntos! levantem as mãos!",
+      "origem": "texto_corrigido",
+      "bloco_original": 56
+    },
+    {
+      "inicio": 203.29,
+      "fim": 204.97,
+      "texto": "Preciso elevar o ki!",
+      "origem": "insercao_acustica",
+      "lacuna": 1,
+      "txt_inicio": 440,
+      "txt_fim": 444,
+      "score_minimo": 0.4,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 204.97,
+      "fim": 209.87,
+      "texto": "Nunca viram um guerreiro assim esse é o poder",
+      "origem": "texto_corrigido",
+      "bloco_original": 57
+    },
+    {
+      "inicio": 209.87,
+      "fim": 214.05,
+      "texto": "De um super sayajin! vocês não conseguirão me",
+      "origem": "texto_corrigido",
+      "bloco_original": 58
+    },
+    {
+      "inicio": 214.05,
+      "fim": 221.17,
+      "texto": "Enfrentar o meu poder se elevar goku! kamehameha!",
+      "origem": "texto_corrigido",
+      "bloco_original": 59
+    },
+    {
+      "inicio": 221.17,
+      "fim": 224.79,
+      "texto": "Tantos inimigos me trouxeram aqui nessa arena, tenho",
+      "origem": "original_preservado",
+      "bloco_original": 60
+    },
+    {
+      "inicio": 224.79,
+      "fim": 227.29,
+      "texto": "Que elevar o ki os guerreiros mais fortes",
+      "origem": "original_preservado",
+      "bloco_original": 61
+    },
+    {
+      "inicio": 227.29,
+      "fim": 229.75,
+      "texto": "De vários universos mas contra jiren,",
+      "origem": "texto_corrigido",
+      "bloco_original": 62
+    },
+    {
+      "inicio": 229.75,
+      "fim": 231.89,
+      "texto": "Sinto que não estou nem perto levanto as",
+      "origem": "texto_corrigido",
+      "bloco_original": 63
+    },
+    {
+      "inicio": 231.89,
+      "fim": 234.79,
+      "texto": "Mãos novamente ele está na minha frente revidou",
+      "origem": "texto_corrigido",
+      "bloco_original": 64
+    },
+    {
+      "inicio": 234.79,
+      "fim": 237.15,
+      "texto": "O meu poder, tudo acaba aqui não!",
+      "origem": "original_preservado",
+      "bloco_original": 65
+    },
+    {
+      "inicio": 237.51,
+      "fim": 246.24,
+      "texto": "Só existe limite se deixar existir migatte no",
+      "origem": "texto_corrigido",
+      "bloco_original": 66
+    },
+    {
+      "inicio": 246.24,
+      "fim": 246.58,
+      "texto": "Goku!",
+      "origem": "original_preservado",
+      "bloco_original": 67
+    },
+    {
+      "inicio": 246.86,
+      "fim": 248.72,
+      "texto": "Quebrando meus limites, cê não pode me",
+      "origem": "texto_corrigido",
+      "bloco_original": 68
+    },
+    {
+      "inicio": 248.72,
+      "fim": 252.04,
+      "texto": "Tocar desvio facilmente sem pensar em desviar você",
+      "origem": "original_preservado",
+      "bloco_original": 69
+    },
+    {
+      "inicio": 252.04,
+      "fim": 254.44,
+      "texto": "Dizia ser o mais forte desse universo mas",
+      "origem": "texto_corrigido",
+      "bloco_original": 70
+    },
+    {
+      "inicio": 254.44,
+      "fim": 257.66,
+      "texto": "Acho que meu instinto é superior! descobri do",
+      "origem": "texto_corrigido",
+      "bloco_original": 71
+    },
+    {
+      "inicio": 257.66,
+      "fim": 260.5,
+      "texto": "Poder que eu sou capaz tudo que cê",
+      "origem": "original_preservado",
+      "bloco_original": 72
+    },
+    {
+      "inicio": 260.5,
+      "fim": 264.08,
+      "texto": "Faz não adianta mais migatte completo, essa batalha",
+      "origem": "texto_corrigido",
+      "bloco_original": 73
+    },
+    {
+      "inicio": 264.08,
+      "fim": 266.3,
+      "texto": "É nossa obrigado por ter me dado uma",
+      "origem": "original_preservado",
+      "bloco_original": 74
+    },
+    {
+      "inicio": 266.3,
+      "fim": 272.24,
+      "texto": "Luta fervorosa! quem vencerá é o universo 7",
+      "origem": "texto_corrigido",
+      "bloco_original": 75
+    },
+    {
+      "inicio": 272.24,
+      "fim": 277.62,
+      "texto": "E jiren conhecerá a mim a sua derrota",
+      "origem": "original_preservado",
+      "bloco_original": 76
+    },
+    {
+      "inicio": 277.62,
+      "fim": 284.56,
+      "texto": "Virá preciso elevar o ki nunca virá um",
+      "origem": "original_preservado",
+      "bloco_original": 77
+    },
+    {
+      "inicio": 284.56,
+      "fim": 288.94,
+      "texto": "Guerreiro assim esse é o poder de um",
+      "origem": "texto_corrigido",
+      "bloco_original": 78
+    },
+    {
+      "inicio": 288.94,
+      "fim": 293.94,
+      "texto": "Super saiyajin vocês não conseguirão me enfrentar o",
+      "origem": "original_preservado",
+      "bloco_original": 79
+    },
+    {
+      "inicio": 293.94,
+      "fim": 298.0,
+      "texto": "Meu poder se elevar goku! kamehameha!",
+      "origem": "texto_corrigido",
+      "bloco_original": 80
+    }
+  ],
+  "configuracao_motor": {
+    "idioma": "pt",
+    "dispositivo": "cpu",
+    "modelo_solicitado": null
+  },
+  "fontes": {
+    "txt": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\nerd-geek\\goku-dbz-saiyajin-r4nyzin\\letra.txt",
+      "sha256": "a876491bef33aeb53587737f508012828d0a28d4c4db0d1ab13c93112ccea264"
+    },
+    "srt": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\nerd-geek\\goku-dbz-saiyajin-r4nyzin\\letra.srt",
+      "sha256": "ec452f60db5713a24350ccd58c9a0144032be433492614bf7b36d8ccec5be55d"
+    },
+    "voz": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\nerd-geek\\goku-dbz-saiyajin-r4nyzin\\voz.mp3",
+      "sha256": "f1c90169edfa4ee902e792859819eed30f3276d22b57939697fe96131e13b9dc"
+    }
+  },
+  "resumo_avisos": [
+    "Bloco 7: texto exclusivo srt preservado.",
+    "Bloco 11: consulta txt ambigua original preservado.",
+    "Bloco 13: texto exclusivo srt preservado.",
+    "Bloco 17: consulta txt ambigua original preservado.",
+    "Bloco 30: consulta txt ambigua original preservado.",
+    "Bloco 31: consulta txt ambigua original preservado.",
+    "Bloco 33: consulta txt ambigua original preservado.",
+    "Bloco 65: texto exclusivo srt preservado.",
+    "Bloco 77: consulta txt ambigua original preservado.",
+    "Bloco 79: consulta txt ambigua original preservado.",
+    "Lacuna 2: nao pesquisado (00:04:06,240–00:04:06,240).",
+    "TXT linha 18, sem tempo: dele quero te ver de novo",
+    "TXT linha 19, sem tempo: Em",
+    "TXT linha 25, sem tempo: imensa pra isso ter me implorado",
+    "TXT linha 26, sem tempo: Ele diz",
+    "TXT linha 48, sem tempo: do Tempo",
+    "TXT linha 50, sem tempo: O tempo passa diferente aqui",
+    "TXT linha 51, sem tempo: Cell prometo que eu vou te matar",
+    "TXT linha 52, sem tempo: Quando",
+    "TXT linha 53, sem tempo: voltar",
+    "TXT linha 55, sem tempo: Se estou mais forte que o Cell",
+    "TXT linha 114, sem tempo: Gokui",
+    "TXT linha 128, sem tempo: virá",
+    "TXT linha 130, sem tempo: Pelo Saiyajin",
+    "TXT linha 131, sem tempo: Preciso elevar o Ki",
+    "TXT linha 132, sem tempo: Nunca viram um",
+    "TXT linha 134, sem tempo: Super Sayajin Hey",
+    "TXT linha 135, sem tempo: Vocês não conseguirão me enfrentar",
+    "TXT linha 136, sem tempo: O"
+  ]
+}

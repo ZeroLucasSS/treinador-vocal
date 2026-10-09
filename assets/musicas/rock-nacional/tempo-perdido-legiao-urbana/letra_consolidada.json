@@ -1,0 +1,1288 @@
+{
+  "versao": 5,
+  "status": "consolidado",
+  "estrategia": "preservar_corrigir_inserir",
+  "motor": "whisperx",
+  "duracao_audio": 300.0424375,
+  "scores_sao_probabilidades": false,
+  "aprovacao_musical_automatica": false,
+  "parametros": {
+    "score_minimo": 0.3,
+    "janela_maxima": 90.0,
+    "score_suporte_insercao": 0.1,
+    "atividade_minima_insercao": 0.2,
+    "margem": 0.4,
+    "margem_aplicada": false
+  },
+  "total_palavras_txt": 144,
+  "total_palavras_srt": 133,
+  "metricas": {
+    "palavras_publicadas": 144,
+    "blocos_srt_auditados": 26,
+    "blocos_srt_descartados": 0,
+    "blocos_texto_corrigido": 24,
+    "blocos_inseridos": 3,
+    "palavras_txt_sem_tempo": 0,
+    "palavras_txt_nao_pesquisadas": 0,
+    "palavras_txt_pesquisadas_sem_tempo": 0,
+    "palavras_baixa_confianca": 0,
+    "tentativas_acusticas": 1
+  },
+  "comparacao": {
+    "consultas": [
+      {
+        "bloco_srt": 1,
+        "inicio": 20.23,
+        "fim": 28.67,
+        "txt_inicio": 0,
+        "txt_fim": 8,
+        "score": 1.0,
+        "texto": "Todos os dias quando acordo Não tenho mais",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 2,
+        "inicio": 28.67,
+        "fim": 33.69,
+        "txt_inicio": 8,
+        "txt_fim": 16,
+        "score": 1.0,
+        "texto": "o tempo que passou Mas tenho muito tempo",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 3,
+        "inicio": 35.89,
+        "fim": 40.39,
+        "txt_inicio": 16,
+        "txt_fim": 22,
+        "score": 1.0,
+        "texto": "Temos todo o tempo do mundo",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 4,
+        "inicio": 42.43,
+        "fim": 47.93,
+        "txt_inicio": 22,
+        "txt_fim": 30,
+        "score": 1.0,
+        "texto": "Todos os dias Antes de dormir Lembro e",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 5,
+        "inicio": 47.93,
+        "fim": 50.51,
+        "txt_inicio": 30,
+        "txt_fim": 35,
+        "score": 0.8571428571428572,
+        "texto": "esqueço como foi o dia",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 6,
+        "inicio": 51.51,
+        "fim": 60.45,
+        "txt_inicio": 35,
+        "txt_fim": 43,
+        "score": 1.0,
+        "texto": "Sempre em frente Não temos tempo a perder",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 7,
+        "inicio": 61.87,
+        "fim": 68.77,
+        "txt_inicio": 43,
+        "txt_fim": 51,
+        "score": 1.0,
+        "texto": "Nosso suor sagrado É bem mais belo que",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 8,
+        "inicio": 68.77,
+        "fim": 74.93,
+        "txt_inicio": 51,
+        "txt_fim": 57,
+        "score": 1.0,
+        "texto": "esse sangue amargo E tão sério",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 9,
+        "inicio": 75.93,
+        "fim": 86.59,
+        "txt_inicio": 57,
+        "txt_fim": 60,
+        "score": 1.0,
+        "texto": "E Selvagem Selvagem",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 10,
+        "inicio": 87.53,
+        "fim": 91.59,
+        "txt_inicio": 60,
+        "txt_fim": 61,
+        "score": 1.0,
+        "texto": "Selvagem",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 11,
+        "inicio": 103.01,
+        "fim": 108.61,
+        "txt_inicio": 61,
+        "txt_fim": 68,
+        "score": 1.0,
+        "texto": "Veja o sol dessa manhã tão cinza",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 12,
+        "inicio": 109.61,
+        "fim": 115.09,
+        "txt_inicio": 68,
+        "txt_fim": 76,
+        "score": 1.0,
+        "texto": "A tempestade que chega é da cor dos",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 13,
+        "inicio": 115.09,
+        "fim": 116.27,
+        "txt_inicio": 76,
+        "txt_fim": 78,
+        "score": 0.9,
+        "texto": "teus olhos",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 14,
+        "inicio": 120.67,
+        "fim": 126.41,
+        "txt_inicio": 78,
+        "txt_fim": 83,
+        "score": 0.9,
+        "texto": "Castanhos Então me abraça forte",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 15,
+        "inicio": 129.35,
+        "fim": 133.21,
+        "txt_inicio": 83,
+        "txt_fim": 91,
+        "score": 1.0,
+        "texto": "Me diz mais uma vez que já estamos",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 16,
+        "inicio": 133.21,
+        "fim": 138.39,
+        "txt_inicio": 91,
+        "txt_fim": 94,
+        "score": 0.8823529411764706,
+        "texto": "Distantes de tudo",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 17,
+        "inicio": 154.93,
+        "fim": 160.29,
+        "txt_inicio": 106,
+        "txt_fim": 111,
+        "score": 1.0,
+        "texto": "Não tenho medo do escuro",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 18,
+        "inicio": 161.21,
+        "fim": 170.07,
+        "txt_inicio": 111,
+        "txt_fim": 116,
+        "score": 1.0,
+        "texto": "Mas deixe as luzes Acesas",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 19,
+        "inicio": 170.07,
+        "fim": 171.41,
+        "txt_inicio": 116,
+        "txt_fim": 117,
+        "score": 1.0,
+        "texto": "Agora",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 20,
+        "inicio": 175.52,
+        "fim": 179.62,
+        "txt_inicio": 117,
+        "txt_fim": 125,
+        "score": 1.0,
+        "texto": "O que foi escondido é o que se",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 21,
+        "inicio": 179.62,
+        "fim": 180.54,
+        "txt_inicio": 125,
+        "txt_fim": 126,
+        "score": 1.0,
+        "texto": "escondeu",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 22,
+        "inicio": 180.76,
+        "fim": 185.58,
+        "txt_inicio": 126,
+        "txt_fim": 133,
+        "score": 1.0,
+        "texto": "E o que foi prometido, ninguém prometeu",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 23,
+        "inicio": 185.98,
+        "fim": 188.58,
+        "txt_inicio": 133,
+        "txt_fim": 137,
+        "score": 1.0,
+        "texto": "Nem foi tempo perdido",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 24,
+        "inicio": 189.58,
+        "fim": 195.8,
+        "txt_inicio": 137,
+        "txt_fim": 140,
+        "score": 1.0,
+        "texto": "Somos tão jovens",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 25,
+        "inicio": 196.18,
+        "fim": 200.48,
+        "txt_inicio": 140,
+        "txt_fim": 142,
+        "score": 1.0,
+        "texto": "Tão jovens",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 26,
+        "inicio": 201.5,
+        "fim": 203.76,
+        "txt_inicio": 142,
+        "txt_fim": 144,
+        "score": 1.0,
+        "texto": "Tão jovens",
+        "aviso": null
+      }
+    ],
+    "regioes": [
+      {
+        "indices": [
+          0
+        ],
+        "inicio": 20.23,
+        "fim": 28.67,
+        "txt_inicio": 0,
+        "txt_fim": 8,
+        "texto": "Todos os dias quando acordo Não tenho mais"
+      },
+      {
+        "indices": [
+          1
+        ],
+        "inicio": 28.67,
+        "fim": 33.69,
+        "txt_inicio": 8,
+        "txt_fim": 16,
+        "texto": "o tempo que passou Mas tenho muito tempo"
+      },
+      {
+        "indices": [
+          2
+        ],
+        "inicio": 35.89,
+        "fim": 40.39,
+        "txt_inicio": 16,
+        "txt_fim": 22,
+        "texto": "Temos todo o tempo do mundo"
+      },
+      {
+        "indices": [
+          3
+        ],
+        "inicio": 42.43,
+        "fim": 47.93,
+        "txt_inicio": 22,
+        "txt_fim": 30,
+        "texto": "Todos os dias Antes de dormir Lembro e"
+      },
+      {
+        "indices": [
+          4
+        ],
+        "inicio": 47.93,
+        "fim": 50.51,
+        "txt_inicio": 30,
+        "txt_fim": 35,
+        "texto": "esqueço como foi o dia"
+      },
+      {
+        "indices": [
+          5
+        ],
+        "inicio": 51.51,
+        "fim": 60.45,
+        "txt_inicio": 35,
+        "txt_fim": 43,
+        "texto": "Sempre em frente Não temos tempo a perder"
+      },
+      {
+        "indices": [
+          6
+        ],
+        "inicio": 61.87,
+        "fim": 68.77,
+        "txt_inicio": 43,
+        "txt_fim": 51,
+        "texto": "Nosso suor sagrado É bem mais belo que"
+      },
+      {
+        "indices": [
+          7
+        ],
+        "inicio": 68.77,
+        "fim": 74.93,
+        "txt_inicio": 51,
+        "txt_fim": 57,
+        "texto": "esse sangue amargo E tão sério"
+      },
+      {
+        "indices": [
+          8
+        ],
+        "inicio": 75.93,
+        "fim": 86.59,
+        "txt_inicio": 57,
+        "txt_fim": 60,
+        "texto": "E Selvagem Selvagem"
+      },
+      {
+        "indices": [
+          9
+        ],
+        "inicio": 87.53,
+        "fim": 91.59,
+        "txt_inicio": 60,
+        "txt_fim": 61,
+        "texto": "Selvagem"
+      },
+      {
+        "indices": [
+          10
+        ],
+        "inicio": 103.01,
+        "fim": 108.61,
+        "txt_inicio": 61,
+        "txt_fim": 68,
+        "texto": "Veja o sol dessa manhã tão cinza"
+      },
+      {
+        "indices": [
+          11
+        ],
+        "inicio": 109.61,
+        "fim": 115.09,
+        "txt_inicio": 68,
+        "txt_fim": 76,
+        "texto": "A tempestade que chega é da cor dos"
+      },
+      {
+        "indices": [
+          12
+        ],
+        "inicio": 115.09,
+        "fim": 116.27,
+        "txt_inicio": 76,
+        "txt_fim": 78,
+        "texto": "teus olhos"
+      },
+      {
+        "indices": [
+          13
+        ],
+        "inicio": 120.67,
+        "fim": 126.41,
+        "txt_inicio": 78,
+        "txt_fim": 83,
+        "texto": "Castanhos Então me abraça forte"
+      },
+      {
+        "indices": [
+          14
+        ],
+        "inicio": 129.35,
+        "fim": 133.21,
+        "txt_inicio": 83,
+        "txt_fim": 91,
+        "texto": "Me diz mais uma vez que já estamos"
+      },
+      {
+        "indices": [
+          15
+        ],
+        "inicio": 133.21,
+        "fim": 138.39,
+        "txt_inicio": 91,
+        "txt_fim": 94,
+        "texto": "Distantes de tudo"
+      },
+      {
+        "indices": [
+          16
+        ],
+        "inicio": 154.93,
+        "fim": 160.29,
+        "txt_inicio": 106,
+        "txt_fim": 111,
+        "texto": "Não tenho medo do escuro"
+      },
+      {
+        "indices": [
+          17
+        ],
+        "inicio": 161.21,
+        "fim": 170.07,
+        "txt_inicio": 111,
+        "txt_fim": 116,
+        "texto": "Mas deixe as luzes Acesas"
+      },
+      {
+        "indices": [
+          18
+        ],
+        "inicio": 170.07,
+        "fim": 171.41,
+        "txt_inicio": 116,
+        "txt_fim": 117,
+        "texto": "Agora"
+      },
+      {
+        "indices": [
+          19
+        ],
+        "inicio": 175.52,
+        "fim": 179.62,
+        "txt_inicio": 117,
+        "txt_fim": 125,
+        "texto": "O que foi escondido é o que se"
+      },
+      {
+        "indices": [
+          20
+        ],
+        "inicio": 179.62,
+        "fim": 180.54,
+        "txt_inicio": 125,
+        "txt_fim": 126,
+        "texto": "escondeu"
+      },
+      {
+        "indices": [
+          21
+        ],
+        "inicio": 180.76,
+        "fim": 185.58,
+        "txt_inicio": 126,
+        "txt_fim": 133,
+        "texto": "E o que foi prometido, ninguém prometeu"
+      },
+      {
+        "indices": [
+          22
+        ],
+        "inicio": 185.98,
+        "fim": 188.58,
+        "txt_inicio": 133,
+        "txt_fim": 137,
+        "texto": "Nem foi tempo perdido"
+      },
+      {
+        "indices": [
+          23
+        ],
+        "inicio": 189.58,
+        "fim": 195.8,
+        "txt_inicio": 137,
+        "txt_fim": 140,
+        "texto": "Somos tão jovens"
+      },
+      {
+        "indices": [
+          24
+        ],
+        "inicio": 196.18,
+        "fim": 200.48,
+        "txt_inicio": 140,
+        "txt_fim": 142,
+        "texto": "Tão jovens"
+      },
+      {
+        "indices": [
+          25
+        ],
+        "inicio": 201.5,
+        "fim": 203.76,
+        "txt_inicio": 142,
+        "txt_fim": 144,
+        "texto": "Tão jovens"
+      }
+    ],
+    "tokens_txt_sem_correspondencia": [
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105
+    ],
+    "parametros": {
+      "score_consulta_minimo": 0.65,
+      "margem_ambiguidade": 0.025,
+      "bonus_por_extremidade": 0.02,
+      "score_contexto_minimo": 0.85
+    }
+  },
+  "auditoria_estrutura": [
+    {
+      "bloco_srt": 1,
+      "inicio_original": 20.23,
+      "fim_original": 28.67,
+      "texto_original": "Todos os dias, quando acordo, não tenho mais",
+      "texto_publicado": "Todos os dias quando acordo não tenho mais",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 2,
+      "inicio_original": 28.67,
+      "fim_original": 33.69,
+      "texto_original": "o tempo que passou, mas tenho muito tempo.",
+      "texto_publicado": "O tempo que passou mas tenho muito tempo",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 3,
+      "inicio_original": 35.89,
+      "fim_original": 40.39,
+      "texto_original": "Temos todo o tempo do mundo.",
+      "texto_publicado": "Temos todo o tempo do mundo",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 4,
+      "inicio_original": 42.43,
+      "fim_original": 47.93,
+      "texto_original": "Todos os dias, antes de dormir, lembro e",
+      "texto_publicado": "Todos os dias antes de dormir lembro e",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 5,
+      "inicio_original": 47.93,
+      "fim_original": 50.51,
+      "texto_original": "penso como foi o dia.",
+      "texto_publicado": "Esqueço como foi o dia",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 6,
+      "inicio_original": 51.51,
+      "fim_original": 60.45,
+      "texto_original": "Sempre em frente, não temos tempo a perder.",
+      "texto_publicado": "Sempre em frente não temos tempo a perder",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 7,
+      "inicio_original": 61.87,
+      "fim_original": 68.77,
+      "texto_original": "Nosso suor sagrado é bem mais belo que",
+      "texto_publicado": "Nosso suor sagrado é bem mais belo que",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 8,
+      "inicio_original": 68.77,
+      "fim_original": 74.93,
+      "texto_original": "esse sangue amargo e tão sério.",
+      "texto_publicado": "Esse sangue amargo e tão sério",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 9,
+      "inicio_original": 75.93,
+      "fim_original": 86.59,
+      "texto_original": "E selvagem, selvagem,",
+      "texto_publicado": "E selvagem selvagem",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 10,
+      "inicio_original": 87.53,
+      "fim_original": 91.59,
+      "texto_original": "selvagem.",
+      "texto_publicado": "Selvagem",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 11,
+      "inicio_original": 103.01,
+      "fim_original": 108.61,
+      "texto_original": "Veja o sol dessa manhã tão cinza.",
+      "texto_publicado": "Veja o sol dessa manhã tão cinza",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 12,
+      "inicio_original": 109.61,
+      "fim_original": 115.09,
+      "texto_original": "A tempestade que chega é da cor dos",
+      "texto_publicado": "A tempestade que chega é da cor dos",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 13,
+      "inicio_original": 115.09,
+      "fim_original": 116.27,
+      "texto_original": "seus olhos.",
+      "texto_publicado": "Teus olhos",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 14,
+      "inicio_original": 120.67,
+      "fim_original": 126.41,
+      "texto_original": "Caçamos, então me abraça forte.",
+      "texto_publicado": "Castanhos então me abraça forte",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 15,
+      "inicio_original": 129.35,
+      "fim_original": 133.21,
+      "texto_original": "Me diz mais uma vez que já estamos.",
+      "texto_publicado": "Me diz mais uma vez que já estamos",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 16,
+      "inicio_original": 133.21,
+      "fim_original": 138.39,
+      "texto_original": "Diz antes de tudo.",
+      "texto_publicado": "Distantes de tudo",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 17,
+      "inicio_original": 154.93,
+      "fim_original": 160.29,
+      "texto_original": "Não tenho medo do escuro.",
+      "texto_publicado": "Não tenho medo do escuro",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 18,
+      "inicio_original": 161.21,
+      "fim_original": 170.07,
+      "texto_original": "Mas deixe as luzes acesas",
+      "texto_publicado": "Mas deixe as luzes acesas",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 19,
+      "inicio_original": 170.07,
+      "fim_original": 171.41,
+      "texto_original": "agora.",
+      "texto_publicado": "Agora",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 20,
+      "inicio_original": 175.52,
+      "fim_original": 179.62,
+      "texto_original": "O que foi escondido é o que se",
+      "texto_publicado": "O que foi escondido é o que se",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 21,
+      "inicio_original": 179.62,
+      "fim_original": 180.54,
+      "texto_original": "escondeu.",
+      "texto_publicado": "Escondeu",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 22,
+      "inicio_original": 180.76,
+      "fim_original": 185.58,
+      "texto_original": "E o que foi prometido, ninguém prometeu.",
+      "texto_publicado": "E o que foi prometido, ninguém prometeu",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 23,
+      "inicio_original": 185.98,
+      "fim_original": 188.58,
+      "texto_original": "Nem foi tempo perdido.",
+      "texto_publicado": "Nem foi tempo perdido",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 24,
+      "inicio_original": 189.58,
+      "fim_original": 195.8,
+      "texto_original": "Somos tão jovens.",
+      "texto_publicado": "Somos tão jovens",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 25,
+      "inicio_original": 196.18,
+      "fim_original": 200.48,
+      "texto_original": "Tão jovens.",
+      "texto_publicado": "Tão jovens",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 26,
+      "inicio_original": 201.5,
+      "fim_original": 203.76,
+      "texto_original": "Tão jovens.",
+      "texto_publicado": "Tão jovens",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    }
+  ],
+  "recuperacoes": [
+    {
+      "id": 1,
+      "txt_inicio": 94,
+      "txt_fim": 106,
+      "inicio": 138.39,
+      "fim": 154.93,
+      "bloco_anterior": 16,
+      "bloco_seguinte": 17,
+      "limite_busca": 30.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "recuperado",
+      "tentativas": [
+        {
+          "janela": [
+            138.39,
+            154.93
+          ],
+          "texto": "Temos nosso próprio tempo Temos nosso próprio tempo Temos nosso próprio tempo",
+          "palavras": [
+            {
+              "texto": "Temos",
+              "inicio": 139.972,
+              "fim": 140.613,
+              "score": 0.909
+            },
+            {
+              "texto": "nosso",
+              "inicio": 140.633,
+              "fim": 141.193,
+              "score": 0.715
+            },
+            {
+              "texto": "próprio",
+              "inicio": 141.314,
+              "fim": 142.475,
+              "score": 0.693
+            },
+            {
+              "texto": "tempo",
+              "inicio": 142.655,
+              "fim": 144.297,
+              "score": 0.863
+            },
+            {
+              "texto": "Temos",
+              "inicio": 145.138,
+              "fim": 145.759,
+              "score": 0.854
+            },
+            {
+              "texto": "nosso",
+              "inicio": 145.779,
+              "fim": 146.32,
+              "score": 0.704
+            },
+            {
+              "texto": "próprio",
+              "inicio": 146.44,
+              "fim": 147.641,
+              "score": 0.778
+            },
+            {
+              "texto": "tempo",
+              "inicio": 147.781,
+              "fim": 149.604,
+              "score": 0.894
+            },
+            {
+              "texto": "Temos",
+              "inicio": 150.344,
+              "fim": 150.985,
+              "score": 0.9
+            },
+            {
+              "texto": "nosso",
+              "inicio": 151.005,
+              "fim": 151.546,
+              "score": 0.829
+            },
+            {
+              "texto": "próprio",
+              "inicio": 151.646,
+              "fim": 152.868,
+              "score": 0.774
+            },
+            {
+              "texto": "tempo",
+              "inicio": 153.008,
+              "fim": 154.409,
+              "score": 0.895
+            }
+          ]
+        }
+      ],
+      "inseridos": [
+        {
+          "inicio": 139.972,
+          "fim": 144.297,
+          "texto": "Temos nosso próprio tempo",
+          "origem": "insercao_acustica",
+          "lacuna": 1,
+          "txt_inicio": 94,
+          "txt_fim": 98,
+          "score_minimo": 0.693,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 145.138,
+          "fim": 149.604,
+          "texto": "Temos nosso próprio tempo",
+          "origem": "insercao_acustica",
+          "lacuna": 1,
+          "txt_inicio": 98,
+          "txt_fim": 102,
+          "score_minimo": 0.704,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 150.344,
+          "fim": 154.409,
+          "texto": "Temos nosso próprio tempo",
+          "origem": "insercao_acustica",
+          "lacuna": 1,
+          "txt_inicio": 102,
+          "txt_fim": 106,
+          "score_minimo": 0.774,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        }
+      ],
+      "tokens_recuperados": [
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "texto": "Temos nosso próprio tempo Temos nosso próprio tempo Temos nosso próprio tempo"
+    }
+  ],
+  "tentativas": [
+    {
+      "janela": [
+        138.39,
+        154.93
+      ],
+      "texto": "Temos nosso próprio tempo Temos nosso próprio tempo Temos nosso próprio tempo",
+      "palavras": [
+        {
+          "texto": "Temos",
+          "inicio": 139.972,
+          "fim": 140.613,
+          "score": 0.909
+        },
+        {
+          "texto": "nosso",
+          "inicio": 140.633,
+          "fim": 141.193,
+          "score": 0.715
+        },
+        {
+          "texto": "próprio",
+          "inicio": 141.314,
+          "fim": 142.475,
+          "score": 0.693
+        },
+        {
+          "texto": "tempo",
+          "inicio": 142.655,
+          "fim": 144.297,
+          "score": 0.863
+        },
+        {
+          "texto": "Temos",
+          "inicio": 145.138,
+          "fim": 145.759,
+          "score": 0.854
+        },
+        {
+          "texto": "nosso",
+          "inicio": 145.779,
+          "fim": 146.32,
+          "score": 0.704
+        },
+        {
+          "texto": "próprio",
+          "inicio": 146.44,
+          "fim": 147.641,
+          "score": 0.778
+        },
+        {
+          "texto": "tempo",
+          "inicio": 147.781,
+          "fim": 149.604,
+          "score": 0.894
+        },
+        {
+          "texto": "Temos",
+          "inicio": 150.344,
+          "fim": 150.985,
+          "score": 0.9
+        },
+        {
+          "texto": "nosso",
+          "inicio": 151.005,
+          "fim": 151.546,
+          "score": 0.829
+        },
+        {
+          "texto": "próprio",
+          "inicio": 151.646,
+          "fim": 152.868,
+          "score": 0.774
+        },
+        {
+          "texto": "tempo",
+          "inicio": 153.008,
+          "fim": 154.409,
+          "score": 0.895
+        }
+      ],
+      "lacuna": 1
+    }
+  ],
+  "pendencias": [],
+  "blocos": [
+    {
+      "inicio": 20.23,
+      "fim": 28.67,
+      "texto": "Todos os dias quando acordo não tenho mais",
+      "origem": "texto_corrigido",
+      "bloco_original": 1
+    },
+    {
+      "inicio": 28.67,
+      "fim": 33.69,
+      "texto": "O tempo que passou mas tenho muito tempo",
+      "origem": "texto_corrigido",
+      "bloco_original": 2
+    },
+    {
+      "inicio": 35.89,
+      "fim": 40.39,
+      "texto": "Temos todo o tempo do mundo",
+      "origem": "texto_corrigido",
+      "bloco_original": 3
+    },
+    {
+      "inicio": 42.43,
+      "fim": 47.93,
+      "texto": "Todos os dias antes de dormir lembro e",
+      "origem": "texto_corrigido",
+      "bloco_original": 4
+    },
+    {
+      "inicio": 47.93,
+      "fim": 50.51,
+      "texto": "Esqueço como foi o dia",
+      "origem": "texto_corrigido",
+      "bloco_original": 5
+    },
+    {
+      "inicio": 51.51,
+      "fim": 60.45,
+      "texto": "Sempre em frente não temos tempo a perder",
+      "origem": "texto_corrigido",
+      "bloco_original": 6
+    },
+    {
+      "inicio": 61.87,
+      "fim": 68.77,
+      "texto": "Nosso suor sagrado é bem mais belo que",
+      "origem": "texto_corrigido",
+      "bloco_original": 7
+    },
+    {
+      "inicio": 68.77,
+      "fim": 74.93,
+      "texto": "Esse sangue amargo e tão sério",
+      "origem": "texto_corrigido",
+      "bloco_original": 8
+    },
+    {
+      "inicio": 75.93,
+      "fim": 86.59,
+      "texto": "E selvagem selvagem",
+      "origem": "texto_corrigido",
+      "bloco_original": 9
+    },
+    {
+      "inicio": 87.53,
+      "fim": 91.59,
+      "texto": "Selvagem",
+      "origem": "texto_corrigido",
+      "bloco_original": 10
+    },
+    {
+      "inicio": 103.01,
+      "fim": 108.61,
+      "texto": "Veja o sol dessa manhã tão cinza",
+      "origem": "texto_corrigido",
+      "bloco_original": 11
+    },
+    {
+      "inicio": 109.61,
+      "fim": 115.09,
+      "texto": "A tempestade que chega é da cor dos",
+      "origem": "original_preservado",
+      "bloco_original": 12
+    },
+    {
+      "inicio": 115.09,
+      "fim": 116.27,
+      "texto": "Teus olhos",
+      "origem": "texto_corrigido",
+      "bloco_original": 13
+    },
+    {
+      "inicio": 120.67,
+      "fim": 126.41,
+      "texto": "Castanhos então me abraça forte",
+      "origem": "texto_corrigido",
+      "bloco_original": 14
+    },
+    {
+      "inicio": 129.35,
+      "fim": 133.21,
+      "texto": "Me diz mais uma vez que já estamos",
+      "origem": "texto_corrigido",
+      "bloco_original": 15
+    },
+    {
+      "inicio": 133.21,
+      "fim": 138.39,
+      "texto": "Distantes de tudo",
+      "origem": "texto_corrigido",
+      "bloco_original": 16
+    },
+    {
+      "inicio": 139.972,
+      "fim": 144.297,
+      "texto": "Temos nosso próprio tempo",
+      "origem": "insercao_acustica",
+      "lacuna": 1,
+      "txt_inicio": 94,
+      "txt_fim": 98,
+      "score_minimo": 0.693,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 145.138,
+      "fim": 149.604,
+      "texto": "Temos nosso próprio tempo",
+      "origem": "insercao_acustica",
+      "lacuna": 1,
+      "txt_inicio": 98,
+      "txt_fim": 102,
+      "score_minimo": 0.704,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 150.344,
+      "fim": 154.409,
+      "texto": "Temos nosso próprio tempo",
+      "origem": "insercao_acustica",
+      "lacuna": 1,
+      "txt_inicio": 102,
+      "txt_fim": 106,
+      "score_minimo": 0.774,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 154.93,
+      "fim": 160.29,
+      "texto": "Não tenho medo do escuro",
+      "origem": "texto_corrigido",
+      "bloco_original": 17
+    },
+    {
+      "inicio": 161.21,
+      "fim": 170.07,
+      "texto": "Mas deixe as luzes acesas",
+      "origem": "texto_corrigido",
+      "bloco_original": 18
+    },
+    {
+      "inicio": 170.07,
+      "fim": 171.41,
+      "texto": "Agora",
+      "origem": "texto_corrigido",
+      "bloco_original": 19
+    },
+    {
+      "inicio": 175.52,
+      "fim": 179.62,
+      "texto": "O que foi escondido é o que se",
+      "origem": "original_preservado",
+      "bloco_original": 20
+    },
+    {
+      "inicio": 179.62,
+      "fim": 180.54,
+      "texto": "Escondeu",
+      "origem": "texto_corrigido",
+      "bloco_original": 21
+    },
+    {
+      "inicio": 180.76,
+      "fim": 185.58,
+      "texto": "E o que foi prometido, ninguém prometeu",
+      "origem": "texto_corrigido",
+      "bloco_original": 22
+    },
+    {
+      "inicio": 185.98,
+      "fim": 188.58,
+      "texto": "Nem foi tempo perdido",
+      "origem": "texto_corrigido",
+      "bloco_original": 23
+    },
+    {
+      "inicio": 189.58,
+      "fim": 195.8,
+      "texto": "Somos tão jovens",
+      "origem": "texto_corrigido",
+      "bloco_original": 24
+    },
+    {
+      "inicio": 196.18,
+      "fim": 200.48,
+      "texto": "Tão jovens",
+      "origem": "texto_corrigido",
+      "bloco_original": 25
+    },
+    {
+      "inicio": 201.5,
+      "fim": 203.76,
+      "texto": "Tão jovens",
+      "origem": "texto_corrigido",
+      "bloco_original": 26
+    }
+  ],
+  "configuracao_motor": {
+    "idioma": "pt",
+    "dispositivo": "cpu",
+    "modelo_solicitado": null
+  },
+  "fontes": {
+    "txt": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\rock-nacional\\tempo-perdido-legiao-urbana\\letra.txt",
+      "sha256": "a01bf708eb819fcb8f319af1d3b0cc0c42d55b26a12df1b343b2bcf6693f2903"
+    },
+    "srt": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\rock-nacional\\tempo-perdido-legiao-urbana\\letra.srt",
+      "sha256": "2ae808faff2108c74f996c7eb23ca976a5de16e7c56eed18bc42cf23e0becf4e"
+    },
+    "voz": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\rock-nacional\\tempo-perdido-legiao-urbana\\voz.mp3",
+      "sha256": "20ca3dbabb6856b2849b2d0900f21bc63041151e71827bbd27f405718bcfd6fc"
+    }
+  },
+  "resumo_avisos": []
+}
