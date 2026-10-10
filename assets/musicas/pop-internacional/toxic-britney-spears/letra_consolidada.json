@@ -1,0 +1,1636 @@
+{
+  "versao": 5,
+  "status": "pendente",
+  "estrategia": "preservar_corrigir_inserir",
+  "motor": "whisperx",
+  "duracao_audio": 198.925375,
+  "scores_sao_probabilidades": false,
+  "aprovacao_musical_automatica": false,
+  "parametros": {
+    "score_minimo": 0.3,
+    "janela_maxima": 90.0,
+    "score_suporte_insercao": 0.1,
+    "atividade_minima_insercao": 0.2,
+    "margem": 0.4,
+    "margem_aplicada": false
+  },
+  "total_palavras_txt": 278,
+  "total_palavras_srt": 255,
+  "metricas": {
+    "palavras_publicadas": 256,
+    "blocos_srt_auditados": 35,
+    "blocos_srt_descartados": 0,
+    "blocos_texto_corrigido": 15,
+    "blocos_inseridos": 0,
+    "palavras_txt_sem_tempo": 99,
+    "palavras_txt_nao_pesquisadas": 81,
+    "palavras_txt_pesquisadas_sem_tempo": 18,
+    "palavras_baixa_confianca": 0,
+    "tentativas_acusticas": 1
+  },
+  "comparacao": {
+    "consultas": [
+      {
+        "bloco_srt": 1,
+        "inicio": 13.7,
+        "fim": 18.2,
+        "txt_inicio": 0,
+        "txt_fim": 8,
+        "score": 0.9850746268656717,
+        "texto": "Baby, can't you see I'm calling? A guy",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 2,
+        "inicio": 18.2,
+        "fim": 21.82,
+        "txt_inicio": 8,
+        "txt_fim": 16,
+        "score": 0.9885057471264368,
+        "texto": "like you should wear a warning It's dangerous,",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 3,
+        "inicio": 22.58,
+        "fim": 30.72,
+        "txt_inicio": 16,
+        "txt_fim": 24,
+        "score": 0.987012987012987,
+        "texto": "I'm falling There's no escape, I can't wait",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 4,
+        "inicio": 30.72,
+        "fim": 34.38,
+        "txt_inicio": 24,
+        "txt_fim": 32,
+        "score": 1.0,
+        "texto": "I need a hit, baby, give me it",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 5,
+        "inicio": 34.38,
+        "fim": 42.75,
+        "txt_inicio": 32,
+        "txt_fim": 40,
+        "score": 0.9879518072289156,
+        "texto": "You're dangerous, I'm loving it Too high, can't",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 6,
+        "inicio": 42.75,
+        "fim": 46.57,
+        "txt_inicio": 40,
+        "txt_fim": 48,
+        "score": 0.9879518072289156,
+        "texto": "come down Losin' my head, spinnin' 'round and '",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 7,
+        "inicio": 46.57,
+        "fim": 50.87,
+        "txt_inicio": 48,
+        "txt_fim": 54,
+        "score": 1.0,
+        "texto": "round Do you feel me now?",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 8,
+        "inicio": 56.89,
+        "fim": 59.35,
+        "txt_inicio": 54,
+        "txt_fim": 62,
+        "score": 1.0,
+        "texto": "With the taste of your lips, I'm on",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 9,
+        "inicio": 59.35,
+        "fim": 64.31,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "a ride You're toxic, I'm slippin' under Taste",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 10,
+        "inicio": 64.31,
+        "fim": 68.57,
+        "txt_inicio": 202,
+        "txt_fim": 210,
+        "score": 1.0,
+        "texto": "of a poison, paradise I'm addicted to you,",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 11,
+        "inicio": 68.75,
+        "fim": 70.67,
+        "txt_inicio": 210,
+        "txt_fim": 216,
+        "score": 1.0,
+        "texto": "don't you know that you're toxic?",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 12,
+        "inicio": 73.37,
+        "fim": 75.85,
+        "txt_inicio": 168,
+        "txt_fim": 176,
+        "score": 1.0,
+        "texto": "And I love what you do, don't you",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 13,
+        "inicio": 75.85,
+        "fim": 77.19,
+        "txt_inicio": 176,
+        "txt_fim": 180,
+        "score": 1.0,
+        "texto": "know that you're toxic?",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 14,
+        "inicio": 84.3,
+        "fim": 88.4,
+        "txt_inicio": 98,
+        "txt_fim": 106,
+        "score": 1.0,
+        "texto": "It's getting late to give you up I",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 15,
+        "inicio": 88.4,
+        "fim": 92.34,
+        "txt_inicio": 106,
+        "txt_fim": 114,
+        "score": 0.9577464788732395,
+        "texto": "took a sip from a devil's cup Slowly,",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 16,
+        "inicio": 92.72,
+        "fim": 100.18,
+        "txt_inicio": 114,
+        "txt_fim": 122,
+        "score": 1.0,
+        "texto": "it's taking over me Too high, can't come",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 17,
+        "inicio": 100.18,
+        "fim": 104.04,
+        "txt_inicio": 122,
+        "txt_fim": 131,
+        "score": 0.8450704225352113,
+        "texto": "down It's in the air and it's all around",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 18,
+        "inicio": 105.92,
+        "fim": 108.32,
+        "txt_inicio": 131,
+        "txt_fim": 136,
+        "score": 1.0,
+        "texto": "Can you feel me now?",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 19,
+        "inicio": 113.94,
+        "fim": 116.42,
+        "txt_inicio": 136,
+        "txt_fim": 144,
+        "score": 1.0,
+        "texto": "With the taste of your lips, I'm on",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 20,
+        "inicio": 116.42,
+        "fim": 121.6,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "a ride You're toxic, I'm slippin' under Taste",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 21,
+        "inicio": 121.6,
+        "fim": 125.64,
+        "txt_inicio": 202,
+        "txt_fim": 210,
+        "score": 1.0,
+        "texto": "of a poison, paradise I'm addicted to you,",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 22,
+        "inicio": 125.8,
+        "fim": 127.68,
+        "txt_inicio": 210,
+        "txt_fim": 216,
+        "score": 1.0,
+        "texto": "don't you know that you're toxic?",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 23,
+        "inicio": 130.42,
+        "fim": 132.92,
+        "txt_inicio": 168,
+        "txt_fim": 176,
+        "score": 1.0,
+        "texto": "And I love what you do, don't you",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 24,
+        "inicio": 132.92,
+        "fim": 134.32,
+        "txt_inicio": 176,
+        "txt_fim": 180,
+        "score": 1.0,
+        "texto": "know that you're toxic?",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 25,
+        "inicio": 139.18,
+        "fim": 141.18,
+        "txt_inicio": 180,
+        "txt_fim": 186,
+        "score": 1.0,
+        "texto": "Don't you know that you're toxic?",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 26,
+        "inicio": 161.63,
+        "fim": 165.67,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "You're toxic, I'm slippin' under Taste of a",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 27,
+        "inicio": 165.67,
+        "fim": 169.83,
+        "txt_inicio": 204,
+        "txt_fim": 212,
+        "score": 1.0,
+        "texto": "poison, paradise I'm addicted to you, don't you",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 28,
+        "inicio": 169.83,
+        "fim": 171.19,
+        "txt_inicio": 212,
+        "txt_fim": 216,
+        "score": 1.0,
+        "texto": "know that you're toxic?",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 29,
+        "inicio": 171.41,
+        "fim": 173.49,
+        "txt_inicio": 216,
+        "txt_fim": 224,
+        "score": 1.0,
+        "texto": "With the taste of your lips, I'm on",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 30,
+        "inicio": 173.49,
+        "fim": 178.37,
+        "txt_inicio": 224,
+        "txt_fim": 231,
+        "score": 0.9210526315789473,
+        "texto": "a ride You're toxic, I'm slippin' under (",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 31,
+        "inicio": 178.37,
+        "fim": 182.67,
+        "txt_inicio": 202,
+        "txt_fim": 210,
+        "score": 1.0,
+        "texto": "of a poison, paradise I'm addicted to you,",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 32,
+        "inicio": 182.91,
+        "fim": 184.69,
+        "txt_inicio": 210,
+        "txt_fim": 216,
+        "score": 1.0,
+        "texto": "don't you know that you're toxic?",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 33,
+        "inicio": 185.35,
+        "fim": 188.67,
+        "txt_inicio": 249,
+        "txt_fim": 257,
+        "score": 0.9382716049382716,
+        "texto": "Intoxicate me now, with your lovin' now I",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 34,
+        "inicio": 188.67,
+        "fim": 193.97,
+        "txt_inicio": 262,
+        "txt_fim": 270,
+        "score": 0.9523809523809522,
+        "texto": "think I'm ready now) Intoxicate me now, with",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 35,
+        "inicio": 193.97,
+        "fim": 196.77,
+        "txt_inicio": 270,
+        "txt_fim": 278,
+        "score": 0.9859154929577465,
+        "texto": "your lovin' now I think I'm ready now",
+        "aviso": null
+      }
+    ],
+    "regioes": [
+      {
+        "indices": [
+          0
+        ],
+        "inicio": 13.7,
+        "fim": 18.2,
+        "txt_inicio": 0,
+        "txt_fim": 8,
+        "texto": "Baby, can't you see I'm calling? A guy"
+      },
+      {
+        "indices": [
+          1
+        ],
+        "inicio": 18.2,
+        "fim": 21.82,
+        "txt_inicio": 8,
+        "txt_fim": 16,
+        "texto": "like you should wear a warning It's dangerous,"
+      },
+      {
+        "indices": [
+          2
+        ],
+        "inicio": 22.58,
+        "fim": 30.72,
+        "txt_inicio": 16,
+        "txt_fim": 24,
+        "texto": "I'm falling There's no escape, I can't wait"
+      },
+      {
+        "indices": [
+          3
+        ],
+        "inicio": 30.72,
+        "fim": 34.38,
+        "txt_inicio": 24,
+        "txt_fim": 32,
+        "texto": "I need a hit, baby, give me it"
+      },
+      {
+        "indices": [
+          4
+        ],
+        "inicio": 34.38,
+        "fim": 42.75,
+        "txt_inicio": 32,
+        "txt_fim": 40,
+        "texto": "You're dangerous, I'm loving it Too high, can't"
+      },
+      {
+        "indices": [
+          5
+        ],
+        "inicio": 42.75,
+        "fim": 46.57,
+        "txt_inicio": 40,
+        "txt_fim": 48,
+        "texto": "come down Losin' my head, spinnin' 'round and '"
+      },
+      {
+        "indices": [
+          6
+        ],
+        "inicio": 46.57,
+        "fim": 50.87,
+        "txt_inicio": 48,
+        "txt_fim": 54,
+        "texto": "round Do you feel me now?"
+      },
+      {
+        "indices": [
+          7
+        ],
+        "inicio": 56.89,
+        "fim": 59.35,
+        "txt_inicio": 54,
+        "txt_fim": 62,
+        "texto": "With the taste of your lips, I'm on"
+      },
+      {
+        "indices": [
+          8
+        ],
+        "inicio": 59.35,
+        "fim": 64.31,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "a ride You're toxic, I'm slippin' under Taste"
+      },
+      {
+        "indices": [
+          9
+        ],
+        "inicio": 64.31,
+        "fim": 68.57,
+        "txt_inicio": 202,
+        "txt_fim": 210,
+        "texto": "of a poison, paradise I'm addicted to you,"
+      },
+      {
+        "indices": [
+          10
+        ],
+        "inicio": 68.75,
+        "fim": 70.67,
+        "txt_inicio": 210,
+        "txt_fim": 216,
+        "texto": "don't you know that you're toxic?"
+      },
+      {
+        "indices": [
+          11
+        ],
+        "inicio": 73.37,
+        "fim": 75.85,
+        "txt_inicio": 168,
+        "txt_fim": 176,
+        "texto": "And I love what you do, don't you"
+      },
+      {
+        "indices": [
+          12
+        ],
+        "inicio": 75.85,
+        "fim": 77.19,
+        "txt_inicio": 176,
+        "txt_fim": 180,
+        "texto": "know that you're toxic?"
+      },
+      {
+        "indices": [
+          13
+        ],
+        "inicio": 84.3,
+        "fim": 88.4,
+        "txt_inicio": 98,
+        "txt_fim": 106,
+        "texto": "It's getting late to give you up I"
+      },
+      {
+        "indices": [
+          14
+        ],
+        "inicio": 88.4,
+        "fim": 92.34,
+        "txt_inicio": 106,
+        "txt_fim": 114,
+        "texto": "took a sip from a devil's cup Slowly,"
+      },
+      {
+        "indices": [
+          15
+        ],
+        "inicio": 92.72,
+        "fim": 100.18,
+        "txt_inicio": 114,
+        "txt_fim": 122,
+        "texto": "it's taking over me Too high, can't come"
+      },
+      {
+        "indices": [
+          16
+        ],
+        "inicio": 100.18,
+        "fim": 104.04,
+        "txt_inicio": 122,
+        "txt_fim": 131,
+        "texto": "down It's in the air and it's all around"
+      },
+      {
+        "indices": [
+          17
+        ],
+        "inicio": 105.92,
+        "fim": 108.32,
+        "txt_inicio": 131,
+        "txt_fim": 136,
+        "texto": "Can you feel me now?"
+      },
+      {
+        "indices": [
+          18
+        ],
+        "inicio": 113.94,
+        "fim": 116.42,
+        "txt_inicio": 136,
+        "txt_fim": 144,
+        "texto": "With the taste of your lips, I'm on"
+      },
+      {
+        "indices": [
+          19
+        ],
+        "inicio": 116.42,
+        "fim": 121.6,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "a ride You're toxic, I'm slippin' under Taste"
+      },
+      {
+        "indices": [
+          20
+        ],
+        "inicio": 121.6,
+        "fim": 125.64,
+        "txt_inicio": 202,
+        "txt_fim": 210,
+        "texto": "of a poison, paradise I'm addicted to you,"
+      },
+      {
+        "indices": [
+          21
+        ],
+        "inicio": 125.8,
+        "fim": 127.68,
+        "txt_inicio": 210,
+        "txt_fim": 216,
+        "texto": "don't you know that you're toxic?"
+      },
+      {
+        "indices": [
+          22
+        ],
+        "inicio": 130.42,
+        "fim": 132.92,
+        "txt_inicio": 168,
+        "txt_fim": 176,
+        "texto": "And I love what you do, don't you"
+      },
+      {
+        "indices": [
+          23
+        ],
+        "inicio": 132.92,
+        "fim": 134.32,
+        "txt_inicio": 176,
+        "txt_fim": 180,
+        "texto": "know that you're toxic?"
+      },
+      {
+        "indices": [
+          24
+        ],
+        "inicio": 139.18,
+        "fim": 141.18,
+        "txt_inicio": 180,
+        "txt_fim": 186,
+        "texto": "Don't you know that you're toxic?"
+      },
+      {
+        "indices": [
+          25
+        ],
+        "inicio": 161.63,
+        "fim": 165.67,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "You're toxic, I'm slippin' under Taste of a"
+      },
+      {
+        "indices": [
+          26
+        ],
+        "inicio": 165.67,
+        "fim": 169.83,
+        "txt_inicio": 204,
+        "txt_fim": 212,
+        "texto": "poison, paradise I'm addicted to you, don't you"
+      },
+      {
+        "indices": [
+          27
+        ],
+        "inicio": 169.83,
+        "fim": 171.19,
+        "txt_inicio": 212,
+        "txt_fim": 216,
+        "texto": "know that you're toxic?"
+      },
+      {
+        "indices": [
+          28
+        ],
+        "inicio": 171.41,
+        "fim": 173.49,
+        "txt_inicio": 216,
+        "txt_fim": 224,
+        "texto": "With the taste of your lips, I'm on"
+      },
+      {
+        "indices": [
+          29
+        ],
+        "inicio": 173.49,
+        "fim": 178.37,
+        "txt_inicio": 224,
+        "txt_fim": 231,
+        "texto": "a ride You're toxic, I'm slippin' under ("
+      },
+      {
+        "indices": [
+          30
+        ],
+        "inicio": 178.37,
+        "fim": 182.67,
+        "txt_inicio": 202,
+        "txt_fim": 210,
+        "texto": "of a poison, paradise I'm addicted to you,"
+      },
+      {
+        "indices": [
+          31
+        ],
+        "inicio": 182.91,
+        "fim": 184.69,
+        "txt_inicio": 210,
+        "txt_fim": 216,
+        "texto": "don't you know that you're toxic?"
+      },
+      {
+        "indices": [
+          32
+        ],
+        "inicio": 185.35,
+        "fim": 188.67,
+        "txt_inicio": 249,
+        "txt_fim": 257,
+        "texto": "Intoxicate me now, with your lovin' now I"
+      },
+      {
+        "indices": [
+          33
+        ],
+        "inicio": 188.67,
+        "fim": 193.97,
+        "txt_inicio": 262,
+        "txt_fim": 270,
+        "texto": "think I'm ready now) Intoxicate me now, with"
+      },
+      {
+        "indices": [
+          34
+        ],
+        "inicio": 193.97,
+        "fim": 196.77,
+        "txt_inicio": 270,
+        "txt_fim": 278,
+        "texto": "your lovin' now I think I'm ready now"
+      }
+    ],
+    "tokens_txt_sem_correspondencia": [
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244,
+      245,
+      246,
+      247,
+      248,
+      257,
+      258,
+      259,
+      260,
+      261
+    ],
+    "parametros": {
+      "score_consulta_minimo": 0.65,
+      "margem_ambiguidade": 0.025,
+      "bonus_por_extremidade": 0.02,
+      "score_contexto_minimo": 0.85
+    }
+  },
+  "auditoria_estrutura": [
+    {
+      "bloco_srt": 1,
+      "inicio_original": 13.7,
+      "fim_original": 18.2,
+      "texto_original": "Baby, can't you see, I'm callin' A guy",
+      "texto_publicado": "Baby, can't you see i'm calling? a guy",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 2,
+      "inicio_original": 18.2,
+      "fim_original": 21.82,
+      "texto_original": "like you should wear a warnin' It's dangerous,",
+      "texto_publicado": "Like you should wear a warning it's dangerous,",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 3,
+      "inicio_original": 22.58,
+      "fim_original": 30.72,
+      "texto_original": "I'm fallin' There's no escape, I can't wait",
+      "texto_publicado": "I'm falling there's no escape, i can't wait",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 4,
+      "inicio_original": 30.72,
+      "fim_original": 34.38,
+      "texto_original": "I need a hit, baby give me it",
+      "texto_publicado": "I need a hit, baby, give me it",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 5,
+      "inicio_original": 34.38,
+      "fim_original": 42.75,
+      "texto_original": "You're dangerous, I'm lovin' it Too high, can't",
+      "texto_publicado": "You're dangerous, i'm loving it too high, can't",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 6,
+      "inicio_original": 42.75,
+      "fim_original": 46.57,
+      "texto_original": "come down Losing my head spinnin' round and",
+      "texto_publicado": "Come down losin' my head, spinnin' 'round and '",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 7,
+      "inicio_original": 46.57,
+      "fim_original": 50.87,
+      "texto_original": "round Do you feel me now?",
+      "texto_publicado": "Round do you feel me now?",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 8,
+      "inicio_original": 56.89,
+      "fim_original": 59.35,
+      "texto_original": "With the taste of your lips, I'm on",
+      "texto_publicado": "With the taste of your lips, i'm on",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 9,
+      "inicio_original": 59.35,
+      "fim_original": 64.31,
+      "texto_original": "a ride You're toxic, I'm slippin' under Taste",
+      "texto_publicado": "A ride you're toxic, i'm slippin' under taste",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 10,
+      "inicio_original": 64.31,
+      "fim_original": 68.57,
+      "texto_original": "of a poison paradise I'm addicted to you,",
+      "texto_publicado": "Of a poison, paradise i'm addicted to you,",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 11,
+      "inicio_original": 68.75,
+      "fim_original": 70.67,
+      "texto_original": "don't you know that you're toxic?",
+      "texto_publicado": "Don't you know that you're toxic?",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 12,
+      "inicio_original": 73.37,
+      "fim_original": 75.85,
+      "texto_original": "And I love what you do, don't you",
+      "texto_publicado": "And i love what you do, don't you",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 13,
+      "inicio_original": 75.85,
+      "fim_original": 77.19,
+      "texto_original": "know that you're toxic?",
+      "texto_publicado": "Know that you're toxic?",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 14,
+      "inicio_original": 84.3,
+      "fim_original": 88.4,
+      "texto_original": "It's getting late to give you up I",
+      "texto_publicado": "It's getting late to give you up i",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 15,
+      "inicio_original": 88.4,
+      "fim_original": 92.34,
+      "texto_original": "took a sip from my devil's cup Slowly,",
+      "texto_publicado": "Took a sip from a devil's cup slowly,",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 16,
+      "inicio_original": 92.72,
+      "fim_original": 100.18,
+      "texto_original": "it's taking over me Too high, can't come",
+      "texto_publicado": "It's taking over me too high, can't come",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 17,
+      "inicio_original": 100.18,
+      "fim_original": 104.04,
+      "texto_original": "down I see the air, it's all around",
+      "texto_publicado": "Down it's in the air and it's all around",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 18,
+      "inicio_original": 105.92,
+      "fim_original": 108.32,
+      "texto_original": "Can you feel me now?",
+      "texto_publicado": "Can you feel me now?",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 19,
+      "inicio_original": 113.94,
+      "fim_original": 116.42,
+      "texto_original": "With the taste of your lips, I'm on",
+      "texto_publicado": "With the taste of your lips, i'm on",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 20,
+      "inicio_original": 116.42,
+      "fim_original": 121.6,
+      "texto_original": "a ride You're toxic, I'm slippin' under Taste",
+      "texto_publicado": "A ride you're toxic, i'm slippin' under taste",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 21,
+      "inicio_original": 121.6,
+      "fim_original": 125.64,
+      "texto_original": "of a poison paradise I'm addicted to you,",
+      "texto_publicado": "Of a poison, paradise i'm addicted to you,",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 22,
+      "inicio_original": 125.8,
+      "fim_original": 127.68,
+      "texto_original": "don't you know that you're toxic?",
+      "texto_publicado": "Don't you know that you're toxic?",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 23,
+      "inicio_original": 130.42,
+      "fim_original": 132.92,
+      "texto_original": "And I love what you do, don't you",
+      "texto_publicado": "And i love what you do, don't you",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 24,
+      "inicio_original": 132.92,
+      "fim_original": 134.32,
+      "texto_original": "know that you're toxic?",
+      "texto_publicado": "Know that you're toxic?",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 25,
+      "inicio_original": 139.18,
+      "fim_original": 141.18,
+      "texto_original": "Don't you know that you're toxic?",
+      "texto_publicado": "Don't you know that you're toxic?",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 26,
+      "inicio_original": 161.63,
+      "fim_original": 165.67,
+      "texto_original": "You're toxic, I'm slippin' under Taste of a",
+      "texto_publicado": "You're toxic, i'm slippin' under taste of a",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 27,
+      "inicio_original": 165.67,
+      "fim_original": 169.83,
+      "texto_original": "poison paradise I'm addicted to you, don't you",
+      "texto_publicado": "Poison, paradise i'm addicted to you, don't you",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 28,
+      "inicio_original": 169.83,
+      "fim_original": 171.19,
+      "texto_original": "know that you're toxic?",
+      "texto_publicado": "Know that you're toxic?",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 29,
+      "inicio_original": 171.41,
+      "fim_original": 173.49,
+      "texto_original": "With the taste of your lips, I'm on",
+      "texto_publicado": "With the taste of your lips, i'm on",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 30,
+      "inicio_original": 173.49,
+      "fim_original": 178.37,
+      "texto_original": "a ride You're toxic, I'm slippin' under Taste",
+      "texto_publicado": "A ride you're toxic, i'm slippin' under taste",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 31,
+      "inicio_original": 178.37,
+      "fim_original": 182.67,
+      "texto_original": "of a poison paradise I'm addicted to you,",
+      "texto_publicado": "Of a poison, paradise i'm addicted to you,",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 32,
+      "inicio_original": 182.91,
+      "fim_original": 184.69,
+      "texto_original": "don't you know that you're toxic?",
+      "texto_publicado": "Don't you know that you're toxic?",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 33,
+      "inicio_original": 185.35,
+      "fim_original": 188.67,
+      "texto_original": "Intoxicating me now, with your loving now I",
+      "texto_publicado": "Intoxicate me now, with your lovin' now i",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 34,
+      "inicio_original": 188.67,
+      "fim_original": 193.97,
+      "texto_original": "think I'm ready now Intoxicating me now, with",
+      "texto_publicado": "Think i'm ready now) intoxicate me now, with",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 35,
+      "inicio_original": 193.97,
+      "fim_original": 196.77,
+      "texto_original": "your loving now I think I'm ready now",
+      "texto_publicado": "Your lovin' now i think i'm ready now",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    }
+  ],
+  "recuperacoes": [
+    {
+      "id": 1,
+      "txt_inicio": 216,
+      "txt_fim": 249,
+      "inicio": 184.69,
+      "fim": 185.35,
+      "bloco_anterior": 32,
+      "bloco_seguinte": 33,
+      "limite_busca": 66.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "pesquisado_sem_confirmacao",
+      "tentativas": [
+        {
+          "janela": [
+            184.69,
+            185.35
+          ],
+          "texto": "With the taste of your lips I'm on a ride You're toxic I'm slippin under toxic With the taste of the poison paradise I'm addicted to you don't you know that you're toxic",
+          "palavras": []
+        }
+      ],
+      "inseridos": [],
+      "tokens_recuperados": [],
+      "texto": "With the taste of your lips, I'm on a ride You're toxic, I'm slippin' under (toxic) With the taste of the poison, paradise I'm addicted to you, don't you know that you're toxic?"
+    },
+    {
+      "id": 2,
+      "txt_inicio": 257,
+      "txt_fim": 262,
+      "inicio": 188.67,
+      "fim": 188.67,
+      "bloco_anterior": 33,
+      "bloco_seguinte": 34,
+      "limite_busca": 30.0,
+      "motivo_nao_pesquisado": "sem_espaco_temporal_entre_blocos",
+      "estado": "nao_pesquisado",
+      "tentativas": [],
+      "inseridos": [],
+      "tokens_recuperados": []
+    }
+  ],
+  "tentativas": [
+    {
+      "janela": [
+        184.69,
+        185.35
+      ],
+      "texto": "With the taste of your lips I'm on a ride You're toxic I'm slippin under toxic With the taste of the poison paradise I'm addicted to you don't you know that you're toxic",
+      "palavras": [],
+      "lacuna": 1
+    }
+  ],
+  "pendencias": [
+    {
+      "bloco_srt": 9,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 20,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 26,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 30,
+      "motivo": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "lacuna": 1,
+      "motivo": "pesquisado_sem_confirmacao",
+      "detalhe": null
+    },
+    {
+      "lacuna": 2,
+      "motivo": "nao_pesquisado",
+      "detalhe": "sem_espaco_temporal_entre_blocos"
+    },
+    {
+      "motivo": "texto_txt_sem_tempo",
+      "tokens_txt": [
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        257,
+        258,
+        259,
+        260,
+        261
+      ]
+    }
+  ],
+  "blocos": [
+    {
+      "inicio": 13.7,
+      "fim": 18.2,
+      "texto": "Baby, can't you see i'm calling? a guy",
+      "origem": "texto_corrigido",
+      "bloco_original": 1
+    },
+    {
+      "inicio": 18.2,
+      "fim": 21.82,
+      "texto": "Like you should wear a warning it's dangerous,",
+      "origem": "texto_corrigido",
+      "bloco_original": 2
+    },
+    {
+      "inicio": 22.58,
+      "fim": 30.72,
+      "texto": "I'm falling there's no escape, i can't wait",
+      "origem": "texto_corrigido",
+      "bloco_original": 3
+    },
+    {
+      "inicio": 30.72,
+      "fim": 34.38,
+      "texto": "I need a hit, baby, give me it",
+      "origem": "texto_corrigido",
+      "bloco_original": 4
+    },
+    {
+      "inicio": 34.38,
+      "fim": 42.75,
+      "texto": "You're dangerous, i'm loving it too high, can't",
+      "origem": "texto_corrigido",
+      "bloco_original": 5
+    },
+    {
+      "inicio": 42.75,
+      "fim": 46.57,
+      "texto": "Come down losin' my head, spinnin' 'round and '",
+      "origem": "texto_corrigido",
+      "bloco_original": 6
+    },
+    {
+      "inicio": 46.57,
+      "fim": 50.87,
+      "texto": "Round do you feel me now?",
+      "origem": "original_preservado",
+      "bloco_original": 7
+    },
+    {
+      "inicio": 56.89,
+      "fim": 59.35,
+      "texto": "With the taste of your lips, i'm on",
+      "origem": "original_preservado",
+      "bloco_original": 8
+    },
+    {
+      "inicio": 59.35,
+      "fim": 64.31,
+      "texto": "A ride you're toxic, i'm slippin' under taste",
+      "origem": "original_preservado",
+      "bloco_original": 9
+    },
+    {
+      "inicio": 64.31,
+      "fim": 68.57,
+      "texto": "Of a poison, paradise i'm addicted to you,",
+      "origem": "texto_corrigido",
+      "bloco_original": 10
+    },
+    {
+      "inicio": 68.75,
+      "fim": 70.67,
+      "texto": "Don't you know that you're toxic?",
+      "origem": "original_preservado",
+      "bloco_original": 11
+    },
+    {
+      "inicio": 73.37,
+      "fim": 75.85,
+      "texto": "And i love what you do, don't you",
+      "origem": "original_preservado",
+      "bloco_original": 12
+    },
+    {
+      "inicio": 75.85,
+      "fim": 77.19,
+      "texto": "Know that you're toxic?",
+      "origem": "original_preservado",
+      "bloco_original": 13
+    },
+    {
+      "inicio": 84.3,
+      "fim": 88.4,
+      "texto": "It's getting late to give you up i",
+      "origem": "original_preservado",
+      "bloco_original": 14
+    },
+    {
+      "inicio": 88.4,
+      "fim": 92.34,
+      "texto": "Took a sip from a devil's cup slowly,",
+      "origem": "texto_corrigido",
+      "bloco_original": 15
+    },
+    {
+      "inicio": 92.72,
+      "fim": 100.18,
+      "texto": "It's taking over me too high, can't come",
+      "origem": "original_preservado",
+      "bloco_original": 16
+    },
+    {
+      "inicio": 100.18,
+      "fim": 104.04,
+      "texto": "Down it's in the air and it's all around",
+      "origem": "texto_corrigido",
+      "bloco_original": 17
+    },
+    {
+      "inicio": 105.92,
+      "fim": 108.32,
+      "texto": "Can you feel me now?",
+      "origem": "original_preservado",
+      "bloco_original": 18
+    },
+    {
+      "inicio": 113.94,
+      "fim": 116.42,
+      "texto": "With the taste of your lips, i'm on",
+      "origem": "original_preservado",
+      "bloco_original": 19
+    },
+    {
+      "inicio": 116.42,
+      "fim": 121.6,
+      "texto": "A ride you're toxic, i'm slippin' under taste",
+      "origem": "original_preservado",
+      "bloco_original": 20
+    },
+    {
+      "inicio": 121.6,
+      "fim": 125.64,
+      "texto": "Of a poison, paradise i'm addicted to you,",
+      "origem": "texto_corrigido",
+      "bloco_original": 21
+    },
+    {
+      "inicio": 125.8,
+      "fim": 127.68,
+      "texto": "Don't you know that you're toxic?",
+      "origem": "original_preservado",
+      "bloco_original": 22
+    },
+    {
+      "inicio": 130.42,
+      "fim": 132.92,
+      "texto": "And i love what you do, don't you",
+      "origem": "original_preservado",
+      "bloco_original": 23
+    },
+    {
+      "inicio": 132.92,
+      "fim": 134.32,
+      "texto": "Know that you're toxic?",
+      "origem": "original_preservado",
+      "bloco_original": 24
+    },
+    {
+      "inicio": 139.18,
+      "fim": 141.18,
+      "texto": "Don't you know that you're toxic?",
+      "origem": "original_preservado",
+      "bloco_original": 25
+    },
+    {
+      "inicio": 161.63,
+      "fim": 165.67,
+      "texto": "You're toxic, i'm slippin' under taste of a",
+      "origem": "original_preservado",
+      "bloco_original": 26
+    },
+    {
+      "inicio": 165.67,
+      "fim": 169.83,
+      "texto": "Poison, paradise i'm addicted to you, don't you",
+      "origem": "texto_corrigido",
+      "bloco_original": 27
+    },
+    {
+      "inicio": 169.83,
+      "fim": 171.19,
+      "texto": "Know that you're toxic?",
+      "origem": "original_preservado",
+      "bloco_original": 28
+    },
+    {
+      "inicio": 171.41,
+      "fim": 173.49,
+      "texto": "With the taste of your lips, i'm on",
+      "origem": "original_preservado",
+      "bloco_original": 29
+    },
+    {
+      "inicio": 173.49,
+      "fim": 178.37,
+      "texto": "A ride you're toxic, i'm slippin' under taste",
+      "origem": "original_preservado",
+      "bloco_original": 30
+    },
+    {
+      "inicio": 178.37,
+      "fim": 182.67,
+      "texto": "Of a poison, paradise i'm addicted to you,",
+      "origem": "texto_corrigido",
+      "bloco_original": 31
+    },
+    {
+      "inicio": 182.91,
+      "fim": 184.69,
+      "texto": "Don't you know that you're toxic?",
+      "origem": "original_preservado",
+      "bloco_original": 32
+    },
+    {
+      "inicio": 185.35,
+      "fim": 188.67,
+      "texto": "Intoxicate me now, with your lovin' now i",
+      "origem": "texto_corrigido",
+      "bloco_original": 33
+    },
+    {
+      "inicio": 188.67,
+      "fim": 193.97,
+      "texto": "Think i'm ready now) intoxicate me now, with",
+      "origem": "texto_corrigido",
+      "bloco_original": 34
+    },
+    {
+      "inicio": 193.97,
+      "fim": 196.77,
+      "texto": "Your lovin' now i think i'm ready now",
+      "origem": "texto_corrigido",
+      "bloco_original": 35
+    }
+  ],
+  "configuracao_motor": {
+    "idioma": "pt",
+    "dispositivo": "cpu",
+    "modelo_solicitado": null
+  },
+  "fontes": {
+    "txt": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\pop-internacional\\toxic-britney-spears\\letra.txt",
+      "sha256": "5e5a3752e85b8725e7b548853500f99aef5971e3d10bef03c159f465f58b44b0"
+    },
+    "srt": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\pop-internacional\\toxic-britney-spears\\letra.srt",
+      "sha256": "07751961ae8bb9ae5dcec1ba156e42f38f588e796b172bad6b9a41d54a76ff25"
+    },
+    "voz": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\pop-internacional\\toxic-britney-spears\\voz.mp3",
+      "sha256": "f79fcee40a79eebb053a31c1f25e5387d09362f522f546cb49bcbc1094aebffc"
+    }
+  },
+  "resumo_avisos": [
+    "Bloco 9: consulta txt ambigua original preservado.",
+    "Bloco 20: consulta txt ambigua original preservado.",
+    "Bloco 26: consulta txt ambigua original preservado.",
+    "Bloco 30: texto exclusivo srt preservado.",
+    "Lacuna 1: pesquisado sem confirmacao (00:03:04,690–00:03:05,350).",
+    "Lacuna 2: nao pesquisado (00:03:08,670–00:03:08,670).",
+    "TXT linha 10, sem tempo: a ride",
+    "TXT linha 11, sem tempo: You're toxic I'm slippin under",
+    "TXT linha 12, sem tempo: With a taste of the poison paradise",
+    "TXT linha 13, sem tempo: I'm addicted to you don't you know that you're toxic",
+    "TXT linha 14, sem tempo: And I love what you do don't you know that you're toxic",
+    "TXT linha 21, sem tempo: a ride",
+    "TXT linha 22, sem tempo: You're toxic I'm slippin under",
+    "TXT linha 23, sem tempo: With the taste of the poison paradise",
+    "TXT linha 24, sem tempo: I'm addicted to you don't you know that you're toxic",
+    "TXT linha 27, sem tempo: Taste of your lips I'm on a ride",
+    "TXT linha 28, sem tempo: You're toxic I'm slippin under",
+    "TXT linha 29, sem tempo: With the taste",
+    "TXT linha 32, sem tempo: toxic",
+    "TXT linha 33, sem tempo: With the taste of the poison paradise",
+    "TXT linha 34, sem tempo: I'm addicted to you don't you know that you're toxic",
+    "TXT linha 36, sem tempo: think I'm ready now I"
+  ]
+}

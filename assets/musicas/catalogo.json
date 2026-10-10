@@ -58,6 +58,56 @@
             ]
         },
         {
+            "id": "pop-internacional",
+            "name": "Pop Internacional",
+            "songs": [
+                {
+                    "id": "oops-i-did-it-again-britney-spears",
+                    "title": "Oops I Did It Again",
+                    "artist": "Britney Spears",
+                    "genre": "pop-internacional",
+                    "folder": "pop-internacional/oops-i-did-it-again-britney-spears",
+                    "duration": 211,
+                    "difficulty": "advanced",
+                    "language": "en-US",
+                    "key": "C#",
+                    "mode": "minor",
+                    "offset": 0.0,
+                    "lyricsOffset": 0.0,
+                    "files": {
+                        "audio": "instrumental.mp3",
+                        "midi": "voz.mid",
+                        "lyrics": "letra.srt",
+                        "syllables": "voz_silabas.srt",
+                        "cover": null,
+                        "backgroundVideo": null
+                    }
+                },
+                {
+                    "id": "toxic-britney-spears",
+                    "title": "Toxic",
+                    "artist": "Britney Spears",
+                    "genre": "pop-internacional",
+                    "folder": "pop-internacional/toxic-britney-spears",
+                    "duration": 199,
+                    "difficulty": "advanced",
+                    "language": "en-US",
+                    "key": "C",
+                    "mode": "minor",
+                    "offset": 0.0,
+                    "lyricsOffset": 0.0,
+                    "files": {
+                        "audio": "instrumental.mp3",
+                        "midi": "voz.mid",
+                        "lyrics": "letra.srt",
+                        "syllables": "voz_silabas.srt",
+                        "cover": null,
+                        "backgroundVideo": null
+                    }
+                }
+            ]
+        },
+        {
             "id": "rock-internacional",
             "name": "Rock Internacional",
             "songs": [
@@ -68,7 +118,7 @@
                     "genre": "rock-internacional",
                     "folder": "rock-internacional/dont-stop-belilevin-journey",
                     "duration": 250,
-                    "difficulty": "intermediate",
+                    "difficulty": "advanced",
                     "language": "en-US",
                     "key": "E",
                     "mode": "major",
