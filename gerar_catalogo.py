@@ -42,12 +42,12 @@ ARQUIVOS
 OBRIGATÓRIOS:
 
 instrumental.mp3
-voz.mid
 musica.json
 
 
 OPCIONAIS:
 
+voz.mid (necessário para Karaokê e Treino; dispensado no Profissional)
 letra.srt
 voz_silabas.srt
 capa.jpg / capa.png / etc.
@@ -1103,15 +1103,7 @@ def build_song_entry(
         )
 
 
-    if not midi_path.exists():
-
-        raise CatalogGenerationError(
-            "Arquivo obrigatório ausente: "
-            f"{MIDI_FILENAME}"
-        )
-
-
-    if not midi_path.is_file():
+    if midi_path.exists() and not midi_path.is_file():
 
         raise CatalogGenerationError(
             f"{MIDI_FILENAME} "
@@ -1241,7 +1233,7 @@ def build_song_entry(
                 AUDIO_FILENAME,
 
             "midi":
-                MIDI_FILENAME,
+                MIDI_FILENAME if midi_path.is_file() else None,
 
             "lyrics":
                 (

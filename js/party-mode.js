@@ -431,6 +431,12 @@ export class PartyModeController {
             this.boundHandleNoteFinalized
         );
 
+        // No Profissional cada evento resume um período de voz, sem alvo MIDI.
+        document.addEventListener(
+            "professional:window-evaluated",
+            this.boundHandleNoteFinalized
+        );
+
         document.addEventListener(
             this.config.karaokeEvents.comboUpdated,
             this.boundHandleComboUpdated
@@ -1643,6 +1649,26 @@ export class PartyModeController {
         return data;
     }
 
+    // Volume absoluto: item > categoria > padrão do manifesto > configuração.
+    // Zero silencia; valores inválidos são ignorados para preservar o fallback.
+    resolvePartyVolume(kind, category, url, manifest = this.partyManifest) {
+        const settings = manifest?.volumes?.[kind];
+        const valid = value => typeof value === "number" && Number.isFinite(value)
+            && value >= 0 && value <= 1;
+        const items = settings?.items;
+        if (items && typeof items === "object" && !Array.isArray(items)) {
+            const resolvedUrl = this.resolveManifestAssetUrl(url);
+            for (const [path, value] of Object.entries(items)) {
+                if (valid(value) && this.resolveManifestAssetUrl(path) === resolvedUrl) return value;
+            }
+        }
+        for (const value of [settings?.categories?.[category], settings?.default]) {
+            if (valid(value)) return value;
+        }
+        return this.clampVolume(kind === "memes"
+            ? this.config.memes.videoVolume : this.config.sounds.volume);
+    }
+
     resolveManifestAssetUrl(value) {
         if (!value) {
             return null;
@@ -2841,7 +2867,8 @@ export class PartyModeController {
         return this.showMeme(
             selectedUrl,
             category,
-            this.chooseMemeCaption(category, manifest)
+            this.chooseMemeCaption(category, manifest),
+            this.resolvePartyVolume("memes", category, selectedUrl, manifest)
         );
     }
 
@@ -3005,7 +3032,8 @@ export class PartyModeController {
     async showMeme(
         url,
         category,
-        caption = this.chooseMemeCaption(category, this.partyManifest)
+        caption = this.chooseMemeCaption(category, this.partyManifest),
+        volume = this.resolvePartyVolume("memes", category, url)
     ) {
         if (
             !url ||
@@ -3025,7 +3053,7 @@ export class PartyModeController {
 
         const media =
             await this.createMemeMedia(
-                url
+                url, volume
             );
 
         if (!media) {
@@ -3263,7 +3291,7 @@ export class PartyModeController {
         return true;
     }
 
-    async createMemeMedia(url) {
+    async createMemeMedia(url, volume = this.config.memes.videoVolume) {
         const type =
             this.detectMediaType(
                 url
@@ -3327,7 +3355,7 @@ export class PartyModeController {
 
         video.volume =
             this.clampVolume(
-                this.config.memes.videoVolume
+                volume
             );
 
         video.playsInline =
@@ -3871,7 +3899,7 @@ export class PartyModeController {
         return this.playPartySound(
             selectedUrl,
             category,
-            options
+            { ...options, volume: this.resolvePartyVolume("sounds", category, selectedUrl, manifest) }
         );
     }
 
@@ -3881,7 +3909,8 @@ export class PartyModeController {
         options = {}
     ) {
         const {
-            forceEvent = false
+            forceEvent = false,
+            volume = this.resolvePartyVolume("sounds", category, url)
         } = options;
 
         if (
@@ -3937,7 +3966,7 @@ export class PartyModeController {
 
         audio.volume =
             this.clampVolume(
-                this.config.sounds.volume
+                volume
             );
 
         audio.loop =
@@ -6615,6 +6644,11 @@ export class PartyModeController {
 
         document.removeEventListener(
             this.config.karaokeEvents.noteFinalized,
+            this.boundHandleNoteFinalized
+        );
+
+        document.removeEventListener(
+            "professional:window-evaluated",
             this.boundHandleNoteFinalized
         );
 

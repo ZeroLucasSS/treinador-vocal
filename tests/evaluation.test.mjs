@@ -25,6 +25,7 @@ function fixture() {
     const run = text => vm.runInContext(text, context);
     run(script(source('evaluation-rules')));
     run(script(source('music-theory')));
+    run(script(source('professional-mode')));
     run(script(source('melody-mode')).replace(/^initialize\(\);/m, ''));
     run(script(source('party-mode')));
     run(`partyMode.isActive = () => true;
@@ -47,7 +48,7 @@ test('optional boundary is inclusive and exclusive to karaoke', () => {
     for (const value of ['.250001', '0', '-1', 'NaN']) {
         assert.equal(run(`isOptionalNote(${value}, 'beginner')`), false);
     }
-    for (const mode of ['intermediate', 'advanced']) {
+    for (const mode of ['intermediate']) {
         assert.equal(run(`isOptionalNote(.1, '${mode}')`), false);
     }
 });
@@ -101,11 +102,11 @@ test('anticipation and delayed release select one matching note and count accept
     assert.equal(run(`findVoiceTarget(selectedMelody.notes, noteStates, 2.1, 60, 'beginner')?.index`), 1);
 });
 
-test('short neighbours cap grace windows; training and cover keep exact MIDI intervals', () => {
+test('short neighbours cap grace windows; training keeps exact MIDI intervals', () => {
     const { run } = fixture();
     run(`prepare([{ start: 0, duration: .1, midi: 60 }, { start: .1, duration: 1, midi: 62 }]);`);
     assert.equal(run(`getEvaluationWindow(selectedMelody.notes, 1, 'beginner').start`), .05);
-    for (const mode of ['intermediate', 'advanced']) {
+    for (const mode of ['intermediate']) {
         assert.equal(run(`findVoiceTarget([{ start: 1, duration: 1, midi: 60 }], [], .95, 60, '${mode}')`), null);
         assert.equal(run(`findVoiceTarget([{ start: 1, duration: 1, midi: 60 }], [], 2.05, 60, '${mode}')`), null);
     }
@@ -113,10 +114,13 @@ test('short neighbours cap grace windows; training and cover keep exact MIDI int
 
 test('migrated profiles and relaxed sustain retain real silence penalties', () => {
     const { run } = fixture();
-    assert.equal(run('DIFFICULTIES.intermediate.tuningTolerance'), 40);
-    assert.equal(run('DIFFICULTIES.advanced.tuningTolerance'), 25);
-    assert.equal(run('DIFFICULTIES.intermediate.requiredCoverage'), .25);
-    assert.equal(run('DIFFICULTIES.advanced.requiredCoverage'), .45);
+    assert.equal(run('DIFFICULTIES.beginner.tuningTolerance'), 40);
+    assert.equal(run('DIFFICULTIES.beginner.requiredCoverage'), .18);
+    assert.equal(run('DIFFICULTIES.intermediate.tuningTolerance'), 25);
+    assert.equal(run('DIFFICULTIES.intermediate.requiredCoverage'), .45);
+    assert.equal(run('DIFFICULTIES.intermediate.excellentOnsetMs'), 250);
+    assert.equal(run('DIFFICULTIES.intermediate.acceptableOnsetMs'), 600);
+    assert.equal(run('DIFFICULTIES.advanced'), undefined);
     const required = run('getRequiredCoverageForNote(1, DIFFICULTIES.beginner)');
     assert.ok(required > .145 && required < .147);
     assert.equal(run('calculateDurationScore({ expectedDuration: 1 }, .15, DIFFICULTIES.beginner)'), 100);
@@ -142,7 +146,7 @@ test('great uses mode-specific thresholds while retaining minimum sample and pos
         partyMode.performanceHistory = Array.from({ length: 4 }, () => ({ score: 82, status: 'excellent' }));
         partyMode.updatePerformanceDiagnosis();`);
     assert.equal(run('partyMode.performanceDiagnosis.state'), 'great');
-    for (const mode of ['intermediate', 'advanced']) {
+    for (const mode of ['intermediate']) {
         run(`partyMode.sessionInfo.singingMode = '${mode}'; partyMode.updatePerformanceDiagnosis();`);
         assert.equal(run('partyMode.performanceDiagnosis.state'), 'good');
     }
@@ -171,7 +175,7 @@ test('piano roll preserves optional status and never renders it as a zero-point 
 });
 
 test('well-sung alternatives build combos and reach great in all modes without changing melody credit', () => {
-    for (const mode of ['beginner', 'intermediate', 'advanced']) {
+    for (const mode of ['beginner', 'intermediate']) {
         const { run } = fixture();
         run(`prepare(Array.from({ length: 4 }, (_, i) => ({ start: i, duration: 1, midi: 60 })), '${mode}');
             currentSong = { key: 'C', mode: 'major' };
@@ -235,7 +239,7 @@ test('optional alternatives stay excluded and literal melody keeps the same perf
 });
 
 test('yellow notes build combos only in karaoke, preserving their score and color', () => {
-    for (const mode of ['beginner', 'intermediate', 'advanced']) {
+    for (const mode of ['beginner', 'intermediate']) {
         const { run } = fixture();
         run(`prepare([{ start: 0, duration: 1, midi: 60 }], '${mode}');
             currentCombo = 2;
@@ -268,7 +272,7 @@ test('yellow-only karaoke reaches good but not great; errors and optional notes 
     assert.equal(run(`isPositivePerformance({ status: 'partial', optional: true, score: 75 }, 'beginner')`), false);
     for (const score of [55, 79]) {
         assert.equal(run(`isPositivePerformance({ status: 'partial', score: ${score} }, 'beginner')`), true);
-        assert.equal(run(`isPositivePerformance({ status: 'partial', score: ${score} }, 'advanced')`), false);
+        assert.equal(run(`isPositivePerformance({ status: 'partial', score: ${score} }, 'intermediate')`), false);
     }
 });
 
@@ -306,4 +310,113 @@ test('singing an unscored note updates its visual state but never points, combo 
     assert.equal(run('buildKaraokeSessionSummary().totalNotes'), 0);
     assert.equal(run('partyMode.performanceHistory.length'), 0);
     assert.equal(run('currentCombo'), 5);
+});
+
+test('professional capture and party windows work without MIDI; switching back restores MIDI requirements', () => {
+    const { run, events } = fixture();
+    run(`elements.difficultySelect.value = 'professional';
+        currentSong = { key: 'C', mode: 'major' };
+        selectedMelody = null;
+        professionalSession = new ProfessionalSession('C', 'major');
+        pianoRoll.setProfessionalPoints = points => { pianoRoll.points = points; };
+        elements.backingAudio.duration = 120;
+        microphone.getTimeDomainData = () => new Float32Array(4);
+        microphone.calculateRms = () => .1;
+        pitchDetector.detect = () => ({ probability: .99, frequency: midiToFrequency(60) });
+        checkFilesReady();
+        for (let i=0;i<120;i++) { currentSongTime = i/60; processMicrophone(i*1000/60); }
+        currentSongTime=2; microphone.calculateRms=()=>0; processMicrophone(2000);`);
+    assert.equal(run('elements.startButton.disabled'), false);
+    assert.equal(run('elements.melodyListenButton.disabled'), true);
+    assert.equal(run('noteStates.length'), 0);
+    assert.ok(Math.abs(run('professionalSession.inTuneSeconds') - 2) < 1e-7);
+    assert.equal(run('elements.currentScore.textContent'), '100.0%');
+    assert.equal(events.filter(event => event.type === 'karaoke:note-finalized').length, 0);
+    assert.equal(events.filter(event => event.type === 'professional:window-evaluated').length, 2);
+    const window = events.find(event => event.type === 'professional:window-evaluated');
+    run(`partyMode.sessionInfo = { singingMode: 'professional' };
+        partyMode.handleNoteFinalized({ detail: ${JSON.stringify(window.detail)} });`);
+    assert.equal(run('partyMode.sessionStats.finalized'), 1);
+    assert.equal(run('partyMode.sessionStats.excellent'), 1);
+    assert.equal(run('buildKaraokeSessionSummary().singingMode'), 'professional');
+    run(`elements.difficultySelect.value='beginner';checkFilesReady();`);
+    assert.equal(run('elements.startButton.disabled'), true);
+    run(`selectedMelody={notes:[{midi:60,start:0,duration:1}]};checkFilesReady();`);
+    assert.equal(run('elements.startButton.disabled'), false);
+});
+
+test('professional piano roll keeps all voice green, hides MIDI and breaks at silence', () => {
+    const calls = [];
+    const context = vm.createContext({ calls });
+    vm.runInContext(script(source('music-theory')), context);
+    vm.runInContext(script(source('piano-roll')), context);
+    vm.runInContext(`const roll = Object.create(PianoRoll.prototype);
+        roll.width=1000;roll.height=300;roll.noteResults=new Map();
+        roll.ctx=new Proxy({}, {get:(t,n)=>t[n]??(()=>calls.push(n)),set:(t,n,v)=>{t[n]=v;calls.push([n,v]);return true;}});
+        roll.drawBackground=roll.drawHorizontalGrid=roll.drawVerticalGrid=roll.drawScaleGuides=roll.drawPlayhead=()=>{};
+        roll.drawNotes=()=>calls.push('MIDI');roll.timeToX=t=>t*100;roll.midiToY=m=>m;
+        roll.setProfessionalMode(true);roll.setMelody({notes:[{midi:120}]});
+        roll.setProfessionalPoints([{time:0,midiFloat:60,status:'inTune'},
+            {time:.05,midiFloat:60.35,status:'near'},{time:.10,midiFloat:null},
+            {time:.15,midiFloat:61,status:'outOfKey'}]);`, context);
+    assert.equal(calls.includes('MIDI'), false);
+    assert.equal(calls.filter(call=>call==='lineTo').length, 1);
+    assert.ok(calls.some(call=>Array.isArray(call)&&call[1]==='#62dd8b'));
+    assert.equal(calls.some(call=>Array.isArray(call)&&['#f4cb62','#ff7070'].includes(call[1])),false);
+    assert.equal(vm.runInContext('roll.maxMidi',context),81);
+    vm.runInContext('roll.setProfessionalMode(false);roll.setMelody({notes:[{midi:60}]});',context);
+    assert.ok(calls.includes('MIDI'));
+});
+
+
+test('professional scale guide highlights the accepted octave only, clears at silence and preserves purple history', () => {
+    const calls = [];
+    const context = vm.createContext({ calls });
+    vm.runInContext(script(source('music-theory')), context);
+    vm.runInContext(script(source('piano-roll')), context);
+    const run = text => vm.runInContext(text, context);
+    run(`const roll = Object.create(PianoRoll.prototype);
+        roll.minMidi=60;roll.maxMidi=72;roll.width=1000;roll.currentTime=.05;
+        roll.scalePitchClasses=[0,2,4,5,7,9,11];roll.keySignature={key:'C',mode:'major'};roll.professionalMode=true;
+        roll.timeToX=t=>t*100;roll.midiToY=m=>m;
+        roll.ctx=new Proxy({}, {get:(t,n)=>t[n]??((...args)=>calls.push([n,...args])),set:(t,n,v)=>{t[n]=v;calls.push([n,v]);return true;}});
+        roll.professionalPoints=[{time:0,midiFloat:60.2,nearestMidi:60,status:'inTune'},
+            {time:.1,midiFloat:null,status:'silence'},
+            {time:.2,midiFloat:72.35,nearestMidi:72,status:'near'}];`);
+    assert.equal(run('roll.getActiveProfessionalMidi()'),60);
+    run('roll.drawScaleGuides()');
+    const purple=run("roll.getNoteColor({status:'alternative'},false)");
+    assert.ok(calls.some(call=>call[0]==='strokeStyle'&&call[1]===purple));
+    assert.ok(calls.some(call=>call[0]==='strokeStyle'&&call[1]==='rgba(51,213,255,0.35)'));
+    calls.length=0;
+    run('roll.professionalMode=false;roll.drawScaleGuides()');
+    assert.ok(calls.some(call=>call[0]==='strokeStyle'&&call[1]==='rgba(51, 213, 255, 0.15)'));
+    assert.equal(calls.some(call=>call[0]==='strokeStyle'&&call[1]===purple),false);
+    run('roll.professionalMode=true');
+    run('roll.currentTime=.1');
+    assert.equal(run('roll.getActiveProfessionalMidi()'),null);
+    run('roll.currentTime=.2');
+    assert.equal(run('roll.getActiveProfessionalMidi()'),null);
+    run("roll.professionalPoints=[{time:.2,midiFloat:72,nearestMidi:72,status:'inTune'}]");
+    assert.equal(run('roll.getActiveProfessionalMidi()'),72);
+    run('roll.currentTime=1');
+    assert.equal(run('roll.getActiveProfessionalMidi()'),null);
+});
+
+test('professional microphone responds to every sample without median smoothing or UI delay', () => {
+    const { run } = fixture();
+    run(`elements.difficultySelect.value='professional';
+        professionalSession=new ProfessionalSession('C','major');
+        pianoRoll.setProfessionalPoints=points=>{pianoRoll.points=points;};
+        microphone.getTimeDomainData=()=>new Float32Array(4);
+        microphone.calculateRms=()=>.1;
+        recentFrequencies=Array(5).fill(midiToFrequency(61));
+        pitchDetector.detect=()=>({probability:.99,frequency:midiToFrequency(61)});
+        currentSongTime=0;processMicrophone(0);
+        pitchDetector.detect=()=>({probability:.99,frequency:midiToFrequency(60)});
+        currentSongTime=.01;processMicrophone(10);`);
+    assert.equal(run('pianoRoll.points.at(-1).status'),'inTune');
+    assert.ok(Math.abs(run('pianoRoll.points.at(-1).midiFloat')-60)<1e-7);
+    run('currentSongTime=.02;microphone.calculateRms=()=>0;processMicrophone(20);');
+    assert.equal(run('pianoRoll.points.at(-1).status'),'silence');
 });

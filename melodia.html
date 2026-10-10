@@ -41,6 +41,7 @@
         href="./css/party-mode.css"
     >
 
+    <link rel="stylesheet" href="./css/professional-mode.css">
 </head>
 
 
@@ -623,11 +624,11 @@
                             </option>
 
                             <option value="intermediate">
-                                Treino — foco na afinação
+                                Treino — afinação e tempo de entrada
                             </option>
 
-                            <option value="advanced">
-                                Cover — maior precisão
+                            <option value="professional">
+                                Profissional — interpretação livre
                             </option>
 
                         </select>
@@ -1194,6 +1195,19 @@
 
 
 
+                    <div id="professionalLive" class="professional-panel oculto">
+                        <p>Tom: <strong id="professionalKey">—</strong>. Crie sua melodia nas notas da escala, em qualquer oitava.</p>
+                        <div class="professional-legend" aria-label="Cores do traçado">
+                            <span>Sua voz</span><span>Notas do tom</span><span>Nota cantada afinada</span>
+                        </div>
+                        <div class="metricas">
+                            <div><span>Tempo cantado afinado</span><strong id="professionalPrecision">—</strong></div>
+                            <div><span>Voz avaliada</span><strong id="professionalSeconds">—</strong></div>
+                            <div><span>Distância à nota da escala</span><strong id="professionalPitch">—</strong></div>
+                        </div>
+                        <p>Resultado = tempo afinado ÷ tempo cantado × 100. A linha fica roxa imediatamente quando a voz detectada está dentro de ±25 cents de uma nota do tom, sem espera ou duração mínima da nota. Pausas não entram no cálculo.</p>
+                    </div>
+
                     <!-- Métricas -->
 
                     <div class="metricas">
@@ -1294,6 +1308,24 @@
         <!-- =====================================================
              RESULTADO FINAL
              ===================================================== -->
+
+        <section id="professionalResult" class="resultado professional-panel oculto" aria-labelledby="professionalResultTitle">
+            <p class="rotulo">MODO PROFISSIONAL</p>
+            <h2 id="professionalResultTitle">Apresentação concluída</h2>
+            <div class="pontuacao-final"><strong id="professionalResultPoints">—</strong></div>
+            <p id="professionalResultPrecision" class="avaliacao-final"></p>
+            <p>A precisão considera apenas a voz detectada. A avaliação usa a escala fixa do tom cadastrado, sem analisar os acordes da música.</p>
+            <div class="professional-review">
+                <div class="professional-review-canvas">
+                    <canvas id="professionalReviewCanvas" aria-label="Histórico da afinação na apresentação"></canvas>
+                </div>
+                <label for="professionalReview">Revisar o traçado no piano-roll: <output id="professionalReviewTime">0 s</output></label>
+                <input id="professionalReview" type="range" min="0" max="0" value="0" step="0.1">
+                <p>O histórico fica disponível até iniciar outra apresentação ou trocar de modo. Baixe para guardar; ele contém as alturas cantadas, não uma gravação de áudio.</p>
+                <button id="professionalExport" type="button" class="botao-hq">Baixar histórico</button>
+            </div>
+            <button id="professionalRepeat" type="button" class="botao-hq botao-vermelho botao-repetir">↻ Repetir apresentação</button>
+        </section>
 
         <section
             id="resultado"

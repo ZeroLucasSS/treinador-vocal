@@ -243,12 +243,11 @@ function normalizeSong(
 
     if (
         !song.files ||
-        !song.files.audio ||
-        !song.files.midi
+        !song.files.audio
     ) {
 
         throw new Error(
-            `A música "${id}" precisa possuir arquivos audio e midi.`
+            `A música "${id}" precisa possuir o arquivo audio.`
         );
     }
 
@@ -415,10 +414,8 @@ function normalizeSong(
                 ),
 
             midi:
-                normalizeRequiredFileName(
-                    song.files.midi,
-                    id,
-                    "midi"
+                normalizeOptionalFileName(
+                    song.files.midi
                 ),
 
             lyrics:

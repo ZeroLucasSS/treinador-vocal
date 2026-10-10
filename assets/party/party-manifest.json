@@ -1,6 +1,24 @@
 {
     "version": 2,
 
+    "volumes": {
+        "sounds": {
+            "default": 0.80,
+            "categories": {
+                "good": 0.80,
+                "great": 0.80,
+                "struggling": 0.40,
+                "comeback": 0.80
+            },
+            "items": {}
+        },
+        "memes": {
+            "default": 0.42,
+            "categories": {},
+            "items": {}
+        }
+    },
+
     "memes": {
 
         "good": [

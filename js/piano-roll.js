@@ -247,6 +247,106 @@ export class PianoRoll {
     * ========================================================
     */
 
+    setProfessionalMode(enabled) {
+        this.professionalMode = Boolean(enabled);
+        this.professionalPoints = [];
+        if (enabled) {
+            this.minMidi = 45;
+            this.maxMidi = 81;
+        }
+        this.draw();
+    }
+
+    setProfessionalPoints(points) {
+        this.professionalPoints = points;
+        for (const point of points) {
+            if (Number.isFinite(point.midiFloat)) {
+                this.minMidi = Math.min(this.minMidi, Math.floor(point.midiFloat) - 2);
+                this.maxMidi = Math.max(this.maxMidi, Math.ceil(point.midiFloat) + 2);
+            }
+        }
+        this.draw();
+    }
+
+    drawProfessionalVoice() {
+        const ctx = this.ctx;
+        ctx.save();
+        ctx.lineWidth = 3;
+        ctx.lineCap = "round";
+        let previous = null;
+        ctx.strokeStyle = ctx.fillStyle = "#62dd8b";
+        ctx.shadowColor = "rgba(98,221,139,0.28)";
+        ctx.shadowBlur = 5;
+        for (const point of this.professionalPoints || []) {
+            const x = this.timeToX(point.time);
+            if (point.midiFloat == null || x < -20 || x > this.width + 20) {
+                previous = null;
+                continue;
+            }
+            const y = this.midiToY(point.midiFloat);
+            ctx.beginPath();
+            if (previous && point.time - previous.time <= 0.18) {
+                ctx.moveTo(this.timeToX(previous.time), this.midiToY(previous.midiFloat));
+                ctx.lineTo(x, y);
+                ctx.stroke();
+            } else {
+                ctx.arc(x, y, 2, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            previous = point;
+        }
+        ctx.restore();
+    }
+
+    getActiveProfessionalMidi() {
+        const points = this.professionalPoints || [];
+        for (let i = points.length - 1; i >= 0; i--) {
+            const point = points[i];
+            if (point.time > this.currentTime) continue;
+            return point.status === "inTune" && this.currentTime - point.time <= 0.18
+                ? point.nearestMidi : null;
+        }
+        return null;
+    }
+
+    drawProfessionalScaleGuides() {
+        const ctx = this.ctx;
+        const purple = this.getNoteColor({ status: "alternative" }, false);
+        const activeMidi = this.getActiveProfessionalMidi();
+        ctx.save();
+        ctx.setLineDash([]);
+        for (let midi = this.minMidi; midi <= this.maxMidi; midi++) {
+            if (!this.scalePitchClasses.includes(midiToPitchClass(midi))) continue;
+            const active = midi === activeMidi;
+            ctx.strokeStyle = active ? purple : "rgba(51,213,255,0.35)";
+            ctx.lineWidth = active ? 4 : 1;
+            ctx.shadowColor = ctx.strokeStyle;
+            ctx.shadowBlur = active ? 4 : 0;
+            const y = this.midiToY(midi);
+            ctx.beginPath();
+            ctx.moveTo(0, y);
+            ctx.lineTo(this.width, y);
+            ctx.stroke();
+        }
+        // Preserva em roxo os intervalos aceitos para a revisão da apresentação.
+        ctx.strokeStyle = purple;
+        ctx.lineWidth = 4;
+        ctx.shadowBlur = 0;
+        const points = this.professionalPoints || [];
+        for (let i = 0; i < points.length - 1; i++) {
+            const point = points[i], next = points[i + 1];
+            if (point.status !== "inTune" || next.time - point.time > 0.18) continue;
+            const x = this.timeToX(point.time), endX = this.timeToX(next.time);
+            if (endX < 0 || x > this.width) continue;
+            const y = this.midiToY(point.nearestMidi);
+            ctx.beginPath();
+            ctx.moveTo(Math.max(0, x), y);
+            ctx.lineTo(Math.min(this.width, endX), y);
+            ctx.stroke();
+        }
+        ctx.restore();
+    }
+
     setMelody(
         melody
     ) {
@@ -263,7 +363,7 @@ export class PianoRoll {
         */
 
         if (
-            this.melody &&
+            !this.professionalMode && this.melody &&
             Array.isArray(
                 this.melody.notes
             ) &&
@@ -1177,7 +1277,7 @@ export class PianoRoll {
             )
         ) {
 
-            this.drawNotes();
+            if (!this.professionalMode) this.drawNotes();
         }
 
 
@@ -1197,6 +1297,30 @@ export class PianoRoll {
         */
 
         this.drawPlayhead();
+
+        if (this.professionalMode) this.drawProfessionalOctaveLabels();
+    }
+
+    drawProfessionalOctaveLabels() {
+        const ctx = this.ctx;
+        ctx.save();
+        ctx.font = "11px system-ui, sans-serif";
+        ctx.textBaseline = "middle";
+        ctx.globalAlpha = 1;
+        ctx.fillStyle = "#ffffff";
+        ctx.strokeStyle = "#121418";
+        ctx.lineWidth = 3;
+        ctx.lineJoin = "round";
+        ctx.shadowBlur = 0;
+        for (let midi = this.minMidi; midi <= this.maxMidi; midi++) {
+            if (midi % 12 !== 0) continue;
+            const label = `C${midiToOctave(midi)}`;
+            const y = this.midiToY(midi);
+            // Contorno escuro separa o texto das linhas que passam por trás.
+            ctx.strokeText(label, 7, y);
+            ctx.fillText(label, 7, y);
+        }
+        ctx.restore();
     }
 
 
@@ -1340,7 +1464,7 @@ export class PianoRoll {
              * como referência de oitava.
              */
             if (
-                isC
+                isC && !this.professionalMode
             ) {
 
                 this.ctx.fillStyle =
@@ -1400,6 +1524,11 @@ export class PianoRoll {
             return;
         }
 
+
+        if (this.professionalMode) {
+            this.drawProfessionalScaleGuides();
+            return;
+        }
 
         this.ctx.save();
 
@@ -2073,6 +2202,12 @@ export class PianoRoll {
      */
 
     drawVoice() {
+
+        if (this.professionalMode) {
+            this.drawProfessionalVoice();
+            return;
+        }
+
 
         if (
             this.voicePoints.length <

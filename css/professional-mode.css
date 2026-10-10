@@ -1,0 +1,18 @@
+/* Regras restritas ao Profissional; os outros modos mantêm seu layout. */
+body.professional-mode .painel-feedback .metricas,
+body.professional-mode .nota-atual .nota-cartao:first-child,
+body.professional-mode .nota-atual .seta,
+body.professional-mode .ajuda-karaoke,
+body.professional-mode .painel-piano-roll .legenda {
+    display: none;
+}
+.professional-panel { margin-top: 1rem; }
+.professional-panel p { line-height: 1.5; }
+.professional-panel .metricas { display: grid !important; }
+.professional-legend { display: flex; flex-wrap: wrap; gap: 1rem; }
+.professional-legend span::before { content: "● "; color: #62dd8b; }
+.professional-legend span:nth-child(2)::before { color: #33d5ff; }
+.professional-legend span:nth-child(3)::before { color: rgba(192,132,252,0.94); }
+.professional-review { display: grid; gap: .75rem; margin: 1.5rem 0; }
+.professional-review input { width: 100%; }
+.professional-review-canvas { height: 280px; min-width: 0; overflow: hidden; border-radius: 8px; }

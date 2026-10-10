@@ -1,3 +1,6 @@
+import { ProfessionalSession } from "./professional-mode.js";
+import { ProfessionalView } from "./professional-view.js";
+import { getScalePitchClasses } from "./music-theory.js";
 import { VoiceMonitor } from "./voice-monitor.js";
 import { audioOutput, AudioDeviceControls } from "./audio-devices.js";
 import { isOptionalNote, getEvaluationWindow, findVoiceTarget, isPositivePerformance } from "./evaluation-rules.js";
@@ -349,6 +352,12 @@ function buildKaraokeNoteEventDetail(
  */
 
 function buildKaraokeSessionSummary() {
+    if (isProfessionalMode() && professionalSession) {
+        const summary = professionalSession.summary();
+        return { ...summary, songId: currentSong?.id, songTitle: currentSong?.title,
+            singingMode: "professional", totalScore: summary.precision ?? 0,
+            songTime: currentSongTime };
+    }
 
     const evaluatedStates = noteStates.filter(state => !state.optional);
 
@@ -540,39 +549,7 @@ const DIFFICULTIES = {
 
     intermediate: {
 
-        // MODO TREINO
-        tolerance:
-            150,
-
-        near:
-            300,
-
-        tuningTolerance:
-            40,
-
-        tuningNear:
-            50,
-
-        requiredCoverage:
-            0.25,
-
-        minimumCoverage:
-            0.04,
-
-        coverageTau:
-            0.55,
-
-        excellentOnsetMs:
-            450,
-
-        acceptableOnsetMs:
-            1000
-    },
-
-
-    advanced: {
-
-        // MODO COVER
+        // MODO TREINO — perfil de precisão do antigo Cover
         tolerance:
             70,
 
@@ -1431,11 +1408,21 @@ let voiceTesting = false;
 let trainingPreparing = false;
 let captureVersion = 0;
 let microphoneOpening = null;
+let professionalSession = null;
+let professionalView = null;
 
 initialize();
 
 
 async function initialize() {
+    professionalView = new ProfessionalView({
+        onReview: time => {
+            if (!isProfessionalMode() || running || !professionalSession) return;
+            pianoRoll.setProfessionalPoints(professionalSession.visibleHistory(time));
+            pianoRoll.setCurrentTime(time);
+        },
+        onRepeat: () => elements.repeatButton.click()
+    });
 
     voiceMonitor = new VoiceMonitor({ microphone, onTest: toggleVoiceTest });
     voiceMonitor.init();
@@ -1582,7 +1569,14 @@ async function initialize() {
          * ====================================================
          */
 
-        await loadVocalMidi();
+        try {
+            await loadVocalMidi();
+        } catch (error) {
+            // O instrumental e a tonalidade bastam para o Profissional.
+            midiData = selectedTrack = selectedMelody = null;
+            elements.midiStatus.textContent = "MIDI indisponível — use o modo Profissional.";
+            console.warn("MIDI vocal indisponível:", error);
+        }
 
 
         /*
@@ -1618,7 +1612,7 @@ async function initialize() {
          * ====================================================
          */
 
-        checkFilesReady();
+        if (!running && !countdownRunning && !trainingPreparing) applySingingMode();
 
 
     } catch (error) {
@@ -1767,12 +1761,11 @@ function prepareSong(
 
 
     if (
-        !backingUrl ||
-        !midiUrl
+        !backingUrl
     ) {
 
         throw new Error(
-            `A música "${song.id}" não possui os arquivos obrigatórios de áudio e MIDI.`
+            `A música "${song.id}" não possui o arquivo obrigatório de áudio.`
         );
     }
 
@@ -2180,6 +2173,7 @@ function setupBackingTrack() {
  */
 
 async function loadVocalMidi() {
+    if (!midiUrl) throw new Error("Esta música não possui MIDI vocal.");
 
     elements.midiStatus.textContent =
         "Lendo arquivo...";
@@ -3098,6 +3092,7 @@ function buildTrackDescription(
  */
 
 function checkFilesReady() {
+    if (running || countdownRunning || trainingPreparing) return;
 
     const mp3Ready =
         Number.isFinite(
@@ -3122,12 +3117,13 @@ function checkFilesReady() {
 
 
     elements.melodyListenButton.disabled =
-        !midiReady;
+        !midiReady || isProfessionalMode();
 
+    const ready = mp3Ready && (isProfessionalMode() ? hasProfessionalKey() : midiReady);
+    elements.startButton.disabled = !ready;
 
     if (
-        mp3Ready &&
-        midiReady
+        ready
     ) {
 
         elements.startButton.disabled =
@@ -3139,7 +3135,9 @@ function checkFilesReady() {
 
 
         setFeedback(
-            "Instrumental e melodia vocal carregados. Confira os dispositivos e inicie o treino.",
+            isProfessionalMode()
+                ? "Cante livremente nas notas da tonalidade. A melodia e o ritmo são seus."
+                : "Instrumental e melodia vocal carregados. Confira os dispositivos e inicie o treino.",
             "neutro"
         );
     }
@@ -3154,6 +3152,13 @@ function checkFilesReady() {
  * EVENTOS PRINCIPAIS
  * ============================================================
  */
+
+elements.difficultySelect.addEventListener("change", () => {
+    if (running || countdownRunning || trainingPreparing) return;
+    stopBackingPreview();
+    stopMelodyPreview();
+    applySingingMode();
+});
 
 elements.trackSelect.addEventListener(
     "change",
@@ -4329,7 +4334,7 @@ async function startTraining() {
     if (audioDeviceControls?.busy || voiceTesting) return;
 
     if (
-        !selectedMelody
+        !isProfessionalMode() && !selectedMelody
     ) {
 
         setFeedback(
@@ -4368,8 +4373,13 @@ async function startTraining() {
     }
 
 
+    if (isProfessionalMode() && !hasProfessionalKey()) {
+        setFeedback("Informe uma tonalidade válida para cantar no Profissional.", "errado");
+        return;
+    }
     const version = ++captureVersion;
     trainingPreparing = true;
+    professionalView?.reset();
 
     stopBackingPreview();
 
@@ -4385,7 +4395,7 @@ async function startTraining() {
 
 
     elements.startButton.textContent =
-        "Interromper treino";
+        isProfessionalMode() ? "Interromper apresentação" : "Interromper treino";
 
 
     elements.startButton
@@ -4455,12 +4465,15 @@ async function startTraining() {
 
         resetInterfaceStatistics();
 
-        createNoteStates();
-
-
-        pianoRoll.setMelody(
-            selectedMelody
-        );
+        if (isProfessionalMode()) {
+            professionalSession = new ProfessionalSession(currentSong.key, currentSong.mode);
+            pianoRoll.setProfessionalMode(true);
+            pianoRoll.setMelody(null);
+        } else {
+            createNoteStates();
+            pianoRoll.setProfessionalMode(false);
+            pianoRoll.setMelody(selectedMelody);
+        }
 
 
         pianoRoll.setCurrentTime(
@@ -4661,7 +4674,9 @@ async function startTraining() {
 
 
         setFeedback(
-            "Acompanhe o instrumental, a letra e a melodia no piano roll.",
+            isProfessionalMode()
+                ? "Sua voz aparece em verde. A linha do tom fica roxa quando você canta afinado nela."
+                : "Acompanhe o instrumental, a letra e a melodia no piano roll.",
             "neutro"
         );
 
@@ -4837,9 +4852,7 @@ function processFrame() {
     );
 
 
-    finalizeExpiredNotes(
-        currentSongTime
-    );
+    if (!isProfessionalMode()) finalizeExpiredNotes(currentSongTime);
 
 
     processMicrophone(
@@ -4882,6 +4895,7 @@ function processMicrophone(
         !buffer
     ) {
 
+        if (isProfessionalMode()) processProfessionalSample(null);
         return;
     }
 
@@ -4901,6 +4915,7 @@ function processMicrophone(
             "—";
 
 
+        if (isProfessionalMode()) processProfessionalSample(null);
         return;
     }
 
@@ -4922,20 +4937,21 @@ function processMicrophone(
             "—";
 
 
+        if (isProfessionalMode()) processProfessionalSample(null);
         return;
     }
 
 
-    const frequency =
-        smoothFrequency(
-            detection.frequency
-        );
+    const frequency = isProfessionalMode()
+        ? detection.frequency
+        : smoothFrequency(detection.frequency);
 
 
     if (
         !frequency
     ) {
 
+        if (isProfessionalMode()) processProfessionalSample(null);
         return;
     }
 
@@ -4954,9 +4970,16 @@ function processMicrophone(
         )
     ) {
 
+        if (isProfessionalMode()) processProfessionalSample(null);
         return;
     }
 
+
+    if (isProfessionalMode()) {
+        updateSungNote(midiFloat);
+        processProfessionalSample(midiFloat);
+        return;
+    }
 
     /*
      * ========================================================
@@ -7980,6 +8003,7 @@ function calculateLiveCoverage(
 function updateExpectedNoteInterface(
     time
 ) {
+    if (isProfessionalMode()) return;
 
     const target =
         getEvaluationTarget(
@@ -8043,6 +8067,10 @@ function updateSungNote(
  */
 
 function updateLiveStatistics() {
+    if (isProfessionalMode()) {
+        elements.currentScore.textContent = professionalSession?.summary().precision == null ? "—" : `${professionalSession.summary().precision.toFixed(1)}%`;
+        return;
+    }
 
     const finalized =
         noteStates.filter(
@@ -8255,6 +8283,12 @@ async function finishTraining() {
     }
 
 
+    if (isProfessionalMode() && professionalSession) {
+        currentSongTime = elements.backingAudio.currentTime;
+        publishProfessionalWindows(professionalSession.finish(currentSongTime));
+        renderProfessionalProgress();
+    }
+
     noteStates.forEach(
         (
             state,
@@ -8358,6 +8392,12 @@ async function finishTraining() {
  */
 
 async function stopTraining() {
+    const professionalStoppedTime = currentSongTime;
+    const completedProfessional = isProfessionalMode() && running && professionalSession;
+    if (completedProfessional) {
+        publishProfessionalWindows(professionalSession.finish(professionalStoppedTime));
+        renderProfessionalProgress();
+    }
 
     captureVersion++;
     elements.startButton.disabled = true;
@@ -8485,10 +8525,15 @@ async function stopTraining() {
 
 
     setFeedback(
-        "Treino interrompido.",
+        isProfessionalMode() ? "Apresentação interrompida. Seu traçado está disponível para revisão." : "Treino interrompido.",
         "neutro"
     );
 
+
+    if (completedProfessional) {
+        professionalView?.finish(professionalSession, currentSong, professionalStoppedTime, true);
+        pianoRoll.setCurrentTime(professionalStoppedTime);
+    }
 
     /*
     * Não tratamos interrupção como final feliz da música.
@@ -8518,6 +8563,10 @@ async function stopTraining() {
  */
 
 function showResults() {
+    if (isProfessionalMode()) {
+        if (professionalSession) professionalView?.finish(professionalSession, currentSong, currentSongTime);
+        return;
+    }
 
     const evaluatedStates = noteStates.filter(state => !state.optional);
 
@@ -9558,11 +9607,11 @@ function lockControls(
     ) {
 
         elements.trackSelect.disabled =
-            !midiData;
+            !midiData || isProfessionalMode();
 
 
         elements.melodyListenButton.disabled =
-            !selectedMelody;
+            !selectedMelody || isProfessionalMode();
 
 
         elements.backingListenButton.disabled =
@@ -9573,7 +9622,7 @@ function lockControls(
 
         elements.startButton.disabled =
             !(
-                selectedMelody &&
+                (isProfessionalMode() ? hasProfessionalKey() : selectedMelody) &&
                 Number.isFinite(
                     elements.backingAudio.duration
                 )
@@ -9581,6 +9630,7 @@ function lockControls(
     }
 
 
+    if (!locked && isProfessionalMode()) elements.startButton.textContent = "Iniciar apresentação";
     updateSyncControlsState();
 }
 
@@ -9603,7 +9653,7 @@ function updateSyncControlsState() {
      * - contagem regressiva;
      * - prévia MIDI isolada.
      */
-    const midiEnabled =
+    const midiEnabled = !isProfessionalMode() &&
         Boolean(
             selectedTrack
         ) &&
@@ -9622,7 +9672,7 @@ function updateSyncControlsState() {
         subtitles.length >
             0 &&
         !(
-            karaokeModel &&
+            !isProfessionalMode() && karaokeModel &&
             karaokeModel.valid
         ) &&
         !running &&
@@ -9738,6 +9788,10 @@ function formatOffsetMilliseconds(
 function updateLyricsInterface(
     audioTime
 ) {
+    if (isProfessionalMode()) {
+        updateLegacyLyricsInterface(audioTime);
+        return;
+    }
 
     /*
      * ========================================================
@@ -10849,3 +10903,52 @@ window.addEventListener(
         pianoRoll.destroy();
     }
 );
+
+
+function isProfessionalMode() {
+    return elements.difficultySelect.value === "professional";
+}
+
+function hasProfessionalKey() {
+    return Boolean(currentSong && getScalePitchClasses(currentSong.key, currentSong.mode)?.length);
+}
+
+function applySingingMode() {
+    const professional = isProfessionalMode();
+    professionalSession = null;
+    professionalView?.setMode(professional, currentSong);
+    resetInterfaceStatistics();
+    elements.result.classList.add("oculto");
+    pianoRoll.setProfessionalMode(professional);
+    pianoRoll.setMelody(professional ? null : selectedMelody);
+    elements.startButton.textContent = professional ? "Iniciar apresentação" : "Iniciar treino";
+    if (professional) elements.currentScore.textContent = "—";
+    lockControls(false);
+    checkFilesReady();
+}
+
+function processProfessionalSample(midiFloat) {
+    if (!professionalSession) return;
+    if (midiFloat === null) recentFrequencies = [];
+    publishProfessionalWindows(professionalSession.sample(currentSongTime, midiFloat));
+    // Cada amostra atualiza o destaque, inclusive entradas breves e silêncio.
+    renderProfessionalProgress();
+}
+
+function renderProfessionalProgress() {
+    const summary = professionalSession.summary();
+    elements.currentScore.textContent = summary.precision === null ? "—" : `${summary.precision.toFixed(1)}%`;
+    professionalView?.update(professionalSession);
+    pianoRoll.setProfessionalPoints(professionalSession.visibleHistory(currentSongTime));
+}
+
+function publishProfessionalWindows(windows) {
+    for (const detail of windows) {
+        currentCombo = detail.combo;
+        bestCombo = detail.bestCombo;
+        updateComboInterface();
+        dispatchKaraokeEvent(KARAOKE_EVENTS.comboUpdated, { combo: currentCombo, bestCombo });
+        // Evento próprio: nenhum alvo MIDI fictício é criado para a festa.
+        dispatchKaraokeEvent("professional:window-evaluated", { ...detail, songTime: currentSongTime });
+    }
+}

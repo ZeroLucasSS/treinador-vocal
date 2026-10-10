@@ -79,7 +79,7 @@
                         "midi": "voz.mid",
                         "lyrics": "letra.srt",
                         "syllables": "voz_silabas.srt",
-                        "cover": null,
+                        "cover": "capa.jpeg",
                         "backgroundVideo": null
                     }
                 },
@@ -101,7 +101,7 @@
                         "midi": "voz.mid",
                         "lyrics": "letra.srt",
                         "syllables": "voz_silabas.srt",
-                        "cover": null,
+                        "cover": "capa.jpg",
                         "backgroundVideo": null
                     }
                 }
