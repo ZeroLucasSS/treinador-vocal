@@ -1,0 +1,3291 @@
+{
+  "versao": 1,
+  "arquivo_voz": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\samba-pagode\\ta-vendo-aquela-lua-exaltasamba\\voz.mp3",
+  "sha256_voz": "1471aea5fce3660630f7be60e5af962d4762e0161105cb8840652c58b93f03ab",
+  "duracao_audio": 196.32475,
+  "configuracao": {
+    "modelo": "small",
+    "idioma": "pt",
+    "dispositivo": "cpu",
+    "compute_type": "int8",
+    "vad": "silero"
+  },
+  "segmentos": [
+    {
+      "text": " Estive filmando, eu tava quieto no meu canto, cabelo bem cortado e filme exalando Daquele jeito que eu sei que você gosta, mas eu te dei um papo e você nem deu resposta Tudo bem, um dia vario, outro vem Você deve estar pensando em outro, alguém Mas se ele te merecesse, não estaria aqui Não, não, não",
+      "start": 11.106,
+      "end": 34.206,
+      "avg_logprob": -0.2207572994435706,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Estive",
+          "start": 11.106,
+          "end": 11.226,
+          "score": 0.001
+        },
+        {
+          "word": "filmando,",
+          "start": 11.306,
+          "end": 11.727,
+          "score": 0.796
+        },
+        {
+          "word": "eu",
+          "start": 11.747,
+          "end": 11.787,
+          "score": 0.012
+        },
+        {
+          "word": "tava",
+          "start": 11.867,
+          "end": 12.147,
+          "score": 0.858
+        },
+        {
+          "word": "quieto",
+          "start": 12.227,
+          "end": 12.527,
+          "score": 0.63
+        },
+        {
+          "word": "no",
+          "start": 12.587,
+          "end": 12.687,
+          "score": 0.867
+        },
+        {
+          "word": "meu",
+          "start": 12.807,
+          "end": 12.908,
+          "score": 0.484
+        },
+        {
+          "word": "canto,",
+          "start": 12.988,
+          "end": 13.428,
+          "score": 0.734
+        },
+        {
+          "word": "cabelo",
+          "start": 13.508,
+          "end": 13.988,
+          "score": 0.911
+        },
+        {
+          "word": "bem",
+          "start": 14.069,
+          "end": 14.209,
+          "score": 0.661
+        },
+        {
+          "word": "cortado",
+          "start": 14.269,
+          "end": 14.989,
+          "score": 0.844
+        },
+        {
+          "word": "e",
+          "start": 15.029,
+          "end": 15.089,
+          "score": 0.941
+        },
+        {
+          "word": "filme",
+          "start": 15.21,
+          "end": 15.47,
+          "score": 0.619
+        },
+        {
+          "word": "exalando",
+          "start": 15.59,
+          "end": 16.351,
+          "score": 0.85
+        },
+        {
+          "word": "Daquele",
+          "start": 16.811,
+          "end": 17.271,
+          "score": 0.89
+        },
+        {
+          "word": "jeito",
+          "start": 17.331,
+          "end": 17.632,
+          "score": 0.742
+        },
+        {
+          "word": "que",
+          "start": 17.692,
+          "end": 17.872,
+          "score": 0.72
+        },
+        {
+          "word": "eu",
+          "start": 17.912,
+          "end": 17.972,
+          "score": 0.97
+        },
+        {
+          "word": "sei",
+          "start": 18.072,
+          "end": 18.252,
+          "score": 0.779
+        },
+        {
+          "word": "que",
+          "start": 18.272,
+          "end": 18.392,
+          "score": 0.709
+        },
+        {
+          "word": "você",
+          "start": 18.432,
+          "end": 18.753,
+          "score": 0.898
+        },
+        {
+          "word": "gosta,",
+          "start": 18.833,
+          "end": 19.273,
+          "score": 0.965
+        },
+        {
+          "word": "mas",
+          "start": 19.333,
+          "end": 19.513,
+          "score": 0.889
+        },
+        {
+          "word": "eu",
+          "start": 19.573,
+          "end": 19.653,
+          "score": 0.348
+        },
+        {
+          "word": "te",
+          "start": 19.693,
+          "end": 19.794,
+          "score": 0.568
+        },
+        {
+          "word": "dei",
+          "start": 19.894,
+          "end": 20.034,
+          "score": 0.382
+        },
+        {
+          "word": "um",
+          "start": 20.094,
+          "end": 20.154,
+          "score": 0.944
+        },
+        {
+          "word": "papo",
+          "start": 20.274,
+          "end": 20.694,
+          "score": 0.85
+        },
+        {
+          "word": "e",
+          "start": 20.714,
+          "end": 20.734,
+          "score": 0.733
+        },
+        {
+          "word": "você",
+          "start": 20.794,
+          "end": 21.135,
+          "score": 0.976
+        },
+        {
+          "word": "nem",
+          "start": 21.175,
+          "end": 21.315,
+          "score": 0.854
+        },
+        {
+          "word": "deu",
+          "start": 21.355,
+          "end": 21.495,
+          "score": 0.645
+        },
+        {
+          "word": "resposta",
+          "start": 21.535,
+          "end": 22.356,
+          "score": 0.744
+        },
+        {
+          "word": "Tudo",
+          "start": 22.816,
+          "end": 23.076,
+          "score": 0.971
+        },
+        {
+          "word": "bem,",
+          "start": 23.196,
+          "end": 23.417,
+          "score": 0.601
+        },
+        {
+          "word": "um",
+          "start": 23.457,
+          "end": 23.517,
+          "score": 0.386
+        },
+        {
+          "word": "dia",
+          "start": 23.577,
+          "end": 23.817,
+          "score": 0.897
+        },
+        {
+          "word": "vario,",
+          "start": 23.917,
+          "end": 24.478,
+          "score": 0.638
+        },
+        {
+          "word": "outro",
+          "start": 24.658,
+          "end": 24.918,
+          "score": 0.863
+        },
+        {
+          "word": "vem",
+          "start": 25.038,
+          "end": 25.418,
+          "score": 0.802
+        },
+        {
+          "word": "Você",
+          "start": 25.779,
+          "end": 26.059,
+          "score": 1.0
+        },
+        {
+          "word": "deve",
+          "start": 26.139,
+          "end": 26.359,
+          "score": 0.999
+        },
+        {
+          "word": "estar",
+          "start": 26.399,
+          "end": 26.659,
+          "score": 0.9
+        },
+        {
+          "word": "pensando",
+          "start": 26.74,
+          "end": 27.28,
+          "score": 0.856
+        },
+        {
+          "word": "em",
+          "start": 27.3,
+          "end": 27.42,
+          "score": 0.508
+        },
+        {
+          "word": "outro,",
+          "start": 27.6,
+          "end": 27.861,
+          "score": 0.901
+        },
+        {
+          "word": "alguém",
+          "start": 27.881,
+          "end": 28.341,
+          "score": 0.814
+        },
+        {
+          "word": "Mas",
+          "start": 28.701,
+          "end": 28.861,
+          "score": 0.778
+        },
+        {
+          "word": "se",
+          "start": 28.881,
+          "end": 28.921,
+          "score": 0.002
+        },
+        {
+          "word": "ele",
+          "start": 28.961,
+          "end": 29.162,
+          "score": 0.952
+        },
+        {
+          "word": "te",
+          "start": 29.242,
+          "end": 29.402,
+          "score": 0.893
+        },
+        {
+          "word": "merecesse,",
+          "start": 29.422,
+          "end": 30.303,
+          "score": 0.917
+        },
+        {
+          "word": "não",
+          "start": 30.363,
+          "end": 30.543,
+          "score": 0.651
+        },
+        {
+          "word": "estaria",
+          "start": 30.603,
+          "end": 31.143,
+          "score": 0.871
+        },
+        {
+          "word": "aqui",
+          "start": 31.203,
+          "end": 32.204,
+          "score": 0.746
+        },
+        {
+          "word": "Não,",
+          "start": 32.224,
+          "end": 32.304,
+          "score": 0.131
+        },
+        {
+          "word": "não,",
+          "start": 32.745,
+          "end": 33.085,
+          "score": 0.706
+        },
+        {
+          "word": "não",
+          "start": 33.105,
+          "end": 33.185,
+          "score": 0.168
+        }
+      ]
+    },
+    {
+      "text": " Ou talvez você não queira se envolver Magulada tá com medo de sofrer Se me der uma chance, não vai se arrepender Não, não, não, não, não Dá vendo aquela lua que brilha lá no céu Se você me pediu, vou buscar só pra te dar Se bem que o brilho dela nem se comparam seu Deixa eu te dar um beijo, vou mostrar o tempo que perdeu Que coisa louca, eu já sabia Enquanto eu me arrumava, algo me dizia",
+      "start": 34.498,
+      "end": 64.464,
+      "avg_logprob": -0.10745875524324283,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Ou",
+          "start": 34.558,
+          "end": 34.638,
+          "score": 0.758
+        },
+        {
+          "word": "talvez",
+          "start": 34.698,
+          "end": 35.058,
+          "score": 0.934
+        },
+        {
+          "word": "você",
+          "start": 35.098,
+          "end": 35.358,
+          "score": 0.987
+        },
+        {
+          "word": "não",
+          "start": 35.398,
+          "end": 35.518,
+          "score": 0.731
+        },
+        {
+          "word": "queira",
+          "start": 35.618,
+          "end": 35.998,
+          "score": 0.677
+        },
+        {
+          "word": "se",
+          "start": 36.198,
+          "end": 36.358,
+          "score": 0.684
+        },
+        {
+          "word": "envolver",
+          "start": 36.418,
+          "end": 37.099,
+          "score": 0.926
+        },
+        {
+          "word": "Magulada",
+          "start": 37.459,
+          "end": 38.079,
+          "score": 0.859
+        },
+        {
+          "word": "tá",
+          "start": 38.179,
+          "end": 38.299,
+          "score": 0.688
+        },
+        {
+          "word": "com",
+          "start": 38.359,
+          "end": 38.539,
+          "score": 0.831
+        },
+        {
+          "word": "medo",
+          "start": 38.579,
+          "end": 39.059,
+          "score": 0.846
+        },
+        {
+          "word": "de",
+          "start": 39.119,
+          "end": 39.319,
+          "score": 0.489
+        },
+        {
+          "word": "sofrer",
+          "start": 39.459,
+          "end": 40.079,
+          "score": 0.869
+        },
+        {
+          "word": "Se",
+          "start": 40.419,
+          "end": 40.479,
+          "score": 0.962
+        },
+        {
+          "word": "me",
+          "start": 40.539,
+          "end": 40.679,
+          "score": 0.779
+        },
+        {
+          "word": "der",
+          "start": 40.739,
+          "end": 40.879,
+          "score": 0.382
+        },
+        {
+          "word": "uma",
+          "start": 40.919,
+          "end": 41.039,
+          "score": 0.897
+        },
+        {
+          "word": "chance,",
+          "start": 41.159,
+          "end": 41.459,
+          "score": 0.497
+        },
+        {
+          "word": "não",
+          "start": 41.539,
+          "end": 41.859,
+          "score": 0.776
+        },
+        {
+          "word": "vai",
+          "start": 41.899,
+          "end": 42.04,
+          "score": 0.49
+        },
+        {
+          "word": "se",
+          "start": 42.2,
+          "end": 42.52,
+          "score": 0.877
+        },
+        {
+          "word": "arrepender",
+          "start": 42.54,
+          "end": 43.96,
+          "score": 0.793
+        },
+        {
+          "word": "Não,",
+          "start": 43.98,
+          "end": 44.06,
+          "score": 0.206
+        },
+        {
+          "word": "não,",
+          "start": 44.4,
+          "end": 45.12,
+          "score": 0.665
+        },
+        {
+          "word": "não,",
+          "start": 45.14,
+          "end": 45.5,
+          "score": 0.36
+        },
+        {
+          "word": "não,",
+          "start": 45.52,
+          "end": 46.1,
+          "score": 0.586
+        },
+        {
+          "word": "não",
+          "start": 46.26,
+          "end": 46.36,
+          "score": 0.206
+        },
+        {
+          "word": "Dá",
+          "start": 46.42,
+          "end": 46.54,
+          "score": 0.65
+        },
+        {
+          "word": "vendo",
+          "start": 46.6,
+          "end": 46.9,
+          "score": 0.812
+        },
+        {
+          "word": "aquela",
+          "start": 46.92,
+          "end": 47.261,
+          "score": 0.628
+        },
+        {
+          "word": "lua",
+          "start": 47.341,
+          "end": 47.821,
+          "score": 0.836
+        },
+        {
+          "word": "que",
+          "start": 47.861,
+          "end": 48.001,
+          "score": 0.801
+        },
+        {
+          "word": "brilha",
+          "start": 48.061,
+          "end": 48.381,
+          "score": 0.943
+        },
+        {
+          "word": "lá",
+          "start": 48.441,
+          "end": 48.581,
+          "score": 0.658
+        },
+        {
+          "word": "no",
+          "start": 48.621,
+          "end": 48.721,
+          "score": 0.826
+        },
+        {
+          "word": "céu",
+          "start": 48.821,
+          "end": 49.041,
+          "score": 0.608
+        },
+        {
+          "word": "Se",
+          "start": 49.381,
+          "end": 49.521,
+          "score": 0.898
+        },
+        {
+          "word": "você",
+          "start": 49.561,
+          "end": 49.861,
+          "score": 0.949
+        },
+        {
+          "word": "me",
+          "start": 49.921,
+          "end": 50.021,
+          "score": 0.914
+        },
+        {
+          "word": "pediu,",
+          "start": 50.081,
+          "end": 50.581,
+          "score": 0.762
+        },
+        {
+          "word": "vou",
+          "start": 50.601,
+          "end": 50.781,
+          "score": 0.32
+        },
+        {
+          "word": "buscar",
+          "start": 50.821,
+          "end": 51.141,
+          "score": 0.915
+        },
+        {
+          "word": "só",
+          "start": 51.201,
+          "end": 51.321,
+          "score": 0.769
+        },
+        {
+          "word": "pra",
+          "start": 51.361,
+          "end": 51.541,
+          "score": 0.586
+        },
+        {
+          "word": "te",
+          "start": 51.581,
+          "end": 51.641,
+          "score": 0.389
+        },
+        {
+          "word": "dar",
+          "start": 51.741,
+          "end": 51.982,
+          "score": 0.809
+        },
+        {
+          "word": "Se",
+          "start": 52.302,
+          "end": 52.402,
+          "score": 0.89
+        },
+        {
+          "word": "bem",
+          "start": 52.462,
+          "end": 52.582,
+          "score": 0.707
+        },
+        {
+          "word": "que",
+          "start": 52.622,
+          "end": 52.702,
+          "score": 0.831
+        },
+        {
+          "word": "o",
+          "start": 52.722,
+          "end": 52.762,
+          "score": 0.539
+        },
+        {
+          "word": "brilho",
+          "start": 52.822,
+          "end": 53.102,
+          "score": 0.762
+        },
+        {
+          "word": "dela",
+          "start": 53.182,
+          "end": 53.662,
+          "score": 0.802
+        },
+        {
+          "word": "nem",
+          "start": 53.722,
+          "end": 53.842,
+          "score": 0.55
+        },
+        {
+          "word": "se",
+          "start": 53.922,
+          "end": 54.022,
+          "score": 0.883
+        },
+        {
+          "word": "comparam",
+          "start": 54.082,
+          "end": 54.582,
+          "score": 0.785
+        },
+        {
+          "word": "seu",
+          "start": 54.662,
+          "end": 54.862,
+          "score": 0.713
+        },
+        {
+          "word": "Deixa",
+          "start": 55.202,
+          "end": 55.422,
+          "score": 0.814
+        },
+        {
+          "word": "eu",
+          "start": 55.462,
+          "end": 55.502,
+          "score": 0.869
+        },
+        {
+          "word": "te",
+          "start": 55.562,
+          "end": 55.662,
+          "score": 0.742
+        },
+        {
+          "word": "dar",
+          "start": 55.742,
+          "end": 55.922,
+          "score": 0.857
+        },
+        {
+          "word": "um",
+          "start": 55.982,
+          "end": 56.042,
+          "score": 0.978
+        },
+        {
+          "word": "beijo,",
+          "start": 56.102,
+          "end": 56.422,
+          "score": 0.701
+        },
+        {
+          "word": "vou",
+          "start": 56.462,
+          "end": 56.602,
+          "score": 0.602
+        },
+        {
+          "word": "mostrar",
+          "start": 56.642,
+          "end": 57.043,
+          "score": 0.902
+        },
+        {
+          "word": "o",
+          "start": 57.083,
+          "end": 57.143,
+          "score": 0.613
+        },
+        {
+          "word": "tempo",
+          "start": 57.203,
+          "end": 57.503,
+          "score": 0.955
+        },
+        {
+          "word": "que",
+          "start": 57.563,
+          "end": 57.683,
+          "score": 0.799
+        },
+        {
+          "word": "perdeu",
+          "start": 57.763,
+          "end": 58.183,
+          "score": 0.689
+        },
+        {
+          "word": "Que",
+          "start": 58.463,
+          "end": 58.543,
+          "score": 0.999
+        },
+        {
+          "word": "coisa",
+          "start": 58.643,
+          "end": 58.923,
+          "score": 0.807
+        },
+        {
+          "word": "louca,",
+          "start": 59.043,
+          "end": 59.703,
+          "score": 0.837
+        },
+        {
+          "word": "eu",
+          "start": 60.023,
+          "end": 60.103,
+          "score": 0.43
+        },
+        {
+          "word": "já",
+          "start": 60.143,
+          "end": 60.243,
+          "score": 0.884
+        },
+        {
+          "word": "sabia",
+          "start": 60.323,
+          "end": 61.083,
+          "score": 0.957
+        },
+        {
+          "word": "Enquanto",
+          "start": 61.463,
+          "end": 61.803,
+          "score": 0.887
+        },
+        {
+          "word": "eu",
+          "start": 61.843,
+          "end": 61.903,
+          "score": 0.962
+        },
+        {
+          "word": "me",
+          "start": 61.963,
+          "end": 62.004,
+          "score": 0.399
+        },
+        {
+          "word": "arrumava,",
+          "start": 62.024,
+          "end": 62.624,
+          "score": 0.771
+        },
+        {
+          "word": "algo",
+          "start": 62.784,
+          "end": 63.024,
+          "score": 0.883
+        },
+        {
+          "word": "me",
+          "start": 63.064,
+          "end": 63.184,
+          "score": 0.911
+        },
+        {
+          "word": "dizia",
+          "start": 63.244,
+          "end": 63.884,
+          "score": 0.992
+        }
+      ]
+    },
+    {
+      "text": " Você vai encontrar Alguém que vai mudar A sua vida inteira da noite pro dia Seu brilho que ela lua, que brilha no céu Se você me pedirá, vamos que eu sofratidar Sei bem que o brilho dela nem se compara o céu",
+      "start": 64.464,
+      "end": 78.494,
+      "avg_logprob": -0.3064701893637257,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Você",
+          "start": 64.464,
+          "end": 64.664,
+          "score": 0.617
+        },
+        {
+          "word": "vai",
+          "start": 64.724,
+          "end": 64.924,
+          "score": 0.839
+        },
+        {
+          "word": "encontrar",
+          "start": 65.084,
+          "end": 65.625,
+          "score": 0.872
+        },
+        {
+          "word": "Alguém",
+          "start": 65.885,
+          "end": 66.125,
+          "score": 0.917
+        },
+        {
+          "word": "que",
+          "start": 66.165,
+          "end": 66.265,
+          "score": 0.669
+        },
+        {
+          "word": "vai",
+          "start": 66.385,
+          "end": 66.606,
+          "score": 0.861
+        },
+        {
+          "word": "mudar",
+          "start": 66.686,
+          "end": 67.086,
+          "score": 0.859
+        },
+        {
+          "word": "A",
+          "start": 67.346,
+          "end": 67.386,
+          "score": 0.955
+        },
+        {
+          "word": "sua",
+          "start": 67.506,
+          "end": 67.766,
+          "score": 0.871
+        },
+        {
+          "word": "vida",
+          "start": 67.826,
+          "end": 68.047,
+          "score": 0.795
+        },
+        {
+          "word": "inteira",
+          "start": 68.067,
+          "end": 68.487,
+          "score": 0.821
+        },
+        {
+          "word": "da",
+          "start": 68.567,
+          "end": 68.727,
+          "score": 0.389
+        },
+        {
+          "word": "noite",
+          "start": 68.767,
+          "end": 69.007,
+          "score": 0.918
+        },
+        {
+          "word": "pro",
+          "start": 69.087,
+          "end": 69.227,
+          "score": 0.688
+        },
+        {
+          "word": "dia",
+          "start": 69.327,
+          "end": 69.668,
+          "score": 0.665
+        },
+        {
+          "word": "Seu",
+          "start": 69.688,
+          "end": 69.748,
+          "score": 0.001
+        },
+        {
+          "word": "brilho",
+          "start": 69.768,
+          "end": 69.968,
+          "score": 0.208
+        },
+        {
+          "word": "que",
+          "start": 70.028,
+          "end": 70.108,
+          "score": 0.488
+        },
+        {
+          "word": "ela",
+          "start": 70.128,
+          "end": 70.188,
+          "score": 0.001
+        },
+        {
+          "word": "lua,",
+          "start": 70.208,
+          "end": 70.308,
+          "score": 0.637
+        },
+        {
+          "word": "que",
+          "start": 70.348,
+          "end": 70.428,
+          "score": 0.262
+        },
+        {
+          "word": "brilha",
+          "start": 70.488,
+          "end": 71.629,
+          "score": 0.431
+        },
+        {
+          "word": "no",
+          "start": 72.029,
+          "end": 72.129,
+          "score": 0.584
+        },
+        {
+          "word": "céu",
+          "start": 72.23,
+          "end": 72.33,
+          "score": 0.333
+        },
+        {
+          "word": "Se",
+          "start": 72.77,
+          "end": 72.85,
+          "score": 0.5
+        },
+        {
+          "word": "você",
+          "start": 72.97,
+          "end": 73.33,
+          "score": 0.436
+        },
+        {
+          "word": "me",
+          "start": 73.35,
+          "end": 73.49,
+          "score": 0.417
+        },
+        {
+          "word": "pedirá,",
+          "start": 73.51,
+          "end": 74.071,
+          "score": 0.461
+        },
+        {
+          "word": "vamos",
+          "start": 74.091,
+          "end": 74.331,
+          "score": 0.367
+        },
+        {
+          "word": "que",
+          "start": 74.371,
+          "end": 74.431,
+          "score": 0.0
+        },
+        {
+          "word": "eu",
+          "start": 74.451,
+          "end": 74.511,
+          "score": 0.25
+        },
+        {
+          "word": "sofratidar",
+          "start": 74.591,
+          "end": 75.672,
+          "score": 0.522
+        },
+        {
+          "word": "Sei",
+          "start": 75.692,
+          "end": 75.812,
+          "score": 0.389
+        },
+        {
+          "word": "bem",
+          "start": 75.892,
+          "end": 75.992,
+          "score": 0.333
+        },
+        {
+          "word": "que",
+          "start": 76.052,
+          "end": 76.112,
+          "score": 0.0
+        },
+        {
+          "word": "o",
+          "start": 76.132,
+          "end": 76.252,
+          "score": 0.833
+        },
+        {
+          "word": "brilho",
+          "start": 76.272,
+          "end": 76.593,
+          "score": 0.376
+        },
+        {
+          "word": "dela",
+          "start": 76.613,
+          "end": 77.093,
+          "score": 0.652
+        },
+        {
+          "word": "nem",
+          "start": 77.153,
+          "end": 77.253,
+          "score": 0.334
+        },
+        {
+          "word": "se",
+          "start": 77.273,
+          "end": 77.333,
+          "score": 0.25
+        },
+        {
+          "word": "compara",
+          "start": 77.353,
+          "end": 77.553,
+          "score": 0.167
+        },
+        {
+          "word": "o",
+          "start": 77.573,
+          "end": 77.613,
+          "score": 0.5
+        },
+        {
+          "word": "céu",
+          "start": 77.693,
+          "end": 77.954,
+          "score": 0.303
+        }
+      ]
+    },
+    {
+      "text": " Deixa eu te dar um beijo, eu vou mostrar o tempo que perdendo Que coisa louca, eu já sabia E quando eu me arrumava, algo me dizia Você vai encontrar Alguém que vai mudar A sua vida inteira da noite no dia Vem!",
+      "start": 78.562,
+      "end": 98.398,
+      "avg_logprob": -0.2120371663878704,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Deixa",
+          "start": 78.622,
+          "end": 78.822,
+          "score": 0.178
+        },
+        {
+          "word": "eu",
+          "start": 78.842,
+          "end": 78.902,
+          "score": 0.252
+        },
+        {
+          "word": "te",
+          "start": 79.002,
+          "end": 79.102,
+          "score": 0.376
+        },
+        {
+          "word": "dar",
+          "start": 79.162,
+          "end": 79.343,
+          "score": 0.643
+        },
+        {
+          "word": "um",
+          "start": 79.383,
+          "end": 79.483,
+          "score": 0.581
+        },
+        {
+          "word": "beijo,",
+          "start": 79.503,
+          "end": 79.783,
+          "score": 0.428
+        },
+        {
+          "word": "eu",
+          "start": 79.803,
+          "end": 79.843,
+          "score": 0.0
+        },
+        {
+          "word": "vou",
+          "start": 79.883,
+          "end": 80.003,
+          "score": 0.489
+        },
+        {
+          "word": "mostrar",
+          "start": 80.043,
+          "end": 80.363,
+          "score": 0.564
+        },
+        {
+          "word": "o",
+          "start": 80.383,
+          "end": 80.403,
+          "score": 0.0
+        },
+        {
+          "word": "tempo",
+          "start": 80.444,
+          "end": 80.564,
+          "score": 0.097
+        },
+        {
+          "word": "que",
+          "start": 80.604,
+          "end": 80.704,
+          "score": 0.222
+        },
+        {
+          "word": "perdendo",
+          "start": 80.824,
+          "end": 81.284,
+          "score": 0.443
+        },
+        {
+          "word": "Que",
+          "start": 81.905,
+          "end": 82.025,
+          "score": 0.771
+        },
+        {
+          "word": "coisa",
+          "start": 82.085,
+          "end": 82.405,
+          "score": 0.884
+        },
+        {
+          "word": "louca,",
+          "start": 82.485,
+          "end": 83.146,
+          "score": 0.951
+        },
+        {
+          "word": "eu",
+          "start": 83.446,
+          "end": 83.486,
+          "score": 0.004
+        },
+        {
+          "word": "já",
+          "start": 83.566,
+          "end": 83.666,
+          "score": 0.999
+        },
+        {
+          "word": "sabia",
+          "start": 83.746,
+          "end": 84.507,
+          "score": 0.974
+        },
+        {
+          "word": "E",
+          "start": 84.887,
+          "end": 84.947,
+          "score": 1.0
+        },
+        {
+          "word": "quando",
+          "start": 85.027,
+          "end": 85.227,
+          "score": 0.72
+        },
+        {
+          "word": "eu",
+          "start": 85.267,
+          "end": 85.307,
+          "score": 0.754
+        },
+        {
+          "word": "me",
+          "start": 85.367,
+          "end": 85.448,
+          "score": 0.91
+        },
+        {
+          "word": "arrumava,",
+          "start": 85.488,
+          "end": 86.028,
+          "score": 0.899
+        },
+        {
+          "word": "algo",
+          "start": 86.188,
+          "end": 86.408,
+          "score": 0.934
+        },
+        {
+          "word": "me",
+          "start": 86.468,
+          "end": 86.608,
+          "score": 0.666
+        },
+        {
+          "word": "dizia",
+          "start": 86.649,
+          "end": 87.589,
+          "score": 0.961
+        },
+        {
+          "word": "Você",
+          "start": 87.809,
+          "end": 88.09,
+          "score": 0.97
+        },
+        {
+          "word": "vai",
+          "start": 88.13,
+          "end": 88.49,
+          "score": 0.972
+        },
+        {
+          "word": "encontrar",
+          "start": 88.51,
+          "end": 88.99,
+          "score": 0.546
+        },
+        {
+          "word": "Alguém",
+          "start": 89.291,
+          "end": 89.531,
+          "score": 0.966
+        },
+        {
+          "word": "que",
+          "start": 89.571,
+          "end": 89.651,
+          "score": 0.692
+        },
+        {
+          "word": "vai",
+          "start": 89.771,
+          "end": 89.991,
+          "score": 0.622
+        },
+        {
+          "word": "mudar",
+          "start": 90.091,
+          "end": 90.472,
+          "score": 0.695
+        },
+        {
+          "word": "A",
+          "start": 90.712,
+          "end": 90.772,
+          "score": 0.823
+        },
+        {
+          "word": "sua",
+          "start": 90.872,
+          "end": 91.132,
+          "score": 0.926
+        },
+        {
+          "word": "vida",
+          "start": 91.212,
+          "end": 91.512,
+          "score": 0.722
+        },
+        {
+          "word": "inteira",
+          "start": 91.532,
+          "end": 92.133,
+          "score": 0.67
+        },
+        {
+          "word": "da",
+          "start": 92.173,
+          "end": 92.273,
+          "score": 0.896
+        },
+        {
+          "word": "noite",
+          "start": 92.293,
+          "end": 92.413,
+          "score": 0.132
+        },
+        {
+          "word": "no",
+          "start": 92.433,
+          "end": 92.473,
+          "score": 0.002
+        },
+        {
+          "word": "dia",
+          "start": 92.753,
+          "end": 93.134,
+          "score": 0.313
+        },
+        {
+          "word": "Vem!",
+          "start": 97.818,
+          "end": 98.398,
+          "score": 0.841
+        }
+      ]
+    },
+    {
+      "text": " Te filmando, eu tava quieto no meu canto Cabelo bem cortado, perfume exalando Daquele jeito que eu sei que você gosta Mas eu te dei um papo e você nem deu resposta, não Tudo bem, um dia vai e outro vem Você deve estar pensando em outro alguém Mas se ele te merecesse, não estaria aqui Não, não, não",
+      "start": 98.882,
+      "end": 121.918,
+      "avg_logprob": -0.1481953731066064,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Te",
+          "start": 98.902,
+          "end": 98.982,
+          "score": 0.908
+        },
+        {
+          "word": "filmando,",
+          "start": 99.082,
+          "end": 99.462,
+          "score": 0.576
+        },
+        {
+          "word": "eu",
+          "start": 99.522,
+          "end": 99.603,
+          "score": 0.82
+        },
+        {
+          "word": "tava",
+          "start": 99.643,
+          "end": 99.923,
+          "score": 0.819
+        },
+        {
+          "word": "quieto",
+          "start": 100.003,
+          "end": 100.323,
+          "score": 0.632
+        },
+        {
+          "word": "no",
+          "start": 100.383,
+          "end": 100.503,
+          "score": 0.754
+        },
+        {
+          "word": "meu",
+          "start": 100.543,
+          "end": 100.663,
+          "score": 1.0
+        },
+        {
+          "word": "canto",
+          "start": 100.743,
+          "end": 101.184,
+          "score": 0.784
+        },
+        {
+          "word": "Cabelo",
+          "start": 101.264,
+          "end": 101.684,
+          "score": 0.854
+        },
+        {
+          "word": "bem",
+          "start": 101.744,
+          "end": 101.884,
+          "score": 0.739
+        },
+        {
+          "word": "cortado,",
+          "start": 101.964,
+          "end": 102.605,
+          "score": 0.765
+        },
+        {
+          "word": "perfume",
+          "start": 102.725,
+          "end": 103.165,
+          "score": 0.74
+        },
+        {
+          "word": "exalando",
+          "start": 103.325,
+          "end": 104.166,
+          "score": 0.852
+        },
+        {
+          "word": "Daquele",
+          "start": 104.586,
+          "end": 105.026,
+          "score": 0.901
+        },
+        {
+          "word": "jeito",
+          "start": 105.126,
+          "end": 105.427,
+          "score": 0.749
+        },
+        {
+          "word": "que",
+          "start": 105.487,
+          "end": 105.627,
+          "score": 0.557
+        },
+        {
+          "word": "eu",
+          "start": 105.687,
+          "end": 105.787,
+          "score": 0.609
+        },
+        {
+          "word": "sei",
+          "start": 105.867,
+          "end": 106.027,
+          "score": 0.884
+        },
+        {
+          "word": "que",
+          "start": 106.047,
+          "end": 106.187,
+          "score": 0.5
+        },
+        {
+          "word": "você",
+          "start": 106.227,
+          "end": 106.507,
+          "score": 0.959
+        },
+        {
+          "word": "gosta",
+          "start": 106.587,
+          "end": 106.988,
+          "score": 0.577
+        },
+        {
+          "word": "Mas",
+          "start": 107.168,
+          "end": 107.328,
+          "score": 0.827
+        },
+        {
+          "word": "eu",
+          "start": 107.388,
+          "end": 107.448,
+          "score": 0.99
+        },
+        {
+          "word": "te",
+          "start": 107.508,
+          "end": 107.588,
+          "score": 0.986
+        },
+        {
+          "word": "dei",
+          "start": 107.708,
+          "end": 107.908,
+          "score": 0.437
+        },
+        {
+          "word": "um",
+          "start": 107.928,
+          "end": 107.968,
+          "score": 0.307
+        },
+        {
+          "word": "papo",
+          "start": 108.108,
+          "end": 108.529,
+          "score": 0.839
+        },
+        {
+          "word": "e",
+          "start": 108.549,
+          "end": 108.569,
+          "score": 0.499
+        },
+        {
+          "word": "você",
+          "start": 108.629,
+          "end": 108.929,
+          "score": 0.976
+        },
+        {
+          "word": "nem",
+          "start": 108.969,
+          "end": 109.149,
+          "score": 0.535
+        },
+        {
+          "word": "deu",
+          "start": 109.169,
+          "end": 109.329,
+          "score": 0.783
+        },
+        {
+          "word": "resposta,",
+          "start": 109.369,
+          "end": 110.03,
+          "score": 0.91
+        },
+        {
+          "word": "não",
+          "start": 110.11,
+          "end": 110.23,
+          "score": 0.832
+        },
+        {
+          "word": "Tudo",
+          "start": 110.25,
+          "end": 110.51,
+          "score": 0.372
+        },
+        {
+          "word": "bem,",
+          "start": 111.391,
+          "end": 111.551,
+          "score": 0.2
+        },
+        {
+          "word": "um",
+          "start": 111.751,
+          "end": 111.791,
+          "score": 0.0
+        },
+        {
+          "word": "dia",
+          "start": 112.111,
+          "end": 113.512,
+          "score": 0.328
+        },
+        {
+          "word": "vai",
+          "start": 113.552,
+          "end": 113.692,
+          "score": 0.418
+        },
+        {
+          "word": "e",
+          "start": 113.712,
+          "end": 113.732,
+          "score": 0.005
+        },
+        {
+          "word": "outro",
+          "start": 113.752,
+          "end": 113.872,
+          "score": 0.128
+        },
+        {
+          "word": "vem",
+          "start": 113.912,
+          "end": 113.972,
+          "score": 0.02
+        },
+        {
+          "word": "Você",
+          "start": 113.992,
+          "end": 114.073,
+          "score": 0.0
+        },
+        {
+          "word": "deve",
+          "start": 114.093,
+          "end": 114.173,
+          "score": 0.024
+        },
+        {
+          "word": "estar",
+          "start": 114.193,
+          "end": 114.473,
+          "score": 0.877
+        },
+        {
+          "word": "pensando",
+          "start": 114.593,
+          "end": 115.233,
+          "score": 0.853
+        },
+        {
+          "word": "em",
+          "start": 115.253,
+          "end": 115.353,
+          "score": 0.75
+        },
+        {
+          "word": "outro",
+          "start": 115.413,
+          "end": 115.594,
+          "score": 0.838
+        },
+        {
+          "word": "alguém",
+          "start": 115.634,
+          "end": 116.134,
+          "score": 0.702
+        },
+        {
+          "word": "Mas",
+          "start": 116.474,
+          "end": 116.634,
+          "score": 0.999
+        },
+        {
+          "word": "se",
+          "start": 116.654,
+          "end": 116.694,
+          "score": 0.008
+        },
+        {
+          "word": "ele",
+          "start": 116.754,
+          "end": 116.895,
+          "score": 0.995
+        },
+        {
+          "word": "te",
+          "start": 116.915,
+          "end": 116.955,
+          "score": 0.0
+        },
+        {
+          "word": "merecesse,",
+          "start": 116.975,
+          "end": 117.195,
+          "score": 0.127
+        },
+        {
+          "word": "não",
+          "start": 117.215,
+          "end": 117.355,
+          "score": 0.371
+        },
+        {
+          "word": "estaria",
+          "start": 117.415,
+          "end": 117.915,
+          "score": 0.678
+        },
+        {
+          "word": "aqui",
+          "start": 117.935,
+          "end": 118.015,
+          "score": 0.0
+        },
+        {
+          "word": "Não,",
+          "start": 118.115,
+          "end": 118.275,
+          "score": 0.813
+        },
+        {
+          "word": "não,",
+          "start": 118.295,
+          "end": 118.376,
+          "score": 0.48
+        },
+        {
+          "word": "não",
+          "start": 118.396,
+          "end": 118.456,
+          "score": 0.333
+        }
+      ]
+    },
+    {
+      "text": " Ou talvez você não queira se envolver, Maguada tá com medo de sofrer, Se me ter uma chance não vai se arrepender. Não, não, não, não, não. Quero ver! Tá vendo aquela lua que brilhará no céu?",
+      "start": 122.338,
+      "end": 136.958,
+      "avg_logprob": -0.25505694209552204,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Ou",
+          "start": 122.398,
+          "end": 122.498,
+          "score": 0.826
+        },
+        {
+          "word": "talvez",
+          "start": 122.558,
+          "end": 122.919,
+          "score": 0.82
+        },
+        {
+          "word": "você",
+          "start": 122.939,
+          "end": 123.199,
+          "score": 0.951
+        },
+        {
+          "word": "não",
+          "start": 123.239,
+          "end": 123.359,
+          "score": 0.832
+        },
+        {
+          "word": "queira",
+          "start": 123.46,
+          "end": 123.86,
+          "score": 0.914
+        },
+        {
+          "word": "se",
+          "start": 123.98,
+          "end": 124.16,
+          "score": 0.876
+        },
+        {
+          "word": "envolver,",
+          "start": 124.321,
+          "end": 125.002,
+          "score": 0.963
+        },
+        {
+          "word": "Maguada",
+          "start": 125.282,
+          "end": 125.923,
+          "score": 0.803
+        },
+        {
+          "word": "tá",
+          "start": 125.983,
+          "end": 126.103,
+          "score": 0.698
+        },
+        {
+          "word": "com",
+          "start": 126.143,
+          "end": 126.323,
+          "score": 0.833
+        },
+        {
+          "word": "medo",
+          "start": 126.384,
+          "end": 126.844,
+          "score": 0.776
+        },
+        {
+          "word": "de",
+          "start": 126.884,
+          "end": 127.004,
+          "score": 0.354
+        },
+        {
+          "word": "sofrer,",
+          "start": 127.245,
+          "end": 127.826,
+          "score": 0.973
+        },
+        {
+          "word": "Se",
+          "start": 128.206,
+          "end": 128.286,
+          "score": 0.998
+        },
+        {
+          "word": "me",
+          "start": 128.346,
+          "end": 128.446,
+          "score": 0.908
+        },
+        {
+          "word": "ter",
+          "start": 128.526,
+          "end": 128.667,
+          "score": 0.511
+        },
+        {
+          "word": "uma",
+          "start": 128.707,
+          "end": 128.827,
+          "score": 0.674
+        },
+        {
+          "word": "chance",
+          "start": 128.907,
+          "end": 129.207,
+          "score": 0.897
+        },
+        {
+          "word": "não",
+          "start": 129.308,
+          "end": 129.588,
+          "score": 0.655
+        },
+        {
+          "word": "vai",
+          "start": 129.628,
+          "end": 129.788,
+          "score": 0.958
+        },
+        {
+          "word": "se",
+          "start": 129.928,
+          "end": 130.008,
+          "score": 0.775
+        },
+        {
+          "word": "arrepender.",
+          "start": 130.109,
+          "end": 130.349,
+          "score": 0.129
+        },
+        {
+          "word": "Não,",
+          "start": 130.409,
+          "end": 130.489,
+          "score": 0.11
+        },
+        {
+          "word": "não,",
+          "start": 130.509,
+          "end": 130.589,
+          "score": 0.0
+        },
+        {
+          "word": "não,",
+          "start": 130.629,
+          "end": 130.729,
+          "score": 0.362
+        },
+        {
+          "word": "não,",
+          "start": 130.77,
+          "end": 130.89,
+          "score": 0.25
+        },
+        {
+          "word": "não.",
+          "start": 130.99,
+          "end": 131.07,
+          "score": 0.069
+        },
+        {
+          "word": "Quero",
+          "start": 131.11,
+          "end": 131.23,
+          "score": 0.299
+        },
+        {
+          "word": "ver!",
+          "start": 131.671,
+          "end": 131.771,
+          "score": 0.264
+        },
+        {
+          "word": "Tá",
+          "start": 132.212,
+          "end": 132.592,
+          "score": 0.842
+        },
+        {
+          "word": "vendo",
+          "start": 132.612,
+          "end": 133.093,
+          "score": 0.437
+        },
+        {
+          "word": "aquela",
+          "start": 133.113,
+          "end": 133.233,
+          "score": 0.002
+        },
+        {
+          "word": "lua",
+          "start": 133.253,
+          "end": 133.313,
+          "score": 0.001
+        },
+        {
+          "word": "que",
+          "start": 133.333,
+          "end": 133.393,
+          "score": 0.003
+        },
+        {
+          "word": "brilhará",
+          "start": 133.413,
+          "end": 133.573,
+          "score": 0.0
+        },
+        {
+          "word": "no",
+          "start": 133.593,
+          "end": 133.633,
+          "score": 0.0
+        },
+        {
+          "word": "céu?",
+          "start": 133.653,
+          "end": 136.958,
+          "score": 0.498
+        }
+      ]
+    },
+    {
+      "text": " Se você me pedir, eu vou buscar sua pratida Se bem que o brilho dela nem se compara o seu Deixa eu te dar um beijo, eu vou mostrar o tempo que perdeu Coisa louca, eu já sabia Enquanto eu me arrumava, algo me dizia Você vai encontrar, alguém que vai mudar A sua vida inteira da noite brudia Da vez não quero a lua que brilha lá no seu Se você me pedir, eu vou buscar sua pratida Se bem que o brilho dela nem se compara o seu Deixa eu te dar um beijo",
+      "start": 137.154,
+      "end": 167.12,
+      "avg_logprob": -0.16342965847863924,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Se",
+          "start": 137.154,
+          "end": 137.294,
+          "score": 0.65
+        },
+        {
+          "word": "você",
+          "start": 137.354,
+          "end": 138.194,
+          "score": 0.572
+        },
+        {
+          "word": "me",
+          "start": 138.214,
+          "end": 138.254,
+          "score": 0.0
+        },
+        {
+          "word": "pedir,",
+          "start": 138.294,
+          "end": 138.434,
+          "score": 0.095
+        },
+        {
+          "word": "eu",
+          "start": 138.454,
+          "end": 138.554,
+          "score": 0.366
+        },
+        {
+          "word": "vou",
+          "start": 138.614,
+          "end": 138.694,
+          "score": 0.59
+        },
+        {
+          "word": "buscar",
+          "start": 138.714,
+          "end": 138.894,
+          "score": 0.207
+        },
+        {
+          "word": "sua",
+          "start": 138.974,
+          "end": 139.114,
+          "score": 0.433
+        },
+        {
+          "word": "pratida",
+          "start": 139.174,
+          "end": 139.755,
+          "score": 0.613
+        },
+        {
+          "word": "Se",
+          "start": 140.095,
+          "end": 140.195,
+          "score": 0.93
+        },
+        {
+          "word": "bem",
+          "start": 140.255,
+          "end": 140.395,
+          "score": 0.642
+        },
+        {
+          "word": "que",
+          "start": 140.415,
+          "end": 140.495,
+          "score": 0.72
+        },
+        {
+          "word": "o",
+          "start": 140.535,
+          "end": 140.575,
+          "score": 0.608
+        },
+        {
+          "word": "brilho",
+          "start": 140.635,
+          "end": 140.915,
+          "score": 0.697
+        },
+        {
+          "word": "dela",
+          "start": 140.995,
+          "end": 141.355,
+          "score": 0.836
+        },
+        {
+          "word": "nem",
+          "start": 141.535,
+          "end": 141.655,
+          "score": 0.545
+        },
+        {
+          "word": "se",
+          "start": 141.715,
+          "end": 141.815,
+          "score": 0.632
+        },
+        {
+          "word": "compara",
+          "start": 141.875,
+          "end": 142.275,
+          "score": 0.802
+        },
+        {
+          "word": "o",
+          "start": 142.315,
+          "end": 142.355,
+          "score": 0.829
+        },
+        {
+          "word": "seu",
+          "start": 142.375,
+          "end": 142.695,
+          "score": 0.728
+        },
+        {
+          "word": "Deixa",
+          "start": 143.015,
+          "end": 143.255,
+          "score": 0.897
+        },
+        {
+          "word": "eu",
+          "start": 143.275,
+          "end": 143.315,
+          "score": 0.003
+        },
+        {
+          "word": "te",
+          "start": 143.355,
+          "end": 143.475,
+          "score": 0.628
+        },
+        {
+          "word": "dar",
+          "start": 143.535,
+          "end": 143.715,
+          "score": 0.892
+        },
+        {
+          "word": "um",
+          "start": 143.775,
+          "end": 143.855,
+          "score": 0.821
+        },
+        {
+          "word": "beijo,",
+          "start": 143.915,
+          "end": 144.195,
+          "score": 0.602
+        },
+        {
+          "word": "eu",
+          "start": 144.215,
+          "end": 144.255,
+          "score": 0.002
+        },
+        {
+          "word": "vou",
+          "start": 144.275,
+          "end": 144.415,
+          "score": 0.487
+        },
+        {
+          "word": "mostrar",
+          "start": 144.455,
+          "end": 144.856,
+          "score": 0.791
+        },
+        {
+          "word": "o",
+          "start": 144.896,
+          "end": 144.956,
+          "score": 0.398
+        },
+        {
+          "word": "tempo",
+          "start": 145.016,
+          "end": 145.296,
+          "score": 0.896
+        },
+        {
+          "word": "que",
+          "start": 145.376,
+          "end": 145.516,
+          "score": 0.756
+        },
+        {
+          "word": "perdeu",
+          "start": 145.576,
+          "end": 146.016,
+          "score": 0.806
+        },
+        {
+          "word": "Coisa",
+          "start": 146.476,
+          "end": 146.796,
+          "score": 0.916
+        },
+        {
+          "word": "louca,",
+          "start": 146.856,
+          "end": 147.536,
+          "score": 0.845
+        },
+        {
+          "word": "eu",
+          "start": 147.796,
+          "end": 147.876,
+          "score": 0.467
+        },
+        {
+          "word": "já",
+          "start": 147.916,
+          "end": 148.036,
+          "score": 0.866
+        },
+        {
+          "word": "sabia",
+          "start": 148.096,
+          "end": 148.896,
+          "score": 0.931
+        },
+        {
+          "word": "Enquanto",
+          "start": 149.256,
+          "end": 149.576,
+          "score": 0.943
+        },
+        {
+          "word": "eu",
+          "start": 149.616,
+          "end": 149.697,
+          "score": 0.616
+        },
+        {
+          "word": "me",
+          "start": 149.737,
+          "end": 149.817,
+          "score": 0.674
+        },
+        {
+          "word": "arrumava,",
+          "start": 149.857,
+          "end": 150.417,
+          "score": 0.945
+        },
+        {
+          "word": "algo",
+          "start": 150.577,
+          "end": 150.797,
+          "score": 0.956
+        },
+        {
+          "word": "me",
+          "start": 150.857,
+          "end": 150.997,
+          "score": 0.559
+        },
+        {
+          "word": "dizia",
+          "start": 151.037,
+          "end": 151.917,
+          "score": 0.92
+        },
+        {
+          "word": "Você",
+          "start": 152.177,
+          "end": 152.457,
+          "score": 0.942
+        },
+        {
+          "word": "vai",
+          "start": 152.497,
+          "end": 152.717,
+          "score": 0.814
+        },
+        {
+          "word": "encontrar,",
+          "start": 152.817,
+          "end": 153.417,
+          "score": 0.746
+        },
+        {
+          "word": "alguém",
+          "start": 153.677,
+          "end": 153.917,
+          "score": 0.896
+        },
+        {
+          "word": "que",
+          "start": 153.957,
+          "end": 154.137,
+          "score": 0.7
+        },
+        {
+          "word": "vai",
+          "start": 154.177,
+          "end": 154.337,
+          "score": 0.621
+        },
+        {
+          "word": "mudar",
+          "start": 154.397,
+          "end": 154.898,
+          "score": 0.803
+        },
+        {
+          "word": "A",
+          "start": 155.118,
+          "end": 155.178,
+          "score": 0.907
+        },
+        {
+          "word": "sua",
+          "start": 155.278,
+          "end": 155.538,
+          "score": 0.812
+        },
+        {
+          "word": "vida",
+          "start": 155.618,
+          "end": 155.898,
+          "score": 0.608
+        },
+        {
+          "word": "inteira",
+          "start": 155.918,
+          "end": 156.278,
+          "score": 0.717
+        },
+        {
+          "word": "da",
+          "start": 156.378,
+          "end": 156.558,
+          "score": 0.749
+        },
+        {
+          "word": "noite",
+          "start": 156.578,
+          "end": 156.838,
+          "score": 0.703
+        },
+        {
+          "word": "brudia",
+          "start": 156.898,
+          "end": 157.558,
+          "score": 0.683
+        },
+        {
+          "word": "Da",
+          "start": 157.618,
+          "end": 157.738,
+          "score": 0.818
+        },
+        {
+          "word": "vez",
+          "start": 157.798,
+          "end": 157.938,
+          "score": 0.518
+        },
+        {
+          "word": "não",
+          "start": 157.978,
+          "end": 158.058,
+          "score": 0.182
+        },
+        {
+          "word": "quero",
+          "start": 158.138,
+          "end": 158.238,
+          "score": 0.074
+        },
+        {
+          "word": "a",
+          "start": 158.258,
+          "end": 158.278,
+          "score": 0.001
+        },
+        {
+          "word": "lua",
+          "start": 158.338,
+          "end": 158.458,
+          "score": 0.387
+        },
+        {
+          "word": "que",
+          "start": 158.538,
+          "end": 159.238,
+          "score": 0.542
+        },
+        {
+          "word": "brilha",
+          "start": 159.278,
+          "end": 159.679,
+          "score": 0.585
+        },
+        {
+          "word": "lá",
+          "start": 159.699,
+          "end": 159.799,
+          "score": 0.369
+        },
+        {
+          "word": "no",
+          "start": 159.819,
+          "end": 159.919,
+          "score": 0.646
+        },
+        {
+          "word": "seu",
+          "start": 160.039,
+          "end": 160.219,
+          "score": 0.598
+        },
+        {
+          "word": "Se",
+          "start": 160.239,
+          "end": 160.279,
+          "score": 0.0
+        },
+        {
+          "word": "você",
+          "start": 160.299,
+          "end": 160.919,
+          "score": 0.948
+        },
+        {
+          "word": "me",
+          "start": 161.099,
+          "end": 161.199,
+          "score": 0.702
+        },
+        {
+          "word": "pedir,",
+          "start": 161.279,
+          "end": 161.639,
+          "score": 0.618
+        },
+        {
+          "word": "eu",
+          "start": 161.739,
+          "end": 162.019,
+          "score": 0.716
+        },
+        {
+          "word": "vou",
+          "start": 162.039,
+          "end": 162.359,
+          "score": 0.591
+        },
+        {
+          "word": "buscar",
+          "start": 162.379,
+          "end": 162.699,
+          "score": 0.556
+        },
+        {
+          "word": "sua",
+          "start": 162.739,
+          "end": 163.039,
+          "score": 0.708
+        },
+        {
+          "word": "pratida",
+          "start": 163.139,
+          "end": 163.599,
+          "score": 0.699
+        },
+        {
+          "word": "Se",
+          "start": 163.619,
+          "end": 163.659,
+          "score": 0.002
+        },
+        {
+          "word": "bem",
+          "start": 163.699,
+          "end": 163.819,
+          "score": 0.571
+        },
+        {
+          "word": "que",
+          "start": 163.879,
+          "end": 163.999,
+          "score": 0.299
+        },
+        {
+          "word": "o",
+          "start": 164.019,
+          "end": 164.039,
+          "score": 0.005
+        },
+        {
+          "word": "brilho",
+          "start": 164.079,
+          "end": 164.339,
+          "score": 0.243
+        },
+        {
+          "word": "dela",
+          "start": 164.419,
+          "end": 164.9,
+          "score": 0.78
+        },
+        {
+          "word": "nem",
+          "start": 164.94,
+          "end": 165.08,
+          "score": 0.626
+        },
+        {
+          "word": "se",
+          "start": 165.14,
+          "end": 165.24,
+          "score": 0.652
+        },
+        {
+          "word": "compara",
+          "start": 165.3,
+          "end": 165.72,
+          "score": 0.795
+        },
+        {
+          "word": "o",
+          "start": 165.74,
+          "end": 165.78,
+          "score": 0.864
+        },
+        {
+          "word": "seu",
+          "start": 165.88,
+          "end": 166.12,
+          "score": 0.781
+        },
+        {
+          "word": "Deixa",
+          "start": 166.38,
+          "end": 166.64,
+          "score": 0.9
+        },
+        {
+          "word": "eu",
+          "start": 166.66,
+          "end": 166.7,
+          "score": 0.221
+        },
+        {
+          "word": "te",
+          "start": 166.76,
+          "end": 166.82,
+          "score": 0.669
+        },
+        {
+          "word": "dar",
+          "start": 166.84,
+          "end": 166.92,
+          "score": 0.12
+        },
+        {
+          "word": "um",
+          "start": 166.94,
+          "end": 166.98,
+          "score": 0.001
+        },
+        {
+          "word": "beijo",
+          "start": 167.0,
+          "end": 167.1,
+          "score": 0.002
+        }
+      ]
+    },
+    {
+      "text": " Um beijo, vou mostrar o tempo que perdeu Que coisa louca, eu já sabia Encontrei o meu arrumava, algo me dizia Você vai encontrar Alguém que vai mudar A sua vida inteira da noite pro dia Te filmando, eu tava quieto no meu canso",
+      "start": 167.12,
+      "end": 190.494,
+      "avg_logprob": -0.23012878544746884,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Um",
+          "start": 167.22,
+          "end": 167.28,
+          "score": 0.25
+        },
+        {
+          "word": "beijo,",
+          "start": 167.32,
+          "end": 167.66,
+          "score": 0.388
+        },
+        {
+          "word": "vou",
+          "start": 167.7,
+          "end": 167.8,
+          "score": 0.644
+        },
+        {
+          "word": "mostrar",
+          "start": 167.84,
+          "end": 168.261,
+          "score": 0.946
+        },
+        {
+          "word": "o",
+          "start": 168.301,
+          "end": 168.341,
+          "score": 0.727
+        },
+        {
+          "word": "tempo",
+          "start": 168.421,
+          "end": 168.701,
+          "score": 0.848
+        },
+        {
+          "word": "que",
+          "start": 168.781,
+          "end": 168.901,
+          "score": 0.935
+        },
+        {
+          "word": "perdeu",
+          "start": 168.961,
+          "end": 169.401,
+          "score": 0.702
+        },
+        {
+          "word": "Que",
+          "start": 169.682,
+          "end": 169.782,
+          "score": 0.222
+        },
+        {
+          "word": "coisa",
+          "start": 169.862,
+          "end": 170.182,
+          "score": 0.823
+        },
+        {
+          "word": "louca,",
+          "start": 170.242,
+          "end": 170.922,
+          "score": 0.938
+        },
+        {
+          "word": "eu",
+          "start": 171.202,
+          "end": 171.303,
+          "score": 0.802
+        },
+        {
+          "word": "já",
+          "start": 171.343,
+          "end": 171.463,
+          "score": 0.875
+        },
+        {
+          "word": "sabia",
+          "start": 171.543,
+          "end": 172.283,
+          "score": 0.964
+        },
+        {
+          "word": "Encontrei",
+          "start": 172.703,
+          "end": 173.104,
+          "score": 0.735
+        },
+        {
+          "word": "o",
+          "start": 173.124,
+          "end": 173.144,
+          "score": 0.001
+        },
+        {
+          "word": "meu",
+          "start": 173.184,
+          "end": 173.244,
+          "score": 0.608
+        },
+        {
+          "word": "arrumava,",
+          "start": 173.264,
+          "end": 173.824,
+          "score": 0.958
+        },
+        {
+          "word": "algo",
+          "start": 173.984,
+          "end": 174.084,
+          "score": 0.25
+        },
+        {
+          "word": "me",
+          "start": 174.204,
+          "end": 174.364,
+          "score": 0.916
+        },
+        {
+          "word": "dizia",
+          "start": 174.424,
+          "end": 175.625,
+          "score": 0.943
+        },
+        {
+          "word": "Você",
+          "start": 175.645,
+          "end": 175.925,
+          "score": 0.406
+        },
+        {
+          "word": "vai",
+          "start": 175.945,
+          "end": 176.165,
+          "score": 0.296
+        },
+        {
+          "word": "encontrar",
+          "start": 176.205,
+          "end": 177.186,
+          "score": 0.394
+        },
+        {
+          "word": "Alguém",
+          "start": 177.206,
+          "end": 177.346,
+          "score": 0.088
+        },
+        {
+          "word": "que",
+          "start": 177.406,
+          "end": 177.566,
+          "score": 0.431
+        },
+        {
+          "word": "vai",
+          "start": 177.606,
+          "end": 177.846,
+          "score": 0.722
+        },
+        {
+          "word": "mudar",
+          "start": 177.866,
+          "end": 178.547,
+          "score": 0.36
+        },
+        {
+          "word": "A",
+          "start": 178.567,
+          "end": 178.587,
+          "score": 0.007
+        },
+        {
+          "word": "sua",
+          "start": 178.707,
+          "end": 178.987,
+          "score": 0.999
+        },
+        {
+          "word": "vida",
+          "start": 179.067,
+          "end": 179.287,
+          "score": 0.491
+        },
+        {
+          "word": "inteira",
+          "start": 179.307,
+          "end": 179.728,
+          "score": 0.795
+        },
+        {
+          "word": "da",
+          "start": 179.808,
+          "end": 179.968,
+          "score": 0.86
+        },
+        {
+          "word": "noite",
+          "start": 179.988,
+          "end": 180.268,
+          "score": 0.514
+        },
+        {
+          "word": "pro",
+          "start": 180.328,
+          "end": 180.448,
+          "score": 0.765
+        },
+        {
+          "word": "dia",
+          "start": 180.528,
+          "end": 180.948,
+          "score": 0.828
+        },
+        {
+          "word": "Te",
+          "start": 186.752,
+          "end": 186.852,
+          "score": 0.705
+        },
+        {
+          "word": "filmando,",
+          "start": 186.952,
+          "end": 187.352,
+          "score": 0.616
+        },
+        {
+          "word": "eu",
+          "start": 187.392,
+          "end": 187.472,
+          "score": 0.5
+        },
+        {
+          "word": "tava",
+          "start": 187.552,
+          "end": 187.852,
+          "score": 0.906
+        },
+        {
+          "word": "quieto",
+          "start": 187.932,
+          "end": 188.253,
+          "score": 0.755
+        },
+        {
+          "word": "no",
+          "start": 188.273,
+          "end": 188.313,
+          "score": 0.002
+        },
+        {
+          "word": "meu",
+          "start": 188.353,
+          "end": 188.493,
+          "score": 0.519
+        },
+        {
+          "word": "canso",
+          "start": 188.533,
+          "end": 188.973,
+          "score": 0.832
+        }
+      ]
+    }
+  ],
+  "blocos": [
+    {
+      "inicio": 11.106,
+      "fim": 15.47,
+      "texto": "Estive filmando, eu tava quieto no meu canto, cabelo bem cortado e filme"
+    },
+    {
+      "inicio": 15.59,
+      "fim": 20.694,
+      "texto": "exalando Daquele jeito que eu sei que você gosta, mas eu te dei um papo"
+    },
+    {
+      "inicio": 20.714,
+      "fim": 26.359,
+      "texto": "e você nem deu resposta Tudo bem, um dia vario, outro vem Você deve"
+    },
+    {
+      "inicio": 26.399,
+      "fim": 31.143,
+      "texto": "estar pensando em outro, alguém Mas se ele te merecesse, não estaria"
+    },
+    {
+      "inicio": 31.203,
+      "fim": 33.185,
+      "texto": "aqui Não, não, não"
+    },
+    {
+      "inicio": 34.558,
+      "fim": 40.479,
+      "texto": "Ou talvez você não queira se envolver Magulada tá com medo de sofrer Se"
+    },
+    {
+      "inicio": 40.539,
+      "fim": 46.36,
+      "texto": "me der uma chance, não vai se arrepender Não, não, não, não, não"
+    },
+    {
+      "inicio": 46.42,
+      "fim": 51.321,
+      "texto": "Dá vendo aquela lua que brilha lá no céu Se você me pediu, vou buscar só"
+    },
+    {
+      "inicio": 51.361,
+      "fim": 55.922,
+      "texto": "pra te dar Se bem que o brilho dela nem se comparam seu Deixa eu te dar"
+    },
+    {
+      "inicio": 55.982,
+      "fim": 61.083,
+      "texto": "um beijo, vou mostrar o tempo que perdeu Que coisa louca, eu já sabia"
+    },
+    {
+      "inicio": 61.463,
+      "fim": 63.884,
+      "texto": "Enquanto eu me arrumava, algo me dizia"
+    },
+    {
+      "inicio": 64.464,
+      "fim": 69.227,
+      "texto": "Você vai encontrar Alguém que vai mudar A sua vida inteira da noite pro"
+    },
+    {
+      "inicio": 69.327,
+      "fim": 74.331,
+      "texto": "dia Seu brilho que ela lua, que brilha no céu Se você me pedirá, vamos"
+    },
+    {
+      "inicio": 74.371,
+      "fim": 77.954,
+      "texto": "que eu sofratidar Sei bem que o brilho dela nem se compara o céu"
+    },
+    {
+      "inicio": 78.622,
+      "fim": 82.405,
+      "texto": "Deixa eu te dar um beijo, eu vou mostrar o tempo que perdendo Que coisa"
+    },
+    {
+      "inicio": 82.485,
+      "fim": 88.09,
+      "texto": "louca, eu já sabia E quando eu me arrumava, algo me dizia Você"
+    },
+    {
+      "inicio": 88.13,
+      "fim": 93.134,
+      "texto": "vai encontrar Alguém que vai mudar A sua vida inteira da noite no dia"
+    },
+    {
+      "inicio": 97.818,
+      "fim": 98.398,
+      "texto": "Vem!"
+    },
+    {
+      "inicio": 98.902,
+      "fim": 103.165,
+      "texto": "Te filmando, eu tava quieto no meu canto Cabelo bem cortado, perfume"
+    },
+    {
+      "inicio": 103.325,
+      "fim": 108.569,
+      "texto": "exalando Daquele jeito que eu sei que você gosta Mas eu te dei um papo e"
+    },
+    {
+      "inicio": 108.629,
+      "fim": 110.51,
+      "texto": "você nem deu resposta, não Tudo"
+    },
+    {
+      "inicio": 111.391,
+      "fim": 116.634,
+      "texto": "bem, um dia vai e outro vem Você deve estar pensando em outro alguém Mas"
+    },
+    {
+      "inicio": 116.654,
+      "fim": 118.456,
+      "texto": "se ele te merecesse, não estaria aqui Não, não, não"
+    },
+    {
+      "inicio": 122.398,
+      "fim": 128.286,
+      "texto": "Ou talvez você não queira se envolver, Maguada tá com medo de sofrer, Se"
+    },
+    {
+      "inicio": 128.346,
+      "fim": 131.23,
+      "texto": "me ter uma chance não vai se arrepender. Não, não, não, não, não. Quero"
+    },
+    {
+      "inicio": 131.671,
+      "fim": 136.958,
+      "texto": "ver! Tá vendo aquela lua que brilhará no céu?"
+    },
+    {
+      "inicio": 137.154,
+      "fim": 141.655,
+      "texto": "Se você me pedir, eu vou buscar sua pratida Se bem que o brilho dela nem"
+    },
+    {
+      "inicio": 141.715,
+      "fim": 145.516,
+      "texto": "se compara o seu Deixa eu te dar um beijo, eu vou mostrar o tempo que"
+    },
+    {
+      "inicio": 145.576,
+      "fim": 150.997,
+      "texto": "perdeu Coisa louca, eu já sabia Enquanto eu me arrumava, algo me"
+    },
+    {
+      "inicio": 151.037,
+      "fim": 156.558,
+      "texto": "dizia Você vai encontrar, alguém que vai mudar A sua vida inteira da"
+    },
+    {
+      "inicio": 156.578,
+      "fim": 161.199,
+      "texto": "noite brudia Da vez não quero a lua que brilha lá no seu Se você me"
+    },
+    {
+      "inicio": 161.279,
+      "fim": 165.72,
+      "texto": "pedir, eu vou buscar sua pratida Se bem que o brilho dela nem se compara"
+    },
+    {
+      "inicio": 165.74,
+      "fim": 167.1,
+      "texto": "o seu Deixa eu te dar um beijo"
+    },
+    {
+      "inicio": 167.22,
+      "fim": 172.283,
+      "texto": "Um beijo, vou mostrar o tempo que perdeu Que coisa louca, eu já sabia"
+    },
+    {
+      "inicio": 172.703,
+      "fim": 177.566,
+      "texto": "Encontrei o meu arrumava, algo me dizia Você vai encontrar Alguém que"
+    },
+    {
+      "inicio": 177.606,
+      "fim": 180.948,
+      "texto": "vai mudar A sua vida inteira da noite pro dia"
+    },
+    {
+      "inicio": 186.752,
+      "fim": 188.973,
+      "texto": "Te filmando, eu tava quieto no meu canso"
+    }
+  ],
+  "avisos": [
+    "Segmento 1: alinhamento fraco em 'Estive'.",
+    "Segmento 1: alinhamento fraco em 'eu'.",
+    "Segmento 1: alinhamento fraco em 'se'.",
+    "Segmento 1: alinhamento fraco em 'Não,'.",
+    "Segmento 1: alinhamento fraco em 'não'.",
+    "Segmento 2: alinhamento fraco em 'Não,'.",
+    "Segmento 2: alinhamento fraco em 'não'.",
+    "Segmento 3: alinhamento fraco em 'Seu'.",
+    "Segmento 3: alinhamento fraco em 'brilho'.",
+    "Segmento 3: alinhamento fraco em 'ela'.",
+    "Segmento 3: alinhamento fraco em 'que'.",
+    "Segmento 3: alinhamento fraco em 'que'.",
+    "Segmento 3: alinhamento fraco em 'eu'.",
+    "Segmento 3: alinhamento fraco em 'que'.",
+    "Segmento 3: alinhamento fraco em 'se'.",
+    "Segmento 3: alinhamento fraco em 'compara'.",
+    "Segmento 4: alinhamento fraco em 'Deixa'.",
+    "Segmento 4: alinhamento fraco em 'eu'.",
+    "Segmento 4: alinhamento fraco em 'eu'.",
+    "Segmento 4: alinhamento fraco em 'o'.",
+    "Segmento 4: alinhamento fraco em 'tempo'.",
+    "Segmento 4: alinhamento fraco em 'que'.",
+    "Segmento 4: alinhamento fraco em 'eu'.",
+    "Segmento 4: alinhamento fraco em 'noite'.",
+    "Segmento 4: alinhamento fraco em 'no'.",
+    "Segmento 5: alinhamento fraco em 'bem,'.",
+    "Segmento 5: alinhamento fraco em 'um'.",
+    "Segmento 5: alinhamento fraco em 'e'.",
+    "Segmento 5: alinhamento fraco em 'outro'.",
+    "Segmento 5: alinhamento fraco em 'vem'.",
+    "Segmento 5: alinhamento fraco em 'Você'.",
+    "Segmento 5: alinhamento fraco em 'deve'.",
+    "Segmento 5: alinhamento fraco em 'se'.",
+    "Segmento 5: alinhamento fraco em 'te'.",
+    "Segmento 5: alinhamento fraco em 'merecesse,'.",
+    "Segmento 5: alinhamento fraco em 'aqui'.",
+    "Segmento 6: alinhamento fraco em 'arrepender.'.",
+    "Segmento 6: alinhamento fraco em 'Não,'.",
+    "Segmento 6: alinhamento fraco em 'não,'.",
+    "Segmento 6: alinhamento fraco em 'não,'.",
+    "Segmento 6: alinhamento fraco em 'não.'.",
+    "Segmento 6: alinhamento fraco em 'Quero'.",
+    "Segmento 6: alinhamento fraco em 'ver!'.",
+    "Segmento 6: alinhamento fraco em 'aquela'.",
+    "Segmento 6: alinhamento fraco em 'lua'.",
+    "Segmento 6: alinhamento fraco em 'que'.",
+    "Segmento 6: alinhamento fraco em 'brilhará'.",
+    "Segmento 6: alinhamento fraco em 'no'.",
+    "Segmento 7: alinhamento fraco em 'me'.",
+    "Segmento 7: alinhamento fraco em 'pedir,'.",
+    "Segmento 7: alinhamento fraco em 'buscar'.",
+    "Segmento 7: alinhamento fraco em 'eu'.",
+    "Segmento 7: alinhamento fraco em 'eu'.",
+    "Segmento 7: alinhamento fraco em 'não'.",
+    "Segmento 7: alinhamento fraco em 'quero'.",
+    "Segmento 7: alinhamento fraco em 'a'.",
+    "Segmento 7: alinhamento fraco em 'Se'.",
+    "Segmento 7: alinhamento fraco em 'Se'.",
+    "Segmento 7: alinhamento fraco em 'que'.",
+    "Segmento 7: alinhamento fraco em 'o'.",
+    "Segmento 7: alinhamento fraco em 'brilho'.",
+    "Segmento 7: alinhamento fraco em 'eu'.",
+    "Segmento 7: alinhamento fraco em 'dar'.",
+    "Segmento 7: alinhamento fraco em 'um'.",
+    "Segmento 7: alinhamento fraco em 'beijo'.",
+    "Segmento 8: alinhamento fraco em 'Um'.",
+    "Segmento 8: alinhamento fraco em 'Que'.",
+    "Segmento 8: alinhamento fraco em 'o'.",
+    "Segmento 8: alinhamento fraco em 'algo'.",
+    "Segmento 8: alinhamento fraco em 'vai'.",
+    "Segmento 8: alinhamento fraco em 'Alguém'.",
+    "Segmento 8: alinhamento fraco em 'A'.",
+    "Segmento 8: alinhamento fraco em 'no'."
+  ],
+  "revisao_recomendada": true,
+  "comparacao_letra": {
+    "similaridade_textual": 0.8795698924731182,
+    "divergencias": [
+      {
+        "tipo": "replace",
+        "referencia": "te",
+        "transcricao": "estive"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "perfume",
+        "transcricao": "e filme"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "vai e o",
+        "transcricao": "vario"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "magoada",
+        "transcricao": "magulada"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "tá",
+        "transcricao": "dá"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "pedir eu",
+        "transcricao": "pediu"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "para",
+        "transcricao": "pra"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "compara ao",
+        "transcricao": "comparam"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "tá vendo aquela",
+        "transcricao": "seu brilho que ela"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "lá",
+        "transcricao": ""
+      },
+      {
+        "tipo": "replace",
+        "referencia": "pedir",
+        "transcricao": "pedirá vamos que"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "vou buscar só pra te dar se",
+        "transcricao": "sofratidar sei"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "ao seu",
+        "transcricao": "o céu"
+      },
+      {
+        "tipo": "insert",
+        "referencia": "",
+        "transcricao": "eu"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "perdeu",
+        "transcricao": "perdendo"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "enquanto",
+        "transcricao": "e quando"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "pro",
+        "transcricao": "no"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "e esse alguém sou eu",
+        "transcricao": "vem"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "não",
+        "transcricao": "nem"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "magoada",
+        "transcricao": "maguada"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "der",
+        "transcricao": "ter"
+      },
+      {
+        "tipo": "insert",
+        "referencia": "",
+        "transcricao": "quero ver"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "brilha lá",
+        "transcricao": "brilhará"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "só para te dar",
+        "transcricao": "sua pratida"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "ao",
+        "transcricao": "o"
+      },
+      {
+        "tipo": "insert",
+        "referencia": "",
+        "transcricao": "eu"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "que",
+        "transcricao": ""
+      },
+      {
+        "tipo": "replace",
+        "referencia": "pro dia tá vendo aquela",
+        "transcricao": "brudia da vez não quero a"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "céu",
+        "transcricao": "seu"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "só pra te dar",
+        "transcricao": "sua pratida"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "ao",
+        "transcricao": "o"
+      },
+      {
+        "tipo": "insert",
+        "referencia": "",
+        "transcricao": "um beijo"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "enquanto eu me",
+        "transcricao": "encontrei o meu"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "canto",
+        "transcricao": "canso"
+      }
+    ]
+  }
+}

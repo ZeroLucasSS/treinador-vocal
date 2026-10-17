@@ -1,0 +1,3178 @@
+{
+  "versao": 6,
+  "status": "pendente",
+  "estrategia": "preservar_corrigir_inserir",
+  "motor": "whisperx",
+  "duracao_audio": 274.07675,
+  "scores_sao_probabilidades": false,
+  "aprovacao_musical_automatica": false,
+  "parametros": {
+    "score_minimo": 0.3,
+    "janela_maxima": 180.0,
+    "segundos_busca_por_palavra": 3.0,
+    "janela_minima": 30.0,
+    "fragmento_sem_ancora_max_palavras": 2,
+    "fragmento_sem_ancora_max_segundos": 1.0,
+    "score_suporte_insercao": 0.1,
+    "atividade_minima_insercao": 0.2,
+    "margem": 0.4,
+    "margem_aplicada": false
+  },
+  "total_palavras_txt": 150,
+  "total_palavras_srt": 30,
+  "metricas": {
+    "palavras_publicadas": 149,
+    "blocos_srt_auditados": 12,
+    "blocos_srt_descartados": 0,
+    "blocos_texto_corrigido": 1,
+    "blocos_inseridos": 24,
+    "palavras_txt_sem_tempo": 3,
+    "palavras_txt_nao_pesquisadas": 0,
+    "palavras_txt_pesquisadas_sem_tempo": 3,
+    "palavras_conflito_original": 3,
+    "palavras_baixa_confianca": 7,
+    "tentativas_acusticas": 2
+  },
+  "comparacao": {
+    "consultas": [
+      {
+        "bloco_srt": 1,
+        "inicio": 3.031,
+        "fim": 3.6310000000000002,
+        "txt_inicio": 0,
+        "txt_fim": 1,
+        "score": 1.0,
+        "texto": "If",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 2,
+        "inicio": 4.932,
+        "fim": 5.132,
+        "txt_inicio": 1,
+        "txt_fim": 2,
+        "score": 1.0,
+        "texto": "I",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 3,
+        "inicio": 7.274,
+        "fim": 13.059,
+        "txt_inicio": 2,
+        "txt_fim": 6,
+        "score": 1.0,
+        "texto": "should stay I would",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 4,
+        "inicio": 13.319,
+        "fim": 16.122,
+        "txt_inicio": 6,
+        "txt_fim": 9,
+        "score": 1.0,
+        "texto": "only be in",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 5,
+        "inicio": 17.303,
+        "fim": 20.926,
+        "txt_inicio": 9,
+        "txt_fim": 11,
+        "score": 1.0,
+        "texto": "your way",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 6,
+        "inicio": 22.027,
+        "fim": 24.669,
+        "txt_inicio": 11,
+        "txt_fim": 15,
+        "score": 0.8571428571428572,
+        "texto": "So I will go,",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 7,
+        "inicio": 25.97,
+        "fim": 27.431,
+        "txt_inicio": 15,
+        "txt_fim": 18,
+        "score": 1.0,
+        "texto": "but I know",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 8,
+        "inicio": 29.953,
+        "fim": 30.754,
+        "txt_inicio": 18,
+        "txt_fim": 22,
+        "score": 1.0,
+        "texto": "I'll think of you",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 9,
+        "inicio": 33.172,
+        "fim": 33.666,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Bye.",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 10,
+        "inicio": 102.865,
+        "fim": 103.049,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "you",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 11,
+        "inicio": 178.518,
+        "fim": 180.023,
+        "txt_inicio": 99,
+        "txt_fim": 103,
+        "score": 1.0,
+        "texto": "But above all this,",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 12,
+        "inicio": 180.946,
+        "fim": 181.488,
+        "txt_inicio": 103,
+        "txt_fim": 106,
+        "score": 1.0,
+        "texto": "I wish you",
+        "aviso": null
+      }
+    ],
+    "regioes": [
+      {
+        "indices": [
+          0
+        ],
+        "inicio": 3.031,
+        "fim": 3.6310000000000002,
+        "txt_inicio": 0,
+        "txt_fim": 1,
+        "texto": "If"
+      },
+      {
+        "indices": [
+          1
+        ],
+        "inicio": 4.932,
+        "fim": 5.132,
+        "txt_inicio": 1,
+        "txt_fim": 2,
+        "texto": "I"
+      },
+      {
+        "indices": [
+          2
+        ],
+        "inicio": 7.274,
+        "fim": 13.059,
+        "txt_inicio": 2,
+        "txt_fim": 6,
+        "texto": "should stay I would"
+      },
+      {
+        "indices": [
+          3
+        ],
+        "inicio": 13.319,
+        "fim": 16.122,
+        "txt_inicio": 6,
+        "txt_fim": 9,
+        "texto": "only be in"
+      },
+      {
+        "indices": [
+          4
+        ],
+        "inicio": 17.303,
+        "fim": 20.926,
+        "txt_inicio": 9,
+        "txt_fim": 11,
+        "texto": "your way"
+      },
+      {
+        "indices": [
+          5
+        ],
+        "inicio": 22.027,
+        "fim": 24.669,
+        "txt_inicio": 11,
+        "txt_fim": 15,
+        "texto": "So I will go,"
+      },
+      {
+        "indices": [
+          6
+        ],
+        "inicio": 25.97,
+        "fim": 27.431,
+        "txt_inicio": 15,
+        "txt_fim": 18,
+        "texto": "but I know"
+      },
+      {
+        "indices": [
+          7
+        ],
+        "inicio": 29.953,
+        "fim": 30.754,
+        "txt_inicio": 18,
+        "txt_fim": 22,
+        "texto": "I'll think of you"
+      },
+      {
+        "indices": [
+          8
+        ],
+        "inicio": 33.172,
+        "fim": 33.666,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Bye."
+      },
+      {
+        "indices": [
+          9
+        ],
+        "inicio": 102.865,
+        "fim": 103.049,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "you"
+      },
+      {
+        "indices": [
+          10
+        ],
+        "inicio": 178.518,
+        "fim": 180.023,
+        "txt_inicio": 99,
+        "txt_fim": 103,
+        "texto": "But above all this,"
+      },
+      {
+        "indices": [
+          11
+        ],
+        "inicio": 180.946,
+        "fim": 181.488,
+        "txt_inicio": 103,
+        "txt_fim": 106,
+        "texto": "I wish you"
+      }
+    ],
+    "tokens_txt_sem_correspondencia": [
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149
+    ],
+    "parametros": {
+      "score_consulta_minimo": 0.65,
+      "margem_ambiguidade": 0.025,
+      "bonus_por_extremidade": 0.02,
+      "score_contexto_minimo": 0.85,
+      "distancia_max_palavra_isolada": 3.0,
+      "palavra_isolada_exige_exatidao": true
+    }
+  },
+  "auditoria_estrutura": [
+    {
+      "bloco_srt": 1,
+      "inicio_original": 3.031,
+      "fim_original": 3.6310000000000002,
+      "texto_original": "If",
+      "texto_publicado": "If",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 2,
+      "inicio_original": 4.932,
+      "fim_original": 5.132,
+      "texto_original": "I",
+      "texto_publicado": "I",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 3,
+      "inicio_original": 7.274,
+      "fim_original": 13.059,
+      "texto_original": "should stay I would",
+      "texto_publicado": "Should stay i would",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 4,
+      "inicio_original": 13.319,
+      "fim_original": 16.122,
+      "texto_original": "only be in",
+      "texto_publicado": "Only be in",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 5,
+      "inicio_original": 17.303,
+      "fim_original": 20.926,
+      "texto_original": "your way",
+      "texto_publicado": "Your way",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 6,
+      "inicio_original": 22.027,
+      "fim_original": 24.669,
+      "texto_original": "So I'll go",
+      "texto_publicado": "So i will go,",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 7,
+      "inicio_original": 25.97,
+      "fim_original": 27.431,
+      "texto_original": "but I know",
+      "texto_publicado": "But i know",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 8,
+      "inicio_original": 29.953,
+      "fim_original": 30.754,
+      "texto_original": "I'll think of you",
+      "texto_publicado": "I'll think of you",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 9,
+      "inicio_original": 33.172,
+      "fim_original": 33.666,
+      "texto_original": "Bye.",
+      "texto_publicado": "Bye.",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 10,
+      "inicio_original": 102.865,
+      "fim_original": 103.049,
+      "texto_original": "you",
+      "texto_publicado": "You",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 11,
+      "inicio_original": 178.518,
+      "fim_original": 180.023,
+      "texto_original": "But above all this,",
+      "texto_publicado": "But above all this,",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 12,
+      "inicio_original": 180.946,
+      "fim_original": 181.488,
+      "texto_original": "I wish you",
+      "texto_publicado": "I wish you",
+      "tratamento": "original_preservado",
+      "aviso": null
+    }
+  ],
+  "recuperacoes": [
+    {
+      "id": 1,
+      "txt_inicio": 22,
+      "txt_fim": 99,
+      "inicio": 30.754,
+      "fim": 178.518,
+      "bloco_anterior": 8,
+      "bloco_seguinte": 11,
+      "ocupados": [
+        {
+          "indice": 9,
+          "inicio": 33.172,
+          "fim": 33.666,
+          "texto": "Bye."
+        },
+        {
+          "indice": 10,
+          "inicio": 102.865,
+          "fim": 103.049,
+          "texto": "you"
+        }
+      ],
+      "limite_busca": 180.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "parcialmente_recuperado",
+      "tentativas": [
+        {
+          "janela": [
+            30.754,
+            178.518
+          ],
+          "texto": "every step of the way\n\nAnd I will always love you\nI will always love you\nYou, my darling, you\n\nBittersweet memories\nThat is all I'm taking with me\nSo goodbye, please, don't cry\nWe both know I'm not what you, you need\n\nAnd I will always love you\nI will always love you, oh\n\nI hope life treats you kind\nAnd I hope you'll have all you've dreamed of\nAnd I wished you joy and happiness",
+          "palavras": [
+            {
+              "texto": "every",
+              "inicio": 30.914,
+              "fim": 32.674,
+              "score": 0.866
+            },
+            {
+              "texto": "step",
+              "inicio": 32.694,
+              "fim": 33.234,
+              "score": 0.814
+            },
+            {
+              "texto": "of",
+              "inicio": 33.394,
+              "fim": 33.574,
+              "score": 0.686
+            },
+            {
+              "texto": "the",
+              "inicio": 35.275,
+              "fim": 35.615,
+              "score": 0.633
+            },
+            {
+              "texto": "way",
+              "inicio": 35.675,
+              "fim": 38.315,
+              "score": 0.954
+            },
+            {
+              "texto": "And",
+              "inicio": 44.756,
+              "fim": 44.916,
+              "score": 0.922
+            },
+            {
+              "texto": "I",
+              "inicio": 44.936,
+              "fim": 44.956,
+              "score": 0.008
+            },
+            {
+              "texto": "will",
+              "inicio": 44.996,
+              "fim": 45.716,
+              "score": 0.45
+            },
+            {
+              "texto": "always",
+              "inicio": 49.417,
+              "fim": 51.157,
+              "score": 0.6
+            },
+            {
+              "texto": "love",
+              "inicio": 53.418,
+              "fim": 53.778,
+              "score": 0.655
+            },
+            {
+              "texto": "you",
+              "inicio": 53.878,
+              "fim": 55.438,
+              "score": 0.831
+            },
+            {
+              "texto": "I",
+              "inicio": 55.458,
+              "fim": 55.478,
+              "score": 0.0
+            },
+            {
+              "texto": "will",
+              "inicio": 58.479,
+              "fim": 58.919,
+              "score": 0.443
+            },
+            {
+              "texto": "always",
+              "inicio": 59.419,
+              "fim": 59.679,
+              "score": 0.407
+            },
+            {
+              "texto": "love",
+              "inicio": 61.339,
+              "fim": 61.719,
+              "score": 0.689
+            },
+            {
+              "texto": "you",
+              "inicio": 61.839,
+              "fim": 68.16,
+              "score": 0.923
+            },
+            {
+              "texto": "You",
+              "inicio": 68.74,
+              "fim": 69.54,
+              "score": 0.781
+            },
+            {
+              "texto": "my",
+              "inicio": 71.861,
+              "fim": 72.081,
+              "score": 0.728
+            },
+            {
+              "texto": "darling",
+              "inicio": 72.121,
+              "fim": 72.661,
+              "score": 0.765
+            },
+            {
+              "texto": "you",
+              "inicio": 75.601,
+              "fim": 76.321,
+              "score": 0.719
+            },
+            {
+              "texto": "Bittersweet",
+              "inicio": 78.602,
+              "fim": 80.322,
+              "score": 0.742
+            },
+            {
+              "texto": "memories",
+              "inicio": 82.082,
+              "fim": 83.863,
+              "score": 0.748
+            },
+            {
+              "texto": "That",
+              "inicio": 85.823,
+              "fim": 86.143,
+              "score": 0.835
+            },
+            {
+              "texto": "is",
+              "inicio": 86.383,
+              "fim": 86.483,
+              "score": 0.777
+            },
+            {
+              "texto": "all",
+              "inicio": 86.803,
+              "fim": 87.023,
+              "score": 0.593
+            },
+            {
+              "texto": "I'm",
+              "inicio": 88.123,
+              "fim": 88.323,
+              "score": 0.714
+            },
+            {
+              "texto": "taking",
+              "inicio": 88.363,
+              "fim": 89.063,
+              "score": 0.874
+            },
+            {
+              "texto": "with",
+              "inicio": 89.904,
+              "fim": 90.244,
+              "score": 0.688
+            },
+            {
+              "texto": "me",
+              "inicio": 90.304,
+              "fim": 92.444,
+              "score": 0.928
+            },
+            {
+              "texto": "So",
+              "inicio": 93.264,
+              "fim": 93.524,
+              "score": 0.674
+            },
+            {
+              "texto": "goodbye",
+              "inicio": 93.564,
+              "fim": 94.744,
+              "score": 0.81
+            },
+            {
+              "texto": "please",
+              "inicio": 96.325,
+              "fim": 97.085,
+              "score": 0.862
+            },
+            {
+              "texto": "don't",
+              "inicio": 97.505,
+              "fim": 98.045,
+              "score": 0.744
+            },
+            {
+              "texto": "cry",
+              "inicio": 98.125,
+              "fim": 98.405,
+              "score": 0.767
+            },
+            {
+              "texto": "We",
+              "inicio": 100.165,
+              "fim": 100.485,
+              "score": 0.946
+            },
+            {
+              "texto": "both",
+              "inicio": 100.545,
+              "fim": 100.925,
+              "score": 0.804
+            },
+            {
+              "texto": "know",
+              "inicio": 101.065,
+              "fim": 101.545,
+              "score": 0.626
+            },
+            {
+              "texto": "I'm",
+              "inicio": 102.166,
+              "fim": 102.346,
+              "score": 0.718
+            },
+            {
+              "texto": "not",
+              "inicio": 102.386,
+              "fim": 102.566,
+              "score": 0.973
+            },
+            {
+              "texto": "what",
+              "inicio": 102.626,
+              "fim": 102.846,
+              "score": 0.904
+            },
+            {
+              "texto": "you",
+              "inicio": 102.926,
+              "fim": 103.346,
+              "score": 0.856
+            },
+            {
+              "texto": "you",
+              "inicio": 104.106,
+              "fim": 104.446,
+              "score": 0.69
+            },
+            {
+              "texto": "need",
+              "inicio": 104.486,
+              "fim": 106.786,
+              "score": 0.471
+            },
+            {
+              "texto": "And",
+              "inicio": 107.586,
+              "fim": 107.747,
+              "score": 0.725
+            },
+            {
+              "texto": "I",
+              "inicio": 112.287,
+              "fim": 112.447,
+              "score": 0.777
+            },
+            {
+              "texto": "will",
+              "inicio": 112.847,
+              "fim": 113.087,
+              "score": 0.376
+            },
+            {
+              "texto": "always",
+              "inicio": 113.127,
+              "fim": 114.228,
+              "score": 0.6
+            },
+            {
+              "texto": "love",
+              "inicio": 114.528,
+              "fim": 115.268,
+              "score": 0.349
+            },
+            {
+              "texto": "you",
+              "inicio": 115.428,
+              "fim": 117.088,
+              "score": 0.827
+            },
+            {
+              "texto": "I",
+              "inicio": 119.488,
+              "fim": 119.628,
+              "score": 0.782
+            },
+            {
+              "texto": "will",
+              "inicio": 120.069,
+              "fim": 121.209,
+              "score": 0.679
+            },
+            {
+              "texto": "always",
+              "inicio": 121.329,
+              "fim": 122.449,
+              "score": 0.607
+            },
+            {
+              "texto": "love",
+              "inicio": 122.469,
+              "fim": 126.19,
+              "score": 0.362
+            },
+            {
+              "texto": "you",
+              "inicio": 127.45,
+              "fim": 127.83,
+              "score": 0.792
+            },
+            {
+              "texto": "oh",
+              "inicio": 128.51,
+              "fim": 129.17,
+              "score": 0.834
+            },
+            {
+              "texto": "I",
+              "inicio": 157.915,
+              "fim": 158.115,
+              "score": 0.83
+            },
+            {
+              "texto": "hope",
+              "inicio": 158.335,
+              "fim": 160.375,
+              "score": 0.861
+            },
+            {
+              "texto": "life",
+              "inicio": 160.435,
+              "fim": 160.775,
+              "score": 0.76
+            },
+            {
+              "texto": "treats",
+              "inicio": 160.955,
+              "fim": 161.295,
+              "score": 0.599
+            },
+            {
+              "texto": "you",
+              "inicio": 161.355,
+              "fim": 161.875,
+              "score": 0.832
+            },
+            {
+              "texto": "kind",
+              "inicio": 161.995,
+              "fim": 162.315,
+              "score": 0.408
+            },
+            {
+              "texto": "And",
+              "inicio": 164.456,
+              "fim": 164.616,
+              "score": 0.799
+            },
+            {
+              "texto": "I",
+              "inicio": 165.016,
+              "fim": 165.136,
+              "score": 0.839
+            },
+            {
+              "texto": "hope",
+              "inicio": 165.236,
+              "fim": 165.736,
+              "score": 0.786
+            },
+            {
+              "texto": "you'll",
+              "inicio": 166.456,
+              "fim": 166.736,
+              "score": 0.595
+            },
+            {
+              "texto": "have",
+              "inicio": 166.796,
+              "fim": 167.116,
+              "score": 0.882
+            },
+            {
+              "texto": "all",
+              "inicio": 167.256,
+              "fim": 167.396,
+              "score": 0.672
+            },
+            {
+              "texto": "you've",
+              "inicio": 167.456,
+              "fim": 167.816,
+              "score": 0.494
+            },
+            {
+              "texto": "dreamed",
+              "inicio": 168.516,
+              "fim": 168.916,
+              "score": 0.709
+            },
+            {
+              "texto": "of",
+              "inicio": 170.977,
+              "fim": 171.117,
+              "score": 0.38
+            },
+            {
+              "texto": "And",
+              "inicio": 171.757,
+              "fim": 171.897,
+              "score": 0.692
+            },
+            {
+              "texto": "I",
+              "inicio": 171.997,
+              "fim": 172.097,
+              "score": 0.704
+            },
+            {
+              "texto": "wished",
+              "inicio": 172.117,
+              "fim": 172.337,
+              "score": 0.417
+            },
+            {
+              "texto": "you",
+              "inicio": 172.537,
+              "fim": 173.037,
+              "score": 0.755
+            },
+            {
+              "texto": "joy",
+              "inicio": 173.237,
+              "fim": 174.017,
+              "score": 0.57
+            },
+            {
+              "texto": "and",
+              "inicio": 174.857,
+              "fim": 174.997,
+              "score": 0.674
+            },
+            {
+              "texto": "happiness",
+              "inicio": 175.217,
+              "fim": 177.238,
+              "score": 0.755
+            }
+          ],
+          "conflitos_originais": [
+            {
+              "token_txt": 23,
+              "blocos": [
+                9
+              ]
+            },
+            {
+              "token_txt": 24,
+              "blocos": [
+                9
+              ]
+            },
+            {
+              "token_txt": 62,
+              "blocos": [
+                10
+              ]
+            }
+          ]
+        }
+      ],
+      "inseridos": [
+        {
+          "inicio": 30.914,
+          "fim": 32.674,
+          "texto": "every",
+          "origem": "insercao_acustica",
+          "lacuna": 1,
+          "txt_inicio": 22,
+          "txt_fim": 23,
+          "score_minimo": 0.866,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 35.275,
+          "fim": 38.315,
+          "texto": "the way",
+          "origem": "insercao_acustica",
+          "lacuna": 1,
+          "txt_inicio": 25,
+          "txt_fim": 27,
+          "score_minimo": 0.633,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 44.756,
+          "fim": 55.438,
+          "texto": "And I will always love you",
+          "origem": "insercao_acustica",
+          "lacuna": 1,
+          "txt_inicio": 27,
+          "txt_fim": 33,
+          "score_minimo": 0.008,
+          "atividade_audio": 0.9831460674157303,
+          "palavras_baixa_confianca": 1
+        },
+        {
+          "inicio": 55.458,
+          "fim": 68.16,
+          "texto": "I will always love you",
+          "origem": "insercao_acustica",
+          "lacuna": 1,
+          "txt_inicio": 33,
+          "txt_fim": 38,
+          "score_minimo": 0.0,
+          "atividade_audio": 0.889763779527559,
+          "palavras_baixa_confianca": 1
+        },
+        {
+          "inicio": 68.74,
+          "fim": 76.321,
+          "texto": "You, my darling, you",
+          "origem": "insercao_acustica",
+          "lacuna": 1,
+          "txt_inicio": 38,
+          "txt_fim": 42,
+          "score_minimo": 0.719,
+          "atividade_audio": 0.9182058047493403,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 78.602,
+          "fim": 83.863,
+          "texto": "Bittersweet memories",
+          "origem": "insercao_acustica",
+          "lacuna": 1,
+          "txt_inicio": 42,
+          "txt_fim": 44,
+          "score_minimo": 0.742,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 85.823,
+          "fim": 92.444,
+          "texto": "That is all I'm taking with me",
+          "origem": "insercao_acustica",
+          "lacuna": 1,
+          "txt_inicio": 44,
+          "txt_fim": 51,
+          "score_minimo": 0.593,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 93.264,
+          "fim": 98.405,
+          "texto": "So goodbye, please, don't cry",
+          "origem": "insercao_acustica",
+          "lacuna": 1,
+          "txt_inicio": 51,
+          "txt_fim": 56,
+          "score_minimo": 0.674,
+          "atividade_audio": 0.9961089494163424,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 100.165,
+          "fim": 102.846,
+          "texto": "We both know I'm not what",
+          "origem": "insercao_acustica",
+          "lacuna": 1,
+          "txt_inicio": 56,
+          "txt_fim": 62,
+          "score_minimo": 0.626,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 104.106,
+          "fim": 106.786,
+          "texto": "you need",
+          "origem": "insercao_acustica",
+          "lacuna": 1,
+          "txt_inicio": 63,
+          "txt_fim": 65,
+          "score_minimo": 0.471,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 107.586,
+          "fim": 117.088,
+          "texto": "And I will always love you",
+          "origem": "insercao_acustica",
+          "lacuna": 1,
+          "txt_inicio": 65,
+          "txt_fim": 71,
+          "score_minimo": 0.349,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 119.488,
+          "fim": 129.17,
+          "texto": "I will always love you, oh",
+          "origem": "insercao_acustica",
+          "lacuna": 1,
+          "txt_inicio": 71,
+          "txt_fim": 77,
+          "score_minimo": 0.362,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 157.915,
+          "fim": 162.315,
+          "texto": "I hope life treats you kind",
+          "origem": "insercao_acustica",
+          "lacuna": 1,
+          "txt_inicio": 77,
+          "txt_fim": 83,
+          "score_minimo": 0.408,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 164.456,
+          "fim": 171.117,
+          "texto": "And I hope you'll have all you've dreamed of",
+          "origem": "insercao_acustica",
+          "lacuna": 1,
+          "txt_inicio": 83,
+          "txt_fim": 92,
+          "score_minimo": 0.38,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 171.757,
+          "fim": 177.238,
+          "texto": "And I wished you joy and happiness",
+          "origem": "insercao_acustica",
+          "lacuna": 1,
+          "txt_inicio": 92,
+          "txt_fim": 99,
+          "score_minimo": 0.417,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        }
+      ],
+      "tokens_recuperados": [
+        22,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98
+      ],
+      "texto": "every step of the way And I will always love you I will always love you You, my darling, you Bittersweet memories That is all I'm taking with me So goodbye, please, don't cry We both know I'm not what you, you need And I will always love you I will always love you, oh I hope life treats you kind And I hope you'll have all you've dreamed of And I wished you joy and happiness"
+    },
+    {
+      "id": 2,
+      "txt_inicio": 106,
+      "txt_fim": 150,
+      "inicio": 181.488,
+      "fim": 274.07675,
+      "bloco_anterior": 12,
+      "bloco_seguinte": null,
+      "ocupados": [],
+      "limite_busca": 132.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "recuperado",
+      "tentativas": [
+        {
+          "janela": [
+            181.488,
+            274.07675
+          ],
+          "texto": "love\n\nAnd I will always love you\nI will always love you\nI will always love you\nI will always love you\nI will always love you\nI, I will always love you, you\n\nDarling, I love you\nI'll always, I'll always love you",
+          "palavras": [
+            {
+              "texto": "love",
+              "inicio": 182.948,
+              "fim": 186.188,
+              "score": 0.863
+            },
+            {
+              "texto": "And",
+              "inicio": 190.549,
+              "fim": 190.729,
+              "score": 0.699
+            },
+            {
+              "texto": "I",
+              "inicio": 193.869,
+              "fim": 195.629,
+              "score": 0.973
+            },
+            {
+              "texto": "will",
+              "inicio": 195.749,
+              "fim": 195.969,
+              "score": 0.211
+            },
+            {
+              "texto": "always",
+              "inicio": 196.669,
+              "fim": 197.309,
+              "score": 0.612
+            },
+            {
+              "texto": "love",
+              "inicio": 197.39,
+              "fim": 198.07,
+              "score": 0.476
+            },
+            {
+              "texto": "you",
+              "inicio": 198.13,
+              "fim": 199.83,
+              "score": 0.592
+            },
+            {
+              "texto": "I",
+              "inicio": 200.85,
+              "fim": 200.87,
+              "score": 0.011
+            },
+            {
+              "texto": "will",
+              "inicio": 201.17,
+              "fim": 203.57,
+              "score": 0.628
+            },
+            {
+              "texto": "always",
+              "inicio": 203.59,
+              "fim": 204.01,
+              "score": 0.438
+            },
+            {
+              "texto": "love",
+              "inicio": 204.51,
+              "fim": 206.09,
+              "score": 0.814
+            },
+            {
+              "texto": "you",
+              "inicio": 206.31,
+              "fim": 206.55,
+              "score": 0.294
+            },
+            {
+              "texto": "I",
+              "inicio": 207.971,
+              "fim": 208.231,
+              "score": 0.878
+            },
+            {
+              "texto": "will",
+              "inicio": 208.291,
+              "fim": 208.491,
+              "score": 0.439
+            },
+            {
+              "texto": "always",
+              "inicio": 209.811,
+              "fim": 211.191,
+              "score": 0.571
+            },
+            {
+              "texto": "love",
+              "inicio": 211.691,
+              "fim": 213.751,
+              "score": 0.86
+            },
+            {
+              "texto": "you",
+              "inicio": 213.811,
+              "fim": 214.871,
+              "score": 0.868
+            },
+            {
+              "texto": "I",
+              "inicio": 214.891,
+              "fim": 214.911,
+              "score": 0.0
+            },
+            {
+              "texto": "will",
+              "inicio": 215.151,
+              "fim": 215.331,
+              "score": 0.198
+            },
+            {
+              "texto": "always",
+              "inicio": 215.491,
+              "fim": 218.191,
+              "score": 0.683
+            },
+            {
+              "texto": "love",
+              "inicio": 218.231,
+              "fim": 218.792,
+              "score": 0.585
+            },
+            {
+              "texto": "you",
+              "inicio": 219.072,
+              "fim": 222.752,
+              "score": 0.749
+            },
+            {
+              "texto": "I",
+              "inicio": 223.612,
+              "fim": 223.752,
+              "score": 0.791
+            },
+            {
+              "texto": "will",
+              "inicio": 224.072,
+              "fim": 225.092,
+              "score": 0.629
+            },
+            {
+              "texto": "always",
+              "inicio": 225.132,
+              "fim": 225.532,
+              "score": 0.409
+            },
+            {
+              "texto": "love",
+              "inicio": 226.052,
+              "fim": 226.712,
+              "score": 0.813
+            },
+            {
+              "texto": "you",
+              "inicio": 226.792,
+              "fim": 229.753,
+              "score": 0.796
+            },
+            {
+              "texto": "I",
+              "inicio": 230.313,
+              "fim": 230.433,
+              "score": 0.78
+            },
+            {
+              "texto": "I",
+              "inicio": 230.453,
+              "fim": 230.533,
+              "score": 0.675
+            },
+            {
+              "texto": "will",
+              "inicio": 231.013,
+              "fim": 232.813,
+              "score": 0.678
+            },
+            {
+              "texto": "always",
+              "inicio": 234.453,
+              "fim": 236.073,
+              "score": 0.706
+            },
+            {
+              "texto": "love",
+              "inicio": 236.193,
+              "fim": 236.573,
+              "score": 0.676
+            },
+            {
+              "texto": "you",
+              "inicio": 238.493,
+              "fim": 245.374,
+              "score": 0.949
+            },
+            {
+              "texto": "you",
+              "inicio": 245.694,
+              "fim": 246.874,
+              "score": 0.479
+            },
+            {
+              "texto": "Darling",
+              "inicio": 248.274,
+              "fim": 248.594,
+              "score": 0.368
+            },
+            {
+              "texto": "I",
+              "inicio": 249.154,
+              "fim": 249.234,
+              "score": 0.716
+            },
+            {
+              "texto": "love",
+              "inicio": 249.334,
+              "fim": 249.754,
+              "score": 0.776
+            },
+            {
+              "texto": "you",
+              "inicio": 251.535,
+              "fim": 252.095,
+              "score": 0.752
+            },
+            {
+              "texto": "I'll",
+              "inicio": 252.295,
+              "fim": 252.455,
+              "score": 0.404
+            },
+            {
+              "texto": "always",
+              "inicio": 252.635,
+              "fim": 253.235,
+              "score": 0.599
+            },
+            {
+              "texto": "I'll",
+              "inicio": 254.715,
+              "fim": 254.935,
+              "score": 0.342
+            },
+            {
+              "texto": "always",
+              "inicio": 254.955,
+              "fim": 255.475,
+              "score": 0.642
+            },
+            {
+              "texto": "love",
+              "inicio": 256.135,
+              "fim": 257.435,
+              "score": 0.56
+            },
+            {
+              "texto": "you",
+              "inicio": 258.435,
+              "fim": 258.755,
+              "score": 0.381
+            }
+          ]
+        }
+      ],
+      "inseridos": [
+        {
+          "inicio": 182.948,
+          "fim": 186.188,
+          "texto": "love",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 106,
+          "txt_fim": 107,
+          "score_minimo": 0.863,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 190.549,
+          "fim": 199.83,
+          "texto": "And I will always love you",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 107,
+          "txt_fim": 113,
+          "score_minimo": 0.211,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 1
+        },
+        {
+          "inicio": 200.85,
+          "fim": 206.55,
+          "texto": "I will always love you",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 113,
+          "txt_fim": 118,
+          "score_minimo": 0.011,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 2
+        },
+        {
+          "inicio": 207.971,
+          "fim": 214.871,
+          "texto": "I will always love you",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 118,
+          "txt_fim": 123,
+          "score_minimo": 0.439,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 214.891,
+          "fim": 222.752,
+          "texto": "I will always love you",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 123,
+          "txt_fim": 128,
+          "score_minimo": 0.0,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 2
+        },
+        {
+          "inicio": 223.612,
+          "fim": 229.753,
+          "texto": "I will always love you",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 128,
+          "txt_fim": 133,
+          "score_minimo": 0.409,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 230.313,
+          "fim": 246.874,
+          "texto": "I, I will always love you, you",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 133,
+          "txt_fim": 140,
+          "score_minimo": 0.479,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 248.274,
+          "fim": 252.095,
+          "texto": "Darling, I love you",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 140,
+          "txt_fim": 144,
+          "score_minimo": 0.368,
+          "atividade_audio": 0.9895287958115183,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 252.295,
+          "fim": 258.755,
+          "texto": "I'll always, I'll always love you",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 144,
+          "txt_fim": 150,
+          "score_minimo": 0.342,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        }
+      ],
+      "tokens_recuperados": [
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149
+      ],
+      "texto": "love And I will always love you I will always love you I will always love you I will always love you I will always love you I, I will always love you, you Darling, I love you I'll always, I'll always love you"
+    }
+  ],
+  "tentativas": [
+    {
+      "janela": [
+        30.754,
+        178.518
+      ],
+      "texto": "every step of the way\n\nAnd I will always love you\nI will always love you\nYou, my darling, you\n\nBittersweet memories\nThat is all I'm taking with me\nSo goodbye, please, don't cry\nWe both know I'm not what you, you need\n\nAnd I will always love you\nI will always love you, oh\n\nI hope life treats you kind\nAnd I hope you'll have all you've dreamed of\nAnd I wished you joy and happiness",
+      "palavras": [
+        {
+          "texto": "every",
+          "inicio": 30.914,
+          "fim": 32.674,
+          "score": 0.866
+        },
+        {
+          "texto": "step",
+          "inicio": 32.694,
+          "fim": 33.234,
+          "score": 0.814
+        },
+        {
+          "texto": "of",
+          "inicio": 33.394,
+          "fim": 33.574,
+          "score": 0.686
+        },
+        {
+          "texto": "the",
+          "inicio": 35.275,
+          "fim": 35.615,
+          "score": 0.633
+        },
+        {
+          "texto": "way",
+          "inicio": 35.675,
+          "fim": 38.315,
+          "score": 0.954
+        },
+        {
+          "texto": "And",
+          "inicio": 44.756,
+          "fim": 44.916,
+          "score": 0.922
+        },
+        {
+          "texto": "I",
+          "inicio": 44.936,
+          "fim": 44.956,
+          "score": 0.008
+        },
+        {
+          "texto": "will",
+          "inicio": 44.996,
+          "fim": 45.716,
+          "score": 0.45
+        },
+        {
+          "texto": "always",
+          "inicio": 49.417,
+          "fim": 51.157,
+          "score": 0.6
+        },
+        {
+          "texto": "love",
+          "inicio": 53.418,
+          "fim": 53.778,
+          "score": 0.655
+        },
+        {
+          "texto": "you",
+          "inicio": 53.878,
+          "fim": 55.438,
+          "score": 0.831
+        },
+        {
+          "texto": "I",
+          "inicio": 55.458,
+          "fim": 55.478,
+          "score": 0.0
+        },
+        {
+          "texto": "will",
+          "inicio": 58.479,
+          "fim": 58.919,
+          "score": 0.443
+        },
+        {
+          "texto": "always",
+          "inicio": 59.419,
+          "fim": 59.679,
+          "score": 0.407
+        },
+        {
+          "texto": "love",
+          "inicio": 61.339,
+          "fim": 61.719,
+          "score": 0.689
+        },
+        {
+          "texto": "you",
+          "inicio": 61.839,
+          "fim": 68.16,
+          "score": 0.923
+        },
+        {
+          "texto": "You",
+          "inicio": 68.74,
+          "fim": 69.54,
+          "score": 0.781
+        },
+        {
+          "texto": "my",
+          "inicio": 71.861,
+          "fim": 72.081,
+          "score": 0.728
+        },
+        {
+          "texto": "darling",
+          "inicio": 72.121,
+          "fim": 72.661,
+          "score": 0.765
+        },
+        {
+          "texto": "you",
+          "inicio": 75.601,
+          "fim": 76.321,
+          "score": 0.719
+        },
+        {
+          "texto": "Bittersweet",
+          "inicio": 78.602,
+          "fim": 80.322,
+          "score": 0.742
+        },
+        {
+          "texto": "memories",
+          "inicio": 82.082,
+          "fim": 83.863,
+          "score": 0.748
+        },
+        {
+          "texto": "That",
+          "inicio": 85.823,
+          "fim": 86.143,
+          "score": 0.835
+        },
+        {
+          "texto": "is",
+          "inicio": 86.383,
+          "fim": 86.483,
+          "score": 0.777
+        },
+        {
+          "texto": "all",
+          "inicio": 86.803,
+          "fim": 87.023,
+          "score": 0.593
+        },
+        {
+          "texto": "I'm",
+          "inicio": 88.123,
+          "fim": 88.323,
+          "score": 0.714
+        },
+        {
+          "texto": "taking",
+          "inicio": 88.363,
+          "fim": 89.063,
+          "score": 0.874
+        },
+        {
+          "texto": "with",
+          "inicio": 89.904,
+          "fim": 90.244,
+          "score": 0.688
+        },
+        {
+          "texto": "me",
+          "inicio": 90.304,
+          "fim": 92.444,
+          "score": 0.928
+        },
+        {
+          "texto": "So",
+          "inicio": 93.264,
+          "fim": 93.524,
+          "score": 0.674
+        },
+        {
+          "texto": "goodbye",
+          "inicio": 93.564,
+          "fim": 94.744,
+          "score": 0.81
+        },
+        {
+          "texto": "please",
+          "inicio": 96.325,
+          "fim": 97.085,
+          "score": 0.862
+        },
+        {
+          "texto": "don't",
+          "inicio": 97.505,
+          "fim": 98.045,
+          "score": 0.744
+        },
+        {
+          "texto": "cry",
+          "inicio": 98.125,
+          "fim": 98.405,
+          "score": 0.767
+        },
+        {
+          "texto": "We",
+          "inicio": 100.165,
+          "fim": 100.485,
+          "score": 0.946
+        },
+        {
+          "texto": "both",
+          "inicio": 100.545,
+          "fim": 100.925,
+          "score": 0.804
+        },
+        {
+          "texto": "know",
+          "inicio": 101.065,
+          "fim": 101.545,
+          "score": 0.626
+        },
+        {
+          "texto": "I'm",
+          "inicio": 102.166,
+          "fim": 102.346,
+          "score": 0.718
+        },
+        {
+          "texto": "not",
+          "inicio": 102.386,
+          "fim": 102.566,
+          "score": 0.973
+        },
+        {
+          "texto": "what",
+          "inicio": 102.626,
+          "fim": 102.846,
+          "score": 0.904
+        },
+        {
+          "texto": "you",
+          "inicio": 102.926,
+          "fim": 103.346,
+          "score": 0.856
+        },
+        {
+          "texto": "you",
+          "inicio": 104.106,
+          "fim": 104.446,
+          "score": 0.69
+        },
+        {
+          "texto": "need",
+          "inicio": 104.486,
+          "fim": 106.786,
+          "score": 0.471
+        },
+        {
+          "texto": "And",
+          "inicio": 107.586,
+          "fim": 107.747,
+          "score": 0.725
+        },
+        {
+          "texto": "I",
+          "inicio": 112.287,
+          "fim": 112.447,
+          "score": 0.777
+        },
+        {
+          "texto": "will",
+          "inicio": 112.847,
+          "fim": 113.087,
+          "score": 0.376
+        },
+        {
+          "texto": "always",
+          "inicio": 113.127,
+          "fim": 114.228,
+          "score": 0.6
+        },
+        {
+          "texto": "love",
+          "inicio": 114.528,
+          "fim": 115.268,
+          "score": 0.349
+        },
+        {
+          "texto": "you",
+          "inicio": 115.428,
+          "fim": 117.088,
+          "score": 0.827
+        },
+        {
+          "texto": "I",
+          "inicio": 119.488,
+          "fim": 119.628,
+          "score": 0.782
+        },
+        {
+          "texto": "will",
+          "inicio": 120.069,
+          "fim": 121.209,
+          "score": 0.679
+        },
+        {
+          "texto": "always",
+          "inicio": 121.329,
+          "fim": 122.449,
+          "score": 0.607
+        },
+        {
+          "texto": "love",
+          "inicio": 122.469,
+          "fim": 126.19,
+          "score": 0.362
+        },
+        {
+          "texto": "you",
+          "inicio": 127.45,
+          "fim": 127.83,
+          "score": 0.792
+        },
+        {
+          "texto": "oh",
+          "inicio": 128.51,
+          "fim": 129.17,
+          "score": 0.834
+        },
+        {
+          "texto": "I",
+          "inicio": 157.915,
+          "fim": 158.115,
+          "score": 0.83
+        },
+        {
+          "texto": "hope",
+          "inicio": 158.335,
+          "fim": 160.375,
+          "score": 0.861
+        },
+        {
+          "texto": "life",
+          "inicio": 160.435,
+          "fim": 160.775,
+          "score": 0.76
+        },
+        {
+          "texto": "treats",
+          "inicio": 160.955,
+          "fim": 161.295,
+          "score": 0.599
+        },
+        {
+          "texto": "you",
+          "inicio": 161.355,
+          "fim": 161.875,
+          "score": 0.832
+        },
+        {
+          "texto": "kind",
+          "inicio": 161.995,
+          "fim": 162.315,
+          "score": 0.408
+        },
+        {
+          "texto": "And",
+          "inicio": 164.456,
+          "fim": 164.616,
+          "score": 0.799
+        },
+        {
+          "texto": "I",
+          "inicio": 165.016,
+          "fim": 165.136,
+          "score": 0.839
+        },
+        {
+          "texto": "hope",
+          "inicio": 165.236,
+          "fim": 165.736,
+          "score": 0.786
+        },
+        {
+          "texto": "you'll",
+          "inicio": 166.456,
+          "fim": 166.736,
+          "score": 0.595
+        },
+        {
+          "texto": "have",
+          "inicio": 166.796,
+          "fim": 167.116,
+          "score": 0.882
+        },
+        {
+          "texto": "all",
+          "inicio": 167.256,
+          "fim": 167.396,
+          "score": 0.672
+        },
+        {
+          "texto": "you've",
+          "inicio": 167.456,
+          "fim": 167.816,
+          "score": 0.494
+        },
+        {
+          "texto": "dreamed",
+          "inicio": 168.516,
+          "fim": 168.916,
+          "score": 0.709
+        },
+        {
+          "texto": "of",
+          "inicio": 170.977,
+          "fim": 171.117,
+          "score": 0.38
+        },
+        {
+          "texto": "And",
+          "inicio": 171.757,
+          "fim": 171.897,
+          "score": 0.692
+        },
+        {
+          "texto": "I",
+          "inicio": 171.997,
+          "fim": 172.097,
+          "score": 0.704
+        },
+        {
+          "texto": "wished",
+          "inicio": 172.117,
+          "fim": 172.337,
+          "score": 0.417
+        },
+        {
+          "texto": "you",
+          "inicio": 172.537,
+          "fim": 173.037,
+          "score": 0.755
+        },
+        {
+          "texto": "joy",
+          "inicio": 173.237,
+          "fim": 174.017,
+          "score": 0.57
+        },
+        {
+          "texto": "and",
+          "inicio": 174.857,
+          "fim": 174.997,
+          "score": 0.674
+        },
+        {
+          "texto": "happiness",
+          "inicio": 175.217,
+          "fim": 177.238,
+          "score": 0.755
+        }
+      ],
+      "conflitos_originais": [
+        {
+          "token_txt": 23,
+          "blocos": [
+            9
+          ]
+        },
+        {
+          "token_txt": 24,
+          "blocos": [
+            9
+          ]
+        },
+        {
+          "token_txt": 62,
+          "blocos": [
+            10
+          ]
+        }
+      ],
+      "lacuna": 1
+    },
+    {
+      "janela": [
+        181.488,
+        274.07675
+      ],
+      "texto": "love\n\nAnd I will always love you\nI will always love you\nI will always love you\nI will always love you\nI will always love you\nI, I will always love you, you\n\nDarling, I love you\nI'll always, I'll always love you",
+      "palavras": [
+        {
+          "texto": "love",
+          "inicio": 182.948,
+          "fim": 186.188,
+          "score": 0.863
+        },
+        {
+          "texto": "And",
+          "inicio": 190.549,
+          "fim": 190.729,
+          "score": 0.699
+        },
+        {
+          "texto": "I",
+          "inicio": 193.869,
+          "fim": 195.629,
+          "score": 0.973
+        },
+        {
+          "texto": "will",
+          "inicio": 195.749,
+          "fim": 195.969,
+          "score": 0.211
+        },
+        {
+          "texto": "always",
+          "inicio": 196.669,
+          "fim": 197.309,
+          "score": 0.612
+        },
+        {
+          "texto": "love",
+          "inicio": 197.39,
+          "fim": 198.07,
+          "score": 0.476
+        },
+        {
+          "texto": "you",
+          "inicio": 198.13,
+          "fim": 199.83,
+          "score": 0.592
+        },
+        {
+          "texto": "I",
+          "inicio": 200.85,
+          "fim": 200.87,
+          "score": 0.011
+        },
+        {
+          "texto": "will",
+          "inicio": 201.17,
+          "fim": 203.57,
+          "score": 0.628
+        },
+        {
+          "texto": "always",
+          "inicio": 203.59,
+          "fim": 204.01,
+          "score": 0.438
+        },
+        {
+          "texto": "love",
+          "inicio": 204.51,
+          "fim": 206.09,
+          "score": 0.814
+        },
+        {
+          "texto": "you",
+          "inicio": 206.31,
+          "fim": 206.55,
+          "score": 0.294
+        },
+        {
+          "texto": "I",
+          "inicio": 207.971,
+          "fim": 208.231,
+          "score": 0.878
+        },
+        {
+          "texto": "will",
+          "inicio": 208.291,
+          "fim": 208.491,
+          "score": 0.439
+        },
+        {
+          "texto": "always",
+          "inicio": 209.811,
+          "fim": 211.191,
+          "score": 0.571
+        },
+        {
+          "texto": "love",
+          "inicio": 211.691,
+          "fim": 213.751,
+          "score": 0.86
+        },
+        {
+          "texto": "you",
+          "inicio": 213.811,
+          "fim": 214.871,
+          "score": 0.868
+        },
+        {
+          "texto": "I",
+          "inicio": 214.891,
+          "fim": 214.911,
+          "score": 0.0
+        },
+        {
+          "texto": "will",
+          "inicio": 215.151,
+          "fim": 215.331,
+          "score": 0.198
+        },
+        {
+          "texto": "always",
+          "inicio": 215.491,
+          "fim": 218.191,
+          "score": 0.683
+        },
+        {
+          "texto": "love",
+          "inicio": 218.231,
+          "fim": 218.792,
+          "score": 0.585
+        },
+        {
+          "texto": "you",
+          "inicio": 219.072,
+          "fim": 222.752,
+          "score": 0.749
+        },
+        {
+          "texto": "I",
+          "inicio": 223.612,
+          "fim": 223.752,
+          "score": 0.791
+        },
+        {
+          "texto": "will",
+          "inicio": 224.072,
+          "fim": 225.092,
+          "score": 0.629
+        },
+        {
+          "texto": "always",
+          "inicio": 225.132,
+          "fim": 225.532,
+          "score": 0.409
+        },
+        {
+          "texto": "love",
+          "inicio": 226.052,
+          "fim": 226.712,
+          "score": 0.813
+        },
+        {
+          "texto": "you",
+          "inicio": 226.792,
+          "fim": 229.753,
+          "score": 0.796
+        },
+        {
+          "texto": "I",
+          "inicio": 230.313,
+          "fim": 230.433,
+          "score": 0.78
+        },
+        {
+          "texto": "I",
+          "inicio": 230.453,
+          "fim": 230.533,
+          "score": 0.675
+        },
+        {
+          "texto": "will",
+          "inicio": 231.013,
+          "fim": 232.813,
+          "score": 0.678
+        },
+        {
+          "texto": "always",
+          "inicio": 234.453,
+          "fim": 236.073,
+          "score": 0.706
+        },
+        {
+          "texto": "love",
+          "inicio": 236.193,
+          "fim": 236.573,
+          "score": 0.676
+        },
+        {
+          "texto": "you",
+          "inicio": 238.493,
+          "fim": 245.374,
+          "score": 0.949
+        },
+        {
+          "texto": "you",
+          "inicio": 245.694,
+          "fim": 246.874,
+          "score": 0.479
+        },
+        {
+          "texto": "Darling",
+          "inicio": 248.274,
+          "fim": 248.594,
+          "score": 0.368
+        },
+        {
+          "texto": "I",
+          "inicio": 249.154,
+          "fim": 249.234,
+          "score": 0.716
+        },
+        {
+          "texto": "love",
+          "inicio": 249.334,
+          "fim": 249.754,
+          "score": 0.776
+        },
+        {
+          "texto": "you",
+          "inicio": 251.535,
+          "fim": 252.095,
+          "score": 0.752
+        },
+        {
+          "texto": "I'll",
+          "inicio": 252.295,
+          "fim": 252.455,
+          "score": 0.404
+        },
+        {
+          "texto": "always",
+          "inicio": 252.635,
+          "fim": 253.235,
+          "score": 0.599
+        },
+        {
+          "texto": "I'll",
+          "inicio": 254.715,
+          "fim": 254.935,
+          "score": 0.342
+        },
+        {
+          "texto": "always",
+          "inicio": 254.955,
+          "fim": 255.475,
+          "score": 0.642
+        },
+        {
+          "texto": "love",
+          "inicio": 256.135,
+          "fim": 257.435,
+          "score": 0.56
+        },
+        {
+          "texto": "you",
+          "inicio": 258.435,
+          "fim": 258.755,
+          "score": 0.381
+        }
+      ],
+      "lacuna": 2
+    }
+  ],
+  "pendencias": [
+    {
+      "bloco_srt": 9,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 10,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "lacuna": 1,
+      "motivo": "conflito_com_bloco_original",
+      "token_txt": 23,
+      "blocos": [
+        9
+      ]
+    },
+    {
+      "lacuna": 1,
+      "motivo": "conflito_com_bloco_original",
+      "token_txt": 24,
+      "blocos": [
+        9
+      ]
+    },
+    {
+      "lacuna": 1,
+      "motivo": "conflito_com_bloco_original",
+      "token_txt": 62,
+      "blocos": [
+        10
+      ]
+    },
+    {
+      "lacuna": 1,
+      "motivo": "parcialmente_recuperado",
+      "detalhe": null
+    },
+    {
+      "lacuna": 1,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "And I will always love you"
+    },
+    {
+      "lacuna": 1,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "I will always love you"
+    },
+    {
+      "lacuna": 2,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "And I will always love you"
+    },
+    {
+      "lacuna": 2,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "I will always love you"
+    },
+    {
+      "lacuna": 2,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "I will always love you"
+    },
+    {
+      "motivo": "texto_txt_sem_tempo",
+      "tokens_txt": [
+        23,
+        24,
+        62
+      ]
+    }
+  ],
+  "blocos": [
+    {
+      "inicio": 3.031,
+      "fim": 3.6310000000000002,
+      "texto": "If",
+      "origem": "original_preservado",
+      "bloco_original": 1
+    },
+    {
+      "inicio": 4.932,
+      "fim": 5.132,
+      "texto": "I",
+      "origem": "original_preservado",
+      "bloco_original": 2
+    },
+    {
+      "inicio": 7.274,
+      "fim": 13.059,
+      "texto": "Should stay i would",
+      "origem": "original_preservado",
+      "bloco_original": 3
+    },
+    {
+      "inicio": 13.319,
+      "fim": 16.122,
+      "texto": "Only be in",
+      "origem": "original_preservado",
+      "bloco_original": 4
+    },
+    {
+      "inicio": 17.303,
+      "fim": 20.926,
+      "texto": "Your way",
+      "origem": "original_preservado",
+      "bloco_original": 5
+    },
+    {
+      "inicio": 22.027,
+      "fim": 24.669,
+      "texto": "So i will go,",
+      "origem": "texto_corrigido",
+      "bloco_original": 6
+    },
+    {
+      "inicio": 25.97,
+      "fim": 27.431,
+      "texto": "But i know",
+      "origem": "original_preservado",
+      "bloco_original": 7
+    },
+    {
+      "inicio": 29.953,
+      "fim": 30.754,
+      "texto": "I'll think of you",
+      "origem": "original_preservado",
+      "bloco_original": 8
+    },
+    {
+      "inicio": 30.914,
+      "fim": 32.674,
+      "texto": "Every",
+      "origem": "insercao_acustica",
+      "lacuna": 1,
+      "txt_inicio": 22,
+      "txt_fim": 23,
+      "score_minimo": 0.866,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 33.172,
+      "fim": 33.666,
+      "texto": "Bye.",
+      "origem": "original_preservado",
+      "bloco_original": 9
+    },
+    {
+      "inicio": 35.275,
+      "fim": 38.315,
+      "texto": "The way",
+      "origem": "insercao_acustica",
+      "lacuna": 1,
+      "txt_inicio": 25,
+      "txt_fim": 27,
+      "score_minimo": 0.633,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 44.756,
+      "fim": 55.438,
+      "texto": "And i will always love you",
+      "origem": "insercao_acustica",
+      "lacuna": 1,
+      "txt_inicio": 27,
+      "txt_fim": 33,
+      "score_minimo": 0.008,
+      "atividade_audio": 0.9831460674157303,
+      "palavras_baixa_confianca": 1
+    },
+    {
+      "inicio": 55.458,
+      "fim": 68.16,
+      "texto": "I will always love you",
+      "origem": "insercao_acustica",
+      "lacuna": 1,
+      "txt_inicio": 33,
+      "txt_fim": 38,
+      "score_minimo": 0.0,
+      "atividade_audio": 0.889763779527559,
+      "palavras_baixa_confianca": 1
+    },
+    {
+      "inicio": 68.74,
+      "fim": 76.321,
+      "texto": "You, my darling, you",
+      "origem": "insercao_acustica",
+      "lacuna": 1,
+      "txt_inicio": 38,
+      "txt_fim": 42,
+      "score_minimo": 0.719,
+      "atividade_audio": 0.9182058047493403,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 78.602,
+      "fim": 83.863,
+      "texto": "Bittersweet memories",
+      "origem": "insercao_acustica",
+      "lacuna": 1,
+      "txt_inicio": 42,
+      "txt_fim": 44,
+      "score_minimo": 0.742,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 85.823,
+      "fim": 92.444,
+      "texto": "That is all i'm taking with me",
+      "origem": "insercao_acustica",
+      "lacuna": 1,
+      "txt_inicio": 44,
+      "txt_fim": 51,
+      "score_minimo": 0.593,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 93.264,
+      "fim": 98.405,
+      "texto": "So goodbye, please, don't cry",
+      "origem": "insercao_acustica",
+      "lacuna": 1,
+      "txt_inicio": 51,
+      "txt_fim": 56,
+      "score_minimo": 0.674,
+      "atividade_audio": 0.9961089494163424,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 100.165,
+      "fim": 102.846,
+      "texto": "We both know i'm not what",
+      "origem": "insercao_acustica",
+      "lacuna": 1,
+      "txt_inicio": 56,
+      "txt_fim": 62,
+      "score_minimo": 0.626,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 102.865,
+      "fim": 103.049,
+      "texto": "You",
+      "origem": "original_preservado",
+      "bloco_original": 10
+    },
+    {
+      "inicio": 104.106,
+      "fim": 106.786,
+      "texto": "You need",
+      "origem": "insercao_acustica",
+      "lacuna": 1,
+      "txt_inicio": 63,
+      "txt_fim": 65,
+      "score_minimo": 0.471,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 107.586,
+      "fim": 117.088,
+      "texto": "And i will always love you",
+      "origem": "insercao_acustica",
+      "lacuna": 1,
+      "txt_inicio": 65,
+      "txt_fim": 71,
+      "score_minimo": 0.349,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 119.488,
+      "fim": 129.17,
+      "texto": "I will always love you, oh",
+      "origem": "insercao_acustica",
+      "lacuna": 1,
+      "txt_inicio": 71,
+      "txt_fim": 77,
+      "score_minimo": 0.362,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 157.915,
+      "fim": 162.315,
+      "texto": "I hope life treats you kind",
+      "origem": "insercao_acustica",
+      "lacuna": 1,
+      "txt_inicio": 77,
+      "txt_fim": 83,
+      "score_minimo": 0.408,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 164.456,
+      "fim": 171.117,
+      "texto": "And i hope you'll have all you've dreamed of",
+      "origem": "insercao_acustica",
+      "lacuna": 1,
+      "txt_inicio": 83,
+      "txt_fim": 92,
+      "score_minimo": 0.38,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 171.757,
+      "fim": 177.238,
+      "texto": "And i wished you joy and happiness",
+      "origem": "insercao_acustica",
+      "lacuna": 1,
+      "txt_inicio": 92,
+      "txt_fim": 99,
+      "score_minimo": 0.417,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 178.518,
+      "fim": 180.023,
+      "texto": "But above all this,",
+      "origem": "original_preservado",
+      "bloco_original": 11
+    },
+    {
+      "inicio": 180.946,
+      "fim": 181.488,
+      "texto": "I wish you",
+      "origem": "original_preservado",
+      "bloco_original": 12
+    },
+    {
+      "inicio": 182.948,
+      "fim": 186.188,
+      "texto": "Love",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 106,
+      "txt_fim": 107,
+      "score_minimo": 0.863,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 190.549,
+      "fim": 199.83,
+      "texto": "And i will always love you",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 107,
+      "txt_fim": 113,
+      "score_minimo": 0.211,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 1
+    },
+    {
+      "inicio": 200.85,
+      "fim": 206.55,
+      "texto": "I will always love you",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 113,
+      "txt_fim": 118,
+      "score_minimo": 0.011,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 2
+    },
+    {
+      "inicio": 207.971,
+      "fim": 214.871,
+      "texto": "I will always love you",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 118,
+      "txt_fim": 123,
+      "score_minimo": 0.439,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 214.891,
+      "fim": 222.752,
+      "texto": "I will always love you",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 123,
+      "txt_fim": 128,
+      "score_minimo": 0.0,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 2
+    },
+    {
+      "inicio": 223.612,
+      "fim": 229.753,
+      "texto": "I will always love you",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 128,
+      "txt_fim": 133,
+      "score_minimo": 0.409,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 230.313,
+      "fim": 246.874,
+      "texto": "I, i will always love you, you",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 133,
+      "txt_fim": 140,
+      "score_minimo": 0.479,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 248.274,
+      "fim": 252.095,
+      "texto": "Darling, i love you",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 140,
+      "txt_fim": 144,
+      "score_minimo": 0.368,
+      "atividade_audio": 0.9895287958115183,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 252.295,
+      "fim": 258.755,
+      "texto": "I'll always, i'll always love you",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 144,
+      "txt_fim": 150,
+      "score_minimo": 0.342,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    }
+  ],
+  "configuracao_motor": {
+    "idioma": "auto",
+    "dispositivo": "cpu",
+    "modelo_solicitado": null,
+    "selecao_por_trecho": [
+      {
+        "inicio": 30.754,
+        "fim": 178.518,
+        "linhas": [
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 2,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 4,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 3,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 3,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 5,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 5,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 4,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 3,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 2,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 6,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 4,
+            "herdado": false
+          }
+        ]
+      },
+      {
+        "inicio": 181.488,
+        "fim": 274.07675,
+        "linhas": [
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 4,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 3,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 3,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 3,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 3,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 5,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 2,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 3,
+            "herdado": false
+          }
+        ]
+      }
+    ]
+  },
+  "fontes": {
+    "txt": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\pop-internacional\\i-will-aways-love-you-whitney-houston\\letra.txt",
+      "sha256": "b5156171876517efcfcf0f3676cce4b819dc9256b769c38db8155fb0663813c9"
+    },
+    "srt": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\pop-internacional\\i-will-aways-love-you-whitney-houston\\letra.srt",
+      "sha256": "17e39783c99995d2d24ff5c6dde2386449e79f61c7553e65f64096d606d754fd"
+    },
+    "voz": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\pop-internacional\\i-will-aways-love-you-whitney-houston\\voz.mp3",
+      "sha256": "71d6893fe270503216341e5eacb4ab32b48fc1918f4c07d6e057546ea7e2d85a"
+    }
+  },
+  "resumo_avisos": [
+    "Bloco 9: consulta txt ambigua original preservado.",
+    "Bloco 10: consulta txt ambigua original preservado.",
+    "TXT 'step': tempo acústico conflita com bloco(s) original(is) [9]; revisar associação.",
+    "TXT 'of': tempo acústico conflita com bloco(s) original(is) [9]; revisar associação.",
+    "TXT 'you': tempo acústico conflita com bloco(s) original(is) [10]; revisar associação.",
+    "Lacuna 1: parcialmente recuperado (00:00:30,754–00:02:58,518).",
+    "Inserção em 00:00:44,756: 1 palavra(s) com baixa confiança; mantidas.",
+    "Inserção em 00:00:55,458: 1 palavra(s) com baixa confiança; mantidas.",
+    "Inserção em 00:03:10,549: 1 palavra(s) com baixa confiança; mantidas.",
+    "Inserção em 00:03:20,850: 2 palavra(s) com baixa confiança; mantidas.",
+    "Inserção em 00:03:34,891: 2 palavra(s) com baixa confiança; mantidas.",
+    "TXT linha 4, sem tempo: step of",
+    "TXT linha 13, sem tempo: you"
+  ]
+}

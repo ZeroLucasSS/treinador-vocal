@@ -1,0 +1,1550 @@
+{
+  "versao": 1,
+  "arquivo_voz": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\catolicas\\mistica-sublime-colo-de-deus\\voz.mp3",
+  "sha256_voz": "a8c8274d7b6875d7498785af45231ac385724ab57571fdd16efe87322c2e2cef",
+  "duracao_audio": 300.0424375,
+  "configuracao": {
+    "modelo": "small",
+    "idioma": "pt",
+    "dispositivo": "cpu",
+    "compute_type": "int8",
+    "vad": "silero"
+  },
+  "segmentos": [
+    {
+      "text": " Mistica sublime Te receber Ter comunhão Ter correndo em mim Teu sangue Deus Estou em comunhão",
+      "start": 5.922,
+      "end": 29.79,
+      "avg_logprob": -0.17805236909124586,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Mistica",
+          "start": 6.062,
+          "end": 6.942,
+          "score": 0.91
+        },
+        {
+          "word": "sublime",
+          "start": 7.122,
+          "end": 9.083,
+          "score": 0.929
+        },
+        {
+          "word": "Te",
+          "start": 9.583,
+          "end": 10.003,
+          "score": 0.851
+        },
+        {
+          "word": "receber",
+          "start": 10.103,
+          "end": 11.444,
+          "score": 0.904
+        },
+        {
+          "word": "Ter",
+          "start": 13.204,
+          "end": 13.525,
+          "score": 0.607
+        },
+        {
+          "word": "comunhão",
+          "start": 13.685,
+          "end": 14.765,
+          "score": 0.794
+        },
+        {
+          "word": "Ter",
+          "start": 20.467,
+          "end": 20.827,
+          "score": 0.626
+        },
+        {
+          "word": "correndo",
+          "start": 20.927,
+          "end": 21.707,
+          "score": 0.911
+        },
+        {
+          "word": "em",
+          "start": 21.807,
+          "end": 22.187,
+          "score": 0.566
+        },
+        {
+          "word": "mim",
+          "start": 22.327,
+          "end": 23.108,
+          "score": 0.762
+        },
+        {
+          "word": "Teu",
+          "start": 23.288,
+          "end": 23.828,
+          "score": 0.869
+        },
+        {
+          "word": "sangue",
+          "start": 24.208,
+          "end": 25.409,
+          "score": 0.842
+        },
+        {
+          "word": "Deus",
+          "start": 25.549,
+          "end": 26.349,
+          "score": 0.948
+        },
+        {
+          "word": "Estou",
+          "start": 27.529,
+          "end": 28.189,
+          "score": 0.858
+        },
+        {
+          "word": "em",
+          "start": 28.249,
+          "end": 28.37,
+          "score": 0.995
+        },
+        {
+          "word": "comunhão",
+          "start": 28.47,
+          "end": 29.31,
+          "score": 0.811
+        }
+      ]
+    },
+    {
+      "text": " Alguém dirá que um Deus tão grande assim Não se dará por mim O que os meus olhos veem Não é o que minha alma diz",
+      "start": 34.914,
+      "end": 63.134,
+      "avg_logprob": -0.14307666337117553,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Alguém",
+          "start": 35.094,
+          "end": 35.775,
+          "score": 0.744
+        },
+        {
+          "word": "dirá",
+          "start": 35.895,
+          "end": 36.895,
+          "score": 0.85
+        },
+        {
+          "word": "que",
+          "start": 37.256,
+          "end": 37.416,
+          "score": 0.798
+        },
+        {
+          "word": "um",
+          "start": 37.516,
+          "end": 38.056,
+          "score": 0.561
+        },
+        {
+          "word": "Deus",
+          "start": 38.216,
+          "end": 39.057,
+          "score": 0.977
+        },
+        {
+          "word": "tão",
+          "start": 39.577,
+          "end": 39.978,
+          "score": 0.492
+        },
+        {
+          "word": "grande",
+          "start": 40.078,
+          "end": 41.499,
+          "score": 0.905
+        },
+        {
+          "word": "assim",
+          "start": 41.579,
+          "end": 42.259,
+          "score": 0.962
+        },
+        {
+          "word": "Não",
+          "start": 43.24,
+          "end": 43.6,
+          "score": 0.658
+        },
+        {
+          "word": "se",
+          "start": 43.8,
+          "end": 44.561,
+          "score": 0.972
+        },
+        {
+          "word": "dará",
+          "start": 44.701,
+          "end": 46.402,
+          "score": 0.981
+        },
+        {
+          "word": "por",
+          "start": 46.923,
+          "end": 47.383,
+          "score": 0.796
+        },
+        {
+          "word": "mim",
+          "start": 47.443,
+          "end": 49.905,
+          "score": 0.909
+        },
+        {
+          "word": "O",
+          "start": 49.925,
+          "end": 49.945,
+          "score": 0.063
+        },
+        {
+          "word": "que",
+          "start": 50.025,
+          "end": 50.205,
+          "score": 0.62
+        },
+        {
+          "word": "os",
+          "start": 50.285,
+          "end": 50.445,
+          "score": 0.75
+        },
+        {
+          "word": "meus",
+          "start": 50.525,
+          "end": 51.025,
+          "score": 0.825
+        },
+        {
+          "word": "olhos",
+          "start": 51.105,
+          "end": 52.727,
+          "score": 0.77
+        },
+        {
+          "word": "veem",
+          "start": 52.807,
+          "end": 53.327,
+          "score": 0.843
+        },
+        {
+          "word": "Não",
+          "start": 54.148,
+          "end": 54.668,
+          "score": 0.605
+        },
+        {
+          "word": "é",
+          "start": 54.828,
+          "end": 55.629,
+          "score": 0.914
+        },
+        {
+          "word": "o",
+          "start": 55.849,
+          "end": 56.209,
+          "score": 0.995
+        },
+        {
+          "word": "que",
+          "start": 56.449,
+          "end": 57.11,
+          "score": 0.717
+        },
+        {
+          "word": "minha",
+          "start": 57.85,
+          "end": 58.651,
+          "score": 0.754
+        },
+        {
+          "word": "alma",
+          "start": 58.951,
+          "end": 59.992,
+          "score": 0.94
+        },
+        {
+          "word": "diz",
+          "start": 60.132,
+          "end": 62.854,
+          "score": 0.666
+        }
+      ]
+    },
+    {
+      "text": " me se casou de mim, te recebeu e ter comunhão. Der correndo em mim, Deus, sangue Deus, estou em comunhão.",
+      "start": 64.066,
+      "end": 88.702,
+      "avg_logprob": -0.3661891859438684,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "me",
+          "start": 64.186,
+          "end": 64.486,
+          "score": 0.956
+        },
+        {
+          "word": "se",
+          "start": 64.646,
+          "end": 64.746,
+          "score": 0.728
+        },
+        {
+          "word": "casou",
+          "start": 64.887,
+          "end": 66.047,
+          "score": 0.931
+        },
+        {
+          "word": "de",
+          "start": 66.187,
+          "end": 67.008,
+          "score": 0.908
+        },
+        {
+          "word": "mim,",
+          "start": 67.088,
+          "end": 67.548,
+          "score": 0.724
+        },
+        {
+          "word": "te",
+          "start": 68.009,
+          "end": 68.389,
+          "score": 0.804
+        },
+        {
+          "word": "recebeu",
+          "start": 68.489,
+          "end": 70.09,
+          "score": 0.863
+        },
+        {
+          "word": "e",
+          "start": 71.511,
+          "end": 71.571,
+          "score": 0.922
+        },
+        {
+          "word": "ter",
+          "start": 71.711,
+          "end": 72.111,
+          "score": 0.887
+        },
+        {
+          "word": "comunhão.",
+          "start": 72.211,
+          "end": 73.532,
+          "score": 0.872
+        },
+        {
+          "word": "Der",
+          "start": 79.036,
+          "end": 79.436,
+          "score": 0.809
+        },
+        {
+          "word": "correndo",
+          "start": 79.496,
+          "end": 80.277,
+          "score": 0.767
+        },
+        {
+          "word": "em",
+          "start": 80.297,
+          "end": 80.797,
+          "score": 0.774
+        },
+        {
+          "word": "mim,",
+          "start": 80.917,
+          "end": 81.657,
+          "score": 0.741
+        },
+        {
+          "word": "Deus,",
+          "start": 81.838,
+          "end": 82.298,
+          "score": 0.743
+        },
+        {
+          "word": "sangue",
+          "start": 82.738,
+          "end": 84.359,
+          "score": 0.734
+        },
+        {
+          "word": "Deus,",
+          "start": 84.419,
+          "end": 85.46,
+          "score": 0.978
+        },
+        {
+          "word": "estou",
+          "start": 86.24,
+          "end": 86.921,
+          "score": 0.867
+        },
+        {
+          "word": "em",
+          "start": 87.001,
+          "end": 87.101,
+          "score": 0.844
+        },
+        {
+          "word": "comunhão.",
+          "start": 87.201,
+          "end": 88.702,
+          "score": 0.78
+        }
+      ]
+    },
+    {
+      "text": " Alguém dirá que o Deus tão grande assim Não se dará por mim O que os meus olhos veem Não é o que me ama, diz e ela diz",
+      "start": 93.986,
+      "end": 122.142,
+      "avg_logprob": -0.20869748666882515,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Alguém",
+          "start": 94.186,
+          "end": 94.706,
+          "score": 0.782
+        },
+        {
+          "word": "dirá",
+          "start": 94.867,
+          "end": 96.027,
+          "score": 0.944
+        },
+        {
+          "word": "que",
+          "start": 96.207,
+          "end": 96.427,
+          "score": 0.708
+        },
+        {
+          "word": "o",
+          "start": 96.507,
+          "end": 96.888,
+          "score": 0.855
+        },
+        {
+          "word": "Deus",
+          "start": 97.148,
+          "end": 97.968,
+          "score": 0.852
+        },
+        {
+          "word": "tão",
+          "start": 98.509,
+          "end": 98.889,
+          "score": 0.593
+        },
+        {
+          "word": "grande",
+          "start": 99.009,
+          "end": 100.39,
+          "score": 0.666
+        },
+        {
+          "word": "assim",
+          "start": 100.53,
+          "end": 101.49,
+          "score": 0.921
+        },
+        {
+          "word": "Não",
+          "start": 102.191,
+          "end": 102.471,
+          "score": 0.745
+        },
+        {
+          "word": "se",
+          "start": 102.771,
+          "end": 103.471,
+          "score": 0.458
+        },
+        {
+          "word": "dará",
+          "start": 103.631,
+          "end": 105.372,
+          "score": 0.853
+        },
+        {
+          "word": "por",
+          "start": 105.933,
+          "end": 106.413,
+          "score": 0.73
+        },
+        {
+          "word": "mim",
+          "start": 106.533,
+          "end": 108.794,
+          "score": 0.971
+        },
+        {
+          "word": "O",
+          "start": 108.814,
+          "end": 109.015,
+          "score": 0.895
+        },
+        {
+          "word": "que",
+          "start": 109.155,
+          "end": 109.335,
+          "score": 0.49
+        },
+        {
+          "word": "os",
+          "start": 109.415,
+          "end": 109.615,
+          "score": 0.69
+        },
+        {
+          "word": "meus",
+          "start": 109.715,
+          "end": 110.035,
+          "score": 0.862
+        },
+        {
+          "word": "olhos",
+          "start": 110.295,
+          "end": 111.816,
+          "score": 0.723
+        },
+        {
+          "word": "veem",
+          "start": 112.036,
+          "end": 112.577,
+          "score": 0.587
+        },
+        {
+          "word": "Não",
+          "start": 113.357,
+          "end": 113.837,
+          "score": 0.666
+        },
+        {
+          "word": "é",
+          "start": 113.857,
+          "end": 113.877,
+          "score": 0.0
+        },
+        {
+          "word": "o",
+          "start": 114.938,
+          "end": 115.478,
+          "score": 0.964
+        },
+        {
+          "word": "que",
+          "start": 115.678,
+          "end": 116.159,
+          "score": 0.762
+        },
+        {
+          "word": "me",
+          "start": 117.099,
+          "end": 117.619,
+          "score": 0.958
+        },
+        {
+          "word": "ama,",
+          "start": 117.719,
+          "end": 119.12,
+          "score": 0.778
+        },
+        {
+          "word": "diz",
+          "start": 119.48,
+          "end": 120.581,
+          "score": 0.556
+        },
+        {
+          "word": "e",
+          "start": 120.601,
+          "end": 120.621,
+          "score": 0.001
+        },
+        {
+          "word": "ela",
+          "start": 120.641,
+          "end": 121.622,
+          "score": 0.806
+        },
+        {
+          "word": "diz",
+          "start": 121.682,
+          "end": 121.782,
+          "score": 0.222
+        }
+      ]
+    },
+    {
+      "text": " Já não é mais vinho não É o sangue do meu Deus Já não é mais pau aqui É o corpo do meu amor Do meu amor",
+      "start": 123.266,
+      "end": 151.326,
+      "avg_logprob": -0.18967405706644058,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Já",
+          "start": 123.506,
+          "end": 123.926,
+          "score": 0.97
+        },
+        {
+          "word": "não",
+          "start": 123.987,
+          "end": 124.247,
+          "score": 0.597
+        },
+        {
+          "word": "é",
+          "start": 124.367,
+          "end": 124.567,
+          "score": 0.987
+        },
+        {
+          "word": "mais",
+          "start": 124.687,
+          "end": 125.367,
+          "score": 0.849
+        },
+        {
+          "word": "vinho",
+          "start": 125.408,
+          "end": 126.448,
+          "score": 0.684
+        },
+        {
+          "word": "não",
+          "start": 127.229,
+          "end": 128.51,
+          "score": 0.901
+        },
+        {
+          "word": "É",
+          "start": 130.671,
+          "end": 130.791,
+          "score": 0.833
+        },
+        {
+          "word": "o",
+          "start": 130.851,
+          "end": 130.911,
+          "score": 0.673
+        },
+        {
+          "word": "sangue",
+          "start": 131.112,
+          "end": 131.732,
+          "score": 0.789
+        },
+        {
+          "word": "do",
+          "start": 131.812,
+          "end": 131.932,
+          "score": 0.82
+        },
+        {
+          "word": "meu",
+          "start": 131.992,
+          "end": 132.172,
+          "score": 0.968
+        },
+        {
+          "word": "Deus",
+          "start": 132.252,
+          "end": 137.676,
+          "score": 0.748
+        },
+        {
+          "word": "Já",
+          "start": 138.197,
+          "end": 138.597,
+          "score": 0.97
+        },
+        {
+          "word": "não",
+          "start": 138.657,
+          "end": 138.917,
+          "score": 0.637
+        },
+        {
+          "word": "é",
+          "start": 139.037,
+          "end": 139.237,
+          "score": 0.896
+        },
+        {
+          "word": "mais",
+          "start": 139.337,
+          "end": 139.958,
+          "score": 0.78
+        },
+        {
+          "word": "pau",
+          "start": 140.018,
+          "end": 140.939,
+          "score": 0.808
+        },
+        {
+          "word": "aqui",
+          "start": 141.059,
+          "end": 144.541,
+          "score": 0.737
+        },
+        {
+          "word": "É",
+          "start": 145.302,
+          "end": 145.362,
+          "score": 0.694
+        },
+        {
+          "word": "o",
+          "start": 145.382,
+          "end": 145.442,
+          "score": 0.618
+        },
+        {
+          "word": "corpo",
+          "start": 145.542,
+          "end": 145.882,
+          "score": 0.358
+        },
+        {
+          "word": "do",
+          "start": 145.902,
+          "end": 145.942,
+          "score": 0.093
+        },
+        {
+          "word": "meu",
+          "start": 146.002,
+          "end": 146.062,
+          "score": 0.017
+        },
+        {
+          "word": "amor",
+          "start": 146.082,
+          "end": 146.182,
+          "score": 0.146
+        },
+        {
+          "word": "Do",
+          "start": 146.242,
+          "end": 146.362,
+          "score": 0.864
+        },
+        {
+          "word": "meu",
+          "start": 146.443,
+          "end": 146.683,
+          "score": 0.995
+        },
+        {
+          "word": "amor",
+          "start": 146.783,
+          "end": 147.143,
+          "score": 0.652
+        }
+      ]
+    },
+    {
+      "text": " Nesse lugar Eu posso dizer Que estás dentro de mim Eu dentro de você Nesse lugar Eu posso dizer Que estás dentro de mim Eu dentro de você",
+      "start": 152.834,
+      "end": 181.15,
+      "avg_logprob": -0.11905498081637968,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Nesse",
+          "start": 152.834,
+          "end": 153.594,
+          "score": 0.882
+        },
+        {
+          "word": "lugar",
+          "start": 153.735,
+          "end": 155.696,
+          "score": 0.868
+        },
+        {
+          "word": "Eu",
+          "start": 156.296,
+          "end": 156.616,
+          "score": 0.645
+        },
+        {
+          "word": "posso",
+          "start": 156.716,
+          "end": 157.256,
+          "score": 0.913
+        },
+        {
+          "word": "dizer",
+          "start": 157.377,
+          "end": 159.158,
+          "score": 0.837
+        },
+        {
+          "word": "Que",
+          "start": 159.838,
+          "end": 159.958,
+          "score": 0.523
+        },
+        {
+          "word": "estás",
+          "start": 159.998,
+          "end": 160.678,
+          "score": 0.658
+        },
+        {
+          "word": "dentro",
+          "start": 160.799,
+          "end": 161.239,
+          "score": 0.692
+        },
+        {
+          "word": "de",
+          "start": 161.299,
+          "end": 161.419,
+          "score": 0.818
+        },
+        {
+          "word": "mim",
+          "start": 161.499,
+          "end": 162.86,
+          "score": 0.596
+        },
+        {
+          "word": "Eu",
+          "start": 162.88,
+          "end": 163.72,
+          "score": 0.664
+        },
+        {
+          "word": "dentro",
+          "start": 163.82,
+          "end": 164.621,
+          "score": 0.752
+        },
+        {
+          "word": "de",
+          "start": 164.681,
+          "end": 164.841,
+          "score": 0.898
+        },
+        {
+          "word": "você",
+          "start": 164.921,
+          "end": 166.522,
+          "score": 0.91
+        },
+        {
+          "word": "Nesse",
+          "start": 167.382,
+          "end": 168.163,
+          "score": 0.878
+        },
+        {
+          "word": "lugar",
+          "start": 168.303,
+          "end": 169.984,
+          "score": 0.893
+        },
+        {
+          "word": "Eu",
+          "start": 170.784,
+          "end": 171.064,
+          "score": 0.856
+        },
+        {
+          "word": "posso",
+          "start": 171.184,
+          "end": 171.745,
+          "score": 0.885
+        },
+        {
+          "word": "dizer",
+          "start": 171.865,
+          "end": 173.546,
+          "score": 0.858
+        },
+        {
+          "word": "Que",
+          "start": 174.306,
+          "end": 174.406,
+          "score": 0.821
+        },
+        {
+          "word": "estás",
+          "start": 174.466,
+          "end": 175.127,
+          "score": 0.789
+        },
+        {
+          "word": "dentro",
+          "start": 175.247,
+          "end": 175.667,
+          "score": 0.75
+        },
+        {
+          "word": "de",
+          "start": 175.727,
+          "end": 175.867,
+          "score": 0.832
+        },
+        {
+          "word": "mim",
+          "start": 175.967,
+          "end": 177.188,
+          "score": 0.943
+        },
+        {
+          "word": "Eu",
+          "start": 177.968,
+          "end": 178.308,
+          "score": 0.593
+        },
+        {
+          "word": "dentro",
+          "start": 178.448,
+          "end": 179.049,
+          "score": 0.939
+        },
+        {
+          "word": "de",
+          "start": 179.129,
+          "end": 179.249,
+          "score": 0.992
+        },
+        {
+          "word": "você",
+          "start": 179.349,
+          "end": 179.829,
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "text": " Eu dentro de você Eu dentro de você Eu dentro de você Eu dentro de você",
+      "start": 181.442,
+      "end": 206.43,
+      "avg_logprob": -0.1553791831521427,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Eu",
+          "start": 181.622,
+          "end": 181.842,
+          "score": 0.894
+        },
+        {
+          "word": "dentro",
+          "start": 182.022,
+          "end": 182.622,
+          "score": 0.807
+        },
+        {
+          "word": "de",
+          "start": 182.682,
+          "end": 182.822,
+          "score": 0.836
+        },
+        {
+          "word": "você",
+          "start": 182.922,
+          "end": 185.183,
+          "score": 0.919
+        },
+        {
+          "word": "Eu",
+          "start": 185.243,
+          "end": 185.623,
+          "score": 0.755
+        },
+        {
+          "word": "dentro",
+          "start": 185.703,
+          "end": 186.324,
+          "score": 0.766
+        },
+        {
+          "word": "de",
+          "start": 186.404,
+          "end": 186.604,
+          "score": 0.741
+        },
+        {
+          "word": "você",
+          "start": 186.664,
+          "end": 187.204,
+          "score": 0.736
+        },
+        {
+          "word": "Eu",
+          "start": 189.044,
+          "end": 189.265,
+          "score": 0.931
+        },
+        {
+          "word": "dentro",
+          "start": 189.405,
+          "end": 190.025,
+          "score": 0.8
+        },
+        {
+          "word": "de",
+          "start": 190.105,
+          "end": 190.265,
+          "score": 0.962
+        },
+        {
+          "word": "você",
+          "start": 190.365,
+          "end": 192.766,
+          "score": 0.991
+        },
+        {
+          "word": "Eu",
+          "start": 192.786,
+          "end": 192.946,
+          "score": 0.424
+        },
+        {
+          "word": "dentro",
+          "start": 193.046,
+          "end": 193.626,
+          "score": 0.68
+        },
+        {
+          "word": "de",
+          "start": 193.726,
+          "end": 194.346,
+          "score": 0.712
+        },
+        {
+          "word": "você",
+          "start": 194.406,
+          "end": 194.826,
+          "score": 0.571
+        }
+      ]
+    },
+    {
+      "text": " Que eu dentro de você Agora nós dois somos um Agora nós dois somos um Agora nós dois somos um",
+      "start": 207.234,
+      "end": 229.886,
+      "avg_logprob": -0.13019089187894547,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Que",
+          "start": 207.334,
+          "end": 207.474,
+          "score": 0.451
+        },
+        {
+          "word": "eu",
+          "start": 207.654,
+          "end": 207.734,
+          "score": 0.306
+        },
+        {
+          "word": "dentro",
+          "start": 207.794,
+          "end": 208.375,
+          "score": 0.771
+        },
+        {
+          "word": "de",
+          "start": 208.455,
+          "end": 208.575,
+          "score": 0.623
+        },
+        {
+          "word": "você",
+          "start": 208.935,
+          "end": 209.535,
+          "score": 0.581
+        },
+        {
+          "word": "Agora",
+          "start": 211.096,
+          "end": 211.856,
+          "score": 0.942
+        },
+        {
+          "word": "nós",
+          "start": 211.977,
+          "end": 212.377,
+          "score": 0.831
+        },
+        {
+          "word": "dois",
+          "start": 212.437,
+          "end": 212.937,
+          "score": 0.818
+        },
+        {
+          "word": "somos",
+          "start": 213.097,
+          "end": 215.118,
+          "score": 0.938
+        },
+        {
+          "word": "um",
+          "start": 215.138,
+          "end": 215.578,
+          "score": 0.868
+        },
+        {
+          "word": "Agora",
+          "start": 218.44,
+          "end": 219.2,
+          "score": 0.951
+        },
+        {
+          "word": "nós",
+          "start": 219.3,
+          "end": 219.721,
+          "score": 0.83
+        },
+        {
+          "word": "dois",
+          "start": 219.781,
+          "end": 220.301,
+          "score": 0.568
+        },
+        {
+          "word": "somos",
+          "start": 220.461,
+          "end": 222.282,
+          "score": 0.927
+        },
+        {
+          "word": "um",
+          "start": 222.642,
+          "end": 222.962,
+          "score": 0.452
+        },
+        {
+          "word": "Agora",
+          "start": 225.764,
+          "end": 226.524,
+          "score": 0.942
+        },
+        {
+          "word": "nós",
+          "start": 226.624,
+          "end": 227.024,
+          "score": 0.893
+        },
+        {
+          "word": "dois",
+          "start": 227.105,
+          "end": 227.605,
+          "score": 0.694
+        },
+        {
+          "word": "somos",
+          "start": 227.765,
+          "end": 229.106,
+          "score": 0.833
+        },
+        {
+          "word": "um",
+          "start": 229.346,
+          "end": 229.546,
+          "score": 0.442
+        }
+      ]
+    },
+    {
+      "text": " Agora nós dois somos um",
+      "start": 232.962,
+      "end": 245.214,
+      "avg_logprob": -0.28460390865802765,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Agora",
+          "start": 233.042,
+          "end": 233.763,
+          "score": 0.797
+        },
+        {
+          "word": "nós",
+          "start": 233.883,
+          "end": 234.263,
+          "score": 0.847
+        },
+        {
+          "word": "dois",
+          "start": 234.323,
+          "end": 234.824,
+          "score": 0.425
+        },
+        {
+          "word": "somos",
+          "start": 235.004,
+          "end": 236.806,
+          "score": 0.864
+        },
+        {
+          "word": "um",
+          "start": 238.207,
+          "end": 238.527,
+          "score": 0.456
+        }
+      ]
+    }
+  ],
+  "blocos": [
+    {
+      "inicio": 6.062,
+      "fim": 11.444,
+      "texto": "Mistica sublime Te receber"
+    },
+    {
+      "inicio": 13.204,
+      "fim": 14.765,
+      "texto": "Ter comunhão"
+    },
+    {
+      "inicio": 20.467,
+      "fim": 26.349,
+      "texto": "Ter correndo em mim Teu sangue Deus"
+    },
+    {
+      "inicio": 27.529,
+      "fim": 29.31,
+      "texto": "Estou em comunhão"
+    },
+    {
+      "inicio": 35.094,
+      "fim": 39.978,
+      "texto": "Alguém dirá que um Deus tão"
+    },
+    {
+      "inicio": 40.078,
+      "fim": 42.259,
+      "texto": "grande assim"
+    },
+    {
+      "inicio": 43.24,
+      "fim": 47.383,
+      "texto": "Não se dará por"
+    },
+    {
+      "inicio": 47.443,
+      "fim": 53.327,
+      "texto": "mim O que os meus olhos veem"
+    },
+    {
+      "inicio": 54.148,
+      "fim": 57.11,
+      "texto": "Não é o que"
+    },
+    {
+      "inicio": 57.85,
+      "fim": 62.854,
+      "texto": "minha alma diz"
+    },
+    {
+      "inicio": 64.186,
+      "fim": 70.09,
+      "texto": "me se casou de mim, te recebeu"
+    },
+    {
+      "inicio": 71.511,
+      "fim": 73.532,
+      "texto": "e ter comunhão."
+    },
+    {
+      "inicio": 79.036,
+      "fim": 84.359,
+      "texto": "Der correndo em mim, Deus, sangue"
+    },
+    {
+      "inicio": 84.419,
+      "fim": 85.46,
+      "texto": "Deus,"
+    },
+    {
+      "inicio": 86.24,
+      "fim": 88.702,
+      "texto": "estou em comunhão."
+    },
+    {
+      "inicio": 94.186,
+      "fim": 98.889,
+      "texto": "Alguém dirá que o Deus tão"
+    },
+    {
+      "inicio": 99.009,
+      "fim": 101.49,
+      "texto": "grande assim"
+    },
+    {
+      "inicio": 102.191,
+      "fim": 106.413,
+      "texto": "Não se dará por"
+    },
+    {
+      "inicio": 106.533,
+      "fim": 111.816,
+      "texto": "mim O que os meus olhos"
+    },
+    {
+      "inicio": 112.036,
+      "fim": 112.577,
+      "texto": "veem"
+    },
+    {
+      "inicio": 113.357,
+      "fim": 113.877,
+      "texto": "Não é"
+    },
+    {
+      "inicio": 114.938,
+      "fim": 116.159,
+      "texto": "o que"
+    },
+    {
+      "inicio": 117.099,
+      "fim": 121.782,
+      "texto": "me ama, diz e ela diz"
+    },
+    {
+      "inicio": 123.506,
+      "fim": 126.448,
+      "texto": "Já não é mais vinho"
+    },
+    {
+      "inicio": 127.229,
+      "fim": 128.51,
+      "texto": "não"
+    },
+    {
+      "inicio": 130.671,
+      "fim": 132.172,
+      "texto": "É o sangue do meu"
+    },
+    {
+      "inicio": 132.252,
+      "fim": 137.676,
+      "texto": "Deus"
+    },
+    {
+      "inicio": 138.197,
+      "fim": 140.939,
+      "texto": "Já não é mais pau"
+    },
+    {
+      "inicio": 141.059,
+      "fim": 144.541,
+      "texto": "aqui"
+    },
+    {
+      "inicio": 145.302,
+      "fim": 147.143,
+      "texto": "É o corpo do meu amor Do meu amor"
+    },
+    {
+      "inicio": 152.834,
+      "fim": 157.256,
+      "texto": "Nesse lugar Eu posso"
+    },
+    {
+      "inicio": 157.377,
+      "fim": 159.158,
+      "texto": "dizer"
+    },
+    {
+      "inicio": 159.838,
+      "fim": 164.841,
+      "texto": "Que estás dentro de mim Eu dentro de"
+    },
+    {
+      "inicio": 164.921,
+      "fim": 166.522,
+      "texto": "você"
+    },
+    {
+      "inicio": 167.382,
+      "fim": 169.984,
+      "texto": "Nesse lugar"
+    },
+    {
+      "inicio": 170.784,
+      "fim": 173.546,
+      "texto": "Eu posso dizer"
+    },
+    {
+      "inicio": 174.306,
+      "fim": 177.188,
+      "texto": "Que estás dentro de mim"
+    },
+    {
+      "inicio": 177.968,
+      "fim": 179.829,
+      "texto": "Eu dentro de você"
+    },
+    {
+      "inicio": 181.622,
+      "fim": 187.204,
+      "texto": "Eu dentro de você Eu dentro de você"
+    },
+    {
+      "inicio": 189.044,
+      "fim": 194.826,
+      "texto": "Eu dentro de você Eu dentro de você"
+    },
+    {
+      "inicio": 207.334,
+      "fim": 209.535,
+      "texto": "Que eu dentro de você"
+    },
+    {
+      "inicio": 211.096,
+      "fim": 215.578,
+      "texto": "Agora nós dois somos um"
+    },
+    {
+      "inicio": 218.44,
+      "fim": 222.962,
+      "texto": "Agora nós dois somos um"
+    },
+    {
+      "inicio": 225.764,
+      "fim": 229.546,
+      "texto": "Agora nós dois somos um"
+    },
+    {
+      "inicio": 233.042,
+      "fim": 236.806,
+      "texto": "Agora nós dois somos"
+    },
+    {
+      "inicio": 238.207,
+      "fim": 238.527,
+      "texto": "um"
+    }
+  ],
+  "avisos": [
+    "Segmento 2: alinhamento fraco em 'O'.",
+    "Segmento 4: alinhamento fraco em 'é'.",
+    "Segmento 4: alinhamento fraco em 'e'.",
+    "Segmento 4: alinhamento fraco em 'diz'.",
+    "Segmento 5: alinhamento fraco em 'do'.",
+    "Segmento 5: alinhamento fraco em 'meu'.",
+    "Segmento 5: alinhamento fraco em 'amor'."
+  ],
+  "revisao_recomendada": true,
+  "comparacao_letra": {
+    "similaridade_textual": 0.801909307875895,
+    "divergencias": [
+      {
+        "tipo": "replace",
+        "referencia": "mística",
+        "transcricao": "mistica"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "minh",
+        "transcricao": "minha"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "mística sublime",
+        "transcricao": "me se casou de mim"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "receber",
+        "transcricao": "recebeu"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "ter",
+        "transcricao": "der"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "teu",
+        "transcricao": "deus"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "oh",
+        "transcricao": ""
+      },
+      {
+        "tipo": "replace",
+        "referencia": "um",
+        "transcricao": "o"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "minh alma",
+        "transcricao": "me ama"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "pão",
+        "transcricao": "pau"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "e",
+        "transcricao": ""
+      },
+      {
+        "tipo": "delete",
+        "referencia": "e eu dentro de você e eu dentro de você e eu dentro de você e eu dentro de você e",
+        "transcricao": ""
+      },
+      {
+        "tipo": "delete",
+        "referencia": "e",
+        "transcricao": ""
+      },
+      {
+        "tipo": "delete",
+        "referencia": "e",
+        "transcricao": ""
+      },
+      {
+        "tipo": "replace",
+        "referencia": "e",
+        "transcricao": "eu dentro de você que"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "oh oh",
+        "transcricao": ""
+      },
+      {
+        "tipo": "delete",
+        "referencia": "um somos um somos um somos um eu e você só eu e você somos um somos um somos um somos um oh oh oh",
+        "transcricao": ""
+      }
+    ]
+  }
+}

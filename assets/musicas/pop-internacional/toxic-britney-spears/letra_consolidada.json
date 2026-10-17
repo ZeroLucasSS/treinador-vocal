@@ -1,0 +1,2625 @@
+{
+  "versao": 6,
+  "status": "pendente",
+  "estrategia": "preservar_corrigir_inserir",
+  "motor": "whisperx",
+  "duracao_audio": 198.925375,
+  "scores_sao_probabilidades": false,
+  "aprovacao_musical_automatica": false,
+  "parametros": {
+    "score_minimo": 0.3,
+    "janela_maxima": 180.0,
+    "segundos_busca_por_palavra": 3.0,
+    "janela_minima": 30.0,
+    "fragmento_sem_ancora_max_palavras": 2,
+    "fragmento_sem_ancora_max_segundos": 1.0,
+    "score_suporte_insercao": 0.1,
+    "atividade_minima_insercao": 0.2,
+    "margem": 0.4,
+    "margem_aplicada": false
+  },
+  "total_palavras_txt": 278,
+  "total_palavras_srt": 265,
+  "metricas": {
+    "palavras_publicadas": 271,
+    "blocos_srt_auditados": 29,
+    "blocos_srt_descartados": 0,
+    "blocos_texto_corrigido": 19,
+    "blocos_inseridos": 0,
+    "palavras_txt_sem_tempo": 107,
+    "palavras_txt_nao_pesquisadas": 37,
+    "palavras_txt_pesquisadas_sem_tempo": 70,
+    "palavras_conflito_original": 0,
+    "palavras_baixa_confianca": 0,
+    "tentativas_acusticas": 1
+  },
+  "comparacao": {
+    "consultas": [
+      {
+        "bloco_srt": 1,
+        "inicio": 14.21,
+        "fim": 19.633,
+        "txt_inicio": 0,
+        "txt_fim": 13,
+        "score": 1.0,
+        "texto": "Baby, can't you see I'm calling? A guy like you should wear a",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 2,
+        "inicio": 19.713,
+        "fim": 24.155,
+        "txt_inicio": 13,
+        "txt_fim": 18,
+        "score": 1.0,
+        "texto": "warning It's dangerous, I'm falling",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 3,
+        "inicio": 27.857,
+        "fim": 33.56,
+        "txt_inicio": 18,
+        "txt_fim": 31,
+        "score": 1.0,
+        "texto": "There's no escape, I can't wait I need a hit, baby, give me",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 4,
+        "inicio": 33.62,
+        "fim": 36.962,
+        "txt_inicio": 31,
+        "txt_fim": 37,
+        "score": 0.9841269841269842,
+        "texto": "it You're dangerous, I'm loving it",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 5,
+        "inicio": 41.066,
+        "fim": 46.069,
+        "txt_inicio": 37,
+        "txt_fim": 47,
+        "score": 0.8514851485148515,
+        "texto": "Too high, can't come down Losin' my head, spinnin' 'round",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 6,
+        "inicio": 46.77,
+        "fim": 47.81,
+        "txt_inicio": 47,
+        "txt_fim": 49,
+        "score": 1.0,
+        "texto": "and 'round",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 7,
+        "inicio": 49.391,
+        "fim": 50.872,
+        "txt_inicio": 49,
+        "txt_fim": 54,
+        "score": 1.0,
+        "texto": "Do you feel me now?",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 8,
+        "inicio": 56.996,
+        "fim": 60.358,
+        "txt_inicio": 54,
+        "txt_fim": 64,
+        "score": 0.8888888888888888,
+        "texto": "With the taste of your lips, I'm on a ride",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 9,
+        "inicio": 61.166,
+        "fim": 66.952,
+        "txt_inicio": 64,
+        "txt_fim": 76,
+        "score": 0.859504132231405,
+        "texto": "You're toxic, I'm slippin' under With a taste of the poison, paradise",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 10,
+        "inicio": 67.132,
+        "fim": 70.956,
+        "txt_inicio": 76,
+        "txt_fim": 86,
+        "score": 1.0,
+        "texto": "I'm addicted to you, don't you know that you're toxic?",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 11,
+        "inicio": 73.818,
+        "fim": 77.662,
+        "txt_inicio": 86,
+        "txt_fim": 98,
+        "score": 1.0,
+        "texto": "And I love what you do, don't you know that you're toxic?",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 12,
+        "inicio": 84.909,
+        "fim": 85.93,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Let's get a name",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
+      },
+      {
+        "bloco_srt": 13,
+        "inicio": 86.578,
+        "fim": 92.541,
+        "txt_inicio": 101,
+        "txt_fim": 114,
+        "score": 0.8141592920353982,
+        "texto": "to give you up I took a sip from a devil's cup Slowly,",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 14,
+        "inicio": 92.561,
+        "fim": 94.622,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "it's taking over me Do I",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 15,
+        "inicio": 98.104,
+        "fim": 104.008,
+        "txt_inicio": 120,
+        "txt_fim": 131,
+        "score": 0.9010989010989011,
+        "texto": "can't come down It's in the air and it's all around",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 16,
+        "inicio": 104.048,
+        "fim": 104.548,
+        "txt_inicio": 131,
+        "txt_fim": 132,
+        "score": 1.0,
+        "texto": "Can",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 17,
+        "inicio": 106.469,
+        "fim": 107.39,
+        "txt_inicio": 2,
+        "txt_fim": 5,
+        "score": 0.6666666666666667,
+        "texto": "you see I'm",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 18,
+        "inicio": 114.05,
+        "fim": 117.513,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Ooh, the taste of your lips and I'm on a ride",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 19,
+        "inicio": 118.213,
+        "fim": 123.997,
+        "txt_inicio": 194,
+        "txt_fim": 206,
+        "score": 0.912,
+        "texto": "You're toxic, I'm slippin' under With the taste of a poison, paradise",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 20,
+        "inicio": 124.177,
+        "fim": 128.04,
+        "txt_inicio": 206,
+        "txt_fim": 216,
+        "score": 1.0,
+        "texto": "I'm addicted to you, don't you know that you're toxic?",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 21,
+        "inicio": 130.882,
+        "fim": 134.745,
+        "txt_inicio": 168,
+        "txt_fim": 180,
+        "score": 1.0,
+        "texto": "And I love what you do, don't you know that you're toxic?",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 22,
+        "inicio": 139.248,
+        "fim": 140.829,
+        "txt_inicio": 180,
+        "txt_fim": 186,
+        "score": 1.0,
+        "texto": "Don't you know that you're toxic?",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 23,
+        "inicio": 168.158,
+        "fim": 172.201,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "I'm addicted to you, don't you know that you're toxic I'm addicted to",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 24,
+        "inicio": 172.221,
+        "fim": 175.904,
+        "txt_inicio": 161,
+        "txt_fim": 176,
+        "score": 0.84375,
+        "texto": "you, don't you know that you're toxic? And I love what you do, don't you",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 25,
+        "inicio": 175.924,
+        "fim": 180.668,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "know that you're toxic I'm addicted to you, don't you know that you're",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 26,
+        "inicio": 180.688,
+        "fim": 185.632,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "toxic I'm addicted to you, don't you know that you're toxic I'm addicted",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 27,
+        "inicio": 185.672,
+        "fim": 189.576,
+        "txt_inicio": 160,
+        "txt_fim": 176,
+        "score": 0.8507462686567164,
+        "texto": "to you, don't you know that you're toxic? And I love what you do, don't you",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 28,
+        "inicio": 189.596,
+        "fim": 194.199,
+        "txt_inicio": 176,
+        "txt_fim": 185,
+        "score": 0.8288288288288288,
+        "texto": "know that you're toxic? Don't you know that you're",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 29,
+        "inicio": 194.239,
+        "fim": 194.56,
+        "txt_inicio": 185,
+        "txt_fim": 186,
+        "score": 1.0,
+        "texto": "toxic?",
+        "aviso": null
+      }
+    ],
+    "regioes": [
+      {
+        "indices": [
+          0
+        ],
+        "inicio": 14.21,
+        "fim": 19.633,
+        "txt_inicio": 0,
+        "txt_fim": 13,
+        "texto": "Baby, can't you see I'm calling? A guy like you should wear a"
+      },
+      {
+        "indices": [
+          1
+        ],
+        "inicio": 19.713,
+        "fim": 24.155,
+        "txt_inicio": 13,
+        "txt_fim": 18,
+        "texto": "warning It's dangerous, I'm falling"
+      },
+      {
+        "indices": [
+          2
+        ],
+        "inicio": 27.857,
+        "fim": 33.56,
+        "txt_inicio": 18,
+        "txt_fim": 31,
+        "texto": "There's no escape, I can't wait I need a hit, baby, give me"
+      },
+      {
+        "indices": [
+          3
+        ],
+        "inicio": 33.62,
+        "fim": 36.962,
+        "txt_inicio": 31,
+        "txt_fim": 37,
+        "texto": "it You're dangerous, I'm loving it"
+      },
+      {
+        "indices": [
+          4
+        ],
+        "inicio": 41.066,
+        "fim": 46.069,
+        "txt_inicio": 37,
+        "txt_fim": 47,
+        "texto": "Too high, can't come down Losin' my head, spinnin' 'round"
+      },
+      {
+        "indices": [
+          5
+        ],
+        "inicio": 46.77,
+        "fim": 47.81,
+        "txt_inicio": 47,
+        "txt_fim": 49,
+        "texto": "and 'round"
+      },
+      {
+        "indices": [
+          6
+        ],
+        "inicio": 49.391,
+        "fim": 50.872,
+        "txt_inicio": 49,
+        "txt_fim": 54,
+        "texto": "Do you feel me now?"
+      },
+      {
+        "indices": [
+          7
+        ],
+        "inicio": 56.996,
+        "fim": 60.358,
+        "txt_inicio": 54,
+        "txt_fim": 64,
+        "texto": "With the taste of your lips, I'm on a ride"
+      },
+      {
+        "indices": [
+          8
+        ],
+        "inicio": 61.166,
+        "fim": 66.952,
+        "txt_inicio": 64,
+        "txt_fim": 76,
+        "texto": "You're toxic, I'm slippin' under With a taste of the poison, paradise"
+      },
+      {
+        "indices": [
+          9
+        ],
+        "inicio": 67.132,
+        "fim": 70.956,
+        "txt_inicio": 76,
+        "txt_fim": 86,
+        "texto": "I'm addicted to you, don't you know that you're toxic?"
+      },
+      {
+        "indices": [
+          10
+        ],
+        "inicio": 73.818,
+        "fim": 77.662,
+        "txt_inicio": 86,
+        "txt_fim": 98,
+        "texto": "And I love what you do, don't you know that you're toxic?"
+      },
+      {
+        "indices": [
+          11
+        ],
+        "inicio": 84.909,
+        "fim": 85.93,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Let's get a name"
+      },
+      {
+        "indices": [
+          12
+        ],
+        "inicio": 86.578,
+        "fim": 92.541,
+        "txt_inicio": 101,
+        "txt_fim": 114,
+        "texto": "to give you up I took a sip from a devil's cup Slowly,"
+      },
+      {
+        "indices": [
+          13
+        ],
+        "inicio": 92.561,
+        "fim": 94.622,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "it's taking over me Do I"
+      },
+      {
+        "indices": [
+          14
+        ],
+        "inicio": 98.104,
+        "fim": 104.008,
+        "txt_inicio": 120,
+        "txt_fim": 131,
+        "texto": "can't come down It's in the air and it's all around"
+      },
+      {
+        "indices": [
+          15
+        ],
+        "inicio": 104.048,
+        "fim": 104.548,
+        "txt_inicio": 131,
+        "txt_fim": 132,
+        "texto": "Can"
+      },
+      {
+        "indices": [
+          16
+        ],
+        "inicio": 106.469,
+        "fim": 107.39,
+        "txt_inicio": 2,
+        "txt_fim": 5,
+        "texto": "you see I'm"
+      },
+      {
+        "indices": [
+          17
+        ],
+        "inicio": 114.05,
+        "fim": 117.513,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Ooh, the taste of your lips and I'm on a ride"
+      },
+      {
+        "indices": [
+          18
+        ],
+        "inicio": 118.213,
+        "fim": 123.997,
+        "txt_inicio": 194,
+        "txt_fim": 206,
+        "texto": "You're toxic, I'm slippin' under With the taste of a poison, paradise"
+      },
+      {
+        "indices": [
+          19
+        ],
+        "inicio": 124.177,
+        "fim": 128.04,
+        "txt_inicio": 206,
+        "txt_fim": 216,
+        "texto": "I'm addicted to you, don't you know that you're toxic?"
+      },
+      {
+        "indices": [
+          20
+        ],
+        "inicio": 130.882,
+        "fim": 134.745,
+        "txt_inicio": 168,
+        "txt_fim": 180,
+        "texto": "And I love what you do, don't you know that you're toxic?"
+      },
+      {
+        "indices": [
+          21
+        ],
+        "inicio": 139.248,
+        "fim": 140.829,
+        "txt_inicio": 180,
+        "txt_fim": 186,
+        "texto": "Don't you know that you're toxic?"
+      },
+      {
+        "indices": [
+          22
+        ],
+        "inicio": 168.158,
+        "fim": 172.201,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "I'm addicted to you, don't you know that you're toxic I'm addicted to"
+      },
+      {
+        "indices": [
+          23
+        ],
+        "inicio": 172.221,
+        "fim": 175.904,
+        "txt_inicio": 161,
+        "txt_fim": 176,
+        "texto": "you, don't you know that you're toxic? And I love what you do, don't you"
+      },
+      {
+        "indices": [
+          24
+        ],
+        "inicio": 175.924,
+        "fim": 180.668,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "know that you're toxic I'm addicted to you, don't you know that you're"
+      },
+      {
+        "indices": [
+          25
+        ],
+        "inicio": 180.688,
+        "fim": 185.632,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "toxic I'm addicted to you, don't you know that you're toxic I'm addicted"
+      },
+      {
+        "indices": [
+          26
+        ],
+        "inicio": 185.672,
+        "fim": 189.576,
+        "txt_inicio": 160,
+        "txt_fim": 176,
+        "texto": "to you, don't you know that you're toxic? And I love what you do, don't you"
+      },
+      {
+        "indices": [
+          27
+        ],
+        "inicio": 189.596,
+        "fim": 194.199,
+        "txt_inicio": 176,
+        "txt_fim": 185,
+        "texto": "know that you're toxic? Don't you know that you're"
+      },
+      {
+        "indices": [
+          28
+        ],
+        "inicio": 194.239,
+        "fim": 194.56,
+        "txt_inicio": 185,
+        "txt_fim": 186,
+        "texto": "toxic?"
+      }
+    ],
+    "tokens_txt_sem_correspondencia": [
+      98,
+      99,
+      100,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244,
+      245,
+      246,
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258,
+      259,
+      260,
+      261,
+      262,
+      263,
+      264,
+      265,
+      266,
+      267,
+      268,
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      275,
+      276,
+      277
+    ],
+    "parametros": {
+      "score_consulta_minimo": 0.65,
+      "margem_ambiguidade": 0.025,
+      "bonus_por_extremidade": 0.02,
+      "score_contexto_minimo": 0.85,
+      "distancia_max_palavra_isolada": 3.0,
+      "palavra_isolada_exige_exatidao": true
+    }
+  },
+  "auditoria_estrutura": [
+    {
+      "bloco_srt": 1,
+      "inicio_original": 14.21,
+      "fim_original": 19.633,
+      "texto_original": "Baby can't you see I'm calling A guy like you should wear a",
+      "texto_publicado": "Baby, can't you see i'm calling? a guy like you should wear a",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 2,
+      "inicio_original": 19.713,
+      "fim_original": 24.155,
+      "texto_original": "warning It's dangerous I'm falling",
+      "texto_publicado": "Warning it's dangerous, i'm falling",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 3,
+      "inicio_original": 27.857,
+      "fim_original": 33.56,
+      "texto_original": "There's no escape I can't wait I need a hit Baby give me",
+      "texto_publicado": "There's no escape, i can't wait i need a hit, baby, give me",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 4,
+      "inicio_original": 33.62,
+      "fim_original": 36.962,
+      "texto_original": "hit You're dangerous I'm loving it",
+      "texto_publicado": "It you're dangerous, i'm loving it",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 5,
+      "inicio_original": 41.066,
+      "fim_original": 46.069,
+      "texto_original": "Too high, can't calm down Losing my hands in a round",
+      "texto_publicado": "Too high, can't come down losin' my head, spinnin' 'round",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 6,
+      "inicio_original": 46.77,
+      "fim_original": 47.81,
+      "texto_original": "and round",
+      "texto_publicado": "And 'round",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 7,
+      "inicio_original": 49.391,
+      "fim_original": 50.872,
+      "texto_original": "Do you feel me now?",
+      "texto_publicado": "Do you feel me now?",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 8,
+      "inicio_original": 56.996,
+      "fim_original": 60.358,
+      "texto_original": "Ooh, the taste of your lips, I'm on the ride",
+      "texto_publicado": "With the taste of your lips, i'm on a ride",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 9,
+      "inicio_original": 61.166,
+      "fim_original": 66.952,
+      "texto_original": "You're toxic and slipping under Taste of a poison paradise",
+      "texto_publicado": "You're toxic, i'm slippin' under with a taste of the poison, paradise",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 10,
+      "inicio_original": 67.132,
+      "fim_original": 70.956,
+      "texto_original": "I'm addicted to you Don't you know that you're toxic?",
+      "texto_publicado": "I'm addicted to you, don't you know that you're toxic?",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 11,
+      "inicio_original": 73.818,
+      "fim_original": 77.662,
+      "texto_original": "And I love what you do Don't you know that you're toxic?",
+      "texto_publicado": "And i love what you do, don't you know that you're toxic?",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 12,
+      "inicio_original": 84.909,
+      "fim_original": 85.93,
+      "texto_original": "Let's get a name",
+      "texto_publicado": "Let's get a name",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 13,
+      "inicio_original": 86.578,
+      "fim_original": 92.541,
+      "texto_original": "To give you love, I took a step from my devil's cloud So lonely,",
+      "texto_publicado": "To give you up i took a sip from a devil's cup slowly,",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 14,
+      "inicio_original": 92.561,
+      "fim_original": 94.622,
+      "texto_original": "it's taking over me Do I",
+      "texto_publicado": "It's taking over me do i",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 15,
+      "inicio_original": 98.104,
+      "fim_original": 104.008,
+      "texto_original": "can't come down? Is it the end? It's all around",
+      "texto_publicado": "Can't come down it's in the air and it's all around",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 16,
+      "inicio_original": 104.048,
+      "fim_original": 104.548,
+      "texto_original": "Can",
+      "texto_publicado": "Can",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 17,
+      "inicio_original": 106.469,
+      "fim_original": 107.39,
+      "texto_original": "you believe it?",
+      "texto_publicado": "You see i'm",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 18,
+      "inicio_original": 114.05,
+      "fim_original": 117.513,
+      "texto_original": "Ooh, the taste of your lips and I'm on a ride",
+      "texto_publicado": "Ooh, the taste of your lips and i'm on a ride",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 19,
+      "inicio_original": 118.213,
+      "fim_original": 123.997,
+      "texto_original": "You're toxic and slipping under The taste of a poison paradise",
+      "texto_publicado": "You're toxic, i'm slippin' under with the taste of a poison, paradise",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 20,
+      "inicio_original": 124.177,
+      "fim_original": 128.04,
+      "texto_original": "I'm addicted to you Don't you know that you're toxic?",
+      "texto_publicado": "I'm addicted to you, don't you know that you're toxic?",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 21,
+      "inicio_original": 130.882,
+      "fim_original": 134.745,
+      "texto_original": "And I love what you do Don't you know that you're toxic?",
+      "texto_publicado": "And i love what you do, don't you know that you're toxic?",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 22,
+      "inicio_original": 139.248,
+      "fim_original": 140.829,
+      "texto_original": "Don't you know that you're toxic?",
+      "texto_publicado": "Don't you know that you're toxic?",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 23,
+      "inicio_original": 168.158,
+      "fim_original": 172.201,
+      "texto_original": "I'm addicted to you, don't you know that you're toxic I'm addicted to",
+      "texto_publicado": "I'm addicted to you, don't you know that you're toxic i'm addicted to",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 24,
+      "inicio_original": 172.221,
+      "fim_original": 175.904,
+      "texto_original": "you, don't you know that you're toxic I'm addicted to you, don't you",
+      "texto_publicado": "You, don't you know that you're toxic? and i love what you do, don't you",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 25,
+      "inicio_original": 175.924,
+      "fim_original": 180.668,
+      "texto_original": "know that you're toxic I'm addicted to you, don't you know that you're",
+      "texto_publicado": "Know that you're toxic i'm addicted to you, don't you know that you're",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 26,
+      "inicio_original": 180.688,
+      "fim_original": 185.632,
+      "texto_original": "toxic I'm addicted to you, don't you know that you're toxic I'm addicted",
+      "texto_publicado": "Toxic i'm addicted to you, don't you know that you're toxic i'm addicted",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 27,
+      "inicio_original": 185.672,
+      "fim_original": 189.576,
+      "texto_original": "to you, don't you know that you're toxic I'm addicted to you, don't you",
+      "texto_publicado": "To you, don't you know that you're toxic? and i love what you do, don't you",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 28,
+      "inicio_original": 189.596,
+      "fim_original": 194.199,
+      "texto_original": "know that you're toxic I'm addicted to you, don't you know that you're",
+      "texto_publicado": "Know that you're toxic i'm addicted to you, don't you know that you're",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 29,
+      "inicio_original": 194.239,
+      "fim_original": 194.56,
+      "texto_original": "toxic",
+      "texto_publicado": "Toxic?",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    }
+  ],
+  "recuperacoes": [
+    {
+      "id": 1,
+      "txt_inicio": 186,
+      "txt_fim": 278,
+      "inicio": 194.56,
+      "fim": 198.925375,
+      "bloco_anterior": 29,
+      "bloco_seguinte": null,
+      "ocupados": [],
+      "limite_busca": 180.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "pesquisado_sem_confirmacao",
+      "tentativas": [
+        {
+          "janela": [
+            194.56,
+            198.925375
+          ],
+          "texto": "Taste of your lips, I'm on a ride\nYou're toxic, I'm slippin' under\nWith the taste of a poison, paradise\nI'm addicted to you, don't you know that you're toxic?\nWith the taste of your lips, I'm on a ride\nYou're toxic, I'm slippin' under (toxic)\nWith the taste of the poison, paradise\nI'm addicted to you, don't you know that you're toxic?\nIntoxicate me now, with your lovin' now\nI think I'm ready now (I think I'm ready now)\nIntoxicate me now, with your lovin' now\nI think I'm ready now",
+          "palavras": [
+            {
+              "texto": "Taste",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "of",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "your",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "lips",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "I'm",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "on",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "a",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "ride",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "You're",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "toxic",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "I'm",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "slippin",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "under",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "With",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "the",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "taste",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "of",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "a",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "poison",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "paradise",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "I'm",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "addicted",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "to",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "you",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "don't",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "you",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "know",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "that",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "you're",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "toxic",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "With",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "the",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "taste",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "of",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "your",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "lips",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "I'm",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "on",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "a",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "ride",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "You're",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "toxic",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "I'm",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "slippin",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "under",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "toxic",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "With",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "the",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "taste",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "of",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "the",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "poison",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "paradise",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "I'm",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "addicted",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "to",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "you",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "don't",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "you",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "know",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "that",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "you're",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "toxic",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "Intoxicate",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "me",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "now",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "with",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "your",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "lovin",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "now",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "I",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "think",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "I'm",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "ready",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "now",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "I",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "think",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "I'm",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "ready",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "now",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "Intoxicate",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "me",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "now",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "with",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "your",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "lovin",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "now",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "I",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "think",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "I'm",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "ready",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "now",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            }
+          ]
+        }
+      ],
+      "inseridos": [],
+      "tokens_recuperados": [],
+      "texto": "Taste of your lips, I'm on a ride You're toxic, I'm slippin' under With the taste of a poison, paradise I'm addicted to you, don't you know that you're toxic? With the taste of your lips, I'm on a ride You're toxic, I'm slippin' under (toxic) With the taste of the poison, paradise I'm addicted to you, don't you know that you're toxic? Intoxicate me now, with your lovin' now I think I'm ready now (I think I'm ready now) Intoxicate me now, with your lovin' now I think I'm ready now"
+    }
+  ],
+  "tentativas": [
+    {
+      "janela": [
+        194.56,
+        198.925375
+      ],
+      "texto": "Taste of your lips, I'm on a ride\nYou're toxic, I'm slippin' under\nWith the taste of a poison, paradise\nI'm addicted to you, don't you know that you're toxic?\nWith the taste of your lips, I'm on a ride\nYou're toxic, I'm slippin' under (toxic)\nWith the taste of the poison, paradise\nI'm addicted to you, don't you know that you're toxic?\nIntoxicate me now, with your lovin' now\nI think I'm ready now (I think I'm ready now)\nIntoxicate me now, with your lovin' now\nI think I'm ready now",
+      "palavras": [
+        {
+          "texto": "Taste",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "of",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "your",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "lips",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "I'm",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "on",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "a",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "ride",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "You're",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "toxic",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "I'm",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "slippin",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "under",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "With",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "the",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "taste",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "of",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "a",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "poison",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "paradise",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "I'm",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "addicted",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "to",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "you",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "don't",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "you",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "know",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "that",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "you're",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "toxic",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "With",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "the",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "taste",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "of",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "your",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "lips",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "I'm",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "on",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "a",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "ride",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "You're",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "toxic",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "I'm",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "slippin",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "under",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "toxic",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "With",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "the",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "taste",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "of",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "the",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "poison",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "paradise",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "I'm",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "addicted",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "to",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "you",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "don't",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "you",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "know",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "that",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "you're",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "toxic",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "Intoxicate",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "me",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "now",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "with",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "your",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "lovin",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "now",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "I",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "think",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "I'm",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "ready",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "now",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "I",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "think",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "I'm",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "ready",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "now",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "Intoxicate",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "me",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "now",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "with",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "your",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "lovin",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "now",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "I",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "think",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "I'm",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "ready",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "now",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        }
+      ],
+      "lacuna": 1
+    }
+  ],
+  "pendencias": [
+    {
+      "bloco_srt": 12,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 14,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 18,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 23,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 25,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 26,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 28,
+      "motivo": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "lacuna": 1,
+      "motivo": "pesquisado_sem_confirmacao",
+      "detalhe": null
+    },
+    {
+      "motivo": "texto_txt_sem_tempo",
+      "tokens_txt": [
+        98,
+        99,
+        100,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277
+      ]
+    }
+  ],
+  "blocos": [
+    {
+      "inicio": 14.21,
+      "fim": 19.633,
+      "texto": "Baby, can't you see i'm calling? a guy like you should wear a",
+      "origem": "texto_corrigido",
+      "bloco_original": 1
+    },
+    {
+      "inicio": 19.713,
+      "fim": 24.155,
+      "texto": "Warning it's dangerous, i'm falling",
+      "origem": "texto_corrigido",
+      "bloco_original": 2
+    },
+    {
+      "inicio": 27.857,
+      "fim": 33.56,
+      "texto": "There's no escape, i can't wait i need a hit, baby, give me",
+      "origem": "texto_corrigido",
+      "bloco_original": 3
+    },
+    {
+      "inicio": 33.62,
+      "fim": 36.962,
+      "texto": "It you're dangerous, i'm loving it",
+      "origem": "texto_corrigido",
+      "bloco_original": 4
+    },
+    {
+      "inicio": 41.066,
+      "fim": 46.069,
+      "texto": "Too high, can't come down losin' my head, spinnin' 'round",
+      "origem": "texto_corrigido",
+      "bloco_original": 5
+    },
+    {
+      "inicio": 46.77,
+      "fim": 47.81,
+      "texto": "And 'round",
+      "origem": "texto_corrigido",
+      "bloco_original": 6
+    },
+    {
+      "inicio": 49.391,
+      "fim": 50.872,
+      "texto": "Do you feel me now?",
+      "origem": "original_preservado",
+      "bloco_original": 7
+    },
+    {
+      "inicio": 56.996,
+      "fim": 60.358,
+      "texto": "With the taste of your lips, i'm on a ride",
+      "origem": "texto_corrigido",
+      "bloco_original": 8
+    },
+    {
+      "inicio": 61.166,
+      "fim": 66.952,
+      "texto": "You're toxic, i'm slippin' under with a taste of the poison, paradise",
+      "origem": "texto_corrigido",
+      "bloco_original": 9
+    },
+    {
+      "inicio": 67.132,
+      "fim": 70.956,
+      "texto": "I'm addicted to you, don't you know that you're toxic?",
+      "origem": "texto_corrigido",
+      "bloco_original": 10
+    },
+    {
+      "inicio": 73.818,
+      "fim": 77.662,
+      "texto": "And i love what you do, don't you know that you're toxic?",
+      "origem": "texto_corrigido",
+      "bloco_original": 11
+    },
+    {
+      "inicio": 84.909,
+      "fim": 85.93,
+      "texto": "Let's get a name",
+      "origem": "original_preservado",
+      "bloco_original": 12
+    },
+    {
+      "inicio": 86.578,
+      "fim": 92.541,
+      "texto": "To give you up i took a sip from a devil's cup slowly,",
+      "origem": "texto_corrigido",
+      "bloco_original": 13
+    },
+    {
+      "inicio": 92.561,
+      "fim": 94.622,
+      "texto": "It's taking over me do i",
+      "origem": "original_preservado",
+      "bloco_original": 14
+    },
+    {
+      "inicio": 98.104,
+      "fim": 104.008,
+      "texto": "Can't come down it's in the air and it's all around",
+      "origem": "texto_corrigido",
+      "bloco_original": 15
+    },
+    {
+      "inicio": 104.048,
+      "fim": 104.548,
+      "texto": "Can",
+      "origem": "original_preservado",
+      "bloco_original": 16
+    },
+    {
+      "inicio": 106.469,
+      "fim": 107.39,
+      "texto": "You see i'm",
+      "origem": "texto_corrigido",
+      "bloco_original": 17
+    },
+    {
+      "inicio": 114.05,
+      "fim": 117.513,
+      "texto": "Ooh, the taste of your lips and i'm on a ride",
+      "origem": "original_preservado",
+      "bloco_original": 18
+    },
+    {
+      "inicio": 118.213,
+      "fim": 123.997,
+      "texto": "You're toxic, i'm slippin' under with the taste of a poison, paradise",
+      "origem": "texto_corrigido",
+      "bloco_original": 19
+    },
+    {
+      "inicio": 124.177,
+      "fim": 128.04,
+      "texto": "I'm addicted to you, don't you know that you're toxic?",
+      "origem": "texto_corrigido",
+      "bloco_original": 20
+    },
+    {
+      "inicio": 130.882,
+      "fim": 134.745,
+      "texto": "And i love what you do, don't you know that you're toxic?",
+      "origem": "texto_corrigido",
+      "bloco_original": 21
+    },
+    {
+      "inicio": 139.248,
+      "fim": 140.829,
+      "texto": "Don't you know that you're toxic?",
+      "origem": "original_preservado",
+      "bloco_original": 22
+    },
+    {
+      "inicio": 168.158,
+      "fim": 172.201,
+      "texto": "I'm addicted to you, don't you know that you're toxic i'm addicted to",
+      "origem": "original_preservado",
+      "bloco_original": 23
+    },
+    {
+      "inicio": 172.221,
+      "fim": 175.904,
+      "texto": "You, don't you know that you're toxic? and i love what you do, don't you",
+      "origem": "texto_corrigido",
+      "bloco_original": 24
+    },
+    {
+      "inicio": 175.924,
+      "fim": 180.668,
+      "texto": "Know that you're toxic i'm addicted to you, don't you know that you're",
+      "origem": "original_preservado",
+      "bloco_original": 25
+    },
+    {
+      "inicio": 180.688,
+      "fim": 185.632,
+      "texto": "Toxic i'm addicted to you, don't you know that you're toxic i'm addicted",
+      "origem": "original_preservado",
+      "bloco_original": 26
+    },
+    {
+      "inicio": 185.672,
+      "fim": 189.576,
+      "texto": "To you, don't you know that you're toxic? and i love what you do, don't you",
+      "origem": "texto_corrigido",
+      "bloco_original": 27
+    },
+    {
+      "inicio": 189.596,
+      "fim": 194.199,
+      "texto": "Know that you're toxic i'm addicted to you, don't you know that you're",
+      "origem": "original_preservado",
+      "bloco_original": 28
+    },
+    {
+      "inicio": 194.239,
+      "fim": 194.56,
+      "texto": "Toxic?",
+      "origem": "texto_corrigido",
+      "bloco_original": 29
+    }
+  ],
+  "configuracao_motor": {
+    "idioma": "auto",
+    "dispositivo": "cpu",
+    "modelo_solicitado": null,
+    "selecao_por_trecho": [
+      {
+        "inicio": 194.56,
+        "fim": 198.925375,
+        "linhas": [
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 4,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 2,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 3,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 6,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 6,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 2,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 4,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 6,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 3,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 4,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 3,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 2,
+            "herdado": false
+          }
+        ]
+      }
+    ]
+  },
+  "fontes": {
+    "txt": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\pop-internacional\\toxic-britney-spears\\letra.txt",
+      "sha256": "5e5a3752e85b8725e7b548853500f99aef5971e3d10bef03c159f465f58b44b0"
+    },
+    "srt": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\pop-internacional\\toxic-britney-spears\\letra.srt",
+      "sha256": "3adae525e368c84f9b8ae5a2997b924d19b0292f71ccd594750675a111f21f9c"
+    },
+    "voz": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\pop-internacional\\toxic-britney-spears\\voz.mp3",
+      "sha256": "f79fcee40a79eebb053a31c1f25e5387d09362f522f546cb49bcbc1094aebffc"
+    }
+  },
+  "resumo_avisos": [
+    "Bloco 12: texto exclusivo srt exige revisao.",
+    "Bloco 14: consulta txt ambigua original preservado.",
+    "Bloco 18: consulta txt ambigua original preservado.",
+    "Bloco 23: consulta txt ambigua original preservado.",
+    "Bloco 25: consulta txt ambigua original preservado.",
+    "Bloco 26: consulta txt ambigua original preservado.",
+    "Bloco 28: texto exclusivo srt preservado.",
+    "Lacuna 1: pesquisado sem confirmacao (00:03:14,560–00:03:18,925).",
+    "TXT linha 15, sem tempo: It's getting late",
+    "TXT linha 17, sem tempo: it's taking over me",
+    "TXT linha 18, sem tempo: Too high",
+    "TXT linha 20, sem tempo: you feel me now",
+    "TXT linha 21, sem tempo: With the taste of your lips I'm on a ride",
+    "TXT linha 22, sem tempo: You're toxic I'm slippin under",
+    "TXT linha 23, sem tempo: With the taste of the poison paradise",
+    "TXT linha 24, sem tempo: I'm addicted",
+    "TXT linha 27, sem tempo: Taste of your lips I'm on a ride",
+    "TXT linha 31, sem tempo: With the taste of your lips I'm on a ride",
+    "TXT linha 32, sem tempo: You're toxic I'm slippin under toxic",
+    "TXT linha 33, sem tempo: With the taste of the poison paradise",
+    "TXT linha 34, sem tempo: I'm addicted to you don't you know that you're toxic",
+    "TXT linha 35, sem tempo: Intoxicate me now with your lovin now",
+    "TXT linha 36, sem tempo: I think I'm ready now I think I'm ready now",
+    "TXT linha 37, sem tempo: Intoxicate me now with your lovin now",
+    "TXT linha 38, sem tempo: I think I'm ready now"
+  ]
+}

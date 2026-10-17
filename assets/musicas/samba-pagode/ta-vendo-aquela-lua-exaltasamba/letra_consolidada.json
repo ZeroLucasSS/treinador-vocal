@@ -1,5 +1,5 @@
 {
-  "versao": 5,
+  "versao": 6,
   "status": "pendente",
   "estrategia": "preservar_corrigir_inserir",
   "motor": "whisperx",
@@ -8,626 +8,401 @@
   "aprovacao_musical_automatica": false,
   "parametros": {
     "score_minimo": 0.3,
-    "janela_maxima": 90.0,
+    "janela_maxima": 180.0,
+    "segundos_busca_por_palavra": 3.0,
+    "janela_minima": 30.0,
+    "fragmento_sem_ancora_max_palavras": 2,
+    "fragmento_sem_ancora_max_segundos": 1.0,
     "score_suporte_insercao": 0.1,
     "atividade_minima_insercao": 0.2,
     "margem": 0.4,
     "margem_aplicada": false
   },
   "total_palavras_txt": 469,
-  "total_palavras_srt": 464,
+  "total_palavras_srt": 461,
   "metricas": {
-    "palavras_publicadas": 464,
-    "blocos_srt_auditados": 60,
+    "palavras_publicadas": 466,
+    "blocos_srt_auditados": 37,
     "blocos_srt_descartados": 0,
-    "blocos_texto_corrigido": 2,
+    "blocos_texto_corrigido": 24,
     "blocos_inseridos": 0,
-    "palavras_txt_sem_tempo": 29,
-    "palavras_txt_nao_pesquisadas": 29,
-    "palavras_txt_pesquisadas_sem_tempo": 0,
+    "palavras_txt_sem_tempo": 129,
+    "palavras_txt_nao_pesquisadas": 58,
+    "palavras_txt_pesquisadas_sem_tempo": 71,
+    "palavras_conflito_original": 0,
     "palavras_baixa_confianca": 0,
-    "tentativas_acusticas": 0
+    "tentativas_acusticas": 1
   },
   "comparacao": {
     "consultas": [
       {
         "bloco_srt": 1,
-        "inicio": 10.56,
-        "fim": 13.38,
-        "txt_inicio": 0,
-        "txt_fim": 8,
-        "score": 1.0,
-        "texto": "Te filmando, eu tava quieto no meu canto",
-        "aviso": null
+        "inicio": 11.106,
+        "fim": 15.47,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Estive filmando, eu tava quieto no meu canto, cabelo bem cortado e filme",
+        "aviso": "consulta_txt_ambigua_original_preservado"
       },
       {
         "bloco_srt": 2,
-        "inicio": 13.38,
-        "fim": 17.82,
-        "txt_inicio": 8,
-        "txt_fim": 16,
+        "inicio": 15.59,
+        "fim": 20.694,
+        "txt_inicio": 12,
+        "txt_fim": 27,
         "score": 1.0,
-        "texto": "Cabelo bem cortado, perfume exalando Daquele jeito que",
+        "texto": "exalando Daquele jeito que eu sei que você gosta Mas eu te dei um papo",
         "aviso": null
       },
       {
         "bloco_srt": 3,
-        "inicio": 17.82,
-        "fim": 19.82,
-        "txt_inicio": 16,
-        "txt_fim": 24,
-        "score": 1.0,
-        "texto": "eu sei que você gosta Mas eu te",
+        "inicio": 20.714,
+        "fim": 26.359,
+        "txt_inicio": 27,
+        "txt_fim": 43,
+        "score": 0.9696969696969697,
+        "texto": "e você nem deu resposta Tudo bem um dia vai e o outro vem Você deve",
         "aviso": null
       },
       {
         "bloco_srt": 4,
-        "inicio": 19.82,
-        "fim": 22.1,
-        "txt_inicio": 24,
-        "txt_fim": 32,
+        "inicio": 26.399,
+        "fim": 31.143,
+        "txt_inicio": 43,
+        "txt_fim": 55,
         "score": 1.0,
-        "texto": "dei um papo e você nem deu resposta",
+        "texto": "estar pensando em outro alguém Mas se ele te merecesse não estaria",
         "aviso": null
       },
       {
         "bloco_srt": 5,
-        "inicio": 22.1,
-        "fim": 24.86,
-        "txt_inicio": 32,
-        "txt_fim": 40,
+        "inicio": 31.203,
+        "fim": 33.185,
+        "txt_inicio": 55,
+        "txt_fim": 59,
         "score": 1.0,
-        "texto": "Tudo bem um dia vai e o outro",
+        "texto": "aqui (Não, não, não)",
         "aviso": null
       },
       {
         "bloco_srt": 6,
-        "inicio": 24.86,
-        "fim": 28.3,
-        "txt_inicio": 40,
-        "txt_fim": 48,
-        "score": 1.0,
-        "texto": "vem Você deve estar pensando em outro alguém",
+        "inicio": 34.558,
+        "fim": 40.479,
+        "txt_inicio": 59,
+        "txt_fim": 73,
+        "score": 0.9787234042553191,
+        "texto": "Ou talvez você não queira se envolver Magoada, tá com medo de sofrer Se",
         "aviso": null
       },
       {
         "bloco_srt": 7,
-        "inicio": 28.3,
-        "fim": 32.08,
-        "txt_inicio": 48,
-        "txt_fim": 56,
+        "inicio": 40.539,
+        "fim": 46.36,
+        "txt_inicio": 73,
+        "txt_fim": 86,
         "score": 1.0,
-        "texto": "Mas se ele te merecesse não estaria aqui (",
+        "texto": "me der uma chance não vai se arrepender (Não, não, não, não, não)",
         "aviso": null
       },
       {
         "bloco_srt": 8,
-        "inicio": 32.08,
-        "fim": 36.06,
-        "txt_inicio": 56,
-        "txt_fim": 64,
-        "score": 1.0,
-        "texto": "Não, não, não) Ou talvez você não queira",
+        "inicio": 46.42,
+        "fim": 51.321,
+        "txt_inicio": 86,
+        "txt_fim": 103,
+        "score": 0.9655172413793103,
+        "texto": "Tá vendo aquela lua que brilha lá no céu? Se você me pedir eu vou buscar só",
         "aviso": null
       },
       {
         "bloco_srt": 9,
-        "inicio": 36.06,
-        "fim": 40.1,
-        "txt_inicio": 64,
-        "txt_fim": 72,
-        "score": 1.0,
-        "texto": "se envolver Magoada, tá com medo de sofrer",
+        "inicio": 51.361,
+        "fim": 55.922,
+        "txt_inicio": 174,
+        "txt_fim": 192,
+        "score": 0.9722222222222221,
+        "texto": "pra te dar Se bem que o brilho dela nem se compara ao seu Deixa eu te dar",
         "aviso": null
       },
       {
         "bloco_srt": 10,
-        "inicio": 40.1,
-        "fim": 42.44,
-        "txt_inicio": 72,
-        "txt_fim": 80,
+        "inicio": 55.982,
+        "fim": 61.083,
+        "txt_inicio": 192,
+        "txt_fim": 206,
         "score": 1.0,
-        "texto": "Se me der uma chance não vai se",
+        "texto": "um beijo vou mostrar o tempo que perdeu Que coisa louca, eu já sabia",
         "aviso": null
       },
       {
         "bloco_srt": 11,
-        "inicio": 42.48,
-        "fim": 44.066,
-        "txt_inicio": 80,
-        "txt_fim": 81,
+        "inicio": 61.463,
+        "fim": 63.884,
+        "txt_inicio": 206,
+        "txt_fim": 213,
         "score": 1.0,
-        "texto": "arrepender (",
+        "texto": "Enquanto eu me arrumava algo me dizia",
         "aviso": null
       },
       {
         "bloco_srt": 12,
-        "inicio": 44.427,
-        "fim": 46.375,
-        "txt_inicio": 81,
-        "txt_fim": 86,
+        "inicio": 64.464,
+        "fim": 69.227,
+        "txt_inicio": 213,
+        "txt_fim": 227,
         "score": 1.0,
-        "texto": "Não, não, não, não, não)",
+        "texto": "Você vai encontrar Alguém que vai mudar A sua vida inteira da noite pro",
         "aviso": null
       },
       {
         "bloco_srt": 13,
-        "inicio": 46.435,
-        "fim": 47.439,
-        "txt_inicio": 86,
-        "txt_fim": 90,
-        "score": 1.0,
-        "texto": "Tá vendo aquela lua",
-        "aviso": null
+        "inicio": 69.327,
+        "fim": 74.331,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "dia Seu brilho que ela lua, que brilha no céu Se você me pedirá, vamos",
+        "aviso": "consulta_txt_ambigua_original_preservado"
       },
       {
         "bloco_srt": 14,
-        "inicio": 47.76,
-        "fim": 50.08,
-        "txt_inicio": 90,
-        "txt_fim": 98,
-        "score": 1.0,
-        "texto": "que brilha lá no céu? Se você me",
-        "aviso": null
+        "inicio": 74.371,
+        "fim": 77.954,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "que eu sofratidar Sei bem que o brilho dela nem se compara o céu",
+        "aviso": "consulta_txt_ambigua_original_preservado"
       },
       {
         "bloco_srt": 15,
-        "inicio": 50.08,
-        "fim": 51.98,
-        "txt_inicio": 98,
-        "txt_fim": 106,
-        "score": 0.9850746268656717,
-        "texto": "pedir eu vou buscar só para te dar",
+        "inicio": 78.622,
+        "fim": 82.405,
+        "txt_inicio": 350,
+        "txt_fim": 364,
+        "score": 0.9481481481481482,
+        "texto": "Deixa eu te dar um beijo vou mostrar o tempo que perdeu Que coisa",
         "aviso": null
       },
       {
         "bloco_srt": 16,
-        "inicio": 51.98,
-        "fim": 54.08,
-        "txt_inicio": 106,
-        "txt_fim": 114,
-        "score": 1.0,
-        "texto": "Se bem que o brilho dela nem se",
+        "inicio": 82.485,
+        "fim": 88.09,
+        "txt_inicio": 364,
+        "txt_fim": 376,
+        "score": 0.9666666666666667,
+        "texto": "louca, eu já sabia Enquanto eu me arrumava Algo me dizia Você",
         "aviso": null
       },
       {
         "bloco_srt": 17,
-        "inicio": 54.08,
-        "fim": 56.1,
-        "txt_inicio": 114,
-        "txt_fim": 122,
-        "score": 1.0,
-        "texto": "compara ao seu Deixa eu te dar um",
+        "inicio": 88.13,
+        "fim": 93.134,
+        "txt_inicio": 376,
+        "txt_fim": 390,
+        "score": 0.9784172661870504,
+        "texto": "vai encontrar Alguém que vai mudar A sua vida inteira da noite pro dia",
         "aviso": null
       },
       {
         "bloco_srt": 18,
-        "inicio": 56.1,
-        "fim": 58.6,
-        "txt_inicio": 122,
-        "txt_fim": 130,
-        "score": 1.0,
-        "texto": "beijo vou mostrar o tempo que perdeu Que",
-        "aviso": null
+        "inicio": 97.818,
+        "fim": 98.398,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Vem!",
+        "aviso": "consulta_txt_ambigua_original_preservado"
       },
       {
         "bloco_srt": 19,
-        "inicio": 58.6,
-        "fim": 62.04,
-        "txt_inicio": 130,
-        "txt_fim": 138,
+        "inicio": 98.902,
+        "fim": 103.165,
+        "txt_inicio": 233,
+        "txt_fim": 245,
         "score": 1.0,
-        "texto": "coisa louca, eu já sabia Enquanto eu me",
+        "texto": "Te filmando, eu tava quieto no meu canto Cabelo bem cortado, perfume",
         "aviso": null
       },
       {
         "bloco_srt": 20,
-        "inicio": 62.04,
-        "fim": 66.06,
-        "txt_inicio": 138,
-        "txt_fim": 146,
+        "inicio": 103.325,
+        "fim": 108.569,
+        "txt_inicio": 245,
+        "txt_fim": 261,
         "score": 1.0,
-        "texto": "arrumava Algo me dizia Você vai encontrar Alguém",
+        "texto": "exalando Daquele jeito que eu sei que você gosta Mas eu te dei um papo e",
         "aviso": null
       },
       {
         "bloco_srt": 21,
-        "inicio": 66.06,
-        "fim": 68.72,
-        "txt_inicio": 146,
-        "txt_fim": 154,
-        "score": 1.0,
-        "texto": "que vai mudar A sua vida inteira da",
+        "inicio": 108.629,
+        "fim": 110.51,
+        "txt_inicio": 261,
+        "txt_fim": 267,
+        "score": 0.9333333333333332,
+        "texto": "você não deu resposta, não Tudo",
         "aviso": null
       },
       {
         "bloco_srt": 22,
-        "inicio": 68.72,
-        "fim": 71.42,
-        "txt_inicio": 154,
-        "txt_fim": 162,
+        "inicio": 111.391,
+        "fim": 116.634,
+        "txt_inicio": 267,
+        "txt_fim": 282,
         "score": 1.0,
-        "texto": "noite pro dia Tá vendo aquela lua que",
+        "texto": "bem um dia vai e outro vem Você deve estar pensando em outro alguém Mas",
         "aviso": null
       },
       {
         "bloco_srt": 23,
-        "inicio": 71.42,
-        "fim": 73.84,
-        "txt_inicio": 162,
-        "txt_fim": 170,
+        "inicio": 116.654,
+        "fim": 118.456,
+        "txt_inicio": 282,
+        "txt_fim": 292,
         "score": 1.0,
-        "texto": "brilha lá no céu? Se você me pedir",
+        "texto": "se ele te merecesse não estaria aqui (Não, não, não)",
         "aviso": null
       },
       {
         "bloco_srt": 24,
-        "inicio": 73.96,
-        "fim": 75.82,
-        "txt_inicio": 170,
-        "txt_fim": 178,
-        "score": 1.0,
-        "texto": "eu vou buscar só pra te dar Se",
+        "inicio": 122.398,
+        "fim": 128.286,
+        "txt_inicio": 292,
+        "txt_fim": 306,
+        "score": 0.9857142857142859,
+        "texto": "Ou talvez você não queira se envolver Magoada, tá com medo de sofrer Se",
         "aviso": null
       },
       {
         "bloco_srt": 25,
-        "inicio": 75.82,
-        "fim": 77.9,
-        "txt_inicio": 178,
-        "txt_fim": 186,
-        "score": 1.0,
-        "texto": "bem que o brilho dela nem se compara",
-        "aviso": null
+        "inicio": 128.346,
+        "fim": 131.23,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "me ter uma chance não vai se arrepender. Não, não, não, não, não. Quero",
+        "aviso": "consulta_txt_ambigua_original_preservado"
       },
       {
         "bloco_srt": 26,
-        "inicio": 77.9,
-        "fim": 79.74,
-        "txt_inicio": 186,
-        "txt_fim": 194,
-        "score": 1.0,
-        "texto": "ao seu Deixa eu te dar um beijo",
-        "aviso": null
+        "inicio": 131.671,
+        "fim": 136.958,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "ver! Tá vendo aquela lua que brilhará no céu?",
+        "aviso": "consulta_txt_ambigua_original_preservado"
       },
       {
         "bloco_srt": 27,
-        "inicio": 79.82,
-        "fim": 82.36,
-        "txt_inicio": 194,
-        "txt_fim": 202,
-        "score": 1.0,
-        "texto": "vou mostrar o tempo que perdeu Que coisa",
-        "aviso": null
+        "inicio": 137.154,
+        "fim": 141.655,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Se você me pedir, eu vou buscar sua pratida Se bem que o brilho dela nem",
+        "aviso": "consulta_txt_ambigua_original_preservado"
       },
       {
         "bloco_srt": 28,
-        "inicio": 82.36,
-        "fim": 86.0,
-        "txt_inicio": 202,
-        "txt_fim": 210,
-        "score": 1.0,
-        "texto": "louca, eu já sabia Enquanto eu me arrumava",
+        "inicio": 141.715,
+        "fim": 145.516,
+        "txt_inicio": 346,
+        "txt_fim": 361,
+        "score": 0.9701492537313433,
+        "texto": "se compara ao seu Deixa eu te dar um beijo vou mostrar o tempo que",
         "aviso": null
       },
       {
         "bloco_srt": 29,
-        "inicio": 86.08,
-        "fim": 89.72,
-        "txt_inicio": 210,
-        "txt_fim": 218,
-        "score": 1.0,
-        "texto": "algo me dizia Você vai encontrar Alguém que",
+        "inicio": 145.576,
+        "fim": 150.997,
+        "txt_inicio": 361,
+        "txt_fim": 374,
+        "score": 0.96875,
+        "texto": "perdeu Que coisa louca, eu já sabia Enquanto eu me arrumava Algo me",
         "aviso": null
       },
       {
         "bloco_srt": 30,
-        "inicio": 89.72,
-        "fim": 92.38,
-        "txt_inicio": 218,
-        "txt_fim": 226,
+        "inicio": 151.037,
+        "fim": 156.558,
+        "txt_inicio": 374,
+        "txt_fim": 387,
         "score": 1.0,
-        "texto": "vai mudar A sua vida inteira da noite",
+        "texto": "dizia Você vai encontrar Alguém que vai mudar A sua vida inteira da",
         "aviso": null
       },
       {
         "bloco_srt": 31,
-        "inicio": 92.38,
-        "fim": 100.52,
-        "txt_inicio": 459,
-        "txt_fim": 467,
-        "score": 1.0,
-        "texto": "pro dia Te filmando eu tava quieto no",
+        "inicio": 156.578,
+        "fim": 161.199,
+        "txt_inicio": 387,
+        "txt_fim": 402,
+        "score": 0.8636363636363636,
+        "texto": "noite pro dia Tá vendo aquela lua que brilha lá no céu? Se você me",
         "aviso": null
       },
       {
         "bloco_srt": 32,
-        "inicio": 100.52,
-        "fim": 104.98,
-        "txt_inicio": 239,
-        "txt_fim": 247,
-        "score": 1.0,
-        "texto": "meu canto Cabelo bem cortado, perfume exalando Daquele",
+        "inicio": 161.279,
+        "fim": 165.72,
+        "txt_inicio": 402,
+        "txt_fim": 419,
+        "score": 0.9444444444444444,
+        "texto": "pedir eu vou buscar só pra te dar Se bem que o brilho dela nem se compara",
         "aviso": null
       },
       {
         "bloco_srt": 33,
-        "inicio": 104.98,
-        "fim": 107.32,
-        "txt_inicio": 247,
-        "txt_fim": 255,
-        "score": 1.0,
-        "texto": "jeito que eu sei que você gosta Mas",
+        "inicio": 165.74,
+        "fim": 167.1,
+        "txt_inicio": 419,
+        "txt_fim": 427,
+        "score": 0.9836065573770492,
+        "texto": "ao seu Deixa eu te dar um beijo",
         "aviso": null
       },
       {
         "bloco_srt": 34,
-        "inicio": 107.32,
-        "fim": 109.18,
-        "txt_inicio": 22,
-        "txt_fim": 30,
+        "inicio": 167.22,
+        "fim": 172.283,
+        "txt_inicio": 425,
+        "txt_fim": 439,
         "score": 1.0,
-        "texto": "eu te dei um papo e você nem",
+        "texto": "um beijo vou mostrar o tempo que perdeu Que coisa louca, eu já sabia",
         "aviso": null
       },
       {
         "bloco_srt": 35,
-        "inicio": 109.18,
-        "fim": 112.14,
-        "txt_inicio": 263,
-        "txt_fim": 271,
-        "score": 1.0,
-        "texto": "deu resposta, não Tudo bem um dia vai",
+        "inicio": 172.703,
+        "fim": 177.566,
+        "txt_inicio": 439,
+        "txt_fim": 451,
+        "score": 0.9037037037037037,
+        "texto": "Enquanto eu me arrumava Algo me dizia Você vai encontrar Alguém que",
         "aviso": null
       },
       {
         "bloco_srt": 36,
-        "inicio": 112.14,
-        "fim": 115.36,
-        "txt_inicio": 271,
-        "txt_fim": 279,
+        "inicio": 177.606,
+        "fim": 180.948,
+        "txt_inicio": 451,
+        "txt_fim": 461,
         "score": 1.0,
-        "texto": "e outro vem Você deve estar pensando em",
+        "texto": "vai mudar A sua vida inteira da noite pro dia",
         "aviso": null
       },
       {
         "bloco_srt": 37,
-        "inicio": 115.36,
-        "fim": 118.5,
-        "txt_inicio": 279,
-        "txt_fim": 287,
-        "score": 1.0,
-        "texto": "outro alguém Mas se ele te merecesse não",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 38,
-        "inicio": 118.5,
-        "fim": 123.18,
-        "txt_inicio": 287,
-        "txt_fim": 295,
-        "score": 1.0,
-        "texto": "estaria aqui (Não, não, não) Ou talvez você",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 39,
-        "inicio": 123.18,
-        "fim": 126.76,
-        "txt_inicio": 295,
-        "txt_fim": 303,
-        "score": 1.0,
-        "texto": "não queira se envolver Magoada, tá com medo",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 40,
-        "inicio": 126.76,
-        "fim": 129.56,
-        "txt_inicio": 303,
-        "txt_fim": 311,
-        "score": 1.0,
-        "texto": "de sofrer Se me der uma chance não",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 41,
-        "inicio": 129.56,
-        "fim": 133.62,
-        "txt_inicio": null,
-        "txt_fim": null,
-        "score": null,
-        "texto": "vai se arrepender Não, não, não Quero ver!",
-        "aviso": "consulta_txt_ambigua_original_preservado"
-      },
-      {
-        "bloco_srt": 42,
-        "inicio": 134.18,
-        "fim": 136.62,
-        "txt_inicio": 319,
-        "txt_fim": 327,
-        "score": 1.0,
-        "texto": "Tá vendo aquela lua que brilha lá no",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 43,
-        "inicio": 136.62,
-        "fim": 138.86,
-        "txt_inicio": 327,
-        "txt_fim": 335,
-        "score": 1.0,
-        "texto": "céu? Se você me pedir eu vou buscar",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 44,
-        "inicio": 138.86,
-        "fim": 140.64,
-        "txt_inicio": 335,
-        "txt_fim": 343,
-        "score": 0.9811320754716981,
-        "texto": "só para te dar Se bem que o",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 45,
-        "inicio": 140.64,
-        "fim": 143.2,
-        "txt_inicio": 343,
-        "txt_fim": 351,
-        "score": 1.0,
-        "texto": "brilho dela nem se compara ao seu Deixa",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 46,
-        "inicio": 143.2,
-        "fim": 145.0,
-        "txt_inicio": 351,
-        "txt_fim": 359,
-        "score": 1.0,
-        "texto": "eu te dar um beijo vou mostrar o",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 47,
-        "inicio": 145.0,
-        "fim": 148.04,
-        "txt_inicio": 359,
-        "txt_fim": 367,
-        "score": 1.0,
-        "texto": "tempo que perdeu Que coisa louca, eu já",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 48,
-        "inicio": 148.04,
-        "fim": 151.92,
-        "txt_inicio": 367,
-        "txt_fim": 375,
-        "score": 1.0,
-        "texto": "sabia Enquanto eu me arrumava Algo me dizia",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 49,
-        "inicio": 151.92,
-        "fim": 155.24,
-        "txt_inicio": 375,
-        "txt_fim": 383,
-        "score": 1.0,
-        "texto": "Você vai encontrar Alguém que vai mudar A",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 50,
-        "inicio": 155.24,
-        "fim": 157.78,
-        "txt_inicio": 383,
-        "txt_fim": 391,
-        "score": 1.0,
-        "texto": "sua vida inteira da noite pro dia Tá",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 51,
-        "inicio": 157.78,
-        "fim": 160.08,
-        "txt_inicio": 391,
-        "txt_fim": 399,
-        "score": 1.0,
-        "texto": "vendo aquela lua que brilha lá no céu?",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 52,
-        "inicio": 160.08,
-        "fim": 162.72,
-        "txt_inicio": 399,
-        "txt_fim": 407,
-        "score": 1.0,
-        "texto": "Se você me pedir eu vou buscar só",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 53,
-        "inicio": 162.72,
-        "fim": 164.38,
-        "txt_inicio": 407,
-        "txt_fim": 415,
-        "score": 1.0,
-        "texto": "pra te dar Se bem que o brilho",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 54,
-        "inicio": 164.38,
-        "fim": 166.78,
-        "txt_inicio": 415,
-        "txt_fim": 423,
-        "score": 1.0,
-        "texto": "dela nem se compara ao seu Deixa eu",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 55,
-        "inicio": 166.78,
-        "fim": 168.64,
-        "txt_inicio": 423,
-        "txt_fim": 431,
-        "score": 1.0,
-        "texto": "te dar um beijo vou mostrar o tempo",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 56,
-        "inicio": 168.64,
-        "fim": 172.18,
-        "txt_inicio": 431,
-        "txt_fim": 439,
-        "score": 1.0,
-        "texto": "que perdeu Que coisa louca, eu já sabia",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 57,
-        "inicio": 172.18,
-        "fim": 175.88,
-        "txt_inicio": 439,
-        "txt_fim": 447,
-        "score": 1.0,
-        "texto": "Enquanto eu me arrumava Algo me dizia Você",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 58,
-        "inicio": 175.88,
-        "fim": 178.94,
-        "txt_inicio": 447,
-        "txt_fim": 455,
-        "score": 1.0,
-        "texto": "vai encontrar Alguém que vai mudar A sua",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 59,
-        "inicio": 178.94,
-        "fim": 187.39,
-        "txt_inicio": 455,
-        "txt_fim": 463,
-        "score": 1.0,
-        "texto": "vida inteira da noite pro dia Te filmando",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 60,
-        "inicio": 187.49,
-        "fim": 190.37,
-        "txt_inicio": 463,
+        "inicio": 186.752,
+        "fim": 188.973,
+        "txt_inicio": 461,
         "txt_fim": 469,
-        "score": 1.0,
-        "texto": "eu tava quieto no meu canto",
+        "score": 0.9743589743589743,
+        "texto": "Te filmando eu tava quieto no meu canto",
         "aviso": null
       }
     ],
@@ -636,625 +411,468 @@
         "indices": [
           0
         ],
-        "inicio": 10.56,
-        "fim": 13.38,
-        "txt_inicio": 0,
-        "txt_fim": 8,
-        "texto": "Te filmando, eu tava quieto no meu canto"
+        "inicio": 11.106,
+        "fim": 15.47,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Estive filmando, eu tava quieto no meu canto, cabelo bem cortado e filme"
       },
       {
         "indices": [
           1
         ],
-        "inicio": 13.38,
-        "fim": 17.82,
-        "txt_inicio": 8,
-        "txt_fim": 16,
-        "texto": "Cabelo bem cortado, perfume exalando Daquele jeito que"
+        "inicio": 15.59,
+        "fim": 20.694,
+        "txt_inicio": 12,
+        "txt_fim": 27,
+        "texto": "exalando Daquele jeito que eu sei que você gosta Mas eu te dei um papo"
       },
       {
         "indices": [
           2
         ],
-        "inicio": 17.82,
-        "fim": 19.82,
-        "txt_inicio": 16,
-        "txt_fim": 24,
-        "texto": "eu sei que você gosta Mas eu te"
+        "inicio": 20.714,
+        "fim": 26.359,
+        "txt_inicio": 27,
+        "txt_fim": 43,
+        "texto": "e você nem deu resposta Tudo bem um dia vai e o outro vem Você deve"
       },
       {
         "indices": [
           3
         ],
-        "inicio": 19.82,
-        "fim": 22.1,
-        "txt_inicio": 24,
-        "txt_fim": 32,
-        "texto": "dei um papo e você nem deu resposta"
+        "inicio": 26.399,
+        "fim": 31.143,
+        "txt_inicio": 43,
+        "txt_fim": 55,
+        "texto": "estar pensando em outro alguém Mas se ele te merecesse não estaria"
       },
       {
         "indices": [
           4
         ],
-        "inicio": 22.1,
-        "fim": 24.86,
-        "txt_inicio": 32,
-        "txt_fim": 40,
-        "texto": "Tudo bem um dia vai e o outro"
+        "inicio": 31.203,
+        "fim": 33.185,
+        "txt_inicio": 55,
+        "txt_fim": 59,
+        "texto": "aqui (Não, não, não)"
       },
       {
         "indices": [
           5
         ],
-        "inicio": 24.86,
-        "fim": 28.3,
-        "txt_inicio": 40,
-        "txt_fim": 48,
-        "texto": "vem Você deve estar pensando em outro alguém"
+        "inicio": 34.558,
+        "fim": 40.479,
+        "txt_inicio": 59,
+        "txt_fim": 73,
+        "texto": "Ou talvez você não queira se envolver Magoada, tá com medo de sofrer Se"
       },
       {
         "indices": [
           6
         ],
-        "inicio": 28.3,
-        "fim": 32.08,
-        "txt_inicio": 48,
-        "txt_fim": 56,
-        "texto": "Mas se ele te merecesse não estaria aqui ("
+        "inicio": 40.539,
+        "fim": 46.36,
+        "txt_inicio": 73,
+        "txt_fim": 86,
+        "texto": "me der uma chance não vai se arrepender (Não, não, não, não, não)"
       },
       {
         "indices": [
           7
         ],
-        "inicio": 32.08,
-        "fim": 36.06,
-        "txt_inicio": 56,
-        "txt_fim": 64,
-        "texto": "Não, não, não) Ou talvez você não queira"
+        "inicio": 46.42,
+        "fim": 51.321,
+        "txt_inicio": 86,
+        "txt_fim": 103,
+        "texto": "Tá vendo aquela lua que brilha lá no céu? Se você me pedir eu vou buscar só"
       },
       {
         "indices": [
           8
         ],
-        "inicio": 36.06,
-        "fim": 40.1,
-        "txt_inicio": 64,
-        "txt_fim": 72,
-        "texto": "se envolver Magoada, tá com medo de sofrer"
+        "inicio": 51.361,
+        "fim": 55.922,
+        "txt_inicio": 174,
+        "txt_fim": 192,
+        "texto": "pra te dar Se bem que o brilho dela nem se compara ao seu Deixa eu te dar"
       },
       {
         "indices": [
           9
         ],
-        "inicio": 40.1,
-        "fim": 42.44,
-        "txt_inicio": 72,
-        "txt_fim": 80,
-        "texto": "Se me der uma chance não vai se"
+        "inicio": 55.982,
+        "fim": 61.083,
+        "txt_inicio": 192,
+        "txt_fim": 206,
+        "texto": "um beijo vou mostrar o tempo que perdeu Que coisa louca, eu já sabia"
       },
       {
         "indices": [
           10
         ],
-        "inicio": 42.48,
-        "fim": 44.066,
-        "txt_inicio": 80,
-        "txt_fim": 81,
-        "texto": "arrepender ("
+        "inicio": 61.463,
+        "fim": 63.884,
+        "txt_inicio": 206,
+        "txt_fim": 213,
+        "texto": "Enquanto eu me arrumava algo me dizia"
       },
       {
         "indices": [
           11
         ],
-        "inicio": 44.427,
-        "fim": 46.375,
-        "txt_inicio": 81,
-        "txt_fim": 86,
-        "texto": "Não, não, não, não, não)"
+        "inicio": 64.464,
+        "fim": 69.227,
+        "txt_inicio": 213,
+        "txt_fim": 227,
+        "texto": "Você vai encontrar Alguém que vai mudar A sua vida inteira da noite pro"
       },
       {
         "indices": [
           12
         ],
-        "inicio": 46.435,
-        "fim": 47.439,
-        "txt_inicio": 86,
-        "txt_fim": 90,
-        "texto": "Tá vendo aquela lua"
+        "inicio": 69.327,
+        "fim": 74.331,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "dia Seu brilho que ela lua, que brilha no céu Se você me pedirá, vamos"
       },
       {
         "indices": [
           13
         ],
-        "inicio": 47.76,
-        "fim": 50.08,
-        "txt_inicio": 90,
-        "txt_fim": 98,
-        "texto": "que brilha lá no céu? Se você me"
+        "inicio": 74.371,
+        "fim": 77.954,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "que eu sofratidar Sei bem que o brilho dela nem se compara o céu"
       },
       {
         "indices": [
           14
         ],
-        "inicio": 50.08,
-        "fim": 51.98,
-        "txt_inicio": 98,
-        "txt_fim": 106,
-        "texto": "pedir eu vou buscar só para te dar"
+        "inicio": 78.622,
+        "fim": 82.405,
+        "txt_inicio": 350,
+        "txt_fim": 364,
+        "texto": "Deixa eu te dar um beijo vou mostrar o tempo que perdeu Que coisa"
       },
       {
         "indices": [
           15
         ],
-        "inicio": 51.98,
-        "fim": 54.08,
-        "txt_inicio": 106,
-        "txt_fim": 114,
-        "texto": "Se bem que o brilho dela nem se"
+        "inicio": 82.485,
+        "fim": 88.09,
+        "txt_inicio": 364,
+        "txt_fim": 376,
+        "texto": "louca, eu já sabia Enquanto eu me arrumava Algo me dizia Você"
       },
       {
         "indices": [
           16
         ],
-        "inicio": 54.08,
-        "fim": 56.1,
-        "txt_inicio": 114,
-        "txt_fim": 122,
-        "texto": "compara ao seu Deixa eu te dar um"
+        "inicio": 88.13,
+        "fim": 93.134,
+        "txt_inicio": 376,
+        "txt_fim": 390,
+        "texto": "vai encontrar Alguém que vai mudar A sua vida inteira da noite pro dia"
       },
       {
         "indices": [
           17
         ],
-        "inicio": 56.1,
-        "fim": 58.6,
-        "txt_inicio": 122,
-        "txt_fim": 130,
-        "texto": "beijo vou mostrar o tempo que perdeu Que"
+        "inicio": 97.818,
+        "fim": 98.398,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Vem!"
       },
       {
         "indices": [
           18
         ],
-        "inicio": 58.6,
-        "fim": 62.04,
-        "txt_inicio": 130,
-        "txt_fim": 138,
-        "texto": "coisa louca, eu já sabia Enquanto eu me"
+        "inicio": 98.902,
+        "fim": 103.165,
+        "txt_inicio": 233,
+        "txt_fim": 245,
+        "texto": "Te filmando, eu tava quieto no meu canto Cabelo bem cortado, perfume"
       },
       {
         "indices": [
           19
         ],
-        "inicio": 62.04,
-        "fim": 66.06,
-        "txt_inicio": 138,
-        "txt_fim": 146,
-        "texto": "arrumava Algo me dizia Você vai encontrar Alguém"
+        "inicio": 103.325,
+        "fim": 108.569,
+        "txt_inicio": 245,
+        "txt_fim": 261,
+        "texto": "exalando Daquele jeito que eu sei que você gosta Mas eu te dei um papo e"
       },
       {
         "indices": [
           20
         ],
-        "inicio": 66.06,
-        "fim": 68.72,
-        "txt_inicio": 146,
-        "txt_fim": 154,
-        "texto": "que vai mudar A sua vida inteira da"
+        "inicio": 108.629,
+        "fim": 110.51,
+        "txt_inicio": 261,
+        "txt_fim": 267,
+        "texto": "você não deu resposta, não Tudo"
       },
       {
         "indices": [
           21
         ],
-        "inicio": 68.72,
-        "fim": 71.42,
-        "txt_inicio": 154,
-        "txt_fim": 162,
-        "texto": "noite pro dia Tá vendo aquela lua que"
+        "inicio": 111.391,
+        "fim": 116.634,
+        "txt_inicio": 267,
+        "txt_fim": 282,
+        "texto": "bem um dia vai e outro vem Você deve estar pensando em outro alguém Mas"
       },
       {
         "indices": [
           22
         ],
-        "inicio": 71.42,
-        "fim": 73.84,
-        "txt_inicio": 162,
-        "txt_fim": 170,
-        "texto": "brilha lá no céu? Se você me pedir"
+        "inicio": 116.654,
+        "fim": 118.456,
+        "txt_inicio": 282,
+        "txt_fim": 292,
+        "texto": "se ele te merecesse não estaria aqui (Não, não, não)"
       },
       {
         "indices": [
           23
         ],
-        "inicio": 73.96,
-        "fim": 75.82,
-        "txt_inicio": 170,
-        "txt_fim": 178,
-        "texto": "eu vou buscar só pra te dar Se"
+        "inicio": 122.398,
+        "fim": 128.286,
+        "txt_inicio": 292,
+        "txt_fim": 306,
+        "texto": "Ou talvez você não queira se envolver Magoada, tá com medo de sofrer Se"
       },
       {
         "indices": [
           24
         ],
-        "inicio": 75.82,
-        "fim": 77.9,
-        "txt_inicio": 178,
-        "txt_fim": 186,
-        "texto": "bem que o brilho dela nem se compara"
+        "inicio": 128.346,
+        "fim": 131.23,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "me ter uma chance não vai se arrepender. Não, não, não, não, não. Quero"
       },
       {
         "indices": [
           25
         ],
-        "inicio": 77.9,
-        "fim": 79.74,
-        "txt_inicio": 186,
-        "txt_fim": 194,
-        "texto": "ao seu Deixa eu te dar um beijo"
+        "inicio": 131.671,
+        "fim": 136.958,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "ver! Tá vendo aquela lua que brilhará no céu?"
       },
       {
         "indices": [
           26
         ],
-        "inicio": 79.82,
-        "fim": 82.36,
-        "txt_inicio": 194,
-        "txt_fim": 202,
-        "texto": "vou mostrar o tempo que perdeu Que coisa"
+        "inicio": 137.154,
+        "fim": 141.655,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Se você me pedir, eu vou buscar sua pratida Se bem que o brilho dela nem"
       },
       {
         "indices": [
           27
         ],
-        "inicio": 82.36,
-        "fim": 86.0,
-        "txt_inicio": 202,
-        "txt_fim": 210,
-        "texto": "louca, eu já sabia Enquanto eu me arrumava"
+        "inicio": 141.715,
+        "fim": 145.516,
+        "txt_inicio": 346,
+        "txt_fim": 361,
+        "texto": "se compara ao seu Deixa eu te dar um beijo vou mostrar o tempo que"
       },
       {
         "indices": [
           28
         ],
-        "inicio": 86.08,
-        "fim": 89.72,
-        "txt_inicio": 210,
-        "txt_fim": 218,
-        "texto": "algo me dizia Você vai encontrar Alguém que"
+        "inicio": 145.576,
+        "fim": 150.997,
+        "txt_inicio": 361,
+        "txt_fim": 374,
+        "texto": "perdeu Que coisa louca, eu já sabia Enquanto eu me arrumava Algo me"
       },
       {
         "indices": [
           29
         ],
-        "inicio": 89.72,
-        "fim": 92.38,
-        "txt_inicio": 218,
-        "txt_fim": 226,
-        "texto": "vai mudar A sua vida inteira da noite"
+        "inicio": 151.037,
+        "fim": 156.558,
+        "txt_inicio": 374,
+        "txt_fim": 387,
+        "texto": "dizia Você vai encontrar Alguém que vai mudar A sua vida inteira da"
       },
       {
         "indices": [
           30
         ],
-        "inicio": 92.38,
-        "fim": 100.52,
-        "txt_inicio": 459,
-        "txt_fim": 467,
-        "texto": "pro dia Te filmando eu tava quieto no"
+        "inicio": 156.578,
+        "fim": 161.199,
+        "txt_inicio": 387,
+        "txt_fim": 402,
+        "texto": "noite pro dia Tá vendo aquela lua que brilha lá no céu? Se você me"
       },
       {
         "indices": [
           31
         ],
-        "inicio": 100.52,
-        "fim": 104.98,
-        "txt_inicio": 239,
-        "txt_fim": 247,
-        "texto": "meu canto Cabelo bem cortado, perfume exalando Daquele"
+        "inicio": 161.279,
+        "fim": 165.72,
+        "txt_inicio": 402,
+        "txt_fim": 419,
+        "texto": "pedir eu vou buscar só pra te dar Se bem que o brilho dela nem se compara"
       },
       {
         "indices": [
           32
         ],
-        "inicio": 104.98,
-        "fim": 107.32,
-        "txt_inicio": 247,
-        "txt_fim": 255,
-        "texto": "jeito que eu sei que você gosta Mas"
+        "inicio": 165.74,
+        "fim": 167.1,
+        "txt_inicio": 419,
+        "txt_fim": 427,
+        "texto": "ao seu Deixa eu te dar um beijo"
       },
       {
         "indices": [
           33
         ],
-        "inicio": 107.32,
-        "fim": 109.18,
-        "txt_inicio": 22,
-        "txt_fim": 30,
-        "texto": "eu te dei um papo e você nem"
+        "inicio": 167.22,
+        "fim": 172.283,
+        "txt_inicio": 425,
+        "txt_fim": 439,
+        "texto": "um beijo vou mostrar o tempo que perdeu Que coisa louca, eu já sabia"
       },
       {
         "indices": [
           34
         ],
-        "inicio": 109.18,
-        "fim": 112.14,
-        "txt_inicio": 263,
-        "txt_fim": 271,
-        "texto": "deu resposta, não Tudo bem um dia vai"
+        "inicio": 172.703,
+        "fim": 177.566,
+        "txt_inicio": 439,
+        "txt_fim": 451,
+        "texto": "Enquanto eu me arrumava Algo me dizia Você vai encontrar Alguém que"
       },
       {
         "indices": [
           35
         ],
-        "inicio": 112.14,
-        "fim": 115.36,
-        "txt_inicio": 271,
-        "txt_fim": 279,
-        "texto": "e outro vem Você deve estar pensando em"
+        "inicio": 177.606,
+        "fim": 180.948,
+        "txt_inicio": 451,
+        "txt_fim": 461,
+        "texto": "vai mudar A sua vida inteira da noite pro dia"
       },
       {
         "indices": [
           36
         ],
-        "inicio": 115.36,
-        "fim": 118.5,
-        "txt_inicio": 279,
-        "txt_fim": 287,
-        "texto": "outro alguém Mas se ele te merecesse não"
-      },
-      {
-        "indices": [
-          37
-        ],
-        "inicio": 118.5,
-        "fim": 123.18,
-        "txt_inicio": 287,
-        "txt_fim": 295,
-        "texto": "estaria aqui (Não, não, não) Ou talvez você"
-      },
-      {
-        "indices": [
-          38
-        ],
-        "inicio": 123.18,
-        "fim": 126.76,
-        "txt_inicio": 295,
-        "txt_fim": 303,
-        "texto": "não queira se envolver Magoada, tá com medo"
-      },
-      {
-        "indices": [
-          39
-        ],
-        "inicio": 126.76,
-        "fim": 129.56,
-        "txt_inicio": 303,
-        "txt_fim": 311,
-        "texto": "de sofrer Se me der uma chance não"
-      },
-      {
-        "indices": [
-          40
-        ],
-        "inicio": 129.56,
-        "fim": 133.62,
-        "txt_inicio": null,
-        "txt_fim": null,
-        "texto": "vai se arrepender Não, não, não Quero ver!"
-      },
-      {
-        "indices": [
-          41
-        ],
-        "inicio": 134.18,
-        "fim": 136.62,
-        "txt_inicio": 319,
-        "txt_fim": 327,
-        "texto": "Tá vendo aquela lua que brilha lá no"
-      },
-      {
-        "indices": [
-          42
-        ],
-        "inicio": 136.62,
-        "fim": 138.86,
-        "txt_inicio": 327,
-        "txt_fim": 335,
-        "texto": "céu? Se você me pedir eu vou buscar"
-      },
-      {
-        "indices": [
-          43
-        ],
-        "inicio": 138.86,
-        "fim": 140.64,
-        "txt_inicio": 335,
-        "txt_fim": 343,
-        "texto": "só para te dar Se bem que o"
-      },
-      {
-        "indices": [
-          44
-        ],
-        "inicio": 140.64,
-        "fim": 143.2,
-        "txt_inicio": 343,
-        "txt_fim": 351,
-        "texto": "brilho dela nem se compara ao seu Deixa"
-      },
-      {
-        "indices": [
-          45
-        ],
-        "inicio": 143.2,
-        "fim": 145.0,
-        "txt_inicio": 351,
-        "txt_fim": 359,
-        "texto": "eu te dar um beijo vou mostrar o"
-      },
-      {
-        "indices": [
-          46
-        ],
-        "inicio": 145.0,
-        "fim": 148.04,
-        "txt_inicio": 359,
-        "txt_fim": 367,
-        "texto": "tempo que perdeu Que coisa louca, eu já"
-      },
-      {
-        "indices": [
-          47
-        ],
-        "inicio": 148.04,
-        "fim": 151.92,
-        "txt_inicio": 367,
-        "txt_fim": 375,
-        "texto": "sabia Enquanto eu me arrumava Algo me dizia"
-      },
-      {
-        "indices": [
-          48
-        ],
-        "inicio": 151.92,
-        "fim": 155.24,
-        "txt_inicio": 375,
-        "txt_fim": 383,
-        "texto": "Você vai encontrar Alguém que vai mudar A"
-      },
-      {
-        "indices": [
-          49
-        ],
-        "inicio": 155.24,
-        "fim": 157.78,
-        "txt_inicio": 383,
-        "txt_fim": 391,
-        "texto": "sua vida inteira da noite pro dia Tá"
-      },
-      {
-        "indices": [
-          50
-        ],
-        "inicio": 157.78,
-        "fim": 160.08,
-        "txt_inicio": 391,
-        "txt_fim": 399,
-        "texto": "vendo aquela lua que brilha lá no céu?"
-      },
-      {
-        "indices": [
-          51
-        ],
-        "inicio": 160.08,
-        "fim": 162.72,
-        "txt_inicio": 399,
-        "txt_fim": 407,
-        "texto": "Se você me pedir eu vou buscar só"
-      },
-      {
-        "indices": [
-          52
-        ],
-        "inicio": 162.72,
-        "fim": 164.38,
-        "txt_inicio": 407,
-        "txt_fim": 415,
-        "texto": "pra te dar Se bem que o brilho"
-      },
-      {
-        "indices": [
-          53
-        ],
-        "inicio": 164.38,
-        "fim": 166.78,
-        "txt_inicio": 415,
-        "txt_fim": 423,
-        "texto": "dela nem se compara ao seu Deixa eu"
-      },
-      {
-        "indices": [
-          54
-        ],
-        "inicio": 166.78,
-        "fim": 168.64,
-        "txt_inicio": 423,
-        "txt_fim": 431,
-        "texto": "te dar um beijo vou mostrar o tempo"
-      },
-      {
-        "indices": [
-          55
-        ],
-        "inicio": 168.64,
-        "fim": 172.18,
-        "txt_inicio": 431,
-        "txt_fim": 439,
-        "texto": "que perdeu Que coisa louca, eu já sabia"
-      },
-      {
-        "indices": [
-          56
-        ],
-        "inicio": 172.18,
-        "fim": 175.88,
-        "txt_inicio": 439,
-        "txt_fim": 447,
-        "texto": "Enquanto eu me arrumava Algo me dizia Você"
-      },
-      {
-        "indices": [
-          57
-        ],
-        "inicio": 175.88,
-        "fim": 178.94,
-        "txt_inicio": 447,
-        "txt_fim": 455,
-        "texto": "vai encontrar Alguém que vai mudar A sua"
-      },
-      {
-        "indices": [
-          58
-        ],
-        "inicio": 178.94,
-        "fim": 187.39,
-        "txt_inicio": 455,
-        "txt_fim": 463,
-        "texto": "vida inteira da noite pro dia Te filmando"
-      },
-      {
-        "indices": [
-          59
-        ],
-        "inicio": 187.49,
-        "fim": 190.37,
-        "txt_inicio": 463,
+        "inicio": 186.752,
+        "fim": 188.973,
+        "txt_inicio": 461,
         "txt_fim": 469,
-        "texto": "eu tava quieto no meu canto"
+        "texto": "Te filmando eu tava quieto no meu canto"
       }
     ],
     "tokens_txt_sem_correspondencia": [
-      226,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
       227,
       228,
       229,
       230,
       231,
       232,
-      233,
-      234,
-      235,
-      236,
-      237,
-      238,
-      255,
-      256,
-      257,
-      258,
-      259,
-      260,
-      261,
-      262,
+      306,
+      307,
+      308,
+      309,
+      310,
       311,
       312,
       313,
@@ -1262,629 +880,1411 @@
       315,
       316,
       317,
-      318
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      327,
+      328,
+      329,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336,
+      337,
+      338,
+      339,
+      340,
+      341,
+      342,
+      343,
+      344,
+      345
     ],
     "parametros": {
       "score_consulta_minimo": 0.65,
       "margem_ambiguidade": 0.025,
       "bonus_por_extremidade": 0.02,
-      "score_contexto_minimo": 0.85
+      "score_contexto_minimo": 0.85,
+      "distancia_max_palavra_isolada": 3.0,
+      "palavra_isolada_exige_exatidao": true
     }
   },
   "auditoria_estrutura": [
     {
       "bloco_srt": 1,
-      "inicio_original": 10.56,
-      "fim_original": 13.38,
-      "texto_original": "Te filmando, eu tava quieto no meu canto",
-      "texto_publicado": "Te filmando, eu tava quieto no meu canto",
+      "inicio_original": 11.106,
+      "fim_original": 15.47,
+      "texto_original": "Estive filmando, eu tava quieto no meu canto, cabelo bem cortado e filme",
+      "texto_publicado": "Estive filmando, eu tava quieto no meu canto, cabelo bem cortado e filme",
       "tratamento": "original_preservado",
-      "aviso": null
+      "aviso": "consulta_txt_ambigua_original_preservado"
     },
     {
       "bloco_srt": 2,
-      "inicio_original": 13.38,
-      "fim_original": 17.82,
-      "texto_original": "Cabelo bem cortado, perfume exalando Daquele jeito que",
-      "texto_publicado": "Cabelo bem cortado, perfume exalando daquele jeito que",
-      "tratamento": "original_preservado",
+      "inicio_original": 15.59,
+      "fim_original": 20.694,
+      "texto_original": "exalando Daquele jeito que eu sei que você gosta, mas eu te dei um papo",
+      "texto_publicado": "Exalando daquele jeito que eu sei que você gosta mas eu te dei um papo",
+      "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 3,
-      "inicio_original": 17.82,
-      "fim_original": 19.82,
-      "texto_original": "eu sei que você gosta Mas eu te",
-      "texto_publicado": "Eu sei que você gosta mas eu te",
-      "tratamento": "original_preservado",
+      "inicio_original": 20.714,
+      "fim_original": 26.359,
+      "texto_original": "e você nem deu resposta Tudo bem, um dia vario, outro vem Você deve",
+      "texto_publicado": "E você nem deu resposta tudo bem um dia vai e o outro vem você deve",
+      "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 4,
-      "inicio_original": 19.82,
-      "fim_original": 22.1,
-      "texto_original": "dei um papo e você nem deu resposta",
-      "texto_publicado": "Dei um papo e você nem deu resposta",
-      "tratamento": "original_preservado",
+      "inicio_original": 26.399,
+      "fim_original": 31.143,
+      "texto_original": "estar pensando em outro, alguém Mas se ele te merecesse, não estaria",
+      "texto_publicado": "Estar pensando em outro alguém mas se ele te merecesse não estaria",
+      "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 5,
-      "inicio_original": 22.1,
-      "fim_original": 24.86,
-      "texto_original": "Tudo bem um dia vai e o outro",
-      "texto_publicado": "Tudo bem um dia vai e o outro",
-      "tratamento": "original_preservado",
+      "inicio_original": 31.203,
+      "fim_original": 33.185,
+      "texto_original": "aqui Não, não, não",
+      "texto_publicado": "Aqui (não, não, não)",
+      "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 6,
-      "inicio_original": 24.86,
-      "fim_original": 28.3,
-      "texto_original": "vem Você deve estar pensando em outro alguém",
-      "texto_publicado": "Vem você deve estar pensando em outro alguém",
-      "tratamento": "original_preservado",
+      "inicio_original": 34.558,
+      "fim_original": 40.479,
+      "texto_original": "Ou talvez você não queira se envolver Magulada tá com medo de sofrer Se",
+      "texto_publicado": "Ou talvez você não queira se envolver magoada, tá com medo de sofrer se",
+      "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 7,
-      "inicio_original": 28.3,
-      "fim_original": 32.08,
-      "texto_original": "Mas se ele te merecesse não estaria aqui (",
-      "texto_publicado": "Mas se ele te merecesse não estaria aqui (",
-      "tratamento": "original_preservado",
+      "inicio_original": 40.539,
+      "fim_original": 46.36,
+      "texto_original": "me der uma chance, não vai se arrepender Não, não, não, não, não",
+      "texto_publicado": "Me der uma chance não vai se arrepender (não, não, não, não, não)",
+      "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 8,
-      "inicio_original": 32.08,
-      "fim_original": 36.06,
-      "texto_original": "Não, não, não) Ou talvez você não queira",
-      "texto_publicado": "Não, não, não) ou talvez você não queira",
-      "tratamento": "original_preservado",
+      "inicio_original": 46.42,
+      "fim_original": 51.321,
+      "texto_original": "Dá vendo aquela lua que brilha lá no céu Se você me pediu, vou buscar só",
+      "texto_publicado": "Tá vendo aquela lua que brilha lá no céu? se você me pedir eu vou buscar só",
+      "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 9,
-      "inicio_original": 36.06,
-      "fim_original": 40.1,
-      "texto_original": "se envolver Magoada, tá com medo de sofrer",
-      "texto_publicado": "Se envolver magoada, tá com medo de sofrer",
-      "tratamento": "original_preservado",
+      "inicio_original": 51.361,
+      "fim_original": 55.922,
+      "texto_original": "pra te dar Se bem que o brilho dela nem se comparam seu Deixa eu te dar",
+      "texto_publicado": "Pra te dar se bem que o brilho dela nem se compara ao seu deixa eu te dar",
+      "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 10,
-      "inicio_original": 40.1,
-      "fim_original": 42.44,
-      "texto_original": "Se me der uma chance não vai se",
-      "texto_publicado": "Se me der uma chance não vai se",
-      "tratamento": "original_preservado",
+      "inicio_original": 55.982,
+      "fim_original": 61.083,
+      "texto_original": "um beijo, vou mostrar o tempo que perdeu Que coisa louca, eu já sabia",
+      "texto_publicado": "Um beijo vou mostrar o tempo que perdeu que coisa louca, eu já sabia",
+      "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 11,
-      "inicio_original": 42.48,
-      "fim_original": 44.066,
-      "texto_original": "arrepender (",
-      "texto_publicado": "Arrepender (",
-      "tratamento": "original_preservado",
+      "inicio_original": 61.463,
+      "fim_original": 63.884,
+      "texto_original": "Enquanto eu me arrumava, algo me dizia",
+      "texto_publicado": "Enquanto eu me arrumava algo me dizia",
+      "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 12,
-      "inicio_original": 44.427,
-      "fim_original": 46.375,
-      "texto_original": "Não, não, não, não, não)",
-      "texto_publicado": "Não, não, não, não, não)",
+      "inicio_original": 64.464,
+      "fim_original": 69.227,
+      "texto_original": "Você vai encontrar Alguém que vai mudar A sua vida inteira da noite pro",
+      "texto_publicado": "Você vai encontrar alguém que vai mudar a sua vida inteira da noite pro",
       "tratamento": "original_preservado",
       "aviso": null
     },
     {
       "bloco_srt": 13,
-      "inicio_original": 46.435,
-      "fim_original": 47.439,
-      "texto_original": "Tá vendo aquela lua",
-      "texto_publicado": "Tá vendo aquela lua",
+      "inicio_original": 69.327,
+      "fim_original": 74.331,
+      "texto_original": "dia Seu brilho que ela lua, que brilha no céu Se você me pedirá, vamos",
+      "texto_publicado": "Dia seu brilho que ela lua, que brilha no céu se você me pedirá, vamos",
       "tratamento": "original_preservado",
-      "aviso": null
+      "aviso": "consulta_txt_ambigua_original_preservado"
     },
     {
       "bloco_srt": 14,
-      "inicio_original": 47.76,
-      "fim_original": 50.08,
-      "texto_original": "que brilha lá no céu? Se você me",
-      "texto_publicado": "Que brilha lá no céu? se você me",
+      "inicio_original": 74.371,
+      "fim_original": 77.954,
+      "texto_original": "que eu sofratidar Sei bem que o brilho dela nem se compara o céu",
+      "texto_publicado": "Que eu sofratidar sei bem que o brilho dela nem se compara o céu",
       "tratamento": "original_preservado",
-      "aviso": null
+      "aviso": "consulta_txt_ambigua_original_preservado"
     },
     {
       "bloco_srt": 15,
-      "inicio_original": 50.08,
-      "fim_original": 51.98,
-      "texto_original": "pedir, eu vou buscar só pra te dar",
-      "texto_publicado": "Pedir eu vou buscar só para te dar",
+      "inicio_original": 78.622,
+      "fim_original": 82.405,
+      "texto_original": "Deixa eu te dar um beijo, eu vou mostrar o tempo que perdendo Que coisa",
+      "texto_publicado": "Deixa eu te dar um beijo, eu vou mostrar o tempo que perdendo que coisa",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 16,
+      "inicio_original": 82.485,
+      "fim_original": 88.09,
+      "texto_original": "louca, eu já sabia E quando eu me arrumava, algo me dizia Você",
+      "texto_publicado": "Louca, eu já sabia enquanto eu me arrumava algo me dizia você",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
-      "bloco_srt": 16,
-      "inicio_original": 51.98,
-      "fim_original": 54.08,
-      "texto_original": "Se bem que o brilho dela nem se",
-      "texto_publicado": "Se bem que o brilho dela nem se",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
       "bloco_srt": 17,
-      "inicio_original": 54.08,
-      "fim_original": 56.1,
-      "texto_original": "compara ao seu Deixa eu te dar um",
-      "texto_publicado": "Compara ao seu deixa eu te dar um",
-      "tratamento": "original_preservado",
+      "inicio_original": 88.13,
+      "fim_original": 93.134,
+      "texto_original": "vai encontrar Alguém que vai mudar A sua vida inteira da noite no dia",
+      "texto_publicado": "Vai encontrar alguém que vai mudar a sua vida inteira da noite pro dia",
+      "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 18,
-      "inicio_original": 56.1,
-      "fim_original": 58.6,
-      "texto_original": "beijo vou mostrar o tempo que perdeu Que",
-      "texto_publicado": "Beijo vou mostrar o tempo que perdeu que",
+      "inicio_original": 97.818,
+      "fim_original": 98.398,
+      "texto_original": "Vem!",
+      "texto_publicado": "Vem!",
       "tratamento": "original_preservado",
-      "aviso": null
+      "aviso": "consulta_txt_ambigua_original_preservado"
     },
     {
       "bloco_srt": 19,
-      "inicio_original": 58.6,
-      "fim_original": 62.04,
-      "texto_original": "coisa louca, eu já sabia Enquanto eu me",
-      "texto_publicado": "Coisa louca, eu já sabia enquanto eu me",
+      "inicio_original": 98.902,
+      "fim_original": 103.165,
+      "texto_original": "Te filmando, eu tava quieto no meu canto Cabelo bem cortado, perfume",
+      "texto_publicado": "Te filmando, eu tava quieto no meu canto cabelo bem cortado, perfume",
       "tratamento": "original_preservado",
       "aviso": null
     },
     {
       "bloco_srt": 20,
-      "inicio_original": 62.04,
-      "fim_original": 66.06,
-      "texto_original": "arrumava Algo me dizia Você vai encontrar Alguém",
-      "texto_publicado": "Arrumava algo me dizia você vai encontrar alguém",
+      "inicio_original": 103.325,
+      "fim_original": 108.569,
+      "texto_original": "exalando Daquele jeito que eu sei que você gosta Mas eu te dei um papo e",
+      "texto_publicado": "Exalando daquele jeito que eu sei que você gosta mas eu te dei um papo e",
       "tratamento": "original_preservado",
       "aviso": null
     },
     {
       "bloco_srt": 21,
-      "inicio_original": 66.06,
-      "fim_original": 68.72,
-      "texto_original": "que vai mudar A sua vida inteira da",
-      "texto_publicado": "Que vai mudar a sua vida inteira da",
-      "tratamento": "original_preservado",
+      "inicio_original": 108.629,
+      "fim_original": 110.51,
+      "texto_original": "você nem deu resposta, não Tudo",
+      "texto_publicado": "Você não deu resposta, não tudo",
+      "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 22,
-      "inicio_original": 68.72,
-      "fim_original": 71.42,
-      "texto_original": "noite pro dia Tá vendo aquela lua que",
-      "texto_publicado": "Noite pro dia tá vendo aquela lua que",
-      "tratamento": "original_preservado",
+      "inicio_original": 111.391,
+      "fim_original": 116.634,
+      "texto_original": "bem, um dia vai e outro vem Você deve estar pensando em outro alguém Mas",
+      "texto_publicado": "Bem um dia vai e outro vem você deve estar pensando em outro alguém mas",
+      "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 23,
-      "inicio_original": 71.42,
-      "fim_original": 73.84,
-      "texto_original": "brilha lá no céu? Se você me pedir",
-      "texto_publicado": "Brilha lá no céu? se você me pedir",
-      "tratamento": "original_preservado",
+      "inicio_original": 116.654,
+      "fim_original": 118.456,
+      "texto_original": "se ele te merecesse, não estaria aqui Não, não, não",
+      "texto_publicado": "Se ele te merecesse não estaria aqui (não, não, não)",
+      "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 24,
-      "inicio_original": 73.96,
-      "fim_original": 75.82,
-      "texto_original": "eu vou buscar só pra te dar Se",
-      "texto_publicado": "Eu vou buscar só pra te dar se",
-      "tratamento": "original_preservado",
+      "inicio_original": 122.398,
+      "fim_original": 128.286,
+      "texto_original": "Ou talvez você não queira se envolver, Maguada tá com medo de sofrer, Se",
+      "texto_publicado": "Ou talvez você não queira se envolver magoada, tá com medo de sofrer se",
+      "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 25,
-      "inicio_original": 75.82,
-      "fim_original": 77.9,
-      "texto_original": "bem que o brilho dela nem se compara",
-      "texto_publicado": "Bem que o brilho dela nem se compara",
+      "inicio_original": 128.346,
+      "fim_original": 131.23,
+      "texto_original": "me ter uma chance não vai se arrepender. Não, não, não, não, não. Quero",
+      "texto_publicado": "Me ter uma chance não vai se arrepender. não, não, não, não, não. quero",
       "tratamento": "original_preservado",
-      "aviso": null
+      "aviso": "consulta_txt_ambigua_original_preservado"
     },
     {
       "bloco_srt": 26,
-      "inicio_original": 77.9,
-      "fim_original": 79.74,
-      "texto_original": "ao seu Deixa eu te dar um beijo",
-      "texto_publicado": "Ao seu deixa eu te dar um beijo",
+      "inicio_original": 131.671,
+      "fim_original": 136.958,
+      "texto_original": "ver! Tá vendo aquela lua que brilhará no céu?",
+      "texto_publicado": "Ver! tá vendo aquela lua que brilhará no céu?",
       "tratamento": "original_preservado",
-      "aviso": null
+      "aviso": "consulta_txt_ambigua_original_preservado"
     },
     {
       "bloco_srt": 27,
-      "inicio_original": 79.82,
-      "fim_original": 82.36,
-      "texto_original": "vou mostrar o tempo que perdeu Que coisa",
-      "texto_publicado": "Vou mostrar o tempo que perdeu que coisa",
+      "inicio_original": 137.154,
+      "fim_original": 141.655,
+      "texto_original": "Se você me pedir, eu vou buscar sua pratida Se bem que o brilho dela nem",
+      "texto_publicado": "Se você me pedir, eu vou buscar sua pratida se bem que o brilho dela nem",
       "tratamento": "original_preservado",
-      "aviso": null
+      "aviso": "consulta_txt_ambigua_original_preservado"
     },
     {
       "bloco_srt": 28,
-      "inicio_original": 82.36,
-      "fim_original": 86.0,
-      "texto_original": "louca, eu já sabia Enquanto eu me arrumava",
-      "texto_publicado": "Louca, eu já sabia enquanto eu me arrumava",
+      "inicio_original": 141.715,
+      "fim_original": 145.516,
+      "texto_original": "se compara o seu Deixa eu te dar um beijo, eu vou mostrar o tempo que",
+      "texto_publicado": "Se compara o seu deixa eu te dar um beijo, eu vou mostrar o tempo que",
       "tratamento": "original_preservado",
-      "aviso": null
+      "aviso": "texto_exclusivo_srt_preservado"
     },
     {
       "bloco_srt": 29,
-      "inicio_original": 86.08,
-      "fim_original": 89.72,
-      "texto_original": "algo me dizia Você vai encontrar Alguém que",
-      "texto_publicado": "Algo me dizia você vai encontrar alguém que",
-      "tratamento": "original_preservado",
+      "inicio_original": 145.576,
+      "fim_original": 150.997,
+      "texto_original": "perdeu Coisa louca, eu já sabia Enquanto eu me arrumava, algo me",
+      "texto_publicado": "Perdeu que coisa louca, eu já sabia enquanto eu me arrumava algo me",
+      "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 30,
-      "inicio_original": 89.72,
-      "fim_original": 92.38,
-      "texto_original": "vai mudar A sua vida inteira da noite",
-      "texto_publicado": "Vai mudar a sua vida inteira da noite",
-      "tratamento": "original_preservado",
+      "inicio_original": 151.037,
+      "fim_original": 156.558,
+      "texto_original": "dizia Você vai encontrar, alguém que vai mudar A sua vida inteira da",
+      "texto_publicado": "Dizia você vai encontrar alguém que vai mudar a sua vida inteira da",
+      "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 31,
-      "inicio_original": 92.38,
-      "fim_original": 100.52,
-      "texto_original": "pro dia Te filmando eu tava quieto no",
-      "texto_publicado": "Pro dia te filmando eu tava quieto no",
-      "tratamento": "original_preservado",
+      "inicio_original": 156.578,
+      "fim_original": 161.199,
+      "texto_original": "noite brudia Da vez não quero a lua que brilha lá no seu Se você me",
+      "texto_publicado": "Noite pro dia tá vendo aquela lua que brilha lá no céu? se você me",
+      "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 32,
-      "inicio_original": 100.52,
-      "fim_original": 104.98,
-      "texto_original": "meu canto Cabelo bem cortado, perfume exalando Daquele",
-      "texto_publicado": "Meu canto cabelo bem cortado, perfume exalando daquele",
-      "tratamento": "original_preservado",
+      "inicio_original": 161.279,
+      "fim_original": 165.72,
+      "texto_original": "pedir, eu vou buscar sua pratida Se bem que o brilho dela nem se compara",
+      "texto_publicado": "Pedir eu vou buscar só pra te dar se bem que o brilho dela nem se compara",
+      "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 33,
-      "inicio_original": 104.98,
-      "fim_original": 107.32,
-      "texto_original": "jeito que eu sei que você gosta Mas",
-      "texto_publicado": "Jeito que eu sei que você gosta mas",
-      "tratamento": "original_preservado",
+      "inicio_original": 165.74,
+      "fim_original": 167.1,
+      "texto_original": "o seu Deixa eu te dar um beijo",
+      "texto_publicado": "Ao seu deixa eu te dar um beijo",
+      "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 34,
-      "inicio_original": 107.32,
-      "fim_original": 109.18,
-      "texto_original": "eu te dei um papo e você nem",
-      "texto_publicado": "Eu te dei um papo e você nem",
-      "tratamento": "original_preservado",
+      "inicio_original": 167.22,
+      "fim_original": 172.283,
+      "texto_original": "Um beijo, vou mostrar o tempo que perdeu Que coisa louca, eu já sabia",
+      "texto_publicado": "Um beijo vou mostrar o tempo que perdeu que coisa louca, eu já sabia",
+      "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 35,
-      "inicio_original": 109.18,
-      "fim_original": 112.14,
-      "texto_original": "deu resposta, não Tudo bem um dia vai",
-      "texto_publicado": "Deu resposta, não tudo bem um dia vai",
-      "tratamento": "original_preservado",
+      "inicio_original": 172.703,
+      "fim_original": 177.566,
+      "texto_original": "Encontrei o meu arrumava, algo me dizia Você vai encontrar Alguém que",
+      "texto_publicado": "Enquanto eu me arrumava algo me dizia você vai encontrar alguém que",
+      "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 36,
-      "inicio_original": 112.14,
-      "fim_original": 115.36,
-      "texto_original": "e outro vem Você deve estar pensando em",
-      "texto_publicado": "E outro vem você deve estar pensando em",
+      "inicio_original": 177.606,
+      "fim_original": 180.948,
+      "texto_original": "vai mudar A sua vida inteira da noite pro dia",
+      "texto_publicado": "Vai mudar a sua vida inteira da noite pro dia",
       "tratamento": "original_preservado",
       "aviso": null
     },
     {
       "bloco_srt": 37,
-      "inicio_original": 115.36,
-      "fim_original": 118.5,
-      "texto_original": "outro alguém Mas se ele te merecesse não",
-      "texto_publicado": "Outro alguém mas se ele te merecesse não",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 38,
-      "inicio_original": 118.5,
-      "fim_original": 123.18,
-      "texto_original": "estaria aqui (Não, não, não) Ou talvez você",
-      "texto_publicado": "Estaria aqui (não, não, não) ou talvez você",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 39,
-      "inicio_original": 123.18,
-      "fim_original": 126.76,
-      "texto_original": "não queira se envolver Magoada, tá com medo",
-      "texto_publicado": "Não queira se envolver magoada, tá com medo",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 40,
-      "inicio_original": 126.76,
-      "fim_original": 129.56,
-      "texto_original": "de sofrer Se me der uma chance não",
-      "texto_publicado": "De sofrer se me der uma chance não",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 41,
-      "inicio_original": 129.56,
-      "fim_original": 133.62,
-      "texto_original": "vai se arrepender Não, não, não Quero ver!",
-      "texto_publicado": "Vai se arrepender não, não, não quero ver!",
-      "tratamento": "original_preservado",
-      "aviso": "consulta_txt_ambigua_original_preservado"
-    },
-    {
-      "bloco_srt": 42,
-      "inicio_original": 134.18,
-      "fim_original": 136.62,
-      "texto_original": "Tá vendo aquela lua que brilha lá no",
-      "texto_publicado": "Tá vendo aquela lua que brilha lá no",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 43,
-      "inicio_original": 136.62,
-      "fim_original": 138.86,
-      "texto_original": "céu? Se você me pedir eu vou buscar",
-      "texto_publicado": "Céu? se você me pedir eu vou buscar",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 44,
-      "inicio_original": 138.86,
-      "fim_original": 140.64,
-      "texto_original": "só pra te dar Se bem que o",
-      "texto_publicado": "Só para te dar se bem que o",
+      "inicio_original": 186.752,
+      "fim_original": 188.973,
+      "texto_original": "Te filmando, eu tava quieto no meu canso",
+      "texto_publicado": "Te filmando eu tava quieto no meu canto",
       "tratamento": "texto_corrigido",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 45,
-      "inicio_original": 140.64,
-      "fim_original": 143.2,
-      "texto_original": "brilho dela nem se compara ao seu Deixa",
-      "texto_publicado": "Brilho dela nem se compara ao seu deixa",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 46,
-      "inicio_original": 143.2,
-      "fim_original": 145.0,
-      "texto_original": "eu te dar um beijo vou mostrar o",
-      "texto_publicado": "Eu te dar um beijo vou mostrar o",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 47,
-      "inicio_original": 145.0,
-      "fim_original": 148.04,
-      "texto_original": "tempo que perdeu Que coisa louca, eu já",
-      "texto_publicado": "Tempo que perdeu que coisa louca, eu já",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 48,
-      "inicio_original": 148.04,
-      "fim_original": 151.92,
-      "texto_original": "sabia Enquanto eu me arrumava Algo me dizia",
-      "texto_publicado": "Sabia enquanto eu me arrumava algo me dizia",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 49,
-      "inicio_original": 151.92,
-      "fim_original": 155.24,
-      "texto_original": "Você vai encontrar Alguém que vai mudar A",
-      "texto_publicado": "Você vai encontrar alguém que vai mudar a",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 50,
-      "inicio_original": 155.24,
-      "fim_original": 157.78,
-      "texto_original": "sua vida inteira da noite pro dia Tá",
-      "texto_publicado": "Sua vida inteira da noite pro dia tá",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 51,
-      "inicio_original": 157.78,
-      "fim_original": 160.08,
-      "texto_original": "vendo aquela lua que brilha lá no céu?",
-      "texto_publicado": "Vendo aquela lua que brilha lá no céu?",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 52,
-      "inicio_original": 160.08,
-      "fim_original": 162.72,
-      "texto_original": "Se você me pedir eu vou buscar só",
-      "texto_publicado": "Se você me pedir eu vou buscar só",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 53,
-      "inicio_original": 162.72,
-      "fim_original": 164.38,
-      "texto_original": "pra te dar Se bem que o brilho",
-      "texto_publicado": "Pra te dar se bem que o brilho",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 54,
-      "inicio_original": 164.38,
-      "fim_original": 166.78,
-      "texto_original": "dela nem se compara ao seu Deixa eu",
-      "texto_publicado": "Dela nem se compara ao seu deixa eu",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 55,
-      "inicio_original": 166.78,
-      "fim_original": 168.64,
-      "texto_original": "te dar um beijo vou mostrar o tempo",
-      "texto_publicado": "Te dar um beijo vou mostrar o tempo",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 56,
-      "inicio_original": 168.64,
-      "fim_original": 172.18,
-      "texto_original": "que perdeu Que coisa louca, eu já sabia",
-      "texto_publicado": "Que perdeu que coisa louca, eu já sabia",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 57,
-      "inicio_original": 172.18,
-      "fim_original": 175.88,
-      "texto_original": "Enquanto eu me arrumava Algo me dizia Você",
-      "texto_publicado": "Enquanto eu me arrumava algo me dizia você",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 58,
-      "inicio_original": 175.88,
-      "fim_original": 178.94,
-      "texto_original": "vai encontrar Alguém que vai mudar A sua",
-      "texto_publicado": "Vai encontrar alguém que vai mudar a sua",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 59,
-      "inicio_original": 178.94,
-      "fim_original": 187.39,
-      "texto_original": "vida inteira da noite pro dia Te filmando",
-      "texto_publicado": "Vida inteira da noite pro dia te filmando",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 60,
-      "inicio_original": 187.49,
-      "fim_original": 190.37,
-      "texto_original": "eu tava quieto no meu canto",
-      "texto_publicado": "Eu tava quieto no meu canto",
-      "tratamento": "original_preservado",
       "aviso": null
     }
   ],
   "recuperacoes": [
     {
       "id": 1,
-      "txt_inicio": 226,
-      "txt_fim": 459,
-      "inicio": 92.38,
-      "fim": 92.38,
-      "bloco_anterior": 30,
-      "bloco_seguinte": 31,
-      "limite_busca": 90.0,
-      "motivo_nao_pesquisado": "sem_espaco_temporal_entre_blocos",
-      "estado": "nao_pesquisado",
-      "tentativas": [],
+      "txt_inicio": 103,
+      "txt_fim": 174,
+      "inicio": 51.321,
+      "fim": 51.361,
+      "bloco_anterior": 8,
+      "bloco_seguinte": 9,
+      "ocupados": [],
+      "limite_busca": 180.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "pesquisado_sem_confirmacao",
+      "tentativas": [
+        {
+          "janela": [
+            51.321,
+            51.361
+          ],
+          "texto": "para te dar\nSe bem que o brilho dela nem se compara ao seu\nDeixa eu te dar um beijo vou mostrar o tempo que perdeu\nQue coisa louca, eu já sabia\nEnquanto eu me arrumava\nAlgo me dizia\nVocê vai encontrar\nAlguém que vai mudar\nA sua vida inteira da noite pro dia\nTá vendo aquela lua que brilha lá no céu?\nSe você me pedir eu vou buscar só",
+          "palavras": [
+            {
+              "texto": "para",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "te",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "dar",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "Se",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "bem",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "que",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "o",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "brilho",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "dela",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "nem",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "se",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "compara",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "ao",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "seu",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "Deixa",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "eu",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "te",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "dar",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "um",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "beijo",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "vou",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "mostrar",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "o",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "tempo",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "que",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "perdeu",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "Que",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "coisa",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "louca",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "eu",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "já",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "sabia",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "Enquanto",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "eu",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "me",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "arrumava",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "Algo",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "me",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "dizia",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "Você",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "vai",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "encontrar",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "Alguém",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "que",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "vai",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "mudar",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "A",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "sua",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "vida",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "inteira",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "da",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "noite",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "pro",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "dia",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "Tá",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "vendo",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "aquela",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "lua",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "que",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "brilha",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "lá",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "no",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "céu",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "Se",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "você",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "me",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "pedir",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "eu",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "vou",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "buscar",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "só",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            }
+          ]
+        }
+      ],
       "inseridos": [],
-      "tokens_recuperados": []
-    },
-    {
-      "id": 2,
-      "txt_inicio": 30,
-      "txt_fim": 263,
-      "inicio": 109.18,
-      "fim": 109.18,
-      "bloco_anterior": 34,
-      "bloco_seguinte": 35,
-      "limite_busca": 90.0,
-      "motivo_nao_pesquisado": "sem_espaco_temporal_entre_blocos",
-      "estado": "nao_pesquisado",
-      "tentativas": [],
-      "inseridos": [],
-      "tokens_recuperados": []
+      "tokens_recuperados": [],
+      "texto": "para te dar Se bem que o brilho dela nem se compara ao seu Deixa eu te dar um beijo vou mostrar o tempo que perdeu Que coisa louca, eu já sabia Enquanto eu me arrumava Algo me dizia Você vai encontrar Alguém que vai mudar A sua vida inteira da noite pro dia Tá vendo aquela lua que brilha lá no céu? Se você me pedir eu vou buscar só"
     }
   ],
-  "tentativas": [],
+  "tentativas": [
+    {
+      "janela": [
+        51.321,
+        51.361
+      ],
+      "texto": "para te dar\nSe bem que o brilho dela nem se compara ao seu\nDeixa eu te dar um beijo vou mostrar o tempo que perdeu\nQue coisa louca, eu já sabia\nEnquanto eu me arrumava\nAlgo me dizia\nVocê vai encontrar\nAlguém que vai mudar\nA sua vida inteira da noite pro dia\nTá vendo aquela lua que brilha lá no céu?\nSe você me pedir eu vou buscar só",
+      "palavras": [
+        {
+          "texto": "para",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "te",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "dar",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "Se",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "bem",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "que",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "o",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "brilho",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "dela",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "nem",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "se",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "compara",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "ao",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "seu",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "Deixa",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "eu",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "te",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "dar",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "um",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "beijo",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "vou",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "mostrar",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "o",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "tempo",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "que",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "perdeu",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "Que",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "coisa",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "louca",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "eu",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "já",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "sabia",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "Enquanto",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "eu",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "me",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "arrumava",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "Algo",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "me",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "dizia",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "Você",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "vai",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "encontrar",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "Alguém",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "que",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "vai",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "mudar",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "A",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "sua",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "vida",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "inteira",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "da",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "noite",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "pro",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "dia",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "Tá",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "vendo",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "aquela",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "lua",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "que",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "brilha",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "lá",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "no",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "céu",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "Se",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "você",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "me",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "pedir",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "eu",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "vou",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "buscar",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "só",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        }
+      ],
+      "lacuna": 1
+    }
+  ],
   "pendencias": [
     {
-      "bloco_srt": 41,
+      "bloco_srt": 1,
       "motivo": "consulta_txt_ambigua_original_preservado"
     },
     {
-      "lacuna": 1,
-      "motivo": "nao_pesquisado",
-      "detalhe": "sem_espaco_temporal_entre_blocos"
+      "bloco_srt": 13,
+      "motivo": "consulta_txt_ambigua_original_preservado"
     },
     {
-      "lacuna": 2,
-      "motivo": "nao_pesquisado",
-      "detalhe": "sem_espaco_temporal_entre_blocos"
+      "bloco_srt": 14,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 15,
+      "motivo": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 18,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 25,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 26,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 27,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 28,
+      "motivo": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "lacuna": 1,
+      "motivo": "pesquisado_sem_confirmacao",
+      "detalhe": null
     },
     {
       "motivo": "texto_txt_sem_tempo",
       "tokens_txt": [
-        226,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
         227,
         228,
         229,
         230,
         231,
         232,
-        233,
-        234,
-        235,
-        236,
-        237,
-        238,
-        255,
-        256,
-        257,
-        258,
-        259,
-        260,
-        261,
-        262,
+        306,
+        307,
+        308,
+        309,
+        310,
         311,
         312,
         313,
@@ -1892,436 +2292,376 @@
         315,
         316,
         317,
-        318
+        318,
+        319,
+        320,
+        321,
+        322,
+        323,
+        324,
+        325,
+        326,
+        327,
+        328,
+        329,
+        330,
+        331,
+        332,
+        333,
+        334,
+        335,
+        336,
+        337,
+        338,
+        339,
+        340,
+        341,
+        342,
+        343,
+        344,
+        345
       ]
     }
   ],
   "blocos": [
     {
-      "inicio": 10.56,
-      "fim": 13.38,
-      "texto": "Te filmando, eu tava quieto no meu canto",
+      "inicio": 11.106,
+      "fim": 15.47,
+      "texto": "Estive filmando, eu tava quieto no meu canto, cabelo bem cortado e filme",
       "origem": "original_preservado",
       "bloco_original": 1
     },
     {
-      "inicio": 13.38,
-      "fim": 17.82,
-      "texto": "Cabelo bem cortado, perfume exalando daquele jeito que",
-      "origem": "original_preservado",
+      "inicio": 15.59,
+      "fim": 20.694,
+      "texto": "Exalando daquele jeito que eu sei que você gosta mas eu te dei um papo",
+      "origem": "texto_corrigido",
       "bloco_original": 2
     },
     {
-      "inicio": 17.82,
-      "fim": 19.82,
-      "texto": "Eu sei que você gosta mas eu te",
-      "origem": "original_preservado",
+      "inicio": 20.714,
+      "fim": 26.359,
+      "texto": "E você nem deu resposta tudo bem um dia vai e o outro vem você deve",
+      "origem": "texto_corrigido",
       "bloco_original": 3
     },
     {
-      "inicio": 19.82,
-      "fim": 22.1,
-      "texto": "Dei um papo e você nem deu resposta",
-      "origem": "original_preservado",
+      "inicio": 26.399,
+      "fim": 31.143,
+      "texto": "Estar pensando em outro alguém mas se ele te merecesse não estaria",
+      "origem": "texto_corrigido",
       "bloco_original": 4
     },
     {
-      "inicio": 22.1,
-      "fim": 24.86,
-      "texto": "Tudo bem um dia vai e o outro",
-      "origem": "original_preservado",
+      "inicio": 31.203,
+      "fim": 33.185,
+      "texto": "Aqui (não, não, não)",
+      "origem": "texto_corrigido",
       "bloco_original": 5
     },
     {
-      "inicio": 24.86,
-      "fim": 28.3,
-      "texto": "Vem você deve estar pensando em outro alguém",
-      "origem": "original_preservado",
+      "inicio": 34.558,
+      "fim": 40.479,
+      "texto": "Ou talvez você não queira se envolver magoada, tá com medo de sofrer se",
+      "origem": "texto_corrigido",
       "bloco_original": 6
     },
     {
-      "inicio": 28.3,
-      "fim": 32.08,
-      "texto": "Mas se ele te merecesse não estaria aqui (",
-      "origem": "original_preservado",
+      "inicio": 40.539,
+      "fim": 46.36,
+      "texto": "Me der uma chance não vai se arrepender (não, não, não, não, não)",
+      "origem": "texto_corrigido",
       "bloco_original": 7
     },
     {
-      "inicio": 32.08,
-      "fim": 36.06,
-      "texto": "Não, não, não) ou talvez você não queira",
-      "origem": "original_preservado",
+      "inicio": 46.42,
+      "fim": 51.321,
+      "texto": "Tá vendo aquela lua que brilha lá no céu? se você me pedir eu vou buscar só",
+      "origem": "texto_corrigido",
       "bloco_original": 8
     },
     {
-      "inicio": 36.06,
-      "fim": 40.1,
-      "texto": "Se envolver magoada, tá com medo de sofrer",
-      "origem": "original_preservado",
+      "inicio": 51.361,
+      "fim": 55.922,
+      "texto": "Pra te dar se bem que o brilho dela nem se compara ao seu deixa eu te dar",
+      "origem": "texto_corrigido",
       "bloco_original": 9
     },
     {
-      "inicio": 40.1,
-      "fim": 42.44,
-      "texto": "Se me der uma chance não vai se",
-      "origem": "original_preservado",
+      "inicio": 55.982,
+      "fim": 61.083,
+      "texto": "Um beijo vou mostrar o tempo que perdeu que coisa louca, eu já sabia",
+      "origem": "texto_corrigido",
       "bloco_original": 10
     },
     {
-      "inicio": 42.48,
-      "fim": 44.066,
-      "texto": "Arrepender (",
-      "origem": "original_preservado",
+      "inicio": 61.463,
+      "fim": 63.884,
+      "texto": "Enquanto eu me arrumava algo me dizia",
+      "origem": "texto_corrigido",
       "bloco_original": 11
     },
     {
-      "inicio": 44.427,
-      "fim": 46.375,
-      "texto": "Não, não, não, não, não)",
+      "inicio": 64.464,
+      "fim": 69.227,
+      "texto": "Você vai encontrar alguém que vai mudar a sua vida inteira da noite pro",
       "origem": "original_preservado",
       "bloco_original": 12
     },
     {
-      "inicio": 46.435,
-      "fim": 47.439,
-      "texto": "Tá vendo aquela lua",
+      "inicio": 69.327,
+      "fim": 74.331,
+      "texto": "Dia seu brilho que ela lua, que brilha no céu se você me pedirá, vamos",
       "origem": "original_preservado",
       "bloco_original": 13
     },
     {
-      "inicio": 47.76,
-      "fim": 50.08,
-      "texto": "Que brilha lá no céu? se você me",
+      "inicio": 74.371,
+      "fim": 77.954,
+      "texto": "Que eu sofratidar sei bem que o brilho dela nem se compara o céu",
       "origem": "original_preservado",
       "bloco_original": 14
     },
     {
-      "inicio": 50.08,
-      "fim": 51.98,
-      "texto": "Pedir eu vou buscar só para te dar",
-      "origem": "texto_corrigido",
+      "inicio": 78.622,
+      "fim": 82.405,
+      "texto": "Deixa eu te dar um beijo, eu vou mostrar o tempo que perdendo que coisa",
+      "origem": "original_preservado",
       "bloco_original": 15
     },
     {
-      "inicio": 51.98,
-      "fim": 54.08,
-      "texto": "Se bem que o brilho dela nem se",
-      "origem": "original_preservado",
+      "inicio": 82.485,
+      "fim": 88.09,
+      "texto": "Louca, eu já sabia enquanto eu me arrumava algo me dizia você",
+      "origem": "texto_corrigido",
       "bloco_original": 16
     },
     {
-      "inicio": 54.08,
-      "fim": 56.1,
-      "texto": "Compara ao seu deixa eu te dar um",
-      "origem": "original_preservado",
+      "inicio": 88.13,
+      "fim": 93.134,
+      "texto": "Vai encontrar alguém que vai mudar a sua vida inteira da noite pro dia",
+      "origem": "texto_corrigido",
       "bloco_original": 17
     },
     {
-      "inicio": 56.1,
-      "fim": 58.6,
-      "texto": "Beijo vou mostrar o tempo que perdeu que",
+      "inicio": 97.818,
+      "fim": 98.398,
+      "texto": "Vem!",
       "origem": "original_preservado",
       "bloco_original": 18
     },
     {
-      "inicio": 58.6,
-      "fim": 62.04,
-      "texto": "Coisa louca, eu já sabia enquanto eu me",
+      "inicio": 98.902,
+      "fim": 103.165,
+      "texto": "Te filmando, eu tava quieto no meu canto cabelo bem cortado, perfume",
       "origem": "original_preservado",
       "bloco_original": 19
     },
     {
-      "inicio": 62.04,
-      "fim": 66.06,
-      "texto": "Arrumava algo me dizia você vai encontrar alguém",
+      "inicio": 103.325,
+      "fim": 108.569,
+      "texto": "Exalando daquele jeito que eu sei que você gosta mas eu te dei um papo e",
       "origem": "original_preservado",
       "bloco_original": 20
     },
     {
-      "inicio": 66.06,
-      "fim": 68.72,
-      "texto": "Que vai mudar a sua vida inteira da",
-      "origem": "original_preservado",
+      "inicio": 108.629,
+      "fim": 110.51,
+      "texto": "Você não deu resposta, não tudo",
+      "origem": "texto_corrigido",
       "bloco_original": 21
     },
     {
-      "inicio": 68.72,
-      "fim": 71.42,
-      "texto": "Noite pro dia tá vendo aquela lua que",
-      "origem": "original_preservado",
+      "inicio": 111.391,
+      "fim": 116.634,
+      "texto": "Bem um dia vai e outro vem você deve estar pensando em outro alguém mas",
+      "origem": "texto_corrigido",
       "bloco_original": 22
     },
     {
-      "inicio": 71.42,
-      "fim": 73.84,
-      "texto": "Brilha lá no céu? se você me pedir",
-      "origem": "original_preservado",
+      "inicio": 116.654,
+      "fim": 118.456,
+      "texto": "Se ele te merecesse não estaria aqui (não, não, não)",
+      "origem": "texto_corrigido",
       "bloco_original": 23
     },
     {
-      "inicio": 73.96,
-      "fim": 75.82,
-      "texto": "Eu vou buscar só pra te dar se",
-      "origem": "original_preservado",
+      "inicio": 122.398,
+      "fim": 128.286,
+      "texto": "Ou talvez você não queira se envolver magoada, tá com medo de sofrer se",
+      "origem": "texto_corrigido",
       "bloco_original": 24
     },
     {
-      "inicio": 75.82,
-      "fim": 77.9,
-      "texto": "Bem que o brilho dela nem se compara",
+      "inicio": 128.346,
+      "fim": 131.23,
+      "texto": "Me ter uma chance não vai se arrepender. não, não, não, não, não. quero",
       "origem": "original_preservado",
       "bloco_original": 25
     },
     {
-      "inicio": 77.9,
-      "fim": 79.74,
-      "texto": "Ao seu deixa eu te dar um beijo",
+      "inicio": 131.671,
+      "fim": 136.958,
+      "texto": "Ver! tá vendo aquela lua que brilhará no céu?",
       "origem": "original_preservado",
       "bloco_original": 26
     },
     {
-      "inicio": 79.82,
-      "fim": 82.36,
-      "texto": "Vou mostrar o tempo que perdeu que coisa",
+      "inicio": 137.154,
+      "fim": 141.655,
+      "texto": "Se você me pedir, eu vou buscar sua pratida se bem que o brilho dela nem",
       "origem": "original_preservado",
       "bloco_original": 27
     },
     {
-      "inicio": 82.36,
-      "fim": 86.0,
-      "texto": "Louca, eu já sabia enquanto eu me arrumava",
+      "inicio": 141.715,
+      "fim": 145.516,
+      "texto": "Se compara o seu deixa eu te dar um beijo, eu vou mostrar o tempo que",
       "origem": "original_preservado",
       "bloco_original": 28
     },
     {
-      "inicio": 86.08,
-      "fim": 89.72,
-      "texto": "Algo me dizia você vai encontrar alguém que",
-      "origem": "original_preservado",
+      "inicio": 145.576,
+      "fim": 150.997,
+      "texto": "Perdeu que coisa louca, eu já sabia enquanto eu me arrumava algo me",
+      "origem": "texto_corrigido",
       "bloco_original": 29
     },
     {
-      "inicio": 89.72,
-      "fim": 92.38,
-      "texto": "Vai mudar a sua vida inteira da noite",
-      "origem": "original_preservado",
+      "inicio": 151.037,
+      "fim": 156.558,
+      "texto": "Dizia você vai encontrar alguém que vai mudar a sua vida inteira da",
+      "origem": "texto_corrigido",
       "bloco_original": 30
     },
     {
-      "inicio": 92.38,
-      "fim": 100.52,
-      "texto": "Pro dia te filmando eu tava quieto no",
-      "origem": "original_preservado",
+      "inicio": 156.578,
+      "fim": 161.199,
+      "texto": "Noite pro dia tá vendo aquela lua que brilha lá no céu? se você me",
+      "origem": "texto_corrigido",
       "bloco_original": 31
     },
     {
-      "inicio": 100.52,
-      "fim": 104.98,
-      "texto": "Meu canto cabelo bem cortado, perfume exalando daquele",
-      "origem": "original_preservado",
+      "inicio": 161.279,
+      "fim": 165.72,
+      "texto": "Pedir eu vou buscar só pra te dar se bem que o brilho dela nem se compara",
+      "origem": "texto_corrigido",
       "bloco_original": 32
     },
     {
-      "inicio": 104.98,
-      "fim": 107.32,
-      "texto": "Jeito que eu sei que você gosta mas",
-      "origem": "original_preservado",
+      "inicio": 165.74,
+      "fim": 167.1,
+      "texto": "Ao seu deixa eu te dar um beijo",
+      "origem": "texto_corrigido",
       "bloco_original": 33
     },
     {
-      "inicio": 107.32,
-      "fim": 109.18,
-      "texto": "Eu te dei um papo e você nem",
-      "origem": "original_preservado",
+      "inicio": 167.22,
+      "fim": 172.283,
+      "texto": "Um beijo vou mostrar o tempo que perdeu que coisa louca, eu já sabia",
+      "origem": "texto_corrigido",
       "bloco_original": 34
     },
     {
-      "inicio": 109.18,
-      "fim": 112.14,
-      "texto": "Deu resposta, não tudo bem um dia vai",
-      "origem": "original_preservado",
+      "inicio": 172.703,
+      "fim": 177.566,
+      "texto": "Enquanto eu me arrumava algo me dizia você vai encontrar alguém que",
+      "origem": "texto_corrigido",
       "bloco_original": 35
     },
     {
-      "inicio": 112.14,
-      "fim": 115.36,
-      "texto": "E outro vem você deve estar pensando em",
+      "inicio": 177.606,
+      "fim": 180.948,
+      "texto": "Vai mudar a sua vida inteira da noite pro dia",
       "origem": "original_preservado",
       "bloco_original": 36
     },
     {
-      "inicio": 115.36,
-      "fim": 118.5,
-      "texto": "Outro alguém mas se ele te merecesse não",
-      "origem": "original_preservado",
-      "bloco_original": 37
-    },
-    {
-      "inicio": 118.5,
-      "fim": 123.18,
-      "texto": "Estaria aqui (não, não, não) ou talvez você",
-      "origem": "original_preservado",
-      "bloco_original": 38
-    },
-    {
-      "inicio": 123.18,
-      "fim": 126.76,
-      "texto": "Não queira se envolver magoada, tá com medo",
-      "origem": "original_preservado",
-      "bloco_original": 39
-    },
-    {
-      "inicio": 126.76,
-      "fim": 129.56,
-      "texto": "De sofrer se me der uma chance não",
-      "origem": "original_preservado",
-      "bloco_original": 40
-    },
-    {
-      "inicio": 129.56,
-      "fim": 133.62,
-      "texto": "Vai se arrepender não, não, não quero ver!",
-      "origem": "original_preservado",
-      "bloco_original": 41
-    },
-    {
-      "inicio": 134.18,
-      "fim": 136.62,
-      "texto": "Tá vendo aquela lua que brilha lá no",
-      "origem": "original_preservado",
-      "bloco_original": 42
-    },
-    {
-      "inicio": 136.62,
-      "fim": 138.86,
-      "texto": "Céu? se você me pedir eu vou buscar",
-      "origem": "original_preservado",
-      "bloco_original": 43
-    },
-    {
-      "inicio": 138.86,
-      "fim": 140.64,
-      "texto": "Só para te dar se bem que o",
+      "inicio": 186.752,
+      "fim": 188.973,
+      "texto": "Te filmando eu tava quieto no meu canto",
       "origem": "texto_corrigido",
-      "bloco_original": 44
-    },
-    {
-      "inicio": 140.64,
-      "fim": 143.2,
-      "texto": "Brilho dela nem se compara ao seu deixa",
-      "origem": "original_preservado",
-      "bloco_original": 45
-    },
-    {
-      "inicio": 143.2,
-      "fim": 145.0,
-      "texto": "Eu te dar um beijo vou mostrar o",
-      "origem": "original_preservado",
-      "bloco_original": 46
-    },
-    {
-      "inicio": 145.0,
-      "fim": 148.04,
-      "texto": "Tempo que perdeu que coisa louca, eu já",
-      "origem": "original_preservado",
-      "bloco_original": 47
-    },
-    {
-      "inicio": 148.04,
-      "fim": 151.92,
-      "texto": "Sabia enquanto eu me arrumava algo me dizia",
-      "origem": "original_preservado",
-      "bloco_original": 48
-    },
-    {
-      "inicio": 151.92,
-      "fim": 155.24,
-      "texto": "Você vai encontrar alguém que vai mudar a",
-      "origem": "original_preservado",
-      "bloco_original": 49
-    },
-    {
-      "inicio": 155.24,
-      "fim": 157.78,
-      "texto": "Sua vida inteira da noite pro dia tá",
-      "origem": "original_preservado",
-      "bloco_original": 50
-    },
-    {
-      "inicio": 157.78,
-      "fim": 160.08,
-      "texto": "Vendo aquela lua que brilha lá no céu?",
-      "origem": "original_preservado",
-      "bloco_original": 51
-    },
-    {
-      "inicio": 160.08,
-      "fim": 162.72,
-      "texto": "Se você me pedir eu vou buscar só",
-      "origem": "original_preservado",
-      "bloco_original": 52
-    },
-    {
-      "inicio": 162.72,
-      "fim": 164.38,
-      "texto": "Pra te dar se bem que o brilho",
-      "origem": "original_preservado",
-      "bloco_original": 53
-    },
-    {
-      "inicio": 164.38,
-      "fim": 166.78,
-      "texto": "Dela nem se compara ao seu deixa eu",
-      "origem": "original_preservado",
-      "bloco_original": 54
-    },
-    {
-      "inicio": 166.78,
-      "fim": 168.64,
-      "texto": "Te dar um beijo vou mostrar o tempo",
-      "origem": "original_preservado",
-      "bloco_original": 55
-    },
-    {
-      "inicio": 168.64,
-      "fim": 172.18,
-      "texto": "Que perdeu que coisa louca, eu já sabia",
-      "origem": "original_preservado",
-      "bloco_original": 56
-    },
-    {
-      "inicio": 172.18,
-      "fim": 175.88,
-      "texto": "Enquanto eu me arrumava algo me dizia você",
-      "origem": "original_preservado",
-      "bloco_original": 57
-    },
-    {
-      "inicio": 175.88,
-      "fim": 178.94,
-      "texto": "Vai encontrar alguém que vai mudar a sua",
-      "origem": "original_preservado",
-      "bloco_original": 58
-    },
-    {
-      "inicio": 178.94,
-      "fim": 187.39,
-      "texto": "Vida inteira da noite pro dia te filmando",
-      "origem": "original_preservado",
-      "bloco_original": 59
-    },
-    {
-      "inicio": 187.49,
-      "fim": 190.37,
-      "texto": "Eu tava quieto no meu canto",
-      "origem": "original_preservado",
-      "bloco_original": 60
+      "bloco_original": 37
     }
   ],
   "configuracao_motor": {
-    "idioma": "pt",
+    "idioma": "auto",
     "dispositivo": "cpu",
-    "modelo_solicitado": null
+    "modelo_solicitado": null,
+    "selecao_por_trecho": [
+      {
+        "inicio": 51.321,
+        "fim": 51.361,
+        "linhas": [
+          {
+            "idioma": "pt",
+            "votos_pt": 1,
+            "votos_en": 0,
+            "herdado": false
+          },
+          {
+            "idioma": "pt",
+            "votos_pt": 6,
+            "votos_en": 0,
+            "herdado": false
+          },
+          {
+            "idioma": "pt",
+            "votos_pt": 5,
+            "votos_en": 0,
+            "herdado": false
+          },
+          {
+            "idioma": "pt",
+            "votos_pt": 2,
+            "votos_en": 0,
+            "herdado": false
+          },
+          {
+            "idioma": "pt",
+            "votos_pt": 1,
+            "votos_en": 1,
+            "herdado": true
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 1,
+            "herdado": false
+          },
+          {
+            "idioma": "pt",
+            "votos_pt": 2,
+            "votos_en": 0,
+            "herdado": false
+          },
+          {
+            "idioma": "pt",
+            "votos_pt": 2,
+            "votos_en": 0,
+            "herdado": false
+          },
+          {
+            "idioma": "pt",
+            "votos_pt": 2,
+            "votos_en": 0,
+            "herdado": false
+          },
+          {
+            "idioma": "pt",
+            "votos_pt": 2,
+            "votos_en": 0,
+            "herdado": false
+          },
+          {
+            "idioma": "pt",
+            "votos_pt": 4,
+            "votos_en": 1,
+            "herdado": false
+          }
+        ]
+      }
+    ]
   },
   "fontes": {
     "txt": {
@@ -2330,7 +2670,7 @@
     },
     "srt": {
       "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\samba-pagode\\ta-vendo-aquela-lua-exaltasamba\\letra.srt",
-      "sha256": "6ca2e6935700aa83a5aa778f6ff0ad614d7d5a2904ce053af17ed018c1ddf91c"
+      "sha256": "ef03aef0097019b394fbb93116524f0d2816895c2a4e4683d66d1891d5e33871"
     },
     "voz": {
       "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\samba-pagode\\ta-vendo-aquela-lua-exaltasamba\\voz.mp3",
@@ -2338,14 +2678,35 @@
     }
   },
   "resumo_avisos": [
-    "Bloco 41: consulta txt ambigua original preservado.",
-    "Lacuna 1: nao pesquisado (00:01:32,380–00:01:32,380).",
-    "Lacuna 2: nao pesquisado (00:01:49,180–00:01:49,180).",
-    "TXT linha 31, sem tempo: pro dia",
+    "Bloco 1: consulta txt ambigua original preservado.",
+    "Bloco 13: consulta txt ambigua original preservado.",
+    "Bloco 14: consulta txt ambigua original preservado.",
+    "Bloco 15: texto exclusivo srt preservado.",
+    "Bloco 18: consulta txt ambigua original preservado.",
+    "Bloco 25: consulta txt ambigua original preservado.",
+    "Bloco 26: consulta txt ambigua original preservado.",
+    "Bloco 27: consulta txt ambigua original preservado.",
+    "Bloco 28: texto exclusivo srt preservado.",
+    "Lacuna 1: pesquisado sem confirmacao (00:00:51,321–00:00:51,361).",
+    "TXT linha 1, sem tempo: Te filmando eu tava quieto no meu canto",
+    "TXT linha 2, sem tempo: Cabelo bem cortado perfume",
+    "TXT linha 14, sem tempo: para te dar",
+    "TXT linha 15, sem tempo: Se bem que o brilho dela nem se compara ao seu",
+    "TXT linha 16, sem tempo: Deixa eu te dar um beijo vou mostrar o tempo que perdeu",
+    "TXT linha 17, sem tempo: Que coisa louca eu já sabia",
+    "TXT linha 18, sem tempo: Enquanto eu me arrumava",
+    "TXT linha 19, sem tempo: Algo me dizia",
+    "TXT linha 20, sem tempo: Você vai encontrar",
+    "TXT linha 21, sem tempo: Alguém que vai mudar",
+    "TXT linha 22, sem tempo: A sua vida inteira da noite pro dia",
+    "TXT linha 23, sem tempo: Tá vendo aquela lua que brilha lá no céu",
+    "TXT linha 24, sem tempo: Se você me pedir eu vou buscar só",
+    "TXT linha 31, sem tempo: dia",
     "TXT linha 32, sem tempo: E esse alguém sou eu",
-    "TXT linha 33, sem tempo: Te filmando eu tava quieto no",
-    "TXT linha 36, sem tempo: eu te dei um papo e você não",
-    "TXT linha 43, sem tempo: vai se arrepender",
-    "TXT linha 44, sem tempo: Não não não não não"
+    "TXT linha 43, sem tempo: me der uma chance não vai se arrepender",
+    "TXT linha 44, sem tempo: Não não não não não",
+    "TXT linha 45, sem tempo: Tá vendo aquela lua que brilha lá no céu",
+    "TXT linha 46, sem tempo: Se você me pedir eu vou buscar só para te dar",
+    "TXT linha 47, sem tempo: Se bem que o brilho dela nem"
   ]
 }

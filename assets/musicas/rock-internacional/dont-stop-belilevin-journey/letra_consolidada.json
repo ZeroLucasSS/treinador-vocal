@@ -1,5 +1,5 @@
 {
-  "versao": 5,
+  "versao": 6,
   "status": "pendente",
   "estrategia": "preservar_corrigir_inserir",
   "motor": "whisperx",
@@ -8,52 +8,57 @@
   "aprovacao_musical_automatica": false,
   "parametros": {
     "score_minimo": 0.3,
-    "janela_maxima": 90.0,
+    "janela_maxima": 180.0,
+    "segundos_busca_por_palavra": 3.0,
+    "janela_minima": 30.0,
+    "fragmento_sem_ancora_max_palavras": 2,
+    "fragmento_sem_ancora_max_segundos": 1.0,
     "score_suporte_insercao": 0.1,
     "atividade_minima_insercao": 0.2,
     "margem": 0.4,
     "margem_aplicada": false
   },
   "total_palavras_txt": 187,
-  "total_palavras_srt": 179,
+  "total_palavras_srt": 180,
   "metricas": {
-    "palavras_publicadas": 187,
-    "blocos_srt_auditados": 34,
+    "palavras_publicadas": 199,
+    "blocos_srt_auditados": 36,
     "blocos_srt_descartados": 0,
-    "blocos_texto_corrigido": 34,
-    "blocos_inseridos": 2,
-    "palavras_txt_sem_tempo": 0,
-    "palavras_txt_nao_pesquisadas": 0,
-    "palavras_txt_pesquisadas_sem_tempo": 0,
-    "palavras_baixa_confianca": 1,
+    "blocos_texto_corrigido": 24,
+    "blocos_inseridos": 8,
+    "palavras_txt_sem_tempo": 26,
+    "palavras_txt_nao_pesquisadas": 14,
+    "palavras_txt_pesquisadas_sem_tempo": 12,
+    "palavras_conflito_original": 4,
+    "palavras_baixa_confianca": 5,
     "tentativas_acusticas": 2
   },
   "comparacao": {
     "consultas": [
       {
         "bloco_srt": 1,
-        "inicio": 18.38,
-        "fim": 23.6,
+        "inicio": 18.954,
+        "fim": 20.816,
         "txt_inicio": 0,
-        "txt_fim": 8,
-        "score": 0.9850746268656717,
-        "texto": "Just a small town girl Livin' in a",
+        "txt_fim": 5,
+        "score": 1.0,
+        "texto": "Just a small town girl",
         "aviso": null
       },
       {
         "bloco_srt": 2,
-        "inicio": 23.6,
-        "fim": 25.34,
-        "txt_inicio": 8,
+        "inicio": 22.557,
+        "fim": 25.279,
+        "txt_inicio": 5,
         "txt_fim": 10,
-        "score": 1.0,
-        "texto": "lonely world",
+        "score": 0.9787234042553191,
+        "texto": "Livin' in a lonely world",
         "aviso": null
       },
       {
         "bloco_srt": 3,
-        "inicio": 26.38,
-        "fim": 31.259,
+        "inicio": 26.841,
+        "fim": 31.965,
         "txt_inicio": 10,
         "txt_fim": 17,
         "score": 1.0,
@@ -62,28 +67,28 @@
       },
       {
         "bloco_srt": 4,
-        "inicio": 34.6,
-        "fim": 39.88,
+        "inicio": 35.248,
+        "fim": 37.189,
         "txt_inicio": 17,
-        "txt_fim": 25,
+        "txt_fim": 21,
         "score": 1.0,
-        "texto": "Just a city boy Born and raised in",
+        "texto": "Just a city boy",
         "aviso": null
       },
       {
         "bloco_srt": 5,
-        "inicio": 39.88,
-        "fim": 40.82,
-        "txt_inicio": 25,
+        "inicio": 38.891,
+        "fim": 41.613,
+        "txt_inicio": 21,
         "txt_fim": 27,
         "score": 1.0,
-        "texto": "South Detroit",
+        "texto": "Born and raised in South Detroit",
         "aviso": null
       },
       {
         "bloco_srt": 6,
-        "inicio": 42.46,
-        "fim": 48.24,
+        "inicio": 43.234,
+        "fim": 47.318,
         "txt_inicio": 27,
         "txt_fim": 34,
         "score": 1.0,
@@ -92,282 +97,302 @@
       },
       {
         "bloco_srt": 7,
-        "inicio": 66.46,
-        "fim": 71.56,
-        "txt_inicio": 34,
-        "txt_fim": 42,
-        "score": 0.9411764705882352,
-        "texto": "A singer in a smokey room A smell",
-        "aviso": null
+        "inicio": 67.198,
+        "fim": 69.66,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "I'll sing her in a smokey room I'll",
+        "aviso": "consulta_txt_ambigua_original_preservado"
       },
       {
         "bloco_srt": 8,
-        "inicio": 71.56,
-        "fim": 73.68,
-        "txt_inicio": 42,
-        "txt_fim": 47,
-        "score": 1.0,
-        "texto": "of wine and cheap perfume",
-        "aviso": null
+        "inicio": 71.361,
+        "fim": 73.963,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "smell a wine and cheap a few",
+        "aviso": "consulta_txt_ambigua_original_preservado"
       },
       {
         "bloco_srt": 9,
-        "inicio": 75.02,
-        "fim": 77.62,
+        "inicio": 75.003,
+        "fim": 80.407,
         "txt_inicio": 47,
-        "txt_fim": 55,
+        "txt_fim": 61,
         "score": 1.0,
-        "texto": "For a smile they can share the night",
+        "texto": "For a smile they can share the night It goes on and on and",
         "aviso": null
       },
       {
         "bloco_srt": 10,
-        "inicio": 77.78,
-        "fim": 81.36,
-        "txt_inicio": 55,
-        "txt_fim": 63,
+        "inicio": 80.967,
+        "fim": 83.829,
+        "txt_inicio": 61,
+        "txt_fim": 65,
         "score": 1.0,
-        "texto": "It goes on and on and on and",
+        "texto": "on and on Strangers",
         "aviso": null
       },
       {
         "bloco_srt": 11,
-        "inicio": 81.36,
-        "fim": 82.04,
-        "txt_inicio": 63,
-        "txt_fim": 64,
-        "score": 1.0,
-        "texto": "on",
+        "inicio": 84.63,
+        "fim": 90.474,
+        "txt_inicio": 65,
+        "txt_fim": 72,
+        "score": 0.825,
+        "texto": "waitin' Up and down the boulevard Their",
         "aviso": null
       },
       {
         "bloco_srt": 12,
-        "inicio": 82.04,
-        "fim": 89.94,
-        "txt_inicio": 64,
-        "txt_fim": 71,
-        "score": 0.8735632183908046,
-        "texto": "Strangers waitin' Up and down the boulevard",
+        "inicio": 90.594,
+        "fim": 91.855,
+        "txt_inicio": 72,
+        "txt_fim": 73,
+        "score": 1.0,
+        "texto": "shadows",
         "aviso": null
       },
       {
         "bloco_srt": 13,
-        "inicio": 90.16,
-        "fim": 96.44,
-        "txt_inicio": 71,
+        "inicio": 92.615,
+        "fim": 96.238,
+        "txt_inicio": 73,
         "txt_fim": 77,
-        "score": 0.9444444444444444,
-        "texto": "Their shadows searchin' in the night",
+        "score": 0.9767441860465115,
+        "texto": "searchin' in the night",
         "aviso": null
       },
       {
         "bloco_srt": 14,
-        "inicio": 98.72,
-        "fim": 105.92,
+        "inicio": 98.666,
+        "fim": 99.907,
         "txt_inicio": 77,
-        "txt_fim": 84,
-        "score": 0.989247311827957,
-        "texto": "Streetlights, people Livin' just to find emotion",
+        "txt_fim": 78,
+        "score": 0.96,
+        "texto": "Streetlights,",
         "aviso": null
       },
       {
         "bloco_srt": 15,
-        "inicio": 106.74,
-        "fim": 111.62,
-        "txt_inicio": 84,
-        "txt_fim": 89,
-        "score": 0.9824561403508771,
-        "texto": "Hidin' somewhere in the night",
-        "aviso": null
+        "inicio": 100.728,
+        "fim": 102.089,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "keeper",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
       },
       {
         "bloco_srt": 16,
-        "inicio": 123.02,
-        "fim": 129.06,
-        "txt_inicio": 89,
-        "txt_fim": 97,
-        "score": 0.9882352941176471,
-        "texto": "Workin' hard to get my fill Everybody wants",
+        "inicio": 103.71,
+        "fim": 107.814,
+        "txt_inicio": 79,
+        "txt_fim": 85,
+        "score": 0.8615384615384616,
+        "texto": "Livin' just to find emotion Hidin'",
         "aviso": null
       },
       {
         "bloco_srt": 17,
-        "inicio": 129.06,
-        "fim": 130.26,
-        "txt_inicio": 97,
-        "txt_fim": 99,
+        "inicio": 108.675,
+        "fim": 114.38,
+        "txt_inicio": 85,
+        "txt_fim": 89,
         "score": 1.0,
-        "texto": "a thrill",
+        "texto": "somewhere in the night",
         "aviso": null
       },
       {
         "bloco_srt": 18,
-        "inicio": 130.26,
-        "fim": 135.26,
-        "txt_inicio": 99,
-        "txt_fim": 107,
-        "score": 0.9876543209876543,
-        "texto": "Payin' anything to roll the dice Just one",
+        "inicio": 123.187,
+        "fim": 125.79,
+        "txt_inicio": 89,
+        "txt_fim": 95,
+        "score": 0.9056603773584907,
+        "texto": "Workin' hard to get my fill",
         "aviso": null
       },
       {
         "bloco_srt": 19,
-        "inicio": 135.26,
-        "fim": 137.58,
-        "txt_inicio": 107,
-        "txt_fim": 109,
+        "inicio": 127.706,
+        "fim": 130.308,
+        "txt_inicio": 95,
+        "txt_fim": 99,
         "score": 1.0,
-        "texto": "more time",
+        "texto": "Everybody wants a thrill",
         "aviso": null
       },
       {
         "bloco_srt": 20,
-        "inicio": 138.96,
-        "fim": 143.72,
-        "txt_inicio": 109,
-        "txt_fim": 116,
-        "score": 0.9577464788732395,
-        "texto": "Some'll win, some will lose Some are",
+        "inicio": 131.068,
+        "fim": 135.891,
+        "txt_inicio": 99,
+        "txt_fim": 108,
+        "score": 0.9213483146067416,
+        "texto": "Payin' anything to roll the dice Just one more",
         "aviso": null
       },
       {
         "bloco_srt": 21,
-        "inicio": 143.72,
-        "fim": 146.3,
-        "txt_inicio": 116,
-        "txt_fim": 121,
+        "inicio": 135.991,
+        "fim": 137.592,
+        "txt_inicio": 108,
+        "txt_fim": 109,
         "score": 1.0,
-        "texto": "born to sing the blues",
+        "texto": "time",
         "aviso": null
       },
       {
         "bloco_srt": 22,
-        "inicio": 146.8,
-        "fim": 150.9,
-        "txt_inicio": 121,
-        "txt_fim": 129,
-        "score": 0.9166666666666665,
-        "texto": "Whoa, the movie never ends It goes on",
+        "inicio": 138.933,
+        "fim": 142.034,
+        "txt_inicio": 109,
+        "txt_fim": 114,
+        "score": 0.9433962264150944,
+        "texto": "Some'll win, some will lose",
         "aviso": null
       },
       {
         "bloco_srt": 23,
-        "inicio": 150.9,
-        "fim": 153.78,
-        "txt_inicio": 129,
-        "txt_fim": 135,
+        "inicio": 143.375,
+        "fim": 146.057,
+        "txt_inicio": 114,
+        "txt_fim": 121,
         "score": 1.0,
-        "texto": "and on and on and on",
+        "texto": "Some are born to sing the blues",
         "aviso": null
       },
       {
         "bloco_srt": 24,
-        "inicio": 153.78,
-        "fim": 161.62,
-        "txt_inicio": 135,
-        "txt_fim": 142,
-        "score": 0.8735632183908046,
-        "texto": "Strangers waitin' Up and down the boulevard",
+        "inicio": 147.037,
+        "fim": 152.86,
+        "txt_inicio": 121,
+        "txt_fim": 133,
+        "score": 0.9591836734693877,
+        "texto": "Whoa, the movie never ends It goes on and on and on",
         "aviso": null
       },
       {
         "bloco_srt": 25,
-        "inicio": 161.86,
-        "fim": 167.34,
-        "txt_inicio": 142,
-        "txt_fim": 148,
-        "score": 0.9444444444444444,
-        "texto": "Their shadows searchin' in the night",
+        "inicio": 152.961,
+        "fim": 155.262,
+        "txt_inicio": 131,
+        "txt_fim": 136,
+        "score": 0.8,
+        "texto": "and on and on Strangers",
         "aviso": null
       },
       {
         "bloco_srt": 26,
-        "inicio": 170.12,
-        "fim": 177.48,
-        "txt_inicio": 148,
-        "txt_fim": 155,
-        "score": 0.989247311827957,
-        "texto": "Streetlights, people Livin' just to find emotion",
+        "inicio": 156.278,
+        "fim": 157.679,
+        "txt_inicio": 136,
+        "txt_fim": 138,
+        "score": 0.9473684210526316,
+        "texto": "waitin' Up",
         "aviso": null
       },
       {
         "bloco_srt": 27,
-        "inicio": 178.26,
-        "fim": 183.12,
-        "txt_inicio": 155,
-        "txt_fim": 160,
-        "score": 0.9824561403508771,
-        "texto": "Hidin', somewhere in the night",
+        "inicio": 159.381,
+        "fim": 163.465,
+        "txt_inicio": 138,
+        "txt_fim": 144,
+        "score": 0.7297297297297297,
+        "texto": "and down the boulevard Their shadows",
         "aviso": null
       },
       {
         "bloco_srt": 28,
-        "inicio": 201.72,
-        "fim": 205.26,
-        "txt_inicio": 160,
-        "txt_fim": 163,
-        "score": 0.972972972972973,
-        "texto": "Don't stop believin'",
+        "inicio": 164.225,
+        "fim": 168.189,
+        "txt_inicio": 144,
+        "txt_fim": 148,
+        "score": 0.9767441860465115,
+        "texto": "searchin' in the night",
         "aviso": null
       },
       {
         "bloco_srt": 29,
-        "inicio": 206.34,
-        "fim": 209.0,
-        "txt_inicio": 163,
-        "txt_fim": 168,
-        "score": 0.9777777777777777,
-        "texto": "Hold on to that feelin'",
+        "inicio": 170.211,
+        "fim": 171.432,
+        "txt_inicio": 148,
+        "txt_fim": 149,
+        "score": 0.8333333333333335,
+        "texto": "Streetlights,",
         "aviso": null
       },
       {
         "bloco_srt": 30,
-        "inicio": 210.08,
-        "fim": 212.98,
-        "txt_inicio": 168,
-        "txt_fim": 170,
+        "inicio": 172.973,
+        "fim": 173.734,
+        "txt_inicio": 149,
+        "txt_fim": 150,
         "score": 1.0,
-        "texto": "Streetlights, people",
+        "texto": "people",
         "aviso": null
       },
       {
         "bloco_srt": 31,
-        "inicio": 217.67,
-        "fim": 220.87,
-        "txt_inicio": 170,
-        "txt_fim": 173,
-        "score": 0.972972972972973,
-        "texto": "Don't stop believin'",
-        "aviso": null
+        "inicio": 175.255,
+        "fim": 178.058,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "loving just to find him on sight",
+        "aviso": "consulta_txt_ambigua_original_preservado"
       },
       {
         "bloco_srt": 32,
-        "inicio": 225.04,
-        "fim": 228.9,
-        "txt_inicio": 175,
-        "txt_fim": 177,
-        "score": 1.0,
-        "texto": "Streetlights, people",
+        "inicio": 178.859,
+        "fim": 179.339,
+        "txt_inicio": 22,
+        "txt_fim": 25,
+        "score": 0.6956521739130435,
+        "texto": "and raised in",
         "aviso": null
       },
       {
         "bloco_srt": 33,
-        "inicio": 233.49,
-        "fim": 236.67,
-        "txt_inicio": 177,
-        "txt_fim": 180,
-        "score": 0.972972972972973,
-        "texto": "Don't stop believin'",
+        "inicio": 180.2,
+        "fim": 182.382,
+        "txt_inicio": 85,
+        "txt_fim": 89,
+        "score": 1.0,
+        "texto": "somewhere in the night",
         "aviso": null
       },
       {
         "bloco_srt": 34,
-        "inicio": 240.61,
-        "fim": 244.09,
-        "txt_inicio": 185,
-        "txt_fim": 187,
-        "score": 1.0,
-        "texto": "Streetlights, people",
+        "inicio": 202.906,
+        "fim": 203.287,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "stuff",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
+      },
+      {
+        "bloco_srt": 35,
+        "inicio": 203.949,
+        "fim": 205.332,
+        "txt_inicio": 162,
+        "txt_fim": 163,
+        "score": 0.8888888888888888,
+        "texto": "believin'",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 36,
+        "inicio": 207.137,
+        "fim": 208.781,
+        "txt_inicio": 163,
+        "txt_fim": 168,
+        "score": 0.9090909090909091,
+        "texto": "Hold on to that feelin'",
         "aviso": null
       }
     ],
@@ -376,28 +401,28 @@
         "indices": [
           0
         ],
-        "inicio": 18.38,
-        "fim": 23.6,
+        "inicio": 18.954,
+        "fim": 20.816,
         "txt_inicio": 0,
-        "txt_fim": 8,
-        "texto": "Just a small town girl Livin' in a"
+        "txt_fim": 5,
+        "texto": "Just a small town girl"
       },
       {
         "indices": [
           1
         ],
-        "inicio": 23.6,
-        "fim": 25.34,
-        "txt_inicio": 8,
+        "inicio": 22.557,
+        "fim": 25.279,
+        "txt_inicio": 5,
         "txt_fim": 10,
-        "texto": "lonely world"
+        "texto": "Livin' in a lonely world"
       },
       {
         "indices": [
           2
         ],
-        "inicio": 26.38,
-        "fim": 31.259,
+        "inicio": 26.841,
+        "fim": 31.965,
         "txt_inicio": 10,
         "txt_fim": 17,
         "texto": "She took the midnight train going anywhere"
@@ -406,28 +431,28 @@
         "indices": [
           3
         ],
-        "inicio": 34.6,
-        "fim": 39.88,
+        "inicio": 35.248,
+        "fim": 37.189,
         "txt_inicio": 17,
-        "txt_fim": 25,
-        "texto": "Just a city boy Born and raised in"
+        "txt_fim": 21,
+        "texto": "Just a city boy"
       },
       {
         "indices": [
           4
         ],
-        "inicio": 39.88,
-        "fim": 40.82,
-        "txt_inicio": 25,
+        "inicio": 38.891,
+        "fim": 41.613,
+        "txt_inicio": 21,
         "txt_fim": 27,
-        "texto": "South Detroit"
+        "texto": "Born and raised in South Detroit"
       },
       {
         "indices": [
           5
         ],
-        "inicio": 42.46,
-        "fim": 48.24,
+        "inicio": 43.234,
+        "fim": 47.318,
         "txt_inicio": 27,
         "txt_fim": 34,
         "texto": "He took the midnight train going anywhere"
@@ -436,603 +461,681 @@
         "indices": [
           6
         ],
-        "inicio": 66.46,
-        "fim": 71.56,
-        "txt_inicio": 34,
-        "txt_fim": 42,
-        "texto": "A singer in a smokey room A smell"
+        "inicio": 67.198,
+        "fim": 69.66,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "I'll sing her in a smokey room I'll"
       },
       {
         "indices": [
           7
         ],
-        "inicio": 71.56,
-        "fim": 73.68,
-        "txt_inicio": 42,
-        "txt_fim": 47,
-        "texto": "of wine and cheap perfume"
+        "inicio": 71.361,
+        "fim": 73.963,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "smell a wine and cheap a few"
       },
       {
         "indices": [
           8
         ],
-        "inicio": 75.02,
-        "fim": 77.62,
+        "inicio": 75.003,
+        "fim": 80.407,
         "txt_inicio": 47,
-        "txt_fim": 55,
-        "texto": "For a smile they can share the night"
+        "txt_fim": 61,
+        "texto": "For a smile they can share the night It goes on and on and"
       },
       {
         "indices": [
           9
         ],
-        "inicio": 77.78,
-        "fim": 81.36,
-        "txt_inicio": 55,
-        "txt_fim": 63,
-        "texto": "It goes on and on and on and"
+        "inicio": 80.967,
+        "fim": 83.829,
+        "txt_inicio": 61,
+        "txt_fim": 65,
+        "texto": "on and on Strangers"
       },
       {
         "indices": [
           10
         ],
-        "inicio": 81.36,
-        "fim": 82.04,
-        "txt_inicio": 63,
-        "txt_fim": 64,
-        "texto": "on"
+        "inicio": 84.63,
+        "fim": 90.474,
+        "txt_inicio": 65,
+        "txt_fim": 72,
+        "texto": "waitin' Up and down the boulevard Their"
       },
       {
         "indices": [
           11
         ],
-        "inicio": 82.04,
-        "fim": 89.94,
-        "txt_inicio": 64,
-        "txt_fim": 71,
-        "texto": "Strangers waitin' Up and down the boulevard"
+        "inicio": 90.594,
+        "fim": 91.855,
+        "txt_inicio": 72,
+        "txt_fim": 73,
+        "texto": "shadows"
       },
       {
         "indices": [
           12
         ],
-        "inicio": 90.16,
-        "fim": 96.44,
-        "txt_inicio": 71,
+        "inicio": 92.615,
+        "fim": 96.238,
+        "txt_inicio": 73,
         "txt_fim": 77,
-        "texto": "Their shadows searchin' in the night"
+        "texto": "searchin' in the night"
       },
       {
         "indices": [
           13
         ],
-        "inicio": 98.72,
-        "fim": 105.92,
+        "inicio": 98.666,
+        "fim": 99.907,
         "txt_inicio": 77,
-        "txt_fim": 84,
-        "texto": "Streetlights, people Livin' just to find emotion"
+        "txt_fim": 78,
+        "texto": "Streetlights,"
       },
       {
         "indices": [
           14
         ],
-        "inicio": 106.74,
-        "fim": 111.62,
-        "txt_inicio": 84,
-        "txt_fim": 89,
-        "texto": "Hidin' somewhere in the night"
+        "inicio": 100.728,
+        "fim": 102.089,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "keeper"
       },
       {
         "indices": [
           15
         ],
-        "inicio": 123.02,
-        "fim": 129.06,
-        "txt_inicio": 89,
-        "txt_fim": 97,
-        "texto": "Workin' hard to get my fill Everybody wants"
+        "inicio": 103.71,
+        "fim": 107.814,
+        "txt_inicio": 79,
+        "txt_fim": 85,
+        "texto": "Livin' just to find emotion Hidin'"
       },
       {
         "indices": [
           16
         ],
-        "inicio": 129.06,
-        "fim": 130.26,
-        "txt_inicio": 97,
-        "txt_fim": 99,
-        "texto": "a thrill"
+        "inicio": 108.675,
+        "fim": 114.38,
+        "txt_inicio": 85,
+        "txt_fim": 89,
+        "texto": "somewhere in the night"
       },
       {
         "indices": [
           17
         ],
-        "inicio": 130.26,
-        "fim": 135.26,
-        "txt_inicio": 99,
-        "txt_fim": 107,
-        "texto": "Payin' anything to roll the dice Just one"
+        "inicio": 123.187,
+        "fim": 125.79,
+        "txt_inicio": 89,
+        "txt_fim": 95,
+        "texto": "Workin' hard to get my fill"
       },
       {
         "indices": [
           18
         ],
-        "inicio": 135.26,
-        "fim": 137.58,
-        "txt_inicio": 107,
-        "txt_fim": 109,
-        "texto": "more time"
+        "inicio": 127.706,
+        "fim": 130.308,
+        "txt_inicio": 95,
+        "txt_fim": 99,
+        "texto": "Everybody wants a thrill"
       },
       {
         "indices": [
           19
         ],
-        "inicio": 138.96,
-        "fim": 143.72,
-        "txt_inicio": 109,
-        "txt_fim": 116,
-        "texto": "Some'll win, some will lose Some are"
+        "inicio": 131.068,
+        "fim": 135.891,
+        "txt_inicio": 99,
+        "txt_fim": 108,
+        "texto": "Payin' anything to roll the dice Just one more"
       },
       {
         "indices": [
           20
         ],
-        "inicio": 143.72,
-        "fim": 146.3,
-        "txt_inicio": 116,
-        "txt_fim": 121,
-        "texto": "born to sing the blues"
+        "inicio": 135.991,
+        "fim": 137.592,
+        "txt_inicio": 108,
+        "txt_fim": 109,
+        "texto": "time"
       },
       {
         "indices": [
           21
         ],
-        "inicio": 146.8,
-        "fim": 150.9,
-        "txt_inicio": 121,
-        "txt_fim": 129,
-        "texto": "Whoa, the movie never ends It goes on"
+        "inicio": 138.933,
+        "fim": 142.034,
+        "txt_inicio": 109,
+        "txt_fim": 114,
+        "texto": "Some'll win, some will lose"
       },
       {
         "indices": [
           22
         ],
-        "inicio": 150.9,
-        "fim": 153.78,
-        "txt_inicio": 129,
-        "txt_fim": 135,
-        "texto": "and on and on and on"
+        "inicio": 143.375,
+        "fim": 146.057,
+        "txt_inicio": 114,
+        "txt_fim": 121,
+        "texto": "Some are born to sing the blues"
       },
       {
         "indices": [
           23
         ],
-        "inicio": 153.78,
-        "fim": 161.62,
-        "txt_inicio": 135,
-        "txt_fim": 142,
-        "texto": "Strangers waitin' Up and down the boulevard"
+        "inicio": 147.037,
+        "fim": 152.86,
+        "txt_inicio": 121,
+        "txt_fim": 133,
+        "texto": "Whoa, the movie never ends It goes on and on and on"
       },
       {
         "indices": [
           24
         ],
-        "inicio": 161.86,
-        "fim": 167.34,
-        "txt_inicio": 142,
-        "txt_fim": 148,
-        "texto": "Their shadows searchin' in the night"
+        "inicio": 152.961,
+        "fim": 155.262,
+        "txt_inicio": 131,
+        "txt_fim": 136,
+        "texto": "and on and on Strangers"
       },
       {
         "indices": [
           25
         ],
-        "inicio": 170.12,
-        "fim": 177.48,
-        "txt_inicio": 148,
-        "txt_fim": 155,
-        "texto": "Streetlights, people Livin' just to find emotion"
+        "inicio": 156.278,
+        "fim": 157.679,
+        "txt_inicio": 136,
+        "txt_fim": 138,
+        "texto": "waitin' Up"
       },
       {
         "indices": [
           26
         ],
-        "inicio": 178.26,
-        "fim": 183.12,
-        "txt_inicio": 155,
-        "txt_fim": 160,
-        "texto": "Hidin', somewhere in the night"
+        "inicio": 159.381,
+        "fim": 163.465,
+        "txt_inicio": 138,
+        "txt_fim": 144,
+        "texto": "and down the boulevard Their shadows"
       },
       {
         "indices": [
           27
         ],
-        "inicio": 201.72,
-        "fim": 205.26,
-        "txt_inicio": 160,
-        "txt_fim": 163,
-        "texto": "Don't stop believin'"
+        "inicio": 164.225,
+        "fim": 168.189,
+        "txt_inicio": 144,
+        "txt_fim": 148,
+        "texto": "searchin' in the night"
       },
       {
         "indices": [
           28
         ],
-        "inicio": 206.34,
-        "fim": 209.0,
-        "txt_inicio": 163,
-        "txt_fim": 168,
-        "texto": "Hold on to that feelin'"
+        "inicio": 170.211,
+        "fim": 171.432,
+        "txt_inicio": 148,
+        "txt_fim": 149,
+        "texto": "Streetlights,"
       },
       {
         "indices": [
           29
         ],
-        "inicio": 210.08,
-        "fim": 212.98,
-        "txt_inicio": 168,
-        "txt_fim": 170,
-        "texto": "Streetlights, people"
+        "inicio": 172.973,
+        "fim": 173.734,
+        "txt_inicio": 149,
+        "txt_fim": 150,
+        "texto": "people"
       },
       {
         "indices": [
           30
         ],
-        "inicio": 217.67,
-        "fim": 220.87,
-        "txt_inicio": 170,
-        "txt_fim": 173,
-        "texto": "Don't stop believin'"
+        "inicio": 175.255,
+        "fim": 178.058,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "loving just to find him on sight"
       },
       {
         "indices": [
           31
         ],
-        "inicio": 225.04,
-        "fim": 228.9,
-        "txt_inicio": 175,
-        "txt_fim": 177,
-        "texto": "Streetlights, people"
+        "inicio": 178.859,
+        "fim": 179.339,
+        "txt_inicio": 22,
+        "txt_fim": 25,
+        "texto": "and raised in"
       },
       {
         "indices": [
           32
         ],
-        "inicio": 233.49,
-        "fim": 236.67,
-        "txt_inicio": 177,
-        "txt_fim": 180,
-        "texto": "Don't stop believin'"
+        "inicio": 180.2,
+        "fim": 182.382,
+        "txt_inicio": 85,
+        "txt_fim": 89,
+        "texto": "somewhere in the night"
       },
       {
         "indices": [
           33
         ],
-        "inicio": 240.61,
-        "fim": 244.09,
-        "txt_inicio": 185,
-        "txt_fim": 187,
-        "texto": "Streetlights, people"
+        "inicio": 202.906,
+        "fim": 203.287,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "stuff"
+      },
+      {
+        "indices": [
+          34
+        ],
+        "inicio": 203.949,
+        "fim": 205.332,
+        "txt_inicio": 162,
+        "txt_fim": 163,
+        "texto": "believin'"
+      },
+      {
+        "indices": [
+          35
+        ],
+        "inicio": 207.137,
+        "fim": 208.781,
+        "txt_inicio": 163,
+        "txt_fim": 168,
+        "texto": "Hold on to that feelin'"
       }
     ],
     "tokens_txt_sem_correspondencia": [
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      78,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      168,
+      169,
+      170,
+      171,
+      172,
       173,
       174,
+      175,
+      176,
+      177,
+      178,
+      179,
       180,
       181,
       182,
       183,
-      184
+      184,
+      185,
+      186
     ],
     "parametros": {
       "score_consulta_minimo": 0.65,
       "margem_ambiguidade": 0.025,
       "bonus_por_extremidade": 0.02,
-      "score_contexto_minimo": 0.85
+      "score_contexto_minimo": 0.85,
+      "distancia_max_palavra_isolada": 3.0,
+      "palavra_isolada_exige_exatidao": true
     }
   },
   "auditoria_estrutura": [
     {
       "bloco_srt": 1,
-      "inicio_original": 18.38,
-      "fim_original": 23.6,
-      "texto_original": "Just a small town girl, living in a",
-      "texto_publicado": "Just a small town girl livin' in a",
-      "tratamento": "texto_corrigido",
+      "inicio_original": 18.954,
+      "fim_original": 20.816,
+      "texto_original": "Just a small town girl",
+      "texto_publicado": "Just a small town girl",
+      "tratamento": "original_preservado",
       "aviso": null
     },
     {
       "bloco_srt": 2,
-      "inicio_original": 23.6,
-      "fim_original": 25.34,
-      "texto_original": "lonely world.",
-      "texto_publicado": "Lonely world",
+      "inicio_original": 22.557,
+      "fim_original": 25.279,
+      "texto_original": "living in a lonely world",
+      "texto_publicado": "Livin' in a lonely world",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 3,
-      "inicio_original": 26.38,
-      "fim_original": 31.259,
-      "texto_original": "She took the midnight train going anywhere.",
+      "inicio_original": 26.841,
+      "fim_original": 31.965,
+      "texto_original": "She took the midnight train going anywhere",
       "texto_publicado": "She took the midnight train going anywhere",
-      "tratamento": "texto_corrigido",
+      "tratamento": "original_preservado",
       "aviso": null
     },
     {
       "bloco_srt": 4,
-      "inicio_original": 34.6,
-      "fim_original": 39.88,
-      "texto_original": "Just a city boy, born and raised in",
-      "texto_publicado": "Just a city boy born and raised in",
-      "tratamento": "texto_corrigido",
+      "inicio_original": 35.248,
+      "fim_original": 37.189,
+      "texto_original": "Just a city boy",
+      "texto_publicado": "Just a city boy",
+      "tratamento": "original_preservado",
       "aviso": null
     },
     {
       "bloco_srt": 5,
-      "inicio_original": 39.88,
-      "fim_original": 40.82,
-      "texto_original": "South Detroit.",
-      "texto_publicado": "South detroit",
+      "inicio_original": 38.891,
+      "fim_original": 41.613,
+      "texto_original": "born and raised in South Detroit",
+      "texto_publicado": "Born and raised in south detroit",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 6,
-      "inicio_original": 42.46,
-      "fim_original": 48.24,
-      "texto_original": "He took the midnight train going anywhere.",
+      "inicio_original": 43.234,
+      "fim_original": 47.318,
+      "texto_original": "He took the midnight train going anywhere",
       "texto_publicado": "He took the midnight train going anywhere",
-      "tratamento": "texto_corrigido",
+      "tratamento": "original_preservado",
       "aviso": null
     },
     {
       "bloco_srt": 7,
-      "inicio_original": 66.46,
-      "fim_original": 71.56,
-      "texto_original": "A singer in a smokey room, the smell",
-      "texto_publicado": "A singer in a smokey room a smell",
-      "tratamento": "texto_corrigido",
-      "aviso": null
+      "inicio_original": 67.198,
+      "fim_original": 69.66,
+      "texto_original": "I'll sing her in a smokey room I'll",
+      "texto_publicado": "I'll sing her in a smokey room i'll",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
     },
     {
       "bloco_srt": 8,
-      "inicio_original": 71.56,
-      "fim_original": 73.68,
-      "texto_original": "of wine and cheap perfume.",
-      "texto_publicado": "Of wine and cheap perfume",
-      "tratamento": "texto_corrigido",
-      "aviso": null
+      "inicio_original": 71.361,
+      "fim_original": 73.963,
+      "texto_original": "smell a wine and cheap a few",
+      "texto_publicado": "Smell a wine and cheap a few",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
     },
     {
       "bloco_srt": 9,
-      "inicio_original": 75.02,
-      "fim_original": 77.62,
-      "texto_original": "For a smile they can share the night,",
-      "texto_publicado": "For a smile they can share the night",
-      "tratamento": "texto_corrigido",
+      "inicio_original": 75.003,
+      "fim_original": 80.407,
+      "texto_original": "For a smile they can share the night It goes on and on and",
+      "texto_publicado": "For a smile they can share the night it goes on and on and",
+      "tratamento": "original_preservado",
       "aviso": null
     },
     {
       "bloco_srt": 10,
-      "inicio_original": 77.78,
-      "fim_original": 81.36,
-      "texto_original": "it goes on and on and on and",
-      "texto_publicado": "It goes on and on and on and",
-      "tratamento": "texto_corrigido",
+      "inicio_original": 80.967,
+      "fim_original": 83.829,
+      "texto_original": "on and on Strangers",
+      "texto_publicado": "On and on strangers",
+      "tratamento": "original_preservado",
       "aviso": null
     },
     {
       "bloco_srt": 11,
-      "inicio_original": 81.36,
-      "fim_original": 82.04,
-      "texto_original": "on.",
-      "texto_publicado": "On",
+      "inicio_original": 84.63,
+      "fim_original": 90.474,
+      "texto_original": "waiting Whooping down the boulevard There's",
+      "texto_publicado": "Waitin' up and down the boulevard their",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 12,
-      "inicio_original": 82.04,
-      "fim_original": 89.94,
-      "texto_original": "Strangers waiting, whooping down the boulevard.",
-      "texto_publicado": "Strangers waitin' up and down the boulevard",
-      "tratamento": "texto_corrigido",
+      "inicio_original": 90.594,
+      "fim_original": 91.855,
+      "texto_original": "shadows",
+      "texto_publicado": "Shadows",
+      "tratamento": "original_preservado",
       "aviso": null
     },
     {
       "bloco_srt": 13,
-      "inicio_original": 90.16,
-      "fim_original": 96.44,
-      "texto_original": "There's shadows searching in the night.",
-      "texto_publicado": "Their shadows searchin' in the night",
+      "inicio_original": 92.615,
+      "fim_original": 96.238,
+      "texto_original": "searching in the night",
+      "texto_publicado": "Searchin' in the night",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 14,
-      "inicio_original": 98.72,
-      "fim_original": 105.92,
-      "texto_original": "Streetlights, people, living just to find emotion.",
-      "texto_publicado": "Streetlights, people livin' just to find emotion",
+      "inicio_original": 98.666,
+      "fim_original": 99.907,
+      "texto_original": "Street lights,",
+      "texto_publicado": "Streetlights,",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 15,
-      "inicio_original": 106.74,
-      "fim_original": 111.62,
-      "texto_original": "Hiding somewhere in the night.",
-      "texto_publicado": "Hidin' somewhere in the night",
-      "tratamento": "texto_corrigido",
-      "aviso": null
+      "inicio_original": 100.728,
+      "fim_original": 102.089,
+      "texto_original": "keeper",
+      "texto_publicado": "Keeper",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
     },
     {
       "bloco_srt": 16,
-      "inicio_original": 123.02,
-      "fim_original": 129.06,
-      "texto_original": "Working hard to get my fill, everybody wants",
-      "texto_publicado": "Workin' hard to get my fill everybody wants",
+      "inicio_original": 103.71,
+      "fim_original": 107.814,
+      "texto_original": "Leading us to find emotion hiding",
+      "texto_publicado": "Livin' just to find emotion hidin'",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 17,
-      "inicio_original": 129.06,
-      "fim_original": 130.26,
-      "texto_original": "a thrill.",
-      "texto_publicado": "A thrill",
+      "inicio_original": 108.675,
+      "fim_original": 114.38,
+      "texto_original": "Somewhere in the night",
+      "texto_publicado": "Somewhere in the night",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 18,
-      "inicio_original": 130.26,
-      "fim_original": 135.26,
-      "texto_original": "Paying anything to roll the dice, just one",
-      "texto_publicado": "Payin' anything to roll the dice just one",
+      "inicio_original": 123.187,
+      "fim_original": 125.79,
+      "texto_original": "Working hard to get my feel",
+      "texto_publicado": "Workin' hard to get my fill",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 19,
-      "inicio_original": 135.26,
-      "fim_original": 137.58,
-      "texto_original": "more time.",
-      "texto_publicado": "More time",
+      "inicio_original": 127.706,
+      "fim_original": 130.308,
+      "texto_original": "Everybody wants a thrill,",
+      "texto_publicado": "Everybody wants a thrill",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 20,
-      "inicio_original": 138.96,
-      "fim_original": 143.72,
-      "texto_original": "Some will win, some will lose, some are",
-      "texto_publicado": "Some'll win, some will lose some are",
+      "inicio_original": 131.068,
+      "fim_original": 135.891,
+      "texto_original": "then anything to roll the dice, just one more",
+      "texto_publicado": "Payin' anything to roll the dice just one more",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 21,
-      "inicio_original": 143.72,
-      "fim_original": 146.3,
-      "texto_original": "born to sing the blues.",
-      "texto_publicado": "Born to sing the blues",
+      "inicio_original": 135.991,
+      "fim_original": 137.592,
+      "texto_original": "time.",
+      "texto_publicado": "Time",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 22,
-      "inicio_original": 146.8,
-      "fim_original": 150.9,
-      "texto_original": "Well the movie never ends, it goes on",
-      "texto_publicado": "Whoa, the movie never ends it goes on",
+      "inicio_original": 138.933,
+      "fim_original": 142.034,
+      "texto_original": "Some will win, some will lose,",
+      "texto_publicado": "Some'll win, some will lose",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 23,
-      "inicio_original": 150.9,
-      "fim_original": 153.78,
-      "texto_original": "and on and on and on.",
-      "texto_publicado": "And on and on and on",
+      "inicio_original": 143.375,
+      "fim_original": 146.057,
+      "texto_original": "some are born to sing the blues,",
+      "texto_publicado": "Some are born to sing the blues",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 24,
-      "inicio_original": 153.78,
-      "fim_original": 161.62,
-      "texto_original": "Strangers waiting, whooping down the boulevard.",
-      "texto_publicado": "Strangers waitin' up and down the boulevard",
+      "inicio_original": 147.037,
+      "fim_original": 152.86,
+      "texto_original": "or the movie never ends. It goes on and on and on",
+      "texto_publicado": "Whoa, the movie never ends it goes on and on and on",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 25,
-      "inicio_original": 161.86,
-      "fim_original": 167.34,
-      "texto_original": "There's shadows searching in the night.",
-      "texto_publicado": "Their shadows searchin' in the night",
+      "inicio_original": 152.961,
+      "fim_original": 155.262,
+      "texto_original": "and on, and that's strange as",
+      "texto_publicado": "And on and on strangers",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 26,
-      "inicio_original": 170.12,
-      "fim_original": 177.48,
-      "texto_original": "Streetlights, people, living just to find emotion.",
-      "texto_publicado": "Streetlights, people livin' just to find emotion",
+      "inicio_original": 156.278,
+      "fim_original": 157.679,
+      "texto_original": "waiting, up",
+      "texto_publicado": "Waitin' up",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 27,
-      "inicio_original": 178.26,
-      "fim_original": 183.12,
-      "texto_original": "Hiding somewhere in the night.",
-      "texto_publicado": "Hidin', somewhere in the night",
+      "inicio_original": 159.381,
+      "fim_original": 163.465,
+      "texto_original": "and down the foot of all those shadows",
+      "texto_publicado": "And down the boulevard their shadows",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 28,
-      "inicio_original": 201.72,
-      "fim_original": 205.26,
-      "texto_original": "Don't stop believing.",
-      "texto_publicado": "Don't stop believin'",
+      "inicio_original": 164.225,
+      "fim_original": 168.189,
+      "texto_original": "searching in the night.",
+      "texto_publicado": "Searchin' in the night",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 29,
-      "inicio_original": 206.34,
-      "fim_original": 209.0,
-      "texto_original": "Hold on to that feeling.",
-      "texto_publicado": "Hold on to that feelin'",
+      "inicio_original": 170.211,
+      "fim_original": 171.432,
+      "texto_original": "Sweet lights,",
+      "texto_publicado": "Streetlights,",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 30,
-      "inicio_original": 210.08,
-      "fim_original": 212.98,
-      "texto_original": "Streetlights, people.",
-      "texto_publicado": "Streetlights, people",
+      "inicio_original": 172.973,
+      "fim_original": 173.734,
+      "texto_original": "people,",
+      "texto_publicado": "People",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 31,
-      "inicio_original": 217.67,
-      "fim_original": 220.87,
-      "texto_original": "Don't stop believing.",
-      "texto_publicado": "Don't stop believin'",
-      "tratamento": "texto_corrigido",
-      "aviso": null
+      "inicio_original": 175.255,
+      "fim_original": 178.058,
+      "texto_original": "loving just to find him on sight",
+      "texto_publicado": "Loving just to find him on sight",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
     },
     {
       "bloco_srt": 32,
-      "inicio_original": 225.04,
-      "fim_original": 228.9,
-      "texto_original": "Streetlights, people.",
-      "texto_publicado": "Streetlights, people",
+      "inicio_original": 178.859,
+      "fim_original": 179.339,
+      "texto_original": "and hiding",
+      "texto_publicado": "And raised in",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 33,
-      "inicio_original": 233.49,
-      "fim_original": 236.67,
-      "texto_original": "Don't stop believing.",
-      "texto_publicado": "Don't stop believin'",
+      "inicio_original": 180.2,
+      "fim_original": 182.382,
+      "texto_original": "somewhere in the night.",
+      "texto_publicado": "Somewhere in the night",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 34,
-      "inicio_original": 240.61,
-      "fim_original": 244.09,
-      "texto_original": "Streetlights, people.",
-      "texto_publicado": "Streetlights, people",
+      "inicio_original": 202.906,
+      "fim_original": 203.287,
+      "texto_original": "stuff",
+      "texto_publicado": "Stuff",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 35,
+      "inicio_original": 203.949,
+      "fim_original": 205.332,
+      "texto_original": "believe in.",
+      "texto_publicado": "Believin'",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 36,
+      "inicio_original": 207.137,
+      "fim_original": 208.781,
+      "texto_original": "Hold on to the feeling.",
+      "texto_publicado": "Hold on to that feelin'",
       "tratamento": "texto_corrigido",
       "aviso": null
     }
@@ -1040,473 +1143,2156 @@
   "recuperacoes": [
     {
       "id": 1,
-      "txt_inicio": 173,
-      "txt_fim": 175,
-      "inicio": 220.87,
-      "fim": 225.04,
-      "bloco_anterior": 31,
-      "bloco_seguinte": 32,
-      "limite_busca": 30.0,
-      "motivo_nao_pesquisado": null,
-      "estado": "recuperado",
-      "tentativas": [
-        {
-          "janela": [
-            220.87,
-            225.04
-          ],
-          "texto": "Hold on",
-          "palavras": [
-            {
-              "texto": "Hold",
-              "inicio": 221.792,
-              "fim": 222.795,
-              "score": 0.479
-            },
-            {
-              "texto": "on",
-              "inicio": 225.0,
-              "fim": 225.04,
-              "score": 0.0
-            }
-          ]
-        }
-      ],
-      "inseridos": [
-        {
-          "inicio": 221.792,
-          "fim": 225.04,
-          "texto": "Hold on",
-          "origem": "insercao_acustica",
-          "lacuna": 1,
-          "txt_inicio": 173,
-          "txt_fim": 175,
-          "score_minimo": 0.0,
-          "atividade_audio": 1.0,
-          "palavras_baixa_confianca": 1
-        }
-      ],
-      "tokens_recuperados": [
-        173,
-        174
-      ],
-      "texto": "Hold on"
+      "txt_inicio": 25,
+      "txt_fim": 85,
+      "inicio": 179.339,
+      "fim": 180.2,
+      "bloco_anterior": 32,
+      "bloco_seguinte": 33,
+      "ocupados": [],
+      "limite_busca": 180.0,
+      "motivo_nao_pesquisado": "referencias_textuais_insuficientes",
+      "estado": "nao_pesquisado",
+      "tentativas": [],
+      "inseridos": [],
+      "tokens_recuperados": []
     },
     {
       "id": 2,
-      "txt_inicio": 180,
-      "txt_fim": 185,
-      "inicio": 236.67,
-      "fim": 240.61,
+      "txt_inicio": 89,
+      "txt_fim": 162,
+      "inicio": 182.382,
+      "fim": 203.949,
       "bloco_anterior": 33,
-      "bloco_seguinte": 34,
-      "limite_busca": 30.0,
+      "bloco_seguinte": 35,
+      "ocupados": [
+        {
+          "indice": 34,
+          "inicio": 202.906,
+          "fim": 203.287,
+          "texto": "stuff"
+        }
+      ],
+      "limite_busca": 180.0,
       "motivo_nao_pesquisado": null,
-      "estado": "recuperado",
+      "estado": "parcialmente_recuperado",
       "tentativas": [
         {
           "janela": [
-            236.67,
-            240.61
+            182.382,
+            203.949
           ],
-          "texto": "Hold on to that feelin",
+          "texto": "Workin' hard to get my fill\nEverybody wants a thrill\nPayin' anything to roll the dice\nJust one more time\nSome'll win, some will lose\nSome are born to sing the blues\nWhoa, the movie never ends\nIt goes on and on and on and on\nStrangers waitin'\nUp and down the boulevard\nTheir shadows searchin' in the night\nStreetlights, people\nLivin' just to find emotion\nHidin', somewhere in the night\nDon't stop",
           "palavras": [
             {
-              "texto": "Hold",
-              "inicio": 236.67,
-              "fim": 237.333,
-              "score": 0.606
+              "texto": "Workin",
+              "inicio": 182.382,
+              "fim": 182.502,
+              "score": 0.0
             },
             {
-              "texto": "on",
-              "inicio": 237.454,
-              "fim": 237.534,
-              "score": 0.334
+              "texto": "hard",
+              "inicio": 182.522,
+              "fim": 182.602,
+              "score": 0.002
             },
             {
               "texto": "to",
-              "inicio": 238.158,
-              "fim": 238.238,
-              "score": 0.334
+              "inicio": 182.622,
+              "fim": 182.662,
+              "score": 0.002
             },
             {
-              "texto": "that",
-              "inicio": 238.962,
-              "fim": 239.143,
-              "score": 0.325
+              "texto": "get",
+              "inicio": 182.682,
+              "fim": 182.742,
+              "score": 0.0
             },
             {
-              "texto": "feelin",
-              "inicio": 239.303,
-              "fim": 240.61,
-              "score": 0.591
+              "texto": "my",
+              "inicio": 182.762,
+              "fim": 182.802,
+              "score": 0.0
+            },
+            {
+              "texto": "fill",
+              "inicio": 182.822,
+              "fim": 182.902,
+              "score": 0.0
+            },
+            {
+              "texto": "Everybody",
+              "inicio": 182.922,
+              "fim": 183.102,
+              "score": 0.001
+            },
+            {
+              "texto": "wants",
+              "inicio": 183.122,
+              "fim": 183.222,
+              "score": 0.004
+            },
+            {
+              "texto": "a",
+              "inicio": 183.242,
+              "fim": 183.262,
+              "score": 0.017
+            },
+            {
+              "texto": "thrill",
+              "inicio": 183.282,
+              "fim": 183.402,
+              "score": 0.0
+            },
+            {
+              "texto": "Payin",
+              "inicio": 183.422,
+              "fim": 183.522,
+              "score": 0.004
+            },
+            {
+              "texto": "anything",
+              "inicio": 183.542,
+              "fim": 183.702,
+              "score": 0.003
+            },
+            {
+              "texto": "to",
+              "inicio": 183.722,
+              "fim": 183.762,
+              "score": 0.003
+            },
+            {
+              "texto": "roll",
+              "inicio": 183.782,
+              "fim": 183.862,
+              "score": 0.002
+            },
+            {
+              "texto": "the",
+              "inicio": 183.882,
+              "fim": 183.943,
+              "score": 0.001
+            },
+            {
+              "texto": "dice",
+              "inicio": 183.963,
+              "fim": 184.043,
+              "score": 0.0
+            },
+            {
+              "texto": "Just",
+              "inicio": 184.063,
+              "fim": 184.143,
+              "score": 0.0
+            },
+            {
+              "texto": "one",
+              "inicio": 184.163,
+              "fim": 184.223,
+              "score": 0.003
+            },
+            {
+              "texto": "more",
+              "inicio": 184.243,
+              "fim": 184.323,
+              "score": 0.002
+            },
+            {
+              "texto": "time",
+              "inicio": 184.343,
+              "fim": 184.423,
+              "score": 0.0
+            },
+            {
+              "texto": "Some'll",
+              "inicio": 184.443,
+              "fim": 184.583,
+              "score": 0.001
+            },
+            {
+              "texto": "win",
+              "inicio": 184.603,
+              "fim": 184.663,
+              "score": 0.0
+            },
+            {
+              "texto": "some",
+              "inicio": 184.683,
+              "fim": 184.763,
+              "score": 0.002
+            },
+            {
+              "texto": "will",
+              "inicio": 184.783,
+              "fim": 184.863,
+              "score": 0.0
+            },
+            {
+              "texto": "lose",
+              "inicio": 184.883,
+              "fim": 184.963,
+              "score": 0.002
+            },
+            {
+              "texto": "Some",
+              "inicio": 184.983,
+              "fim": 185.063,
+              "score": 0.002
+            },
+            {
+              "texto": "are",
+              "inicio": 185.083,
+              "fim": 185.143,
+              "score": 0.008
+            },
+            {
+              "texto": "born",
+              "inicio": 185.163,
+              "fim": 185.243,
+              "score": 0.002
+            },
+            {
+              "texto": "to",
+              "inicio": 185.263,
+              "fim": 185.303,
+              "score": 0.004
+            },
+            {
+              "texto": "sing",
+              "inicio": 185.323,
+              "fim": 185.403,
+              "score": 0.0
+            },
+            {
+              "texto": "the",
+              "inicio": 185.423,
+              "fim": 185.483,
+              "score": 0.001
+            },
+            {
+              "texto": "blues",
+              "inicio": 185.503,
+              "fim": 185.603,
+              "score": 0.0
+            },
+            {
+              "texto": "Whoa",
+              "inicio": 185.623,
+              "fim": 185.743,
+              "score": 0.251
+            },
+            {
+              "texto": "the",
+              "inicio": 185.763,
+              "fim": 185.823,
+              "score": 0.044
+            },
+            {
+              "texto": "movie",
+              "inicio": 185.843,
+              "fim": 185.943,
+              "score": 0.0
+            },
+            {
+              "texto": "never",
+              "inicio": 185.983,
+              "fim": 186.103,
+              "score": 0.1
+            },
+            {
+              "texto": "ends",
+              "inicio": 188.404,
+              "fim": 188.504,
+              "score": 0.125
+            },
+            {
+              "texto": "It",
+              "inicio": 188.664,
+              "fim": 188.864,
+              "score": 0.762
+            },
+            {
+              "texto": "goes",
+              "inicio": 189.044,
+              "fim": 189.404,
+              "score": 0.644
+            },
+            {
+              "texto": "on",
+              "inicio": 189.484,
+              "fim": 189.964,
+              "score": 0.85
+            },
+            {
+              "texto": "and",
+              "inicio": 190.024,
+              "fim": 190.125,
+              "score": 0.333
+            },
+            {
+              "texto": "on",
+              "inicio": 190.205,
+              "fim": 190.245,
+              "score": 0.0
+            },
+            {
+              "texto": "and",
+              "inicio": 190.345,
+              "fim": 190.865,
+              "score": 0.611
+            },
+            {
+              "texto": "on",
+              "inicio": 190.885,
+              "fim": 190.945,
+              "score": 0.25
+            },
+            {
+              "texto": "and",
+              "inicio": 191.265,
+              "fim": 191.385,
+              "score": 0.389
+            },
+            {
+              "texto": "on",
+              "inicio": 191.405,
+              "fim": 192.025,
+              "score": 0.935
+            },
+            {
+              "texto": "Strangers",
+              "inicio": 192.085,
+              "fim": 192.945,
+              "score": 0.627
+            },
+            {
+              "texto": "waitin",
+              "inicio": 192.965,
+              "fim": 193.706,
+              "score": 0.725
+            },
+            {
+              "texto": "Up",
+              "inicio": 193.786,
+              "fim": 193.886,
+              "score": 0.375
+            },
+            {
+              "texto": "and",
+              "inicio": 193.966,
+              "fim": 194.286,
+              "score": 0.474
+            },
+            {
+              "texto": "down",
+              "inicio": 194.326,
+              "fim": 194.726,
+              "score": 0.603
+            },
+            {
+              "texto": "the",
+              "inicio": 194.786,
+              "fim": 194.926,
+              "score": 0.445
+            },
+            {
+              "texto": "boulevard",
+              "inicio": 194.966,
+              "fim": 195.626,
+              "score": 0.552
+            },
+            {
+              "texto": "Their",
+              "inicio": 195.866,
+              "fim": 196.166,
+              "score": 0.438
+            },
+            {
+              "texto": "shadows",
+              "inicio": 196.186,
+              "fim": 196.707,
+              "score": 0.39
+            },
+            {
+              "texto": "searchin",
+              "inicio": 196.747,
+              "fim": 197.027,
+              "score": 0.24
+            },
+            {
+              "texto": "in",
+              "inicio": 197.307,
+              "fim": 197.407,
+              "score": 0.584
+            },
+            {
+              "texto": "the",
+              "inicio": 197.527,
+              "fim": 197.667,
+              "score": 0.445
+            },
+            {
+              "texto": "night",
+              "inicio": 197.687,
+              "fim": 198.307,
+              "score": 0.679
+            },
+            {
+              "texto": "Streetlights",
+              "inicio": 198.547,
+              "fim": 199.307,
+              "score": 0.529
+            },
+            {
+              "texto": "people",
+              "inicio": 199.348,
+              "fim": 199.808,
+              "score": 0.561
+            },
+            {
+              "texto": "Livin",
+              "inicio": 199.908,
+              "fim": 200.308,
+              "score": 0.449
+            },
+            {
+              "texto": "just",
+              "inicio": 200.388,
+              "fim": 200.868,
+              "score": 0.731
+            },
+            {
+              "texto": "to",
+              "inicio": 200.948,
+              "fim": 202.168,
+              "score": 0.492
+            },
+            {
+              "texto": "find",
+              "inicio": 202.188,
+              "fim": 202.308,
+              "score": 0.297
+            },
+            {
+              "texto": "emotion",
+              "inicio": 202.328,
+              "fim": 202.509,
+              "score": 0.214
+            },
+            {
+              "texto": "Hidin",
+              "inicio": 202.529,
+              "fim": 202.629,
+              "score": 0.0
+            },
+            {
+              "texto": "somewhere",
+              "inicio": 202.649,
+              "fim": 202.829,
+              "score": 0.006
+            },
+            {
+              "texto": "in",
+              "inicio": 202.889,
+              "fim": 202.949,
+              "score": 0.238
+            },
+            {
+              "texto": "the",
+              "inicio": 202.989,
+              "fim": 203.069,
+              "score": 0.252
+            },
+            {
+              "texto": "night",
+              "inicio": 203.089,
+              "fim": 203.189,
+              "score": 0.034
+            },
+            {
+              "texto": "Don't",
+              "inicio": 203.209,
+              "fim": 203.309,
+              "score": 0.002
+            },
+            {
+              "texto": "stop",
+              "inicio": 203.329,
+              "fim": 203.409,
+              "score": 0.0
+            }
+          ],
+          "conflitos_originais": [
+            {
+              "token_txt": 157,
+              "blocos": [
+                34
+              ]
+            },
+            {
+              "token_txt": 158,
+              "blocos": [
+                34
+              ]
+            },
+            {
+              "token_txt": 159,
+              "blocos": [
+                34
+              ]
+            },
+            {
+              "token_txt": 160,
+              "blocos": [
+                34
+              ]
+            }
+          ],
+          "trechos_nao_confirmados": [
+            {
+              "txt_inicio": 89,
+              "txt_fim": 95,
+              "motivo": "suporte_acustico_insuficiente",
+              "atividade_audio": 1.0
+            },
+            {
+              "txt_inicio": 95,
+              "txt_fim": 99,
+              "motivo": "suporte_acustico_insuficiente",
+              "atividade_audio": 1.0
+            },
+            {
+              "txt_inicio": 99,
+              "txt_fim": 105,
+              "motivo": "suporte_acustico_insuficiente",
+              "atividade_audio": 1.0
+            },
+            {
+              "txt_inicio": 105,
+              "txt_fim": 109,
+              "motivo": "suporte_acustico_insuficiente",
+              "atividade_audio": 1.0
+            },
+            {
+              "txt_inicio": 109,
+              "txt_fim": 114,
+              "motivo": "suporte_acustico_insuficiente",
+              "atividade_audio": 1.0
+            },
+            {
+              "txt_inicio": 114,
+              "txt_fim": 121,
+              "motivo": "suporte_acustico_insuficiente",
+              "atividade_audio": 1.0
+            },
+            {
+              "txt_inicio": 126,
+              "txt_fim": 135,
+              "motivo": "suporte_acustico_insuficiente",
+              "atividade_audio": 0.0
+            },
+            {
+              "txt_inicio": 135,
+              "txt_fim": 137,
+              "motivo": "suporte_acustico_insuficiente",
+              "atividade_audio": 0.0
+            },
+            {
+              "txt_inicio": 137,
+              "txt_fim": 142,
+              "motivo": "suporte_acustico_insuficiente",
+              "atividade_audio": 0.0
+            },
+            {
+              "txt_inicio": 142,
+              "txt_fim": 148,
+              "motivo": "suporte_acustico_insuficiente",
+              "atividade_audio": 0.0
+            },
+            {
+              "txt_inicio": 148,
+              "txt_fim": 150,
+              "motivo": "suporte_acustico_insuficiente",
+              "atividade_audio": 0.0
+            },
+            {
+              "txt_inicio": 150,
+              "txt_fim": 155,
+              "motivo": "suporte_acustico_insuficiente",
+              "atividade_audio": 0.12307692307692308
+            },
+            {
+              "txt_inicio": 155,
+              "txt_fim": 157,
+              "motivo": "suporte_acustico_insuficiente",
+              "atividade_audio": 1.0
+            },
+            {
+              "txt_inicio": 161,
+              "txt_fim": 162,
+              "motivo": "suporte_acustico_insuficiente",
+              "atividade_audio": 1.0
             }
           ]
         }
       ],
       "inseridos": [
         {
-          "inicio": 236.67,
-          "fim": 240.61,
-          "texto": "Hold on to that feelin'",
+          "inicio": 185.623,
+          "fim": 188.504,
+          "texto": "Whoa, the movie never ends",
           "origem": "insercao_acustica",
           "lacuna": 2,
+          "txt_inicio": 121,
+          "txt_fim": 126,
+          "score_minimo": 0.0,
+          "atividade_audio": 0.7222222222222222,
+          "palavras_baixa_confianca": 5
+        }
+      ],
+      "tokens_recuperados": [
+        121,
+        122,
+        123,
+        124,
+        125
+      ],
+      "texto": "Workin' hard to get my fill Everybody wants a thrill Payin' anything to roll the dice Just one more time Some'll win, some will lose Some are born to sing the blues Whoa, the movie never ends It goes on and on and on and on Strangers waitin' Up and down the boulevard Their shadows searchin' in the night Streetlights, people Livin' just to find emotion Hidin', somewhere in the night Don't stop"
+    },
+    {
+      "id": 3,
+      "txt_inicio": 168,
+      "txt_fim": 187,
+      "inicio": 208.781,
+      "fim": 250.2646875,
+      "bloco_anterior": 36,
+      "bloco_seguinte": null,
+      "ocupados": [],
+      "limite_busca": 57.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "recuperado",
+      "tentativas": [
+        {
+          "janela": [
+            208.781,
+            250.2646875
+          ],
+          "texto": "Streetlights, people\nDon't stop believin'\nHold on\nStreetlights, people\nDon't stop believin'\nHold on to that feelin'\nStreetlights, people",
+          "palavras": [
+            {
+              "texto": "Streetlights",
+              "inicio": 209.962,
+              "fim": 211.242,
+              "score": 0.56
+            },
+            {
+              "texto": "people",
+              "inicio": 212.143,
+              "fim": 217.646,
+              "score": 0.875
+            },
+            {
+              "texto": "Don't",
+              "inicio": 218.106,
+              "fim": 218.707,
+              "score": 0.631
+            },
+            {
+              "texto": "stop",
+              "inicio": 218.787,
+              "fim": 219.167,
+              "score": 0.831
+            },
+            {
+              "texto": "believin",
+              "inicio": 219.847,
+              "fim": 221.208,
+              "score": 0.617
+            },
+            {
+              "texto": "Hold",
+              "inicio": 222.349,
+              "fim": 222.849,
+              "score": 0.75
+            },
+            {
+              "texto": "on",
+              "inicio": 224.81,
+              "fim": 225.17,
+              "score": 0.792
+            },
+            {
+              "texto": "Streetlights",
+              "inicio": 225.931,
+              "fim": 227.172,
+              "score": 0.596
+            },
+            {
+              "texto": "people",
+              "inicio": 228.012,
+              "fim": 233.475,
+              "score": 0.866
+            },
+            {
+              "texto": "Don't",
+              "inicio": 233.915,
+              "fim": 234.496,
+              "score": 0.609
+            },
+            {
+              "texto": "stop",
+              "inicio": 234.596,
+              "fim": 234.996,
+              "score": 0.835
+            },
+            {
+              "texto": "believin",
+              "inicio": 235.656,
+              "fim": 237.017,
+              "score": 0.511
+            },
+            {
+              "texto": "Hold",
+              "inicio": 238.198,
+              "fim": 238.618,
+              "score": 0.666
+            },
+            {
+              "texto": "on",
+              "inicio": 238.798,
+              "fim": 238.958,
+              "score": 0.622
+            },
+            {
+              "texto": "to",
+              "inicio": 239.018,
+              "fim": 239.338,
+              "score": 0.756
+            },
+            {
+              "texto": "that",
+              "inicio": 239.378,
+              "fim": 239.619,
+              "score": 0.658
+            },
+            {
+              "texto": "feelin",
+              "inicio": 239.859,
+              "fim": 241.32,
+              "score": 0.68
+            },
+            {
+              "texto": "Streetlights",
+              "inicio": 241.66,
+              "fim": 242.86,
+              "score": 0.653
+            },
+            {
+              "texto": "people",
+              "inicio": 243.781,
+              "fim": 244.621,
+              "score": 0.529
+            }
+          ]
+        }
+      ],
+      "inseridos": [
+        {
+          "inicio": 209.962,
+          "fim": 217.646,
+          "texto": "Streetlights, people",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 168,
+          "txt_fim": 170,
+          "score_minimo": 0.56,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 218.106,
+          "fim": 221.208,
+          "texto": "Don't stop believin'",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 170,
+          "txt_fim": 173,
+          "score_minimo": 0.617,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 222.349,
+          "fim": 225.17,
+          "texto": "Hold on",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 173,
+          "txt_fim": 175,
+          "score_minimo": 0.75,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 225.931,
+          "fim": 233.475,
+          "texto": "Streetlights, people",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 175,
+          "txt_fim": 177,
+          "score_minimo": 0.596,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 233.915,
+          "fim": 237.017,
+          "texto": "Don't stop believin'",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 177,
+          "txt_fim": 180,
+          "score_minimo": 0.511,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 238.198,
+          "fim": 241.32,
+          "texto": "Hold on to that feelin'",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
           "txt_inicio": 180,
           "txt_fim": 185,
-          "score_minimo": 0.325,
+          "score_minimo": 0.622,
           "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 241.66,
+          "fim": 244.621,
+          "texto": "Streetlights, people",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 185,
+          "txt_fim": 187,
+          "score_minimo": 0.529,
+          "atividade_audio": 0.9932432432432432,
           "palavras_baixa_confianca": 0
         }
       ],
       "tokens_recuperados": [
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
         180,
         181,
         182,
         183,
-        184
+        184,
+        185,
+        186
       ],
-      "texto": "Hold on to that feelin'"
+      "texto": "Streetlights, people Don't stop believin' Hold on Streetlights, people Don't stop believin' Hold on to that feelin' Streetlights, people"
     }
   ],
   "tentativas": [
     {
       "janela": [
-        220.87,
-        225.04
+        182.382,
+        203.949
       ],
-      "texto": "Hold on",
+      "texto": "Workin' hard to get my fill\nEverybody wants a thrill\nPayin' anything to roll the dice\nJust one more time\nSome'll win, some will lose\nSome are born to sing the blues\nWhoa, the movie never ends\nIt goes on and on and on and on\nStrangers waitin'\nUp and down the boulevard\nTheir shadows searchin' in the night\nStreetlights, people\nLivin' just to find emotion\nHidin', somewhere in the night\nDon't stop",
       "palavras": [
         {
-          "texto": "Hold",
-          "inicio": 221.792,
-          "fim": 222.795,
-          "score": 0.479
-        },
-        {
-          "texto": "on",
-          "inicio": 225.0,
-          "fim": 225.04,
+          "texto": "Workin",
+          "inicio": 182.382,
+          "fim": 182.502,
           "score": 0.0
-        }
-      ],
-      "lacuna": 1
-    },
-    {
-      "janela": [
-        236.67,
-        240.61
-      ],
-      "texto": "Hold on to that feelin",
-      "palavras": [
-        {
-          "texto": "Hold",
-          "inicio": 236.67,
-          "fim": 237.333,
-          "score": 0.606
         },
         {
-          "texto": "on",
-          "inicio": 237.454,
-          "fim": 237.534,
-          "score": 0.334
+          "texto": "hard",
+          "inicio": 182.522,
+          "fim": 182.602,
+          "score": 0.002
         },
         {
           "texto": "to",
-          "inicio": 238.158,
-          "fim": 238.238,
-          "score": 0.334
+          "inicio": 182.622,
+          "fim": 182.662,
+          "score": 0.002
         },
         {
-          "texto": "that",
-          "inicio": 238.962,
-          "fim": 239.143,
-          "score": 0.325
+          "texto": "get",
+          "inicio": 182.682,
+          "fim": 182.742,
+          "score": 0.0
         },
         {
-          "texto": "feelin",
-          "inicio": 239.303,
-          "fim": 240.61,
-          "score": 0.591
+          "texto": "my",
+          "inicio": 182.762,
+          "fim": 182.802,
+          "score": 0.0
+        },
+        {
+          "texto": "fill",
+          "inicio": 182.822,
+          "fim": 182.902,
+          "score": 0.0
+        },
+        {
+          "texto": "Everybody",
+          "inicio": 182.922,
+          "fim": 183.102,
+          "score": 0.001
+        },
+        {
+          "texto": "wants",
+          "inicio": 183.122,
+          "fim": 183.222,
+          "score": 0.004
+        },
+        {
+          "texto": "a",
+          "inicio": 183.242,
+          "fim": 183.262,
+          "score": 0.017
+        },
+        {
+          "texto": "thrill",
+          "inicio": 183.282,
+          "fim": 183.402,
+          "score": 0.0
+        },
+        {
+          "texto": "Payin",
+          "inicio": 183.422,
+          "fim": 183.522,
+          "score": 0.004
+        },
+        {
+          "texto": "anything",
+          "inicio": 183.542,
+          "fim": 183.702,
+          "score": 0.003
+        },
+        {
+          "texto": "to",
+          "inicio": 183.722,
+          "fim": 183.762,
+          "score": 0.003
+        },
+        {
+          "texto": "roll",
+          "inicio": 183.782,
+          "fim": 183.862,
+          "score": 0.002
+        },
+        {
+          "texto": "the",
+          "inicio": 183.882,
+          "fim": 183.943,
+          "score": 0.001
+        },
+        {
+          "texto": "dice",
+          "inicio": 183.963,
+          "fim": 184.043,
+          "score": 0.0
+        },
+        {
+          "texto": "Just",
+          "inicio": 184.063,
+          "fim": 184.143,
+          "score": 0.0
+        },
+        {
+          "texto": "one",
+          "inicio": 184.163,
+          "fim": 184.223,
+          "score": 0.003
+        },
+        {
+          "texto": "more",
+          "inicio": 184.243,
+          "fim": 184.323,
+          "score": 0.002
+        },
+        {
+          "texto": "time",
+          "inicio": 184.343,
+          "fim": 184.423,
+          "score": 0.0
+        },
+        {
+          "texto": "Some'll",
+          "inicio": 184.443,
+          "fim": 184.583,
+          "score": 0.001
+        },
+        {
+          "texto": "win",
+          "inicio": 184.603,
+          "fim": 184.663,
+          "score": 0.0
+        },
+        {
+          "texto": "some",
+          "inicio": 184.683,
+          "fim": 184.763,
+          "score": 0.002
+        },
+        {
+          "texto": "will",
+          "inicio": 184.783,
+          "fim": 184.863,
+          "score": 0.0
+        },
+        {
+          "texto": "lose",
+          "inicio": 184.883,
+          "fim": 184.963,
+          "score": 0.002
+        },
+        {
+          "texto": "Some",
+          "inicio": 184.983,
+          "fim": 185.063,
+          "score": 0.002
+        },
+        {
+          "texto": "are",
+          "inicio": 185.083,
+          "fim": 185.143,
+          "score": 0.008
+        },
+        {
+          "texto": "born",
+          "inicio": 185.163,
+          "fim": 185.243,
+          "score": 0.002
+        },
+        {
+          "texto": "to",
+          "inicio": 185.263,
+          "fim": 185.303,
+          "score": 0.004
+        },
+        {
+          "texto": "sing",
+          "inicio": 185.323,
+          "fim": 185.403,
+          "score": 0.0
+        },
+        {
+          "texto": "the",
+          "inicio": 185.423,
+          "fim": 185.483,
+          "score": 0.001
+        },
+        {
+          "texto": "blues",
+          "inicio": 185.503,
+          "fim": 185.603,
+          "score": 0.0
+        },
+        {
+          "texto": "Whoa",
+          "inicio": 185.623,
+          "fim": 185.743,
+          "score": 0.251
+        },
+        {
+          "texto": "the",
+          "inicio": 185.763,
+          "fim": 185.823,
+          "score": 0.044
+        },
+        {
+          "texto": "movie",
+          "inicio": 185.843,
+          "fim": 185.943,
+          "score": 0.0
+        },
+        {
+          "texto": "never",
+          "inicio": 185.983,
+          "fim": 186.103,
+          "score": 0.1
+        },
+        {
+          "texto": "ends",
+          "inicio": 188.404,
+          "fim": 188.504,
+          "score": 0.125
+        },
+        {
+          "texto": "It",
+          "inicio": 188.664,
+          "fim": 188.864,
+          "score": 0.762
+        },
+        {
+          "texto": "goes",
+          "inicio": 189.044,
+          "fim": 189.404,
+          "score": 0.644
+        },
+        {
+          "texto": "on",
+          "inicio": 189.484,
+          "fim": 189.964,
+          "score": 0.85
+        },
+        {
+          "texto": "and",
+          "inicio": 190.024,
+          "fim": 190.125,
+          "score": 0.333
+        },
+        {
+          "texto": "on",
+          "inicio": 190.205,
+          "fim": 190.245,
+          "score": 0.0
+        },
+        {
+          "texto": "and",
+          "inicio": 190.345,
+          "fim": 190.865,
+          "score": 0.611
+        },
+        {
+          "texto": "on",
+          "inicio": 190.885,
+          "fim": 190.945,
+          "score": 0.25
+        },
+        {
+          "texto": "and",
+          "inicio": 191.265,
+          "fim": 191.385,
+          "score": 0.389
+        },
+        {
+          "texto": "on",
+          "inicio": 191.405,
+          "fim": 192.025,
+          "score": 0.935
+        },
+        {
+          "texto": "Strangers",
+          "inicio": 192.085,
+          "fim": 192.945,
+          "score": 0.627
+        },
+        {
+          "texto": "waitin",
+          "inicio": 192.965,
+          "fim": 193.706,
+          "score": 0.725
+        },
+        {
+          "texto": "Up",
+          "inicio": 193.786,
+          "fim": 193.886,
+          "score": 0.375
+        },
+        {
+          "texto": "and",
+          "inicio": 193.966,
+          "fim": 194.286,
+          "score": 0.474
+        },
+        {
+          "texto": "down",
+          "inicio": 194.326,
+          "fim": 194.726,
+          "score": 0.603
+        },
+        {
+          "texto": "the",
+          "inicio": 194.786,
+          "fim": 194.926,
+          "score": 0.445
+        },
+        {
+          "texto": "boulevard",
+          "inicio": 194.966,
+          "fim": 195.626,
+          "score": 0.552
+        },
+        {
+          "texto": "Their",
+          "inicio": 195.866,
+          "fim": 196.166,
+          "score": 0.438
+        },
+        {
+          "texto": "shadows",
+          "inicio": 196.186,
+          "fim": 196.707,
+          "score": 0.39
+        },
+        {
+          "texto": "searchin",
+          "inicio": 196.747,
+          "fim": 197.027,
+          "score": 0.24
+        },
+        {
+          "texto": "in",
+          "inicio": 197.307,
+          "fim": 197.407,
+          "score": 0.584
+        },
+        {
+          "texto": "the",
+          "inicio": 197.527,
+          "fim": 197.667,
+          "score": 0.445
+        },
+        {
+          "texto": "night",
+          "inicio": 197.687,
+          "fim": 198.307,
+          "score": 0.679
+        },
+        {
+          "texto": "Streetlights",
+          "inicio": 198.547,
+          "fim": 199.307,
+          "score": 0.529
+        },
+        {
+          "texto": "people",
+          "inicio": 199.348,
+          "fim": 199.808,
+          "score": 0.561
+        },
+        {
+          "texto": "Livin",
+          "inicio": 199.908,
+          "fim": 200.308,
+          "score": 0.449
+        },
+        {
+          "texto": "just",
+          "inicio": 200.388,
+          "fim": 200.868,
+          "score": 0.731
+        },
+        {
+          "texto": "to",
+          "inicio": 200.948,
+          "fim": 202.168,
+          "score": 0.492
+        },
+        {
+          "texto": "find",
+          "inicio": 202.188,
+          "fim": 202.308,
+          "score": 0.297
+        },
+        {
+          "texto": "emotion",
+          "inicio": 202.328,
+          "fim": 202.509,
+          "score": 0.214
+        },
+        {
+          "texto": "Hidin",
+          "inicio": 202.529,
+          "fim": 202.629,
+          "score": 0.0
+        },
+        {
+          "texto": "somewhere",
+          "inicio": 202.649,
+          "fim": 202.829,
+          "score": 0.006
+        },
+        {
+          "texto": "in",
+          "inicio": 202.889,
+          "fim": 202.949,
+          "score": 0.238
+        },
+        {
+          "texto": "the",
+          "inicio": 202.989,
+          "fim": 203.069,
+          "score": 0.252
+        },
+        {
+          "texto": "night",
+          "inicio": 203.089,
+          "fim": 203.189,
+          "score": 0.034
+        },
+        {
+          "texto": "Don't",
+          "inicio": 203.209,
+          "fim": 203.309,
+          "score": 0.002
+        },
+        {
+          "texto": "stop",
+          "inicio": 203.329,
+          "fim": 203.409,
+          "score": 0.0
+        }
+      ],
+      "conflitos_originais": [
+        {
+          "token_txt": 157,
+          "blocos": [
+            34
+          ]
+        },
+        {
+          "token_txt": 158,
+          "blocos": [
+            34
+          ]
+        },
+        {
+          "token_txt": 159,
+          "blocos": [
+            34
+          ]
+        },
+        {
+          "token_txt": 160,
+          "blocos": [
+            34
+          ]
+        }
+      ],
+      "trechos_nao_confirmados": [
+        {
+          "txt_inicio": 89,
+          "txt_fim": 95,
+          "motivo": "suporte_acustico_insuficiente",
+          "atividade_audio": 1.0
+        },
+        {
+          "txt_inicio": 95,
+          "txt_fim": 99,
+          "motivo": "suporte_acustico_insuficiente",
+          "atividade_audio": 1.0
+        },
+        {
+          "txt_inicio": 99,
+          "txt_fim": 105,
+          "motivo": "suporte_acustico_insuficiente",
+          "atividade_audio": 1.0
+        },
+        {
+          "txt_inicio": 105,
+          "txt_fim": 109,
+          "motivo": "suporte_acustico_insuficiente",
+          "atividade_audio": 1.0
+        },
+        {
+          "txt_inicio": 109,
+          "txt_fim": 114,
+          "motivo": "suporte_acustico_insuficiente",
+          "atividade_audio": 1.0
+        },
+        {
+          "txt_inicio": 114,
+          "txt_fim": 121,
+          "motivo": "suporte_acustico_insuficiente",
+          "atividade_audio": 1.0
+        },
+        {
+          "txt_inicio": 126,
+          "txt_fim": 135,
+          "motivo": "suporte_acustico_insuficiente",
+          "atividade_audio": 0.0
+        },
+        {
+          "txt_inicio": 135,
+          "txt_fim": 137,
+          "motivo": "suporte_acustico_insuficiente",
+          "atividade_audio": 0.0
+        },
+        {
+          "txt_inicio": 137,
+          "txt_fim": 142,
+          "motivo": "suporte_acustico_insuficiente",
+          "atividade_audio": 0.0
+        },
+        {
+          "txt_inicio": 142,
+          "txt_fim": 148,
+          "motivo": "suporte_acustico_insuficiente",
+          "atividade_audio": 0.0
+        },
+        {
+          "txt_inicio": 148,
+          "txt_fim": 150,
+          "motivo": "suporte_acustico_insuficiente",
+          "atividade_audio": 0.0
+        },
+        {
+          "txt_inicio": 150,
+          "txt_fim": 155,
+          "motivo": "suporte_acustico_insuficiente",
+          "atividade_audio": 0.12307692307692308
+        },
+        {
+          "txt_inicio": 155,
+          "txt_fim": 157,
+          "motivo": "suporte_acustico_insuficiente",
+          "atividade_audio": 1.0
+        },
+        {
+          "txt_inicio": 161,
+          "txt_fim": 162,
+          "motivo": "suporte_acustico_insuficiente",
+          "atividade_audio": 1.0
         }
       ],
       "lacuna": 2
+    },
+    {
+      "janela": [
+        208.781,
+        250.2646875
+      ],
+      "texto": "Streetlights, people\nDon't stop believin'\nHold on\nStreetlights, people\nDon't stop believin'\nHold on to that feelin'\nStreetlights, people",
+      "palavras": [
+        {
+          "texto": "Streetlights",
+          "inicio": 209.962,
+          "fim": 211.242,
+          "score": 0.56
+        },
+        {
+          "texto": "people",
+          "inicio": 212.143,
+          "fim": 217.646,
+          "score": 0.875
+        },
+        {
+          "texto": "Don't",
+          "inicio": 218.106,
+          "fim": 218.707,
+          "score": 0.631
+        },
+        {
+          "texto": "stop",
+          "inicio": 218.787,
+          "fim": 219.167,
+          "score": 0.831
+        },
+        {
+          "texto": "believin",
+          "inicio": 219.847,
+          "fim": 221.208,
+          "score": 0.617
+        },
+        {
+          "texto": "Hold",
+          "inicio": 222.349,
+          "fim": 222.849,
+          "score": 0.75
+        },
+        {
+          "texto": "on",
+          "inicio": 224.81,
+          "fim": 225.17,
+          "score": 0.792
+        },
+        {
+          "texto": "Streetlights",
+          "inicio": 225.931,
+          "fim": 227.172,
+          "score": 0.596
+        },
+        {
+          "texto": "people",
+          "inicio": 228.012,
+          "fim": 233.475,
+          "score": 0.866
+        },
+        {
+          "texto": "Don't",
+          "inicio": 233.915,
+          "fim": 234.496,
+          "score": 0.609
+        },
+        {
+          "texto": "stop",
+          "inicio": 234.596,
+          "fim": 234.996,
+          "score": 0.835
+        },
+        {
+          "texto": "believin",
+          "inicio": 235.656,
+          "fim": 237.017,
+          "score": 0.511
+        },
+        {
+          "texto": "Hold",
+          "inicio": 238.198,
+          "fim": 238.618,
+          "score": 0.666
+        },
+        {
+          "texto": "on",
+          "inicio": 238.798,
+          "fim": 238.958,
+          "score": 0.622
+        },
+        {
+          "texto": "to",
+          "inicio": 239.018,
+          "fim": 239.338,
+          "score": 0.756
+        },
+        {
+          "texto": "that",
+          "inicio": 239.378,
+          "fim": 239.619,
+          "score": 0.658
+        },
+        {
+          "texto": "feelin",
+          "inicio": 239.859,
+          "fim": 241.32,
+          "score": 0.68
+        },
+        {
+          "texto": "Streetlights",
+          "inicio": 241.66,
+          "fim": 242.86,
+          "score": 0.653
+        },
+        {
+          "texto": "people",
+          "inicio": 243.781,
+          "fim": 244.621,
+          "score": 0.529
+        }
+      ],
+      "lacuna": 3
     }
   ],
   "pendencias": [
     {
+      "bloco_srt": 7,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 8,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 15,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 31,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 34,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
       "lacuna": 1,
+      "motivo": "nao_pesquisado",
+      "detalhe": "referencias_textuais_insuficientes"
+    },
+    {
+      "lacuna": 2,
+      "motivo": "conflito_com_bloco_original",
+      "token_txt": 157,
+      "blocos": [
+        34
+      ]
+    },
+    {
+      "lacuna": 2,
+      "motivo": "conflito_com_bloco_original",
+      "token_txt": 158,
+      "blocos": [
+        34
+      ]
+    },
+    {
+      "lacuna": 2,
+      "motivo": "conflito_com_bloco_original",
+      "token_txt": 159,
+      "blocos": [
+        34
+      ]
+    },
+    {
+      "lacuna": 2,
+      "motivo": "conflito_com_bloco_original",
+      "token_txt": 160,
+      "blocos": [
+        34
+      ]
+    },
+    {
+      "lacuna": 2,
+      "motivo": "parcialmente_recuperado",
+      "detalhe": null
+    },
+    {
+      "lacuna": 2,
       "motivo": "insercao_baixa_confianca",
-      "texto": "Hold on"
+      "texto": "Whoa, the movie never ends"
+    },
+    {
+      "motivo": "texto_txt_sem_tempo",
+      "tokens_txt": [
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        78,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161
+      ]
     }
   ],
   "blocos": [
     {
-      "inicio": 18.38,
-      "fim": 23.6,
-      "texto": "Just a small town girl livin' in a",
-      "origem": "texto_corrigido",
+      "inicio": 18.954,
+      "fim": 20.816,
+      "texto": "Just a small town girl",
+      "origem": "original_preservado",
       "bloco_original": 1
     },
     {
-      "inicio": 23.6,
-      "fim": 25.34,
-      "texto": "Lonely world",
+      "inicio": 22.557,
+      "fim": 25.279,
+      "texto": "Livin' in a lonely world",
       "origem": "texto_corrigido",
       "bloco_original": 2
     },
     {
-      "inicio": 26.38,
-      "fim": 31.259,
+      "inicio": 26.841,
+      "fim": 31.965,
       "texto": "She took the midnight train going anywhere",
-      "origem": "texto_corrigido",
+      "origem": "original_preservado",
       "bloco_original": 3
     },
     {
-      "inicio": 34.6,
-      "fim": 39.88,
-      "texto": "Just a city boy born and raised in",
-      "origem": "texto_corrigido",
+      "inicio": 35.248,
+      "fim": 37.189,
+      "texto": "Just a city boy",
+      "origem": "original_preservado",
       "bloco_original": 4
     },
     {
-      "inicio": 39.88,
-      "fim": 40.82,
-      "texto": "South detroit",
+      "inicio": 38.891,
+      "fim": 41.613,
+      "texto": "Born and raised in south detroit",
       "origem": "texto_corrigido",
       "bloco_original": 5
     },
     {
-      "inicio": 42.46,
-      "fim": 48.24,
+      "inicio": 43.234,
+      "fim": 47.318,
       "texto": "He took the midnight train going anywhere",
-      "origem": "texto_corrigido",
+      "origem": "original_preservado",
       "bloco_original": 6
     },
     {
-      "inicio": 66.46,
-      "fim": 71.56,
-      "texto": "A singer in a smokey room a smell",
-      "origem": "texto_corrigido",
+      "inicio": 67.198,
+      "fim": 69.66,
+      "texto": "I'll sing her in a smokey room i'll",
+      "origem": "original_preservado",
       "bloco_original": 7
     },
     {
-      "inicio": 71.56,
-      "fim": 73.68,
-      "texto": "Of wine and cheap perfume",
-      "origem": "texto_corrigido",
+      "inicio": 71.361,
+      "fim": 73.963,
+      "texto": "Smell a wine and cheap a few",
+      "origem": "original_preservado",
       "bloco_original": 8
     },
     {
-      "inicio": 75.02,
-      "fim": 77.62,
-      "texto": "For a smile they can share the night",
-      "origem": "texto_corrigido",
+      "inicio": 75.003,
+      "fim": 80.407,
+      "texto": "For a smile they can share the night it goes on and on and",
+      "origem": "original_preservado",
       "bloco_original": 9
     },
     {
-      "inicio": 77.78,
-      "fim": 81.36,
-      "texto": "It goes on and on and on and",
-      "origem": "texto_corrigido",
+      "inicio": 80.967,
+      "fim": 83.829,
+      "texto": "On and on strangers",
+      "origem": "original_preservado",
       "bloco_original": 10
     },
     {
-      "inicio": 81.36,
-      "fim": 82.04,
-      "texto": "On",
+      "inicio": 84.63,
+      "fim": 90.474,
+      "texto": "Waitin' up and down the boulevard their",
       "origem": "texto_corrigido",
       "bloco_original": 11
     },
     {
-      "inicio": 82.04,
-      "fim": 89.94,
-      "texto": "Strangers waitin' up and down the boulevard",
-      "origem": "texto_corrigido",
+      "inicio": 90.594,
+      "fim": 91.855,
+      "texto": "Shadows",
+      "origem": "original_preservado",
       "bloco_original": 12
     },
     {
-      "inicio": 90.16,
-      "fim": 96.44,
-      "texto": "Their shadows searchin' in the night",
+      "inicio": 92.615,
+      "fim": 96.238,
+      "texto": "Searchin' in the night",
       "origem": "texto_corrigido",
       "bloco_original": 13
     },
     {
-      "inicio": 98.72,
-      "fim": 105.92,
-      "texto": "Streetlights, people livin' just to find emotion",
+      "inicio": 98.666,
+      "fim": 99.907,
+      "texto": "Streetlights,",
       "origem": "texto_corrigido",
       "bloco_original": 14
     },
     {
-      "inicio": 106.74,
-      "fim": 111.62,
-      "texto": "Hidin' somewhere in the night",
-      "origem": "texto_corrigido",
+      "inicio": 100.728,
+      "fim": 102.089,
+      "texto": "Keeper",
+      "origem": "original_preservado",
       "bloco_original": 15
     },
     {
-      "inicio": 123.02,
-      "fim": 129.06,
-      "texto": "Workin' hard to get my fill everybody wants",
+      "inicio": 103.71,
+      "fim": 107.814,
+      "texto": "Livin' just to find emotion hidin'",
       "origem": "texto_corrigido",
       "bloco_original": 16
     },
     {
-      "inicio": 129.06,
-      "fim": 130.26,
-      "texto": "A thrill",
+      "inicio": 108.675,
+      "fim": 114.38,
+      "texto": "Somewhere in the night",
       "origem": "texto_corrigido",
       "bloco_original": 17
     },
     {
-      "inicio": 130.26,
-      "fim": 135.26,
-      "texto": "Payin' anything to roll the dice just one",
+      "inicio": 123.187,
+      "fim": 125.79,
+      "texto": "Workin' hard to get my fill",
       "origem": "texto_corrigido",
       "bloco_original": 18
     },
     {
-      "inicio": 135.26,
-      "fim": 137.58,
-      "texto": "More time",
+      "inicio": 127.706,
+      "fim": 130.308,
+      "texto": "Everybody wants a thrill",
       "origem": "texto_corrigido",
       "bloco_original": 19
     },
     {
-      "inicio": 138.96,
-      "fim": 143.72,
-      "texto": "Some'll win, some will lose some are",
+      "inicio": 131.068,
+      "fim": 135.891,
+      "texto": "Payin' anything to roll the dice just one more",
       "origem": "texto_corrigido",
       "bloco_original": 20
     },
     {
-      "inicio": 143.72,
-      "fim": 146.3,
-      "texto": "Born to sing the blues",
+      "inicio": 135.991,
+      "fim": 137.592,
+      "texto": "Time",
       "origem": "texto_corrigido",
       "bloco_original": 21
     },
     {
-      "inicio": 146.8,
-      "fim": 150.9,
-      "texto": "Whoa, the movie never ends it goes on",
+      "inicio": 138.933,
+      "fim": 142.034,
+      "texto": "Some'll win, some will lose",
       "origem": "texto_corrigido",
       "bloco_original": 22
     },
     {
-      "inicio": 150.9,
-      "fim": 153.78,
-      "texto": "And on and on and on",
+      "inicio": 143.375,
+      "fim": 146.057,
+      "texto": "Some are born to sing the blues",
       "origem": "texto_corrigido",
       "bloco_original": 23
     },
     {
-      "inicio": 153.78,
-      "fim": 161.62,
-      "texto": "Strangers waitin' up and down the boulevard",
+      "inicio": 147.037,
+      "fim": 152.86,
+      "texto": "Whoa, the movie never ends it goes on and on and on",
       "origem": "texto_corrigido",
       "bloco_original": 24
     },
     {
-      "inicio": 161.86,
-      "fim": 167.34,
-      "texto": "Their shadows searchin' in the night",
+      "inicio": 152.961,
+      "fim": 155.262,
+      "texto": "And on and on strangers",
       "origem": "texto_corrigido",
       "bloco_original": 25
     },
     {
-      "inicio": 170.12,
-      "fim": 177.48,
-      "texto": "Streetlights, people livin' just to find emotion",
+      "inicio": 156.278,
+      "fim": 157.679,
+      "texto": "Waitin' up",
       "origem": "texto_corrigido",
       "bloco_original": 26
     },
     {
-      "inicio": 178.26,
-      "fim": 183.12,
-      "texto": "Hidin', somewhere in the night",
+      "inicio": 159.381,
+      "fim": 163.465,
+      "texto": "And down the boulevard their shadows",
       "origem": "texto_corrigido",
       "bloco_original": 27
     },
     {
-      "inicio": 201.72,
-      "fim": 205.26,
-      "texto": "Don't stop believin'",
+      "inicio": 164.225,
+      "fim": 168.189,
+      "texto": "Searchin' in the night",
       "origem": "texto_corrigido",
       "bloco_original": 28
     },
     {
-      "inicio": 206.34,
-      "fim": 209.0,
-      "texto": "Hold on to that feelin'",
+      "inicio": 170.211,
+      "fim": 171.432,
+      "texto": "Streetlights,",
       "origem": "texto_corrigido",
       "bloco_original": 29
     },
     {
-      "inicio": 210.08,
-      "fim": 212.98,
-      "texto": "Streetlights, people",
+      "inicio": 172.973,
+      "fim": 173.734,
+      "texto": "People",
       "origem": "texto_corrigido",
       "bloco_original": 30
     },
     {
-      "inicio": 217.67,
-      "fim": 220.87,
-      "texto": "Don't stop believin'",
-      "origem": "texto_corrigido",
+      "inicio": 175.255,
+      "fim": 178.058,
+      "texto": "Loving just to find him on sight",
+      "origem": "original_preservado",
       "bloco_original": 31
     },
     {
-      "inicio": 221.792,
-      "fim": 225.04,
-      "texto": "Hold on",
-      "origem": "insercao_acustica",
-      "lacuna": 1,
-      "txt_inicio": 173,
-      "txt_fim": 175,
-      "score_minimo": 0.0,
-      "atividade_audio": 1.0,
-      "palavras_baixa_confianca": 1
-    },
-    {
-      "inicio": 225.04,
-      "fim": 228.9,
-      "texto": "Streetlights, people",
+      "inicio": 178.859,
+      "fim": 179.339,
+      "texto": "And raised in",
       "origem": "texto_corrigido",
       "bloco_original": 32
     },
     {
-      "inicio": 233.49,
-      "fim": 236.67,
-      "texto": "Don't stop believin'",
+      "inicio": 180.2,
+      "fim": 182.382,
+      "texto": "Somewhere in the night",
       "origem": "texto_corrigido",
       "bloco_original": 33
     },
     {
-      "inicio": 236.67,
-      "fim": 240.61,
-      "texto": "Hold on to that feelin'",
+      "inicio": 185.623,
+      "fim": 188.504,
+      "texto": "Whoa, the movie never ends",
       "origem": "insercao_acustica",
       "lacuna": 2,
-      "txt_inicio": 180,
-      "txt_fim": 185,
-      "score_minimo": 0.325,
+      "txt_inicio": 121,
+      "txt_fim": 126,
+      "score_minimo": 0.0,
+      "atividade_audio": 0.7222222222222222,
+      "palavras_baixa_confianca": 5
+    },
+    {
+      "inicio": 202.906,
+      "fim": 203.287,
+      "texto": "Stuff",
+      "origem": "original_preservado",
+      "bloco_original": 34
+    },
+    {
+      "inicio": 203.949,
+      "fim": 205.332,
+      "texto": "Believin'",
+      "origem": "texto_corrigido",
+      "bloco_original": 35
+    },
+    {
+      "inicio": 207.137,
+      "fim": 208.781,
+      "texto": "Hold on to that feelin'",
+      "origem": "texto_corrigido",
+      "bloco_original": 36
+    },
+    {
+      "inicio": 209.962,
+      "fim": 217.646,
+      "texto": "Streetlights, people",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 168,
+      "txt_fim": 170,
+      "score_minimo": 0.56,
       "atividade_audio": 1.0,
       "palavras_baixa_confianca": 0
     },
     {
-      "inicio": 240.61,
-      "fim": 244.09,
+      "inicio": 218.106,
+      "fim": 221.208,
+      "texto": "Don't stop believin'",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 170,
+      "txt_fim": 173,
+      "score_minimo": 0.617,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 222.349,
+      "fim": 225.17,
+      "texto": "Hold on",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 173,
+      "txt_fim": 175,
+      "score_minimo": 0.75,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 225.931,
+      "fim": 233.475,
       "texto": "Streetlights, people",
-      "origem": "texto_corrigido",
-      "bloco_original": 34
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 175,
+      "txt_fim": 177,
+      "score_minimo": 0.596,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 233.915,
+      "fim": 237.017,
+      "texto": "Don't stop believin'",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 177,
+      "txt_fim": 180,
+      "score_minimo": 0.511,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 238.198,
+      "fim": 241.32,
+      "texto": "Hold on to that feelin'",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 180,
+      "txt_fim": 185,
+      "score_minimo": 0.622,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 241.66,
+      "fim": 244.621,
+      "texto": "Streetlights, people",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 185,
+      "txt_fim": 187,
+      "score_minimo": 0.529,
+      "atividade_audio": 0.9932432432432432,
+      "palavras_baixa_confianca": 0
     }
   ],
   "configuracao_motor": {
-    "idioma": "pt",
+    "idioma": "auto",
     "dispositivo": "cpu",
-    "modelo_solicitado": null
+    "modelo_solicitado": null,
+    "selecao_por_trecho": [
+      {
+        "inicio": 182.382,
+        "fim": 203.949,
+        "linhas": [
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 2,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 2,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 1,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 3,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 1,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 8,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 2,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 3,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 1,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 2,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          }
+        ]
+      },
+      {
+        "inicio": 208.781,
+        "fim": 250.2646875,
+        "linhas": [
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 1,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 3,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          }
+        ]
+      }
+    ]
   },
   "fontes": {
     "txt": {
@@ -1515,7 +3301,7 @@
     },
     "srt": {
       "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\rock-internacional\\dont-stop-belilevin-journey\\letra.srt",
-      "sha256": "a5e66759f34b29dbc7cec31ddf14792ce750efadd4bd98ab03fbaee2be0964bf"
+      "sha256": "8f65fb802df0f01195d9a234c217fea72cc0ec147a994e95b1ac13f30f430843"
     },
     "voz": {
       "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\rock-internacional\\dont-stop-belilevin-journey\\voz.mp3",
@@ -1523,6 +3309,23 @@
     }
   },
   "resumo_avisos": [
-    "Inserção em 00:03:41,792: 1 palavra(s) com baixa confiança; mantidas."
+    "Bloco 7: consulta txt ambigua original preservado.",
+    "Bloco 8: consulta txt ambigua original preservado.",
+    "Bloco 15: texto exclusivo srt exige revisao.",
+    "Bloco 31: consulta txt ambigua original preservado.",
+    "Bloco 34: texto exclusivo srt exige revisao.",
+    "Lacuna 1: nao pesquisado (00:02:59,339–00:03:00,200).",
+    "TXT 'in': tempo acústico conflita com bloco(s) original(is) [34]; revisar associação.",
+    "TXT 'the': tempo acústico conflita com bloco(s) original(is) [34]; revisar associação.",
+    "TXT 'night': tempo acústico conflita com bloco(s) original(is) [34]; revisar associação.",
+    "TXT 'Don't': tempo acústico conflita com bloco(s) original(is) [34]; revisar associação.",
+    "Lacuna 2: parcialmente recuperado (00:03:02,382–00:03:23,949).",
+    "Inserção em 00:03:05,623: 5 palavra(s) com baixa confiança; mantidas.",
+    "TXT linha 7, sem tempo: A singer in a smokey room",
+    "TXT linha 8, sem tempo: A smell of wine and cheap perfume",
+    "TXT linha 14, sem tempo: people",
+    "TXT linha 29, sem tempo: Livin just to find emotion",
+    "TXT linha 30, sem tempo: Hidin somewhere in the night",
+    "TXT linha 31, sem tempo: Don't stop"
   ]
 }

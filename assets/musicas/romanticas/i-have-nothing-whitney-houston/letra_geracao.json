@@ -1,0 +1,577 @@
+{
+  "versao": 1,
+  "arquivo_voz": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\pop-internacional\\i-have-nothing-whitney-houston\\voz.mp3",
+  "sha256_voz": "b64da1a3fd5c0e8a5f9e0a4845c917810c7db0b4511c183bc21df12e5e85f8bb",
+  "duracao_audio": 290.1159375,
+  "configuracao": {
+    "modelo": "small",
+    "idioma": "en",
+    "dispositivo": "cpu",
+    "compute_type": "int8",
+    "vad": "silero"
+  },
+  "segmentos": [
+    {
+      "text": " Take me for what I am Cause I'll never change All my colors for you Take my love I'll never rest for too much Just all that you are",
+      "start": 26.178,
+      "end": 52.766,
+      "avg_logprob": -0.16277435049414635,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "Take",
+          "start": 26.238,
+          "end": 26.678,
+          "score": 0.89
+        },
+        {
+          "word": "me",
+          "start": 26.738,
+          "end": 26.878,
+          "score": 0.998
+        },
+        {
+          "word": "for",
+          "start": 27.018,
+          "end": 27.398,
+          "score": 0.953
+        },
+        {
+          "word": "what",
+          "start": 27.498,
+          "end": 29.339,
+          "score": 0.856
+        },
+        {
+          "word": "I",
+          "start": 29.579,
+          "end": 29.739,
+          "score": 0.945
+        },
+        {
+          "word": "am",
+          "start": 30.099,
+          "end": 30.439,
+          "score": 0.796
+        },
+        {
+          "word": "Cause",
+          "start": 31.74,
+          "end": 32.08,
+          "score": 0.835
+        },
+        {
+          "word": "I'll",
+          "start": 32.32,
+          "end": 32.56,
+          "score": 0.744
+        },
+        {
+          "word": "never",
+          "start": 32.66,
+          "end": 33.16,
+          "score": 0.938
+        },
+        {
+          "word": "change",
+          "start": 33.38,
+          "end": 34.3,
+          "score": 0.809
+        },
+        {
+          "word": "All",
+          "start": 35.181,
+          "end": 35.321,
+          "score": 0.276
+        },
+        {
+          "word": "my",
+          "start": 35.381,
+          "end": 35.541,
+          "score": 0.864
+        },
+        {
+          "word": "colors",
+          "start": 35.621,
+          "end": 36.781,
+          "score": 0.88
+        },
+        {
+          "word": "for",
+          "start": 37.101,
+          "end": 37.461,
+          "score": 0.927
+        },
+        {
+          "word": "you",
+          "start": 37.521,
+          "end": 39.442,
+          "score": 0.922
+        },
+        {
+          "word": "Take",
+          "start": 41.483,
+          "end": 42.523,
+          "score": 0.871
+        },
+        {
+          "word": "my",
+          "start": 42.743,
+          "end": 43.563,
+          "score": 0.834
+        },
+        {
+          "word": "love",
+          "start": 43.683,
+          "end": 44.343,
+          "score": 0.608
+        },
+        {
+          "word": "I'll",
+          "start": 45.324,
+          "end": 45.504,
+          "score": 0.364
+        },
+        {
+          "word": "never",
+          "start": 45.544,
+          "end": 46.204,
+          "score": 0.693
+        },
+        {
+          "word": "rest",
+          "start": 46.304,
+          "end": 47.284,
+          "score": 0.816
+        },
+        {
+          "word": "for",
+          "start": 47.424,
+          "end": 48.005,
+          "score": 0.924
+        },
+        {
+          "word": "too",
+          "start": 48.165,
+          "end": 48.425,
+          "score": 0.971
+        },
+        {
+          "word": "much",
+          "start": 48.605,
+          "end": 49.145,
+          "score": 0.84
+        },
+        {
+          "word": "Just",
+          "start": 50.545,
+          "end": 50.805,
+          "score": 0.823
+        },
+        {
+          "word": "all",
+          "start": 51.126,
+          "end": 51.326,
+          "score": 0.794
+        },
+        {
+          "word": "that",
+          "start": 51.366,
+          "end": 51.646,
+          "score": 0.827
+        },
+        {
+          "word": "you",
+          "start": 51.726,
+          "end": 52.066,
+          "score": 0.949
+        },
+        {
+          "word": "are",
+          "start": 52.506,
+          "end": 52.626,
+          "score": 0.574
+        }
+      ]
+    },
+    {
+      "text": " and everything that you do. I don't really need to look very much further. I don't want to have to go where you don't follow. I won't hold it back again. This passion inside can't run from myself. There's nowhere to hide.",
+      "start": 53.89,
+      "end": 78.366,
+      "avg_logprob": -0.0924730961973017,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "and",
+          "start": 54.01,
+          "end": 54.13,
+          "score": 0.87
+        },
+        {
+          "word": "everything",
+          "start": 54.25,
+          "end": 55.071,
+          "score": 0.836
+        },
+        {
+          "word": "that",
+          "start": 55.171,
+          "end": 55.391,
+          "score": 0.826
+        },
+        {
+          "word": "you",
+          "start": 55.491,
+          "end": 55.851,
+          "score": 0.944
+        },
+        {
+          "word": "do.",
+          "start": 55.911,
+          "end": 58.553,
+          "score": 0.929
+        },
+        {
+          "word": "I",
+          "start": 60.454,
+          "end": 60.514,
+          "score": 0.987
+        },
+        {
+          "word": "don't",
+          "start": 60.554,
+          "end": 60.734,
+          "score": 0.823
+        },
+        {
+          "word": "really",
+          "start": 60.795,
+          "end": 61.075,
+          "score": 0.833
+        },
+        {
+          "word": "need",
+          "start": 61.135,
+          "end": 61.335,
+          "score": 0.532
+        },
+        {
+          "word": "to",
+          "start": 61.355,
+          "end": 61.455,
+          "score": 0.958
+        },
+        {
+          "word": "look",
+          "start": 61.555,
+          "end": 61.915,
+          "score": 0.905
+        },
+        {
+          "word": "very",
+          "start": 62.696,
+          "end": 63.376,
+          "score": 0.86
+        },
+        {
+          "word": "much",
+          "start": 63.476,
+          "end": 63.716,
+          "score": 0.707
+        },
+        {
+          "word": "further.",
+          "start": 63.857,
+          "end": 64.557,
+          "score": 0.883
+        },
+        {
+          "word": "I",
+          "start": 65.197,
+          "end": 65.237,
+          "score": 0.994
+        },
+        {
+          "word": "don't",
+          "start": 65.277,
+          "end": 65.458,
+          "score": 0.845
+        },
+        {
+          "word": "want",
+          "start": 65.498,
+          "end": 65.678,
+          "score": 0.673
+        },
+        {
+          "word": "to",
+          "start": 65.718,
+          "end": 65.818,
+          "score": 0.804
+        },
+        {
+          "word": "have",
+          "start": 65.878,
+          "end": 66.078,
+          "score": 0.794
+        },
+        {
+          "word": "to",
+          "start": 66.098,
+          "end": 66.198,
+          "score": 0.816
+        },
+        {
+          "word": "go",
+          "start": 66.278,
+          "end": 66.778,
+          "score": 0.838
+        },
+        {
+          "word": "where",
+          "start": 67.419,
+          "end": 67.839,
+          "score": 0.857
+        },
+        {
+          "word": "you",
+          "start": 67.899,
+          "end": 68.179,
+          "score": 0.69
+        },
+        {
+          "word": "don't",
+          "start": 68.239,
+          "end": 68.44,
+          "score": 0.795
+        },
+        {
+          "word": "follow.",
+          "start": 68.6,
+          "end": 69.22,
+          "score": 0.925
+        },
+        {
+          "word": "I",
+          "start": 69.86,
+          "end": 69.92,
+          "score": 0.679
+        },
+        {
+          "word": "won't",
+          "start": 69.961,
+          "end": 70.161,
+          "score": 0.677
+        },
+        {
+          "word": "hold",
+          "start": 70.201,
+          "end": 70.401,
+          "score": 0.878
+        },
+        {
+          "word": "it",
+          "start": 70.461,
+          "end": 70.521,
+          "score": 0.744
+        },
+        {
+          "word": "back",
+          "start": 70.561,
+          "end": 70.761,
+          "score": 0.967
+        },
+        {
+          "word": "again.",
+          "start": 70.841,
+          "end": 71.502,
+          "score": 0.814
+        },
+        {
+          "word": "This",
+          "start": 71.782,
+          "end": 71.962,
+          "score": 0.91
+        },
+        {
+          "word": "passion",
+          "start": 72.082,
+          "end": 72.882,
+          "score": 0.877
+        },
+        {
+          "word": "inside",
+          "start": 72.942,
+          "end": 73.463,
+          "score": 0.838
+        },
+        {
+          "word": "can't",
+          "start": 73.483,
+          "end": 74.403,
+          "score": 0.776
+        },
+        {
+          "word": "run",
+          "start": 74.483,
+          "end": 74.784,
+          "score": 0.96
+        },
+        {
+          "word": "from",
+          "start": 74.844,
+          "end": 75.144,
+          "score": 0.872
+        },
+        {
+          "word": "myself.",
+          "start": 75.204,
+          "end": 75.964,
+          "score": 0.825
+        },
+        {
+          "word": "There's",
+          "start": 76.425,
+          "end": 76.685,
+          "score": 0.854
+        },
+        {
+          "word": "nowhere",
+          "start": 76.805,
+          "end": 77.606,
+          "score": 0.751
+        },
+        {
+          "word": "to",
+          "start": 77.626,
+          "end": 77.806,
+          "score": 0.686
+        },
+        {
+          "word": "hide.",
+          "start": 77.826,
+          "end": 78.326,
+          "score": 0.519
+        }
+      ]
+    },
+    {
+      "text": " There's nowhere",
+      "start": 181.25,
+      "end": 182.11,
+      "avg_logprob": -1.2223258316516876,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "There's",
+          "start": 181.291,
+          "end": 181.475,
+          "score": 0.132
+        },
+        {
+          "word": "nowhere",
+          "start": 181.496,
+          "end": 182.069,
+          "score": 0.589
+        }
+      ]
+    }
+  ],
+  "blocos": [
+    {
+      "inicio": 26.238,
+      "fim": 30.439,
+      "texto": "Take me for what I am"
+    },
+    {
+      "inicio": 31.74,
+      "fim": 34.3,
+      "texto": "Cause I'll never change"
+    },
+    {
+      "inicio": 35.181,
+      "fim": 39.442,
+      "texto": "All my colors for you"
+    },
+    {
+      "inicio": 41.483,
+      "fim": 44.343,
+      "texto": "Take my love"
+    },
+    {
+      "inicio": 45.324,
+      "fim": 49.145,
+      "texto": "I'll never rest for too much"
+    },
+    {
+      "inicio": 50.545,
+      "fim": 52.626,
+      "texto": "Just all that you are"
+    },
+    {
+      "inicio": 54.01,
+      "fim": 58.553,
+      "texto": "and everything that you do."
+    },
+    {
+      "inicio": 60.454,
+      "fim": 61.915,
+      "texto": "I don't really need to look"
+    },
+    {
+      "inicio": 62.696,
+      "fim": 68.44,
+      "texto": "very much further. I don't want to have to go where you don't"
+    },
+    {
+      "inicio": 68.6,
+      "fim": 74.403,
+      "texto": "follow. I won't hold it back again. This passion inside can't"
+    },
+    {
+      "inicio": 74.483,
+      "fim": 78.326,
+      "texto": "run from myself. There's nowhere to hide."
+    },
+    {
+      "inicio": 181.291,
+      "fim": 182.069,
+      "texto": "There's nowhere"
+    }
+  ],
+  "avisos": [
+    "Segmento 1: alinhamento fraco em 'All'.",
+    "Segmento 3: alinhamento fraco em \"There's\"."
+  ],
+  "revisao_recomendada": true,
+  "comparacao_letra": {
+    "similaridade_textual": 0.3863080684596577,
+    "divergencias": [
+      {
+        "tipo": "delete",
+        "referencia": "share my life",
+        "transcricao": ""
+      },
+      {
+        "tipo": "replace",
+        "referencia": "ask",
+        "transcricao": "rest"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "wanna",
+        "transcricao": "want to"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "don t make me close one more door i don t wanna hurt anymore stay in my arms if you dare or must i imagine you there don t walk away from me i have nothing nothing nothing if i don t have you you you you you you you see through right to the heart of me you break down my walls with the strength of your love i never knew love like i ve known it with you will a memory survive one i can hold on to i don t really need to look very much further i don t wanna have to go where you don t follow i won t hold it back again this passion inside i can t run from myself",
+        "transcricao": ""
+      },
+      {
+        "tipo": "delete",
+        "referencia": "to hide your love i ll remember forever don t make me close one more door i don t want to hurt anymore stay in my arms if you dare or must i imagine you there don t walk away from me i have nothing nothing nothing don t make me close one more door i don t wanna hurt anymore stay in my arms if you dare or must i imagine you there don t walk away from me no don t walk away from me don t you dare walk away from me i have nothing nothing nothing if i don t have you you if i don t have you oh oh",
+        "transcricao": ""
+      }
+    ]
+  }
+}

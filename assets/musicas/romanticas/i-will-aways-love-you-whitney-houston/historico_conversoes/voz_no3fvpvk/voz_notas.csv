@@ -1,0 +1,195 @@
+﻿ordem_global;bloco_indice;palavra;silaba;inicio_nota;fim_nota;pitch_midi;nome_nota;centro_vocal_midi;correcao_cents;fonte_pitch;frames_vocais;confianca_voz;estabilidade_voz;suporte_harmonico;confianca_harmonica;score_final;margem_decisao;confianca_final;revisao_recomendada;motivos_revisao
+1;1;If;If;3.031000;4.831000;64;E4;63.5000;50.00;nucleo_vogal;49;0.7338;0.5833;0.6693;0.0000;0.5350;0.1255;0.5282;SIM;baixa confiança final | contexto harmônico fraco | cauda_final_estendida_por_evidencia_acustica
+2;2;I;I;4.932000;6.310658;61;C#4;60.8000;20.00;nucleo_vogal;17;0.8288;0.8724;0.1674;0.0000;0.6060;0.3317;0.7082;SIM;score_alinhamento_baixo | contexto harmônico fraco | cauda_final_estendida_por_evidencia_acustica
+3;3;Should;Should;7.274000;8.098000;59;B3;59.1000;-10.00;nucleo_vogal;61;0.7803;0.7178;0.9863;0.0000;0.5814;0.3525;0.6525;SIM;fim_recuperacao:ancora_insuficiente | voz_nao_atribuida_antes_de_b3_p2:0.270s | contexto harmônico fraco
+4;3;stay;s;8.540000;8.640000;59;B3;59.0000;0.00;nota_anterior;0;0.0000;0.0000;0.8826;0.0000;0.4700;0.2584;0.0900;SIM;sem_nucleo_periodico_util | fim_recuperacao:ancora_insuficiente | baixa_cobertura_periodica | baixa confiança final | sílaba sem F0 vocal confiável | contexto harmônico fraco
+5;3;stay;tay;8.640000;12.436000;60;C4;59.4000;60.00;nucleo_vogal;58;0.8280;0.5175;0.2798;0.0001;0.5461;0.0287;0.4479;SIM;baixa_energia_prolongada_na_silaba | multiplas_regioes_periodicas | fim_recuperacao:ancora_insuficiente | baixa_cobertura_periodica | distribuicao_muito_desigual_verificar_sustentacao | baixa confiança final | contexto harmônico fraco
+6;3;i;i;12.556000;12.616000;59;B3;58.8000;20.00;nucleo_vogal;5;0.8697;1.0000;1.0000;0.0000;0.6743;0.4062;0.7544;SIM;contexto harmônico fraco | duracao_minima_inviavel_sem_tempo_disponivel
+7;3;would;would;12.616000;13.314739;57;A3;56.6000;40.00;nucleo_vogal;38;0.7539;0.3111;0.6170;0.0000;0.4680;0.0934;0.4351;SIM;score_alinhamento_baixo | baixa confiança final | contexto harmônico fraco | cauda_final_estendida_por_evidencia_acustica
+8;4;Only;Only;13.319000;15.093000;60;C4;60.4000;-40.00;nucleo_vogal;153;0.8201;0.2117;0.2317;0.0000;0.4431;0.0919;0.4319;SIM;baixa confiança final | contexto harmônico fraco
+9;4;be;be;15.093000;15.154000;59;B3;58.7000;30.00;nucleo_vogal;5;0.9207;1.0000;1.0000;0.0000;0.6566;0.2843;0.7722;SIM;contexto harmônico fraco | duracao_minima_inviavel_sem_tempo_disponivel
+10;4;in;in;15.174000;17.303000;56;G#3;56.3000;-30.00;nucleo_vogal;78;0.7461;0.7243;0.3805;0.0000;0.5323;0.1261;0.5683;SIM;contexto harmônico fraco | cauda_final_estendida_por_evidencia_acustica
+11;5;Your;Your;17.303000;17.626000;66;F#4;66.2000;-20.00;nucleo_vogal;20;0.8687;0.7334;0.4995;0.0002;0.5740;0.3362;0.6874;SIM;contexto harmônico fraco
+12;5;way;way;17.686000;21.835374;68;G#4;67.9000;10.00;nucleo_vogal;277;0.8072;0.1315;0.1568;0.0000;0.4769;0.2130;0.5154;SIM;baixa confiança final | contexto harmônico fraco | cauda_final_estendida_por_evidencia_acustica
+13;6;So;So;22.027000;22.149000;62;D4;61.9000;10.00;nucleo_vogal;6;0.8118;1.0000;1.0000;0.0000;0.6463;0.4418;0.7341;SIM;contexto harmônico fraco
+14;6;i;i;22.149000;22.210000;62;D4;61.6000;40.00;nucleo_vogal;5;0.8911;1.0000;0.9998;0.0000;0.6443;0.1192;0.6811;SIM;score_alinhamento_baixo | contexto harmônico fraco | duracao_minima_inviavel_sem_tempo_disponivel
+15;6;will;will;22.210000;23.076000;62;D4;61.5000;50.00;nucleo_vogal;67;0.8444;0.8206;0.3444;0.0000;0.5339;0.0035;0.5042;SIM;baixa confiança final | contexto harmônico fraco
+16;6;go;go;23.076000;25.866213;57;A3;57.3000;-30.00;nucleo_vogal;100;0.7964;0.4545;0.3874;0.0001;0.5132;0.1816;0.5740;SIM;contexto harmônico fraco | cauda_final_estendida_por_evidencia_acustica
+17;7;But;But;25.970000;26.175000;58;A#3;58.3000;-30.00;nucleo_vogal;17;0.4696;0.7971;1.0000;0.0000;0.5436;0.1607;0.5243;SIM;baixa confiança final | contexto harmônico fraco
+18;7;i;i;26.195000;26.802000;59;B3;59.5000;-50.00;nucleo_vogal;24;0.4695;0.3961;0.9719;0.0004;0.4664;0.0086;0.2721;SIM;sustentacao_recuperada_por_heuristica | fim_recuperacao:limite_palavra_seguinte | baixa confiança final | contexto harmônico fraco
+19;7;know;k;26.802000;26.930000;64;E4;63.8000;20.00;nucleo_vogal;8;0.5924;0.9776;0.0087;0.0002;0.6445;0.3383;0.6518;SIM;contexto harmônico fraco
+20;7;know;now;26.930000;28.629932;60;C4;60.4000;-40.00;nucleo_vogal;41;0.7283;0.4116;0.2279;0.0000;0.4958;0.1079;0.4657;SIM;baixa confiança final | contexto harmônico fraco | cauda_final_estendida_por_evidencia_acustica
+21;8;I'll;Ill;29.953000;30.282000;59;B3;59.1000;-10.00;nucleo_vogal;19;0.8177;0.7926;0.9988;0.0000;0.5986;0.3185;0.6844;SIM;contexto harmônico fraco
+22;8;think;think;30.282000;30.567000;59;B3;59.3000;-30.00;nucleo_vogal;18;0.8045;0.5627;0.6702;0.0000;0.5430;0.1149;0.5372;SIM;baixa confiança final | contexto harmônico fraco
+23;8;of;of;30.567000;30.641800;57;A3;56.5000;50.00;nucleo_vogal;7;0.8853;1.0000;0.8770;0.0000;0.5966;0.0067;0.5665;SIM;contexto harmônico fraco | duracao_minima_inviavel_sem_tempo_disponivel
+24;8;you;you;30.641800;31.553288;57;A3;56.9000;10.00;nucleo_vogal;9;0.7233;1.0000;0.9761;0.0000;0.6963;0.4529;0.7031;SIM;score_alinhamento_baixo | contexto harmônico fraco | cauda_final_estendida_por_evidencia_acustica
+25;9;Every;E;31.554000;32.380000;57;A3;57.2000;-20.00;nucleo_vogal;71;0.8349;0.6368;0.4676;0.0000;0.6145;0.3352;0.6514;SIM;fim_recuperacao:ancora_insuficiente | contexto harmônico fraco
+26;9;Every;very;32.380000;32.562000;59;B3;59.4000;-40.00;nucleo_vogal;16;0.8041;0.5561;0.7262;0.0000;0.5226;0.0632;0.4837;SIM;fim_recuperacao:ancora_insuficiente | baixa confiança final | contexto harmônico fraco
+27;9;step;s;32.683000;32.764000;61;C#4;61.1000;-10.00;contexto_expandido;4;0.8986;1.0000;0.4645;0.0000;0.6766;0.4486;0.7645;SIM;sem_nucleo_periodico_util | fim_recuperacao:ancora_insuficiente | silaba_curta_piso_adaptado | baixa_cobertura_periodica | contexto harmônico fraco | fronteira_silabica_ajustada_para_duracao | duracao_minima_nao_atingida_por_limite_temporal
+28;9;step;tep;32.764000;32.864000;61;C#4;60.7000;30.00;nucleo_vogal;7;0.4823;1.0000;0.4857;0.0000;0.6432;0.2366;0.6188;SIM;fim_recuperacao:ancora_insuficiente | contexto harmônico fraco | fronteira_silabica_ajustada_para_duracao
+29;9;of;of;33.005000;35.274830;57;A3;56.6000;40.00;nucleo_vogal;76;0.6427;0.6890;0.5380;0.0000;0.5975;0.1891;0.5863;SIM;multiplas_regioes_periodicas | contexto harmônico fraco | cauda_final_estendida_por_evidencia_acustica
+30;10;The;The;35.275000;35.357000;64;E4;64.1000;-10.00;nucleo_vogal;4;0.7336;1.0000;0.9999;0.0000;0.6550;0.4438;0.7068;SIM;contexto harmônico fraco | duracao_minima_inviavel_sem_tempo_disponivel
+31;10;way;way;35.357000;39.515000;66;F#4;66.1000;-10.00;nucleo_vogal;252;0.8491;0.4913;0.4801;0.0000;0.5823;0.3006;0.6200;SIM;score_alinhamento_baixo | contexto harmônico fraco | cauda_final_estendida_por_evidencia_acustica
+32;11;And;And;44.756000;45.017000;64;E4;64.1000;-10.00;nucleo_vogal;19;0.9151;0.9959;0.1506;0.0011;0.6463;0.4418;0.7695;SIM;contexto harmônico fraco
+33;11;i;i;45.017000;50.885000;69;A4;69.1000;-10.00;nucleo_vogal;452;0.9054;0.8724;0.5652;0.1977;0.6800;0.4522;0.7745;SIM;baixa_energia_prolongada_na_silaba | multiplas_regioes_periodicas | sustentacao_recuperada_por_heuristica | fim_recuperacao:limite_palavra_seguinte
+34;11;will;will;50.889000;51.289000;68;G#4;68.1000;-10.00;nucleo_vogal;34;0.8664;0.6399;0.1084;0.1906;0.6086;0.2325;0.7014;SIM;fim_recuperacao:ancora_insuficiente
+35;11;always;always;51.390000;53.634000;68;G#4;68.1000;-10.00;nucleo_vogal;64;0.9323;1.0000;0.6975;0.2112;0.7405;0.4326;0.8185;SIM;baixa_energia_prolongada_na_silaba | multiplas_regioes_periodicas
+36;11;love;lo;53.654000;53.714000;71;B4;71.1000;-10.00;nucleo_vogal;3;0.8368;1.0000;0.1622;0.3592;0.6874;0.4565;0.8147;SIM;silaba_curta_piso_adaptado | fronteira_silabica_ajustada_para_duracao | duracao_minima_nao_atingida_por_limite_temporal
+37;11;love;ve;53.714000;53.814000;69;A4;69.5000;-50.00;nucleo_vogal;10;0.8466;0.9589;0.7891;0.3932;0.6694;0.1156;0.7303;SIM;fronteira_silabica_ajustada_para_duracao
+38;11;you;you;53.814000;55.438000;69;A4;69.0000;0.00;nucleo_vogal;138;0.9377;0.5352;0.6933;0.2219;0.6396;0.3813;0.7064;SIM;score_alinhamento_baixo
+39;12;I;I;55.458000;58.483000;69;A4;69.3000;-30.00;nucleo_vogal;51;0.4867;0.7433;0.7712;0.2273;0.7156;0.3375;0.6016;SIM;baixa_energia_prolongada_na_silaba | multiplas_regioes_periodicas | score_alinhamento_baixo
+40;12;will;will;58.483000;58.704000;69;A4;69.1000;-10.00;nucleo_vogal;19;0.9625;1.0000;0.6246;0.2434;0.7419;0.4231;0.8356;NÃO;
+41;12;always;always;58.704000;59.064000;68;G#4;67.8000;20.00;nucleo_vogal;31;0.9413;0.7582;0.0950;0.1807;0.6263;0.3531;0.7551;SIM;score_alinhamento_baixo
+42;12;love;lo;59.064000;60.220000;68;G#4;67.9000;10.00;nucleo_vogal;78;0.9265;0.9668;0.4327;0.2110;0.7237;0.4723;0.8082;SIM;multiplas_regioes_periodicas | fronteira_silabica_estimada
+43;12;love;ve;60.220000;61.388000;68;G#4;68.1000;-10.00;nucleo_vogal;27;0.3996;1.0000;0.8003;0.2094;0.7466;0.4123;0.6318;SIM;baixa_energia_prolongada_na_silaba | multiplas_regioes_periodicas | fronteira_silabica_estimada | score_alinhamento_baixo
+44;12;you;you;61.428000;68.718821;69;A4;69.0000;0.00;nucleo_vogal;580;0.9555;0.8988;0.8164;0.2616;0.7320;0.4683;0.8114;SIM;cauda_final_estendida_por_evidencia_acustica
+45;13;You;You;68.740000;71.809000;66;F#4;66.1000;-10.00;nucleo_vogal;163;0.8809;0.6069;0.3812;0.2574;0.6171;0.3199;0.7115;SIM;baixa_energia_prolongada_na_silaba | multiplas_regioes_periodicas
+46;13;my;my;71.849000;72.009000;64;E4;63.5000;50.00;nucleo_vogal;12;0.6306;0.9631;0.5795;0.2354;0.6376;0.0270;0.5356;SIM;baixa confiança final
+47;13;darling;dar;72.089000;72.410000;68;G#4;67.7000;30.00;nucleo_vogal;20;0.8605;0.8168;0.5581;0.3823;0.6580;0.3152;0.7818;SIM;fim_recuperacao:ancora_insuficiente | fronteira_silabica_estimada
+48;13;darling;ling;72.410000;72.751000;67;G4;67.1000;-10.00;nucleo_vogal;25;0.5485;0.8266;0.2373;0.3849;0.6728;0.2375;0.6756;SIM;fim_recuperacao:ancora_insuficiente | fronteira_silabica_estimada
+49;13;you;you;72.851000;77.518821;64;E4;64.0000;0.00;nucleo_vogal;51;0.5237;0.9310;0.3587;0.2754;0.6937;0.4144;0.6711;SIM;baixa_energia_prolongada_na_silaba | multiplas_regioes_periodicas | cauda_final_estendida_por_evidencia_acustica
+50;14;Bittersweet;Bit;78.602000;78.790000;62;D4;62.0000;0.00;nucleo_vogal;10;0.6018;1.0000;0.1904;0.2724;0.6656;0.4747;0.7151;NÃO;
+51;14;Bittersweet;tersweet;78.790000;81.835000;59;B3;59.3000;-30.00;nucleo_vogal;41;0.5749;0.2482;0.4921;0.3448;0.5170;0.1749;0.5072;SIM;baixa_energia_prolongada_na_silaba | multiplas_regioes_periodicas | distribuicao_muito_desigual_verificar_sustentacao | baixa confiança final
+52;14;memories;me;81.835000;83.030000;59;B3;59.4000;-40.00;nucleo_vogal;74;0.7269;0.7184;0.4119;0.4449;0.6642;0.1860;0.7090;NÃO;
+53;14;memories;mo;83.030000;83.210000;62;D4;62.4000;-40.00;nucleo_vogal;14;0.8391;1.0000;0.1273;0.5728;0.6398;0.1807;0.8389;NÃO;
+54;14;memories;ri;83.210000;83.380000;60;C4;59.7000;30.00;nucleo_vogal;8;0.3243;0.8579;0.1657;0.4554;0.6380;0.2910;0.6191;SIM;fronteira_silabica_estimada | score_alinhamento_baixo
+55;14;memories;es;83.380000;83.863000;61;C#4;60.9000;10.00;nucleo_vogal;35;0.6341;0.9820;0.1931;0.3771;0.7029;0.4211;0.7429;SIM;fronteira_silabica_estimada
+56;15;That;That;85.823000;86.104000;61;C#4;61.1000;-10.00;nucleo_vogal;18;0.7129;0.8011;0.0936;0.4061;0.6119;0.3987;0.7310;NÃO;
+57;15;is;is;86.145000;86.486000;57;A3;57.5000;-50.00;nucleo_vogal;13;0.3929;0.4588;0.6817;0.2532;0.5120;0.0191;0.3220;SIM;baixa confiança final
+58;15;all;all;86.526000;86.927000;57;A3;56.9000;10.00;nucleo_vogal;11;0.4570;0.9198;0.3562;0.3862;0.7191;0.3918;0.6671;NÃO;
+59;15;i'm;im;86.947000;88.371000;57;A3;57.5000;-50.00;nucleo_vogal;26;0.3572;0.6172;0.5257;0.2987;0.6415;0.1491;0.4882;SIM;baixa_energia_prolongada_na_silaba | multiplas_regioes_periodicas | baixa confiança final
+60;15;taking;taking;88.391000;89.936000;56;G#3;56.5000;-50.00;nucleo_vogal;62;0.6127;0.8275;0.2575;0.4020;0.5841;0.0226;0.5243;SIM;multiplas_regioes_periodicas | baixa confiança final
+61;15;with;wi;89.956000;90.117000;66;F#4;65.7000;30.00;nucleo_vogal;7;0.6094;0.8735;0.7236;0.1730;0.6303;0.3229;0.6663;SIM;fronteira_silabica_ajustada_para_duracao
+62;15;with;th;90.117000;90.217000;66;F#4;65.6000;40.00;nucleo_vogal;4;0.6552;0.9544;0.7128;0.3020;0.6984;0.1205;0.6488;SIM;score_alinhamento_baixo | fronteira_silabica_ajustada_para_duracao
+63;15;me;me;90.277000;93.153288;68;G#4;67.8000;20.00;nucleo_vogal;74;0.5513;0.3768;0.2380;0.3184;0.5451;0.2172;0.5508;SIM;cauda_final_estendida_por_evidencia_acustica
+64;16;So;So;93.264000;93.486000;62;D4;61.8000;20.00;nucleo_vogal;13;0.7400;0.8162;0.2102;0.3697;0.6672;0.3992;0.7370;NÃO;
+65;16;goodbye;go;93.546000;94.400000;64;E4;63.9000;10.00;nucleo_vogal;36;0.7647;0.5335;0.6481;0.4763;0.6619;0.3894;0.6963;SIM;fronteira_silabica_estimada
+66;16;goodbye;odb;94.400000;95.480000;64;E4;64.2000;-20.00;nucleo_vogal;19;0.4138;0.6596;0.5751;0.3275;0.7418;0.4346;0.5752;SIM;baixa_energia_prolongada_na_silaba | multiplas_regioes_periodicas | fronteira_silabica_estimada
+67;16;goodbye;ye;95.480000;96.316000;64;E4;64.0000;0.00;nota_anterior;0;0.0000;0.0000;0.5049;0.5609;0.5550;0.3066;0.1405;SIM;fronteira_silabica_estimada | score_alinhamento_baixo | baixa confiança final | sílaba sem F0 vocal confiável
+68;16;please;ple;96.336000;96.894965;69;A4;68.7000;30.00;nucleo_vogal;46;0.7979;0.6302;1.0000;0.3996;0.7497;0.3231;0.7167;SIM;fim_recuperacao:ancora_insuficiente | voz_nao_atribuida_antes_de_b16_p4:0.370s | fronteira_silabica_ajustada_para_duracao
+69;16;please;a;96.894965;97.060000;69;A4;69.0000;0.00;nota_anterior;0;0.0000;0.0000;1.0000;0.3600;0.5780;0.3087;0.1224;SIM;sem_nucleo_periodico_util | fim_recuperacao:ancora_insuficiente | voz_nao_atribuida_antes_de_b16_p4:0.370s | baixa_cobertura_periodica | baixa confiança final | sílaba sem F0 vocal confiável | fronteira_silabica_ajustada_para_duracao
+70;16;please;se;97.060000;97.160000;69;A4;69.0000;0.00;nota_anterior;0;0.0000;0.0000;0.9986;0.2953;0.5585;0.2843;0.1166;SIM;sem_nucleo_periodico_util | fim_recuperacao:ancora_insuficiente | voz_nao_atribuida_antes_de_b16_p4:0.370s | baixa confiança final | sílaba sem F0 vocal confiável | fronteira_silabica_ajustada_para_duracao
+71;16;don't;dont;97.521000;98.143000;56;G#3;56.2000;-20.00;nucleo_vogal;41;0.7688;0.2642;0.4357;0.4481;0.5266;0.0963;0.5211;SIM;baixa confiança final
+72;16;cry;cry;98.143000;99.605000;61;C#4;61.0000;0.00;nucleo_vogal;20;0.8716;1.0000;0.3485;0.5079;0.7174;0.4950;0.8566;SIM;score_alinhamento_baixo | cauda_final_estendida_por_evidencia_acustica
+73;17;We;We;100.165000;100.468000;61;C#4;61.0000;0.00;nucleo_vogal;26;0.7774;0.5258;0.2679;0.5669;0.5884;0.2731;0.7169;NÃO;
+74;17;both;bo;100.529000;100.820000;59;B3;59.1000;-10.00;nucleo_vogal;21;0.8310;0.5993;0.6120;0.2250;0.6257;0.3666;0.6857;SIM;fronteira_silabica_estimada
+75;17;both;th;100.820000;100.952000;61;C#4;61.0000;0.00;contexto_expandido;2;0.2971;0.6818;0.5704;0.3577;0.6684;0.4239;0.5460;SIM;fronteira_silabica_estimada | score_alinhamento_baixo | baixa confiança final
+76;17;know;k;100.972000;101.090000;57;A3;57.3000;-30.00;nucleo_vogal;6;0.3191;1.0000;0.4994;0.5923;0.7248;0.3643;0.6801;NÃO;
+77;17;know;now;101.090000;101.475000;57;A3;57.0000;0.00;nucleo_vogal;26;0.5362;0.9524;0.5551;0.5862;0.7976;0.4690;0.7430;NÃO;
+78;17;i'm;im;101.475000;102.361000;61;C#4;60.7000;30.00;nucleo_vogal;39;0.5647;0.4948;0.8409;0.4510;0.6337;0.2868;0.6115;NÃO;
+79;17;not;not;102.361000;102.543000;61;C#4;61.2000;-20.00;nucleo_vogal;9;0.8317;0.9916;0.8081;0.2632;0.7472;0.4452;0.7916;NÃO;
+80;17;what;w;102.603000;102.730000;60;C4;59.8000;20.00;nucleo_vogal;5;0.5403;1.0000;0.3550;0.4320;0.7203;0.3430;0.7255;SIM;fronteira_silabica_estimada | score_alinhamento_baixo
+81;17;what;hat;102.730000;102.846000;60;C4;60.0000;0.00;nota_anterior;0;0.0000;0.0000;0.3247;0.4909;0.5178;0.1689;0.1202;SIM;sem_nucleo_periodico_util | fronteira_silabica_estimada | baixa_cobertura_periodica | baixa confiança final | sílaba sem F0 vocal confiável
+82;18;You;You;102.865000;104.106000;60;C4;60.0000;0.00;nota_anterior;0;0.0000;0.0000;0.3048;0.5011;0.5158;0.1842;0.1280;SIM;score_alinhamento_baixo | baixa confiança final | sílaba sem F0 vocal confiável | cauda_final_estendida_por_evidencia_acustica
+83;19;You;You;104.106000;104.409000;66;F#4;65.9000;10.00;nucleo_vogal;18;0.7753;0.5154;0.2765;0.3571;0.5644;0.3054;0.6716;NÃO;
+84;19;need;need;104.450000;107.586000;68;G#4;67.7000;30.00;nucleo_vogal;49;0.6666;0.6939;0.4041;0.4454;0.6316;0.2671;0.6958;SIM;cauda_final_estendida_por_evidencia_acustica
+85;20;And;And;107.586000;112.598000;69;A4;69.0000;0.00;nucleo_vogal;404;0.9421;0.9988;0.7192;0.4644;0.7891;0.4972;0.8723;NÃO;
+86;20;i;i;112.598000;112.815000;69;A4;69.0000;0.00;nota_anterior;0;0.0000;0.0000;0.7061;0.2454;0.5220;0.2774;0.1121;SIM;sustentacao_recuperada_por_heuristica | fim_recuperacao:cauda_final_sem_confirmacao | baixa confiança final | sílaba sem F0 vocal confiável
+87;20;will;will;112.838000;113.099000;69;A4;69.3000;-30.00;nucleo_vogal;7;0.4135;0.7243;0.8594;0.3822;0.7028;0.2671;0.6022;NÃO;
+88;20;always;always;113.159000;114.422000;68;G#4;68.3000;-30.00;nucleo_vogal;88;0.8721;0.9980;0.6036;0.4708;0.7281;0.3006;0.8489;NÃO;
+89;20;love;lo;114.442000;114.522000;68;G#4;68.5000;-50.00;silaba_completa;1;0.2065;1.0000;0.7468;0.4243;0.7114;0.0778;0.4849;SIM;fronteira_silabica_estimada | silaba_curta_piso_adaptado | score_alinhamento_baixo | baixa confiança final | fronteira_silabica_ajustada_para_duracao | duracao_minima_nao_atingida_por_limite_temporal
+90;20;love;ve;114.522000;114.622000;69;A4;69.3000;-30.00;nucleo_vogal;11;0.5831;0.9608;0.1615;0.4709;0.6795;0.3251;0.7385;SIM;fronteira_silabica_estimada | fronteira_silabica_ajustada_para_duracao
+91;20;you;you;114.622000;117.088000;69;A4;69.0000;0.00;nucleo_vogal;196;0.8911;0.4844;0.8209;0.4835;0.7005;0.3941;0.7297;SIM;score_alinhamento_baixo
+92;21;I;I;119.488000;119.849000;69;A4;68.9000;10.00;nucleo_vogal;15;0.6627;1.0000;0.6150;0.6534;0.7668;0.5229;0.8126;SIM;score_alinhamento_baixo
+93;21;will;will;119.849000;120.050000;69;A4;69.0000;0.00;nucleo_vogal;13;0.8517;1.0000;0.5233;0.4284;0.7673;0.5228;0.8338;SIM;fim_recuperacao:ancora_insuficiente
+94;21;always;always;120.170000;120.651000;68;G#4;68.1000;-10.00;nucleo_vogal;37;0.8615;0.9489;0.2605;0.3181;0.6983;0.3539;0.8024;SIM;fim_recuperacao:ancora_insuficiente | voz_nao_atribuida_antes_de_b21_p4:0.240s
+95;21;love;lo;120.891000;121.190000;68;G#4;68.0000;0.00;nucleo_vogal;23;0.9705;1.0000;0.4060;0.5576;0.7679;0.5298;0.9012;NÃO;
+96;21;love;ve;121.190000;121.393000;69;A4;68.7000;30.00;nucleo_vogal;13;0.6193;1.0000;0.1138;0.4752;0.6729;0.2799;0.7618;NÃO;
+97;21;you;you;121.393000;121.593000;69;A4;69.0000;0.00;nota_anterior;0;0.0000;0.0000;0.1235;0.5555;0.4906;0.1865;0.1339;SIM;score_alinhamento_baixo | baixa confiança final | sílaba sem F0 vocal confiável
+98;21;oh;o;121.593000;125.167057;69;A4;69.0000;0.00;nucleo_vogal;278;0.9562;0.9684;0.9284;0.5063;0.8338;0.5393;0.8780;SIM;fronteira_silabica_estimada
+99;21;oh;h;125.167057;130.368707;69;A4;69.2000;-20.00;nucleo_vogal;337;0.8673;0.5939;0.7881;0.4385;0.7143;0.3456;0.7397;SIM;fronteira_silabica_estimada | score_alinhamento_baixo | cauda_final_estendida_por_evidencia_acustica
+100;22;I;I;157.915000;158.318000;64;E4;64.1000;-10.00;nucleo_vogal;15;0.4747;1.0000;0.5054;0.4822;0.7194;0.4650;0.7126;SIM;score_alinhamento_baixo
+101;22;hope;ho;158.318000;158.470000;60;C4;59.9000;10.00;nucleo_vogal;2;0.2543;1.0000;0.2828;0.5846;0.7143;0.4410;0.6559;SIM;sustentacao_recuperada_por_heuristica | fim_recuperacao:limite_palavra_seguinte | fronteira_silabica_estimada
+102;22;hope;pe;158.470000;160.425000;61;C#4;60.9000;10.00;nucleo_vogal;57;0.7452;0.7897;0.3958;0.4836;0.6943;0.3510;0.7550;SIM;baixa_energia_prolongada_na_silaba | multiplas_regioes_periodicas | sustentacao_recuperada_por_heuristica | fim_recuperacao:limite_palavra_seguinte | fronteira_silabica_estimada | distribuicao_muito_desigual_verificar_sustentacao
+103;22;life;li;160.426000;160.788000;61;C#4;60.9000;10.00;nucleo_vogal;27;0.7674;0.7937;0.2039;0.5094;0.6800;0.3623;0.7689;SIM;fronteira_silabica_ajustada_para_duracao
+104;22;life;fe;160.788000;160.888000;61;C#4;61.0000;0.00;nota_anterior;0;0.0000;0.0000;0.1905;0.5237;0.4999;0.2397;0.1371;SIM;baixa confiança final | sílaba sem F0 vocal confiável | fronteira_silabica_ajustada_para_duracao
+105;22;treats;tre;160.948000;161.170000;60;C4;59.9000;10.00;nucleo_vogal;13;0.7178;0.7557;0.1993;0.2946;0.6467;0.3151;0.6991;SIM;fim_recuperacao:ancora_insuficiente | voz_nao_atribuida_antes_de_b22_p5:0.290s | fronteira_silabica_estimada
+106;22;treats;ats;161.170000;161.370000;59;B3;59.3000;-30.00;contexto_expandido;11;0.7261;0.8736;0.1309;0.5427;0.6489;0.2342;0.7811;SIM;sem_nucleo_periodico_util | fim_recuperacao:ancora_insuficiente | voz_nao_atribuida_antes_de_b22_p5:0.290s | fronteira_silabica_estimada | baixa_cobertura_periodica
+107;22;you;you;161.651000;161.812000;62;D4;62.3000;-30.00;nucleo_vogal;14;0.8233;0.7633;0.1089;0.6382;0.6622;0.3501;0.8066;NÃO;
+108;22;kind;kind;161.812000;163.513379;59;B3;59.1000;-10.00;nucleo_vogal;23;0.7848;0.4826;0.2635;0.5228;0.5922;0.3278;0.6999;SIM;multiplas_regioes_periodicas | score_alinhamento_baixo | cauda_final_estendida_por_evidencia_acustica
+109;23;And;And;164.456000;165.078000;66;F#4;66.0000;0.00;nucleo_vogal;36;0.6938;0.9357;0.3508;0.3972;0.6770;0.4446;0.7562;NÃO;
+110;23;i;i;165.078000;165.195000;66;F#4;66.0000;0.00;nota_anterior;0;0.0000;0.0000;0.5651;0.2193;0.5072;0.2490;0.1097;SIM;sustentacao_recuperada_por_heuristica | fim_recuperacao:limite_palavra_seguinte | baixa confiança final | sílaba sem F0 vocal confiável
+111;23;hope;ho;165.199000;165.400000;59;B3;59.1000;-10.00;nucleo_vogal;7;0.5342;0.8474;0.1870;0.4029;0.6425;0.3804;0.6794;SIM;fronteira_silabica_estimada
+112;23;hope;pe;165.400000;165.760000;57;A3;56.8000;20.00;nucleo_vogal;22;0.5050;0.8892;0.5348;0.4230;0.7057;0.3624;0.6836;SIM;fronteira_silabica_estimada | score_alinhamento_baixo
+113;23;you'll;youll;165.760000;166.763000;59;B3;59.3000;-30.00;nucleo_vogal;28;0.7260;0.4913;0.0905;0.3442;0.5384;0.1631;0.6088;SIM;multiplas_regioes_periodicas
+114;23;have;ha;166.763000;167.050000;61;C#4;61.1000;-10.00;nucleo_vogal;20;0.8026;0.8309;0.6016;0.2910;0.6902;0.4361;0.7468;SIM;fronteira_silabica_estimada
+115;23;have;ve;167.050000;167.185000;61;C#4;61.1000;-10.00;nucleo_vogal;1;0.4261;1.0000;0.3833;0.3043;0.7313;0.4660;0.6600;SIM;fronteira_silabica_estimada
+116;23;all;all;167.205000;167.345000;57;A3;56.7000;30.00;nucleo_vogal;7;0.3925;1.0000;0.1246;0.4223;0.6519;0.2581;0.6718;SIM;fim_recuperacao:ancora_insuficiente
+117;23;you've;you;167.425000;167.690000;58;A#3;57.9000;10.00;nucleo_vogal;20;0.5777;0.5161;0.1964;0.3735;0.5959;0.1996;0.6055;SIM;sustentacao_recuperada_por_heuristica | fim_recuperacao:cauda_final_sem_confirmacao | fronteira_silabica_estimada
+118;23;you've;ve;167.690000;168.475000;57;A3;56.7000;30.00;nucleo_vogal;30;0.6992;0.5423;0.1152;0.3515;0.6263;0.2437;0.6506;SIM;sustentacao_recuperada_por_heuristica | fim_recuperacao:cauda_final_sem_confirmacao | fronteira_silabica_estimada | score_alinhamento_baixo
+119;23;dreamed;dre;168.509000;168.641881;64;E4;64.5000;-50.00;nucleo_vogal;5;0.6261;1.0000;1.0000;0.3283;0.6664;0.0445;0.5793;SIM;fronteira_silabica_estimada | fronteira_silabica_ajustada_para_duracao
+120;23;dreamed;a;168.641881;168.790000;66;F#4;66.2000;-20.00;nucleo_vogal;8;0.7142;1.0000;0.8865;0.1690;0.7106;0.4322;0.7338;SIM;fronteira_silabica_estimada | score_alinhamento_baixo | fronteira_silabica_ajustada_para_duracao
+121;23;dreamed;med;168.790000;168.890000;64;E4;64.3000;-30.00;contexto_expandido;6;0.4862;0.9647;0.8011;0.2706;0.7049;0.2721;0.6654;SIM;fronteira_silabica_estimada | fronteira_silabica_ajustada_para_duracao
+122;23;of;of;168.930000;171.754649;68;G#4;68.2000;-20.00;nucleo_vogal;103;0.6191;0.2703;0.3265;0.3643;0.5216;0.2029;0.5571;SIM;cauda_final_estendida_por_evidencia_acustica
+123;24;And;And;171.757000;172.019000;66;F#4;66.0000;0.00;nucleo_vogal;20;0.7202;0.7572;0.3741;0.2986;0.6580;0.4024;0.7011;NÃO;
+124;24;i;i;172.019000;172.059000;66;F#4;66.0000;0.00;nucleo_vogal;3;0.4735;1.0000;0.6005;0.3442;0.7620;0.4755;0.6846;SIM;silaba_curta_piso_adaptado | duracao_minima_inviavel_sem_tempo_disponivel
+125;24;wished;wished;172.099000;172.520000;69;A4;69.0000;0.00;silaba_completa;6;0.2681;1.0000;0.9711;0.3499;0.7756;0.5093;0.6138;SIM;multiplas_regioes_periodicas
+126;24;you;you;172.541000;173.135000;69;A4;68.4000;60.00;nucleo_vogal;5;0.2805;0.7128;1.0000;0.6362;0.7758;0.1600;0.5636;SIM;sustentacao_recuperada_por_heuristica | fim_recuperacao:cauda_final_sem_confirmacao
+127;24;joy;joy;173.183000;173.343000;72;C5;71.5000;50.00;nucleo_vogal;5;0.4294;1.0000;0.1816;0.4717;0.6156;0.0201;0.5147;SIM;fim_recuperacao:ancora_insuficiente | voz_nao_atribuida_antes_de_b24_p6:1.350s | baixa confiança final
+128;24;and;and;174.708000;175.150000;66;F#4;66.4000;-40.00;nucleo_vogal;11;0.6754;1.0000;0.2884;0.5093;0.6384;0.1117;0.7000;NÃO;
+129;24;happiness;hap;175.150000;175.450000;64;E4;64.2000;-20.00;nucleo_vogal;8;0.5321;1.0000;0.6850;0.5014;0.7687;0.4390;0.7365;NÃO;
+130;24;happiness;pi;175.450000;175.900000;61;C#4;61.3000;-30.00;nucleo_vogal;19;0.7668;0.9840;0.1636;0.4607;0.6603;0.2616;0.8065;NÃO;
+131;24;happiness;ness;175.900000;177.312018;57;A3;57.6000;-60.00;nucleo_vogal;60;0.5455;0.5648;1.0000;0.5175;0.5949;0.0354;0.4710;SIM;baixa confiança final | cauda_final_estendida_por_evidencia_acustica
+132;25;But;But;178.518000;178.703000;66;F#4;66.1000;-10.00;nucleo_vogal;8;0.5686;0.7264;0.2819;0.3507;0.6130;0.3782;0.6508;NÃO;
+133;25;above;a;178.703000;178.803000;66;F#4;66.1000;-10.00;nucleo_vogal;5;0.4451;1.0000;0.3180;0.3548;0.7301;0.4558;0.6768;SIM;sustentacao_recuperada_por_heuristica | fim_recuperacao:limite_palavra_seguinte | fronteira_silabica_ajustada_para_duracao
+134;25;above;bo;178.803000;178.982417;69;A4;68.7000;30.00;nucleo_vogal;15;0.5277;0.9005;0.3159;0.4349;0.6825;0.1673;0.6640;SIM;sustentacao_recuperada_por_heuristica | fim_recuperacao:limite_palavra_seguinte | fronteira_silabica_ajustada_para_duracao
+135;25;above;ve;178.982417;179.412000;69;A4;69.1000;-10.00;nucleo_vogal;25;0.4642;0.8914;0.3114;0.3295;0.7271;0.4102;0.6512;SIM;sustentacao_recuperada_por_heuristica | fim_recuperacao:limite_palavra_seguinte | fronteira_silabica_ajustada_para_duracao
+136;25;all;all;179.412000;179.493000;69;A4;69.3000;-30.00;nucleo_vogal;4;0.4165;1.0000;0.2919;0.3828;0.7012;0.2931;0.6723;SIM;duracao_minima_inviavel_sem_tempo_disponivel
+137;25;this;this;179.493000;180.023000;69;A4;69.0000;0.00;nota_anterior;0;0.0000;0.0000;0.4624;0.3997;0.5255;0.2331;0.1260;SIM;baixa confiança final | sílaba sem F0 vocal confiável
+138;26;I;I;180.946000;181.013750;68;G#4;68.2000;-20.00;nucleo_vogal;6;0.5702;1.0000;0.4906;0.4279;0.7372;0.3992;0.7352;SIM;score_alinhamento_baixo | duracao_minima_inviavel_sem_tempo_disponivel
+139;26;wish;wish;181.013750;181.284750;68;G#4;67.9000;10.00;nucleo_vogal;20;0.5723;1.0000;0.5135;0.2882;0.7407;0.4632;0.7079;NÃO;
+140;26;you;you;181.284750;182.688000;64;E4;64.1000;-10.00;silaba_completa;2;0.2559;0.6755;1.0000;0.5406;0.7522;0.4597;0.5666;SIM;multiplas_regioes_periodicas | score_alinhamento_baixo | cauda_final_estendida_por_evidencia_acustica
+141;27;Love;Lo;182.948000;184.570000;66;F#4;66.4000;-40.00;nucleo_vogal;126;0.6475;0.5610;0.4108;0.3741;0.5855;0.1883;0.6300;SIM;fronteira_silabica_estimada
+142;27;Love;ve;184.570000;187.388000;68;G#4;68.0000;0.00;nucleo_vogal;105;0.7315;0.2885;0.3053;0.3176;0.5462;0.2866;0.5917;SIM;fronteira_silabica_estimada | cauda_final_estendida_por_evidencia_acustica
+143;28;And;And;190.549000;194.077000;71;B4;71.1000;-10.00;nucleo_vogal;281;0.9522;1.0000;0.7879;0.4266;0.7471;0.4931;0.8686;NÃO;
+144;28;i;i;194.077000;195.721000;71;B4;70.8000;20.00;nucleo_vogal;126;0.8120;0.9992;0.6467;0.4592;0.7742;0.3873;0.8258;SIM;sustentacao_recuperada_por_heuristica | fim_recuperacao:limite_palavra_seguinte
+145;28;will;will;195.721000;196.683000;70;A#4;70.1000;-10.00;nucleo_vogal;77;0.9046;0.8794;0.2768;0.5662;0.7045;0.3454;0.8497;NÃO;
+146;28;always;always;196.703000;197.064000;70;A#4;70.2000;-20.00;nucleo_vogal;31;0.8890;0.6327;0.5092;0.6118;0.6903;0.2983;0.7917;NÃO;
+147;28;love;lo;197.084000;197.184000;71;B4;71.2000;-20.00;nucleo_vogal;7;0.9459;1.0000;0.1330;0.6380;0.6997;0.4163;0.9087;SIM;fronteira_silabica_ajustada_para_duracao
+148;28;love;ve;197.184000;197.304000;71;B4;71.1000;-10.00;nucleo_vogal;12;0.8163;1.0000;0.1459;0.4760;0.7171;0.4608;0.8309;SIM;fronteira_silabica_ajustada_para_duracao
+149;28;you;you;197.384000;199.980499;71;B4;71.1000;-10.00;nucleo_vogal;203;0.8948;0.5397;0.8741;0.4194;0.7004;0.3957;0.7320;SIM;cauda_final_estendida_por_evidencia_acustica
+150;29;I;I;200.850000;201.412000;71;B4;71.0000;0.00;nucleo_vogal;44;0.6648;0.9795;0.2600;0.5002;0.6890;0.4596;0.7776;SIM;score_alinhamento_baixo
+151;29;will;will;201.412000;203.660000;71;B4;70.6000;40.00;nucleo_vogal;184;0.8004;0.6863;0.5958;0.3528;0.6808;0.2030;0.7223;SIM;score_alinhamento_baixo
+152;29;always;always;203.660000;204.001000;66;F#4;66.0000;0.00;nucleo_vogal;2;0.2935;1.0000;1.0000;0.6723;0.8660;0.5972;0.6872;NÃO;
+153;29;love;lo;204.061000;204.190000;66;F#4;66.0000;0.00;nota_anterior;0;0.0000;0.0000;1.0000;0.6008;0.6502;0.3510;0.1441;SIM;sem_nucleo_periodico_util | baixa_cobertura_periodica | baixa confiança final | sílaba sem F0 vocal confiável
+154;29;love;ve;204.190000;204.402000;66;F#4;66.0000;0.00;nota_anterior;0;0.0000;0.0000;1.0000;0.5571;0.6371;0.3269;0.1401;SIM;baixa confiança final | sílaba sem F0 vocal confiável
+155;29;you;you;204.402000;206.550000;71;B4;71.0000;0.00;nucleo_vogal;173;0.9268;0.9331;0.8083;0.4591;0.7605;0.4780;0.8495;SIM;score_alinhamento_baixo
+156;30;I;I;207.971000;210.137000;71;B4;71.1000;-10.00;nucleo_vogal;186;0.7881;0.9171;0.7035;0.4159;0.7341;0.4833;0.7883;NÃO;
+157;30;will;will;210.137000;210.446429;70;A#4;70.4000;-40.00;nucleo_vogal;26;0.8856;1.0000;0.3531;0.3536;0.6701;0.0931;0.7238;SIM;score_alinhamento_baixo
+158;30;always;always;210.446429;210.910571;70;A#4;70.2000;-20.00;nucleo_vogal;40;0.9789;1.0000;0.1448;0.6648;0.7142;0.4054;0.9256;SIM;score_alinhamento_baixo
+159;30;love;lo;210.910571;211.010571;70;A#4;70.2000;-20.00;nucleo_vogal;3;0.7183;1.0000;0.3570;0.6711;0.7572;0.4470;0.8356;SIM;fronteira_silabica_estimada | score_alinhamento_baixo | fronteira_silabica_ajustada_para_duracao
+160;30;love;ve;211.010571;211.220000;71;B4;71.0000;0.00;nucleo_vogal;16;0.7329;1.0000;0.1446;0.5621;0.7133;0.3910;0.8189;SIM;fronteira_silabica_estimada | fronteira_silabica_ajustada_para_duracao
+161;30;you;you;211.220000;214.871000;71;B4;71.0000;0.00;nucleo_vogal;249;0.8775;0.8428;0.6445;0.4388;0.7498;0.4501;0.8056;SIM;multiplas_regioes_periodicas
+162;31;I;I;214.891000;218.200000;71;B4;70.7000;30.00;nucleo_vogal;243;0.8151;0.8649;0.5923;0.3489;0.7140;0.2692;0.7713;SIM;score_alinhamento_baixo
+163;31;will;will;218.200000;218.380000;66;F#4;66.4000;-40.00;nucleo_vogal;15;0.8433;1.0000;0.9680;0.2180;0.6719;0.1284;0.7172;NÃO;
+164;31;always;always;218.380000;218.902000;66;F#4;66.1000;-10.00;nucleo_vogal;44;0.8989;1.0000;0.9457;0.2500;0.7672;0.4738;0.8146;SIM;score_alinhamento_baixo
+165;31;love;lo;218.902000;219.040000;66;F#4;66.1000;-10.00;nucleo_vogal;3;0.6868;1.0000;0.9885;0.2990;0.7849;0.4759;0.7502;NÃO;
+166;31;love;ve;219.040000;219.142000;67;G4;66.6000;40.00;nucleo_vogal;3;0.4603;1.0000;0.6852;0.3308;0.7013;0.0170;0.4943;SIM;baixa confiança final
+167;31;you;you;219.142000;222.752000;78;F#5;78.1000;-10.00;nucleo_vogal;294;0.9684;0.8256;0.5817;0.4278;0.6849;0.4216;0.8309;SIM;score_alinhamento_baixo
+168;32;I;I;223.612000;224.255000;71;B4;71.0000;0.00;nucleo_vogal;37;0.7156;1.0000;0.6921;0.3946;0.7406;0.5179;0.7794;NÃO;
+169;32;will;will;224.315000;225.077000;70;A#4;70.4000;-40.00;nucleo_vogal;43;0.5900;0.7325;0.3167;0.4248;0.5960;0.0167;0.4913;SIM;baixa confiança final
+170;32;always;always;225.097000;225.559000;66;F#4;65.9000;10.00;nucleo_vogal;12;0.6088;0.9842;0.7987;0.4011;0.7608;0.4812;0.7393;NÃO;
+171;32;love;lo;225.579000;225.660000;66;F#4;66.0000;0.00;nota_anterior;0;0.0000;0.0000;0.7252;0.3066;0.5367;0.2471;0.1176;SIM;sem_nucleo_periodico_util | silaba_curta_piso_adaptado | score_alinhamento_baixo | baixa_cobertura_periodica | baixa confiança final | sílaba sem F0 vocal confiável | fronteira_silabica_ajustada_para_duracao | duracao_minima_nao_atingida_por_limite_temporal
+172;32;love;ve;225.660000;225.760000;66;F#4;66.0000;0.00;nota_anterior;0;0.0000;0.0000;0.7969;0.3808;0.5610;0.2761;0.1243;SIM;baixa confiança final | sílaba sem F0 vocal confiável | fronteira_silabica_ajustada_para_duracao
+173;32;you;you;225.760000;229.912472;78;F#5;78.1000;-10.00;nucleo_vogal;319;0.9522;0.6351;0.5511;0.4779;0.6460;0.3814;0.7876;SIM;score_alinhamento_baixo | cauda_final_estendida_por_evidencia_acustica
+174;33;I;I;230.313000;231.114000;71;B4;70.7000;30.00;nucleo_vogal;45;0.7121;0.9367;0.8359;0.4245;0.7183;0.2988;0.7683;NÃO;
+175;33;i;i;231.114000;231.202200;71;B4;71.2000;-20.00;nucleo_vogal;2;0.3919;0.8443;0.8428;0.5262;0.7826;0.4695;0.6535;SIM;score_alinhamento_baixo | duracao_minima_inviavel_sem_tempo_disponivel
+176;33;will;will;231.202200;231.555000;71;B4;71.3000;-30.00;nucleo_vogal;30;0.7636;1.0000;0.9427;0.3800;0.7752;0.3547;0.7933;SIM;score_alinhamento_baixo
+177;33;always;always;231.555000;233.457000;71;B4;70.6000;40.00;nucleo_vogal;118;0.7520;0.5856;0.4384;0.3389;0.5569;0.0656;0.5430;SIM;multiplas_regioes_periodicas | baixa confiança final
+178;33;love;lo;233.517000;233.970000;71;B4;71.0000;0.00;nota_anterior;0;0.0000;0.0000;0.2589;0.2746;0.4913;0.1973;0.1135;SIM;sem_nucleo_periodico_util | sustentacao_recuperada_por_heuristica | fim_recuperacao:limite_palavra_seguinte | baixa_cobertura_periodica | baixa confiança final | sílaba sem F0 vocal confiável
+179;33;love;ve;233.970000;234.235000;66;F#4;65.7000;30.00;nucleo_vogal;23;0.9071;0.9887;0.1049;0.3265;0.6372;0.3032;0.8300;SIM;sustentacao_recuperada_por_heuristica | fim_recuperacao:limite_palavra_seguinte
+180;33;you;you;234.238000;234.358000;66;F#4;66.0000;0.00;nucleo_vogal;10;0.9277;1.0000;0.0656;0.2927;0.7058;0.4602;0.8332;SIM;score_alinhamento_baixo
+181;33;you;you;234.378000;248.071202;71;B4;71.0000;0.00;nucleo_vogal;717;0.9230;0.5966;0.4879;0.1126;0.5962;0.3552;0.6947;SIM;baixa_energia_prolongada_na_silaba | multiplas_regioes_periodicas | cauda_final_estendida_por_evidencia_acustica
+182;34;Darling;Dar;248.274000;248.490000;66;F#4;65.6000;40.00;nucleo_vogal;12;0.8276;1.0000;0.9345;0.2082;0.6527;0.1407;0.7220;NÃO;
+183;34;Darling;ling;248.490000;248.696625;70;A#4;69.9000;10.00;nucleo_vogal;15;0.5331;0.5497;0.5967;0.3464;0.6231;0.3087;0.5933;NÃO;
+184;34;i;i;248.696625;248.757000;70;A#4;69.8000;20.00;nucleo_vogal;5;0.8583;1.0000;0.4232;0.4660;0.7445;0.4535;0.8436;SIM;score_alinhamento_baixo | duracao_minima_inviavel_sem_tempo_disponivel
+185;34;love;lo;248.757000;248.857000;70;A#4;69.7000;30.00;nucleo_vogal;6;0.8916;1.0000;0.3728;0.5341;0.7275;0.4063;0.8689;SIM;sustentacao_recuperada_por_heuristica | fim_recuperacao:limite_palavra_seguinte | fronteira_silabica_ajustada_para_duracao
+186;34;love;ve;248.857000;249.035000;70;A#4;69.8000;20.00;nucleo_vogal;17;0.8911;0.9690;0.4395;0.4239;0.7270;0.4153;0.8389;SIM;sustentacao_recuperada_por_heuristica | fim_recuperacao:limite_palavra_seguinte | fronteira_silabica_ajustada_para_duracao
+187;34;you;you;249.039000;252.291610;66;F#4;66.3000;-30.00;nucleo_vogal;80;0.7278;0.7153;0.5942;0.4457;0.6450;0.2445;0.7227;SIM;baixa_energia_prolongada_na_silaba | multiplas_regioes_periodicas | cauda_final_estendida_por_evidencia_acustica
+188;35;I'll;Ill;252.295000;252.751500;62;D4;61.5000;50.00;nucleo_vogal;40;0.8517;0.4158;0.2485;0.3438;0.4932;0.0281;0.4989;SIM;baixa confiança final
+189;35;always;always;252.751500;253.664500;61;C#4;61.4000;-40.00;nucleo_vogal;39;0.9113;0.7470;0.2865;0.6663;0.6306;0.0714;0.7104;SIM;multiplas_regioes_periodicas | score_alinhamento_baixo
+190;35;i'll;ill;253.664500;254.121000;62;D4;62.0000;0.00;nucleo_vogal;16;0.4306;1.0000;0.1147;0.6962;0.7129;0.3401;0.7400;SIM;multiplas_regioes_periodicas | score_alinhamento_baixo
+191;35;always;always;254.121000;255.565000;63;D#4;63.0000;0.00;nucleo_vogal;98;0.8528;0.4601;0.1583;0.5120;0.5953;0.2656;0.7159;SIM;fim_recuperacao:ancora_insuficiente | voz_nao_atribuida_antes_de_b35_p5:0.560s
+192;35;love;lo;256.127000;256.267500;66;F#4;66.3000;-30.00;nucleo_vogal;12;0.9494;1.0000;1.0000;0.3355;0.7420;0.3335;0.8494;SIM;fronteira_silabica_estimada
+193;35;love;ve;256.267500;256.408000;66;F#4;66.1000;-10.00;nucleo_vogal;11;0.9680;1.0000;1.0000;0.2978;0.7856;0.5103;0.8484;SIM;fronteira_silabica_estimada
+194;35;you;you;256.428000;259.954195;63;D#4;63.3000;-30.00;nucleo_vogal;119;0.8761;0.6024;0.0936;0.2475;0.5486;0.1702;0.6769;SIM;baixa_energia_prolongada_na_silaba | multiplas_regioes_periodicas | cauda_final_estendida_por_evidencia_acustica

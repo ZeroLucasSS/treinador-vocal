@@ -1,275 +1,811 @@
 {
   "versao": 1,
   "fontes": {
-    "consolidada": "cfd51541184bfe9a33e2b3f73596c1049248eb6e173e1ce9634f8d8886fb0a74",
+    "consolidada": "1eef58b727942498f7c11fe2824f3ab8e21a50642ee558008895f42b71e14407",
     "txt": "5faea03b7bb5110af8f0d4a573df22503eb32135f6a11dbb757ee67f465249a6",
-    "srt": "a5e66759f34b29dbc7cec31ddf14792ce750efadd4bd98ab03fbaee2be0964bf",
+    "srt": "8f65fb802df0f01195d9a234c217fea72cc0ec147a994e95b1ac13f30f430843",
     "voz": "22ed7f91ea0aa0689d067b50aa1f697a6261db6196b7f2292f899b60eed694a8"
   },
-  "criado": "2026-10-09T00:32:14.545162+00:00",
+  "criado": "2026-10-15T23:08:48.713504+00:00",
   "blocos": [
     {
       "id": "srt:1",
-      "inicio": 18.38,
-      "fim": 23.6,
-      "texto": "Just a small town girl livin' in a",
+      "inicio": 18.954,
+      "fim": 20.816,
+      "texto": "Just a small town girl",
       "palavras": []
     },
     {
       "id": "srt:2",
-      "inicio": 23.6,
-      "fim": 25.34,
-      "texto": "Lonely world",
+      "inicio": 22.557,
+      "fim": 25.279,
+      "texto": "Livin' in a lonely world",
       "palavras": []
     },
     {
       "id": "srt:3",
-      "inicio": 26.38,
-      "fim": 31.259,
+      "inicio": 26.841,
+      "fim": 31.965,
       "texto": "She took the midnight train going anywhere",
       "palavras": []
     },
     {
       "id": "srt:4",
-      "inicio": 34.6,
-      "fim": 39.88,
-      "texto": "Just a city boy born and raised in",
+      "inicio": 35.248,
+      "fim": 37.189,
+      "texto": "Just a city boy",
       "palavras": []
     },
     {
       "id": "srt:5",
-      "inicio": 39.88,
-      "fim": 40.82,
-      "texto": "South detroit",
+      "inicio": 38.891,
+      "fim": 41.613,
+      "texto": "Born and raised in south detroit",
       "palavras": []
     },
     {
       "id": "srt:6",
-      "inicio": 42.46,
-      "fim": 48.24,
+      "inicio": 43.234,
+      "fim": 47.318,
       "texto": "He took the midnight train going anywhere",
       "palavras": []
     },
     {
       "id": "srt:7",
-      "inicio": 66.46,
-      "fim": 71.56,
-      "texto": "A singer in a smokey room a smell",
+      "inicio": 67.198,
+      "fim": 69.66,
+      "texto": "I'll sing her in a smokey room i'll",
       "palavras": []
     },
     {
       "id": "srt:8",
-      "inicio": 71.56,
-      "fim": 73.68,
-      "texto": "Of wine and cheap perfume",
+      "inicio": 71.361,
+      "fim": 73.963,
+      "texto": "Smell a wine and cheap a few",
       "palavras": []
     },
     {
       "id": "srt:9",
-      "inicio": 75.02,
-      "fim": 77.62,
-      "texto": "For a smile they can share the night",
+      "inicio": 75.003,
+      "fim": 80.407,
+      "texto": "For a smile they can share the night it goes on and on and",
       "palavras": []
     },
     {
       "id": "srt:10",
-      "inicio": 77.78,
-      "fim": 81.36,
-      "texto": "It goes on and on and on and",
+      "inicio": 80.967,
+      "fim": 83.829,
+      "texto": "On and on strangers",
       "palavras": []
     },
     {
       "id": "srt:11",
-      "inicio": 81.36,
-      "fim": 82.04,
-      "texto": "On",
+      "inicio": 84.63,
+      "fim": 90.474,
+      "texto": "Waitin' up and down the boulevard their",
       "palavras": []
     },
     {
       "id": "srt:12",
-      "inicio": 82.04,
-      "fim": 89.94,
-      "texto": "Strangers waitin' up and down the boulevard",
+      "inicio": 90.594,
+      "fim": 91.855,
+      "texto": "Shadows",
       "palavras": []
     },
     {
       "id": "srt:13",
-      "inicio": 90.16,
-      "fim": 96.44,
-      "texto": "Their shadows searchin' in the night",
+      "inicio": 92.615,
+      "fim": 96.238,
+      "texto": "Searchin' in the night",
       "palavras": []
     },
     {
       "id": "srt:14",
-      "inicio": 98.72,
-      "fim": 105.92,
-      "texto": "Streetlights, people livin' just to find emotion",
+      "inicio": 98.666,
+      "fim": 99.907,
+      "texto": "Streetlights,",
       "palavras": []
     },
     {
       "id": "srt:15",
-      "inicio": 106.74,
-      "fim": 111.62,
-      "texto": "Hidin' somewhere in the night",
+      "inicio": 100.728,
+      "fim": 102.089,
+      "texto": "Keeper",
       "palavras": []
     },
     {
       "id": "srt:16",
-      "inicio": 123.02,
-      "fim": 129.06,
-      "texto": "Workin' hard to get my fill everybody wants",
+      "inicio": 103.71,
+      "fim": 107.814,
+      "texto": "Livin' just to find emotion hidin'",
       "palavras": []
     },
     {
       "id": "srt:17",
-      "inicio": 129.06,
-      "fim": 130.26,
-      "texto": "A thrill",
+      "inicio": 108.675,
+      "fim": 114.38,
+      "texto": "Somewhere in the night",
       "palavras": []
     },
     {
       "id": "srt:18",
-      "inicio": 130.26,
-      "fim": 135.26,
-      "texto": "Payin' anything to roll the dice just one",
+      "inicio": 123.187,
+      "fim": 125.79,
+      "texto": "Workin' hard to get my fill",
       "palavras": []
     },
     {
       "id": "srt:19",
-      "inicio": 135.26,
-      "fim": 137.58,
-      "texto": "More time",
+      "inicio": 127.706,
+      "fim": 130.308,
+      "texto": "Everybody wants a thrill",
       "palavras": []
     },
     {
       "id": "srt:20",
-      "inicio": 138.96,
-      "fim": 143.72,
-      "texto": "Some'll win, some will lose some are",
+      "inicio": 131.068,
+      "fim": 135.891,
+      "texto": "Payin' anything to roll the dice just one more",
       "palavras": []
     },
     {
       "id": "srt:21",
-      "inicio": 143.72,
-      "fim": 146.3,
-      "texto": "Born to sing the blues",
+      "inicio": 135.991,
+      "fim": 137.592,
+      "texto": "Time",
       "palavras": []
     },
     {
       "id": "srt:22",
-      "inicio": 146.8,
-      "fim": 150.9,
-      "texto": "Whoa, the movie never ends it goes on",
+      "inicio": 138.933,
+      "fim": 142.034,
+      "texto": "Some'll win, some will lose",
       "palavras": []
     },
     {
       "id": "srt:23",
-      "inicio": 150.9,
-      "fim": 153.78,
-      "texto": "And on and on and on",
+      "inicio": 143.375,
+      "fim": 146.057,
+      "texto": "Some are born to sing the blues",
       "palavras": []
     },
     {
       "id": "srt:24",
-      "inicio": 153.78,
-      "fim": 161.62,
-      "texto": "Strangers waitin' up and down the boulevard",
+      "inicio": 147.037,
+      "fim": 152.86,
+      "texto": "Whoa, the movie never ends it goes on and on and on",
       "palavras": []
     },
     {
       "id": "srt:25",
-      "inicio": 161.86,
-      "fim": 167.34,
-      "texto": "Their shadows searchin' in the night",
+      "inicio": 152.961,
+      "fim": 155.262,
+      "texto": "And on and on strangers",
       "palavras": []
     },
     {
       "id": "srt:26",
-      "inicio": 170.12,
-      "fim": 177.48,
-      "texto": "Streetlights, people livin' just to find emotion",
+      "inicio": 156.278,
+      "fim": 157.679,
+      "texto": "Waitin' up",
       "palavras": []
     },
     {
       "id": "srt:27",
-      "inicio": 178.26,
-      "fim": 183.12,
-      "texto": "Hidin', somewhere in the night",
+      "inicio": 159.381,
+      "fim": 163.465,
+      "texto": "And down the boulevard their shadows",
       "palavras": []
     },
     {
       "id": "srt:28",
-      "inicio": 201.72,
-      "fim": 205.26,
-      "texto": "Don't stop believin'",
+      "inicio": 164.225,
+      "fim": 168.189,
+      "texto": "Searchin' in the night",
       "palavras": []
     },
     {
       "id": "srt:29",
-      "inicio": 206.34,
-      "fim": 209.0,
-      "texto": "Hold on to that feelin'",
+      "inicio": 170.211,
+      "fim": 171.432,
+      "texto": "Streetlights,",
       "palavras": []
     },
     {
       "id": "srt:30",
-      "inicio": 210.08,
-      "fim": 212.98,
-      "texto": "Streetlights, people",
+      "inicio": 172.973,
+      "fim": 173.734,
+      "texto": "People",
       "palavras": []
     },
     {
       "id": "srt:31",
-      "inicio": 217.67,
-      "fim": 220.87,
-      "texto": "Don't stop believin'",
+      "inicio": 175.255,
+      "fim": 178.058,
+      "texto": "Loving just to find him on sight",
       "palavras": []
     },
     {
       "id": "srt:32",
-      "inicio": 221.792,
-      "fim": 225.04,
-      "texto": "Hold on",
+      "inicio": 178.859,
+      "fim": 179.339,
+      "texto": "And raised in",
       "palavras": []
     },
     {
       "id": "srt:33",
-      "inicio": 225.04,
-      "fim": 228.9,
-      "texto": "Streetlights, people",
+      "inicio": 180.2,
+      "fim": 182.382,
+      "texto": "Somewhere in the night",
       "palavras": []
     },
     {
       "id": "srt:34",
-      "inicio": 233.49,
-      "fim": 236.67,
-      "texto": "Don't stop believin'",
+      "inicio": 185.623,
+      "fim": 188.504,
+      "texto": "Whoa, the movie never ends",
       "palavras": []
     },
     {
       "id": "srt:35",
-      "inicio": 236.67,
-      "fim": 240.61,
-      "texto": "Hold on to that feelin'",
+      "inicio": 202.906,
+      "fim": 203.287,
+      "texto": "Stuff",
       "palavras": []
     },
     {
       "id": "srt:36",
-      "inicio": 240.61,
-      "fim": 244.09,
+      "inicio": 203.949,
+      "fim": 205.332,
+      "texto": "Believin'",
+      "palavras": []
+    },
+    {
+      "id": "srt:37",
+      "inicio": 207.137,
+      "fim": 208.781,
+      "texto": "Hold on to that feelin'",
+      "palavras": []
+    },
+    {
+      "id": "srt:38",
+      "inicio": 209.962,
+      "fim": 217.646,
+      "texto": "Streetlights, people",
+      "palavras": []
+    },
+    {
+      "id": "srt:39",
+      "inicio": 218.106,
+      "fim": 221.208,
+      "texto": "Don't stop believin'",
+      "palavras": []
+    },
+    {
+      "id": "srt:40",
+      "inicio": 222.349,
+      "fim": 225.17,
+      "texto": "Hold on",
+      "palavras": []
+    },
+    {
+      "id": "srt:41",
+      "inicio": 225.931,
+      "fim": 233.475,
+      "texto": "Streetlights, people",
+      "palavras": []
+    },
+    {
+      "id": "srt:42",
+      "inicio": 233.915,
+      "fim": 237.017,
+      "texto": "Don't stop believin'",
+      "palavras": []
+    },
+    {
+      "id": "srt:43",
+      "inicio": 238.198,
+      "fim": 241.32,
+      "texto": "Hold on to that feelin'",
+      "palavras": []
+    },
+    {
+      "id": "srt:44",
+      "inicio": 241.66,
+      "fim": 244.621,
       "texto": "Streetlights, people",
       "palavras": []
     }
   ],
-  "decisoes": {},
-  "rascunhos": {},
-  "historico": [],
+  "decisoes": {
+    "txt:34:40": {
+      "acao": "descartar",
+      "alvos": [],
+      "novos": [],
+      "data": "2026-10-15T23:09:00.057440+00:00"
+    }
+  },
+  "rascunhos": {
+    "txt:34:40": {
+      "texto": "A singer in a smokey room",
+      "inicio": "01:07,198",
+      "fim": "01:09,660",
+      "palavras": [
+        {
+          "texto": "A",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "singer",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "in",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "a",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "smokey",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "room",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        }
+      ],
+      "alvos": []
+    }
+  },
+  "historico": [
+    {
+      "item": "txt:34:40",
+      "decisao": {
+        "acao": "descartar",
+        "alvos": [],
+        "novos": [],
+        "data": "2026-10-15T23:09:00.057440+00:00"
+      },
+      "blocos_antes": [
+        {
+          "id": "srt:1",
+          "inicio": 18.954,
+          "fim": 20.816,
+          "texto": "Just a small town girl",
+          "palavras": []
+        },
+        {
+          "id": "srt:2",
+          "inicio": 22.557,
+          "fim": 25.279,
+          "texto": "Livin' in a lonely world",
+          "palavras": []
+        },
+        {
+          "id": "srt:3",
+          "inicio": 26.841,
+          "fim": 31.965,
+          "texto": "She took the midnight train going anywhere",
+          "palavras": []
+        },
+        {
+          "id": "srt:4",
+          "inicio": 35.248,
+          "fim": 37.189,
+          "texto": "Just a city boy",
+          "palavras": []
+        },
+        {
+          "id": "srt:5",
+          "inicio": 38.891,
+          "fim": 41.613,
+          "texto": "Born and raised in south detroit",
+          "palavras": []
+        },
+        {
+          "id": "srt:6",
+          "inicio": 43.234,
+          "fim": 47.318,
+          "texto": "He took the midnight train going anywhere",
+          "palavras": []
+        },
+        {
+          "id": "srt:7",
+          "inicio": 67.198,
+          "fim": 69.66,
+          "texto": "I'll sing her in a smokey room i'll",
+          "palavras": []
+        },
+        {
+          "id": "srt:8",
+          "inicio": 71.361,
+          "fim": 73.963,
+          "texto": "Smell a wine and cheap a few",
+          "palavras": []
+        },
+        {
+          "id": "srt:9",
+          "inicio": 75.003,
+          "fim": 80.407,
+          "texto": "For a smile they can share the night it goes on and on and",
+          "palavras": []
+        },
+        {
+          "id": "srt:10",
+          "inicio": 80.967,
+          "fim": 83.829,
+          "texto": "On and on strangers",
+          "palavras": []
+        },
+        {
+          "id": "srt:11",
+          "inicio": 84.63,
+          "fim": 90.474,
+          "texto": "Waitin' up and down the boulevard their",
+          "palavras": []
+        },
+        {
+          "id": "srt:12",
+          "inicio": 90.594,
+          "fim": 91.855,
+          "texto": "Shadows",
+          "palavras": []
+        },
+        {
+          "id": "srt:13",
+          "inicio": 92.615,
+          "fim": 96.238,
+          "texto": "Searchin' in the night",
+          "palavras": []
+        },
+        {
+          "id": "srt:14",
+          "inicio": 98.666,
+          "fim": 99.907,
+          "texto": "Streetlights,",
+          "palavras": []
+        },
+        {
+          "id": "srt:15",
+          "inicio": 100.728,
+          "fim": 102.089,
+          "texto": "Keeper",
+          "palavras": []
+        },
+        {
+          "id": "srt:16",
+          "inicio": 103.71,
+          "fim": 107.814,
+          "texto": "Livin' just to find emotion hidin'",
+          "palavras": []
+        },
+        {
+          "id": "srt:17",
+          "inicio": 108.675,
+          "fim": 114.38,
+          "texto": "Somewhere in the night",
+          "palavras": []
+        },
+        {
+          "id": "srt:18",
+          "inicio": 123.187,
+          "fim": 125.79,
+          "texto": "Workin' hard to get my fill",
+          "palavras": []
+        },
+        {
+          "id": "srt:19",
+          "inicio": 127.706,
+          "fim": 130.308,
+          "texto": "Everybody wants a thrill",
+          "palavras": []
+        },
+        {
+          "id": "srt:20",
+          "inicio": 131.068,
+          "fim": 135.891,
+          "texto": "Payin' anything to roll the dice just one more",
+          "palavras": []
+        },
+        {
+          "id": "srt:21",
+          "inicio": 135.991,
+          "fim": 137.592,
+          "texto": "Time",
+          "palavras": []
+        },
+        {
+          "id": "srt:22",
+          "inicio": 138.933,
+          "fim": 142.034,
+          "texto": "Some'll win, some will lose",
+          "palavras": []
+        },
+        {
+          "id": "srt:23",
+          "inicio": 143.375,
+          "fim": 146.057,
+          "texto": "Some are born to sing the blues",
+          "palavras": []
+        },
+        {
+          "id": "srt:24",
+          "inicio": 147.037,
+          "fim": 152.86,
+          "texto": "Whoa, the movie never ends it goes on and on and on",
+          "palavras": []
+        },
+        {
+          "id": "srt:25",
+          "inicio": 152.961,
+          "fim": 155.262,
+          "texto": "And on and on strangers",
+          "palavras": []
+        },
+        {
+          "id": "srt:26",
+          "inicio": 156.278,
+          "fim": 157.679,
+          "texto": "Waitin' up",
+          "palavras": []
+        },
+        {
+          "id": "srt:27",
+          "inicio": 159.381,
+          "fim": 163.465,
+          "texto": "And down the boulevard their shadows",
+          "palavras": []
+        },
+        {
+          "id": "srt:28",
+          "inicio": 164.225,
+          "fim": 168.189,
+          "texto": "Searchin' in the night",
+          "palavras": []
+        },
+        {
+          "id": "srt:29",
+          "inicio": 170.211,
+          "fim": 171.432,
+          "texto": "Streetlights,",
+          "palavras": []
+        },
+        {
+          "id": "srt:30",
+          "inicio": 172.973,
+          "fim": 173.734,
+          "texto": "People",
+          "palavras": []
+        },
+        {
+          "id": "srt:31",
+          "inicio": 175.255,
+          "fim": 178.058,
+          "texto": "Loving just to find him on sight",
+          "palavras": []
+        },
+        {
+          "id": "srt:32",
+          "inicio": 178.859,
+          "fim": 179.339,
+          "texto": "And raised in",
+          "palavras": []
+        },
+        {
+          "id": "srt:33",
+          "inicio": 180.2,
+          "fim": 182.382,
+          "texto": "Somewhere in the night",
+          "palavras": []
+        },
+        {
+          "id": "srt:34",
+          "inicio": 185.623,
+          "fim": 188.504,
+          "texto": "Whoa, the movie never ends",
+          "palavras": []
+        },
+        {
+          "id": "srt:35",
+          "inicio": 202.906,
+          "fim": 203.287,
+          "texto": "Stuff",
+          "palavras": []
+        },
+        {
+          "id": "srt:36",
+          "inicio": 203.949,
+          "fim": 205.332,
+          "texto": "Believin'",
+          "palavras": []
+        },
+        {
+          "id": "srt:37",
+          "inicio": 207.137,
+          "fim": 208.781,
+          "texto": "Hold on to that feelin'",
+          "palavras": []
+        },
+        {
+          "id": "srt:38",
+          "inicio": 209.962,
+          "fim": 217.646,
+          "texto": "Streetlights, people",
+          "palavras": []
+        },
+        {
+          "id": "srt:39",
+          "inicio": 218.106,
+          "fim": 221.208,
+          "texto": "Don't stop believin'",
+          "palavras": []
+        },
+        {
+          "id": "srt:40",
+          "inicio": 222.349,
+          "fim": 225.17,
+          "texto": "Hold on",
+          "palavras": []
+        },
+        {
+          "id": "srt:41",
+          "inicio": 225.931,
+          "fim": 233.475,
+          "texto": "Streetlights, people",
+          "palavras": []
+        },
+        {
+          "id": "srt:42",
+          "inicio": 233.915,
+          "fim": 237.017,
+          "texto": "Don't stop believin'",
+          "palavras": []
+        },
+        {
+          "id": "srt:43",
+          "inicio": 238.198,
+          "fim": 241.32,
+          "texto": "Hold on to that feelin'",
+          "palavras": []
+        },
+        {
+          "id": "srt:44",
+          "inicio": 241.66,
+          "fim": 244.621,
+          "texto": "Streetlights, people",
+          "palavras": []
+        }
+      ],
+      "decisoes_antes": {}
+    }
+  ],
   "revisoes_anteriores": [],
-  "atualizado": "2026-10-09T00:32:14.659373+00:00",
-  "pendencias": [],
+  "atualizado": "2026-10-15T23:09:01.744966+00:00",
+  "pendencias": [
+    {
+      "id": "txt:40:47",
+      "texto": "A smell of wine and cheap perfume",
+      "linha": 8,
+      "tokens": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "motivo": "TXT sem associação confirmada",
+      "tipo": "txt"
+    },
+    {
+      "id": "txt:78:79",
+      "texto": "people",
+      "linha": 14,
+      "tokens": [
+        78
+      ],
+      "motivo": "TXT sem associação confirmada",
+      "tipo": "txt"
+    },
+    {
+      "id": "txt:150:155",
+      "texto": "Livin' just to find emotion",
+      "linha": 29,
+      "tokens": [
+        150,
+        151,
+        152,
+        153,
+        154
+      ],
+      "motivo": "TXT sem associação confirmada",
+      "tipo": "txt"
+    },
+    {
+      "id": "txt:155:160",
+      "texto": "Hidin', somewhere in the night",
+      "linha": 30,
+      "tokens": [
+        155,
+        156,
+        157,
+        158,
+        159
+      ],
+      "motivo": "TXT sem associação confirmada",
+      "tipo": "txt"
+    },
+    {
+      "id": "txt:160:162",
+      "texto": "Don't stop",
+      "linha": 31,
+      "tokens": [
+        160,
+        161
+      ],
+      "motivo": "TXT sem associação confirmada",
+      "tipo": "txt"
+    },
+    {
+      "id": "pendencia:srt:7",
+      "bloco": "srt:7",
+      "texto": "I'll sing her in a smokey room i'll",
+      "motivo": "consulta_txt_ambigua_original_preservado",
+      "tipo": "srt"
+    },
+    {
+      "id": "pendencia:srt:8",
+      "bloco": "srt:8",
+      "texto": "Smell a wine and cheap a few",
+      "motivo": "consulta_txt_ambigua_original_preservado",
+      "tipo": "srt"
+    },
+    {
+      "id": "pendencia:srt:15",
+      "bloco": "srt:15",
+      "texto": "Keeper",
+      "motivo": "texto_exclusivo_srt_exige_revisao",
+      "tipo": "srt"
+    },
+    {
+      "id": "pendencia:srt:31",
+      "bloco": "srt:31",
+      "texto": "Loving just to find him on sight",
+      "motivo": "consulta_txt_ambigua_original_preservado",
+      "tipo": "srt"
+    },
+    {
+      "id": "pendencia:srt:35",
+      "bloco": "srt:35",
+      "texto": "Stuff",
+      "motivo": "texto_exclusivo_srt_exige_revisao",
+      "tipo": "srt"
+    }
+  ],
   "resumo": {
-    "ocorrencias_pendentes": 0,
-    "blocos": 36,
+    "ocorrencias_pendentes": 10,
+    "blocos": 44,
     "palavras_confirmadas": 0
   }
 }

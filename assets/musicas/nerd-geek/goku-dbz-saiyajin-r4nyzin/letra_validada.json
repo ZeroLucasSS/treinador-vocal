@@ -1,13 +1,13 @@
 {
   "versao": 1,
   "fontes": {
-    "consolidada": "b2f76906cd339968c149e908f396331dd75e15662735afa996f883f13f8ed525",
+    "consolidada": "3e81092b9ef300c67d1550fbeecebda3316bf84346fbacbdd14a0bbc3b5ed153",
     "txt": "a876491bef33aeb53587737f508012828d0a28d4c4db0d1ab13c93112ccea264",
-    "srt": "ec452f60db5713a24350ccd58c9a0144032be433492614bf7b36d8ccec5be55d",
+    "srt": "4a1c06a2c80170a7096f166968f0578f2ac2c7c8d47703f266ca5d73eaf15883",
     "voz": "f1c90169edfa4ee902e792859819eed30f3276d22b57939697fe96131e13b9dc"
   },
-  "sha256_srt": "042b577f5e5bb67f00111594766973d201a7625a7c8cf48de0dfb993aa83603d",
-  "pendencias": 3,
+  "sha256_srt": "133edeb9ec0eb63447497e0c799e93017e948faf744f76ecfb06092f42821142",
+  "pendencias": 0,
   "blocos": {
     "1": [],
     "2": [],
@@ -17,298 +17,361 @@
     "6": [],
     "7": [
       {
-        "texto": "Tais",
+        "texto": "Ganhar",
         "incluir": true,
         "confirmado": true,
-        "inicio": 23.43,
-        "fim": 23.793,
-        "score": 0.561,
+        "inicio": 32.285,
+        "fim": 34.388,
+        "score": 0.53,
         "origem": "alinhador"
       },
       {
-        "texto": "saiyajins",
+        "texto": "galick",
         "incluir": true,
         "confirmado": true,
-        "inicio": 24.8,
-        "fim": 25.041,
-        "score": 0.276,
+        "inicio": 34.408,
+        "fim": 34.811,
+        "score": 0.325,
         "origem": "alinhador"
       },
       {
-        "texto": "quando",
+        "texto": "ho",
         "incluir": true,
         "confirmado": true,
-        "inicio": 25.061,
-        "fim": 25.323,
-        "score": 0.347,
+        "inicio": 34.871,
+        "fim": 35.032,
+        "score": 0.577,
         "origem": "alinhador"
       },
       {
-        "texto": "elevo",
+        "texto": "contra",
         "incluir": true,
         "confirmado": true,
-        "inicio": 25.363,
-        "fim": 25.504,
-        "score": 0.279,
+        "inicio": 35.092,
+        "fim": 35.515,
+        "score": 0.784,
+        "origem": "alinhador"
+      }
+    ],
+    "8": [],
+    "9": [
+      {
+        "texto": "Namekusei",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 41.598,
+        "fim": 42.523,
+        "score": 0.796,
         "origem": "alinhador"
       },
       {
         "texto": "o",
         "incluir": true,
         "confirmado": true,
-        "inicio": 25.525,
-        "fim": 25.545,
-        "score": 0.0,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "meu",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 25.585,
-        "fim": 25.807,
-        "score": 0.778,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "que",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 25.867,
-        "fim": 26.028,
-        "score": 0.762,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "é",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 26.088,
-        "fim": 26.129,
-        "score": 0.712,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "mais",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 26.169,
-        "fim": 26.31,
-        "score": 0.506,
-        "origem": "alinhador"
-      }
-    ],
-    "8": [],
-    "9": [],
-    "10": [],
-    "11": [
-      {
-        "texto": "Dele",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 39.671,
-        "fim": 40.033,
-        "score": 0.768,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "quero",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 40.114,
-        "fim": 40.355,
-        "score": 0.735,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "te",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 40.396,
-        "fim": 40.456,
-        "score": 0.5,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "ver",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 40.537,
-        "fim": 40.698,
-        "score": 0.88,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "de",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 40.738,
-        "fim": 40.818,
-        "score": 0.962,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "novo",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 40.879,
-        "fim": 41.241,
-        "score": 0.998,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "em",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 41.261,
-        "fim": 41.523,
-        "score": 0.736,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "namekusei",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 41.604,
-        "fim": 42.469,
-        "score": 0.818,
-        "origem": "alinhador"
-      }
-    ],
-    "12": [
-      {
-        "texto": "O",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 42.59,
-        "fim": 42.651,
-        "score": 0.843,
+        "inicio": 42.583,
+        "fim": 42.644,
+        "score": 0.648,
         "origem": "alinhador"
       },
       {
         "texto": "oponente",
         "incluir": true,
         "confirmado": true,
-        "inicio": 42.712,
-        "fim": 43.138,
-        "score": 0.889,
+        "inicio": 42.704,
+        "fim": 43.126,
+        "score": 0.81,
         "origem": "alinhador"
       },
       {
         "texto": "é",
         "incluir": true,
         "confirmado": true,
-        "inicio": 43.178,
-        "fim": 43.219,
-        "score": 0.971,
+        "inicio": 43.146,
+        "fim": 43.167,
+        "score": 0.006,
         "origem": "alinhador"
       },
       {
         "texto": "outro",
         "incluir": true,
         "confirmado": true,
-        "inicio": 43.28,
-        "fim": 43.482,
-        "score": 0.572,
+        "inicio": 43.207,
+        "fim": 43.488,
+        "score": 0.83,
         "origem": "alinhador"
       },
       {
         "texto": "com",
         "incluir": true,
         "confirmado": true,
-        "inicio": 43.543,
-        "fim": 43.604,
-        "score": 0.292,
+        "inicio": 43.529,
+        "fim": 43.629,
+        "score": 0.852,
         "origem": "alinhador"
       },
       {
         "texto": "um",
         "incluir": true,
         "confirmado": true,
-        "inicio": 43.624,
-        "fim": 43.665,
-        "score": 0.006,
+        "inicio": 43.73,
+        "fim": 43.77,
+        "score": 0.501,
         "origem": "alinhador"
       },
       {
         "texto": "só",
         "incluir": true,
         "confirmado": true,
-        "inicio": 43.685,
-        "fim": 43.766,
-        "score": 0.612,
+        "inicio": 43.79,
+        "fim": 43.83,
+        "score": 0.0,
         "origem": "alinhador"
       },
       {
         "texto": "golpe",
         "incluir": true,
         "confirmado": true,
-        "inicio": 43.847,
-        "fim": 44.05,
-        "score": 0.365,
+        "inicio": 43.85,
+        "fim": 44.092,
+        "score": 0.533,
         "origem": "alinhador"
-      }
-    ],
-    "13": [
+      },
       {
-        "texto": "Rikum",
+        "texto": "rikum",
         "incluir": true,
         "confirmado": true,
-        "inicio": 44.131,
-        "fim": 44.414,
-        "score": 0.518,
+        "inicio": 44.152,
+        "fim": 44.413,
+        "score": 0.741,
         "origem": "alinhador"
       },
       {
         "texto": "foi",
         "incluir": true,
         "confirmado": true,
-        "inicio": 44.515,
-        "fim": 44.718,
-        "score": 0.985,
+        "inicio": 44.514,
+        "fim": 44.715,
+        "score": 0.892,
         "origem": "alinhador"
       },
       {
         "texto": "depois",
         "incluir": true,
         "confirmado": true,
-        "inicio": 44.738,
-        "fim": 45.021,
-        "score": 0.913,
+        "inicio": 44.735,
+        "fim": 45.017,
+        "score": 0.862,
         "origem": "alinhador"
       },
       {
         "texto": "foi",
         "incluir": true,
         "confirmado": true,
-        "inicio": 45.042,
-        "fim": 45.163,
-        "score": 0.179,
+        "inicio": 45.037,
+        "fim": 45.157,
+        "score": 0.075,
         "origem": "alinhador"
       },
       {
         "texto": "ginyu",
         "incluir": true,
         "confirmado": true,
-        "inicio": 45.224,
-        "fim": 45.467,
-        "score": 0.674,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "também",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 45.507,
-        "fim": 45.75,
-        "score": 0.444,
+        "inicio": 45.218,
+        "fim": 45.419,
+        "score": 0.584,
         "origem": "alinhador"
       }
     ],
-    "14": [],
+    "10": [],
+    "11": [],
+    "12": [],
+    "13": [],
+    "14": [
+      {
+        "texto": "Sou",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 58.341,
+        "fim": 58.502,
+        "score": 0.74,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "a",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 58.562,
+        "fim": 58.602,
+        "score": 0.995,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "lenda",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 58.622,
+        "fim": 58.903,
+        "score": 0.771,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "do",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 58.943,
+        "fim": 59.024,
+        "score": 0.883,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "super",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 59.245,
+        "fim": 59.767,
+        "score": 0.8,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "saiyajin",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 59.827,
+        "fim": 60.49,
+        "score": 0.743,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "lendário",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 60.51,
+        "fim": 61.373,
+        "score": 0.796,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "por",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 61.514,
+        "fim": 61.694,
+        "score": 0.861,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "que",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 61.775,
+        "fim": 62.016,
+        "score": 0.754,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "envolveu",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 62.036,
+        "fim": 62.498,
+        "score": 0.698,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "quem",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 62.558,
+        "fim": 62.879,
+        "score": 0.622,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "eu",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 63.0,
+        "fim": 63.18,
+        "score": 0.798,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "amo",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 63.261,
+        "fim": 63.341,
+        "score": 0.34,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "assim",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 63.401,
+        "fim": 63.702,
+        "score": 0.683,
+        "origem": "alinhador"
+      }
+    ],
     "15": [],
     "16": [],
-    "17": [],
+    "17": [
+      {
+        "texto": "Pelo",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 76.186,
+        "fim": 76.287,
+        "score": 0.269,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "saiyajin",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 76.328,
+        "fim": 76.611,
+        "score": 0.403,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "preciso",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 76.631,
+        "fim": 76.772,
+        "score": 0.005,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "elevar",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 76.792,
+        "fim": 76.913,
+        "score": 0.001,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "o",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 77.338,
+        "fim": 77.398,
+        "score": 0.958,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "ki",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 77.519,
+        "fim": 77.56,
+        "score": 0.0,
+        "origem": "alinhador"
+      }
+    ],
     "18": [],
     "19": [],
     "20": [],
@@ -321,220 +384,10 @@
     "27": [],
     "28": [],
     "29": [],
-    "30": [
-      {
-        "texto": "Do",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 107.83,
-        "fim": 107.91,
-        "score": 0.271,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "tempo",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 107.93,
-        "fim": 108.031,
-        "score": 0.007,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "o",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 108.051,
-        "fim": 108.071,
-        "score": 0.416,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "tempo",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 108.192,
-        "fim": 108.795,
-        "score": 0.917,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "passa",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 109.88,
-        "fim": 110.121,
-        "score": 0.689,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "diferente",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 110.161,
-        "fim": 110.925,
-        "score": 0.669,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "aqui",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 111.025,
-        "fim": 111.226,
-        "score": 0.774,
-        "origem": "alinhador"
-      }
-    ],
-    "31": [
-      {
-        "texto": "Cell",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 112.07,
-        "fim": 112.191,
-        "score": 0.218,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "prometo",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 112.211,
-        "fim": 112.575,
-        "score": 0.531,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "que",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 112.595,
-        "fim": 112.675,
-        "score": 0.939,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "eu",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 112.716,
-        "fim": 112.756,
-        "score": 0.004,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "vou",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 112.796,
-        "fim": 112.897,
-        "score": 0.5,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "te",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 112.958,
-        "fim": 113.22,
-        "score": 0.68,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "matar",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 113.281,
-        "fim": 113.886,
-        "score": 0.979,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "quando",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 114.068,
-        "fim": 114.27,
-        "score": 0.212,
-        "origem": "alinhador"
-      }
-    ],
+    "30": [],
+    "31": [],
     "32": [],
-    "33": [
-      {
-        "texto": "Voltar",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 117.791,
-        "fim": 118.496,
-        "score": 0.68,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "se",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 118.698,
-        "fim": 118.758,
-        "score": 0.947,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "estou",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 118.778,
-        "fim": 118.96,
-        "score": 0.515,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "mais",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 119.0,
-        "fim": 119.161,
-        "score": 0.922,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "forte",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 119.221,
-        "fim": 119.745,
-        "score": 0.883,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "que",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 119.805,
-        "fim": 119.906,
-        "score": 0.787,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "o",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 119.946,
-        "fim": 119.987,
-        "score": 0.934,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "cell",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 120.108,
-        "fim": 120.43,
-        "score": 0.478,
-        "origem": "alinhador"
-      }
-    ],
+    "33": [],
     "34": [],
     "35": [],
     "36": [],
@@ -543,8 +396,235 @@
     "39": [],
     "40": [],
     "41": [],
-    "42": [],
-    "43": [],
+    "42": [
+      {
+        "texto": "Nível",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 189.327,
+        "fim": 189.667,
+        "score": 0.37,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "3",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 190.188,
+        "fim": 190.208,
+        "score": 0.63,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "precisamos",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 191.71,
+        "fim": 192.33,
+        "score": 0.861,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "nos",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 192.35,
+        "fim": 192.45,
+        "score": 0.557,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "fundir",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 192.49,
+        "fim": 192.811,
+        "score": 0.738,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "para",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 192.851,
+        "fim": 193.091,
+        "score": 0.962,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "vencer",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 193.151,
+        "fim": 193.531,
+        "score": 0.957,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "o",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 193.592,
+        "fim": 193.632,
+        "score": 0.456,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "majin",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 193.652,
+        "fim": 194.232,
+        "score": 0.736,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "vegeta",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 194.452,
+        "fim": 194.873,
+        "score": 0.731,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "pega",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 194.913,
+        "fim": 195.053,
+        "score": 0.413,
+        "origem": "alinhador"
+      }
+    ],
+    "43": [
+      {
+        "texto": "O",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 195.133,
+        "fim": 195.193,
+        "score": 0.876,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "brinco",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 195.233,
+        "fim": 195.654,
+        "score": 0.823,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "potara",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 195.714,
+        "fim": 196.234,
+        "score": 0.625,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "aí",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 196.334,
+        "fim": 196.755,
+        "score": 0.83,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "não",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 196.975,
+        "fim": 197.135,
+        "score": 0.742,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "é",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 197.195,
+        "fim": 197.235,
+        "score": 0.887,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "o",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 197.255,
+        "fim": 197.315,
+        "score": 0.484,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "suficiente",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 197.355,
+        "fim": 198.056,
+        "score": 0.834,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "mas",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 198.096,
+        "fim": 198.256,
+        "score": 0.805,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "não",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 198.276,
+        "fim": 198.417,
+        "score": 0.377,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "será",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 198.437,
+        "fim": 198.777,
+        "score": 0.82,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "extinsão",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 198.817,
+        "fim": 199.237,
+        "score": 0.521,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "genki",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 199.338,
+        "fim": 199.558,
+        "score": 0.289,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "dama",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 199.578,
+        "fim": 199.718,
+        "score": 0.198,
+        "origem": "alinhador"
+      }
+    ],
     "44": [],
     "45": [],
     "46": [],
@@ -557,31 +637,156 @@
     "53": [],
     "54": [],
     "55": [],
-    "56": [],
+    "56": [
+      {
+        "texto": "Migatte",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 245.886,
+        "fim": 246.028,
+        "score": 0.024,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "no",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 246.049,
+        "fim": 246.11,
+        "score": 0.256,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "gokui",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 246.13,
+        "fim": 246.232,
+        "score": 0.052,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "quebrando",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 246.273,
+        "fim": 246.517,
+        "score": 0.156,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "meus",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 246.538,
+        "fim": 246.619,
+        "score": 0.0,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "limites",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 246.639,
+        "fim": 246.782,
+        "score": 0.0,
+        "origem": "alinhador"
+      }
+    ],
     "57": [],
     "58": [],
     "59": [],
     "60": [],
     "61": [],
     "62": [],
-    "63": [],
+    "63": [
+      {
+        "texto": "Conhecerá",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 274.188,
+        "fim": 275.0,
+        "score": 0.758,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "a",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 275.285,
+        "fim": 275.366,
+        "score": 0.69,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "mim",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 275.447,
+        "fim": 275.508,
+        "score": 0.001,
+        "origem": "alinhador"
+      }
+    ],
     "64": [],
     "65": [],
     "66": [],
-    "67": [],
-    "68": [],
-    "69": [],
-    "70": [],
-    "71": [],
-    "72": [],
-    "73": [],
-    "74": [],
-    "75": [],
-    "76": [],
-    "77": [],
-    "78": [],
-    "79": [],
-    "80": [],
-    "81": []
+    "67": [
+      {
+        "texto": "Saiyajin",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 290.205,
+        "fim": 290.668,
+        "score": 0.388,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "vocês",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 290.95,
+        "fim": 291.192,
+        "score": 0.8,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "não",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 291.232,
+        "fim": 291.353,
+        "score": 0.781,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "conseguirão",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 291.393,
+        "fim": 292.098,
+        "score": 0.736,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "me",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 292.138,
+        "fim": 292.239,
+        "score": 0.845,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "enfrentar",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 292.259,
+        "fim": 292.762,
+        "score": 0.503,
+        "origem": "alinhador"
+      }
+    ],
+    "68": []
   }
 }

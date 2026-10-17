@@ -1,0 +1,4436 @@
+{
+  "versao": 1,
+  "arquivo_voz": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\nerd-geek\\goku-dbz-saiyajin-r4nyzin\\voz.mp3",
+  "sha256_voz": "f1c90169edfa4ee902e792859819eed30f3276d22b57939697fe96131e13b9dc",
+  "duracao_audio": 299.978625,
+  "configuracao": {
+    "modelo": "small",
+    "idioma": "pt",
+    "dispositivo": "cpu",
+    "compute_type": "int8",
+    "vad": "silero"
+  },
+  "segmentos": [
+    {
+      "text": " Dizem que eu caí na terra De nada disso me lembro Dizem que bati a cabeça E isso me mudou por dentro A cobrança veio Nele disse que é meu irmão Nesse dia eu morri E ele anunciou uma invasão Foi a primeira vez que eu ouvi",
+      "start": 1.794,
+      "end": 22.366,
+      "avg_logprob": -0.09950802520369038,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Dizem",
+          "start": 1.834,
+          "end": 2.094,
+          "score": 0.906
+        },
+        {
+          "word": "que",
+          "start": 2.114,
+          "end": 2.194,
+          "score": 0.833
+        },
+        {
+          "word": "eu",
+          "start": 2.214,
+          "end": 2.274,
+          "score": 0.762
+        },
+        {
+          "word": "caí",
+          "start": 2.314,
+          "end": 2.695,
+          "score": 0.996
+        },
+        {
+          "word": "na",
+          "start": 2.755,
+          "end": 2.875,
+          "score": 0.99
+        },
+        {
+          "word": "terra",
+          "start": 3.055,
+          "end": 3.695,
+          "score": 0.903
+        },
+        {
+          "word": "De",
+          "start": 4.275,
+          "end": 4.376,
+          "score": 0.93
+        },
+        {
+          "word": "nada",
+          "start": 4.416,
+          "end": 4.676,
+          "score": 0.996
+        },
+        {
+          "word": "disso",
+          "start": 4.716,
+          "end": 5.096,
+          "score": 0.961
+        },
+        {
+          "word": "me",
+          "start": 5.176,
+          "end": 5.336,
+          "score": 0.939
+        },
+        {
+          "word": "lembro",
+          "start": 5.456,
+          "end": 6.217,
+          "score": 0.738
+        },
+        {
+          "word": "Dizem",
+          "start": 6.677,
+          "end": 6.917,
+          "score": 0.986
+        },
+        {
+          "word": "que",
+          "start": 6.957,
+          "end": 7.057,
+          "score": 0.91
+        },
+        {
+          "word": "bati",
+          "start": 7.117,
+          "end": 7.497,
+          "score": 0.946
+        },
+        {
+          "word": "a",
+          "start": 7.517,
+          "end": 7.537,
+          "score": 0.457
+        },
+        {
+          "word": "cabeça",
+          "start": 7.617,
+          "end": 8.518,
+          "score": 0.947
+        },
+        {
+          "word": "E",
+          "start": 8.538,
+          "end": 8.558,
+          "score": 0.0
+        },
+        {
+          "word": "isso",
+          "start": 9.098,
+          "end": 9.318,
+          "score": 0.869
+        },
+        {
+          "word": "me",
+          "start": 9.378,
+          "end": 9.478,
+          "score": 0.997
+        },
+        {
+          "word": "mudou",
+          "start": 9.539,
+          "end": 9.919,
+          "score": 0.881
+        },
+        {
+          "word": "por",
+          "start": 10.019,
+          "end": 10.219,
+          "score": 0.995
+        },
+        {
+          "word": "dentro",
+          "start": 10.239,
+          "end": 11.019,
+          "score": 0.896
+        },
+        {
+          "word": "A",
+          "start": 11.62,
+          "end": 11.74,
+          "score": 0.885
+        },
+        {
+          "word": "cobrança",
+          "start": 11.82,
+          "end": 12.66,
+          "score": 0.964
+        },
+        {
+          "word": "veio",
+          "start": 12.76,
+          "end": 13.581,
+          "score": 0.841
+        },
+        {
+          "word": "Nele",
+          "start": 13.601,
+          "end": 14.161,
+          "score": 0.976
+        },
+        {
+          "word": "disse",
+          "start": 14.241,
+          "end": 14.581,
+          "score": 0.883
+        },
+        {
+          "word": "que",
+          "start": 14.601,
+          "end": 14.662,
+          "score": 0.0
+        },
+        {
+          "word": "é",
+          "start": 14.682,
+          "end": 14.702,
+          "score": 0.0
+        },
+        {
+          "word": "meu",
+          "start": 14.722,
+          "end": 14.882,
+          "score": 0.767
+        },
+        {
+          "word": "irmão",
+          "start": 14.962,
+          "end": 15.582,
+          "score": 0.695
+        },
+        {
+          "word": "Nesse",
+          "start": 15.922,
+          "end": 16.262,
+          "score": 0.726
+        },
+        {
+          "word": "dia",
+          "start": 16.342,
+          "end": 16.723,
+          "score": 0.586
+        },
+        {
+          "word": "eu",
+          "start": 17.143,
+          "end": 17.263,
+          "score": 0.642
+        },
+        {
+          "word": "morri",
+          "start": 17.323,
+          "end": 17.763,
+          "score": 0.947
+        },
+        {
+          "word": "E",
+          "start": 18.023,
+          "end": 18.144,
+          "score": 0.802
+        },
+        {
+          "word": "ele",
+          "start": 18.204,
+          "end": 18.304,
+          "score": 0.985
+        },
+        {
+          "word": "anunciou",
+          "start": 18.364,
+          "end": 19.024,
+          "score": 0.811
+        },
+        {
+          "word": "uma",
+          "start": 19.104,
+          "end": 19.304,
+          "score": 0.718
+        },
+        {
+          "word": "invasão",
+          "start": 19.384,
+          "end": 20.245,
+          "score": 0.818
+        },
+        {
+          "word": "Foi",
+          "start": 20.345,
+          "end": 20.525,
+          "score": 0.858
+        },
+        {
+          "word": "a",
+          "start": 20.565,
+          "end": 20.605,
+          "score": 0.974
+        },
+        {
+          "word": "primeira",
+          "start": 20.665,
+          "end": 21.045,
+          "score": 0.835
+        },
+        {
+          "word": "vez",
+          "start": 21.085,
+          "end": 21.225,
+          "score": 0.879
+        },
+        {
+          "word": "que",
+          "start": 21.265,
+          "end": 21.365,
+          "score": 0.622
+        },
+        {
+          "word": "eu",
+          "start": 21.385,
+          "end": 21.425,
+          "score": 0.012
+        },
+        {
+          "word": "ouvi",
+          "start": 21.465,
+          "end": 21.626,
+          "score": 0.46
+        }
+      ]
+    },
+    {
+      "text": " Sobre esses tais saiagens Quando elevo meu que é mais de oito mil Um poder que esse tal príncipe nunca viu Quem será que vai ganhar Galíquio contra a Kamehameha? Eu parei a vida dele, quero te ver de novo Em Namecuzê e o oponente é outro Com sua golpe rico foi, depois foi de Nil também Acho que não entenderão que meu poder vai além Vegeta chora, eu te prometo com frisa não",
+      "start": 22.754,
+      "end": 52.72,
+      "avg_logprob": -0.36338380859011693,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Sobre",
+          "start": 22.874,
+          "end": 23.154,
+          "score": 0.575
+        },
+        {
+          "word": "esses",
+          "start": 23.194,
+          "end": 23.414,
+          "score": 0.716
+        },
+        {
+          "word": "tais",
+          "start": 23.434,
+          "end": 23.574,
+          "score": 0.48
+        },
+        {
+          "word": "saiagens",
+          "start": 23.594,
+          "end": 24.514,
+          "score": 0.586
+        },
+        {
+          "word": "Quando",
+          "start": 24.794,
+          "end": 25.034,
+          "score": 0.658
+        },
+        {
+          "word": "elevo",
+          "start": 25.174,
+          "end": 25.495,
+          "score": 0.957
+        },
+        {
+          "word": "meu",
+          "start": 25.555,
+          "end": 25.795,
+          "score": 0.761
+        },
+        {
+          "word": "que",
+          "start": 25.835,
+          "end": 26.015,
+          "score": 0.621
+        },
+        {
+          "word": "é",
+          "start": 26.055,
+          "end": 26.095,
+          "score": 0.999
+        },
+        {
+          "word": "mais",
+          "start": 26.135,
+          "end": 26.315,
+          "score": 0.884
+        },
+        {
+          "word": "de",
+          "start": 26.355,
+          "end": 26.415,
+          "score": 0.956
+        },
+        {
+          "word": "oito",
+          "start": 26.475,
+          "end": 26.655,
+          "score": 0.865
+        },
+        {
+          "word": "mil",
+          "start": 26.735,
+          "end": 26.995,
+          "score": 0.604
+        },
+        {
+          "word": "Um",
+          "start": 27.235,
+          "end": 27.275,
+          "score": 0.982
+        },
+        {
+          "word": "poder",
+          "start": 27.335,
+          "end": 27.555,
+          "score": 0.582
+        },
+        {
+          "word": "que",
+          "start": 27.635,
+          "end": 27.795,
+          "score": 0.741
+        },
+        {
+          "word": "esse",
+          "start": 27.835,
+          "end": 28.015,
+          "score": 0.714
+        },
+        {
+          "word": "tal",
+          "start": 28.055,
+          "end": 28.175,
+          "score": 0.539
+        },
+        {
+          "word": "príncipe",
+          "start": 28.235,
+          "end": 28.815,
+          "score": 0.875
+        },
+        {
+          "word": "nunca",
+          "start": 28.855,
+          "end": 29.095,
+          "score": 0.808
+        },
+        {
+          "word": "viu",
+          "start": 29.155,
+          "end": 29.515,
+          "score": 0.622
+        },
+        {
+          "word": "Quem",
+          "start": 29.995,
+          "end": 30.416,
+          "score": 0.746
+        },
+        {
+          "word": "será",
+          "start": 30.616,
+          "end": 31.556,
+          "score": 0.9
+        },
+        {
+          "word": "que",
+          "start": 31.636,
+          "end": 31.796,
+          "score": 0.812
+        },
+        {
+          "word": "vai",
+          "start": 31.856,
+          "end": 32.216,
+          "score": 0.798
+        },
+        {
+          "word": "ganhar",
+          "start": 32.256,
+          "end": 33.536,
+          "score": 0.739
+        },
+        {
+          "word": "Galíquio",
+          "start": 33.876,
+          "end": 34.796,
+          "score": 0.784
+        },
+        {
+          "word": "contra",
+          "start": 35.096,
+          "end": 35.757,
+          "score": 0.974
+        },
+        {
+          "word": "a",
+          "start": 35.837,
+          "end": 35.897,
+          "score": 0.804
+        },
+        {
+          "word": "Kamehameha?",
+          "start": 35.997,
+          "end": 38.497,
+          "score": 0.754
+        },
+        {
+          "word": "Eu",
+          "start": 38.757,
+          "end": 38.837,
+          "score": 0.446
+        },
+        {
+          "word": "parei",
+          "start": 38.897,
+          "end": 39.217,
+          "score": 0.915
+        },
+        {
+          "word": "a",
+          "start": 39.257,
+          "end": 39.297,
+          "score": 0.831
+        },
+        {
+          "word": "vida",
+          "start": 39.337,
+          "end": 39.637,
+          "score": 0.911
+        },
+        {
+          "word": "dele,",
+          "start": 39.657,
+          "end": 40.037,
+          "score": 0.965
+        },
+        {
+          "word": "quero",
+          "start": 40.097,
+          "end": 40.338,
+          "score": 0.806
+        },
+        {
+          "word": "te",
+          "start": 40.398,
+          "end": 40.498,
+          "score": 0.608
+        },
+        {
+          "word": "ver",
+          "start": 40.538,
+          "end": 40.698,
+          "score": 0.784
+        },
+        {
+          "word": "de",
+          "start": 40.718,
+          "end": 40.818,
+          "score": 0.708
+        },
+        {
+          "word": "novo",
+          "start": 40.858,
+          "end": 41.238,
+          "score": 0.837
+        },
+        {
+          "word": "Em",
+          "start": 41.518,
+          "end": 41.558,
+          "score": 0.593
+        },
+        {
+          "word": "Namecuzê",
+          "start": 41.598,
+          "end": 42.438,
+          "score": 0.735
+        },
+        {
+          "word": "e",
+          "start": 42.458,
+          "end": 42.518,
+          "score": 0.85
+        },
+        {
+          "word": "o",
+          "start": 42.578,
+          "end": 42.638,
+          "score": 0.724
+        },
+        {
+          "word": "oponente",
+          "start": 42.718,
+          "end": 43.158,
+          "score": 0.798
+        },
+        {
+          "word": "é",
+          "start": 43.198,
+          "end": 43.238,
+          "score": 0.63
+        },
+        {
+          "word": "outro",
+          "start": 43.278,
+          "end": 43.478,
+          "score": 0.754
+        },
+        {
+          "word": "Com",
+          "start": 43.518,
+          "end": 43.638,
+          "score": 0.825
+        },
+        {
+          "word": "sua",
+          "start": 43.678,
+          "end": 43.818,
+          "score": 0.895
+        },
+        {
+          "word": "golpe",
+          "start": 43.838,
+          "end": 44.118,
+          "score": 0.576
+        },
+        {
+          "word": "rico",
+          "start": 44.158,
+          "end": 44.418,
+          "score": 0.561
+        },
+        {
+          "word": "foi,",
+          "start": 44.498,
+          "end": 44.698,
+          "score": 0.885
+        },
+        {
+          "word": "depois",
+          "start": 44.738,
+          "end": 44.998,
+          "score": 0.942
+        },
+        {
+          "word": "foi",
+          "start": 45.018,
+          "end": 45.178,
+          "score": 0.592
+        },
+        {
+          "word": "de",
+          "start": 45.198,
+          "end": 45.239,
+          "score": 0.945
+        },
+        {
+          "word": "Nil",
+          "start": 45.319,
+          "end": 45.439,
+          "score": 0.381
+        },
+        {
+          "word": "também",
+          "start": 45.499,
+          "end": 45.799,
+          "score": 0.809
+        },
+        {
+          "word": "Acho",
+          "start": 45.979,
+          "end": 46.179,
+          "score": 0.494
+        },
+        {
+          "word": "que",
+          "start": 46.219,
+          "end": 46.299,
+          "score": 0.604
+        },
+        {
+          "word": "não",
+          "start": 46.359,
+          "end": 46.419,
+          "score": 0.412
+        },
+        {
+          "word": "entenderão",
+          "start": 46.439,
+          "end": 46.959,
+          "score": 0.808
+        },
+        {
+          "word": "que",
+          "start": 46.999,
+          "end": 47.079,
+          "score": 0.307
+        },
+        {
+          "word": "meu",
+          "start": 47.119,
+          "end": 47.239,
+          "score": 0.996
+        },
+        {
+          "word": "poder",
+          "start": 47.299,
+          "end": 47.679,
+          "score": 0.785
+        },
+        {
+          "word": "vai",
+          "start": 47.719,
+          "end": 47.899,
+          "score": 0.928
+        },
+        {
+          "word": "além",
+          "start": 47.959,
+          "end": 48.399,
+          "score": 0.87
+        },
+        {
+          "word": "Vegeta",
+          "start": 48.759,
+          "end": 49.199,
+          "score": 0.934
+        },
+        {
+          "word": "chora,",
+          "start": 49.299,
+          "end": 49.779,
+          "score": 0.65
+        },
+        {
+          "word": "eu",
+          "start": 49.999,
+          "end": 50.059,
+          "score": 0.908
+        },
+        {
+          "word": "te",
+          "start": 50.119,
+          "end": 50.24,
+          "score": 0.73
+        },
+        {
+          "word": "prometo",
+          "start": 50.3,
+          "end": 50.94,
+          "score": 0.863
+        },
+        {
+          "word": "com",
+          "start": 51.18,
+          "end": 51.28,
+          "score": 0.876
+        },
+        {
+          "word": "frisa",
+          "start": 51.34,
+          "end": 51.64,
+          "score": 0.827
+        },
+        {
+          "word": "não",
+          "start": 51.74,
+          "end": 51.86,
+          "score": 0.746
+        }
+      ]
+    },
+    {
+      "text": " Sua angústia devia ser imensa pra isso ter me implorado Ele diz que eu sou a lenda do super saiajilendário Por quem envolveu quem eu amassei Por que se matou o cuririz risa? Sente meu poder fluir Eleva Eleva o que? Gerar humilhador pelo saiaji Preciso evar o que?",
+      "start": 52.72,
+      "end": 78.206,
+      "avg_logprob": -0.2990728217092427,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Sua",
+          "start": 53.6,
+          "end": 53.82,
+          "score": 0.775
+        },
+        {
+          "word": "angústia",
+          "start": 53.92,
+          "end": 54.32,
+          "score": 0.76
+        },
+        {
+          "word": "devia",
+          "start": 54.36,
+          "end": 54.74,
+          "score": 0.98
+        },
+        {
+          "word": "ser",
+          "start": 54.82,
+          "end": 55.001,
+          "score": 0.834
+        },
+        {
+          "word": "imensa",
+          "start": 55.081,
+          "end": 55.641,
+          "score": 0.944
+        },
+        {
+          "word": "pra",
+          "start": 55.701,
+          "end": 55.901,
+          "score": 0.64
+        },
+        {
+          "word": "isso",
+          "start": 55.921,
+          "end": 56.121,
+          "score": 0.857
+        },
+        {
+          "word": "ter",
+          "start": 56.161,
+          "end": 56.301,
+          "score": 0.658
+        },
+        {
+          "word": "me",
+          "start": 56.321,
+          "end": 56.481,
+          "score": 0.534
+        },
+        {
+          "word": "implorado",
+          "start": 56.521,
+          "end": 57.461,
+          "score": 0.944
+        },
+        {
+          "word": "Ele",
+          "start": 57.781,
+          "end": 57.961,
+          "score": 0.997
+        },
+        {
+          "word": "diz",
+          "start": 58.001,
+          "end": 58.121,
+          "score": 0.644
+        },
+        {
+          "word": "que",
+          "start": 58.161,
+          "end": 58.221,
+          "score": 0.512
+        },
+        {
+          "word": "eu",
+          "start": 58.241,
+          "end": 58.281,
+          "score": 0.005
+        },
+        {
+          "word": "sou",
+          "start": 58.321,
+          "end": 58.481,
+          "score": 0.745
+        },
+        {
+          "word": "a",
+          "start": 58.561,
+          "end": 58.581,
+          "score": 0.88
+        },
+        {
+          "word": "lenda",
+          "start": 58.621,
+          "end": 58.901,
+          "score": 0.776
+        },
+        {
+          "word": "do",
+          "start": 58.941,
+          "end": 59.081,
+          "score": 0.834
+        },
+        {
+          "word": "super",
+          "start": 59.242,
+          "end": 59.742,
+          "score": 0.814
+        },
+        {
+          "word": "saiajilendário",
+          "start": 59.822,
+          "end": 61.362,
+          "score": 0.804
+        },
+        {
+          "word": "Por",
+          "start": 61.482,
+          "end": 61.662,
+          "score": 0.644
+        },
+        {
+          "word": "quem",
+          "start": 61.762,
+          "end": 62.042,
+          "score": 0.649
+        },
+        {
+          "word": "envolveu",
+          "start": 62.062,
+          "end": 62.462,
+          "score": 0.551
+        },
+        {
+          "word": "quem",
+          "start": 62.542,
+          "end": 63.142,
+          "score": 0.727
+        },
+        {
+          "word": "eu",
+          "start": 63.162,
+          "end": 63.202,
+          "score": 0.0
+        },
+        {
+          "word": "amassei",
+          "start": 63.242,
+          "end": 63.863,
+          "score": 0.714
+        },
+        {
+          "word": "Por",
+          "start": 63.923,
+          "end": 64.063,
+          "score": 0.838
+        },
+        {
+          "word": "que",
+          "start": 64.143,
+          "end": 64.303,
+          "score": 0.84
+        },
+        {
+          "word": "se",
+          "start": 64.443,
+          "end": 64.563,
+          "score": 0.968
+        },
+        {
+          "word": "matou",
+          "start": 64.643,
+          "end": 65.043,
+          "score": 0.747
+        },
+        {
+          "word": "o",
+          "start": 65.423,
+          "end": 65.463,
+          "score": 0.86
+        },
+        {
+          "word": "cuririz",
+          "start": 65.543,
+          "end": 66.083,
+          "score": 0.671
+        },
+        {
+          "word": "risa?",
+          "start": 66.503,
+          "end": 66.883,
+          "score": 0.815
+        },
+        {
+          "word": "Sente",
+          "start": 66.963,
+          "end": 67.243,
+          "score": 0.801
+        },
+        {
+          "word": "meu",
+          "start": 67.323,
+          "end": 67.543,
+          "score": 0.794
+        },
+        {
+          "word": "poder",
+          "start": 67.604,
+          "end": 68.004,
+          "score": 0.658
+        },
+        {
+          "word": "fluir",
+          "start": 68.064,
+          "end": 68.564,
+          "score": 0.723
+        },
+        {
+          "word": "Eleva",
+          "start": 68.584,
+          "end": 68.824,
+          "score": 0.4
+        },
+        {
+          "word": "Eleva",
+          "start": 68.844,
+          "end": 71.124,
+          "score": 0.889
+        },
+        {
+          "word": "o",
+          "start": 71.144,
+          "end": 71.164,
+          "score": 0.0
+        },
+        {
+          "word": "que?",
+          "start": 71.184,
+          "end": 71.484,
+          "score": 0.352
+        },
+        {
+          "word": "Gerar",
+          "start": 71.504,
+          "end": 71.604,
+          "score": 0.006
+        },
+        {
+          "word": "humilhador",
+          "start": 71.624,
+          "end": 72.665,
+          "score": 0.788
+        },
+        {
+          "word": "pelo",
+          "start": 76.146,
+          "end": 76.286,
+          "score": 0.41
+        },
+        {
+          "word": "saiaji",
+          "start": 76.326,
+          "end": 76.606,
+          "score": 0.508
+        },
+        {
+          "word": "Preciso",
+          "start": 76.626,
+          "end": 76.806,
+          "score": 0.143
+        },
+        {
+          "word": "evar",
+          "start": 76.826,
+          "end": 76.926,
+          "score": 0.122
+        },
+        {
+          "word": "o",
+          "start": 77.326,
+          "end": 77.406,
+          "score": 0.899
+        },
+        {
+          "word": "que?",
+          "start": 77.526,
+          "end": 78.206,
+          "score": 0.982
+        }
+      ]
+    },
+    {
+      "text": " Nunca virão guerreiros, e esse é o poder De um super saiaje Vocês não conseguirão me enfrentar O meu poder se elevar, Goku! Camerrameira! Morri de uma doença Que se é constresdor Logo ao chegar na terra Guerreiro do futuro Androides nos aniquilarão Então começa o treinamento Vamos todos guerreiros, então",
+      "start": 78.402,
+      "end": 106.206,
+      "avg_logprob": -0.30379161694470574,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Nunca",
+          "start": 78.422,
+          "end": 78.722,
+          "score": 0.578
+        },
+        {
+          "word": "virão",
+          "start": 78.742,
+          "end": 79.103,
+          "score": 0.695
+        },
+        {
+          "word": "guerreiros,",
+          "start": 79.143,
+          "end": 80.404,
+          "score": 0.661
+        },
+        {
+          "word": "e",
+          "start": 80.424,
+          "end": 80.444,
+          "score": 0.004
+        },
+        {
+          "word": "esse",
+          "start": 80.464,
+          "end": 81.104,
+          "score": 0.857
+        },
+        {
+          "word": "é",
+          "start": 81.244,
+          "end": 81.485,
+          "score": 0.928
+        },
+        {
+          "word": "o",
+          "start": 81.645,
+          "end": 81.785,
+          "score": 0.849
+        },
+        {
+          "word": "poder",
+          "start": 81.865,
+          "end": 82.646,
+          "score": 0.638
+        },
+        {
+          "word": "De",
+          "start": 82.906,
+          "end": 83.186,
+          "score": 0.885
+        },
+        {
+          "word": "um",
+          "start": 83.326,
+          "end": 83.426,
+          "score": 0.634
+        },
+        {
+          "word": "super",
+          "start": 83.506,
+          "end": 84.027,
+          "score": 0.811
+        },
+        {
+          "word": "saiaje",
+          "start": 84.107,
+          "end": 85.268,
+          "score": 0.754
+        },
+        {
+          "word": "Vocês",
+          "start": 85.468,
+          "end": 85.728,
+          "score": 0.823
+        },
+        {
+          "word": "não",
+          "start": 85.748,
+          "end": 85.888,
+          "score": 0.794
+        },
+        {
+          "word": "conseguirão",
+          "start": 85.928,
+          "end": 86.429,
+          "score": 0.695
+        },
+        {
+          "word": "me",
+          "start": 86.469,
+          "end": 86.609,
+          "score": 0.612
+        },
+        {
+          "word": "enfrentar",
+          "start": 86.689,
+          "end": 87.21,
+          "score": 0.772
+        },
+        {
+          "word": "O",
+          "start": 87.31,
+          "end": 87.67,
+          "score": 0.877
+        },
+        {
+          "word": "meu",
+          "start": 87.69,
+          "end": 88.551,
+          "score": 0.551
+        },
+        {
+          "word": "poder",
+          "start": 88.611,
+          "end": 88.991,
+          "score": 0.557
+        },
+        {
+          "word": "se",
+          "start": 89.512,
+          "end": 89.652,
+          "score": 0.983
+        },
+        {
+          "word": "elevar,",
+          "start": 89.752,
+          "end": 90.432,
+          "score": 0.784
+        },
+        {
+          "word": "Goku!",
+          "start": 90.452,
+          "end": 90.773,
+          "score": 0.29
+        },
+        {
+          "word": "Camerrameira!",
+          "start": 90.793,
+          "end": 91.513,
+          "score": 0.269
+        },
+        {
+          "word": "Morri",
+          "start": 94.156,
+          "end": 94.436,
+          "score": 0.843
+        },
+        {
+          "word": "de",
+          "start": 94.456,
+          "end": 94.536,
+          "score": 0.654
+        },
+        {
+          "word": "uma",
+          "start": 94.596,
+          "end": 94.736,
+          "score": 0.842
+        },
+        {
+          "word": "doença",
+          "start": 94.796,
+          "end": 95.497,
+          "score": 0.912
+        },
+        {
+          "word": "Que",
+          "start": 95.637,
+          "end": 95.777,
+          "score": 0.417
+        },
+        {
+          "word": "se",
+          "start": 95.797,
+          "end": 95.877,
+          "score": 0.5
+        },
+        {
+          "word": "é",
+          "start": 95.937,
+          "end": 95.957,
+          "score": 0.0
+        },
+        {
+          "word": "constresdor",
+          "start": 95.977,
+          "end": 96.378,
+          "score": 0.17
+        },
+        {
+          "word": "Logo",
+          "start": 96.418,
+          "end": 96.658,
+          "score": 0.884
+        },
+        {
+          "word": "ao",
+          "start": 96.738,
+          "end": 96.818,
+          "score": 0.58
+        },
+        {
+          "word": "chegar",
+          "start": 96.858,
+          "end": 97.138,
+          "score": 0.917
+        },
+        {
+          "word": "na",
+          "start": 97.158,
+          "end": 97.258,
+          "score": 0.916
+        },
+        {
+          "word": "terra",
+          "start": 97.338,
+          "end": 97.739,
+          "score": 0.999
+        },
+        {
+          "word": "Guerreiro",
+          "start": 98.339,
+          "end": 98.619,
+          "score": 0.144
+        },
+        {
+          "word": "do",
+          "start": 98.639,
+          "end": 98.7,
+          "score": 0.274
+        },
+        {
+          "word": "futuro",
+          "start": 98.72,
+          "end": 98.84,
+          "score": 0.002
+        },
+        {
+          "word": "Androides",
+          "start": 98.86,
+          "end": 99.22,
+          "score": 0.612
+        },
+        {
+          "word": "nos",
+          "start": 99.24,
+          "end": 99.38,
+          "score": 0.986
+        },
+        {
+          "word": "aniquilarão",
+          "start": 99.46,
+          "end": 100.381,
+          "score": 0.886
+        },
+        {
+          "word": "Então",
+          "start": 100.401,
+          "end": 100.661,
+          "score": 0.382
+        },
+        {
+          "word": "começa",
+          "start": 100.721,
+          "end": 101.082,
+          "score": 0.688
+        },
+        {
+          "word": "o",
+          "start": 101.102,
+          "end": 101.122,
+          "score": 0.001
+        },
+        {
+          "word": "treinamento",
+          "start": 101.142,
+          "end": 101.862,
+          "score": 0.654
+        },
+        {
+          "word": "Vamos",
+          "start": 102.223,
+          "end": 102.623,
+          "score": 0.872
+        },
+        {
+          "word": "todos",
+          "start": 102.683,
+          "end": 103.083,
+          "score": 0.798
+        },
+        {
+          "word": "guerreiros,",
+          "start": 103.123,
+          "end": 103.884,
+          "score": 0.817
+        },
+        {
+          "word": "então",
+          "start": 103.944,
+          "end": 106.046,
+          "score": 0.764
+        }
+      ]
+    },
+    {
+      "text": " Todos juntos pra sala do tempo O tempo passa diferente aqui Se eu prometo que eu vou te matar Quando eu elevar meu que Eu juro que irei voltar Se estou mais forte que o céu Me diga! Não! Você não está! Mas isso não me preocupa Um torneio céu te prometo que",
+      "start": 106.37,
+      "end": 130.686,
+      "avg_logprob": -0.18756970674244325,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Todos",
+          "start": 106.39,
+          "end": 106.83,
+          "score": 0.779
+        },
+        {
+          "word": "juntos",
+          "start": 106.85,
+          "end": 107.231,
+          "score": 0.694
+        },
+        {
+          "word": "pra",
+          "start": 107.251,
+          "end": 107.431,
+          "score": 0.78
+        },
+        {
+          "word": "sala",
+          "start": 107.531,
+          "end": 107.911,
+          "score": 0.74
+        },
+        {
+          "word": "do",
+          "start": 107.931,
+          "end": 108.051,
+          "score": 0.754
+        },
+        {
+          "word": "tempo",
+          "start": 108.191,
+          "end": 108.792,
+          "score": 0.913
+        },
+        {
+          "word": "O",
+          "start": 108.812,
+          "end": 108.832,
+          "score": 0.0
+        },
+        {
+          "word": "tempo",
+          "start": 109.552,
+          "end": 109.972,
+          "score": 0.447
+        },
+        {
+          "word": "passa",
+          "start": 110.052,
+          "end": 110.233,
+          "score": 0.519
+        },
+        {
+          "word": "diferente",
+          "start": 110.313,
+          "end": 110.893,
+          "score": 0.422
+        },
+        {
+          "word": "aqui",
+          "start": 110.993,
+          "end": 111.633,
+          "score": 0.736
+        },
+        {
+          "word": "Se",
+          "start": 111.974,
+          "end": 112.034,
+          "score": 0.951
+        },
+        {
+          "word": "eu",
+          "start": 112.054,
+          "end": 112.134,
+          "score": 0.732
+        },
+        {
+          "word": "prometo",
+          "start": 112.174,
+          "end": 112.574,
+          "score": 0.741
+        },
+        {
+          "word": "que",
+          "start": 112.594,
+          "end": 112.674,
+          "score": 0.835
+        },
+        {
+          "word": "eu",
+          "start": 112.694,
+          "end": 112.754,
+          "score": 0.782
+        },
+        {
+          "word": "vou",
+          "start": 112.794,
+          "end": 113.174,
+          "score": 0.721
+        },
+        {
+          "word": "te",
+          "start": 113.194,
+          "end": 113.235,
+          "score": 0.306
+        },
+        {
+          "word": "matar",
+          "start": 113.275,
+          "end": 113.875,
+          "score": 0.774
+        },
+        {
+          "word": "Quando",
+          "start": 114.195,
+          "end": 114.395,
+          "score": 0.833
+        },
+        {
+          "word": "eu",
+          "start": 114.435,
+          "end": 114.535,
+          "score": 0.743
+        },
+        {
+          "word": "elevar",
+          "start": 114.595,
+          "end": 115.036,
+          "score": 0.789
+        },
+        {
+          "word": "meu",
+          "start": 115.116,
+          "end": 115.376,
+          "score": 0.651
+        },
+        {
+          "word": "que",
+          "start": 115.456,
+          "end": 115.976,
+          "score": 0.453
+        },
+        {
+          "word": "Eu",
+          "start": 116.257,
+          "end": 116.357,
+          "score": 0.609
+        },
+        {
+          "word": "juro",
+          "start": 116.397,
+          "end": 116.637,
+          "score": 0.856
+        },
+        {
+          "word": "que",
+          "start": 116.717,
+          "end": 117.297,
+          "score": 0.767
+        },
+        {
+          "word": "irei",
+          "start": 117.317,
+          "end": 117.597,
+          "score": 0.404
+        },
+        {
+          "word": "voltar",
+          "start": 117.657,
+          "end": 118.498,
+          "score": 0.79
+        },
+        {
+          "word": "Se",
+          "start": 118.678,
+          "end": 118.738,
+          "score": 0.984
+        },
+        {
+          "word": "estou",
+          "start": 118.778,
+          "end": 118.958,
+          "score": 0.743
+        },
+        {
+          "word": "mais",
+          "start": 118.998,
+          "end": 119.158,
+          "score": 0.74
+        },
+        {
+          "word": "forte",
+          "start": 119.238,
+          "end": 119.739,
+          "score": 0.642
+        },
+        {
+          "word": "que",
+          "start": 119.799,
+          "end": 119.879,
+          "score": 0.846
+        },
+        {
+          "word": "o",
+          "start": 119.919,
+          "end": 119.959,
+          "score": 0.076
+        },
+        {
+          "word": "céu",
+          "start": 120.079,
+          "end": 120.399,
+          "score": 0.744
+        },
+        {
+          "word": "Me",
+          "start": 120.419,
+          "end": 120.459,
+          "score": 0.001
+        },
+        {
+          "word": "diga!",
+          "start": 120.539,
+          "end": 120.659,
+          "score": 0.374
+        },
+        {
+          "word": "Não!",
+          "start": 120.699,
+          "end": 120.799,
+          "score": 0.288
+        },
+        {
+          "word": "Você",
+          "start": 120.82,
+          "end": 120.96,
+          "score": 0.238
+        },
+        {
+          "word": "não",
+          "start": 120.98,
+          "end": 121.26,
+          "score": 0.506
+        },
+        {
+          "word": "está!",
+          "start": 121.28,
+          "end": 121.88,
+          "score": 0.587
+        },
+        {
+          "word": "Mas",
+          "start": 124.402,
+          "end": 124.742,
+          "score": 0.819
+        },
+        {
+          "word": "isso",
+          "start": 124.782,
+          "end": 124.982,
+          "score": 0.995
+        },
+        {
+          "word": "não",
+          "start": 125.042,
+          "end": 125.242,
+          "score": 0.752
+        },
+        {
+          "word": "me",
+          "start": 125.262,
+          "end": 125.302,
+          "score": 0.002
+        },
+        {
+          "word": "preocupa",
+          "start": 125.663,
+          "end": 128.344,
+          "score": 0.765
+        },
+        {
+          "word": "Um",
+          "start": 128.505,
+          "end": 128.545,
+          "score": 0.211
+        },
+        {
+          "word": "torneio",
+          "start": 128.605,
+          "end": 129.005,
+          "score": 0.582
+        },
+        {
+          "word": "céu",
+          "start": 129.045,
+          "end": 129.345,
+          "score": 0.637
+        },
+        {
+          "word": "te",
+          "start": 129.365,
+          "end": 129.445,
+          "score": 0.641
+        },
+        {
+          "word": "prometo",
+          "start": 129.505,
+          "end": 129.946,
+          "score": 0.938
+        },
+        {
+          "word": "que",
+          "start": 129.986,
+          "end": 130.326,
+          "score": 0.471
+        }
+      ]
+    },
+    {
+      "text": " Tem um guerreiro que se não vence Eu desisto, venha, meu filho E mostre para o céu todo o seu poder Acho que errei como um pai Me perdoe, filho Farei o que for capaz Era meu sacrifício Seu desintegrado em nível celular Pelo seu caminhameia Autorizado a voltar pra terra Nesse torneio eu também vou lutar",
+      "start": 130.85,
+      "end": 157.726,
+      "avg_logprob": -0.20611348502776203,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Tem",
+          "start": 130.87,
+          "end": 131.05,
+          "score": 0.865
+        },
+        {
+          "word": "um",
+          "start": 131.09,
+          "end": 131.15,
+          "score": 0.352
+        },
+        {
+          "word": "guerreiro",
+          "start": 131.19,
+          "end": 131.871,
+          "score": 0.763
+        },
+        {
+          "word": "que",
+          "start": 131.911,
+          "end": 131.991,
+          "score": 0.954
+        },
+        {
+          "word": "se",
+          "start": 132.091,
+          "end": 132.191,
+          "score": 0.917
+        },
+        {
+          "word": "não",
+          "start": 132.211,
+          "end": 132.331,
+          "score": 0.678
+        },
+        {
+          "word": "vence",
+          "start": 132.391,
+          "end": 133.031,
+          "score": 0.859
+        },
+        {
+          "word": "Eu",
+          "start": 133.311,
+          "end": 133.392,
+          "score": 0.905
+        },
+        {
+          "word": "desisto,",
+          "start": 133.432,
+          "end": 133.832,
+          "score": 0.741
+        },
+        {
+          "word": "venha,",
+          "start": 133.892,
+          "end": 134.292,
+          "score": 0.837
+        },
+        {
+          "word": "meu",
+          "start": 134.492,
+          "end": 134.692,
+          "score": 0.824
+        },
+        {
+          "word": "filho",
+          "start": 134.792,
+          "end": 135.333,
+          "score": 0.77
+        },
+        {
+          "word": "E",
+          "start": 135.613,
+          "end": 135.653,
+          "score": 0.747
+        },
+        {
+          "word": "mostre",
+          "start": 135.693,
+          "end": 135.953,
+          "score": 0.963
+        },
+        {
+          "word": "para",
+          "start": 136.013,
+          "end": 136.153,
+          "score": 0.991
+        },
+        {
+          "word": "o",
+          "start": 136.193,
+          "end": 136.233,
+          "score": 0.681
+        },
+        {
+          "word": "céu",
+          "start": 136.313,
+          "end": 136.553,
+          "score": 0.884
+        },
+        {
+          "word": "todo",
+          "start": 136.593,
+          "end": 136.834,
+          "score": 0.784
+        },
+        {
+          "word": "o",
+          "start": 136.854,
+          "end": 136.874,
+          "score": 0.0
+        },
+        {
+          "word": "seu",
+          "start": 136.914,
+          "end": 137.034,
+          "score": 0.964
+        },
+        {
+          "word": "poder",
+          "start": 137.074,
+          "end": 137.534,
+          "score": 0.831
+        },
+        {
+          "word": "Acho",
+          "start": 137.734,
+          "end": 137.934,
+          "score": 0.54
+        },
+        {
+          "word": "que",
+          "start": 137.974,
+          "end": 138.054,
+          "score": 0.834
+        },
+        {
+          "word": "errei",
+          "start": 138.114,
+          "end": 138.374,
+          "score": 0.516
+        },
+        {
+          "word": "como",
+          "start": 138.435,
+          "end": 138.595,
+          "score": 0.626
+        },
+        {
+          "word": "um",
+          "start": 138.655,
+          "end": 138.735,
+          "score": 0.434
+        },
+        {
+          "word": "pai",
+          "start": 138.795,
+          "end": 138.895,
+          "score": 0.232
+        },
+        {
+          "word": "Me",
+          "start": 140.196,
+          "end": 140.316,
+          "score": 0.864
+        },
+        {
+          "word": "perdoe,",
+          "start": 140.396,
+          "end": 140.996,
+          "score": 0.896
+        },
+        {
+          "word": "filho",
+          "start": 141.116,
+          "end": 142.197,
+          "score": 0.905
+        },
+        {
+          "word": "Farei",
+          "start": 142.537,
+          "end": 142.897,
+          "score": 0.839
+        },
+        {
+          "word": "o",
+          "start": 142.937,
+          "end": 142.957,
+          "score": 0.947
+        },
+        {
+          "word": "que",
+          "start": 142.997,
+          "end": 143.137,
+          "score": 0.784
+        },
+        {
+          "word": "for",
+          "start": 143.217,
+          "end": 143.357,
+          "score": 0.55
+        },
+        {
+          "word": "capaz",
+          "start": 143.417,
+          "end": 144.958,
+          "score": 0.841
+        },
+        {
+          "word": "Era",
+          "start": 144.998,
+          "end": 145.239,
+          "score": 0.803
+        },
+        {
+          "word": "meu",
+          "start": 145.259,
+          "end": 145.399,
+          "score": 0.291
+        },
+        {
+          "word": "sacrifício",
+          "start": 145.459,
+          "end": 147.72,
+          "score": 0.865
+        },
+        {
+          "word": "Seu",
+          "start": 147.78,
+          "end": 147.92,
+          "score": 0.893
+        },
+        {
+          "word": "desintegrado",
+          "start": 147.96,
+          "end": 148.561,
+          "score": 0.61
+        },
+        {
+          "word": "em",
+          "start": 148.641,
+          "end": 148.681,
+          "score": 0.184
+        },
+        {
+          "word": "nível",
+          "start": 148.701,
+          "end": 148.961,
+          "score": 0.441
+        },
+        {
+          "word": "celular",
+          "start": 149.041,
+          "end": 149.621,
+          "score": 0.646
+        },
+        {
+          "word": "Pelo",
+          "start": 150.522,
+          "end": 150.762,
+          "score": 0.893
+        },
+        {
+          "word": "seu",
+          "start": 150.842,
+          "end": 151.102,
+          "score": 0.778
+        },
+        {
+          "word": "caminhameia",
+          "start": 151.162,
+          "end": 152.383,
+          "score": 0.758
+        },
+        {
+          "word": "Autorizado",
+          "start": 152.843,
+          "end": 153.644,
+          "score": 0.9
+        },
+        {
+          "word": "a",
+          "start": 153.664,
+          "end": 153.764,
+          "score": 0.776
+        },
+        {
+          "word": "voltar",
+          "start": 153.804,
+          "end": 154.204,
+          "score": 0.745
+        },
+        {
+          "word": "pra",
+          "start": 154.244,
+          "end": 154.444,
+          "score": 0.706
+        },
+        {
+          "word": "terra",
+          "start": 154.604,
+          "end": 155.184,
+          "score": 0.811
+        },
+        {
+          "word": "Nesse",
+          "start": 155.225,
+          "end": 155.505,
+          "score": 0.804
+        },
+        {
+          "word": "torneio",
+          "start": 155.645,
+          "end": 156.145,
+          "score": 0.64
+        },
+        {
+          "word": "eu",
+          "start": 156.165,
+          "end": 156.205,
+          "score": 0.032
+        },
+        {
+          "word": "também",
+          "start": 156.265,
+          "end": 156.645,
+          "score": 0.505
+        },
+        {
+          "word": "vou",
+          "start": 156.865,
+          "end": 156.926,
+          "score": 0.178
+        },
+        {
+          "word": "lutar",
+          "start": 156.966,
+          "end": 157.186,
+          "score": 0.628
+        }
+      ]
+    },
+    {
+      "text": " Mas guerreiros inesperados Que acabam estragando a festa Com um poder limitado Carregam um M na testa O magimbo voltou e quer destruição Não me diga que vegeta você não Se entregou pro mal, você quer me vencer Mas saiba final, eu sou bem mais forte que você Matando pessoas Você não é isso Pense em sua mulher e no seu filho",
+      "start": 158.082,
+      "end": 184.446,
+      "avg_logprob": -0.1600949240978374,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Mas",
+          "start": 158.102,
+          "end": 158.242,
+          "score": 0.663
+        },
+        {
+          "word": "guerreiros",
+          "start": 158.282,
+          "end": 158.723,
+          "score": 0.689
+        },
+        {
+          "word": "inesperados",
+          "start": 158.803,
+          "end": 160.124,
+          "score": 0.922
+        },
+        {
+          "word": "Que",
+          "start": 160.484,
+          "end": 160.564,
+          "score": 0.843
+        },
+        {
+          "word": "acabam",
+          "start": 160.584,
+          "end": 160.905,
+          "score": 0.904
+        },
+        {
+          "word": "estragando",
+          "start": 161.005,
+          "end": 161.425,
+          "score": 0.839
+        },
+        {
+          "word": "a",
+          "start": 161.445,
+          "end": 161.465,
+          "score": 0.881
+        },
+        {
+          "word": "festa",
+          "start": 161.545,
+          "end": 162.426,
+          "score": 0.913
+        },
+        {
+          "word": "Com",
+          "start": 162.886,
+          "end": 163.047,
+          "score": 0.793
+        },
+        {
+          "word": "um",
+          "start": 163.087,
+          "end": 163.147,
+          "score": 0.666
+        },
+        {
+          "word": "poder",
+          "start": 163.187,
+          "end": 163.607,
+          "score": 0.933
+        },
+        {
+          "word": "limitado",
+          "start": 163.627,
+          "end": 164.828,
+          "score": 0.905
+        },
+        {
+          "word": "Carregam",
+          "start": 165.289,
+          "end": 165.769,
+          "score": 0.722
+        },
+        {
+          "word": "um",
+          "start": 165.849,
+          "end": 165.909,
+          "score": 0.604
+        },
+        {
+          "word": "M",
+          "start": 166.069,
+          "end": 166.129,
+          "score": 0.902
+        },
+        {
+          "word": "na",
+          "start": 166.209,
+          "end": 166.269,
+          "score": 0.24
+        },
+        {
+          "word": "testa",
+          "start": 166.41,
+          "end": 167.11,
+          "score": 0.838
+        },
+        {
+          "word": "O",
+          "start": 167.811,
+          "end": 167.851,
+          "score": 0.564
+        },
+        {
+          "word": "magimbo",
+          "start": 167.911,
+          "end": 168.291,
+          "score": 0.746
+        },
+        {
+          "word": "voltou",
+          "start": 168.331,
+          "end": 168.832,
+          "score": 0.572
+        },
+        {
+          "word": "e",
+          "start": 168.892,
+          "end": 168.952,
+          "score": 0.67
+        },
+        {
+          "word": "quer",
+          "start": 168.992,
+          "end": 169.252,
+          "score": 0.751
+        },
+        {
+          "word": "destruição",
+          "start": 169.272,
+          "end": 170.353,
+          "score": 0.857
+        },
+        {
+          "word": "Não",
+          "start": 170.393,
+          "end": 170.513,
+          "score": 0.803
+        },
+        {
+          "word": "me",
+          "start": 170.533,
+          "end": 170.633,
+          "score": 0.976
+        },
+        {
+          "word": "diga",
+          "start": 170.693,
+          "end": 170.914,
+          "score": 0.876
+        },
+        {
+          "word": "que",
+          "start": 170.994,
+          "end": 171.274,
+          "score": 0.771
+        },
+        {
+          "word": "vegeta",
+          "start": 171.314,
+          "end": 171.875,
+          "score": 0.698
+        },
+        {
+          "word": "você",
+          "start": 171.915,
+          "end": 172.215,
+          "score": 0.751
+        },
+        {
+          "word": "não",
+          "start": 172.255,
+          "end": 172.695,
+          "score": 0.888
+        },
+        {
+          "word": "Se",
+          "start": 172.835,
+          "end": 172.875,
+          "score": 0.262
+        },
+        {
+          "word": "entregou",
+          "start": 172.895,
+          "end": 173.236,
+          "score": 0.83
+        },
+        {
+          "word": "pro",
+          "start": 173.276,
+          "end": 173.416,
+          "score": 0.818
+        },
+        {
+          "word": "mal,",
+          "start": 173.456,
+          "end": 173.716,
+          "score": 0.546
+        },
+        {
+          "word": "você",
+          "start": 173.796,
+          "end": 174.117,
+          "score": 0.632
+        },
+        {
+          "word": "quer",
+          "start": 174.157,
+          "end": 174.277,
+          "score": 0.883
+        },
+        {
+          "word": "me",
+          "start": 174.317,
+          "end": 174.417,
+          "score": 0.828
+        },
+        {
+          "word": "vencer",
+          "start": 174.457,
+          "end": 174.917,
+          "score": 0.82
+        },
+        {
+          "word": "Mas",
+          "start": 175.077,
+          "end": 175.258,
+          "score": 0.689
+        },
+        {
+          "word": "saiba",
+          "start": 175.298,
+          "end": 175.638,
+          "score": 0.876
+        },
+        {
+          "word": "final,",
+          "start": 175.718,
+          "end": 176.118,
+          "score": 0.687
+        },
+        {
+          "word": "eu",
+          "start": 176.178,
+          "end": 176.259,
+          "score": 0.476
+        },
+        {
+          "word": "sou",
+          "start": 176.339,
+          "end": 176.479,
+          "score": 0.563
+        },
+        {
+          "word": "bem",
+          "start": 176.519,
+          "end": 176.699,
+          "score": 0.715
+        },
+        {
+          "word": "mais",
+          "start": 176.739,
+          "end": 176.919,
+          "score": 0.875
+        },
+        {
+          "word": "forte",
+          "start": 176.959,
+          "end": 177.32,
+          "score": 0.953
+        },
+        {
+          "word": "que",
+          "start": 177.36,
+          "end": 177.52,
+          "score": 0.794
+        },
+        {
+          "word": "você",
+          "start": 177.58,
+          "end": 178.06,
+          "score": 0.982
+        },
+        {
+          "word": "Matando",
+          "start": 178.841,
+          "end": 179.281,
+          "score": 0.948
+        },
+        {
+          "word": "pessoas",
+          "start": 179.361,
+          "end": 180.062,
+          "score": 1.0
+        },
+        {
+          "word": "Você",
+          "start": 180.322,
+          "end": 181.103,
+          "score": 0.841
+        },
+        {
+          "word": "não",
+          "start": 181.283,
+          "end": 181.663,
+          "score": 0.699
+        },
+        {
+          "word": "é",
+          "start": 181.764,
+          "end": 181.804,
+          "score": 0.5
+        },
+        {
+          "word": "isso",
+          "start": 182.084,
+          "end": 182.264,
+          "score": 0.458
+        },
+        {
+          "word": "Pense",
+          "start": 182.444,
+          "end": 182.764,
+          "score": 0.917
+        },
+        {
+          "word": "em",
+          "start": 182.784,
+          "end": 182.825,
+          "score": 0.55
+        },
+        {
+          "word": "sua",
+          "start": 182.885,
+          "end": 183.045,
+          "score": 0.832
+        },
+        {
+          "word": "mulher",
+          "start": 183.085,
+          "end": 183.425,
+          "score": 0.832
+        },
+        {
+          "word": "e",
+          "start": 183.465,
+          "end": 183.485,
+          "score": 0.999
+        },
+        {
+          "word": "no",
+          "start": 183.525,
+          "end": 183.605,
+          "score": 0.746
+        },
+        {
+          "word": "seu",
+          "start": 183.665,
+          "end": 183.785,
+          "score": 0.931
+        },
+        {
+          "word": "filho",
+          "start": 183.906,
+          "end": 184.226,
+          "score": 0.654
+        }
+      ]
+    },
+    {
+      "text": " Após seu sacrifício, elevando mais uma vez, esse é o Super Saiyajin Niveau 3! Precisamos nos fundir para vencer o Madin Ver de tapé, cobrinco, potaraí Não é o suficiente, mas não será extensão! Jinguidama! Todo junto, levando em as mãos!",
+      "start": 184.642,
+      "end": 204.062,
+      "avg_logprob": -0.3766285444681461,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Após",
+          "start": 184.702,
+          "end": 185.002,
+          "score": 0.999
+        },
+        {
+          "word": "seu",
+          "start": 185.042,
+          "end": 185.163,
+          "score": 0.845
+        },
+        {
+          "word": "sacrifício,",
+          "start": 185.223,
+          "end": 185.963,
+          "score": 0.988
+        },
+        {
+          "word": "elevando",
+          "start": 186.204,
+          "end": 186.624,
+          "score": 0.885
+        },
+        {
+          "word": "mais",
+          "start": 186.664,
+          "end": 186.864,
+          "score": 0.811
+        },
+        {
+          "word": "uma",
+          "start": 186.904,
+          "end": 187.024,
+          "score": 0.993
+        },
+        {
+          "word": "vez,",
+          "start": 187.105,
+          "end": 187.445,
+          "score": 0.998
+        },
+        {
+          "word": "esse",
+          "start": 187.745,
+          "end": 187.985,
+          "score": 0.752
+        },
+        {
+          "word": "é",
+          "start": 188.005,
+          "end": 188.025,
+          "score": 0.001
+        },
+        {
+          "word": "o",
+          "start": 188.066,
+          "end": 188.106,
+          "score": 0.591
+        },
+        {
+          "word": "Super",
+          "start": 188.206,
+          "end": 188.526,
+          "score": 0.953
+        },
+        {
+          "word": "Saiyajin",
+          "start": 188.586,
+          "end": 189.167,
+          "score": 0.617
+        },
+        {
+          "word": "Niveau",
+          "start": 189.187,
+          "end": 189.547,
+          "score": 0.424
+        },
+        {
+          "word": "3!",
+          "start": 189.587,
+          "end": 189.687,
+          "score": 0.945
+        },
+        {
+          "word": "Precisamos",
+          "start": 189.807,
+          "end": 192.33,
+          "score": 0.559
+        },
+        {
+          "word": "nos",
+          "start": 192.35,
+          "end": 192.45,
+          "score": 0.407
+        },
+        {
+          "word": "fundir",
+          "start": 192.51,
+          "end": 192.81,
+          "score": 0.587
+        },
+        {
+          "word": "para",
+          "start": 192.85,
+          "end": 193.111,
+          "score": 0.864
+        },
+        {
+          "word": "vencer",
+          "start": 193.151,
+          "end": 193.511,
+          "score": 0.939
+        },
+        {
+          "word": "o",
+          "start": 193.531,
+          "end": 193.551,
+          "score": 0.001
+        },
+        {
+          "word": "Madin",
+          "start": 193.651,
+          "end": 194.212,
+          "score": 0.669
+        },
+        {
+          "word": "Ver",
+          "start": 194.472,
+          "end": 194.572,
+          "score": 0.335
+        },
+        {
+          "word": "de",
+          "start": 194.592,
+          "end": 194.732,
+          "score": 0.716
+        },
+        {
+          "word": "tapé,",
+          "start": 194.772,
+          "end": 195.053,
+          "score": 0.872
+        },
+        {
+          "word": "cobrinco,",
+          "start": 195.093,
+          "end": 195.673,
+          "score": 0.836
+        },
+        {
+          "word": "potaraí",
+          "start": 195.713,
+          "end": 196.774,
+          "score": 0.879
+        },
+        {
+          "word": "Não",
+          "start": 196.995,
+          "end": 197.135,
+          "score": 0.85
+        },
+        {
+          "word": "é",
+          "start": 197.215,
+          "end": 197.255,
+          "score": 0.719
+        },
+        {
+          "word": "o",
+          "start": 197.275,
+          "end": 197.335,
+          "score": 0.464
+        },
+        {
+          "word": "suficiente,",
+          "start": 197.355,
+          "end": 198.076,
+          "score": 0.593
+        },
+        {
+          "word": "mas",
+          "start": 198.116,
+          "end": 198.276,
+          "score": 0.894
+        },
+        {
+          "word": "não",
+          "start": 198.296,
+          "end": 198.436,
+          "score": 0.287
+        },
+        {
+          "word": "será",
+          "start": 198.456,
+          "end": 198.797,
+          "score": 0.802
+        },
+        {
+          "word": "extensão!",
+          "start": 198.837,
+          "end": 199.898,
+          "score": 0.723
+        },
+        {
+          "word": "Jinguidama!",
+          "start": 199.918,
+          "end": 200.719,
+          "score": 0.537
+        },
+        {
+          "word": "Todo",
+          "start": 201.139,
+          "end": 201.539,
+          "score": 0.674
+        },
+        {
+          "word": "junto,",
+          "start": 201.579,
+          "end": 202.18,
+          "score": 0.632
+        },
+        {
+          "word": "levando",
+          "start": 202.22,
+          "end": 202.54,
+          "score": 0.506
+        },
+        {
+          "word": "em",
+          "start": 202.621,
+          "end": 202.681,
+          "score": 0.268
+        },
+        {
+          "word": "as",
+          "start": 202.761,
+          "end": 202.841,
+          "score": 0.74
+        },
+        {
+          "word": "mãos!",
+          "start": 202.901,
+          "end": 204.062,
+          "score": 0.505
+        }
+      ]
+    },
+    {
+      "text": " Você já conseguirão me enfrentar O meu poder se elevar, Goku",
+      "start": 208.194,
+      "end": 219.582,
+      "avg_logprob": -0.4290507920086384,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Você",
+          "start": 208.654,
+          "end": 209.235,
+          "score": 0.714
+        },
+        {
+          "word": "já",
+          "start": 209.255,
+          "end": 209.295,
+          "score": 0.0
+        },
+        {
+          "word": "conseguirão",
+          "start": 209.315,
+          "end": 209.975,
+          "score": 0.493
+        },
+        {
+          "word": "me",
+          "start": 210.215,
+          "end": 210.356,
+          "score": 0.745
+        },
+        {
+          "word": "enfrentar",
+          "start": 210.376,
+          "end": 210.836,
+          "score": 0.412
+        },
+        {
+          "word": "O",
+          "start": 210.856,
+          "end": 210.876,
+          "score": 0.855
+        },
+        {
+          "word": "meu",
+          "start": 210.976,
+          "end": 211.036,
+          "score": 0.002
+        },
+        {
+          "word": "poder",
+          "start": 211.096,
+          "end": 211.296,
+          "score": 0.394
+        },
+        {
+          "word": "se",
+          "start": 211.376,
+          "end": 211.416,
+          "score": 0.418
+        },
+        {
+          "word": "elevar,",
+          "start": 211.456,
+          "end": 211.997,
+          "score": 0.64
+        },
+        {
+          "word": "Goku",
+          "start": 212.037,
+          "end": 212.117,
+          "score": 0.001
+        }
+      ]
+    },
+    {
+      "text": " Tantos inimigos me trouxeram aqui Nessa arena tem o que levar o que? Os guerreiros mais fortes de vários universos Mas contra a gerância do que não estou nem perto Levanto as mãos novamente Ele está na minha frente Revidou o meu poder, tudo acaba aqui Não! Só existe limite Se deixar existir",
+      "start": 221.25,
+      "end": 245.086,
+      "avg_logprob": -0.18949710436769435,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Tantos",
+          "start": 221.61,
+          "end": 221.89,
+          "score": 0.814
+        },
+        {
+          "word": "inimigos",
+          "start": 221.97,
+          "end": 222.471,
+          "score": 0.943
+        },
+        {
+          "word": "me",
+          "start": 222.491,
+          "end": 222.571,
+          "score": 0.82
+        },
+        {
+          "word": "trouxeram",
+          "start": 222.631,
+          "end": 222.991,
+          "score": 0.857
+        },
+        {
+          "word": "aqui",
+          "start": 223.031,
+          "end": 223.311,
+          "score": 0.84
+        },
+        {
+          "word": "Nessa",
+          "start": 223.692,
+          "end": 223.912,
+          "score": 0.9
+        },
+        {
+          "word": "arena",
+          "start": 223.972,
+          "end": 224.352,
+          "score": 0.769
+        },
+        {
+          "word": "tem",
+          "start": 224.592,
+          "end": 224.732,
+          "score": 0.539
+        },
+        {
+          "word": "o",
+          "start": 224.792,
+          "end": 224.832,
+          "score": 0.114
+        },
+        {
+          "word": "que",
+          "start": 224.872,
+          "end": 225.013,
+          "score": 0.734
+        },
+        {
+          "word": "levar",
+          "start": 225.053,
+          "end": 225.353,
+          "score": 0.864
+        },
+        {
+          "word": "o",
+          "start": 225.393,
+          "end": 225.433,
+          "score": 0.726
+        },
+        {
+          "word": "que?",
+          "start": 225.473,
+          "end": 225.693,
+          "score": 0.848
+        },
+        {
+          "word": "Os",
+          "start": 226.113,
+          "end": 226.213,
+          "score": 0.751
+        },
+        {
+          "word": "guerreiros",
+          "start": 226.233,
+          "end": 226.654,
+          "score": 0.925
+        },
+        {
+          "word": "mais",
+          "start": 226.694,
+          "end": 226.934,
+          "score": 0.979
+        },
+        {
+          "word": "fortes",
+          "start": 226.974,
+          "end": 227.294,
+          "score": 0.939
+        },
+        {
+          "word": "de",
+          "start": 227.334,
+          "end": 227.394,
+          "score": 0.504
+        },
+        {
+          "word": "vários",
+          "start": 227.434,
+          "end": 227.734,
+          "score": 0.747
+        },
+        {
+          "word": "universos",
+          "start": 227.814,
+          "end": 228.635,
+          "score": 0.829
+        },
+        {
+          "word": "Mas",
+          "start": 228.815,
+          "end": 228.935,
+          "score": 0.995
+        },
+        {
+          "word": "contra",
+          "start": 228.975,
+          "end": 229.195,
+          "score": 0.85
+        },
+        {
+          "word": "a",
+          "start": 229.215,
+          "end": 229.275,
+          "score": 0.457
+        },
+        {
+          "word": "gerância",
+          "start": 229.295,
+          "end": 229.696,
+          "score": 0.594
+        },
+        {
+          "word": "do",
+          "start": 229.736,
+          "end": 229.836,
+          "score": 0.412
+        },
+        {
+          "word": "que",
+          "start": 229.876,
+          "end": 229.996,
+          "score": 0.429
+        },
+        {
+          "word": "não",
+          "start": 230.036,
+          "end": 230.216,
+          "score": 0.706
+        },
+        {
+          "word": "estou",
+          "start": 230.256,
+          "end": 230.436,
+          "score": 0.862
+        },
+        {
+          "word": "nem",
+          "start": 230.456,
+          "end": 230.576,
+          "score": 0.858
+        },
+        {
+          "word": "perto",
+          "start": 230.656,
+          "end": 230.997,
+          "score": 0.94
+        },
+        {
+          "word": "Levanto",
+          "start": 231.097,
+          "end": 231.657,
+          "score": 0.82
+        },
+        {
+          "word": "as",
+          "start": 231.757,
+          "end": 231.857,
+          "score": 0.988
+        },
+        {
+          "word": "mãos",
+          "start": 231.897,
+          "end": 232.137,
+          "score": 0.856
+        },
+        {
+          "word": "novamente",
+          "start": 232.177,
+          "end": 232.798,
+          "score": 0.917
+        },
+        {
+          "word": "Ele",
+          "start": 232.858,
+          "end": 232.978,
+          "score": 0.884
+        },
+        {
+          "word": "está",
+          "start": 232.998,
+          "end": 233.338,
+          "score": 0.863
+        },
+        {
+          "word": "na",
+          "start": 233.378,
+          "end": 233.478,
+          "score": 0.702
+        },
+        {
+          "word": "minha",
+          "start": 233.498,
+          "end": 233.618,
+          "score": 0.391
+        },
+        {
+          "word": "frente",
+          "start": 233.678,
+          "end": 234.059,
+          "score": 0.99
+        },
+        {
+          "word": "Revidou",
+          "start": 234.279,
+          "end": 234.739,
+          "score": 0.654
+        },
+        {
+          "word": "o",
+          "start": 234.799,
+          "end": 234.839,
+          "score": 0.548
+        },
+        {
+          "word": "meu",
+          "start": 234.879,
+          "end": 234.979,
+          "score": 0.418
+        },
+        {
+          "word": "poder,",
+          "start": 235.039,
+          "end": 235.44,
+          "score": 0.852
+        },
+        {
+          "word": "tudo",
+          "start": 235.5,
+          "end": 235.68,
+          "score": 0.835
+        },
+        {
+          "word": "acaba",
+          "start": 235.7,
+          "end": 236.0,
+          "score": 0.596
+        },
+        {
+          "word": "aqui",
+          "start": 236.02,
+          "end": 236.44,
+          "score": 0.875
+        },
+        {
+          "word": "Não!",
+          "start": 236.64,
+          "end": 237.221,
+          "score": 0.586
+        },
+        {
+          "word": "Só",
+          "start": 237.621,
+          "end": 237.761,
+          "score": 0.901
+        },
+        {
+          "word": "existe",
+          "start": 237.821,
+          "end": 238.261,
+          "score": 0.803
+        },
+        {
+          "word": "limite",
+          "start": 238.341,
+          "end": 240.003,
+          "score": 0.999
+        },
+        {
+          "word": "Se",
+          "start": 240.063,
+          "end": 240.183,
+          "score": 0.83
+        },
+        {
+          "word": "deixar",
+          "start": 240.223,
+          "end": 240.743,
+          "score": 0.768
+        },
+        {
+          "word": "existir",
+          "start": 240.783,
+          "end": 241.343,
+          "score": 0.828
+        }
+      ]
+    },
+    {
+      "text": " Negate no Goku! Quebrando o Neve, você não pode me tocar Desvio facilmente sem pensar em desviar Você dizia ser o mais forte desse unibraço Mas acho que meu instinto é superior Descobrindo o poder que eu sou capaz Tudo que você faz não adianta mais Negate completo, essa batalha é nossa Obrigado por ter me dado uma luta fervorosa Quem vencerá é o universo 7 E direi conhecerá-me",
+      "start": 245.602,
+      "end": 275.568,
+      "avg_logprob": -0.2477830929576226,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Negate",
+          "start": 245.682,
+          "end": 246.042,
+          "score": 0.533
+        },
+        {
+          "word": "no",
+          "start": 246.062,
+          "end": 246.102,
+          "score": 0.013
+        },
+        {
+          "word": "Goku!",
+          "start": 246.122,
+          "end": 246.242,
+          "score": 0.463
+        },
+        {
+          "word": "Quebrando",
+          "start": 246.282,
+          "end": 246.502,
+          "score": 0.076
+        },
+        {
+          "word": "o",
+          "start": 246.522,
+          "end": 246.542,
+          "score": 0.154
+        },
+        {
+          "word": "Neve,",
+          "start": 246.562,
+          "end": 246.782,
+          "score": 0.305
+        },
+        {
+          "word": "você",
+          "start": 251.823,
+          "end": 252.083,
+          "score": 0.961
+        },
+        {
+          "word": "não",
+          "start": 252.103,
+          "end": 252.203,
+          "score": 0.333
+        },
+        {
+          "word": "pode",
+          "start": 252.283,
+          "end": 252.483,
+          "score": 0.478
+        },
+        {
+          "word": "me",
+          "start": 252.503,
+          "end": 252.543,
+          "score": 0.0
+        },
+        {
+          "word": "tocar",
+          "start": 252.583,
+          "end": 252.703,
+          "score": 0.1
+        },
+        {
+          "word": "Desvio",
+          "start": 252.763,
+          "end": 253.003,
+          "score": 0.477
+        },
+        {
+          "word": "facilmente",
+          "start": 253.023,
+          "end": 253.304,
+          "score": 0.35
+        },
+        {
+          "word": "sem",
+          "start": 253.324,
+          "end": 253.404,
+          "score": 0.208
+        },
+        {
+          "word": "pensar",
+          "start": 253.424,
+          "end": 253.544,
+          "score": 0.131
+        },
+        {
+          "word": "em",
+          "start": 253.564,
+          "end": 253.604,
+          "score": 0.004
+        },
+        {
+          "word": "desviar",
+          "start": 253.644,
+          "end": 253.824,
+          "score": 0.209
+        },
+        {
+          "word": "Você",
+          "start": 253.844,
+          "end": 253.964,
+          "score": 0.46
+        },
+        {
+          "word": "dizia",
+          "start": 253.984,
+          "end": 254.104,
+          "score": 0.189
+        },
+        {
+          "word": "ser",
+          "start": 254.164,
+          "end": 254.224,
+          "score": 0.289
+        },
+        {
+          "word": "o",
+          "start": 254.244,
+          "end": 254.264,
+          "score": 0.122
+        },
+        {
+          "word": "mais",
+          "start": 254.284,
+          "end": 254.404,
+          "score": 0.399
+        },
+        {
+          "word": "forte",
+          "start": 254.424,
+          "end": 254.524,
+          "score": 0.004
+        },
+        {
+          "word": "desse",
+          "start": 254.544,
+          "end": 254.644,
+          "score": 0.15
+        },
+        {
+          "word": "unibraço",
+          "start": 254.664,
+          "end": 254.844,
+          "score": 0.076
+        },
+        {
+          "word": "Mas",
+          "start": 254.864,
+          "end": 254.924,
+          "score": 0.003
+        },
+        {
+          "word": "acho",
+          "start": 254.944,
+          "end": 255.044,
+          "score": 0.15
+        },
+        {
+          "word": "que",
+          "start": 255.064,
+          "end": 255.124,
+          "score": 0.023
+        },
+        {
+          "word": "meu",
+          "start": 255.144,
+          "end": 255.224,
+          "score": 0.162
+        },
+        {
+          "word": "instinto",
+          "start": 255.244,
+          "end": 255.484,
+          "score": 0.211
+        },
+        {
+          "word": "é",
+          "start": 255.544,
+          "end": 255.604,
+          "score": 0.779
+        },
+        {
+          "word": "superior",
+          "start": 255.684,
+          "end": 256.784,
+          "score": 0.874
+        },
+        {
+          "word": "Descobrindo",
+          "start": 256.864,
+          "end": 257.624,
+          "score": 0.716
+        },
+        {
+          "word": "o",
+          "start": 257.704,
+          "end": 257.744,
+          "score": 0.38
+        },
+        {
+          "word": "poder",
+          "start": 257.824,
+          "end": 258.305,
+          "score": 0.743
+        },
+        {
+          "word": "que",
+          "start": 258.405,
+          "end": 258.565,
+          "score": 0.724
+        },
+        {
+          "word": "eu",
+          "start": 258.625,
+          "end": 258.685,
+          "score": 0.508
+        },
+        {
+          "word": "sou",
+          "start": 258.725,
+          "end": 258.845,
+          "score": 0.581
+        },
+        {
+          "word": "capaz",
+          "start": 258.885,
+          "end": 259.365,
+          "score": 0.902
+        },
+        {
+          "word": "Tudo",
+          "start": 259.645,
+          "end": 259.825,
+          "score": 0.889
+        },
+        {
+          "word": "que",
+          "start": 259.925,
+          "end": 260.085,
+          "score": 0.86
+        },
+        {
+          "word": "você",
+          "start": 260.105,
+          "end": 260.425,
+          "score": 0.532
+        },
+        {
+          "word": "faz",
+          "start": 260.545,
+          "end": 260.785,
+          "score": 0.593
+        },
+        {
+          "word": "não",
+          "start": 260.845,
+          "end": 260.965,
+          "score": 0.664
+        },
+        {
+          "word": "adianta",
+          "start": 260.985,
+          "end": 261.445,
+          "score": 0.724
+        },
+        {
+          "word": "mais",
+          "start": 261.485,
+          "end": 262.165,
+          "score": 0.71
+        },
+        {
+          "word": "Negate",
+          "start": 262.205,
+          "end": 262.745,
+          "score": 0.729
+        },
+        {
+          "word": "completo,",
+          "start": 262.785,
+          "end": 263.426,
+          "score": 0.844
+        },
+        {
+          "word": "essa",
+          "start": 263.466,
+          "end": 263.666,
+          "score": 0.595
+        },
+        {
+          "word": "batalha",
+          "start": 263.726,
+          "end": 264.126,
+          "score": 0.744
+        },
+        {
+          "word": "é",
+          "start": 264.146,
+          "end": 264.166,
+          "score": 0.0
+        },
+        {
+          "word": "nossa",
+          "start": 264.186,
+          "end": 264.626,
+          "score": 0.921
+        },
+        {
+          "word": "Obrigado",
+          "start": 264.866,
+          "end": 265.326,
+          "score": 0.88
+        },
+        {
+          "word": "por",
+          "start": 265.386,
+          "end": 265.506,
+          "score": 0.959
+        },
+        {
+          "word": "ter",
+          "start": 265.546,
+          "end": 265.666,
+          "score": 0.788
+        },
+        {
+          "word": "me",
+          "start": 265.706,
+          "end": 265.826,
+          "score": 0.623
+        },
+        {
+          "word": "dado",
+          "start": 265.846,
+          "end": 266.086,
+          "score": 0.673
+        },
+        {
+          "word": "uma",
+          "start": 266.126,
+          "end": 266.266,
+          "score": 0.938
+        },
+        {
+          "word": "luta",
+          "start": 266.326,
+          "end": 266.546,
+          "score": 0.863
+        },
+        {
+          "word": "fervorosa",
+          "start": 266.626,
+          "end": 267.686,
+          "score": 0.949
+        },
+        {
+          "word": "Quem",
+          "start": 268.467,
+          "end": 269.207,
+          "score": 0.824
+        },
+        {
+          "word": "vencerá",
+          "start": 269.267,
+          "end": 270.287,
+          "score": 0.922
+        },
+        {
+          "word": "é",
+          "start": 270.607,
+          "end": 270.707,
+          "score": 0.701
+        },
+        {
+          "word": "o",
+          "start": 270.787,
+          "end": 270.847,
+          "score": 0.377
+        },
+        {
+          "word": "universo",
+          "start": 270.907,
+          "end": 271.567,
+          "score": 0.948
+        },
+        {
+          "word": "7",
+          "start": 272.087,
+          "end": 272.767,
+          "score": 0.961
+        },
+        {
+          "word": "E",
+          "start": 272.787,
+          "end": 272.807,
+          "score": 0.0
+        },
+        {
+          "word": "direi",
+          "start": 273.288,
+          "end": 273.968,
+          "score": 0.714
+        },
+        {
+          "word": "conhecerá-me",
+          "start": 274.188,
+          "end": 275.508,
+          "score": 0.831
+        }
+      ]
+    },
+    {
+      "text": " A sua derrota virá Preciso elevar o que? Nunca virão guerreiro assim Esse é o poder de um super saiaje Vocês não conseguirão me enfrentar O meu poder se elevar Goku!",
+      "start": 275.568,
+      "end": 298.75,
+      "avg_logprob": -0.3262972150530134,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "A",
+          "start": 276.209,
+          "end": 276.229,
+          "score": 0.0
+        },
+        {
+          "word": "sua",
+          "start": 276.749,
+          "end": 277.009,
+          "score": 0.892
+        },
+        {
+          "word": "derrota",
+          "start": 277.15,
+          "end": 277.51,
+          "score": 0.591
+        },
+        {
+          "word": "virá",
+          "start": 277.57,
+          "end": 277.65,
+          "score": 0.001
+        },
+        {
+          "word": "Preciso",
+          "start": 277.69,
+          "end": 283.896,
+          "score": 0.609
+        },
+        {
+          "word": "elevar",
+          "start": 283.916,
+          "end": 284.076,
+          "score": 0.25
+        },
+        {
+          "word": "o",
+          "start": 284.096,
+          "end": 284.116,
+          "score": 0.048
+        },
+        {
+          "word": "que?",
+          "start": 284.136,
+          "end": 284.276,
+          "score": 0.426
+        },
+        {
+          "word": "Nunca",
+          "start": 284.296,
+          "end": 284.396,
+          "score": 0.223
+        },
+        {
+          "word": "virão",
+          "start": 284.416,
+          "end": 284.516,
+          "score": 0.0
+        },
+        {
+          "word": "guerreiro",
+          "start": 284.557,
+          "end": 284.817,
+          "score": 0.344
+        },
+        {
+          "word": "assim",
+          "start": 285.197,
+          "end": 285.818,
+          "score": 0.869
+        },
+        {
+          "word": "Esse",
+          "start": 285.938,
+          "end": 286.538,
+          "score": 0.852
+        },
+        {
+          "word": "é",
+          "start": 286.679,
+          "end": 286.799,
+          "score": 0.903
+        },
+        {
+          "word": "o",
+          "start": 287.099,
+          "end": 287.219,
+          "score": 0.787
+        },
+        {
+          "word": "poder",
+          "start": 287.319,
+          "end": 288.1,
+          "score": 0.68
+        },
+        {
+          "word": "de",
+          "start": 288.36,
+          "end": 288.64,
+          "score": 0.952
+        },
+        {
+          "word": "um",
+          "start": 288.761,
+          "end": 289.161,
+          "score": 0.857
+        },
+        {
+          "word": "super",
+          "start": 289.181,
+          "end": 289.481,
+          "score": 0.712
+        },
+        {
+          "word": "saiaje",
+          "start": 289.581,
+          "end": 290.662,
+          "score": 0.877
+        },
+        {
+          "word": "Vocês",
+          "start": 290.963,
+          "end": 291.203,
+          "score": 0.8
+        },
+        {
+          "word": "não",
+          "start": 291.243,
+          "end": 291.363,
+          "score": 0.625
+        },
+        {
+          "word": "conseguirão",
+          "start": 291.403,
+          "end": 292.104,
+          "score": 0.796
+        },
+        {
+          "word": "me",
+          "start": 292.144,
+          "end": 292.224,
+          "score": 0.954
+        },
+        {
+          "word": "enfrentar",
+          "start": 292.244,
+          "end": 293.145,
+          "score": 0.53
+        },
+        {
+          "word": "O",
+          "start": 293.865,
+          "end": 293.925,
+          "score": 0.735
+        },
+        {
+          "word": "meu",
+          "start": 293.965,
+          "end": 294.086,
+          "score": 0.888
+        },
+        {
+          "word": "poder",
+          "start": 294.146,
+          "end": 294.766,
+          "score": 0.93
+        },
+        {
+          "word": "se",
+          "start": 295.046,
+          "end": 295.227,
+          "score": 0.919
+        },
+        {
+          "word": "elevar",
+          "start": 295.267,
+          "end": 296.027,
+          "score": 0.791
+        },
+        {
+          "word": "Goku!",
+          "start": 296.268,
+          "end": 298.75,
+          "score": 0.854
+        }
+      ]
+    }
+  ],
+  "blocos": [
+    {
+      "inicio": 1.834,
+      "fim": 7.537,
+      "texto": "Dizem que eu caí na terra De nada disso me lembro Dizem que bati a"
+    },
+    {
+      "inicio": 7.617,
+      "fim": 13.581,
+      "texto": "cabeça E isso me mudou por dentro A cobrança veio"
+    },
+    {
+      "inicio": 13.601,
+      "fim": 19.304,
+      "texto": "Nele disse que é meu irmão Nesse dia eu morri E ele anunciou uma"
+    },
+    {
+      "inicio": 19.384,
+      "fim": 21.626,
+      "texto": "invasão Foi a primeira vez que eu ouvi"
+    },
+    {
+      "inicio": 22.874,
+      "fim": 27.275,
+      "texto": "Sobre esses tais saiagens Quando elevo meu que é mais de oito mil Um"
+    },
+    {
+      "inicio": 27.335,
+      "fim": 32.216,
+      "texto": "poder que esse tal príncipe nunca viu Quem será que vai"
+    },
+    {
+      "inicio": 32.256,
+      "fim": 35.897,
+      "texto": "ganhar Galíquio contra a"
+    },
+    {
+      "inicio": 35.997,
+      "fim": 41.558,
+      "texto": "Kamehameha? Eu parei a vida dele, quero te ver de novo Em"
+    },
+    {
+      "inicio": 41.598,
+      "fim": 45.439,
+      "texto": "Namecuzê e o oponente é outro Com sua golpe rico foi, depois foi de Nil"
+    },
+    {
+      "inicio": 45.499,
+      "fim": 50.059,
+      "texto": "também Acho que não entenderão que meu poder vai além Vegeta chora, eu"
+    },
+    {
+      "inicio": 50.119,
+      "fim": 51.86,
+      "texto": "te prometo com frisa não"
+    },
+    {
+      "inicio": 53.6,
+      "fim": 58.281,
+      "texto": "Sua angústia devia ser imensa pra isso ter me implorado Ele diz que eu"
+    },
+    {
+      "inicio": 58.321,
+      "fim": 63.863,
+      "texto": "sou a lenda do super saiajilendário Por quem envolveu quem eu amassei"
+    },
+    {
+      "inicio": 63.923,
+      "fim": 68.824,
+      "texto": "Por que se matou o cuririz risa? Sente meu poder fluir Eleva"
+    },
+    {
+      "inicio": 68.844,
+      "fim": 72.665,
+      "texto": "Eleva o que? Gerar humilhador"
+    },
+    {
+      "inicio": 76.146,
+      "fim": 78.206,
+      "texto": "pelo saiaji Preciso evar o que?"
+    },
+    {
+      "inicio": 78.422,
+      "fim": 84.027,
+      "texto": "Nunca virão guerreiros, e esse é o poder De um super"
+    },
+    {
+      "inicio": 84.107,
+      "fim": 89.652,
+      "texto": "saiaje Vocês não conseguirão me enfrentar O meu poder se"
+    },
+    {
+      "inicio": 89.752,
+      "fim": 91.513,
+      "texto": "elevar, Goku! Camerrameira!"
+    },
+    {
+      "inicio": 94.156,
+      "fim": 97.739,
+      "texto": "Morri de uma doença Que se é constresdor Logo ao chegar na terra"
+    },
+    {
+      "inicio": 98.339,
+      "fim": 101.862,
+      "texto": "Guerreiro do futuro Androides nos aniquilarão Então começa o treinamento"
+    },
+    {
+      "inicio": 102.223,
+      "fim": 106.046,
+      "texto": "Vamos todos guerreiros, então"
+    },
+    {
+      "inicio": 106.39,
+      "fim": 108.832,
+      "texto": "Todos juntos pra sala do tempo O"
+    },
+    {
+      "inicio": 109.552,
+      "fim": 114.535,
+      "texto": "tempo passa diferente aqui Se eu prometo que eu vou te matar Quando eu"
+    },
+    {
+      "inicio": 114.595,
+      "fim": 120.459,
+      "texto": "elevar meu que Eu juro que irei voltar Se estou mais forte que o céu Me"
+    },
+    {
+      "inicio": 120.539,
+      "fim": 121.88,
+      "texto": "diga! Não! Você não está!"
+    },
+    {
+      "inicio": 124.402,
+      "fim": 130.326,
+      "texto": "Mas isso não me preocupa Um torneio céu te prometo que"
+    },
+    {
+      "inicio": 130.87,
+      "fim": 135.953,
+      "texto": "Tem um guerreiro que se não vence Eu desisto, venha, meu filho E mostre"
+    },
+    {
+      "inicio": 136.013,
+      "fim": 138.895,
+      "texto": "para o céu todo o seu poder Acho que errei como um pai"
+    },
+    {
+      "inicio": 140.196,
+      "fim": 145.399,
+      "texto": "Me perdoe, filho Farei o que for capaz Era meu"
+    },
+    {
+      "inicio": 145.459,
+      "fim": 149.621,
+      "texto": "sacrifício Seu desintegrado em nível celular"
+    },
+    {
+      "inicio": 150.522,
+      "fim": 156.205,
+      "texto": "Pelo seu caminhameia Autorizado a voltar pra terra Nesse torneio eu"
+    },
+    {
+      "inicio": 156.265,
+      "fim": 157.186,
+      "texto": "também vou lutar"
+    },
+    {
+      "inicio": 158.102,
+      "fim": 163.607,
+      "texto": "Mas guerreiros inesperados Que acabam estragando a festa Com um poder"
+    },
+    {
+      "inicio": 163.627,
+      "fim": 167.11,
+      "texto": "limitado Carregam um M na testa"
+    },
+    {
+      "inicio": 167.811,
+      "fim": 172.875,
+      "texto": "O magimbo voltou e quer destruição Não me diga que vegeta você não Se"
+    },
+    {
+      "inicio": 172.895,
+      "fim": 176.919,
+      "texto": "entregou pro mal, você quer me vencer Mas saiba final, eu sou bem mais"
+    },
+    {
+      "inicio": 176.959,
+      "fim": 178.06,
+      "texto": "forte que você"
+    },
+    {
+      "inicio": 178.841,
+      "fim": 184.226,
+      "texto": "Matando pessoas Você não é isso Pense em sua mulher e no seu filho"
+    },
+    {
+      "inicio": 184.702,
+      "fim": 189.167,
+      "texto": "Após seu sacrifício, elevando mais uma vez, esse é o Super Saiyajin"
+    },
+    {
+      "inicio": 189.187,
+      "fim": 195.053,
+      "texto": "Niveau 3! Precisamos nos fundir para vencer o Madin Ver de tapé,"
+    },
+    {
+      "inicio": 195.093,
+      "fim": 200.719,
+      "texto": "cobrinco, potaraí Não é o suficiente, mas não será extensão! Jinguidama!"
+    },
+    {
+      "inicio": 201.139,
+      "fim": 204.062,
+      "texto": "Todo junto, levando em as mãos!"
+    },
+    {
+      "inicio": 208.654,
+      "fim": 212.117,
+      "texto": "Você já conseguirão me enfrentar O meu poder se elevar, Goku"
+    },
+    {
+      "inicio": 221.61,
+      "fim": 226.213,
+      "texto": "Tantos inimigos me trouxeram aqui Nessa arena tem o que levar o que? Os"
+    },
+    {
+      "inicio": 226.233,
+      "fim": 229.996,
+      "texto": "guerreiros mais fortes de vários universos Mas contra a gerância do que"
+    },
+    {
+      "inicio": 230.036,
+      "fim": 234.059,
+      "texto": "não estou nem perto Levanto as mãos novamente Ele está na minha frente"
+    },
+    {
+      "inicio": 234.279,
+      "fim": 240.183,
+      "texto": "Revidou o meu poder, tudo acaba aqui Não! Só existe limite Se"
+    },
+    {
+      "inicio": 240.223,
+      "fim": 241.343,
+      "texto": "deixar existir"
+    },
+    {
+      "inicio": 245.682,
+      "fim": 246.782,
+      "texto": "Negate no Goku! Quebrando o Neve,"
+    },
+    {
+      "inicio": 251.823,
+      "fim": 253.964,
+      "texto": "você não pode me tocar Desvio facilmente sem pensar em desviar Você"
+    },
+    {
+      "inicio": 253.984,
+      "fim": 255.604,
+      "texto": "dizia ser o mais forte desse unibraço Mas acho que meu instinto é"
+    },
+    {
+      "inicio": 255.684,
+      "fim": 260.965,
+      "texto": "superior Descobrindo o poder que eu sou capaz Tudo que você faz não"
+    },
+    {
+      "inicio": 260.985,
+      "fim": 265.826,
+      "texto": "adianta mais Negate completo, essa batalha é nossa Obrigado por ter me"
+    },
+    {
+      "inicio": 265.846,
+      "fim": 267.686,
+      "texto": "dado uma luta fervorosa"
+    },
+    {
+      "inicio": 268.467,
+      "fim": 273.968,
+      "texto": "Quem vencerá é o universo 7 E direi"
+    },
+    {
+      "inicio": 274.188,
+      "fim": 275.508,
+      "texto": "conhecerá-me"
+    },
+    {
+      "inicio": 276.209,
+      "fim": 277.65,
+      "texto": "A sua derrota virá"
+    },
+    {
+      "inicio": 277.69,
+      "fim": 283.896,
+      "texto": "Preciso"
+    },
+    {
+      "inicio": 283.916,
+      "fim": 289.481,
+      "texto": "elevar o que? Nunca virão guerreiro assim Esse é o poder de um super"
+    },
+    {
+      "inicio": 289.581,
+      "fim": 293.145,
+      "texto": "saiaje Vocês não conseguirão me enfrentar"
+    },
+    {
+      "inicio": 293.865,
+      "fim": 298.75,
+      "texto": "O meu poder se elevar Goku!"
+    }
+  ],
+  "avisos": [
+    "Segmento 1: alinhamento fraco em 'E'.",
+    "Segmento 1: alinhamento fraco em 'que'.",
+    "Segmento 1: alinhamento fraco em 'é'.",
+    "Segmento 1: alinhamento fraco em 'eu'.",
+    "Segmento 3: alinhamento fraco em 'eu'.",
+    "Segmento 3: alinhamento fraco em 'eu'.",
+    "Segmento 3: alinhamento fraco em 'o'.",
+    "Segmento 3: alinhamento fraco em 'Gerar'.",
+    "Segmento 3: alinhamento fraco em 'Preciso'.",
+    "Segmento 3: alinhamento fraco em 'evar'.",
+    "Segmento 4: alinhamento fraco em 'e'.",
+    "Segmento 4: alinhamento fraco em 'Goku!'.",
+    "Segmento 4: alinhamento fraco em 'Camerrameira!'.",
+    "Segmento 4: alinhamento fraco em 'é'.",
+    "Segmento 4: alinhamento fraco em 'constresdor'.",
+    "Segmento 4: alinhamento fraco em 'Guerreiro'.",
+    "Segmento 4: alinhamento fraco em 'do'.",
+    "Segmento 4: alinhamento fraco em 'futuro'.",
+    "Segmento 4: alinhamento fraco em 'o'.",
+    "Segmento 5: alinhamento fraco em 'O'.",
+    "Segmento 5: alinhamento fraco em 'o'.",
+    "Segmento 5: alinhamento fraco em 'Me'.",
+    "Segmento 5: alinhamento fraco em 'Não!'.",
+    "Segmento 5: alinhamento fraco em 'Você'.",
+    "Segmento 5: alinhamento fraco em 'me'.",
+    "Segmento 5: alinhamento fraco em 'Um'.",
+    "Segmento 6: alinhamento fraco em 'o'.",
+    "Segmento 6: alinhamento fraco em 'pai'.",
+    "Segmento 6: alinhamento fraco em 'meu'.",
+    "Segmento 6: alinhamento fraco em 'em'.",
+    "Segmento 6: alinhamento fraco em 'eu'.",
+    "Segmento 6: alinhamento fraco em 'vou'.",
+    "Segmento 7: alinhamento fraco em 'na'.",
+    "Segmento 7: alinhamento fraco em 'Se'.",
+    "Segmento 8: alinhamento fraco em 'é'.",
+    "Segmento 8: alinhamento fraco em 'o'.",
+    "Segmento 8: alinhamento fraco em 'não'.",
+    "Segmento 8: alinhamento fraco em 'em'.",
+    "Segmento 9: alinhamento fraco em 'já'.",
+    "Segmento 9: alinhamento fraco em 'meu'.",
+    "Segmento 9: alinhamento fraco em 'Goku'.",
+    "Segmento 10: alinhamento fraco em 'o'.",
+    "Segmento 11: alinhamento fraco em 'no'.",
+    "Segmento 11: alinhamento fraco em 'Quebrando'.",
+    "Segmento 11: alinhamento fraco em 'o'.",
+    "Segmento 11: alinhamento fraco em 'me'.",
+    "Segmento 11: alinhamento fraco em 'tocar'.",
+    "Segmento 11: alinhamento fraco em 'sem'.",
+    "Segmento 11: alinhamento fraco em 'pensar'.",
+    "Segmento 11: alinhamento fraco em 'em'.",
+    "Segmento 11: alinhamento fraco em 'desviar'.",
+    "Segmento 11: alinhamento fraco em 'dizia'.",
+    "Segmento 11: alinhamento fraco em 'ser'.",
+    "Segmento 11: alinhamento fraco em 'o'.",
+    "Segmento 11: alinhamento fraco em 'forte'.",
+    "Segmento 11: alinhamento fraco em 'desse'.",
+    "Segmento 11: alinhamento fraco em 'unibraço'.",
+    "Segmento 11: alinhamento fraco em 'Mas'.",
+    "Segmento 11: alinhamento fraco em 'acho'.",
+    "Segmento 11: alinhamento fraco em 'que'.",
+    "Segmento 11: alinhamento fraco em 'meu'.",
+    "Segmento 11: alinhamento fraco em 'instinto'.",
+    "Segmento 11: alinhamento fraco em 'é'.",
+    "Segmento 11: alinhamento fraco em 'E'.",
+    "Segmento 12: alinhamento fraco em 'A'.",
+    "Segmento 12: alinhamento fraco em 'virá'.",
+    "Segmento 12: alinhamento fraco em 'elevar'.",
+    "Segmento 12: alinhamento fraco em 'o'.",
+    "Segmento 12: alinhamento fraco em 'Nunca'.",
+    "Segmento 12: alinhamento fraco em 'virão'."
+  ],
+  "revisao_recomendada": true,
+  "comparacao_letra": {
+    "similaridade_textual": 0.8277551020408164,
+    "divergencias": [
+      {
+        "tipo": "replace",
+        "referencia": "ele diz ser",
+        "transcricao": "nele disse que é"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "saiyajins",
+        "transcricao": "saiagens"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "ki",
+        "transcricao": "que"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "8",
+        "transcricao": "oito"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "galick ho",
+        "transcricao": "galíquio"
+      },
+      {
+        "tipo": "insert",
+        "referencia": "",
+        "transcricao": "a"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "pouparei",
+        "transcricao": "eu parei"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "namekusei",
+        "transcricao": "namecuzê e"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "um só",
+        "transcricao": "sua"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "rikum",
+        "transcricao": "rico"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "ginyu",
+        "transcricao": "de nil"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "entenderam",
+        "transcricao": "entenderão"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "e",
+        "transcricao": ""
+      },
+      {
+        "tipo": "replace",
+        "referencia": "freeza",
+        "transcricao": "frisa"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "não tenho medo",
+        "transcricao": ""
+      },
+      {
+        "tipo": "replace",
+        "referencia": "saiyajin lendário",
+        "transcricao": "saiajilendário"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "que",
+        "transcricao": "quem"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "amo assim",
+        "transcricao": "amassei"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "cê",
+        "transcricao": "se"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "kuririn freeza",
+        "transcricao": "cuririz risa"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "ki será humilhado",
+        "transcricao": "que gerar humilhador"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "saiyajin",
+        "transcricao": "saiaji"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "elevar",
+        "transcricao": "evar"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "ki",
+        "transcricao": "que"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "viram um guerreiro assim",
+        "transcricao": "virão guerreiros e"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "saiyajin",
+        "transcricao": "saiaje"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "kamehameha",
+        "transcricao": "camerrameira"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "isso",
+        "transcricao": "que se"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "constrangedor",
+        "transcricao": "constresdor"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "os",
+        "transcricao": ""
+      },
+      {
+        "tipo": "replace",
+        "referencia": "cell",
+        "transcricao": "se eu"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "ki",
+        "transcricao": "que"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "cell",
+        "transcricao": "céu"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "cell",
+        "transcricao": "céu"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "cê",
+        "transcricao": "se"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "cell",
+        "transcricao": "céu"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "será",
+        "transcricao": "era"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "cell",
+        "transcricao": "seu"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "kamehameha",
+        "transcricao": "caminhameia"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "ilimitado",
+        "transcricao": "limitado"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "majin boo",
+        "transcricao": "magimbo"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "cê",
+        "transcricao": "você"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "afinal",
+        "transcricao": "final"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "nível três",
+        "transcricao": "niveau 3"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "majin vegeta pega o brinco potara aí",
+        "transcricao": "madin ver de tapé cobrinco potaraí"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "a extinção genki dama todos juntos levantem",
+        "transcricao": "extensão jinguidama todo junto levando em"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "preciso elevar o ki nunca viram um guerreiro assim esse é o poder de um super sayajin vocês não",
+        "transcricao": "você já"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "kamehameha",
+        "transcricao": ""
+      },
+      {
+        "tipo": "replace",
+        "referencia": "tenho",
+        "transcricao": "tem o"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "elevar",
+        "transcricao": "levar"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "ki",
+        "transcricao": "que"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "jiren sinto",
+        "transcricao": "a gerância do"
+      },
+      {
+        "tipo": "insert",
+        "referencia": "",
+        "transcricao": "o"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "migatte",
+        "transcricao": "negate"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "gokui",
+        "transcricao": "goku"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "meus limites cê",
+        "transcricao": "o neve você"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "universo",
+        "transcricao": "unibraço"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "descobri do",
+        "transcricao": "descobrindo o"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "cê",
+        "transcricao": "você"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "migatte",
+        "transcricao": "negate"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "jiren",
+        "transcricao": "direi"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "a mim",
+        "transcricao": "me"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "pelo saiyajin",
+        "transcricao": ""
+      },
+      {
+        "tipo": "replace",
+        "referencia": "ki",
+        "transcricao": "que"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "viram um",
+        "transcricao": "virão"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "sayajin hey",
+        "transcricao": "saiaje"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "kamehameha",
+        "transcricao": ""
+      }
+    ]
+  }
+}

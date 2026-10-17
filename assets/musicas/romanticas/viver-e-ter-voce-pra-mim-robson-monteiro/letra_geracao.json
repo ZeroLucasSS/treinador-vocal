@@ -1,0 +1,2198 @@
+{
+  "versao": 1,
+  "arquivo_voz": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\romanticas\\viver-e-ter-voce-pra-mim-robson-monteiro\\voz.mp3",
+  "sha256_voz": "a7253b4316c17865e98fab7f399d0fa5d8fa9179214d300cbea41ea77efb0ef6",
+  "duracao_audio": 279.8498125,
+  "configuracao": {
+    "modelo": "small",
+    "idioma": "pt",
+    "dispositivo": "cpu",
+    "compute_type": "int8",
+    "vad": "silero"
+  },
+  "segmentos": [
+    {
+      "text": " Toda vez que o sol esconde a tarde e a lua cede o azul do céu Você chega assim, meu bem, sem me avisar Taca meu coração e acende minha",
+      "start": 2.754,
+      "end": 30.206,
+      "avg_logprob": -0.2617431297898293,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Toda",
+          "start": 10.357,
+          "end": 10.717,
+          "score": 0.899
+        },
+        {
+          "word": "vez",
+          "start": 10.818,
+          "end": 11.218,
+          "score": 0.892
+        },
+        {
+          "word": "que",
+          "start": 11.258,
+          "end": 11.338,
+          "score": 0.837
+        },
+        {
+          "word": "o",
+          "start": 11.378,
+          "end": 11.418,
+          "score": 0.5
+        },
+        {
+          "word": "sol",
+          "start": 11.538,
+          "end": 12.038,
+          "score": 0.902
+        },
+        {
+          "word": "esconde",
+          "start": 12.078,
+          "end": 12.438,
+          "score": 0.534
+        },
+        {
+          "word": "a",
+          "start": 12.478,
+          "end": 12.518,
+          "score": 0.923
+        },
+        {
+          "word": "tarde",
+          "start": 12.618,
+          "end": 13.579,
+          "score": 0.817
+        },
+        {
+          "word": "e",
+          "start": 14.119,
+          "end": 14.279,
+          "score": 0.752
+        },
+        {
+          "word": "a",
+          "start": 14.339,
+          "end": 14.399,
+          "score": 0.732
+        },
+        {
+          "word": "lua",
+          "start": 14.519,
+          "end": 14.939,
+          "score": 0.83
+        },
+        {
+          "word": "cede",
+          "start": 15.139,
+          "end": 15.66,
+          "score": 0.73
+        },
+        {
+          "word": "o",
+          "start": 15.72,
+          "end": 15.78,
+          "score": 0.25
+        },
+        {
+          "word": "azul",
+          "start": 15.86,
+          "end": 16.44,
+          "score": 0.936
+        },
+        {
+          "word": "do",
+          "start": 16.5,
+          "end": 16.62,
+          "score": 0.832
+        },
+        {
+          "word": "céu",
+          "start": 16.76,
+          "end": 17.22,
+          "score": 0.883
+        },
+        {
+          "word": "Você",
+          "start": 17.701,
+          "end": 18.021,
+          "score": 0.925
+        },
+        {
+          "word": "chega",
+          "start": 18.161,
+          "end": 18.581,
+          "score": 0.42
+        },
+        {
+          "word": "assim,",
+          "start": 18.641,
+          "end": 19.261,
+          "score": 0.807
+        },
+        {
+          "word": "meu",
+          "start": 19.301,
+          "end": 19.461,
+          "score": 0.905
+        },
+        {
+          "word": "bem,",
+          "start": 19.521,
+          "end": 20.162,
+          "score": 0.719
+        },
+        {
+          "word": "sem",
+          "start": 20.182,
+          "end": 20.242,
+          "score": 0.0
+        },
+        {
+          "word": "me",
+          "start": 20.262,
+          "end": 20.302,
+          "score": 0.0
+        },
+        {
+          "word": "avisar",
+          "start": 20.422,
+          "end": 22.783,
+          "score": 0.829
+        },
+        {
+          "word": "Taca",
+          "start": 23.523,
+          "end": 24.183,
+          "score": 0.871
+        },
+        {
+          "word": "meu",
+          "start": 24.283,
+          "end": 24.483,
+          "score": 0.726
+        },
+        {
+          "word": "coração",
+          "start": 24.584,
+          "end": 27.165,
+          "score": 0.81
+        },
+        {
+          "word": "e",
+          "start": 27.185,
+          "end": 27.205,
+          "score": 0.001
+        },
+        {
+          "word": "acende",
+          "start": 28.085,
+          "end": 28.885,
+          "score": 0.746
+        },
+        {
+          "word": "minha",
+          "start": 28.965,
+          "end": 29.846,
+          "score": 0.794
+        }
+      ]
+    },
+    {
+      "text": " Toda a emoção de amar Que um grande amor nos faz viver Simplesmente sinto nesse instante Que te quero tanto e te preciso E quando pense então em ter você aqui",
+      "start": 30.306,
+      "end": 52.286,
+      "avg_logprob": -0.1068490912255488,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Toda",
+          "start": 30.306,
+          "end": 30.766,
+          "score": 0.798
+        },
+        {
+          "word": "a",
+          "start": 30.887,
+          "end": 30.987,
+          "score": 0.198
+        },
+        {
+          "word": "emoção",
+          "start": 31.167,
+          "end": 33.129,
+          "score": 0.863
+        },
+        {
+          "word": "de",
+          "start": 33.189,
+          "end": 33.269,
+          "score": 0.685
+        },
+        {
+          "word": "amar",
+          "start": 33.309,
+          "end": 34.49,
+          "score": 0.824
+        },
+        {
+          "word": "Que",
+          "start": 35.291,
+          "end": 35.411,
+          "score": 0.625
+        },
+        {
+          "word": "um",
+          "start": 35.471,
+          "end": 35.531,
+          "score": 0.75
+        },
+        {
+          "word": "grande",
+          "start": 35.591,
+          "end": 36.091,
+          "score": 0.86
+        },
+        {
+          "word": "amor",
+          "start": 36.151,
+          "end": 36.832,
+          "score": 0.878
+        },
+        {
+          "word": "nos",
+          "start": 36.872,
+          "end": 37.092,
+          "score": 0.832
+        },
+        {
+          "word": "faz",
+          "start": 37.152,
+          "end": 38.253,
+          "score": 0.584
+        },
+        {
+          "word": "viver",
+          "start": 38.594,
+          "end": 39.274,
+          "score": 0.791
+        },
+        {
+          "word": "Simplesmente",
+          "start": 39.735,
+          "end": 40.655,
+          "score": 0.938
+        },
+        {
+          "word": "sinto",
+          "start": 40.836,
+          "end": 41.456,
+          "score": 0.95
+        },
+        {
+          "word": "nesse",
+          "start": 41.516,
+          "end": 41.776,
+          "score": 0.894
+        },
+        {
+          "word": "instante",
+          "start": 41.816,
+          "end": 42.958,
+          "score": 0.992
+        },
+        {
+          "word": "Que",
+          "start": 43.338,
+          "end": 43.478,
+          "score": 0.577
+        },
+        {
+          "word": "te",
+          "start": 43.538,
+          "end": 43.638,
+          "score": 0.958
+        },
+        {
+          "word": "quero",
+          "start": 43.778,
+          "end": 44.339,
+          "score": 0.812
+        },
+        {
+          "word": "tanto",
+          "start": 44.459,
+          "end": 45.039,
+          "score": 0.776
+        },
+        {
+          "word": "e",
+          "start": 45.059,
+          "end": 45.079,
+          "score": 0.0
+        },
+        {
+          "word": "te",
+          "start": 45.119,
+          "end": 45.24,
+          "score": 0.936
+        },
+        {
+          "word": "preciso",
+          "start": 45.32,
+          "end": 46.541,
+          "score": 0.938
+        },
+        {
+          "word": "E",
+          "start": 46.861,
+          "end": 46.921,
+          "score": 0.773
+        },
+        {
+          "word": "quando",
+          "start": 47.001,
+          "end": 47.301,
+          "score": 0.864
+        },
+        {
+          "word": "pense",
+          "start": 47.462,
+          "end": 47.982,
+          "score": 0.73
+        },
+        {
+          "word": "então",
+          "start": 48.042,
+          "end": 48.623,
+          "score": 0.774
+        },
+        {
+          "word": "em",
+          "start": 48.683,
+          "end": 48.763,
+          "score": 0.5
+        },
+        {
+          "word": "ter",
+          "start": 48.823,
+          "end": 49.003,
+          "score": 0.986
+        },
+        {
+          "word": "você",
+          "start": 49.063,
+          "end": 49.443,
+          "score": 0.992
+        },
+        {
+          "word": "aqui",
+          "start": 49.463,
+          "end": 49.544,
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "text": " Sara meu coração Porque você não quis voltar a mim",
+      "start": 52.674,
+      "end": 61.566,
+      "avg_logprob": -0.3602193271120389,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Sara",
+          "start": 52.894,
+          "end": 53.495,
+          "score": 0.792
+        },
+        {
+          "word": "meu",
+          "start": 53.595,
+          "end": 53.816,
+          "score": 0.789
+        },
+        {
+          "word": "coração",
+          "start": 53.896,
+          "end": 56.479,
+          "score": 0.899
+        },
+        {
+          "word": "Porque",
+          "start": 56.88,
+          "end": 57.22,
+          "score": 0.881
+        },
+        {
+          "word": "você",
+          "start": 57.28,
+          "end": 57.941,
+          "score": 0.986
+        },
+        {
+          "word": "não",
+          "start": 58.001,
+          "end": 58.141,
+          "score": 0.622
+        },
+        {
+          "word": "quis",
+          "start": 58.221,
+          "end": 58.842,
+          "score": 0.509
+        },
+        {
+          "word": "voltar",
+          "start": 58.902,
+          "end": 60.204,
+          "score": 0.935
+        },
+        {
+          "word": "a",
+          "start": 60.224,
+          "end": 60.244,
+          "score": 0.0
+        },
+        {
+          "word": "mim",
+          "start": 61.005,
+          "end": 61.266,
+          "score": 0.634
+        }
+      ]
+    },
+    {
+      "text": " O amor é mesmo assim Nem sempre traz felicidade Quando toi, toi pra valer E a gente perde a ilusão Mas quando vem faz tanto bem Liberta os sonhos e mais são Porque você não vem Volta amor, me deixa eu ser",
+      "start": 61.666,
+      "end": 91.632,
+      "avg_logprob": -0.2545149905177263,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "O",
+          "start": 61.746,
+          "end": 61.866,
+          "score": 0.833
+        },
+        {
+          "word": "amor",
+          "start": 61.966,
+          "end": 62.706,
+          "score": 0.82
+        },
+        {
+          "word": "é",
+          "start": 62.726,
+          "end": 62.746,
+          "score": 0.0
+        },
+        {
+          "word": "mesmo",
+          "start": 62.806,
+          "end": 63.426,
+          "score": 0.361
+        },
+        {
+          "word": "assim",
+          "start": 63.546,
+          "end": 64.427,
+          "score": 0.748
+        },
+        {
+          "word": "Nem",
+          "start": 64.667,
+          "end": 64.807,
+          "score": 0.473
+        },
+        {
+          "word": "sempre",
+          "start": 64.887,
+          "end": 65.487,
+          "score": 0.716
+        },
+        {
+          "word": "traz",
+          "start": 65.547,
+          "end": 66.107,
+          "score": 0.674
+        },
+        {
+          "word": "felicidade",
+          "start": 66.207,
+          "end": 68.547,
+          "score": 0.88
+        },
+        {
+          "word": "Quando",
+          "start": 68.827,
+          "end": 69.368,
+          "score": 0.762
+        },
+        {
+          "word": "toi,",
+          "start": 69.468,
+          "end": 69.908,
+          "score": 0.872
+        },
+        {
+          "word": "toi",
+          "start": 70.128,
+          "end": 70.288,
+          "score": 0.811
+        },
+        {
+          "word": "pra",
+          "start": 70.368,
+          "end": 70.788,
+          "score": 0.803
+        },
+        {
+          "word": "valer",
+          "start": 70.848,
+          "end": 71.688,
+          "score": 0.78
+        },
+        {
+          "word": "E",
+          "start": 71.968,
+          "end": 72.008,
+          "score": 0.702
+        },
+        {
+          "word": "a",
+          "start": 72.048,
+          "end": 72.108,
+          "score": 0.967
+        },
+        {
+          "word": "gente",
+          "start": 72.208,
+          "end": 72.768,
+          "score": 0.881
+        },
+        {
+          "word": "perde",
+          "start": 72.868,
+          "end": 73.588,
+          "score": 0.652
+        },
+        {
+          "word": "a",
+          "start": 73.648,
+          "end": 73.788,
+          "score": 0.964
+        },
+        {
+          "word": "ilusão",
+          "start": 73.868,
+          "end": 75.329,
+          "score": 0.689
+        },
+        {
+          "word": "Mas",
+          "start": 75.429,
+          "end": 75.749,
+          "score": 0.865
+        },
+        {
+          "word": "quando",
+          "start": 75.829,
+          "end": 76.489,
+          "score": 0.624
+        },
+        {
+          "word": "vem",
+          "start": 76.569,
+          "end": 77.169,
+          "score": 0.711
+        },
+        {
+          "word": "faz",
+          "start": 77.489,
+          "end": 77.589,
+          "score": 0.183
+        },
+        {
+          "word": "tanto",
+          "start": 77.689,
+          "end": 78.309,
+          "score": 0.776
+        },
+        {
+          "word": "bem",
+          "start": 78.389,
+          "end": 79.009,
+          "score": 0.87
+        },
+        {
+          "word": "Liberta",
+          "start": 79.29,
+          "end": 80.09,
+          "score": 0.809
+        },
+        {
+          "word": "os",
+          "start": 80.11,
+          "end": 80.15,
+          "score": 0.037
+        },
+        {
+          "word": "sonhos",
+          "start": 80.27,
+          "end": 81.07,
+          "score": 0.524
+        },
+        {
+          "word": "e",
+          "start": 81.23,
+          "end": 81.69,
+          "score": 0.923
+        },
+        {
+          "word": "mais",
+          "start": 81.81,
+          "end": 82.25,
+          "score": 0.66
+        },
+        {
+          "word": "são",
+          "start": 82.33,
+          "end": 83.43,
+          "score": 0.631
+        },
+        {
+          "word": "Porque",
+          "start": 83.69,
+          "end": 84.571,
+          "score": 0.846
+        },
+        {
+          "word": "você",
+          "start": 84.631,
+          "end": 86.471,
+          "score": 0.979
+        },
+        {
+          "word": "não",
+          "start": 86.571,
+          "end": 86.751,
+          "score": 0.633
+        },
+        {
+          "word": "vem",
+          "start": 86.871,
+          "end": 88.371,
+          "score": 0.82
+        },
+        {
+          "word": "Volta",
+          "start": 88.871,
+          "end": 89.512,
+          "score": 0.896
+        },
+        {
+          "word": "amor,",
+          "start": 89.532,
+          "end": 90.132,
+          "score": 0.67
+        },
+        {
+          "word": "me",
+          "start": 90.412,
+          "end": 90.612,
+          "score": 0.91
+        },
+        {
+          "word": "deixa",
+          "start": 90.712,
+          "end": 91.252,
+          "score": 0.904
+        },
+        {
+          "word": "eu",
+          "start": 91.312,
+          "end": 91.352,
+          "score": 0.0
+        },
+        {
+          "word": "ser",
+          "start": 91.492,
+          "end": 91.572,
+          "score": 0.644
+        }
+      ]
+    },
+    {
+      "text": " é feliz a sempre com você viver é ter você pra mim porque você não traz o sol que faz amanhecer",
+      "start": 91.632,
+      "end": 120.478,
+      "avg_logprob": -0.3138469842573007,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "é",
+          "start": 91.792,
+          "end": 91.972,
+          "score": 0.862
+        },
+        {
+          "word": "feliz",
+          "start": 92.072,
+          "end": 97.113,
+          "score": 0.87
+        },
+        {
+          "word": "a",
+          "start": 97.533,
+          "end": 97.733,
+          "score": 0.503
+        },
+        {
+          "word": "sempre",
+          "start": 97.993,
+          "end": 99.774,
+          "score": 0.729
+        },
+        {
+          "word": "com",
+          "start": 99.874,
+          "end": 101.134,
+          "score": 0.66
+        },
+        {
+          "word": "você",
+          "start": 101.234,
+          "end": 102.814,
+          "score": 0.994
+        },
+        {
+          "word": "viver",
+          "start": 103.274,
+          "end": 103.975,
+          "score": 0.915
+        },
+        {
+          "word": "é",
+          "start": 103.995,
+          "end": 104.015,
+          "score": 0.0
+        },
+        {
+          "word": "ter",
+          "start": 104.195,
+          "end": 104.795,
+          "score": 0.616
+        },
+        {
+          "word": "você",
+          "start": 104.855,
+          "end": 106.395,
+          "score": 0.921
+        },
+        {
+          "word": "pra",
+          "start": 106.495,
+          "end": 106.835,
+          "score": 0.765
+        },
+        {
+          "word": "mim",
+          "start": 106.915,
+          "end": 108.115,
+          "score": 0.65
+        },
+        {
+          "word": "porque",
+          "start": 108.536,
+          "end": 109.096,
+          "score": 0.799
+        },
+        {
+          "word": "você",
+          "start": 109.596,
+          "end": 110.316,
+          "score": 0.91
+        },
+        {
+          "word": "não",
+          "start": 110.376,
+          "end": 110.516,
+          "score": 0.484
+        },
+        {
+          "word": "traz",
+          "start": 110.596,
+          "end": 112.576,
+          "score": 0.63
+        },
+        {
+          "word": "o",
+          "start": 112.636,
+          "end": 112.696,
+          "score": 0.672
+        },
+        {
+          "word": "sol",
+          "start": 112.816,
+          "end": 115.837,
+          "score": 0.981
+        },
+        {
+          "word": "que",
+          "start": 116.177,
+          "end": 116.317,
+          "score": 0.814
+        },
+        {
+          "word": "faz",
+          "start": 116.437,
+          "end": 116.817,
+          "score": 0.651
+        },
+        {
+          "word": "amanhecer",
+          "start": 116.977,
+          "end": 119.218,
+          "score": 0.728
+        }
+      ]
+    },
+    {
+      "text": " Sente o azul do céu Pra nunca mais ter que dizer Adeus",
+      "start": 123.714,
+      "end": 135.71,
+      "avg_logprob": -0.32074824571609495,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Sente",
+          "start": 123.734,
+          "end": 125.056,
+          "score": 0.814
+        },
+        {
+          "word": "o",
+          "start": 125.096,
+          "end": 125.156,
+          "score": 0.497
+        },
+        {
+          "word": "azul",
+          "start": 125.436,
+          "end": 126.878,
+          "score": 0.957
+        },
+        {
+          "word": "do",
+          "start": 126.938,
+          "end": 127.058,
+          "score": 0.843
+        },
+        {
+          "word": "céu",
+          "start": 127.219,
+          "end": 128.26,
+          "score": 0.745
+        },
+        {
+          "word": "Pra",
+          "start": 128.56,
+          "end": 128.721,
+          "score": 0.792
+        },
+        {
+          "word": "nunca",
+          "start": 128.781,
+          "end": 129.181,
+          "score": 0.842
+        },
+        {
+          "word": "mais",
+          "start": 129.261,
+          "end": 129.842,
+          "score": 0.457
+        },
+        {
+          "word": "ter",
+          "start": 129.942,
+          "end": 130.323,
+          "score": 0.744
+        },
+        {
+          "word": "que",
+          "start": 130.403,
+          "end": 130.583,
+          "score": 0.77
+        },
+        {
+          "word": "dizer",
+          "start": 130.623,
+          "end": 132.005,
+          "score": 0.879
+        },
+        {
+          "word": "Adeus",
+          "start": 132.606,
+          "end": 135.65,
+          "score": 0.926
+        }
+      ]
+    },
+    {
+      "text": " Toda vez que o sol esconde a carde e a lua cede o azul do céu Você chega assim, meu bem, sem avisar Acra meu coração e acende em mim Toda a emoção de amar",
+      "start": 136.994,
+      "end": 161.662,
+      "avg_logprob": -0.2757827943811814,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Toda",
+          "start": 137.014,
+          "end": 137.434,
+          "score": 0.874
+        },
+        {
+          "word": "vez",
+          "start": 137.514,
+          "end": 137.894,
+          "score": 0.929
+        },
+        {
+          "word": "que",
+          "start": 137.934,
+          "end": 138.014,
+          "score": 0.834
+        },
+        {
+          "word": "o",
+          "start": 138.054,
+          "end": 138.094,
+          "score": 0.503
+        },
+        {
+          "word": "sol",
+          "start": 138.234,
+          "end": 138.675,
+          "score": 0.814
+        },
+        {
+          "word": "esconde",
+          "start": 138.735,
+          "end": 139.135,
+          "score": 0.901
+        },
+        {
+          "word": "a",
+          "start": 139.175,
+          "end": 139.215,
+          "score": 0.615
+        },
+        {
+          "word": "carde",
+          "start": 139.315,
+          "end": 140.355,
+          "score": 0.899
+        },
+        {
+          "word": "e",
+          "start": 140.795,
+          "end": 140.955,
+          "score": 0.773
+        },
+        {
+          "word": "a",
+          "start": 141.035,
+          "end": 141.095,
+          "score": 0.841
+        },
+        {
+          "word": "lua",
+          "start": 141.175,
+          "end": 141.595,
+          "score": 0.775
+        },
+        {
+          "word": "cede",
+          "start": 141.836,
+          "end": 142.336,
+          "score": 0.869
+        },
+        {
+          "word": "o",
+          "start": 142.416,
+          "end": 142.596,
+          "score": 0.485
+        },
+        {
+          "word": "azul",
+          "start": 142.656,
+          "end": 143.196,
+          "score": 0.85
+        },
+        {
+          "word": "do",
+          "start": 143.236,
+          "end": 143.336,
+          "score": 0.956
+        },
+        {
+          "word": "céu",
+          "start": 143.496,
+          "end": 143.916,
+          "score": 0.779
+        },
+        {
+          "word": "Você",
+          "start": 144.336,
+          "end": 144.676,
+          "score": 0.95
+        },
+        {
+          "word": "chega",
+          "start": 144.817,
+          "end": 145.297,
+          "score": 0.826
+        },
+        {
+          "word": "assim,",
+          "start": 145.317,
+          "end": 145.937,
+          "score": 0.823
+        },
+        {
+          "word": "meu",
+          "start": 145.977,
+          "end": 146.137,
+          "score": 0.875
+        },
+        {
+          "word": "bem,",
+          "start": 146.177,
+          "end": 146.337,
+          "score": 0.449
+        },
+        {
+          "word": "sem",
+          "start": 146.457,
+          "end": 146.777,
+          "score": 0.588
+        },
+        {
+          "word": "avisar",
+          "start": 146.857,
+          "end": 149.858,
+          "score": 0.795
+        },
+        {
+          "word": "Acra",
+          "start": 150.458,
+          "end": 150.899,
+          "score": 0.745
+        },
+        {
+          "word": "meu",
+          "start": 150.959,
+          "end": 151.419,
+          "score": 0.728
+        },
+        {
+          "word": "coração",
+          "start": 151.519,
+          "end": 153.919,
+          "score": 0.765
+        },
+        {
+          "word": "e",
+          "start": 154.3,
+          "end": 154.36,
+          "score": 0.614
+        },
+        {
+          "word": "acende",
+          "start": 154.7,
+          "end": 155.42,
+          "score": 0.695
+        },
+        {
+          "word": "em",
+          "start": 155.44,
+          "end": 155.58,
+          "score": 0.744
+        },
+        {
+          "word": "mim",
+          "start": 155.64,
+          "end": 156.68,
+          "score": 0.777
+        },
+        {
+          "word": "Toda",
+          "start": 157.041,
+          "end": 158.181,
+          "score": 0.644
+        },
+        {
+          "word": "a",
+          "start": 158.201,
+          "end": 158.221,
+          "score": 0.01
+        },
+        {
+          "word": "emoção",
+          "start": 158.241,
+          "end": 159.821,
+          "score": 0.832
+        },
+        {
+          "word": "de",
+          "start": 159.901,
+          "end": 160.021,
+          "score": 0.222
+        },
+        {
+          "word": "amar",
+          "start": 160.081,
+          "end": 161.282,
+          "score": 0.732
+        }
+      ]
+    },
+    {
+      "text": " Que um grande amor nos faz viver O amor é mesmo assim Nem sempre traz felicidade Quando o boi não irá valer E a gente fede a ilusão Mas quando vem faz tanto bem Liberta sonhos e paixão Porque você não vê",
+      "start": 161.954,
+      "end": 191.92,
+      "avg_logprob": -0.16216966454629544,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Que",
+          "start": 161.954,
+          "end": 162.034,
+          "score": 0.262
+        },
+        {
+          "word": "um",
+          "start": 162.114,
+          "end": 162.174,
+          "score": 0.754
+        },
+        {
+          "word": "grande",
+          "start": 162.274,
+          "end": 162.754,
+          "score": 0.903
+        },
+        {
+          "word": "amor",
+          "start": 162.834,
+          "end": 163.574,
+          "score": 0.969
+        },
+        {
+          "word": "nos",
+          "start": 163.594,
+          "end": 163.794,
+          "score": 0.498
+        },
+        {
+          "word": "faz",
+          "start": 163.854,
+          "end": 165.115,
+          "score": 0.536
+        },
+        {
+          "word": "viver",
+          "start": 165.255,
+          "end": 166.115,
+          "score": 0.967
+        },
+        {
+          "word": "O",
+          "start": 166.135,
+          "end": 166.155,
+          "score": 0.0
+        },
+        {
+          "word": "amor",
+          "start": 166.655,
+          "end": 167.395,
+          "score": 0.842
+        },
+        {
+          "word": "é",
+          "start": 167.415,
+          "end": 167.435,
+          "score": 0.0
+        },
+        {
+          "word": "mesmo",
+          "start": 167.495,
+          "end": 168.155,
+          "score": 0.308
+        },
+        {
+          "word": "assim",
+          "start": 168.255,
+          "end": 169.095,
+          "score": 0.522
+        },
+        {
+          "word": "Nem",
+          "start": 169.335,
+          "end": 169.456,
+          "score": 0.334
+        },
+        {
+          "word": "sempre",
+          "start": 169.576,
+          "end": 170.156,
+          "score": 0.674
+        },
+        {
+          "word": "traz",
+          "start": 170.236,
+          "end": 170.836,
+          "score": 0.723
+        },
+        {
+          "word": "felicidade",
+          "start": 170.916,
+          "end": 173.236,
+          "score": 0.741
+        },
+        {
+          "word": "Quando",
+          "start": 173.536,
+          "end": 173.936,
+          "score": 0.865
+        },
+        {
+          "word": "o",
+          "start": 173.956,
+          "end": 174.056,
+          "score": 0.697
+        },
+        {
+          "word": "boi",
+          "start": 174.156,
+          "end": 174.537,
+          "score": 0.797
+        },
+        {
+          "word": "não",
+          "start": 174.797,
+          "end": 174.917,
+          "score": 0.392
+        },
+        {
+          "word": "irá",
+          "start": 174.937,
+          "end": 175.457,
+          "score": 0.822
+        },
+        {
+          "word": "valer",
+          "start": 175.517,
+          "end": 176.297,
+          "score": 0.789
+        },
+        {
+          "word": "E",
+          "start": 176.637,
+          "end": 176.677,
+          "score": 0.773
+        },
+        {
+          "word": "a",
+          "start": 176.757,
+          "end": 176.817,
+          "score": 0.843
+        },
+        {
+          "word": "gente",
+          "start": 176.897,
+          "end": 177.417,
+          "score": 0.876
+        },
+        {
+          "word": "fede",
+          "start": 177.557,
+          "end": 178.877,
+          "score": 0.858
+        },
+        {
+          "word": "a",
+          "start": 179.037,
+          "end": 179.197,
+          "score": 0.89
+        },
+        {
+          "word": "ilusão",
+          "start": 179.217,
+          "end": 180.018,
+          "score": 0.571
+        },
+        {
+          "word": "Mas",
+          "start": 180.078,
+          "end": 180.418,
+          "score": 0.784
+        },
+        {
+          "word": "quando",
+          "start": 180.498,
+          "end": 181.178,
+          "score": 0.782
+        },
+        {
+          "word": "vem",
+          "start": 181.278,
+          "end": 181.878,
+          "score": 0.711
+        },
+        {
+          "word": "faz",
+          "start": 181.938,
+          "end": 182.258,
+          "score": 0.514
+        },
+        {
+          "word": "tanto",
+          "start": 182.358,
+          "end": 182.978,
+          "score": 0.809
+        },
+        {
+          "word": "bem",
+          "start": 183.058,
+          "end": 183.658,
+          "score": 0.84
+        },
+        {
+          "word": "Liberta",
+          "start": 183.938,
+          "end": 184.719,
+          "score": 0.915
+        },
+        {
+          "word": "sonhos",
+          "start": 184.899,
+          "end": 185.919,
+          "score": 0.785
+        },
+        {
+          "word": "e",
+          "start": 185.959,
+          "end": 186.459,
+          "score": 0.939
+        },
+        {
+          "word": "paixão",
+          "start": 186.539,
+          "end": 188.119,
+          "score": 0.735
+        },
+        {
+          "word": "Porque",
+          "start": 188.359,
+          "end": 189.399,
+          "score": 0.864
+        },
+        {
+          "word": "você",
+          "start": 189.54,
+          "end": 191.12,
+          "score": 0.849
+        },
+        {
+          "word": "não",
+          "start": 191.22,
+          "end": 191.42,
+          "score": 0.581
+        },
+        {
+          "word": "vê",
+          "start": 191.52,
+          "end": 191.6,
+          "score": 0.501
+        }
+      ]
+    },
+    {
+      "text": " Volta amor, me deja ser feliz Pra sempre com você Viver é ter você pra mim Porque você não traz o sol",
+      "start": 191.92,
+      "end": 217.822,
+      "avg_logprob": -0.33944670397501725,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Volta",
+          "start": 193.521,
+          "end": 194.162,
+          "score": 0.867
+        },
+        {
+          "word": "amor,",
+          "start": 194.182,
+          "end": 194.842,
+          "score": 0.791
+        },
+        {
+          "word": "me",
+          "start": 195.123,
+          "end": 195.283,
+          "score": 0.899
+        },
+        {
+          "word": "deja",
+          "start": 195.363,
+          "end": 195.983,
+          "score": 0.804
+        },
+        {
+          "word": "ser",
+          "start": 196.424,
+          "end": 196.644,
+          "score": 0.612
+        },
+        {
+          "word": "feliz",
+          "start": 196.744,
+          "end": 201.748,
+          "score": 0.867
+        },
+        {
+          "word": "Pra",
+          "start": 202.169,
+          "end": 202.449,
+          "score": 0.838
+        },
+        {
+          "word": "sempre",
+          "start": 202.649,
+          "end": 204.451,
+          "score": 0.766
+        },
+        {
+          "word": "com",
+          "start": 204.611,
+          "end": 205.812,
+          "score": 0.8
+        },
+        {
+          "word": "você",
+          "start": 205.872,
+          "end": 207.533,
+          "score": 0.989
+        },
+        {
+          "word": "Viver",
+          "start": 207.934,
+          "end": 208.614,
+          "score": 0.969
+        },
+        {
+          "word": "é",
+          "start": 208.634,
+          "end": 208.654,
+          "score": 0.0
+        },
+        {
+          "word": "ter",
+          "start": 208.834,
+          "end": 209.475,
+          "score": 0.643
+        },
+        {
+          "word": "você",
+          "start": 209.535,
+          "end": 211.096,
+          "score": 0.994
+        },
+        {
+          "word": "pra",
+          "start": 211.176,
+          "end": 211.417,
+          "score": 0.595
+        },
+        {
+          "word": "mim",
+          "start": 211.577,
+          "end": 212.758,
+          "score": 0.814
+        },
+        {
+          "word": "Porque",
+          "start": 213.198,
+          "end": 214.059,
+          "score": 0.847
+        },
+        {
+          "word": "você",
+          "start": 214.159,
+          "end": 214.98,
+          "score": 0.972
+        },
+        {
+          "word": "não",
+          "start": 215.04,
+          "end": 215.18,
+          "score": 0.497
+        },
+        {
+          "word": "traz",
+          "start": 215.28,
+          "end": 217.121,
+          "score": 0.842
+        },
+        {
+          "word": "o",
+          "start": 217.141,
+          "end": 217.161,
+          "score": 0.0
+        },
+        {
+          "word": "sol",
+          "start": 217.201,
+          "end": 217.342,
+          "score": 0.555
+        }
+      ]
+    },
+    {
+      "text": " e acende o azul do céu pra nunca mais ter que dizer adeus porque você não vem pra mim",
+      "start": 221.826,
+      "end": 245.726,
+      "avg_logprob": -0.33564028014307434,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "e",
+          "start": 222.346,
+          "end": 227.511,
+          "score": 0.975
+        },
+        {
+          "word": "acende",
+          "start": 227.951,
+          "end": 229.773,
+          "score": 0.868
+        },
+        {
+          "word": "o",
+          "start": 229.793,
+          "end": 229.813,
+          "score": 0.0
+        },
+        {
+          "word": "azul",
+          "start": 230.053,
+          "end": 231.514,
+          "score": 0.849
+        },
+        {
+          "word": "do",
+          "start": 231.594,
+          "end": 231.714,
+          "score": 0.872
+        },
+        {
+          "word": "céu",
+          "start": 231.874,
+          "end": 232.915,
+          "score": 0.878
+        },
+        {
+          "word": "pra",
+          "start": 233.216,
+          "end": 233.376,
+          "score": 0.762
+        },
+        {
+          "word": "nunca",
+          "start": 233.436,
+          "end": 233.796,
+          "score": 0.772
+        },
+        {
+          "word": "mais",
+          "start": 233.896,
+          "end": 234.517,
+          "score": 0.698
+        },
+        {
+          "word": "ter",
+          "start": 234.617,
+          "end": 235.037,
+          "score": 0.781
+        },
+        {
+          "word": "que",
+          "start": 235.057,
+          "end": 235.217,
+          "score": 0.268
+        },
+        {
+          "word": "dizer",
+          "start": 235.257,
+          "end": 236.979,
+          "score": 0.859
+        },
+        {
+          "word": "adeus",
+          "start": 237.059,
+          "end": 238.78,
+          "score": 0.771
+        },
+        {
+          "word": "porque",
+          "start": 239.1,
+          "end": 239.781,
+          "score": 0.857
+        },
+        {
+          "word": "você",
+          "start": 239.841,
+          "end": 240.502,
+          "score": 0.821
+        },
+        {
+          "word": "não",
+          "start": 240.542,
+          "end": 240.682,
+          "score": 0.556
+        },
+        {
+          "word": "vem",
+          "start": 240.762,
+          "end": 242.723,
+          "score": 0.747
+        },
+        {
+          "word": "pra",
+          "start": 242.784,
+          "end": 242.984,
+          "score": 0.661
+        },
+        {
+          "word": "mim",
+          "start": 243.084,
+          "end": 244.105,
+          "score": 0.595
+        }
+      ]
+    },
+    {
+      "text": " Só sem amar você Faz alguém feliz, assim Tras você pra mim, amor",
+      "start": 246.402,
+      "end": 264.382,
+      "avg_logprob": -0.37126902972950654,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Só",
+          "start": 246.422,
+          "end": 246.622,
+          "score": 0.804
+        },
+        {
+          "word": "sem",
+          "start": 246.863,
+          "end": 247.183,
+          "score": 0.653
+        },
+        {
+          "word": "amar",
+          "start": 247.303,
+          "end": 248.024,
+          "score": 0.953
+        },
+        {
+          "word": "você",
+          "start": 248.104,
+          "end": 248.504,
+          "score": 0.993
+        },
+        {
+          "word": "Faz",
+          "start": 253.99,
+          "end": 254.511,
+          "score": 0.794
+        },
+        {
+          "word": "alguém",
+          "start": 254.551,
+          "end": 255.132,
+          "score": 0.883
+        },
+        {
+          "word": "feliz,",
+          "start": 255.212,
+          "end": 256.794,
+          "score": 0.873
+        },
+        {
+          "word": "assim",
+          "start": 257.114,
+          "end": 258.976,
+          "score": 0.844
+        },
+        {
+          "word": "Tras",
+          "start": 259.517,
+          "end": 259.977,
+          "score": 0.717
+        },
+        {
+          "word": "você",
+          "start": 260.017,
+          "end": 260.798,
+          "score": 0.989
+        },
+        {
+          "word": "pra",
+          "start": 260.878,
+          "end": 261.058,
+          "score": 0.742
+        },
+        {
+          "word": "mim,",
+          "start": 261.158,
+          "end": 261.939,
+          "score": 0.868
+        },
+        {
+          "word": "amor",
+          "start": 261.959,
+          "end": 262.5,
+          "score": 0.561
+        }
+      ]
+    }
+  ],
+  "blocos": [
+    {
+      "inicio": 10.357,
+      "fim": 15.78,
+      "texto": "Toda vez que o sol esconde a tarde e a lua cede o"
+    },
+    {
+      "inicio": 15.86,
+      "fim": 20.302,
+      "texto": "azul do céu Você chega assim, meu bem, sem me"
+    },
+    {
+      "inicio": 20.422,
+      "fim": 22.783,
+      "texto": "avisar"
+    },
+    {
+      "inicio": 23.523,
+      "fim": 27.205,
+      "texto": "Taca meu coração e"
+    },
+    {
+      "inicio": 28.085,
+      "fim": 29.846,
+      "texto": "acende minha"
+    },
+    {
+      "inicio": 30.306,
+      "fim": 34.49,
+      "texto": "Toda a emoção de amar"
+    },
+    {
+      "inicio": 35.291,
+      "fim": 40.655,
+      "texto": "Que um grande amor nos faz viver Simplesmente"
+    },
+    {
+      "inicio": 40.836,
+      "fim": 46.541,
+      "texto": "sinto nesse instante Que te quero tanto e te preciso"
+    },
+    {
+      "inicio": 46.861,
+      "fim": 49.544,
+      "texto": "E quando pense então em ter você aqui"
+    },
+    {
+      "inicio": 52.894,
+      "fim": 58.842,
+      "texto": "Sara meu coração Porque você não quis"
+    },
+    {
+      "inicio": 58.902,
+      "fim": 60.244,
+      "texto": "voltar a"
+    },
+    {
+      "inicio": 61.005,
+      "fim": 61.266,
+      "texto": "mim"
+    },
+    {
+      "inicio": 61.746,
+      "fim": 66.107,
+      "texto": "O amor é mesmo assim Nem sempre traz"
+    },
+    {
+      "inicio": 66.207,
+      "fim": 72.108,
+      "texto": "felicidade Quando toi, toi pra valer E a"
+    },
+    {
+      "inicio": 72.208,
+      "fim": 77.589,
+      "texto": "gente perde a ilusão Mas quando vem faz"
+    },
+    {
+      "inicio": 77.689,
+      "fim": 83.43,
+      "texto": "tanto bem Liberta os sonhos e mais são"
+    },
+    {
+      "inicio": 83.69,
+      "fim": 89.512,
+      "texto": "Porque você não vem Volta"
+    },
+    {
+      "inicio": 89.532,
+      "fim": 91.572,
+      "texto": "amor, me deixa eu ser"
+    },
+    {
+      "inicio": 91.792,
+      "fim": 97.733,
+      "texto": "é feliz a"
+    },
+    {
+      "inicio": 97.993,
+      "fim": 103.975,
+      "texto": "sempre com você viver"
+    },
+    {
+      "inicio": 103.995,
+      "fim": 109.096,
+      "texto": "é ter você pra mim porque"
+    },
+    {
+      "inicio": 109.596,
+      "fim": 112.696,
+      "texto": "você não traz o"
+    },
+    {
+      "inicio": 112.816,
+      "fim": 116.817,
+      "texto": "sol que faz"
+    },
+    {
+      "inicio": 116.977,
+      "fim": 119.218,
+      "texto": "amanhecer"
+    },
+    {
+      "inicio": 123.734,
+      "fim": 129.181,
+      "texto": "Sente o azul do céu Pra nunca"
+    },
+    {
+      "inicio": 129.261,
+      "fim": 132.005,
+      "texto": "mais ter que dizer"
+    },
+    {
+      "inicio": 132.606,
+      "fim": 135.65,
+      "texto": "Adeus"
+    },
+    {
+      "inicio": 137.014,
+      "fim": 142.596,
+      "texto": "Toda vez que o sol esconde a carde e a lua cede o"
+    },
+    {
+      "inicio": 142.656,
+      "fim": 146.777,
+      "texto": "azul do céu Você chega assim, meu bem, sem"
+    },
+    {
+      "inicio": 146.857,
+      "fim": 151.419,
+      "texto": "avisar Acra meu"
+    },
+    {
+      "inicio": 151.519,
+      "fim": 156.68,
+      "texto": "coração e acende em mim"
+    },
+    {
+      "inicio": 157.041,
+      "fim": 161.282,
+      "texto": "Toda a emoção de amar"
+    },
+    {
+      "inicio": 161.954,
+      "fim": 167.435,
+      "texto": "Que um grande amor nos faz viver O amor é"
+    },
+    {
+      "inicio": 167.495,
+      "fim": 173.236,
+      "texto": "mesmo assim Nem sempre traz felicidade"
+    },
+    {
+      "inicio": 173.536,
+      "fim": 179.197,
+      "texto": "Quando o boi não irá valer E a gente fede a"
+    },
+    {
+      "inicio": 179.217,
+      "fim": 184.719,
+      "texto": "ilusão Mas quando vem faz tanto bem Liberta"
+    },
+    {
+      "inicio": 184.899,
+      "fim": 189.399,
+      "texto": "sonhos e paixão Porque"
+    },
+    {
+      "inicio": 189.54,
+      "fim": 191.6,
+      "texto": "você não vê"
+    },
+    {
+      "inicio": 193.521,
+      "fim": 196.644,
+      "texto": "Volta amor, me deja ser"
+    },
+    {
+      "inicio": 196.744,
+      "fim": 202.449,
+      "texto": "feliz Pra"
+    },
+    {
+      "inicio": 202.649,
+      "fim": 208.614,
+      "texto": "sempre com você Viver"
+    },
+    {
+      "inicio": 208.634,
+      "fim": 214.059,
+      "texto": "é ter você pra mim Porque"
+    },
+    {
+      "inicio": 214.159,
+      "fim": 217.342,
+      "texto": "você não traz o sol"
+    },
+    {
+      "inicio": 222.346,
+      "fim": 227.511,
+      "texto": "e"
+    },
+    {
+      "inicio": 227.951,
+      "fim": 233.796,
+      "texto": "acende o azul do céu pra nunca"
+    },
+    {
+      "inicio": 233.896,
+      "fim": 239.781,
+      "texto": "mais ter que dizer adeus porque"
+    },
+    {
+      "inicio": 239.841,
+      "fim": 244.105,
+      "texto": "você não vem pra mim"
+    },
+    {
+      "inicio": 246.422,
+      "fim": 248.504,
+      "texto": "Só sem amar você"
+    },
+    {
+      "inicio": 253.99,
+      "fim": 259.977,
+      "texto": "Faz alguém feliz, assim Tras"
+    },
+    {
+      "inicio": 260.017,
+      "fim": 262.5,
+      "texto": "você pra mim, amor"
+    }
+  ],
+  "avisos": [
+    "Segmento 1: alinhamento fraco em 'o'.",
+    "Segmento 1: alinhamento fraco em 'sem'.",
+    "Segmento 1: alinhamento fraco em 'me'.",
+    "Segmento 1: alinhamento fraco em 'e'.",
+    "Segmento 2: alinhamento fraco em 'a'.",
+    "Segmento 2: alinhamento fraco em 'e'.",
+    "Segmento 2: alinhamento fraco em 'aqui'.",
+    "Segmento 3: alinhamento fraco em 'a'.",
+    "Segmento 4: alinhamento fraco em 'é'.",
+    "Segmento 4: alinhamento fraco em 'faz'.",
+    "Segmento 4: alinhamento fraco em 'os'.",
+    "Segmento 4: alinhamento fraco em 'eu'.",
+    "Segmento 5: alinhamento fraco em 'é'.",
+    "Segmento 7: alinhamento fraco em 'a'.",
+    "Segmento 7: alinhamento fraco em 'de'.",
+    "Segmento 8: alinhamento fraco em 'Que'.",
+    "Segmento 8: alinhamento fraco em 'O'.",
+    "Segmento 8: alinhamento fraco em 'é'.",
+    "Segmento 9: alinhamento fraco em 'é'.",
+    "Segmento 9: alinhamento fraco em 'o'.",
+    "Segmento 10: alinhamento fraco em 'o'.",
+    "Segmento 10: alinhamento fraco em 'que'."
+  ],
+  "revisao_recomendada": true,
+  "comparacao_letra": {
+    "similaridade_textual": 0.8694096601073346,
+    "divergencias": [
+      {
+        "tipo": "replace",
+        "referencia": "toca",
+        "transcricao": "taca"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "reacende em mim",
+        "transcricao": "acende minha"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "neste",
+        "transcricao": "nesse"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "penso",
+        "transcricao": "pense"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "chora",
+        "transcricao": "sara"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "pra",
+        "transcricao": "a"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "dói dói",
+        "transcricao": "toi toi"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "paixão por que",
+        "transcricao": "mais são porque"
+      },
+      {
+        "tipo": "insert",
+        "referencia": "",
+        "transcricao": "eu"
+      },
+      {
+        "tipo": "insert",
+        "referencia": "",
+        "transcricao": "é"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "pra",
+        "transcricao": "a"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "por que",
+        "transcricao": "porque"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "faça",
+        "transcricao": "faz"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "acende",
+        "transcricao": "sente"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "tarde",
+        "transcricao": "carde"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "me",
+        "transcricao": ""
+      },
+      {
+        "tipo": "replace",
+        "referencia": "toca",
+        "transcricao": "acra"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "reacende",
+        "transcricao": "acende"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "dói dói pra",
+        "transcricao": "o boi não irá"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "perde",
+        "transcricao": "fede"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "por que",
+        "transcricao": "porque"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "vem",
+        "transcricao": "vê"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "deixa",
+        "transcricao": "deja"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "por que",
+        "transcricao": "porque"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "que faça amanhecer",
+        "transcricao": "e"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "por que",
+        "transcricao": "porque"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "sei",
+        "transcricao": "sem"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "traz",
+        "transcricao": "tras"
+      }
+    ]
+  }
+}

@@ -1,0 +1,2210 @@
+{
+  "versao": 6,
+  "status": "pendente",
+  "estrategia": "preservar_corrigir_inserir",
+  "motor": "whisperx",
+  "duracao_audio": 210.62825,
+  "scores_sao_probabilidades": false,
+  "aprovacao_musical_automatica": false,
+  "parametros": {
+    "score_minimo": 0.3,
+    "janela_maxima": 180.0,
+    "segundos_busca_por_palavra": 3.0,
+    "janela_minima": 30.0,
+    "fragmento_sem_ancora_max_palavras": 2,
+    "fragmento_sem_ancora_max_segundos": 1.0,
+    "score_suporte_insercao": 0.1,
+    "atividade_minima_insercao": 0.2,
+    "margem": 0.4,
+    "margem_aplicada": false
+  },
+  "total_palavras_txt": 305,
+  "total_palavras_srt": 369,
+  "metricas": {
+    "palavras_publicadas": 371,
+    "blocos_srt_auditados": 48,
+    "blocos_srt_descartados": 0,
+    "blocos_texto_corrigido": 23,
+    "blocos_inseridos": 0,
+    "palavras_txt_sem_tempo": 48,
+    "palavras_txt_nao_pesquisadas": 45,
+    "palavras_txt_pesquisadas_sem_tempo": 3,
+    "palavras_conflito_original": 0,
+    "palavras_baixa_confianca": 0,
+    "tentativas_acusticas": 3
+  },
+  "comparacao": {
+    "consultas": [
+      {
+        "bloco_srt": 1,
+        "inicio": 0.882,
+        "fim": 2.984,
+        "txt_inicio": 0,
+        "txt_fim": 5,
+        "score": 0.8484848484848484,
+        "texto": "I think I did it",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 2,
+        "inicio": 3.664,
+        "fim": 4.245,
+        "txt_inicio": 5,
+        "txt_fim": 6,
+        "score": 1.0,
+        "texto": "again",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 3,
+        "inicio": 24.262,
+        "fim": 29.105,
+        "txt_inicio": 6,
+        "txt_fim": 15,
+        "score": 1.0,
+        "texto": "I made you believe we're more than just friends",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 4,
+        "inicio": 29.906,
+        "fim": 35.47,
+        "txt_inicio": 15,
+        "txt_fim": 26,
+        "score": 0.9090909090909091,
+        "texto": "Oh, baby It might seem like a crush But it doesn't",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 5,
+        "inicio": 35.55,
+        "fim": 39.652,
+        "txt_inicio": 26,
+        "txt_fim": 30,
+        "score": 1.0,
+        "texto": "mean that I'm serious '",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 6,
+        "inicio": 40.373,
+        "fim": 41.654,
+        "txt_inicio": 30,
+        "txt_fim": 33,
+        "score": 0.8695652173913043,
+        "texto": "Cause to lose",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 7,
+        "inicio": 42.394,
+        "fim": 48.138,
+        "txt_inicio": 33,
+        "txt_fim": 40,
+        "score": 0.8529411764705883,
+        "texto": "all my senses That is just so",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 8,
+        "inicio": 48.178,
+        "fim": 48.598,
+        "txt_inicio": 41,
+        "txt_fim": 43,
+        "score": 1.0,
+        "texto": "me Oh,",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 9,
+        "inicio": 49.739,
+        "fim": 53.542,
+        "txt_inicio": 43,
+        "txt_fim": 50,
+        "score": 0.8125,
+        "texto": "baby, baby Oops, I did it again",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 10,
+        "inicio": 54.506,
+        "fim": 60.349,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "I've played with your heart, that I lost in the game Oh baby,",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 11,
+        "inicio": 60.449,
+        "fim": 65.472,
+        "txt_inicio": 62,
+        "txt_fim": 73,
+        "score": 0.9387755102040817,
+        "texto": "baby Oops, you think I'm in love That I'm sent from",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 12,
+        "inicio": 65.612,
+        "fim": 71.095,
+        "txt_inicio": 73,
+        "txt_fim": 78,
+        "score": 1.0,
+        "texto": "above I'm not that innocent",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 13,
+        "inicio": 71.415,
+        "fim": 73.936,
+        "txt_inicio": 78,
+        "txt_fim": 83,
+        "score": 0.8571428571428572,
+        "texto": "You see my problem is",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 14,
+        "inicio": 74.657,
+        "fim": 76.478,
+        "txt_inicio": 84,
+        "txt_fim": 87,
+        "score": 1.0,
+        "texto": "I'm dreaming away",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 15,
+        "inicio": 77.506,
+        "fim": 83.491,
+        "txt_inicio": 87,
+        "txt_fim": 97,
+        "score": 0.8596491228070176,
+        "texto": "Wishing that heroes, they truly exist I cry watching the",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 16,
+        "inicio": 83.511,
+        "fim": 88.515,
+        "txt_inicio": 97,
+        "txt_fim": 107,
+        "score": 1.0,
+        "texto": "days Can't you see I'm a fool in so many",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 17,
+        "inicio": 88.595,
+        "fim": 92.178,
+        "txt_inicio": 107,
+        "txt_fim": 111,
+        "score": 1.0,
+        "texto": "ways? But to lose",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 18,
+        "inicio": 92.878,
+        "fim": 98.223,
+        "txt_inicio": 111,
+        "txt_fim": 118,
+        "score": 0.9354838709677421,
+        "texto": "all my senses That is just so",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 19,
+        "inicio": 98.303,
+        "fim": 100.284,
+        "txt_inicio": 119,
+        "txt_fim": 122,
+        "score": 0.75,
+        "texto": "me Oh, baby,",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 20,
+        "inicio": 101.025,
+        "fim": 104.288,
+        "txt_inicio": 122,
+        "txt_fim": 129,
+        "score": 1.0,
+        "texto": "oh Oops, I did it again I",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 21,
+        "inicio": 105.268,
+        "fim": 106.91,
+        "txt_inicio": 129,
+        "txt_fim": 133,
+        "score": 1.0,
+        "texto": "played with your heart",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 22,
+        "inicio": 107.498,
+        "fim": 113.482,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Gotta lost in the game Oh baby, baby, oh, you've been found",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 23,
+        "inicio": 113.602,
+        "fim": 119.146,
+        "txt_inicio": 145,
+        "txt_fim": 153,
+        "score": 0.7936507936507937,
+        "texto": "in love That I'm sent from above I'm",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 24,
+        "inicio": 119.186,
+        "fim": 120.907,
+        "txt_inicio": 153,
+        "txt_fim": 155,
+        "score": 1.0,
+        "texto": "not that",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 25,
+        "inicio": 121.427,
+        "fim": 125.63,
+        "txt_inicio": 155,
+        "txt_fim": 156,
+        "score": 1.0,
+        "texto": "innocent",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 26,
+        "inicio": 125.65,
+        "fim": 127.972,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Oh,",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 27,
+        "inicio": 128.752,
+        "fim": 134.516,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Mark! Freakin'",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
+      },
+      {
+        "bloco_srt": 28,
+        "inicio": 134.957,
+        "fim": 136.858,
+        "txt_inicio": 159,
+        "txt_fim": 169,
+        "score": 1.0,
+        "texto": "before you go, there's something I want you to have",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 29,
+        "inicio": 137.454,
+        "fim": 141.798,
+        "txt_inicio": 169,
+        "txt_fim": 182,
+        "score": 1.0,
+        "texto": "Oh, it's beautiful, but wait a minute, isn't this? Yeah, yes it is",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 30,
+        "inicio": 142.518,
+        "fim": 145.801,
+        "txt_inicio": 182,
+        "txt_fim": 197,
+        "score": 0.9558823529411765,
+        "texto": "But I thought the old lady dropped it into the ocean in the end Well,",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 31,
+        "inicio": 145.841,
+        "fim": 149.424,
+        "txt_inicio": 197,
+        "txt_fim": 210,
+        "score": 0.9369369369369369,
+        "texto": "baby, I went down and got it for ya Aw, you shouldn't have",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 32,
+        "inicio": 150.705,
+        "fim": 151.806,
+        "txt_inicio": 210,
+        "txt_fim": 217,
+        "score": 1.0,
+        "texto": "Oops, I did it again to your",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 33,
+        "inicio": 152.467,
+        "fim": 154.489,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "heart. Got lost in this game, oh baby. Yeah, yeah, yeah, yeah, yeah,",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 34,
+        "inicio": 154.509,
+        "fim": 156.29,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
+      },
+      {
+        "bloco_srt": 35,
+        "inicio": 156.31,
+        "fim": 156.731,
+        "txt_inicio": 177,
+        "txt_fim": 180,
+        "score": 0.6666666666666667,
+        "texto": "this? Yeah, yes",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 36,
+        "inicio": 157.451,
+        "fim": 159.253,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
+      },
+      {
+        "bloco_srt": 37,
+        "inicio": 159.273,
+        "fim": 160.774,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
+      },
+      {
+        "bloco_srt": 38,
+        "inicio": 160.794,
+        "fim": 162.676,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
+      },
+      {
+        "bloco_srt": 39,
+        "inicio": 162.696,
+        "fim": 164.337,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
+      },
+      {
+        "bloco_srt": 40,
+        "inicio": 164.357,
+        "fim": 165.198,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "yeah, yeah, yeah, yeah, yeah, yeah, yeah",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
+      },
+      {
+        "bloco_srt": 41,
+        "inicio": 167.394,
+        "fim": 172.939,
+        "txt_inicio": 235,
+        "txt_fim": 244,
+        "score": 1.0,
+        "texto": "I'm not that innocent Oops, I did it again",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 42,
+        "inicio": 173.68,
+        "fim": 179.505,
+        "txt_inicio": 244,
+        "txt_fim": 256,
+        "score": 1.0,
+        "texto": "I played with your heart Got lost in the game Oh, baby,",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 43,
+        "inicio": 179.585,
+        "fim": 184.57,
+        "txt_inicio": 256,
+        "txt_fim": 267,
+        "score": 0.8571428571428572,
+        "texto": "baby Oops, you think I'm in love That I'm sent from",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 44,
+        "inicio": 184.71,
+        "fim": 190.075,
+        "txt_inicio": 267,
+        "txt_fim": 272,
+        "score": 1.0,
+        "texto": "above I'm not that innocent",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 45,
+        "inicio": 190.375,
+        "fim": 192.877,
+        "txt_inicio": 272,
+        "txt_fim": 277,
+        "score": 1.0,
+        "texto": "Oops, I did it again",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 46,
+        "inicio": 193.846,
+        "fim": 199.654,
+        "txt_inicio": 277,
+        "txt_fim": 289,
+        "score": 0.8888888888888888,
+        "texto": "I played with your heart Got lost in the game Oh, baby,",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 47,
+        "inicio": 199.794,
+        "fim": 204.84,
+        "txt_inicio": 289,
+        "txt_fim": 300,
+        "score": 0.8131868131868132,
+        "texto": "baby Oops, you think I'm in love That I'm sent from",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 48,
+        "inicio": 204.941,
+        "fim": 209.847,
+        "txt_inicio": 300,
+        "txt_fim": 305,
+        "score": 1.0,
+        "texto": "above I'm not that innocent",
+        "aviso": null
+      }
+    ],
+    "regioes": [
+      {
+        "indices": [
+          0
+        ],
+        "inicio": 0.882,
+        "fim": 2.984,
+        "txt_inicio": 0,
+        "txt_fim": 5,
+        "texto": "I think I did it"
+      },
+      {
+        "indices": [
+          1
+        ],
+        "inicio": 3.664,
+        "fim": 4.245,
+        "txt_inicio": 5,
+        "txt_fim": 6,
+        "texto": "again"
+      },
+      {
+        "indices": [
+          2
+        ],
+        "inicio": 24.262,
+        "fim": 29.105,
+        "txt_inicio": 6,
+        "txt_fim": 15,
+        "texto": "I made you believe we're more than just friends"
+      },
+      {
+        "indices": [
+          3
+        ],
+        "inicio": 29.906,
+        "fim": 35.47,
+        "txt_inicio": 15,
+        "txt_fim": 26,
+        "texto": "Oh, baby It might seem like a crush But it doesn't"
+      },
+      {
+        "indices": [
+          4
+        ],
+        "inicio": 35.55,
+        "fim": 39.652,
+        "txt_inicio": 26,
+        "txt_fim": 30,
+        "texto": "mean that I'm serious '"
+      },
+      {
+        "indices": [
+          5
+        ],
+        "inicio": 40.373,
+        "fim": 41.654,
+        "txt_inicio": 30,
+        "txt_fim": 33,
+        "texto": "Cause to lose"
+      },
+      {
+        "indices": [
+          6
+        ],
+        "inicio": 42.394,
+        "fim": 48.138,
+        "txt_inicio": 33,
+        "txt_fim": 40,
+        "texto": "all my senses That is just so"
+      },
+      {
+        "indices": [
+          7
+        ],
+        "inicio": 48.178,
+        "fim": 48.598,
+        "txt_inicio": 41,
+        "txt_fim": 43,
+        "texto": "me Oh,"
+      },
+      {
+        "indices": [
+          8
+        ],
+        "inicio": 49.739,
+        "fim": 53.542,
+        "txt_inicio": 43,
+        "txt_fim": 50,
+        "texto": "baby, baby Oops, I did it again"
+      },
+      {
+        "indices": [
+          9
+        ],
+        "inicio": 54.506,
+        "fim": 60.349,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "I've played with your heart, that I lost in the game Oh baby,"
+      },
+      {
+        "indices": [
+          10
+        ],
+        "inicio": 60.449,
+        "fim": 65.472,
+        "txt_inicio": 62,
+        "txt_fim": 73,
+        "texto": "baby Oops, you think I'm in love That I'm sent from"
+      },
+      {
+        "indices": [
+          11
+        ],
+        "inicio": 65.612,
+        "fim": 71.095,
+        "txt_inicio": 73,
+        "txt_fim": 78,
+        "texto": "above I'm not that innocent"
+      },
+      {
+        "indices": [
+          12
+        ],
+        "inicio": 71.415,
+        "fim": 73.936,
+        "txt_inicio": 78,
+        "txt_fim": 83,
+        "texto": "You see my problem is"
+      },
+      {
+        "indices": [
+          13
+        ],
+        "inicio": 74.657,
+        "fim": 76.478,
+        "txt_inicio": 84,
+        "txt_fim": 87,
+        "texto": "I'm dreaming away"
+      },
+      {
+        "indices": [
+          14
+        ],
+        "inicio": 77.506,
+        "fim": 83.491,
+        "txt_inicio": 87,
+        "txt_fim": 97,
+        "texto": "Wishing that heroes, they truly exist I cry watching the"
+      },
+      {
+        "indices": [
+          15
+        ],
+        "inicio": 83.511,
+        "fim": 88.515,
+        "txt_inicio": 97,
+        "txt_fim": 107,
+        "texto": "days Can't you see I'm a fool in so many"
+      },
+      {
+        "indices": [
+          16
+        ],
+        "inicio": 88.595,
+        "fim": 92.178,
+        "txt_inicio": 107,
+        "txt_fim": 111,
+        "texto": "ways? But to lose"
+      },
+      {
+        "indices": [
+          17
+        ],
+        "inicio": 92.878,
+        "fim": 98.223,
+        "txt_inicio": 111,
+        "txt_fim": 118,
+        "texto": "all my senses That is just so"
+      },
+      {
+        "indices": [
+          18
+        ],
+        "inicio": 98.303,
+        "fim": 100.284,
+        "txt_inicio": 119,
+        "txt_fim": 122,
+        "texto": "me Oh, baby,"
+      },
+      {
+        "indices": [
+          19
+        ],
+        "inicio": 101.025,
+        "fim": 104.288,
+        "txt_inicio": 122,
+        "txt_fim": 129,
+        "texto": "oh Oops, I did it again I"
+      },
+      {
+        "indices": [
+          20
+        ],
+        "inicio": 105.268,
+        "fim": 106.91,
+        "txt_inicio": 129,
+        "txt_fim": 133,
+        "texto": "played with your heart"
+      },
+      {
+        "indices": [
+          21
+        ],
+        "inicio": 107.498,
+        "fim": 113.482,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Gotta lost in the game Oh baby, baby, oh, you've been found"
+      },
+      {
+        "indices": [
+          22
+        ],
+        "inicio": 113.602,
+        "fim": 119.146,
+        "txt_inicio": 145,
+        "txt_fim": 153,
+        "texto": "in love That I'm sent from above I'm"
+      },
+      {
+        "indices": [
+          23
+        ],
+        "inicio": 119.186,
+        "fim": 120.907,
+        "txt_inicio": 153,
+        "txt_fim": 155,
+        "texto": "not that"
+      },
+      {
+        "indices": [
+          24
+        ],
+        "inicio": 121.427,
+        "fim": 125.63,
+        "txt_inicio": 155,
+        "txt_fim": 156,
+        "texto": "innocent"
+      },
+      {
+        "indices": [
+          25
+        ],
+        "inicio": 125.65,
+        "fim": 127.972,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Oh,"
+      },
+      {
+        "indices": [
+          26
+        ],
+        "inicio": 128.752,
+        "fim": 134.516,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Mark! Freakin'"
+      },
+      {
+        "indices": [
+          27
+        ],
+        "inicio": 134.957,
+        "fim": 136.858,
+        "txt_inicio": 159,
+        "txt_fim": 169,
+        "texto": "before you go, there's something I want you to have"
+      },
+      {
+        "indices": [
+          28
+        ],
+        "inicio": 137.454,
+        "fim": 141.798,
+        "txt_inicio": 169,
+        "txt_fim": 182,
+        "texto": "Oh, it's beautiful, but wait a minute, isn't this? Yeah, yes it is"
+      },
+      {
+        "indices": [
+          29
+        ],
+        "inicio": 142.518,
+        "fim": 145.801,
+        "txt_inicio": 182,
+        "txt_fim": 197,
+        "texto": "But I thought the old lady dropped it into the ocean in the end Well,"
+      },
+      {
+        "indices": [
+          30
+        ],
+        "inicio": 145.841,
+        "fim": 149.424,
+        "txt_inicio": 197,
+        "txt_fim": 210,
+        "texto": "baby, I went down and got it for ya Aw, you shouldn't have"
+      },
+      {
+        "indices": [
+          31
+        ],
+        "inicio": 150.705,
+        "fim": 151.806,
+        "txt_inicio": 210,
+        "txt_fim": 217,
+        "texto": "Oops, I did it again to your"
+      },
+      {
+        "indices": [
+          32
+        ],
+        "inicio": 152.467,
+        "fim": 154.489,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "heart. Got lost in this game, oh baby. Yeah, yeah, yeah, yeah, yeah,"
+      },
+      {
+        "indices": [
+          33
+        ],
+        "inicio": 154.509,
+        "fim": 156.29,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,"
+      },
+      {
+        "indices": [
+          34
+        ],
+        "inicio": 156.31,
+        "fim": 156.731,
+        "txt_inicio": 177,
+        "txt_fim": 180,
+        "texto": "this? Yeah, yes"
+      },
+      {
+        "indices": [
+          35
+        ],
+        "inicio": 157.451,
+        "fim": 159.253,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,"
+      },
+      {
+        "indices": [
+          36
+        ],
+        "inicio": 159.273,
+        "fim": 160.774,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,"
+      },
+      {
+        "indices": [
+          37
+        ],
+        "inicio": 160.794,
+        "fim": 162.676,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,"
+      },
+      {
+        "indices": [
+          38
+        ],
+        "inicio": 162.696,
+        "fim": 164.337,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,"
+      },
+      {
+        "indices": [
+          39
+        ],
+        "inicio": 164.357,
+        "fim": 165.198,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "yeah, yeah, yeah, yeah, yeah, yeah, yeah"
+      },
+      {
+        "indices": [
+          40
+        ],
+        "inicio": 167.394,
+        "fim": 172.939,
+        "txt_inicio": 235,
+        "txt_fim": 244,
+        "texto": "I'm not that innocent Oops, I did it again"
+      },
+      {
+        "indices": [
+          41
+        ],
+        "inicio": 173.68,
+        "fim": 179.505,
+        "txt_inicio": 244,
+        "txt_fim": 256,
+        "texto": "I played with your heart Got lost in the game Oh, baby,"
+      },
+      {
+        "indices": [
+          42
+        ],
+        "inicio": 179.585,
+        "fim": 184.57,
+        "txt_inicio": 256,
+        "txt_fim": 267,
+        "texto": "baby Oops, you think I'm in love That I'm sent from"
+      },
+      {
+        "indices": [
+          43
+        ],
+        "inicio": 184.71,
+        "fim": 190.075,
+        "txt_inicio": 267,
+        "txt_fim": 272,
+        "texto": "above I'm not that innocent"
+      },
+      {
+        "indices": [
+          44
+        ],
+        "inicio": 190.375,
+        "fim": 192.877,
+        "txt_inicio": 272,
+        "txt_fim": 277,
+        "texto": "Oops, I did it again"
+      },
+      {
+        "indices": [
+          45
+        ],
+        "inicio": 193.846,
+        "fim": 199.654,
+        "txt_inicio": 277,
+        "txt_fim": 289,
+        "texto": "I played with your heart Got lost in the game Oh, baby,"
+      },
+      {
+        "indices": [
+          46
+        ],
+        "inicio": 199.794,
+        "fim": 204.84,
+        "txt_inicio": 289,
+        "txt_fim": 300,
+        "texto": "baby Oops, you think I'm in love That I'm sent from"
+      },
+      {
+        "indices": [
+          47
+        ],
+        "inicio": 204.941,
+        "fim": 209.847,
+        "txt_inicio": 300,
+        "txt_fim": 305,
+        "texto": "above I'm not that innocent"
+      }
+    ],
+    "tokens_txt_sem_correspondencia": [
+      40,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      83,
+      118,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      156,
+      157,
+      158,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234
+    ],
+    "parametros": {
+      "score_consulta_minimo": 0.65,
+      "margem_ambiguidade": 0.025,
+      "bonus_por_extremidade": 0.02,
+      "score_contexto_minimo": 0.85,
+      "distancia_max_palavra_isolada": 3.0,
+      "palavra_isolada_exige_exatidao": true
+    }
+  },
+  "auditoria_estrutura": [
+    {
+      "bloco_srt": 1,
+      "inicio_original": 0.882,
+      "fim_original": 2.984,
+      "texto_original": "I think I'll do it",
+      "texto_publicado": "I think i did it",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 2,
+      "inicio_original": 3.664,
+      "fim_original": 4.245,
+      "texto_original": "again",
+      "texto_publicado": "Again",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 3,
+      "inicio_original": 24.262,
+      "fim_original": 29.105,
+      "texto_original": "I made you believe We're more than just friends",
+      "texto_publicado": "I made you believe we're more than just friends",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 4,
+      "inicio_original": 29.906,
+      "fim_original": 35.47,
+      "texto_original": "Oh, gravy, it might seem like the crush But it doesn't",
+      "texto_publicado": "Oh, baby it might seem like a crush but it doesn't",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 5,
+      "inicio_original": 35.55,
+      "fim_original": 39.652,
+      "texto_original": "mean That I'm serious",
+      "texto_publicado": "Mean that i'm serious '",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 6,
+      "inicio_original": 40.373,
+      "fim_original": 41.654,
+      "texto_original": "As to lose",
+      "texto_publicado": "Cause to lose",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 7,
+      "inicio_original": 42.394,
+      "fim_original": 48.138,
+      "texto_original": "all my senses That is just so sweet for",
+      "texto_publicado": "All my senses that is just so sweet for",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 8,
+      "inicio_original": 48.178,
+      "fim_original": 48.598,
+      "texto_original": "me Oh,",
+      "texto_publicado": "Me oh,",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 9,
+      "inicio_original": 49.739,
+      "fim_original": 53.542,
+      "texto_original": "baby, baby, that hurts I did it again",
+      "texto_publicado": "Baby, baby oops, i did it again",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 10,
+      "inicio_original": 54.506,
+      "fim_original": 60.349,
+      "texto_original": "I've played with your heart, that I lost in the game Oh baby,",
+      "texto_publicado": "I've played with your heart, that i lost in the game oh baby,",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 11,
+      "inicio_original": 60.449,
+      "fim_original": 65.472,
+      "texto_original": "baby, who do you think I'm in love? That I'm sent from",
+      "texto_publicado": "Baby oops, you think i'm in love that i'm sent from",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 12,
+      "inicio_original": 65.612,
+      "fim_original": 71.095,
+      "texto_original": "above, I'm not that innocent",
+      "texto_publicado": "Above i'm not that innocent",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 13,
+      "inicio_original": 71.415,
+      "fim_original": 73.936,
+      "texto_original": "You've seen my problem, Miss B",
+      "texto_publicado": "You see my problem is",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 14,
+      "inicio_original": 74.657,
+      "fim_original": 76.478,
+      "texto_original": "I'm dreaming away",
+      "texto_publicado": "I'm dreaming away",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 15,
+      "inicio_original": 77.506,
+      "fim_original": 83.491,
+      "texto_original": "Wishing that the yellow sky truly exists I cry watching the",
+      "texto_publicado": "Wishing that heroes, they truly exist i cry watching the",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 16,
+      "inicio_original": 83.511,
+      "fim_original": 88.515,
+      "texto_original": "days Can't you see I'm a fool? In so many",
+      "texto_publicado": "Days can't you see i'm a fool in so many",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 17,
+      "inicio_original": 88.595,
+      "fim_original": 92.178,
+      "texto_original": "ways But to lose",
+      "texto_publicado": "Ways? but to lose",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 18,
+      "inicio_original": 92.878,
+      "fim_original": 98.223,
+      "texto_original": "all my senses That is just so too",
+      "texto_publicado": "All my senses that is just so too",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 19,
+      "inicio_original": 98.303,
+      "fim_original": 100.284,
+      "texto_original": "pretty Oh baby,",
+      "texto_publicado": "Me oh, baby,",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 20,
+      "inicio_original": 101.025,
+      "fim_original": 104.288,
+      "texto_original": "oh oops I did it again I",
+      "texto_publicado": "Oh oops, i did it again i",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 21,
+      "inicio_original": 105.268,
+      "fim_original": 106.91,
+      "texto_original": "played with your heart",
+      "texto_publicado": "Played with your heart",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 22,
+      "inicio_original": 107.498,
+      "fim_original": 113.482,
+      "texto_original": "Gotta lost in the game Oh baby, baby, oh, you've been found",
+      "texto_publicado": "Gotta lost in the game oh baby, baby, oh, you've been found",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 23,
+      "inicio_original": 113.602,
+      "fim_original": 119.146,
+      "texto_original": "in love Dancing from above I'm",
+      "texto_publicado": "In love that i'm sent from above i'm",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 24,
+      "inicio_original": 119.186,
+      "fim_original": 120.907,
+      "texto_original": "not that",
+      "texto_publicado": "Not that",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 25,
+      "inicio_original": 121.427,
+      "fim_original": 125.63,
+      "texto_original": "innocent",
+      "texto_publicado": "Innocent",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 26,
+      "inicio_original": 125.65,
+      "fim_original": 127.972,
+      "texto_original": "Oh,",
+      "texto_publicado": "Oh,",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 27,
+      "inicio_original": 128.752,
+      "fim_original": 134.516,
+      "texto_original": "Mark! Freakin'",
+      "texto_publicado": "Mark! freakin'",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 28,
+      "inicio_original": 134.957,
+      "fim_original": 136.858,
+      "texto_original": "Before you go, there's something I want you to have",
+      "texto_publicado": "Before you go, there's something i want you to have",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 29,
+      "inicio_original": 137.454,
+      "fim_original": 141.798,
+      "texto_original": "Oh, it's beautiful. But wait a minute, isn't this... Yeah, yes it is.",
+      "texto_publicado": "Oh, it's beautiful, but wait a minute, isn't this? yeah, yes it is",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 30,
+      "inicio_original": 142.518,
+      "fim_original": 145.801,
+      "texto_original": "But I thought the old lady dropped it into the ocean in the air. Well,",
+      "texto_publicado": "But i thought the old lady dropped it into the ocean in the end well,",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 31,
+      "inicio_original": 145.841,
+      "fim_original": 149.424,
+      "texto_original": "baby, I went down and got it for you. Oh, you shouldn't have.",
+      "texto_publicado": "Baby, i went down and got it for ya aw, you shouldn't have",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 32,
+      "inicio_original": 150.705,
+      "fim_original": 151.806,
+      "texto_original": "Oops, I did it again to your",
+      "texto_publicado": "Oops, i did it again to your",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 33,
+      "inicio_original": 152.467,
+      "fim_original": 154.489,
+      "texto_original": "heart. Got lost in this game, oh baby. Yeah, yeah, yeah, yeah, yeah,",
+      "texto_publicado": "Heart. got lost in this game, oh baby. yeah, yeah, yeah, yeah, yeah,",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 34,
+      "inicio_original": 154.509,
+      "fim_original": 156.29,
+      "texto_original": "yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,",
+      "texto_publicado": "Yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 35,
+      "inicio_original": 156.31,
+      "fim_original": 156.731,
+      "texto_original": "yeah, yeah, yeah,",
+      "texto_publicado": "This? yeah, yes",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 36,
+      "inicio_original": 157.451,
+      "fim_original": 159.253,
+      "texto_original": "yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,",
+      "texto_publicado": "Yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 37,
+      "inicio_original": 159.273,
+      "fim_original": 160.774,
+      "texto_original": "yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,",
+      "texto_publicado": "Yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 38,
+      "inicio_original": 160.794,
+      "fim_original": 162.676,
+      "texto_original": "yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,",
+      "texto_publicado": "Yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 39,
+      "inicio_original": 162.696,
+      "fim_original": 164.337,
+      "texto_original": "yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,",
+      "texto_publicado": "Yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 40,
+      "inicio_original": 164.357,
+      "fim_original": 165.198,
+      "texto_original": "yeah, yeah, yeah, yeah, yeah, yeah, yeah",
+      "texto_publicado": "Yeah, yeah, yeah, yeah, yeah, yeah, yeah",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 41,
+      "inicio_original": 167.394,
+      "fim_original": 172.939,
+      "texto_original": "I'm not that innocent Oops, I did it again",
+      "texto_publicado": "I'm not that innocent oops, i did it again",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 42,
+      "inicio_original": 173.68,
+      "fim_original": 179.505,
+      "texto_original": "I played with your heart Got lost in the game Oh, baby,",
+      "texto_publicado": "I played with your heart got lost in the game oh, baby,",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 43,
+      "inicio_original": 179.585,
+      "fim_original": 184.57,
+      "texto_original": "baby Oops, you think I'm in love Dancing from",
+      "texto_publicado": "Baby oops, you think i'm in love that i'm sent from",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 44,
+      "inicio_original": 184.71,
+      "fim_original": 190.075,
+      "texto_original": "above I'm not that innocent",
+      "texto_publicado": "Above i'm not that innocent",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 45,
+      "inicio_original": 190.375,
+      "fim_original": 192.877,
+      "texto_original": "Oops, I did it again",
+      "texto_publicado": "Oops, i did it again",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 46,
+      "inicio_original": 193.846,
+      "fim_original": 199.654,
+      "texto_original": "That's made with your heart Got lost in the game Oh baby,",
+      "texto_publicado": "I played with your heart got lost in the game oh, baby,",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 47,
+      "inicio_original": 199.794,
+      "fim_original": 204.84,
+      "texto_original": "baby, out You think I'm in love Handsome from",
+      "texto_publicado": "Baby oops, you think i'm in love that i'm sent from",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 48,
+      "inicio_original": 204.941,
+      "fim_original": 209.847,
+      "texto_original": "above I'm not that innocent",
+      "texto_publicado": "Above i'm not that innocent",
+      "tratamento": "original_preservado",
+      "aviso": null
+    }
+  ],
+  "recuperacoes": [
+    {
+      "id": 1,
+      "txt_inicio": 40,
+      "txt_fim": 41,
+      "inicio": 48.138,
+      "fim": 48.178,
+      "bloco_anterior": 7,
+      "bloco_seguinte": 8,
+      "ocupados": [],
+      "limite_busca": 30.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "pesquisado_sem_confirmacao",
+      "tentativas": [
+        {
+          "janela": [
+            48.138,
+            48.178
+          ],
+          "texto": "typically",
+          "palavras": [
+            {
+              "texto": "typically",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            }
+          ]
+        }
+      ],
+      "inseridos": [],
+      "tokens_recuperados": [],
+      "texto": "typically"
+    },
+    {
+      "id": 2,
+      "txt_inicio": 83,
+      "txt_fim": 84,
+      "inicio": 73.936,
+      "fim": 74.657,
+      "bloco_anterior": 13,
+      "bloco_seguinte": 14,
+      "ocupados": [],
+      "limite_busca": 30.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "pesquisado_sem_confirmacao",
+      "tentativas": [
+        {
+          "janela": [
+            73.936,
+            74.657
+          ],
+          "texto": "this",
+          "palavras": [
+            {
+              "texto": "this",
+              "inicio": 73.936,
+              "fim": 74.018,
+              "score": 0.008
+            }
+          ],
+          "trechos_nao_confirmados": [
+            {
+              "txt_inicio": 83,
+              "txt_fim": 84,
+              "motivo": "suporte_acustico_insuficiente",
+              "atividade_audio": 1.0
+            }
+          ]
+        }
+      ],
+      "inseridos": [],
+      "tokens_recuperados": [],
+      "texto": "this"
+    },
+    {
+      "id": 3,
+      "txt_inicio": 118,
+      "txt_fim": 119,
+      "inicio": 98.223,
+      "fim": 98.303,
+      "bloco_anterior": 18,
+      "bloco_seguinte": 19,
+      "ocupados": [],
+      "limite_busca": 30.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "pesquisado_sem_confirmacao",
+      "tentativas": [
+        {
+          "janela": [
+            98.223,
+            98.303
+          ],
+          "texto": "typically",
+          "palavras": [
+            {
+              "texto": "typically",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            }
+          ]
+        }
+      ],
+      "inseridos": [],
+      "tokens_recuperados": [],
+      "texto": "typically"
+    }
+  ],
+  "tentativas": [
+    {
+      "janela": [
+        48.138,
+        48.178
+      ],
+      "texto": "typically",
+      "palavras": [
+        {
+          "texto": "typically",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        }
+      ],
+      "lacuna": 1
+    },
+    {
+      "janela": [
+        73.936,
+        74.657
+      ],
+      "texto": "this",
+      "palavras": [
+        {
+          "texto": "this",
+          "inicio": 73.936,
+          "fim": 74.018,
+          "score": 0.008
+        }
+      ],
+      "trechos_nao_confirmados": [
+        {
+          "txt_inicio": 83,
+          "txt_fim": 84,
+          "motivo": "suporte_acustico_insuficiente",
+          "atividade_audio": 1.0
+        }
+      ],
+      "lacuna": 2
+    },
+    {
+      "janela": [
+        98.223,
+        98.303
+      ],
+      "texto": "typically",
+      "palavras": [
+        {
+          "texto": "typically",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        }
+      ],
+      "lacuna": 3
+    }
+  ],
+  "pendencias": [
+    {
+      "bloco_srt": 7,
+      "motivo": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 10,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 18,
+      "motivo": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 22,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 26,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 27,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 33,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 34,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 36,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 37,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 38,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 39,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 40,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "lacuna": 1,
+      "motivo": "pesquisado_sem_confirmacao",
+      "detalhe": null
+    },
+    {
+      "lacuna": 2,
+      "motivo": "pesquisado_sem_confirmacao",
+      "detalhe": null
+    },
+    {
+      "lacuna": 3,
+      "motivo": "pesquisado_sem_confirmacao",
+      "detalhe": null
+    },
+    {
+      "motivo": "texto_txt_sem_tempo",
+      "tokens_txt": [
+        40,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        83,
+        118,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        156,
+        157,
+        158,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234
+      ]
+    }
+  ],
+  "blocos": [
+    {
+      "inicio": 0.882,
+      "fim": 2.984,
+      "texto": "I think i did it",
+      "origem": "texto_corrigido",
+      "bloco_original": 1
+    },
+    {
+      "inicio": 3.664,
+      "fim": 4.245,
+      "texto": "Again",
+      "origem": "original_preservado",
+      "bloco_original": 2
+    },
+    {
+      "inicio": 24.262,
+      "fim": 29.105,
+      "texto": "I made you believe we're more than just friends",
+      "origem": "texto_corrigido",
+      "bloco_original": 3
+    },
+    {
+      "inicio": 29.906,
+      "fim": 35.47,
+      "texto": "Oh, baby it might seem like a crush but it doesn't",
+      "origem": "texto_corrigido",
+      "bloco_original": 4
+    },
+    {
+      "inicio": 35.55,
+      "fim": 39.652,
+      "texto": "Mean that i'm serious '",
+      "origem": "texto_corrigido",
+      "bloco_original": 5
+    },
+    {
+      "inicio": 40.373,
+      "fim": 41.654,
+      "texto": "Cause to lose",
+      "origem": "texto_corrigido",
+      "bloco_original": 6
+    },
+    {
+      "inicio": 42.394,
+      "fim": 48.138,
+      "texto": "All my senses that is just so sweet for",
+      "origem": "original_preservado",
+      "bloco_original": 7
+    },
+    {
+      "inicio": 48.178,
+      "fim": 48.598,
+      "texto": "Me oh,",
+      "origem": "original_preservado",
+      "bloco_original": 8
+    },
+    {
+      "inicio": 49.739,
+      "fim": 53.542,
+      "texto": "Baby, baby oops, i did it again",
+      "origem": "texto_corrigido",
+      "bloco_original": 9
+    },
+    {
+      "inicio": 54.506,
+      "fim": 60.349,
+      "texto": "I've played with your heart, that i lost in the game oh baby,",
+      "origem": "original_preservado",
+      "bloco_original": 10
+    },
+    {
+      "inicio": 60.449,
+      "fim": 65.472,
+      "texto": "Baby oops, you think i'm in love that i'm sent from",
+      "origem": "texto_corrigido",
+      "bloco_original": 11
+    },
+    {
+      "inicio": 65.612,
+      "fim": 71.095,
+      "texto": "Above i'm not that innocent",
+      "origem": "texto_corrigido",
+      "bloco_original": 12
+    },
+    {
+      "inicio": 71.415,
+      "fim": 73.936,
+      "texto": "You see my problem is",
+      "origem": "texto_corrigido",
+      "bloco_original": 13
+    },
+    {
+      "inicio": 74.657,
+      "fim": 76.478,
+      "texto": "I'm dreaming away",
+      "origem": "original_preservado",
+      "bloco_original": 14
+    },
+    {
+      "inicio": 77.506,
+      "fim": 83.491,
+      "texto": "Wishing that heroes, they truly exist i cry watching the",
+      "origem": "texto_corrigido",
+      "bloco_original": 15
+    },
+    {
+      "inicio": 83.511,
+      "fim": 88.515,
+      "texto": "Days can't you see i'm a fool in so many",
+      "origem": "texto_corrigido",
+      "bloco_original": 16
+    },
+    {
+      "inicio": 88.595,
+      "fim": 92.178,
+      "texto": "Ways? but to lose",
+      "origem": "texto_corrigido",
+      "bloco_original": 17
+    },
+    {
+      "inicio": 92.878,
+      "fim": 98.223,
+      "texto": "All my senses that is just so too",
+      "origem": "original_preservado",
+      "bloco_original": 18
+    },
+    {
+      "inicio": 98.303,
+      "fim": 100.284,
+      "texto": "Me oh, baby,",
+      "origem": "texto_corrigido",
+      "bloco_original": 19
+    },
+    {
+      "inicio": 101.025,
+      "fim": 104.288,
+      "texto": "Oh oops, i did it again i",
+      "origem": "texto_corrigido",
+      "bloco_original": 20
+    },
+    {
+      "inicio": 105.268,
+      "fim": 106.91,
+      "texto": "Played with your heart",
+      "origem": "original_preservado",
+      "bloco_original": 21
+    },
+    {
+      "inicio": 107.498,
+      "fim": 113.482,
+      "texto": "Gotta lost in the game oh baby, baby, oh, you've been found",
+      "origem": "original_preservado",
+      "bloco_original": 22
+    },
+    {
+      "inicio": 113.602,
+      "fim": 119.146,
+      "texto": "In love that i'm sent from above i'm",
+      "origem": "texto_corrigido",
+      "bloco_original": 23
+    },
+    {
+      "inicio": 119.186,
+      "fim": 120.907,
+      "texto": "Not that",
+      "origem": "original_preservado",
+      "bloco_original": 24
+    },
+    {
+      "inicio": 121.427,
+      "fim": 125.63,
+      "texto": "Innocent",
+      "origem": "original_preservado",
+      "bloco_original": 25
+    },
+    {
+      "inicio": 125.65,
+      "fim": 127.972,
+      "texto": "Oh,",
+      "origem": "original_preservado",
+      "bloco_original": 26
+    },
+    {
+      "inicio": 128.752,
+      "fim": 134.516,
+      "texto": "Mark! freakin'",
+      "origem": "original_preservado",
+      "bloco_original": 27
+    },
+    {
+      "inicio": 134.957,
+      "fim": 136.858,
+      "texto": "Before you go, there's something i want you to have",
+      "origem": "texto_corrigido",
+      "bloco_original": 28
+    },
+    {
+      "inicio": 137.454,
+      "fim": 141.798,
+      "texto": "Oh, it's beautiful, but wait a minute, isn't this? yeah, yes it is",
+      "origem": "texto_corrigido",
+      "bloco_original": 29
+    },
+    {
+      "inicio": 142.518,
+      "fim": 145.801,
+      "texto": "But i thought the old lady dropped it into the ocean in the end well,",
+      "origem": "texto_corrigido",
+      "bloco_original": 30
+    },
+    {
+      "inicio": 145.841,
+      "fim": 149.424,
+      "texto": "Baby, i went down and got it for ya aw, you shouldn't have",
+      "origem": "texto_corrigido",
+      "bloco_original": 31
+    },
+    {
+      "inicio": 150.705,
+      "fim": 151.806,
+      "texto": "Oops, i did it again to your",
+      "origem": "original_preservado",
+      "bloco_original": 32
+    },
+    {
+      "inicio": 152.467,
+      "fim": 154.489,
+      "texto": "Heart. got lost in this game, oh baby. yeah, yeah, yeah, yeah, yeah,",
+      "origem": "original_preservado",
+      "bloco_original": 33
+    },
+    {
+      "inicio": 154.509,
+      "fim": 156.29,
+      "texto": "Yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,",
+      "origem": "original_preservado",
+      "bloco_original": 34
+    },
+    {
+      "inicio": 156.31,
+      "fim": 156.731,
+      "texto": "This? yeah, yes",
+      "origem": "texto_corrigido",
+      "bloco_original": 35
+    },
+    {
+      "inicio": 157.451,
+      "fim": 159.253,
+      "texto": "Yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,",
+      "origem": "original_preservado",
+      "bloco_original": 36
+    },
+    {
+      "inicio": 159.273,
+      "fim": 160.774,
+      "texto": "Yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,",
+      "origem": "original_preservado",
+      "bloco_original": 37
+    },
+    {
+      "inicio": 160.794,
+      "fim": 162.676,
+      "texto": "Yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,",
+      "origem": "original_preservado",
+      "bloco_original": 38
+    },
+    {
+      "inicio": 162.696,
+      "fim": 164.337,
+      "texto": "Yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,",
+      "origem": "original_preservado",
+      "bloco_original": 39
+    },
+    {
+      "inicio": 164.357,
+      "fim": 165.198,
+      "texto": "Yeah, yeah, yeah, yeah, yeah, yeah, yeah",
+      "origem": "original_preservado",
+      "bloco_original": 40
+    },
+    {
+      "inicio": 167.394,
+      "fim": 172.939,
+      "texto": "I'm not that innocent oops, i did it again",
+      "origem": "original_preservado",
+      "bloco_original": 41
+    },
+    {
+      "inicio": 173.68,
+      "fim": 179.505,
+      "texto": "I played with your heart got lost in the game oh, baby,",
+      "origem": "original_preservado",
+      "bloco_original": 42
+    },
+    {
+      "inicio": 179.585,
+      "fim": 184.57,
+      "texto": "Baby oops, you think i'm in love that i'm sent from",
+      "origem": "texto_corrigido",
+      "bloco_original": 43
+    },
+    {
+      "inicio": 184.71,
+      "fim": 190.075,
+      "texto": "Above i'm not that innocent",
+      "origem": "original_preservado",
+      "bloco_original": 44
+    },
+    {
+      "inicio": 190.375,
+      "fim": 192.877,
+      "texto": "Oops, i did it again",
+      "origem": "original_preservado",
+      "bloco_original": 45
+    },
+    {
+      "inicio": 193.846,
+      "fim": 199.654,
+      "texto": "I played with your heart got lost in the game oh, baby,",
+      "origem": "texto_corrigido",
+      "bloco_original": 46
+    },
+    {
+      "inicio": 199.794,
+      "fim": 204.84,
+      "texto": "Baby oops, you think i'm in love that i'm sent from",
+      "origem": "texto_corrigido",
+      "bloco_original": 47
+    },
+    {
+      "inicio": 204.941,
+      "fim": 209.847,
+      "texto": "Above i'm not that innocent",
+      "origem": "original_preservado",
+      "bloco_original": 48
+    }
+  ],
+  "configuracao_motor": {
+    "idioma": "auto",
+    "dispositivo": "cpu",
+    "modelo_solicitado": null,
+    "selecao_por_trecho": [
+      {
+        "inicio": 48.138,
+        "fim": 48.178,
+        "linhas": [
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          }
+        ]
+      },
+      {
+        "inicio": 73.936,
+        "fim": 74.657,
+        "linhas": [
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 1,
+            "herdado": false
+          }
+        ]
+      },
+      {
+        "inicio": 98.223,
+        "fim": 98.303,
+        "linhas": [
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          }
+        ]
+      }
+    ]
+  },
+  "fontes": {
+    "txt": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\pop-internacional\\oops-i-did-it-again-britney-spears\\letra.txt",
+      "sha256": "9fefa38cc12bd8cf8762fb8f4af08382fc6de5b8f2b6dbacec531221bd7c360c"
+    },
+    "srt": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\pop-internacional\\oops-i-did-it-again-britney-spears\\letra.srt",
+      "sha256": "e4f1ef4f54705da17e5236e4f50f270eaf28de25a25988c51f0c89d7b192ec46"
+    },
+    "voz": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\pop-internacional\\oops-i-did-it-again-britney-spears\\voz.mp3",
+      "sha256": "da36800eb3cdf34ca68fdf1e4338b76d3cfd5da8fe8ab06afb8cbe6b24688084"
+    }
+  },
+  "resumo_avisos": [
+    "Bloco 7: texto exclusivo srt preservado.",
+    "Bloco 10: consulta txt ambigua original preservado.",
+    "Bloco 18: texto exclusivo srt preservado.",
+    "Bloco 22: consulta txt ambigua original preservado.",
+    "Bloco 26: consulta txt ambigua original preservado.",
+    "Bloco 27: texto exclusivo srt exige revisao.",
+    "Bloco 33: consulta txt ambigua original preservado.",
+    "Bloco 34: texto exclusivo srt exige revisao.",
+    "Bloco 36: texto exclusivo srt exige revisao.",
+    "Bloco 37: texto exclusivo srt exige revisao.",
+    "Bloco 38: texto exclusivo srt exige revisao.",
+    "Bloco 39: texto exclusivo srt exige revisao.",
+    "Bloco 40: texto exclusivo srt exige revisao.",
+    "Lacuna 1: pesquisado sem confirmacao (00:00:48,138–00:00:48,178).",
+    "Lacuna 2: pesquisado sem confirmacao (00:01:13,936–00:01:14,657).",
+    "Lacuna 3: pesquisado sem confirmacao (00:01:38,223–00:01:38,303).",
+    "TXT linha 7, sem tempo: typically",
+    "TXT linha 10, sem tempo: I played with your heart",
+    "TXT linha 11, sem tempo: Got lost in the game",
+    "TXT linha 12, sem tempo: Oh baby",
+    "TXT linha 16, sem tempo: this",
+    "TXT linha 22, sem tempo: typically",
+    "TXT linha 26, sem tempo: Got lost in the game",
+    "TXT linha 27, sem tempo: Oh baby baby",
+    "TXT linha 28, sem tempo: Oops you think I'm",
+    "TXT linha 31, sem tempo: All aboard",
+    "TXT linha 32, sem tempo: Britney",
+    "TXT linha 38, sem tempo: heart",
+    "TXT linha 39, sem tempo: Got lost in this game oh baby",
+    "TXT linha 40, sem tempo: Oops you oops you think that I'm sent from above"
+  ]
+}

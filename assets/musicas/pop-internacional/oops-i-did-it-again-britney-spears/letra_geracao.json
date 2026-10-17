@@ -1,0 +1,2774 @@
+{
+  "versao": 1,
+  "arquivo_voz": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\pop-internacional\\oops-i-did-it-again-britney-spears\\voz.mp3",
+  "sha256_voz": "da36800eb3cdf34ca68fdf1e4338b76d3cfd5da8fe8ab06afb8cbe6b24688084",
+  "duracao_audio": 210.62825,
+  "configuracao": {
+    "modelo": "small",
+    "idioma": "en",
+    "dispositivo": "cpu",
+    "compute_type": "int8",
+    "vad": "silero"
+  },
+  "segmentos": [
+    {
+      "text": " I think I'll do it again",
+      "start": 0.802,
+      "end": 23.902,
+      "avg_logprob": -0.2487626038491726,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "I",
+          "start": 0.882,
+          "end": 1.042,
+          "score": 0.83
+        },
+        {
+          "word": "think",
+          "start": 1.162,
+          "end": 1.783,
+          "score": 0.576
+        },
+        {
+          "word": "I'll",
+          "start": 1.883,
+          "end": 2.203,
+          "score": 0.643
+        },
+        {
+          "word": "do",
+          "start": 2.283,
+          "end": 2.924,
+          "score": 0.887
+        },
+        {
+          "word": "it",
+          "start": 2.944,
+          "end": 2.984,
+          "score": 0.008
+        },
+        {
+          "word": "again",
+          "start": 3.664,
+          "end": 4.245,
+          "score": 0.434
+        }
+      ]
+    },
+    {
+      "text": " I made you believe We're more than just friends Oh, gravy, it might seem like the crush But it doesn't mean That I'm serious As to lose all my senses That is just so sweet for me Oh, baby, baby, that hurts I did it again",
+      "start": 24.002,
+      "end": 53.982,
+      "avg_logprob": -0.3273957480083812,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "I",
+          "start": 24.262,
+          "end": 24.422,
+          "score": 0.728
+        },
+        {
+          "word": "made",
+          "start": 24.482,
+          "end": 24.763,
+          "score": 0.587
+        },
+        {
+          "word": "you",
+          "start": 24.803,
+          "end": 25.063,
+          "score": 0.577
+        },
+        {
+          "word": "believe",
+          "start": 25.123,
+          "end": 25.943,
+          "score": 0.719
+        },
+        {
+          "word": "We're",
+          "start": 25.963,
+          "end": 26.944,
+          "score": 0.453
+        },
+        {
+          "word": "more",
+          "start": 27.044,
+          "end": 27.344,
+          "score": 0.676
+        },
+        {
+          "word": "than",
+          "start": 27.364,
+          "end": 27.584,
+          "score": 0.716
+        },
+        {
+          "word": "just",
+          "start": 27.624,
+          "end": 27.865,
+          "score": 0.929
+        },
+        {
+          "word": "friends",
+          "start": 27.965,
+          "end": 29.105,
+          "score": 0.495
+        },
+        {
+          "word": "Oh,",
+          "start": 29.906,
+          "end": 30.086,
+          "score": 0.778
+        },
+        {
+          "word": "gravy,",
+          "start": 30.146,
+          "end": 30.746,
+          "score": 0.713
+        },
+        {
+          "word": "it",
+          "start": 30.967,
+          "end": 31.387,
+          "score": 0.668
+        },
+        {
+          "word": "might",
+          "start": 31.447,
+          "end": 31.847,
+          "score": 0.829
+        },
+        {
+          "word": "seem",
+          "start": 32.007,
+          "end": 32.328,
+          "score": 0.844
+        },
+        {
+          "word": "like",
+          "start": 32.408,
+          "end": 32.628,
+          "score": 0.891
+        },
+        {
+          "word": "the",
+          "start": 32.688,
+          "end": 32.848,
+          "score": 0.84
+        },
+        {
+          "word": "crush",
+          "start": 32.968,
+          "end": 33.969,
+          "score": 0.737
+        },
+        {
+          "word": "But",
+          "start": 34.449,
+          "end": 34.569,
+          "score": 0.966
+        },
+        {
+          "word": "it",
+          "start": 34.689,
+          "end": 34.789,
+          "score": 0.832
+        },
+        {
+          "word": "doesn't",
+          "start": 34.929,
+          "end": 35.47,
+          "score": 0.735
+        },
+        {
+          "word": "mean",
+          "start": 35.55,
+          "end": 36.49,
+          "score": 0.47
+        },
+        {
+          "word": "That",
+          "start": 36.971,
+          "end": 37.111,
+          "score": 0.632
+        },
+        {
+          "word": "I'm",
+          "start": 37.191,
+          "end": 37.371,
+          "score": 0.585
+        },
+        {
+          "word": "serious",
+          "start": 37.391,
+          "end": 39.652,
+          "score": 0.843
+        },
+        {
+          "word": "As",
+          "start": 40.373,
+          "end": 40.513,
+          "score": 0.692
+        },
+        {
+          "word": "to",
+          "start": 40.573,
+          "end": 40.893,
+          "score": 0.912
+        },
+        {
+          "word": "lose",
+          "start": 41.474,
+          "end": 41.654,
+          "score": 0.45
+        },
+        {
+          "word": "all",
+          "start": 42.394,
+          "end": 42.554,
+          "score": 0.476
+        },
+        {
+          "word": "my",
+          "start": 42.775,
+          "end": 43.395,
+          "score": 0.787
+        },
+        {
+          "word": "senses",
+          "start": 43.435,
+          "end": 44.976,
+          "score": 0.633
+        },
+        {
+          "word": "That",
+          "start": 45.336,
+          "end": 45.676,
+          "score": 0.837
+        },
+        {
+          "word": "is",
+          "start": 45.757,
+          "end": 45.857,
+          "score": 0.75
+        },
+        {
+          "word": "just",
+          "start": 45.937,
+          "end": 46.417,
+          "score": 0.644
+        },
+        {
+          "word": "so",
+          "start": 46.537,
+          "end": 47.097,
+          "score": 0.922
+        },
+        {
+          "word": "sweet",
+          "start": 47.197,
+          "end": 47.718,
+          "score": 0.628
+        },
+        {
+          "word": "for",
+          "start": 47.818,
+          "end": 48.138,
+          "score": 0.508
+        },
+        {
+          "word": "me",
+          "start": 48.178,
+          "end": 48.518,
+          "score": 0.825
+        },
+        {
+          "word": "Oh,",
+          "start": 48.538,
+          "end": 48.598,
+          "score": 0.332
+        },
+        {
+          "word": "baby,",
+          "start": 49.739,
+          "end": 50.219,
+          "score": 0.809
+        },
+        {
+          "word": "baby,",
+          "start": 50.38,
+          "end": 50.68,
+          "score": 0.419
+        },
+        {
+          "word": "that",
+          "start": 50.7,
+          "end": 50.98,
+          "score": 0.413
+        },
+        {
+          "word": "hurts",
+          "start": 51.04,
+          "end": 51.4,
+          "score": 0.48
+        },
+        {
+          "word": "I",
+          "start": 51.881,
+          "end": 52.041,
+          "score": 0.829
+        },
+        {
+          "word": "did",
+          "start": 52.281,
+          "end": 52.641,
+          "score": 0.727
+        },
+        {
+          "word": "it",
+          "start": 52.761,
+          "end": 52.941,
+          "score": 0.638
+        },
+        {
+          "word": "again",
+          "start": 53.001,
+          "end": 53.542,
+          "score": 0.602
+        }
+      ]
+    },
+    {
+      "text": " I've played with your heart, that I lost in the game Oh baby, baby, who do you think I'm in love? That I'm sent from above, I'm not that innocent You've seen my problem, Miss B I'm dreaming away",
+      "start": 54.306,
+      "end": 76.958,
+      "avg_logprob": -0.41701876601347554,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "I've",
+          "start": 54.506,
+          "end": 54.686,
+          "score": 0.498
+        },
+        {
+          "word": "played",
+          "start": 54.766,
+          "end": 55.086,
+          "score": 0.339
+        },
+        {
+          "word": "with",
+          "start": 55.126,
+          "end": 55.327,
+          "score": 0.697
+        },
+        {
+          "word": "your",
+          "start": 55.407,
+          "end": 55.707,
+          "score": 0.704
+        },
+        {
+          "word": "heart,",
+          "start": 55.767,
+          "end": 56.407,
+          "score": 0.79
+        },
+        {
+          "word": "that",
+          "start": 56.987,
+          "end": 57.248,
+          "score": 0.706
+        },
+        {
+          "word": "I",
+          "start": 57.268,
+          "end": 57.288,
+          "score": 0.0
+        },
+        {
+          "word": "lost",
+          "start": 57.368,
+          "end": 57.668,
+          "score": 0.627
+        },
+        {
+          "word": "in",
+          "start": 57.708,
+          "end": 57.908,
+          "score": 0.575
+        },
+        {
+          "word": "the",
+          "start": 57.948,
+          "end": 58.148,
+          "score": 0.472
+        },
+        {
+          "word": "game",
+          "start": 58.248,
+          "end": 58.908,
+          "score": 0.843
+        },
+        {
+          "word": "Oh",
+          "start": 58.928,
+          "end": 58.968,
+          "score": 0.004
+        },
+        {
+          "word": "baby,",
+          "start": 59.349,
+          "end": 60.349,
+          "score": 0.71
+        },
+        {
+          "word": "baby,",
+          "start": 60.449,
+          "end": 61.05,
+          "score": 0.722
+        },
+        {
+          "word": "who",
+          "start": 61.11,
+          "end": 61.35,
+          "score": 0.564
+        },
+        {
+          "word": "do",
+          "start": 61.37,
+          "end": 61.57,
+          "score": 0.474
+        },
+        {
+          "word": "you",
+          "start": 61.73,
+          "end": 62.07,
+          "score": 0.915
+        },
+        {
+          "word": "think",
+          "start": 62.33,
+          "end": 62.59,
+          "score": 0.67
+        },
+        {
+          "word": "I'm",
+          "start": 62.831,
+          "end": 62.971,
+          "score": 0.394
+        },
+        {
+          "word": "in",
+          "start": 63.071,
+          "end": 63.151,
+          "score": 0.608
+        },
+        {
+          "word": "love?",
+          "start": 63.291,
+          "end": 64.151,
+          "score": 0.627
+        },
+        {
+          "word": "That",
+          "start": 64.551,
+          "end": 64.732,
+          "score": 0.652
+        },
+        {
+          "word": "I'm",
+          "start": 64.792,
+          "end": 64.872,
+          "score": 0.214
+        },
+        {
+          "word": "sent",
+          "start": 64.912,
+          "end": 65.112,
+          "score": 0.613
+        },
+        {
+          "word": "from",
+          "start": 65.172,
+          "end": 65.472,
+          "score": 0.584
+        },
+        {
+          "word": "above,",
+          "start": 65.612,
+          "end": 68.033,
+          "score": 0.562
+        },
+        {
+          "word": "I'm",
+          "start": 68.433,
+          "end": 68.634,
+          "score": 0.693
+        },
+        {
+          "word": "not",
+          "start": 68.694,
+          "end": 68.954,
+          "score": 0.749
+        },
+        {
+          "word": "that",
+          "start": 69.294,
+          "end": 69.674,
+          "score": 0.633
+        },
+        {
+          "word": "innocent",
+          "start": 70.154,
+          "end": 71.095,
+          "score": 0.657
+        },
+        {
+          "word": "You've",
+          "start": 71.415,
+          "end": 71.715,
+          "score": 0.362
+        },
+        {
+          "word": "seen",
+          "start": 71.775,
+          "end": 72.095,
+          "score": 0.612
+        },
+        {
+          "word": "my",
+          "start": 72.135,
+          "end": 72.396,
+          "score": 0.774
+        },
+        {
+          "word": "problem,",
+          "start": 72.436,
+          "end": 73.096,
+          "score": 0.641
+        },
+        {
+          "word": "Miss",
+          "start": 73.116,
+          "end": 73.296,
+          "score": 0.36
+        },
+        {
+          "word": "B",
+          "start": 73.416,
+          "end": 73.936,
+          "score": 0.84
+        },
+        {
+          "word": "I'm",
+          "start": 74.657,
+          "end": 74.877,
+          "score": 0.46
+        },
+        {
+          "word": "dreaming",
+          "start": 74.957,
+          "end": 75.497,
+          "score": 0.786
+        },
+        {
+          "word": "away",
+          "start": 75.797,
+          "end": 76.478,
+          "score": 0.722
+        }
+      ]
+    },
+    {
+      "text": " Wishing that the yellow sky truly exists I cry watching the days Can't you see I'm a fool? In so many ways But to lose all my senses That is just so too pretty Oh baby, oh oops I did it again I played with your heart",
+      "start": 77.506,
+      "end": 107.23,
+      "avg_logprob": -0.3412752961212734,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "Wishing",
+          "start": 77.506,
+          "end": 78.106,
+          "score": 0.741
+        },
+        {
+          "word": "that",
+          "start": 78.147,
+          "end": 78.347,
+          "score": 0.495
+        },
+        {
+          "word": "the",
+          "start": 78.427,
+          "end": 78.767,
+          "score": 0.466
+        },
+        {
+          "word": "yellow",
+          "start": 78.887,
+          "end": 79.327,
+          "score": 0.488
+        },
+        {
+          "word": "sky",
+          "start": 79.347,
+          "end": 79.628,
+          "score": 0.709
+        },
+        {
+          "word": "truly",
+          "start": 79.668,
+          "end": 80.588,
+          "score": 0.765
+        },
+        {
+          "word": "exists",
+          "start": 80.769,
+          "end": 81.269,
+          "score": 0.591
+        },
+        {
+          "word": "I",
+          "start": 81.749,
+          "end": 81.85,
+          "score": 0.782
+        },
+        {
+          "word": "cry",
+          "start": 81.89,
+          "end": 82.45,
+          "score": 0.838
+        },
+        {
+          "word": "watching",
+          "start": 82.53,
+          "end": 83.111,
+          "score": 0.87
+        },
+        {
+          "word": "the",
+          "start": 83.191,
+          "end": 83.491,
+          "score": 0.715
+        },
+        {
+          "word": "days",
+          "start": 83.511,
+          "end": 84.131,
+          "score": 0.863
+        },
+        {
+          "word": "Can't",
+          "start": 84.752,
+          "end": 84.912,
+          "score": 0.347
+        },
+        {
+          "word": "you",
+          "start": 84.952,
+          "end": 85.032,
+          "score": 0.452
+        },
+        {
+          "word": "see",
+          "start": 85.072,
+          "end": 85.312,
+          "score": 0.923
+        },
+        {
+          "word": "I'm",
+          "start": 85.552,
+          "end": 85.753,
+          "score": 0.514
+        },
+        {
+          "word": "a",
+          "start": 85.813,
+          "end": 85.913,
+          "score": 0.743
+        },
+        {
+          "word": "fool?",
+          "start": 86.033,
+          "end": 86.914,
+          "score": 0.864
+        },
+        {
+          "word": "In",
+          "start": 87.454,
+          "end": 87.554,
+          "score": 0.312
+        },
+        {
+          "word": "so",
+          "start": 87.594,
+          "end": 87.854,
+          "score": 0.964
+        },
+        {
+          "word": "many",
+          "start": 87.934,
+          "end": 88.515,
+          "score": 0.914
+        },
+        {
+          "word": "ways",
+          "start": 88.595,
+          "end": 90.236,
+          "score": 0.752
+        },
+        {
+          "word": "But",
+          "start": 90.777,
+          "end": 90.997,
+          "score": 0.851
+        },
+        {
+          "word": "to",
+          "start": 91.057,
+          "end": 91.437,
+          "score": 0.868
+        },
+        {
+          "word": "lose",
+          "start": 91.497,
+          "end": 92.178,
+          "score": 0.73
+        },
+        {
+          "word": "all",
+          "start": 92.878,
+          "end": 93.139,
+          "score": 0.638
+        },
+        {
+          "word": "my",
+          "start": 93.259,
+          "end": 93.779,
+          "score": 0.688
+        },
+        {
+          "word": "senses",
+          "start": 93.859,
+          "end": 95.481,
+          "score": 0.532
+        },
+        {
+          "word": "That",
+          "start": 95.821,
+          "end": 96.161,
+          "score": 0.8
+        },
+        {
+          "word": "is",
+          "start": 96.261,
+          "end": 96.361,
+          "score": 0.742
+        },
+        {
+          "word": "just",
+          "start": 96.421,
+          "end": 96.942,
+          "score": 0.608
+        },
+        {
+          "word": "so",
+          "start": 97.062,
+          "end": 97.622,
+          "score": 0.892
+        },
+        {
+          "word": "too",
+          "start": 98.023,
+          "end": 98.223,
+          "score": 0.584
+        },
+        {
+          "word": "pretty",
+          "start": 98.303,
+          "end": 99.204,
+          "score": 0.722
+        },
+        {
+          "word": "Oh",
+          "start": 99.424,
+          "end": 99.544,
+          "score": 0.584
+        },
+        {
+          "word": "baby,",
+          "start": 99.584,
+          "end": 100.284,
+          "score": 0.817
+        },
+        {
+          "word": "oh",
+          "start": 101.025,
+          "end": 101.345,
+          "score": 0.722
+        },
+        {
+          "word": "oops",
+          "start": 101.545,
+          "end": 101.886,
+          "score": 0.63
+        },
+        {
+          "word": "I",
+          "start": 102.366,
+          "end": 102.546,
+          "score": 0.867
+        },
+        {
+          "word": "did",
+          "start": 102.786,
+          "end": 103.167,
+          "score": 0.752
+        },
+        {
+          "word": "it",
+          "start": 103.267,
+          "end": 103.447,
+          "score": 0.798
+        },
+        {
+          "word": "again",
+          "start": 103.527,
+          "end": 104.248,
+          "score": 0.837
+        },
+        {
+          "word": "I",
+          "start": 104.268,
+          "end": 104.288,
+          "score": 0.003
+        },
+        {
+          "word": "played",
+          "start": 105.268,
+          "end": 105.629,
+          "score": 0.386
+        },
+        {
+          "word": "with",
+          "start": 105.649,
+          "end": 105.829,
+          "score": 0.536
+        },
+        {
+          "word": "your",
+          "start": 105.909,
+          "end": 106.209,
+          "score": 0.814
+        },
+        {
+          "word": "heart",
+          "start": 106.269,
+          "end": 106.91,
+          "score": 0.663
+        }
+      ]
+    },
+    {
+      "text": " Gotta lost in the game Oh baby, baby, oh, you've been found in love Dancing from above I'm not that innocent Oh, Mark! Freakin' Before you go, there's something I want you to have",
+      "start": 107.458,
+      "end": 136.958,
+      "avg_logprob": -0.4621347882177519,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "Gotta",
+          "start": 107.498,
+          "end": 107.818,
+          "score": 0.469
+        },
+        {
+          "word": "lost",
+          "start": 107.858,
+          "end": 108.158,
+          "score": 0.738
+        },
+        {
+          "word": "in",
+          "start": 108.199,
+          "end": 108.419,
+          "score": 0.834
+        },
+        {
+          "word": "the",
+          "start": 108.459,
+          "end": 108.619,
+          "score": 0.431
+        },
+        {
+          "word": "game",
+          "start": 108.739,
+          "end": 109.459,
+          "score": 0.813
+        },
+        {
+          "word": "Oh",
+          "start": 110.0,
+          "end": 110.28,
+          "score": 0.39
+        },
+        {
+          "word": "baby,",
+          "start": 110.36,
+          "end": 110.86,
+          "score": 0.743
+        },
+        {
+          "word": "baby,",
+          "start": 110.98,
+          "end": 111.541,
+          "score": 0.693
+        },
+        {
+          "word": "oh,",
+          "start": 111.781,
+          "end": 111.981,
+          "score": 0.732
+        },
+        {
+          "word": "you've",
+          "start": 112.221,
+          "end": 112.642,
+          "score": 0.768
+        },
+        {
+          "word": "been",
+          "start": 112.862,
+          "end": 113.102,
+          "score": 0.819
+        },
+        {
+          "word": "found",
+          "start": 113.162,
+          "end": 113.482,
+          "score": 0.824
+        },
+        {
+          "word": "in",
+          "start": 113.602,
+          "end": 113.742,
+          "score": 0.678
+        },
+        {
+          "word": "love",
+          "start": 113.782,
+          "end": 114.643,
+          "score": 0.672
+        },
+        {
+          "word": "Dancing",
+          "start": 115.063,
+          "end": 115.604,
+          "score": 0.582
+        },
+        {
+          "word": "from",
+          "start": 115.664,
+          "end": 115.964,
+          "score": 0.798
+        },
+        {
+          "word": "above",
+          "start": 116.104,
+          "end": 118.526,
+          "score": 0.723
+        },
+        {
+          "word": "I'm",
+          "start": 118.966,
+          "end": 119.146,
+          "score": 0.666
+        },
+        {
+          "word": "not",
+          "start": 119.186,
+          "end": 120.187,
+          "score": 0.875
+        },
+        {
+          "word": "that",
+          "start": 120.407,
+          "end": 120.907,
+          "score": 0.71
+        },
+        {
+          "word": "innocent",
+          "start": 121.427,
+          "end": 125.63,
+          "score": 0.831
+        },
+        {
+          "word": "Oh,",
+          "start": 125.65,
+          "end": 127.972,
+          "score": 0.918
+        },
+        {
+          "word": "Mark!",
+          "start": 128.752,
+          "end": 133.496,
+          "score": 0.841
+        },
+        {
+          "word": "Freakin'",
+          "start": 134.136,
+          "end": 134.516,
+          "score": 0.588
+        },
+        {
+          "word": "Before",
+          "start": 134.957,
+          "end": 135.237,
+          "score": 0.881
+        },
+        {
+          "word": "you",
+          "start": 135.277,
+          "end": 135.357,
+          "score": 0.173
+        },
+        {
+          "word": "go,",
+          "start": 135.397,
+          "end": 135.597,
+          "score": 0.692
+        },
+        {
+          "word": "there's",
+          "start": 135.637,
+          "end": 135.837,
+          "score": 0.303
+        },
+        {
+          "word": "something",
+          "start": 135.857,
+          "end": 136.137,
+          "score": 0.539
+        },
+        {
+          "word": "I",
+          "start": 136.197,
+          "end": 136.238,
+          "score": 0.269
+        },
+        {
+          "word": "want",
+          "start": 136.258,
+          "end": 136.478,
+          "score": 0.823
+        },
+        {
+          "word": "you",
+          "start": 136.498,
+          "end": 136.558,
+          "score": 0.006
+        },
+        {
+          "word": "to",
+          "start": 136.578,
+          "end": 136.618,
+          "score": 0.024
+        },
+        {
+          "word": "have",
+          "start": 136.658,
+          "end": 136.858,
+          "score": 0.5
+        }
+      ]
+    },
+    {
+      "text": " Oh, it's beautiful. But wait a minute, isn't this... Yeah, yes it is. But I thought the old lady dropped it into the ocean in the air. Well, baby, I went down and got it for you. Oh, you shouldn't have. Oops, I did it again to your heart. Got lost in this game, oh baby. Yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah",
+      "start": 137.314,
+      "end": 165.278,
+      "avg_logprob": -0.1568382136027018,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "Oh,",
+          "start": 137.454,
+          "end": 137.534,
+          "score": 0.219
+        },
+        {
+          "word": "it's",
+          "start": 137.554,
+          "end": 137.634,
+          "score": 0.01
+        },
+        {
+          "word": "beautiful.",
+          "start": 137.854,
+          "end": 138.535,
+          "score": 0.906
+        },
+        {
+          "word": "But",
+          "start": 139.176,
+          "end": 139.316,
+          "score": 0.3
+        },
+        {
+          "word": "wait",
+          "start": 139.376,
+          "end": 139.556,
+          "score": 0.692
+        },
+        {
+          "word": "a",
+          "start": 139.596,
+          "end": 139.636,
+          "score": 0.779
+        },
+        {
+          "word": "minute,",
+          "start": 139.656,
+          "end": 139.916,
+          "score": 0.658
+        },
+        {
+          "word": "isn't",
+          "start": 140.036,
+          "end": 140.277,
+          "score": 0.978
+        },
+        {
+          "word": "this...",
+          "start": 140.317,
+          "end": 140.537,
+          "score": 0.568
+        },
+        {
+          "word": "Yeah,",
+          "start": 140.917,
+          "end": 141.257,
+          "score": 0.551
+        },
+        {
+          "word": "yes",
+          "start": 141.297,
+          "end": 141.438,
+          "score": 0.74
+        },
+        {
+          "word": "it",
+          "start": 141.478,
+          "end": 141.578,
+          "score": 0.582
+        },
+        {
+          "word": "is.",
+          "start": 141.658,
+          "end": 141.798,
+          "score": 0.647
+        },
+        {
+          "word": "But",
+          "start": 142.518,
+          "end": 142.679,
+          "score": 0.63
+        },
+        {
+          "word": "I",
+          "start": 142.719,
+          "end": 142.799,
+          "score": 0.75
+        },
+        {
+          "word": "thought",
+          "start": 142.839,
+          "end": 143.039,
+          "score": 0.839
+        },
+        {
+          "word": "the",
+          "start": 143.059,
+          "end": 143.159,
+          "score": 0.744
+        },
+        {
+          "word": "old",
+          "start": 143.219,
+          "end": 143.339,
+          "score": 0.532
+        },
+        {
+          "word": "lady",
+          "start": 143.399,
+          "end": 143.659,
+          "score": 0.978
+        },
+        {
+          "word": "dropped",
+          "start": 143.699,
+          "end": 143.92,
+          "score": 0.919
+        },
+        {
+          "word": "it",
+          "start": 144.0,
+          "end": 144.06,
+          "score": 0.52
+        },
+        {
+          "word": "into",
+          "start": 144.1,
+          "end": 144.32,
+          "score": 0.948
+        },
+        {
+          "word": "the",
+          "start": 144.36,
+          "end": 144.46,
+          "score": 0.851
+        },
+        {
+          "word": "ocean",
+          "start": 144.54,
+          "end": 144.76,
+          "score": 0.807
+        },
+        {
+          "word": "in",
+          "start": 144.82,
+          "end": 144.88,
+          "score": 0.544
+        },
+        {
+          "word": "the",
+          "start": 144.901,
+          "end": 144.981,
+          "score": 0.189
+        },
+        {
+          "word": "air.",
+          "start": 145.001,
+          "end": 145.201,
+          "score": 0.347
+        },
+        {
+          "word": "Well,",
+          "start": 145.561,
+          "end": 145.801,
+          "score": 0.88
+        },
+        {
+          "word": "baby,",
+          "start": 145.841,
+          "end": 146.122,
+          "score": 0.9
+        },
+        {
+          "word": "I",
+          "start": 146.462,
+          "end": 146.542,
+          "score": 0.645
+        },
+        {
+          "word": "went",
+          "start": 146.562,
+          "end": 146.722,
+          "score": 0.524
+        },
+        {
+          "word": "down",
+          "start": 146.742,
+          "end": 146.942,
+          "score": 0.704
+        },
+        {
+          "word": "and",
+          "start": 146.982,
+          "end": 147.062,
+          "score": 0.519
+        },
+        {
+          "word": "got",
+          "start": 147.082,
+          "end": 147.263,
+          "score": 0.683
+        },
+        {
+          "word": "it",
+          "start": 147.303,
+          "end": 147.363,
+          "score": 0.412
+        },
+        {
+          "word": "for",
+          "start": 147.383,
+          "end": 147.563,
+          "score": 0.845
+        },
+        {
+          "word": "you.",
+          "start": 147.583,
+          "end": 147.763,
+          "score": 0.745
+        },
+        {
+          "word": "Oh,",
+          "start": 148.363,
+          "end": 148.504,
+          "score": 0.659
+        },
+        {
+          "word": "you",
+          "start": 148.544,
+          "end": 148.684,
+          "score": 0.991
+        },
+        {
+          "word": "shouldn't",
+          "start": 148.744,
+          "end": 149.104,
+          "score": 0.81
+        },
+        {
+          "word": "have.",
+          "start": 149.164,
+          "end": 149.424,
+          "score": 0.964
+        },
+        {
+          "word": "Oops,",
+          "start": 150.705,
+          "end": 150.806,
+          "score": 0.226
+        },
+        {
+          "word": "I",
+          "start": 150.826,
+          "end": 150.866,
+          "score": 0.205
+        },
+        {
+          "word": "did",
+          "start": 150.886,
+          "end": 150.946,
+          "score": 0.004
+        },
+        {
+          "word": "it",
+          "start": 150.966,
+          "end": 151.466,
+          "score": 0.896
+        },
+        {
+          "word": "again",
+          "start": 151.506,
+          "end": 151.606,
+          "score": 0.122
+        },
+        {
+          "word": "to",
+          "start": 151.626,
+          "end": 151.666,
+          "score": 0.0
+        },
+        {
+          "word": "your",
+          "start": 151.686,
+          "end": 151.806,
+          "score": 0.15
+        },
+        {
+          "word": "heart.",
+          "start": 152.467,
+          "end": 152.787,
+          "score": 0.45
+        },
+        {
+          "word": "Got",
+          "start": 152.807,
+          "end": 152.927,
+          "score": 0.483
+        },
+        {
+          "word": "lost",
+          "start": 152.987,
+          "end": 153.088,
+          "score": 0.207
+        },
+        {
+          "word": "in",
+          "start": 153.108,
+          "end": 153.148,
+          "score": 0.006
+        },
+        {
+          "word": "this",
+          "start": 153.168,
+          "end": 153.288,
+          "score": 0.261
+        },
+        {
+          "word": "game,",
+          "start": 153.308,
+          "end": 153.468,
+          "score": 0.157
+        },
+        {
+          "word": "oh",
+          "start": 153.488,
+          "end": 153.588,
+          "score": 0.374
+        },
+        {
+          "word": "baby.",
+          "start": 153.608,
+          "end": 153.768,
+          "score": 0.42
+        },
+        {
+          "word": "Yeah,",
+          "start": 153.788,
+          "end": 153.928,
+          "score": 0.284
+        },
+        {
+          "word": "yeah,",
+          "start": 154.008,
+          "end": 154.108,
+          "score": 0.007
+        },
+        {
+          "word": "yeah,",
+          "start": 154.128,
+          "end": 154.229,
+          "score": 0.064
+        },
+        {
+          "word": "yeah,",
+          "start": 154.249,
+          "end": 154.349,
+          "score": 0.039
+        },
+        {
+          "word": "yeah,",
+          "start": 154.389,
+          "end": 154.489,
+          "score": 0.052
+        },
+        {
+          "word": "yeah,",
+          "start": 154.509,
+          "end": 154.629,
+          "score": 0.159
+        },
+        {
+          "word": "yeah,",
+          "start": 154.669,
+          "end": 154.789,
+          "score": 0.095
+        },
+        {
+          "word": "yeah,",
+          "start": 154.809,
+          "end": 154.909,
+          "score": 0.002
+        },
+        {
+          "word": "yeah,",
+          "start": 154.929,
+          "end": 155.029,
+          "score": 0.002
+        },
+        {
+          "word": "yeah,",
+          "start": 155.049,
+          "end": 155.149,
+          "score": 0.002
+        },
+        {
+          "word": "yeah,",
+          "start": 155.169,
+          "end": 155.289,
+          "score": 0.114
+        },
+        {
+          "word": "yeah,",
+          "start": 155.309,
+          "end": 155.43,
+          "score": 0.298
+        },
+        {
+          "word": "yeah,",
+          "start": 155.61,
+          "end": 155.75,
+          "score": 0.134
+        },
+        {
+          "word": "yeah,",
+          "start": 155.79,
+          "end": 155.91,
+          "score": 0.202
+        },
+        {
+          "word": "yeah,",
+          "start": 155.95,
+          "end": 156.05,
+          "score": 0.01
+        },
+        {
+          "word": "yeah,",
+          "start": 156.07,
+          "end": 156.17,
+          "score": 0.034
+        },
+        {
+          "word": "yeah,",
+          "start": 156.19,
+          "end": 156.29,
+          "score": 0.006
+        },
+        {
+          "word": "yeah,",
+          "start": 156.31,
+          "end": 156.41,
+          "score": 0.002
+        },
+        {
+          "word": "yeah,",
+          "start": 156.43,
+          "end": 156.551,
+          "score": 0.171
+        },
+        {
+          "word": "yeah,",
+          "start": 156.571,
+          "end": 156.731,
+          "score": 0.267
+        },
+        {
+          "word": "yeah,",
+          "start": 157.451,
+          "end": 157.651,
+          "score": 0.507
+        },
+        {
+          "word": "yeah,",
+          "start": 157.671,
+          "end": 157.772,
+          "score": 0.182
+        },
+        {
+          "word": "yeah,",
+          "start": 157.812,
+          "end": 157.932,
+          "score": 0.193
+        },
+        {
+          "word": "yeah,",
+          "start": 157.952,
+          "end": 158.052,
+          "score": 0.073
+        },
+        {
+          "word": "yeah,",
+          "start": 158.132,
+          "end": 158.252,
+          "score": 0.101
+        },
+        {
+          "word": "yeah,",
+          "start": 158.272,
+          "end": 158.432,
+          "score": 0.362
+        },
+        {
+          "word": "yeah,",
+          "start": 158.452,
+          "end": 158.572,
+          "score": 0.19
+        },
+        {
+          "word": "yeah,",
+          "start": 158.592,
+          "end": 158.712,
+          "score": 0.362
+        },
+        {
+          "word": "yeah,",
+          "start": 158.772,
+          "end": 158.893,
+          "score": 0.1
+        },
+        {
+          "word": "yeah,",
+          "start": 158.913,
+          "end": 159.013,
+          "score": 0.003
+        },
+        {
+          "word": "yeah,",
+          "start": 159.033,
+          "end": 159.133,
+          "score": 0.115
+        },
+        {
+          "word": "yeah,",
+          "start": 159.153,
+          "end": 159.253,
+          "score": 0.043
+        },
+        {
+          "word": "yeah,",
+          "start": 159.273,
+          "end": 159.373,
+          "score": 0.166
+        },
+        {
+          "word": "yeah,",
+          "start": 159.413,
+          "end": 159.573,
+          "score": 0.206
+        },
+        {
+          "word": "yeah,",
+          "start": 159.593,
+          "end": 159.693,
+          "score": 0.075
+        },
+        {
+          "word": "yeah,",
+          "start": 159.713,
+          "end": 159.813,
+          "score": 0.04
+        },
+        {
+          "word": "yeah,",
+          "start": 159.833,
+          "end": 159.933,
+          "score": 0.01
+        },
+        {
+          "word": "yeah,",
+          "start": 159.953,
+          "end": 160.054,
+          "score": 0.019
+        },
+        {
+          "word": "yeah,",
+          "start": 160.074,
+          "end": 160.174,
+          "score": 0.032
+        },
+        {
+          "word": "yeah,",
+          "start": 160.194,
+          "end": 160.294,
+          "score": 0.013
+        },
+        {
+          "word": "yeah,",
+          "start": 160.314,
+          "end": 160.414,
+          "score": 0.001
+        },
+        {
+          "word": "yeah,",
+          "start": 160.434,
+          "end": 160.534,
+          "score": 0.007
+        },
+        {
+          "word": "yeah,",
+          "start": 160.554,
+          "end": 160.654,
+          "score": 0.035
+        },
+        {
+          "word": "yeah,",
+          "start": 160.674,
+          "end": 160.774,
+          "score": 0.004
+        },
+        {
+          "word": "yeah,",
+          "start": 160.794,
+          "end": 160.914,
+          "score": 0.143
+        },
+        {
+          "word": "yeah,",
+          "start": 160.934,
+          "end": 161.034,
+          "score": 0.061
+        },
+        {
+          "word": "yeah,",
+          "start": 161.114,
+          "end": 161.255,
+          "score": 0.161
+        },
+        {
+          "word": "yeah,",
+          "start": 161.275,
+          "end": 161.375,
+          "score": 0.085
+        },
+        {
+          "word": "yeah,",
+          "start": 161.395,
+          "end": 161.495,
+          "score": 0.007
+        },
+        {
+          "word": "yeah,",
+          "start": 161.535,
+          "end": 161.635,
+          "score": 0.028
+        },
+        {
+          "word": "yeah,",
+          "start": 161.655,
+          "end": 161.775,
+          "score": 0.152
+        },
+        {
+          "word": "yeah,",
+          "start": 161.795,
+          "end": 161.915,
+          "score": 0.234
+        },
+        {
+          "word": "yeah,",
+          "start": 161.955,
+          "end": 162.155,
+          "score": 0.321
+        },
+        {
+          "word": "yeah,",
+          "start": 162.175,
+          "end": 162.335,
+          "score": 0.426
+        },
+        {
+          "word": "yeah,",
+          "start": 162.376,
+          "end": 162.516,
+          "score": 0.213
+        },
+        {
+          "word": "yeah,",
+          "start": 162.556,
+          "end": 162.676,
+          "score": 0.143
+        },
+        {
+          "word": "yeah,",
+          "start": 162.696,
+          "end": 162.796,
+          "score": 0.023
+        },
+        {
+          "word": "yeah,",
+          "start": 162.876,
+          "end": 163.016,
+          "score": 0.202
+        },
+        {
+          "word": "yeah,",
+          "start": 163.036,
+          "end": 163.136,
+          "score": 0.095
+        },
+        {
+          "word": "yeah,",
+          "start": 163.156,
+          "end": 163.256,
+          "score": 0.035
+        },
+        {
+          "word": "yeah,",
+          "start": 163.276,
+          "end": 163.396,
+          "score": 0.101
+        },
+        {
+          "word": "yeah,",
+          "start": 163.416,
+          "end": 163.537,
+          "score": 0.106
+        },
+        {
+          "word": "yeah,",
+          "start": 163.557,
+          "end": 163.657,
+          "score": 0.014
+        },
+        {
+          "word": "yeah,",
+          "start": 163.677,
+          "end": 163.777,
+          "score": 0.122
+        },
+        {
+          "word": "yeah,",
+          "start": 163.797,
+          "end": 163.917,
+          "score": 0.172
+        },
+        {
+          "word": "yeah,",
+          "start": 163.937,
+          "end": 164.037,
+          "score": 0.186
+        },
+        {
+          "word": "yeah,",
+          "start": 164.057,
+          "end": 164.217,
+          "score": 0.165
+        },
+        {
+          "word": "yeah,",
+          "start": 164.237,
+          "end": 164.337,
+          "score": 0.002
+        },
+        {
+          "word": "yeah,",
+          "start": 164.357,
+          "end": 164.457,
+          "score": 0.018
+        },
+        {
+          "word": "yeah,",
+          "start": 164.477,
+          "end": 164.577,
+          "score": 0.049
+        },
+        {
+          "word": "yeah,",
+          "start": 164.597,
+          "end": 164.698,
+          "score": 0.007
+        },
+        {
+          "word": "yeah,",
+          "start": 164.718,
+          "end": 164.818,
+          "score": 0.008
+        },
+        {
+          "word": "yeah,",
+          "start": 164.838,
+          "end": 164.938,
+          "score": 0.006
+        },
+        {
+          "word": "yeah,",
+          "start": 164.958,
+          "end": 165.098,
+          "score": 0.172
+        },
+        {
+          "word": "yeah",
+          "start": 165.118,
+          "end": 165.198,
+          "score": 0.004
+        }
+      ]
+    },
+    {
+      "text": " I'm not that innocent Oops, I did it again I played with your heart Got lost in the game Oh, baby, baby Oops, you think I'm in love Dancing from above I'm not that innocent Oops, I did it again",
+      "start": 167.234,
+      "end": 193.438,
+      "avg_logprob": -0.19373628557944783,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "I'm",
+          "start": 167.394,
+          "end": 167.534,
+          "score": 0.656
+        },
+        {
+          "word": "not",
+          "start": 167.614,
+          "end": 167.955,
+          "score": 0.836
+        },
+        {
+          "word": "that",
+          "start": 168.215,
+          "end": 168.555,
+          "score": 0.818
+        },
+        {
+          "word": "innocent",
+          "start": 169.016,
+          "end": 170.057,
+          "score": 0.638
+        },
+        {
+          "word": "Oops,",
+          "start": 170.177,
+          "end": 170.497,
+          "score": 0.577
+        },
+        {
+          "word": "I",
+          "start": 171.017,
+          "end": 171.158,
+          "score": 0.824
+        },
+        {
+          "word": "did",
+          "start": 171.498,
+          "end": 171.758,
+          "score": 0.651
+        },
+        {
+          "word": "it",
+          "start": 171.878,
+          "end": 172.058,
+          "score": 0.668
+        },
+        {
+          "word": "again",
+          "start": 172.138,
+          "end": 172.939,
+          "score": 0.867
+        },
+        {
+          "word": "I",
+          "start": 173.68,
+          "end": 173.8,
+          "score": 0.705
+        },
+        {
+          "word": "played",
+          "start": 173.86,
+          "end": 174.2,
+          "score": 0.486
+        },
+        {
+          "word": "with",
+          "start": 174.24,
+          "end": 174.441,
+          "score": 0.821
+        },
+        {
+          "word": "your",
+          "start": 174.521,
+          "end": 174.861,
+          "score": 0.759
+        },
+        {
+          "word": "heart",
+          "start": 174.941,
+          "end": 175.542,
+          "score": 0.716
+        },
+        {
+          "word": "Got",
+          "start": 176.122,
+          "end": 176.302,
+          "score": 0.605
+        },
+        {
+          "word": "lost",
+          "start": 176.362,
+          "end": 176.783,
+          "score": 0.778
+        },
+        {
+          "word": "in",
+          "start": 176.823,
+          "end": 177.043,
+          "score": 0.75
+        },
+        {
+          "word": "the",
+          "start": 177.083,
+          "end": 177.243,
+          "score": 0.507
+        },
+        {
+          "word": "game",
+          "start": 177.363,
+          "end": 178.384,
+          "score": 0.668
+        },
+        {
+          "word": "Oh,",
+          "start": 178.805,
+          "end": 178.905,
+          "score": 0.378
+        },
+        {
+          "word": "baby,",
+          "start": 178.985,
+          "end": 179.505,
+          "score": 0.599
+        },
+        {
+          "word": "baby",
+          "start": 179.585,
+          "end": 180.186,
+          "score": 0.778
+        },
+        {
+          "word": "Oops,",
+          "start": 180.286,
+          "end": 180.606,
+          "score": 0.662
+        },
+        {
+          "word": "you",
+          "start": 180.846,
+          "end": 181.227,
+          "score": 0.746
+        },
+        {
+          "word": "think",
+          "start": 181.487,
+          "end": 181.727,
+          "score": 0.659
+        },
+        {
+          "word": "I'm",
+          "start": 181.947,
+          "end": 182.128,
+          "score": 0.481
+        },
+        {
+          "word": "in",
+          "start": 182.228,
+          "end": 182.448,
+          "score": 0.714
+        },
+        {
+          "word": "love",
+          "start": 182.728,
+          "end": 183.269,
+          "score": 0.592
+        },
+        {
+          "word": "Dancing",
+          "start": 183.689,
+          "end": 184.23,
+          "score": 0.665
+        },
+        {
+          "word": "from",
+          "start": 184.31,
+          "end": 184.57,
+          "score": 0.634
+        },
+        {
+          "word": "above",
+          "start": 184.71,
+          "end": 187.473,
+          "score": 0.684
+        },
+        {
+          "word": "I'm",
+          "start": 187.593,
+          "end": 187.773,
+          "score": 0.417
+        },
+        {
+          "word": "not",
+          "start": 187.833,
+          "end": 188.413,
+          "score": 0.748
+        },
+        {
+          "word": "that",
+          "start": 188.453,
+          "end": 188.934,
+          "score": 0.551
+        },
+        {
+          "word": "innocent",
+          "start": 189.254,
+          "end": 190.075,
+          "score": 0.577
+        },
+        {
+          "word": "Oops,",
+          "start": 190.375,
+          "end": 190.896,
+          "score": 0.705
+        },
+        {
+          "word": "I",
+          "start": 191.176,
+          "end": 191.376,
+          "score": 0.724
+        },
+        {
+          "word": "did",
+          "start": 191.596,
+          "end": 191.977,
+          "score": 0.653
+        },
+        {
+          "word": "it",
+          "start": 192.097,
+          "end": 192.257,
+          "score": 0.708
+        },
+        {
+          "word": "again",
+          "start": 192.357,
+          "end": 192.877,
+          "score": 0.706
+        }
+      ]
+    },
+    {
+      "text": " That's made with your heart Got lost in the game Oh baby, baby, out You think I'm in love Handsome from above I'm not that innocent",
+      "start": 193.826,
+      "end": 210.628,
+      "avg_logprob": -0.4142668463967063,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "That's",
+          "start": 193.846,
+          "end": 193.986,
+          "score": 0.11
+        },
+        {
+          "word": "made",
+          "start": 194.126,
+          "end": 194.387,
+          "score": 0.685
+        },
+        {
+          "word": "with",
+          "start": 194.427,
+          "end": 194.647,
+          "score": 0.537
+        },
+        {
+          "word": "your",
+          "start": 194.687,
+          "end": 195.008,
+          "score": 0.698
+        },
+        {
+          "word": "heart",
+          "start": 195.068,
+          "end": 195.809,
+          "score": 0.73
+        },
+        {
+          "word": "Got",
+          "start": 196.009,
+          "end": 196.329,
+          "score": 0.638
+        },
+        {
+          "word": "lost",
+          "start": 196.61,
+          "end": 196.81,
+          "score": 0.448
+        },
+        {
+          "word": "in",
+          "start": 197.01,
+          "end": 197.23,
+          "score": 0.806
+        },
+        {
+          "word": "the",
+          "start": 197.271,
+          "end": 197.431,
+          "score": 0.34
+        },
+        {
+          "word": "game",
+          "start": 197.571,
+          "end": 198.212,
+          "score": 0.682
+        },
+        {
+          "word": "Oh",
+          "start": 198.312,
+          "end": 199.073,
+          "score": 0.716
+        },
+        {
+          "word": "baby,",
+          "start": 199.173,
+          "end": 199.654,
+          "score": 0.602
+        },
+        {
+          "word": "baby,",
+          "start": 199.794,
+          "end": 200.134,
+          "score": 0.566
+        },
+        {
+          "word": "out",
+          "start": 200.234,
+          "end": 200.355,
+          "score": 0.305
+        },
+        {
+          "word": "You",
+          "start": 200.455,
+          "end": 200.755,
+          "score": 0.532
+        },
+        {
+          "word": "think",
+          "start": 200.815,
+          "end": 201.436,
+          "score": 0.772
+        },
+        {
+          "word": "I'm",
+          "start": 201.776,
+          "end": 201.977,
+          "score": 0.491
+        },
+        {
+          "word": "in",
+          "start": 202.137,
+          "end": 202.297,
+          "score": 0.682
+        },
+        {
+          "word": "love",
+          "start": 202.317,
+          "end": 203.499,
+          "score": 0.744
+        },
+        {
+          "word": "Handsome",
+          "start": 203.899,
+          "end": 204.44,
+          "score": 0.561
+        },
+        {
+          "word": "from",
+          "start": 204.5,
+          "end": 204.84,
+          "score": 0.676
+        },
+        {
+          "word": "above",
+          "start": 204.941,
+          "end": 207.324,
+          "score": 0.653
+        },
+        {
+          "word": "I'm",
+          "start": 207.784,
+          "end": 207.904,
+          "score": 0.376
+        },
+        {
+          "word": "not",
+          "start": 208.005,
+          "end": 208.645,
+          "score": 0.824
+        },
+        {
+          "word": "that",
+          "start": 208.665,
+          "end": 209.006,
+          "score": 0.817
+        },
+        {
+          "word": "innocent",
+          "start": 209.466,
+          "end": 209.847,
+          "score": 0.438
+        }
+      ]
+    }
+  ],
+  "blocos": [
+    {
+      "inicio": 0.882,
+      "fim": 2.984,
+      "texto": "I think I'll do it"
+    },
+    {
+      "inicio": 3.664,
+      "fim": 4.245,
+      "texto": "again"
+    },
+    {
+      "inicio": 24.262,
+      "fim": 29.105,
+      "texto": "I made you believe We're more than just friends"
+    },
+    {
+      "inicio": 29.906,
+      "fim": 35.47,
+      "texto": "Oh, gravy, it might seem like the crush But it doesn't"
+    },
+    {
+      "inicio": 35.55,
+      "fim": 39.652,
+      "texto": "mean That I'm serious"
+    },
+    {
+      "inicio": 40.373,
+      "fim": 41.654,
+      "texto": "As to lose"
+    },
+    {
+      "inicio": 42.394,
+      "fim": 48.138,
+      "texto": "all my senses That is just so sweet for"
+    },
+    {
+      "inicio": 48.178,
+      "fim": 48.598,
+      "texto": "me Oh,"
+    },
+    {
+      "inicio": 49.739,
+      "fim": 53.542,
+      "texto": "baby, baby, that hurts I did it again"
+    },
+    {
+      "inicio": 54.506,
+      "fim": 60.349,
+      "texto": "I've played with your heart, that I lost in the game Oh baby,"
+    },
+    {
+      "inicio": 60.449,
+      "fim": 65.472,
+      "texto": "baby, who do you think I'm in love? That I'm sent from"
+    },
+    {
+      "inicio": 65.612,
+      "fim": 71.095,
+      "texto": "above, I'm not that innocent"
+    },
+    {
+      "inicio": 71.415,
+      "fim": 73.936,
+      "texto": "You've seen my problem, Miss B"
+    },
+    {
+      "inicio": 74.657,
+      "fim": 76.478,
+      "texto": "I'm dreaming away"
+    },
+    {
+      "inicio": 77.506,
+      "fim": 83.491,
+      "texto": "Wishing that the yellow sky truly exists I cry watching the"
+    },
+    {
+      "inicio": 83.511,
+      "fim": 88.515,
+      "texto": "days Can't you see I'm a fool? In so many"
+    },
+    {
+      "inicio": 88.595,
+      "fim": 92.178,
+      "texto": "ways But to lose"
+    },
+    {
+      "inicio": 92.878,
+      "fim": 98.223,
+      "texto": "all my senses That is just so too"
+    },
+    {
+      "inicio": 98.303,
+      "fim": 100.284,
+      "texto": "pretty Oh baby,"
+    },
+    {
+      "inicio": 101.025,
+      "fim": 104.288,
+      "texto": "oh oops I did it again I"
+    },
+    {
+      "inicio": 105.268,
+      "fim": 106.91,
+      "texto": "played with your heart"
+    },
+    {
+      "inicio": 107.498,
+      "fim": 113.482,
+      "texto": "Gotta lost in the game Oh baby, baby, oh, you've been found"
+    },
+    {
+      "inicio": 113.602,
+      "fim": 119.146,
+      "texto": "in love Dancing from above I'm"
+    },
+    {
+      "inicio": 119.186,
+      "fim": 120.907,
+      "texto": "not that"
+    },
+    {
+      "inicio": 121.427,
+      "fim": 125.63,
+      "texto": "innocent"
+    },
+    {
+      "inicio": 125.65,
+      "fim": 127.972,
+      "texto": "Oh,"
+    },
+    {
+      "inicio": 128.752,
+      "fim": 134.516,
+      "texto": "Mark! Freakin'"
+    },
+    {
+      "inicio": 134.957,
+      "fim": 136.858,
+      "texto": "Before you go, there's something I want you to have"
+    },
+    {
+      "inicio": 137.454,
+      "fim": 141.798,
+      "texto": "Oh, it's beautiful. But wait a minute, isn't this... Yeah, yes it is."
+    },
+    {
+      "inicio": 142.518,
+      "fim": 145.801,
+      "texto": "But I thought the old lady dropped it into the ocean in the air. Well,"
+    },
+    {
+      "inicio": 145.841,
+      "fim": 149.424,
+      "texto": "baby, I went down and got it for you. Oh, you shouldn't have."
+    },
+    {
+      "inicio": 150.705,
+      "fim": 151.806,
+      "texto": "Oops, I did it again to your"
+    },
+    {
+      "inicio": 152.467,
+      "fim": 154.489,
+      "texto": "heart. Got lost in this game, oh baby. Yeah, yeah, yeah, yeah, yeah,"
+    },
+    {
+      "inicio": 154.509,
+      "fim": 156.29,
+      "texto": "yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,"
+    },
+    {
+      "inicio": 156.31,
+      "fim": 156.731,
+      "texto": "yeah, yeah, yeah,"
+    },
+    {
+      "inicio": 157.451,
+      "fim": 159.253,
+      "texto": "yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,"
+    },
+    {
+      "inicio": 159.273,
+      "fim": 160.774,
+      "texto": "yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,"
+    },
+    {
+      "inicio": 160.794,
+      "fim": 162.676,
+      "texto": "yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,"
+    },
+    {
+      "inicio": 162.696,
+      "fim": 164.337,
+      "texto": "yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah,"
+    },
+    {
+      "inicio": 164.357,
+      "fim": 165.198,
+      "texto": "yeah, yeah, yeah, yeah, yeah, yeah, yeah"
+    },
+    {
+      "inicio": 167.394,
+      "fim": 172.939,
+      "texto": "I'm not that innocent Oops, I did it again"
+    },
+    {
+      "inicio": 173.68,
+      "fim": 179.505,
+      "texto": "I played with your heart Got lost in the game Oh, baby,"
+    },
+    {
+      "inicio": 179.585,
+      "fim": 184.57,
+      "texto": "baby Oops, you think I'm in love Dancing from"
+    },
+    {
+      "inicio": 184.71,
+      "fim": 190.075,
+      "texto": "above I'm not that innocent"
+    },
+    {
+      "inicio": 190.375,
+      "fim": 192.877,
+      "texto": "Oops, I did it again"
+    },
+    {
+      "inicio": 193.846,
+      "fim": 199.654,
+      "texto": "That's made with your heart Got lost in the game Oh baby,"
+    },
+    {
+      "inicio": 199.794,
+      "fim": 204.84,
+      "texto": "baby, out You think I'm in love Handsome from"
+    },
+    {
+      "inicio": 204.941,
+      "fim": 209.847,
+      "texto": "above I'm not that innocent"
+    }
+  ],
+  "avisos": [
+    "Segmento 1: alinhamento fraco em 'it'.",
+    "Segmento 3: alinhamento fraco em 'I'.",
+    "Segmento 3: alinhamento fraco em 'Oh'.",
+    "Segmento 3: alinhamento fraco em \"I'm\".",
+    "Segmento 4: alinhamento fraco em 'I'.",
+    "Segmento 5: alinhamento fraco em 'you'.",
+    "Segmento 5: alinhamento fraco em 'I'.",
+    "Segmento 5: alinhamento fraco em 'you'.",
+    "Segmento 5: alinhamento fraco em 'to'.",
+    "Segmento 6: alinhamento fraco em 'Oh,'.",
+    "Segmento 6: alinhamento fraco em \"it's\".",
+    "Segmento 6: alinhamento fraco em 'the'.",
+    "Segmento 6: alinhamento fraco em 'Oops,'.",
+    "Segmento 6: alinhamento fraco em 'I'.",
+    "Segmento 6: alinhamento fraco em 'did'.",
+    "Segmento 6: alinhamento fraco em 'again'.",
+    "Segmento 6: alinhamento fraco em 'to'.",
+    "Segmento 6: alinhamento fraco em 'your'.",
+    "Segmento 6: alinhamento fraco em 'lost'.",
+    "Segmento 6: alinhamento fraco em 'in'.",
+    "Segmento 6: alinhamento fraco em 'this'.",
+    "Segmento 6: alinhamento fraco em 'game,'.",
+    "Segmento 6: alinhamento fraco em 'Yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah,'.",
+    "Segmento 6: alinhamento fraco em 'yeah'.",
+    "Segmento 8: alinhamento fraco em \"That's\"."
+  ],
+  "revisao_recomendada": true,
+  "comparacao_letra": {
+    "similaridade_textual": 0.7645429362880887,
+    "divergencias": [
+      {
+        "tipo": "replace",
+        "referencia": "did",
+        "transcricao": "ll do"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "baby",
+        "transcricao": "gravy"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "a",
+        "transcricao": "the"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "cause",
+        "transcricao": "as"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "typically",
+        "transcricao": "sweet for"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "oops",
+        "transcricao": "that hurts"
+      },
+      {
+        "tipo": "insert",
+        "referencia": "",
+        "transcricao": "ve"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "got",
+        "transcricao": "that i"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "oops",
+        "transcricao": "who do"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "see",
+        "transcricao": "ve seen"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "is this",
+        "transcricao": "miss b"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "heroes they",
+        "transcricao": "the yellow sky"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "exist",
+        "transcricao": "exists"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "typically me",
+        "transcricao": "too pretty"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "got",
+        "transcricao": "gotta"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "oops",
+        "transcricao": "oh"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "think i m",
+        "transcricao": "ve been found"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "that i m sent",
+        "transcricao": "dancing"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "all aboard britney",
+        "transcricao": "oh mark freakin"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "end",
+        "transcricao": "air"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "ya aw",
+        "transcricao": "you oh"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "oops you oops you think that i m sent from above",
+        "transcricao": "yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "that i m sent",
+        "transcricao": "dancing"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "i played",
+        "transcricao": "that s made"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "oops",
+        "transcricao": "out"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "that i m sent",
+        "transcricao": "handsome"
+      }
+    ]
+  }
+}

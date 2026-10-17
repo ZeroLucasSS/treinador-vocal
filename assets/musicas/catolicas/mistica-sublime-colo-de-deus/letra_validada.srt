@@ -1,175 +1,243 @@
 1
-00:00:05,580 --> 00:00:20,870
-Mística sublime, te receber, ter comunhão, ter
+00:00:06,062 --> 00:00:11,444
+Mística sublime, te receber
 
 2
-00:00:20,870 --> 00:00:28,470
-Correndo em mim teu sangue, deus estou em
+00:00:13,204 --> 00:00:14,765
+Ter comunhão
 
 3
-00:00:28,470 --> 00:00:29,810
-Comunhão
+00:00:20,467 --> 00:00:26,349
+Ter correndo em mim teu sangue, deus
 
 4
-00:00:34,810 --> 00:00:42,190
-Alguém dirá que um deus tão grande assim
+00:00:27,529 --> 00:00:29,310
+Estou em comunhão
 
 5
-00:00:42,190 --> 00:00:48,050
-Não se dará por mim?
+00:00:35,094 --> 00:00:39,978
+Alguém dirá que um deus tão
 
 6
-00:00:49,550 --> 00:00:55,410
-O que os meus olhos veem não é
+00:00:40,078 --> 00:00:42,259
+Grande assim
 
 7
-00:00:55,410 --> 00:01:00,690
-O que minh'alma diz
+00:00:43,240 --> 00:00:47,383
+Não se dará por
 
 8
-00:01:04,370 --> 00:01:19,450
-Mística sublime, te receber e ter comunhão ter
+00:00:47,443 --> 00:00:53,327
+Mim? o que os meus olhos veem
 
 9
-00:01:19,450 --> 00:01:27,190
-Correndo em mim teu sangue, deus estou em
+00:00:54,148 --> 00:00:57,110
+Não é o que
 
 10
-00:01:27,190 --> 00:01:29,210
-Comunhão,
+00:00:57,850 --> 00:01:02,854
+Minh'alma diz
 
 11
-00:01:31,400 --> 00:01:31,580
-Oh
+00:01:04,186 --> 00:01:10,090
+Mística sublime, te receber
 
 12
-00:01:33,790 --> 00:01:41,470
-Alguém dirá que um deus tão grande assim
+00:01:11,511 --> 00:01:13,532
+E ter comunhão
 
 13
-00:01:41,470 --> 00:01:47,730
-Não se dará por mim?
+00:01:19,036 --> 00:01:24,359
+Ter correndo em mim teu sangue,
 
 14
-00:01:48,390 --> 00:01:54,630
-O que os meus olhos veem não é
+00:01:24,419 --> 00:01:25,460
+Deus
 
 15
-00:01:54,630 --> 00:02:00,570
-O que minh'alma diz,
+00:01:26,240 --> 00:01:28,702
+Estou em comunhão,
 
 16
-00:02:00,570 --> 00:02:06,430
-E ela diz já não é mais vinho,
+00:01:31,414 --> 00:01:31,595
+Oh
 
 17
-00:02:07,270 --> 00:02:08,350
-Não
+00:01:34,186 --> 00:01:38,889
+Alguém dirá que um deus tão
 
 18
-00:02:10,140 --> 00:02:18,930
-É o sangue do meu deus já não
+00:01:39,009 --> 00:01:41,490
+Grande assim
 
 19
-00:02:18,930 --> 00:02:22,270
-É mais pão aqui
+00:01:42,191 --> 00:01:46,413
+Não se dará por
 
 20
-00:02:22,270 --> 00:02:30,370
-É o corpo do meu amor do meu
+00:01:46,533 --> 00:01:51,816
+Mim? o que os meus olhos
 
 21
-00:02:30,370 --> 00:02:31,350
-Amor
+00:01:52,036 --> 00:01:52,577
+Veem
 
 22
-00:02:32,710 --> 00:02:41,170
-Nesse lugar eu posso dizer que estás dentro
+00:01:53,357 --> 00:01:53,877
+Não é
 
 23
-00:02:41,170 --> 00:02:42,810
-De mim
+00:01:54,938 --> 00:01:56,159
+O que
 
 24
-00:02:42,810 --> 00:02:51,090
-E eu dentro de você nesse lugar eu
+00:01:57,099 --> 00:02:01,782
+Minh'alma diz, e ela diz
 
 25
-00:02:51,090 --> 00:02:56,870
-Posso dizer que estás dentro de mim
+00:02:03,506 --> 00:02:06,448
+Já não é mais vinho,
 
 26
-00:02:58,010 --> 00:03:00,891
-E eu dentro de você
+00:02:07,229 --> 00:02:08,510
+Não
 
 27
-00:03:00,911 --> 00:03:05,173
-E eu dentro de você
+00:02:10,671 --> 00:02:12,172
+É o sangue do meu
 
 28
-00:03:05,233 --> 00:03:06,893
-E eu dentro de você
+00:02:12,252 --> 00:02:17,676
+Deus
 
 29
-00:03:07,133 --> 00:03:12,535
-E eu dentro de você
+00:02:18,197 --> 00:02:20,939
+Já não é mais pão
 
 30
-00:03:12,615 --> 00:03:14,876
-E eu dentro de você
+00:02:21,059 --> 00:02:24,541
+Aqui
 
 31
-00:03:16,376 --> 00:03:18,697
-Eu dentro de você
+00:02:25,302 --> 00:02:27,143
+É o corpo do meu amor do meu amor
 
 32
-00:03:20,018 --> 00:03:21,598
-E eu dentro de você
+00:02:32,834 --> 00:02:37,256
+Nesse lugar eu posso
 
 33
-00:03:21,838 --> 00:03:25,559
-E eu dentro de você
+00:02:37,377 --> 00:02:39,158
+Dizer
 
 34
-00:03:27,140 --> 00:03:33,020
-E eu dentro de você agora nós dois
+00:02:39,838 --> 00:02:44,841
+Que estás dentro de mim e eu dentro de
 
 35
-00:03:33,020 --> 00:03:35,580
-Somos um
+00:02:44,921 --> 00:02:46,522
+Você
 
 36
-00:03:38,442 --> 00:03:42,785
-Agora nós dois somos um
+00:02:47,382 --> 00:02:49,984
+Nesse lugar
 
 37
-00:03:45,767 --> 00:03:49,390
-Agora nós dois somos um (oh oh)
+00:02:50,784 --> 00:02:53,546
+Eu posso dizer
 
 38
-00:03:53,053 --> 00:03:58,537
-Agora nós dois somos um, um
+00:02:54,306 --> 00:02:57,188
+Que estás dentro de mim
 
 39
-00:04:03,040 --> 00:04:10,940
-Somos um somos um
+00:02:57,968 --> 00:02:59,829
+Eu dentro de você
 
 40
-00:04:12,203 --> 00:04:12,704
-Somos um
+00:03:00,635 --> 00:03:01,562
+E eu dentro de você
 
 41
-00:04:19,740 --> 00:04:25,000
-Eu e você só eu e você
+00:03:01,622 --> 00:03:07,204
+Eu dentro de você eu dentro de você
 
 42
-00:04:30,900 --> 00:04:40,580
-Somos um somos um
+00:03:09,044 --> 00:03:14,826
+Eu dentro de você eu dentro de você
 
 43
-00:04:45,570 --> 00:04:49,090
-Somos um, somos um
+00:03:27,334 --> 00:03:29,535
+E eu dentro de você
 
 44
-00:04:52,434 --> 00:04:55,798
+00:03:29,555 --> 00:03:30,508
+E eu dentro de você
+
+45
+00:03:30,528 --> 00:03:31,096
+E eu dentro de você
+
+46
+00:03:31,096 --> 00:03:35,578
+Agora nós dois somos um
+
+47
+00:03:38,440 --> 00:03:42,962
+Agora nós dois somos um
+
+48
+00:03:45,764 --> 00:03:49,546
+Agora nós dois somos um (
+
+49
+00:03:49,546 --> 00:03:53,042
+Oh oh)
+
+50
+00:03:53,042 --> 00:03:56,806
+Agora nós dois somos
+
+51
+00:03:58,207 --> 00:03:58,527
+Um,
+
+52
+00:04:04,188 --> 00:04:04,308
+Um
+
+53
+00:04:04,328 --> 00:04:08,590
+Somos um
+
+54
+00:04:08,610 --> 00:04:09,050
+Somos um
+
+55
+00:04:09,190 --> 00:04:12,430
+Somos um
+
+56
+00:04:12,571 --> 00:04:24,333
+Eu e você
+
+57
+00:04:30,295 --> 00:04:31,075
+Só eu e você
+
+58
+00:04:32,235 --> 00:04:42,978
+Somos um
+
+59
+00:04:46,359 --> 00:04:46,659
+Somos um
+
+60
+00:04:46,879 --> 00:04:48,159
+Somos um, somos um
+
+61
+00:04:48,219 --> 00:04:56,542
 Oh, oh, oh

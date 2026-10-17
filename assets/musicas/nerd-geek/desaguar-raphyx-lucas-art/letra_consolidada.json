@@ -1,0 +1,4431 @@
+{
+  "versao": 6,
+  "status": "pendente",
+  "estrategia": "preservar_corrigir_inserir",
+  "motor": "whisperx",
+  "duracao_audio": 356.6236875,
+  "scores_sao_probabilidades": false,
+  "aprovacao_musical_automatica": false,
+  "parametros": {
+    "score_minimo": 0.3,
+    "janela_maxima": 180.0,
+    "segundos_busca_por_palavra": 3.0,
+    "janela_minima": 30.0,
+    "fragmento_sem_ancora_max_palavras": 2,
+    "fragmento_sem_ancora_max_segundos": 1.0,
+    "score_suporte_insercao": 0.1,
+    "atividade_minima_insercao": 0.2,
+    "margem": 0.4,
+    "margem_aplicada": false
+  },
+  "total_palavras_txt": 548,
+  "total_palavras_srt": 549,
+  "metricas": {
+    "palavras_publicadas": 559,
+    "blocos_srt_auditados": 84,
+    "blocos_srt_descartados": 0,
+    "blocos_texto_corrigido": 43,
+    "blocos_inseridos": 3,
+    "palavras_txt_sem_tempo": 161,
+    "palavras_txt_nao_pesquisadas": 142,
+    "palavras_txt_pesquisadas_sem_tempo": 19,
+    "palavras_conflito_original": 0,
+    "palavras_baixa_confianca": 4,
+    "tentativas_acusticas": 5
+  },
+  "comparacao": {
+    "consultas": [
+      {
+        "bloco_srt": 1,
+        "inicio": 27.483,
+        "fim": 32.07,
+        "txt_inicio": 0,
+        "txt_fim": 14,
+        "score": 0.9076923076923077,
+        "texto": "Foi num dia cinza Onde eu me nublei E, desde aquele dia Aqui nunca",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 2,
+        "inicio": 32.19,
+        "fim": 35.335,
+        "txt_inicio": 14,
+        "txt_fim": 21,
+        "score": 1.0,
+        "texto": "secou A chuva ainda cai lá fora",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 3,
+        "inicio": 36.056,
+        "fim": 38.7,
+        "txt_inicio": 21,
+        "txt_fim": 27,
+        "score": 1.0,
+        "texto": "Mas foi aqui dentro Onde inundou",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 4,
+        "inicio": 38.921,
+        "fim": 44.139,
+        "txt_inicio": 27,
+        "txt_fim": 38,
+        "score": 1.0,
+        "texto": "Eu me mascarei Camada por camada Um vínculo rompido se internalizou",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 5,
+        "inicio": 44.561,
+        "fim": 48.976,
+        "txt_inicio": 38,
+        "txt_fim": 51,
+        "score": 1.0,
+        "texto": "Eu protegerei Mesmo que custe a alma Pra que vocês não precisem sentir",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 6,
+        "inicio": 49.017,
+        "fim": 49.558,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "assado",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 7,
+        "inicio": 50.261,
+        "fim": 55.359,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Eu ainda luto pra superar o luto Da minha melancolia, da minha monotonia",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 8,
+        "inicio": 55.641,
+        "fim": 57.74,
+        "txt_inicio": 66,
+        "txt_fim": 73,
+        "score": 1.0,
+        "texto": "É que eu ainda fujo Do sentimento",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 9,
+        "inicio": 57.881,
+        "fim": 61.1,
+        "txt_inicio": 73,
+        "txt_fim": 80,
+        "score": 0.9743589743589743,
+        "texto": "nulo Uma casca vazia Buscando pela vida",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 10,
+        "inicio": 61.14,
+        "fim": 63.839,
+        "txt_inicio": 80,
+        "txt_fim": 90,
+        "score": 0.9896907216494846,
+        "texto": "Eu ainda tento te salvar Nos olhos que ainda veem",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 11,
+        "inicio": 64.081,
+        "fim": 66.62,
+        "txt_inicio": 90,
+        "txt_fim": 98,
+        "score": 0.8809523809523809,
+        "texto": "Te enxergo nos olhas que Me mostraram além",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 12,
+        "inicio": 66.721,
+        "fim": 69.6,
+        "txt_inicio": 98,
+        "txt_fim": 107,
+        "score": 1.0,
+        "texto": "Da saudade que ainda faz Morada aqui no peito",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 13,
+        "inicio": 69.801,
+        "fim": 72.996,
+        "txt_inicio": 107,
+        "txt_fim": 120,
+        "score": 0.944,
+        "texto": "É meu defeito Quem dera se eu pudesse alterar o que foi feito",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 14,
+        "inicio": 73.94,
+        "fim": 79.375,
+        "txt_inicio": 124,
+        "txt_fim": 140,
+        "score": 0.9852941176470589,
+        "texto": "te ver partir Eu não queria ser o que te fez partir Eu não sentiria o",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 15,
+        "inicio": 79.456,
+        "fim": 81.06,
+        "txt_inicio": 140,
+        "txt_fim": 143,
+        "score": 1.0,
+        "texto": "coração em partes",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 16,
+        "inicio": 81.06,
+        "fim": 86.777,
+        "txt_inicio": 143,
+        "txt_fim": 156,
+        "score": 0.9846153846153847,
+        "texto": "Eu não me culparia se estivesse aqui Ainda me lembro da chuva cair",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 17,
+        "inicio": 87.158,
+        "fim": 87.78,
+        "txt_inicio": 156,
+        "txt_fim": 159,
+        "score": 1.0,
+        "texto": "Ainda dói, não",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 18,
+        "inicio": 87.881,
+        "fim": 91.36,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "dá pra pôr em frases, mas o que me quebra é o que me conf...",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 19,
+        "inicio": 91.862,
+        "fim": 94.754,
+        "txt_inicio": 174,
+        "txt_fim": 181,
+        "score": 0.975609756097561,
+        "texto": "Por isso, mesmo quebrado ainda vou seguir",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 20,
+        "inicio": 97.804,
+        "fim": 98.916,
+        "txt_inicio": 181,
+        "txt_fim": 183,
+        "score": 1.0,
+        "texto": "Eu perdi",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 21,
+        "inicio": 101.004,
+        "fim": 102.776,
+        "txt_inicio": 183,
+        "txt_fim": 187,
+        "score": 1.0,
+        "texto": "o medo da chuva",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 22,
+        "inicio": 103.481,
+        "fim": 104.572,
+        "txt_inicio": 187,
+        "txt_fim": 189,
+        "score": 1.0,
+        "texto": "Eu perdi",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 23,
+        "inicio": 107.365,
+        "fim": 109.455,
+        "txt_inicio": 189,
+        "txt_fim": 193,
+        "score": 0.9166666666666665,
+        "texto": "com a tempestade, aprendi",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 24,
+        "inicio": 111.922,
+        "fim": 115.831,
+        "txt_inicio": 194,
+        "txt_fim": 199,
+        "score": 1.0,
+        "texto": "eu não preciso mais lutar",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 25,
+        "inicio": 117.134,
+        "fim": 118.638,
+        "txt_inicio": 199,
+        "txt_fim": 200,
+        "score": 1.0,
+        "texto": "Contra",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 26,
+        "inicio": 120.559,
+        "fim": 125.556,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "And even if the skies are crying, I won't give up, I'll try, yeah.",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 27,
+        "inicio": 126.24,
+        "fim": 128.555,
+        "txt_inicio": 213,
+        "txt_fim": 219,
+        "score": 0.9354838709677421,
+        "texto": "And even if skies are falling",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 28,
+        "inicio": 129.243,
+        "fim": 131.519,
+        "txt_inicio": 219,
+        "txt_fim": 224,
+        "score": 1.0,
+        "texto": "I'ma rise up, I promise",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 29,
+        "inicio": 131.804,
+        "fim": 132.579,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "I know I'm not so",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
+      },
+      {
+        "bloco_srt": 30,
+        "inicio": 132.62,
+        "fim": 133.933,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Still don't pay",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
+      },
+      {
+        "bloco_srt": 31,
+        "inicio": 134.763,
+        "fim": 135.62,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "I know I'm not so",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
+      },
+      {
+        "bloco_srt": 32,
+        "inicio": 136.186,
+        "fim": 137.256,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Still don't pay",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
+      },
+      {
+        "bloco_srt": 33,
+        "inicio": 137.64,
+        "fim": 138.105,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "No",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 34,
+        "inicio": 140.468,
+        "fim": 140.933,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "No",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 35,
+        "inicio": 167.125,
+        "fim": 171.491,
+        "txt_inicio": 242,
+        "txt_fim": 247,
+        "score": 0.9655172413793103,
+        "texto": "Além das lágrimas Quem poderia",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 36,
+        "inicio": 171.551,
+        "fim": 176.658,
+        "txt_inicio": 247,
+        "txt_fim": 254,
+        "score": 0.9411764705882352,
+        "texto": "imaginar Que no abismo eu encontraria minha",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 37,
+        "inicio": 176.678,
+        "fim": 177.9,
+        "txt_inicio": 254,
+        "txt_fim": 255,
+        "score": 1.0,
+        "texto": "alma?",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 38,
+        "inicio": 178.261,
+        "fim": 180.795,
+        "txt_inicio": 255,
+        "txt_fim": 258,
+        "score": 0.975609756097561,
+        "texto": "Lembranças em páginas",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 39,
+        "inicio": 181.842,
+        "fim": 183.634,
+        "txt_inicio": 258,
+        "txt_fim": 267,
+        "score": 1.0,
+        "texto": "Preto e branco Pois minha vida é um mangá",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 40,
+        "inicio": 184.42,
+        "fim": 188.099,
+        "txt_inicio": 267,
+        "txt_fim": 276,
+        "score": 0.8958333333333335,
+        "texto": "Por você, eu busco cores pra colorir esses traumas",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 41,
+        "inicio": 188.522,
+        "fim": 190.739,
+        "txt_inicio": 276,
+        "txt_fim": 281,
+        "score": 0.8372093023255813,
+        "texto": "De um azul tão indigo",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 42,
+        "inicio": 191.343,
+        "fim": 194.0,
+        "txt_inicio": 281,
+        "txt_fim": 290,
+        "score": 0.9473684210526316,
+        "texto": "Como o céu noturno Que as estrelas me acompanhem",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 43,
+        "inicio": 194.02,
+        "fim": 194.973,
+        "txt_inicio": 290,
+        "txt_fim": 294,
+        "score": 0.8333333333333335,
+        "texto": "Já me senti Ichigo",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 44,
+        "inicio": 197.168,
+        "fim": 199.54,
+        "txt_inicio": 294,
+        "txt_fim": 305,
+        "score": 0.9514563106796117,
+        "texto": "Só mais um menino Que não superou a partida da mãe",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 45,
+        "inicio": 199.782,
+        "fim": 202.459,
+        "txt_inicio": 305,
+        "txt_fim": 317,
+        "score": 0.9690721649484536,
+        "texto": "Há um buraco no meu peito Mas eu não sou um Hollow",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 46,
+        "inicio": 202.621,
+        "fim": 205.54,
+        "txt_inicio": 317,
+        "txt_fim": 328,
+        "score": 0.9696969696969697,
+        "texto": "É que há anjos aqui dentro E gostam quando eu choro",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 47,
+        "inicio": 205.802,
+        "fim": 208.379,
+        "txt_inicio": 328,
+        "txt_fim": 332,
+        "score": 1.0,
+        "texto": "Pois pecados podem lavar",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 48,
+        "inicio": 208.821,
+        "fim": 211.957,
+        "txt_inicio": 332,
+        "txt_fim": 341,
+        "score": 0.9885057471264368,
+        "texto": "Então que meu coração seja um rio a desaguar",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 49,
+        "inicio": 212.56,
+        "fim": 214.399,
+        "txt_inicio": 341,
+        "txt_fim": 348,
+        "score": 0.835820895522388,
+        "texto": "Buscarei sorrir mesmo em meio à dor",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 50,
+        "inicio": 215.362,
+        "fim": 217.438,
+        "txt_inicio": 348,
+        "txt_fim": 354,
+        "score": 0.967741935483871,
+        "texto": "Não esquecei você, nem seu amor",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 51,
+        "inicio": 218.142,
+        "fim": 219.874,
+        "txt_inicio": 354,
+        "txt_fim": 363,
+        "score": 0.9620253164556962,
+        "texto": "Viverá em mim, pois, onde quer que eu for",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 52,
+        "inicio": 220.982,
+        "fim": 222.776,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Que trai seu nome e quase um pagoté",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
+      },
+      {
+        "bloco_srt": 53,
+        "inicio": 223.461,
+        "fim": 226.039,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Mesmo se derramei, você ainda me amei",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 54,
+        "inicio": 226.321,
+        "fim": 228.437,
+        "txt_inicio": 377,
+        "txt_fim": 382,
+        "score": 0.9824561403508771,
+        "texto": "Quando a gente se reencontrar",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 55,
+        "inicio": 228.981,
+        "fim": 231.639,
+        "txt_inicio": 382,
+        "txt_fim": 391,
+        "score": 0.8536585365853658,
+        "texto": "E como um Shinigami que meu nome cê chame",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 56,
+        "inicio": 231.961,
+        "fim": 233.771,
+        "txt_inicio": 391,
+        "txt_fim": 397,
+        "score": 1.0,
+        "texto": "Em um mundo além da vida",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 57,
+        "inicio": 235.421,
+        "fim": 237.355,
+        "txt_inicio": 398,
+        "txt_fim": 403,
+        "score": 0.8627450980392157,
+        "texto": "beije pra sarar cada ferida",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 58,
+        "inicio": 238.02,
+        "fim": 241.295,
+        "txt_inicio": 403,
+        "txt_fim": 410,
+        "score": 0.9508196721311475,
+        "texto": "Como você não pode fazer em vida",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 59,
+        "inicio": 242.984,
+        "fim": 244.17,
+        "txt_inicio": 410,
+        "txt_fim": 414,
+        "score": 0.8108108108108109,
+        "texto": "Ó, minha querida mãe",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 60,
+        "inicio": 246.08,
+        "fim": 250.096,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Em silêncio eu choro se pensar No que a gente não viveu e nunca vi",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 61,
+        "inicio": 250.157,
+        "fim": 250.739,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "inteira",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 62,
+        "inicio": 250.98,
+        "fim": 256.772,
+        "txt_inicio": 429,
+        "txt_fim": 442,
+        "score": 0.9752066115702479,
+        "texto": "Por que você teve que me deixar? Por favor, só me deixa desaguar",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 63,
+        "inicio": 256.972,
+        "fim": 257.213,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Byyyyyyyyye",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
+      },
+      {
+        "bloco_srt": 64,
+        "inicio": 278.723,
+        "fim": 284.477,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "And even if the skies are crying, I won't give up, I'm trying, and",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 65,
+        "inicio": 284.577,
+        "fim": 285.62,
+        "txt_inicio": 442,
+        "txt_fim": 446,
+        "score": 1.0,
+        "texto": "Even if the skies",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 66,
+        "inicio": 285.761,
+        "fim": 290.9,
+        "txt_inicio": 458,
+        "txt_fim": 467,
+        "score": 0.8764044943820225,
+        "texto": "are falling I'ma rise up, I promise No one",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 67,
+        "inicio": 291.521,
+        "fim": 296.338,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Feel the pain, feel the pain",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 68,
+        "inicio": 297.222,
+        "fim": 297.945,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "No,",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 69,
+        "inicio": 298.628,
+        "fim": 299.352,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "no,",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 70,
+        "inicio": 300.015,
+        "fim": 300.075,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "no",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 71,
+        "inicio": 301.18,
+        "fim": 303.174,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Living in this crazy cry, yeah",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
+      },
+      {
+        "bloco_srt": 72,
+        "inicio": 304.403,
+        "fim": 306.518,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "I won't give up or try, yeah",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 73,
+        "inicio": 307.042,
+        "fim": 309.299,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Living in this crazy fall, yeah",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
+      },
+      {
+        "bloco_srt": 74,
+        "inicio": 309.903,
+        "fim": 312.259,
+        "txt_inicio": 501,
+        "txt_fim": 506,
+        "score": 0.7906976744186046,
+        "texto": "I'ma rise up, I promise",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 75,
+        "inicio": 312.481,
+        "fim": 314.757,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "I know I'm not a super big",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
+      },
+      {
+        "bloco_srt": 76,
+        "inicio": 315.381,
+        "fim": 317.738,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "I know I'm not a super big",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
+      },
+      {
+        "bloco_srt": 77,
+        "inicio": 318.367,
+        "fim": 318.816,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "No",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 78,
+        "inicio": 321.143,
+        "fim": 321.612,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "No",
+        "aviso": "consulta_txt_ambigua_original_preservado"
+      },
+      {
+        "bloco_srt": 79,
+        "inicio": 324.783,
+        "fim": 330.358,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Oh, that's what I want to be, that's",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
+      },
+      {
+        "bloco_srt": 80,
+        "inicio": 331.06,
+        "fim": 332.443,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "what I want to be",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
+      },
+      {
+        "bloco_srt": 81,
+        "inicio": 332.764,
+        "fim": 335.951,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Seu parcer em sol",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
+      },
+      {
+        "bloco_srt": 82,
+        "inicio": 336.713,
+        "fim": 340.04,
+        "txt_inicio": 524,
+        "txt_fim": 528,
+        "score": 0.8292682926829268,
+        "texto": "Mesmo que chova, serei",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 83,
+        "inicio": 340.742,
+        "fim": 341.063,
+        "txt_inicio": 528,
+        "txt_fim": 530,
+        "score": 0.7272727272727273,
+        "texto": "o Sol",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 84,
+        "inicio": 342.582,
+        "fim": 347.58,
+        "txt_inicio": 530,
+        "txt_fim": 536,
+        "score": 0.8275862068965517,
+        "texto": "Mesmo que chova, serei o Sol",
+        "aviso": null
+      }
+    ],
+    "regioes": [
+      {
+        "indices": [
+          0
+        ],
+        "inicio": 27.483,
+        "fim": 32.07,
+        "txt_inicio": 0,
+        "txt_fim": 14,
+        "texto": "Foi num dia cinza Onde eu me nublei E, desde aquele dia Aqui nunca"
+      },
+      {
+        "indices": [
+          1
+        ],
+        "inicio": 32.19,
+        "fim": 35.335,
+        "txt_inicio": 14,
+        "txt_fim": 21,
+        "texto": "secou A chuva ainda cai lá fora"
+      },
+      {
+        "indices": [
+          2
+        ],
+        "inicio": 36.056,
+        "fim": 38.7,
+        "txt_inicio": 21,
+        "txt_fim": 27,
+        "texto": "Mas foi aqui dentro Onde inundou"
+      },
+      {
+        "indices": [
+          3
+        ],
+        "inicio": 38.921,
+        "fim": 44.139,
+        "txt_inicio": 27,
+        "txt_fim": 38,
+        "texto": "Eu me mascarei Camada por camada Um vínculo rompido se internalizou"
+      },
+      {
+        "indices": [
+          4
+        ],
+        "inicio": 44.561,
+        "fim": 48.976,
+        "txt_inicio": 38,
+        "txt_fim": 51,
+        "texto": "Eu protegerei Mesmo que custe a alma Pra que vocês não precisem sentir"
+      },
+      {
+        "indices": [
+          5
+        ],
+        "inicio": 49.017,
+        "fim": 49.558,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "assado"
+      },
+      {
+        "indices": [
+          6
+        ],
+        "inicio": 50.261,
+        "fim": 55.359,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Eu ainda luto pra superar o luto Da minha melancolia, da minha monotonia"
+      },
+      {
+        "indices": [
+          7
+        ],
+        "inicio": 55.641,
+        "fim": 57.74,
+        "txt_inicio": 66,
+        "txt_fim": 73,
+        "texto": "É que eu ainda fujo Do sentimento"
+      },
+      {
+        "indices": [
+          8
+        ],
+        "inicio": 57.881,
+        "fim": 61.1,
+        "txt_inicio": 73,
+        "txt_fim": 80,
+        "texto": "nulo Uma casca vazia Buscando pela vida"
+      },
+      {
+        "indices": [
+          9
+        ],
+        "inicio": 61.14,
+        "fim": 63.839,
+        "txt_inicio": 80,
+        "txt_fim": 90,
+        "texto": "Eu ainda tento te salvar Nos olhos que ainda veem"
+      },
+      {
+        "indices": [
+          10
+        ],
+        "inicio": 64.081,
+        "fim": 66.62,
+        "txt_inicio": 90,
+        "txt_fim": 98,
+        "texto": "Te enxergo nos olhas que Me mostraram além"
+      },
+      {
+        "indices": [
+          11
+        ],
+        "inicio": 66.721,
+        "fim": 69.6,
+        "txt_inicio": 98,
+        "txt_fim": 107,
+        "texto": "Da saudade que ainda faz Morada aqui no peito"
+      },
+      {
+        "indices": [
+          12
+        ],
+        "inicio": 69.801,
+        "fim": 72.996,
+        "txt_inicio": 107,
+        "txt_fim": 120,
+        "texto": "É meu defeito Quem dera se eu pudesse alterar o que foi feito"
+      },
+      {
+        "indices": [
+          13
+        ],
+        "inicio": 73.94,
+        "fim": 79.375,
+        "txt_inicio": 124,
+        "txt_fim": 140,
+        "texto": "te ver partir Eu não queria ser o que te fez partir Eu não sentiria o"
+      },
+      {
+        "indices": [
+          14
+        ],
+        "inicio": 79.456,
+        "fim": 81.06,
+        "txt_inicio": 140,
+        "txt_fim": 143,
+        "texto": "coração em partes"
+      },
+      {
+        "indices": [
+          15
+        ],
+        "inicio": 81.06,
+        "fim": 86.777,
+        "txt_inicio": 143,
+        "txt_fim": 156,
+        "texto": "Eu não me culparia se estivesse aqui Ainda me lembro da chuva cair"
+      },
+      {
+        "indices": [
+          16
+        ],
+        "inicio": 87.158,
+        "fim": 87.78,
+        "txt_inicio": 156,
+        "txt_fim": 159,
+        "texto": "Ainda dói, não"
+      },
+      {
+        "indices": [
+          17
+        ],
+        "inicio": 87.881,
+        "fim": 91.36,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "dá pra pôr em frases, mas o que me quebra é o que me conf..."
+      },
+      {
+        "indices": [
+          18
+        ],
+        "inicio": 91.862,
+        "fim": 94.754,
+        "txt_inicio": 174,
+        "txt_fim": 181,
+        "texto": "Por isso, mesmo quebrado ainda vou seguir"
+      },
+      {
+        "indices": [
+          19
+        ],
+        "inicio": 97.804,
+        "fim": 98.916,
+        "txt_inicio": 181,
+        "txt_fim": 183,
+        "texto": "Eu perdi"
+      },
+      {
+        "indices": [
+          20
+        ],
+        "inicio": 101.004,
+        "fim": 102.776,
+        "txt_inicio": 183,
+        "txt_fim": 187,
+        "texto": "o medo da chuva"
+      },
+      {
+        "indices": [
+          21
+        ],
+        "inicio": 103.481,
+        "fim": 104.572,
+        "txt_inicio": 187,
+        "txt_fim": 189,
+        "texto": "Eu perdi"
+      },
+      {
+        "indices": [
+          22
+        ],
+        "inicio": 107.365,
+        "fim": 109.455,
+        "txt_inicio": 189,
+        "txt_fim": 193,
+        "texto": "com a tempestade, aprendi"
+      },
+      {
+        "indices": [
+          23
+        ],
+        "inicio": 111.922,
+        "fim": 115.831,
+        "txt_inicio": 194,
+        "txt_fim": 199,
+        "texto": "eu não preciso mais lutar"
+      },
+      {
+        "indices": [
+          24
+        ],
+        "inicio": 117.134,
+        "fim": 118.638,
+        "txt_inicio": 199,
+        "txt_fim": 200,
+        "texto": "Contra"
+      },
+      {
+        "indices": [
+          25
+        ],
+        "inicio": 120.559,
+        "fim": 125.556,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "And even if the skies are crying, I won't give up, I'll try, yeah."
+      },
+      {
+        "indices": [
+          26
+        ],
+        "inicio": 126.24,
+        "fim": 128.555,
+        "txt_inicio": 213,
+        "txt_fim": 219,
+        "texto": "And even if skies are falling"
+      },
+      {
+        "indices": [
+          27
+        ],
+        "inicio": 129.243,
+        "fim": 131.519,
+        "txt_inicio": 219,
+        "txt_fim": 224,
+        "texto": "I'ma rise up, I promise"
+      },
+      {
+        "indices": [
+          28
+        ],
+        "inicio": 131.804,
+        "fim": 132.579,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "I know I'm not so"
+      },
+      {
+        "indices": [
+          29
+        ],
+        "inicio": 132.62,
+        "fim": 133.933,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Still don't pay"
+      },
+      {
+        "indices": [
+          30
+        ],
+        "inicio": 134.763,
+        "fim": 135.62,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "I know I'm not so"
+      },
+      {
+        "indices": [
+          31
+        ],
+        "inicio": 136.186,
+        "fim": 137.256,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Still don't pay"
+      },
+      {
+        "indices": [
+          32
+        ],
+        "inicio": 137.64,
+        "fim": 138.105,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "No"
+      },
+      {
+        "indices": [
+          33
+        ],
+        "inicio": 140.468,
+        "fim": 140.933,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "No"
+      },
+      {
+        "indices": [
+          34
+        ],
+        "inicio": 167.125,
+        "fim": 171.491,
+        "txt_inicio": 242,
+        "txt_fim": 247,
+        "texto": "Além das lágrimas Quem poderia"
+      },
+      {
+        "indices": [
+          35
+        ],
+        "inicio": 171.551,
+        "fim": 176.658,
+        "txt_inicio": 247,
+        "txt_fim": 254,
+        "texto": "imaginar Que no abismo eu encontraria minha"
+      },
+      {
+        "indices": [
+          36
+        ],
+        "inicio": 176.678,
+        "fim": 177.9,
+        "txt_inicio": 254,
+        "txt_fim": 255,
+        "texto": "alma?"
+      },
+      {
+        "indices": [
+          37
+        ],
+        "inicio": 178.261,
+        "fim": 180.795,
+        "txt_inicio": 255,
+        "txt_fim": 258,
+        "texto": "Lembranças em páginas"
+      },
+      {
+        "indices": [
+          38
+        ],
+        "inicio": 181.842,
+        "fim": 183.634,
+        "txt_inicio": 258,
+        "txt_fim": 267,
+        "texto": "Preto e branco Pois minha vida é um mangá"
+      },
+      {
+        "indices": [
+          39
+        ],
+        "inicio": 184.42,
+        "fim": 188.099,
+        "txt_inicio": 267,
+        "txt_fim": 276,
+        "texto": "Por você, eu busco cores pra colorir esses traumas"
+      },
+      {
+        "indices": [
+          40
+        ],
+        "inicio": 188.522,
+        "fim": 190.739,
+        "txt_inicio": 276,
+        "txt_fim": 281,
+        "texto": "De um azul tão indigo"
+      },
+      {
+        "indices": [
+          41
+        ],
+        "inicio": 191.343,
+        "fim": 194.0,
+        "txt_inicio": 281,
+        "txt_fim": 290,
+        "texto": "Como o céu noturno Que as estrelas me acompanhem"
+      },
+      {
+        "indices": [
+          42
+        ],
+        "inicio": 194.02,
+        "fim": 194.973,
+        "txt_inicio": 290,
+        "txt_fim": 294,
+        "texto": "Já me senti Ichigo"
+      },
+      {
+        "indices": [
+          43
+        ],
+        "inicio": 197.168,
+        "fim": 199.54,
+        "txt_inicio": 294,
+        "txt_fim": 305,
+        "texto": "Só mais um menino Que não superou a partida da mãe"
+      },
+      {
+        "indices": [
+          44
+        ],
+        "inicio": 199.782,
+        "fim": 202.459,
+        "txt_inicio": 305,
+        "txt_fim": 317,
+        "texto": "Há um buraco no meu peito Mas eu não sou um Hollow"
+      },
+      {
+        "indices": [
+          45
+        ],
+        "inicio": 202.621,
+        "fim": 205.54,
+        "txt_inicio": 317,
+        "txt_fim": 328,
+        "texto": "É que há anjos aqui dentro E gostam quando eu choro"
+      },
+      {
+        "indices": [
+          46
+        ],
+        "inicio": 205.802,
+        "fim": 208.379,
+        "txt_inicio": 328,
+        "txt_fim": 332,
+        "texto": "Pois pecados podem lavar"
+      },
+      {
+        "indices": [
+          47
+        ],
+        "inicio": 208.821,
+        "fim": 211.957,
+        "txt_inicio": 332,
+        "txt_fim": 341,
+        "texto": "Então que meu coração seja um rio a desaguar"
+      },
+      {
+        "indices": [
+          48
+        ],
+        "inicio": 212.56,
+        "fim": 214.399,
+        "txt_inicio": 341,
+        "txt_fim": 348,
+        "texto": "Buscarei sorrir mesmo em meio à dor"
+      },
+      {
+        "indices": [
+          49
+        ],
+        "inicio": 215.362,
+        "fim": 217.438,
+        "txt_inicio": 348,
+        "txt_fim": 354,
+        "texto": "Não esquecei você, nem seu amor"
+      },
+      {
+        "indices": [
+          50
+        ],
+        "inicio": 218.142,
+        "fim": 219.874,
+        "txt_inicio": 354,
+        "txt_fim": 363,
+        "texto": "Viverá em mim, pois, onde quer que eu for"
+      },
+      {
+        "indices": [
+          51
+        ],
+        "inicio": 220.982,
+        "fim": 222.776,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Que trai seu nome e quase um pagoté"
+      },
+      {
+        "indices": [
+          52
+        ],
+        "inicio": 223.461,
+        "fim": 226.039,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Mesmo se derramei, você ainda me amei"
+      },
+      {
+        "indices": [
+          53
+        ],
+        "inicio": 226.321,
+        "fim": 228.437,
+        "txt_inicio": 377,
+        "txt_fim": 382,
+        "texto": "Quando a gente se reencontrar"
+      },
+      {
+        "indices": [
+          54
+        ],
+        "inicio": 228.981,
+        "fim": 231.639,
+        "txt_inicio": 382,
+        "txt_fim": 391,
+        "texto": "E como um Shinigami que meu nome cê chame"
+      },
+      {
+        "indices": [
+          55
+        ],
+        "inicio": 231.961,
+        "fim": 233.771,
+        "txt_inicio": 391,
+        "txt_fim": 397,
+        "texto": "Em um mundo além da vida"
+      },
+      {
+        "indices": [
+          56
+        ],
+        "inicio": 235.421,
+        "fim": 237.355,
+        "txt_inicio": 398,
+        "txt_fim": 403,
+        "texto": "beije pra sarar cada ferida"
+      },
+      {
+        "indices": [
+          57
+        ],
+        "inicio": 238.02,
+        "fim": 241.295,
+        "txt_inicio": 403,
+        "txt_fim": 410,
+        "texto": "Como você não pode fazer em vida"
+      },
+      {
+        "indices": [
+          58
+        ],
+        "inicio": 242.984,
+        "fim": 244.17,
+        "txt_inicio": 410,
+        "txt_fim": 414,
+        "texto": "Ó, minha querida mãe"
+      },
+      {
+        "indices": [
+          59
+        ],
+        "inicio": 246.08,
+        "fim": 250.096,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Em silêncio eu choro se pensar No que a gente não viveu e nunca vi"
+      },
+      {
+        "indices": [
+          60
+        ],
+        "inicio": 250.157,
+        "fim": 250.739,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "inteira"
+      },
+      {
+        "indices": [
+          61
+        ],
+        "inicio": 250.98,
+        "fim": 256.772,
+        "txt_inicio": 429,
+        "txt_fim": 442,
+        "texto": "Por que você teve que me deixar? Por favor, só me deixa desaguar"
+      },
+      {
+        "indices": [
+          62
+        ],
+        "inicio": 256.972,
+        "fim": 257.213,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Byyyyyyyyye"
+      },
+      {
+        "indices": [
+          63
+        ],
+        "inicio": 278.723,
+        "fim": 284.477,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "And even if the skies are crying, I won't give up, I'm trying, and"
+      },
+      {
+        "indices": [
+          64
+        ],
+        "inicio": 284.577,
+        "fim": 285.62,
+        "txt_inicio": 442,
+        "txt_fim": 446,
+        "texto": "Even if the skies"
+      },
+      {
+        "indices": [
+          65
+        ],
+        "inicio": 285.761,
+        "fim": 290.9,
+        "txt_inicio": 458,
+        "txt_fim": 467,
+        "texto": "are falling I'ma rise up, I promise No one"
+      },
+      {
+        "indices": [
+          66
+        ],
+        "inicio": 291.521,
+        "fim": 296.338,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Feel the pain, feel the pain"
+      },
+      {
+        "indices": [
+          67
+        ],
+        "inicio": 297.222,
+        "fim": 297.945,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "No,"
+      },
+      {
+        "indices": [
+          68
+        ],
+        "inicio": 298.628,
+        "fim": 299.352,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "no,"
+      },
+      {
+        "indices": [
+          69
+        ],
+        "inicio": 300.015,
+        "fim": 300.075,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "no"
+      },
+      {
+        "indices": [
+          70
+        ],
+        "inicio": 301.18,
+        "fim": 303.174,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Living in this crazy cry, yeah"
+      },
+      {
+        "indices": [
+          71
+        ],
+        "inicio": 304.403,
+        "fim": 306.518,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "I won't give up or try, yeah"
+      },
+      {
+        "indices": [
+          72
+        ],
+        "inicio": 307.042,
+        "fim": 309.299,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Living in this crazy fall, yeah"
+      },
+      {
+        "indices": [
+          73
+        ],
+        "inicio": 309.903,
+        "fim": 312.259,
+        "txt_inicio": 501,
+        "txt_fim": 506,
+        "texto": "I'ma rise up, I promise"
+      },
+      {
+        "indices": [
+          74
+        ],
+        "inicio": 312.481,
+        "fim": 314.757,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "I know I'm not a super big"
+      },
+      {
+        "indices": [
+          75
+        ],
+        "inicio": 315.381,
+        "fim": 317.738,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "I know I'm not a super big"
+      },
+      {
+        "indices": [
+          76
+        ],
+        "inicio": 318.367,
+        "fim": 318.816,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "No"
+      },
+      {
+        "indices": [
+          77
+        ],
+        "inicio": 321.143,
+        "fim": 321.612,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "No"
+      },
+      {
+        "indices": [
+          78
+        ],
+        "inicio": 324.783,
+        "fim": 330.358,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Oh, that's what I want to be, that's"
+      },
+      {
+        "indices": [
+          79
+        ],
+        "inicio": 331.06,
+        "fim": 332.443,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "what I want to be"
+      },
+      {
+        "indices": [
+          80
+        ],
+        "inicio": 332.764,
+        "fim": 335.951,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Seu parcer em sol"
+      },
+      {
+        "indices": [
+          81
+        ],
+        "inicio": 336.713,
+        "fim": 340.04,
+        "txt_inicio": 524,
+        "txt_fim": 528,
+        "texto": "Mesmo que chova, serei"
+      },
+      {
+        "indices": [
+          82
+        ],
+        "inicio": 340.742,
+        "fim": 341.063,
+        "txt_inicio": 528,
+        "txt_fim": 530,
+        "texto": "o Sol"
+      },
+      {
+        "indices": [
+          83
+        ],
+        "inicio": 342.582,
+        "fim": 347.58,
+        "txt_inicio": 530,
+        "txt_fim": 536,
+        "texto": "Mesmo que chova, serei o Sol"
+      }
+    ],
+    "tokens_txt_sem_correspondencia": [
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      120,
+      121,
+      122,
+      123,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      193,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      241,
+      363,
+      364,
+      365,
+      366,
+      367,
+      368,
+      369,
+      370,
+      371,
+      372,
+      373,
+      374,
+      375,
+      376,
+      397,
+      414,
+      415,
+      416,
+      417,
+      418,
+      419,
+      420,
+      421,
+      422,
+      423,
+      424,
+      425,
+      426,
+      427,
+      428,
+      446,
+      447,
+      448,
+      449,
+      450,
+      451,
+      452,
+      453,
+      454,
+      455,
+      456,
+      457,
+      467,
+      468,
+      469,
+      470,
+      471,
+      472,
+      473,
+      474,
+      475,
+      476,
+      477,
+      478,
+      479,
+      480,
+      481,
+      482,
+      483,
+      484,
+      485,
+      486,
+      487,
+      488,
+      489,
+      490,
+      491,
+      492,
+      493,
+      494,
+      495,
+      496,
+      497,
+      498,
+      499,
+      500,
+      506,
+      507,
+      508,
+      509,
+      510,
+      511,
+      512,
+      513,
+      514,
+      515,
+      516,
+      517,
+      518,
+      519,
+      520,
+      521,
+      522,
+      523,
+      536,
+      537,
+      538,
+      539,
+      540,
+      541,
+      542,
+      543,
+      544,
+      545,
+      546,
+      547
+    ],
+    "parametros": {
+      "score_consulta_minimo": 0.65,
+      "margem_ambiguidade": 0.025,
+      "bonus_por_extremidade": 0.02,
+      "score_contexto_minimo": 0.85,
+      "distancia_max_palavra_isolada": 3.0,
+      "palavra_isolada_exige_exatidao": true
+    }
+  },
+  "auditoria_estrutura": [
+    {
+      "bloco_srt": 1,
+      "inicio_original": 27.483,
+      "fim_original": 32.07,
+      "texto_original": "Foi num dia cinza onde eu me no play, e desde aquele dia que nunca",
+      "texto_publicado": "Foi num dia cinza onde eu me nublei e, desde aquele dia aqui nunca",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 2,
+      "inicio_original": 32.19,
+      "fim_original": 35.335,
+      "texto_original": "secou, a chuva ainda cai lá fora,",
+      "texto_publicado": "Secou a chuva ainda cai lá fora",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 3,
+      "inicio_original": 36.056,
+      "fim_original": 38.7,
+      "texto_original": "mas foi aqui dentro onde inundou.",
+      "texto_publicado": "Mas foi aqui dentro onde inundou",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 4,
+      "inicio_original": 38.921,
+      "fim_original": 44.139,
+      "texto_original": "Eu me mascarei, camada por camada Um vínculo rompido se internalizou",
+      "texto_publicado": "Eu me mascarei camada por camada um vínculo rompido se internalizou",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 5,
+      "inicio_original": 44.561,
+      "fim_original": 48.976,
+      "texto_original": "Eu protegerei mesmo que custe a alma Pra que vocês não precisem sentir",
+      "texto_publicado": "Eu protegerei mesmo que custe a alma pra que vocês não precisem sentir",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 6,
+      "inicio_original": 49.017,
+      "fim_original": 49.558,
+      "texto_original": "assado",
+      "texto_publicado": "Assado",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 7,
+      "inicio_original": 50.261,
+      "fim_original": 55.359,
+      "texto_original": "Eu ainda luto pra superar o luto Da minha melancolia, da minha monotonia",
+      "texto_publicado": "Eu ainda luto pra superar o luto da minha melancolia, da minha monotonia",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 8,
+      "inicio_original": 55.641,
+      "fim_original": 57.74,
+      "texto_original": "É que eu ainda fujo do sentimento",
+      "texto_publicado": "É que eu ainda fujo do sentimento",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 9,
+      "inicio_original": 57.881,
+      "fim_original": 61.1,
+      "texto_original": "Nulu, uma casca vazia, buscando pela vida",
+      "texto_publicado": "Nulo uma casca vazia buscando pela vida",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 10,
+      "inicio_original": 61.14,
+      "fim_original": 63.839,
+      "texto_original": "Eu ainda tento te salvar nos olhos que ainda vêm",
+      "texto_publicado": "Eu ainda tento te salvar nos olhos que ainda veem",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 11,
+      "inicio_original": 64.081,
+      "fim_original": 66.62,
+      "texto_original": "Te chego nos olhares que me mostrarão além",
+      "texto_publicado": "Te enxergo nos olhas que me mostraram além",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 12,
+      "inicio_original": 66.721,
+      "fim_original": 69.6,
+      "texto_original": "Da saudade que ainda faz, morada aqui no peito",
+      "texto_publicado": "Da saudade que ainda faz morada aqui no peito",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 13,
+      "inicio_original": 69.801,
+      "fim_original": 72.996,
+      "texto_original": "É meu defeito, quem dera se eu pudesse alterar o que eu não feito",
+      "texto_publicado": "É meu defeito quem dera se eu pudesse alterar o que foi feito",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 14,
+      "inicio_original": 73.94,
+      "fim_original": 79.375,
+      "texto_original": "Te ver parti, eu não queria ser o que te fez parti, eu não sentiria o",
+      "texto_publicado": "Te ver partir eu não queria ser o que te fez partir eu não sentiria o",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 15,
+      "inicio_original": 79.456,
+      "fim_original": 81.06,
+      "texto_original": "coração em partes,",
+      "texto_publicado": "Coração em partes",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 16,
+      "inicio_original": 81.06,
+      "fim_original": 86.777,
+      "texto_original": "eu não me culparia se tivesse aqui, ainda me lembro da chuva cair,",
+      "texto_publicado": "Eu não me culparia se estivesse aqui ainda me lembro da chuva cair",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 17,
+      "inicio_original": 87.158,
+      "fim_original": 87.78,
+      "texto_original": "ainda dói não",
+      "texto_publicado": "Ainda dói, não",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 18,
+      "inicio_original": 87.881,
+      "fim_original": 91.36,
+      "texto_original": "dá pra pôr em frases, mas o que me quebra é o que me conf...",
+      "texto_publicado": "Dá pra pôr em frases, mas o que me quebra é o que me conf...",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 19,
+      "inicio_original": 91.862,
+      "fim_original": 94.754,
+      "texto_original": "e por isso mesmo quebrado ainda vou seguir",
+      "texto_publicado": "E por isso mesmo quebrado ainda vou seguir",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 20,
+      "inicio_original": 97.804,
+      "fim_original": 98.916,
+      "texto_original": "Eu perdi",
+      "texto_publicado": "Eu perdi",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 21,
+      "inicio_original": 101.004,
+      "fim_original": 102.776,
+      "texto_original": "o medo da chuva",
+      "texto_publicado": "O medo da chuva",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 22,
+      "inicio_original": 103.481,
+      "fim_original": 104.572,
+      "texto_original": "Eu perdi",
+      "texto_publicado": "Eu perdi",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 23,
+      "inicio_original": 107.365,
+      "fim_original": 109.455,
+      "texto_original": "com a tempestade a perdi",
+      "texto_publicado": "Com a tempestade, aprendi",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 24,
+      "inicio_original": 111.922,
+      "fim_original": 115.831,
+      "texto_original": "Eu não preciso mais lutar",
+      "texto_publicado": "Eu não preciso mais lutar",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 25,
+      "inicio_original": 117.134,
+      "fim_original": 118.638,
+      "texto_original": "contra",
+      "texto_publicado": "Contra",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 26,
+      "inicio_original": 120.559,
+      "fim_original": 125.556,
+      "texto_original": "And even if the skies are crying, I won't give up, I'll try, yeah.",
+      "texto_publicado": "And even if the skies are crying, i won't give up, i'll try, yeah.",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 27,
+      "inicio_original": 126.24,
+      "fim_original": 128.555,
+      "texto_original": "And even if the skies are falling.",
+      "texto_publicado": "And even if the skies are falling.",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 28,
+      "inicio_original": 129.243,
+      "fim_original": 131.519,
+      "texto_original": "I'ma rise up, I promise",
+      "texto_publicado": "I'ma rise up, i promise",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 29,
+      "inicio_original": 131.804,
+      "fim_original": 132.579,
+      "texto_original": "I know I'm not so",
+      "texto_publicado": "I know i'm not so",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 30,
+      "inicio_original": 132.62,
+      "fim_original": 133.933,
+      "texto_original": "Still don't pay",
+      "texto_publicado": "Still don't pay",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 31,
+      "inicio_original": 134.763,
+      "fim_original": 135.62,
+      "texto_original": "I know I'm not so",
+      "texto_publicado": "I know i'm not so",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 32,
+      "inicio_original": 136.186,
+      "fim_original": 137.256,
+      "texto_original": "Still don't pay",
+      "texto_publicado": "Still don't pay",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 33,
+      "inicio_original": 137.64,
+      "fim_original": 138.105,
+      "texto_original": "No",
+      "texto_publicado": "No",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 34,
+      "inicio_original": 140.468,
+      "fim_original": 140.933,
+      "texto_original": "No",
+      "texto_publicado": "No",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 35,
+      "inicio_original": 167.125,
+      "fim_original": 171.491,
+      "texto_original": "Além das lágrimas, quem poder",
+      "texto_publicado": "Além das lágrimas quem poderia",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 36,
+      "inicio_original": 171.551,
+      "fim_original": 176.658,
+      "texto_original": "imaginar que no abismo encontraria a minha",
+      "texto_publicado": "Imaginar que no abismo encontraria a minha",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 37,
+      "inicio_original": 176.678,
+      "fim_original": 177.9,
+      "texto_original": "alma?",
+      "texto_publicado": "Alma?",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 38,
+      "inicio_original": 178.261,
+      "fim_original": 180.795,
+      "texto_original": "Lembranças em pagina",
+      "texto_publicado": "Lembranças em páginas",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 39,
+      "inicio_original": 181.842,
+      "fim_original": 183.634,
+      "texto_original": "Preto e branco, pois minha vida é um mangá",
+      "texto_publicado": "Preto e branco pois minha vida é um mangá",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 40,
+      "inicio_original": 184.42,
+      "fim_original": 188.099,
+      "texto_original": "Por você eu busco cores pra colore e ex-estrauma",
+      "texto_publicado": "Por você, eu busco cores pra colorir esses traumas",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 41,
+      "inicio_original": 188.522,
+      "fim_original": 190.739,
+      "texto_original": "De um anzol tão íntico",
+      "texto_publicado": "De um azul tão indigo",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 42,
+      "inicio_original": 191.343,
+      "fim_original": 194.0,
+      "texto_original": "Com o seu noturno que as estrelas me acompanham",
+      "texto_publicado": "Como o céu noturno que as estrelas me acompanhem",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 43,
+      "inicio_original": 194.02,
+      "fim_original": 194.973,
+      "texto_original": "Já me senti íntico",
+      "texto_publicado": "Já me senti ichigo",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 44,
+      "inicio_original": 197.168,
+      "fim_original": 199.54,
+      "texto_original": "Eu sou mais um menino que não supero a partida da mãe",
+      "texto_publicado": "Só mais um menino que não superou a partida da mãe",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 45,
+      "inicio_original": 199.782,
+      "fim_original": 202.459,
+      "texto_original": "Há um buraco no meu peito, mas eu não sou hollow",
+      "texto_publicado": "Há um buraco no meu peito mas eu não sou um hollow",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 46,
+      "inicio_original": 202.621,
+      "fim_original": 205.54,
+      "texto_original": "É que anjos aqui dentro e gostam quando eu choro",
+      "texto_publicado": "É que há anjos aqui dentro e gostam quando eu choro",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 47,
+      "inicio_original": 205.802,
+      "fim_original": 208.379,
+      "texto_original": "Pois pecados podem lavar",
+      "texto_publicado": "Pois pecados podem lavar",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 48,
+      "inicio_original": 208.821,
+      "fim_original": 211.957,
+      "texto_original": "Então que meu coração seja um rio adesaguar",
+      "texto_publicado": "Então que meu coração seja um rio a desaguar",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 49,
+      "inicio_original": 212.56,
+      "fim_original": 214.399,
+      "texto_original": "Os caras sorri mesmo em meia dor",
+      "texto_publicado": "Buscarei sorrir mesmo em meio à dor",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 50,
+      "inicio_original": 215.362,
+      "fim_original": 217.438,
+      "texto_original": "Não esquecerei você nem seu amor",
+      "texto_publicado": "Não esquecei você, nem seu amor",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 51,
+      "inicio_original": 218.142,
+      "fim_original": 219.874,
+      "texto_original": "Viverá em mim pois onde que é que eu for",
+      "texto_publicado": "Viverá em mim, pois, onde quer que eu for",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 52,
+      "inicio_original": 220.982,
+      "fim_original": 222.776,
+      "texto_original": "Que trai seu nome e quase um pagoté",
+      "texto_publicado": "Que trai seu nome e quase um pagoté",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 53,
+      "inicio_original": 223.461,
+      "fim_original": 226.039,
+      "texto_original": "Mesmo se derramei, você ainda me amei",
+      "texto_publicado": "Mesmo se derramei, você ainda me amei",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 54,
+      "inicio_original": 226.321,
+      "fim_original": 228.437,
+      "texto_original": "Quando a gente se reencontra",
+      "texto_publicado": "Quando a gente se reencontrar",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 55,
+      "inicio_original": 228.981,
+      "fim_original": 231.639,
+      "texto_original": "E como um chimicame que meu nome se chama",
+      "texto_publicado": "E como um shinigami que meu nome cê chame",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 56,
+      "inicio_original": 231.961,
+      "fim_original": 233.771,
+      "texto_original": "Em um mundo além da vida",
+      "texto_publicado": "Em um mundo além da vida",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 57,
+      "inicio_original": 235.421,
+      "fim_original": 237.355,
+      "texto_original": "Beije pra saragada ferir",
+      "texto_publicado": "Beije pra sarar cada ferida",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 58,
+      "inicio_original": 238.02,
+      "fim_original": 241.295,
+      "texto_original": "Como você não pode fazer vida",
+      "texto_publicado": "Como você não pode fazer em vida",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 59,
+      "inicio_original": 242.984,
+      "fim_original": 244.17,
+      "texto_original": "Como a querida mãe",
+      "texto_publicado": "Ó, minha querida mãe",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 60,
+      "inicio_original": 246.08,
+      "fim_original": 250.096,
+      "texto_original": "Em silêncio eu choro se pensar No que a gente não viveu e nunca vi",
+      "texto_publicado": "Em silêncio eu choro se pensar no que a gente não viveu e nunca vi",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 61,
+      "inicio_original": 250.157,
+      "fim_original": 250.739,
+      "texto_original": "inteira",
+      "texto_publicado": "Inteira",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 62,
+      "inicio_original": 250.98,
+      "fim_original": 256.772,
+      "texto_original": "Por que você teve que me deixar? Por favor só me deixa desar",
+      "texto_publicado": "Por que você teve que me deixar? por favor, só me deixa desaguar",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 63,
+      "inicio_original": 256.972,
+      "fim_original": 257.213,
+      "texto_original": "Byyyyyyyyye",
+      "texto_publicado": "Byyyyyyyyye",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 64,
+      "inicio_original": 278.723,
+      "fim_original": 284.477,
+      "texto_original": "And even if the skies are crying, I won't give up, I'm trying, and",
+      "texto_publicado": "And even if the skies are crying, i won't give up, i'm trying, and",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 65,
+      "inicio_original": 284.577,
+      "fim_original": 285.62,
+      "texto_original": "even if the skies",
+      "texto_publicado": "Even if the skies",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 66,
+      "inicio_original": 285.761,
+      "fim_original": 290.9,
+      "texto_original": "are falling, I'ma rise up, I promise, and no, not soon.",
+      "texto_publicado": "Are falling, i'ma rise up, i promise, and no, not soon.",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 67,
+      "inicio_original": 291.521,
+      "fim_original": 296.338,
+      "texto_original": "Feel the pain, feel the pain",
+      "texto_publicado": "Feel the pain, feel the pain",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 68,
+      "inicio_original": 297.222,
+      "fim_original": 297.945,
+      "texto_original": "No,",
+      "texto_publicado": "No,",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 69,
+      "inicio_original": 298.628,
+      "fim_original": 299.352,
+      "texto_original": "no,",
+      "texto_publicado": "No,",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 70,
+      "inicio_original": 300.015,
+      "fim_original": 300.075,
+      "texto_original": "no",
+      "texto_publicado": "No",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 71,
+      "inicio_original": 301.18,
+      "fim_original": 303.174,
+      "texto_original": "Living in this crazy cry, yeah",
+      "texto_publicado": "Living in this crazy cry, yeah",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 72,
+      "inicio_original": 304.403,
+      "fim_original": 306.518,
+      "texto_original": "I won't give up or try, yeah",
+      "texto_publicado": "I won't give up or try, yeah",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 73,
+      "inicio_original": 307.042,
+      "fim_original": 309.299,
+      "texto_original": "Living in this crazy fall, yeah",
+      "texto_publicado": "Living in this crazy fall, yeah",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 74,
+      "inicio_original": 309.903,
+      "fim_original": 312.259,
+      "texto_original": "I'm a riser for promise",
+      "texto_publicado": "I'ma rise up, i promise",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 75,
+      "inicio_original": 312.481,
+      "fim_original": 314.757,
+      "texto_original": "I know I'm not a super big",
+      "texto_publicado": "I know i'm not a super big",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 76,
+      "inicio_original": 315.381,
+      "fim_original": 317.738,
+      "texto_original": "I know I'm not a super big",
+      "texto_publicado": "I know i'm not a super big",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 77,
+      "inicio_original": 318.367,
+      "fim_original": 318.816,
+      "texto_original": "No",
+      "texto_publicado": "No",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 78,
+      "inicio_original": 321.143,
+      "fim_original": 321.612,
+      "texto_original": "No",
+      "texto_publicado": "No",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 79,
+      "inicio_original": 324.783,
+      "fim_original": 330.358,
+      "texto_original": "Oh, that's what I want to be, that's",
+      "texto_publicado": "Oh, that's what i want to be, that's",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 80,
+      "inicio_original": 331.06,
+      "fim_original": 332.443,
+      "texto_original": "what I want to be",
+      "texto_publicado": "What i want to be",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 81,
+      "inicio_original": 332.764,
+      "fim_original": 335.951,
+      "texto_original": "Seu parcer em sol",
+      "texto_publicado": "Seu parcer em sol",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 82,
+      "inicio_original": 336.713,
+      "fim_original": 340.04,
+      "texto_original": "Mesmo que chamar ser",
+      "texto_publicado": "Mesmo que chova, serei",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 83,
+      "inicio_original": 340.742,
+      "fim_original": 341.063,
+      "texto_original": "em sol",
+      "texto_publicado": "O sol",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 84,
+      "inicio_original": 342.582,
+      "fim_original": 347.58,
+      "texto_original": "Mesmo que se apaçoe, serei o sol!",
+      "texto_publicado": "Mesmo que chova, serei o sol",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    }
+  ],
+  "recuperacoes": [
+    {
+      "id": 1,
+      "txt_inicio": 120,
+      "txt_fim": 124,
+      "inicio": 72.996,
+      "fim": 73.94,
+      "bloco_anterior": 13,
+      "bloco_seguinte": 14,
+      "ocupados": [],
+      "limite_busca": 30.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "recuperado",
+      "tentativas": [
+        {
+          "janela": [
+            72.996,
+            73.94
+          ],
+          "texto": "Eu não teria que",
+          "palavras": [
+            {
+              "texto": "Eu",
+              "inicio": 72.996,
+              "fim": 73.181,
+              "score": 0.662
+            },
+            {
+              "texto": "não",
+              "inicio": 73.406,
+              "fim": 73.489,
+              "score": 0.249
+            },
+            {
+              "texto": "teria",
+              "inicio": 73.571,
+              "fim": 73.755,
+              "score": 0.3
+            },
+            {
+              "texto": "que",
+              "inicio": 73.776,
+              "fim": 73.858,
+              "score": 0.2
+            }
+          ]
+        }
+      ],
+      "inseridos": [
+        {
+          "inicio": 72.996,
+          "fim": 73.858,
+          "texto": "Eu não teria que",
+          "origem": "insercao_acustica",
+          "lacuna": 1,
+          "txt_inicio": 120,
+          "txt_fim": 124,
+          "score_minimo": 0.2,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 2
+        }
+      ],
+      "tokens_recuperados": [
+        120,
+        121,
+        122,
+        123
+      ],
+      "texto": "Eu não teria que"
+    },
+    {
+      "id": 2,
+      "txt_inicio": 193,
+      "txt_fim": 194,
+      "inicio": 109.455,
+      "fim": 111.922,
+      "bloco_anterior": 23,
+      "bloco_seguinte": 24,
+      "ocupados": [],
+      "limite_busca": 30.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "recuperado",
+      "tentativas": [
+        {
+          "janela": [
+            109.455,
+            111.922
+          ],
+          "texto": "Que",
+          "palavras": [
+            {
+              "texto": "Que",
+              "inicio": 110.137,
+              "fim": 110.217,
+              "score": 0.167
+            }
+          ]
+        }
+      ],
+      "inseridos": [
+        {
+          "inicio": 110.137,
+          "fim": 110.217,
+          "texto": "Que",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 193,
+          "txt_fim": 194,
+          "score_minimo": 0.167,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 1
+        }
+      ],
+      "tokens_recuperados": [
+        193
+      ],
+      "texto": "Que"
+    },
+    {
+      "id": 3,
+      "txt_inicio": 397,
+      "txt_fim": 398,
+      "inicio": 233.771,
+      "fim": 235.421,
+      "bloco_anterior": 56,
+      "bloco_seguinte": 57,
+      "ocupados": [],
+      "limite_busca": 30.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "pesquisado_sem_confirmacao",
+      "tentativas": [
+        {
+          "janela": [
+            233.771,
+            235.421
+          ],
+          "texto": "E",
+          "palavras": [
+            {
+              "texto": "E",
+              "inicio": 234.133,
+              "fim": 234.153,
+              "score": 0.058
+            }
+          ],
+          "trechos_nao_confirmados": [
+            {
+              "txt_inicio": 397,
+              "txt_fim": 398,
+              "motivo": "suporte_acustico_insuficiente",
+              "atividade_audio": 1.0
+            }
+          ]
+        }
+      ],
+      "inseridos": [],
+      "tokens_recuperados": [],
+      "texto": "E"
+    },
+    {
+      "id": 4,
+      "txt_inicio": 446,
+      "txt_fim": 458,
+      "inicio": 285.62,
+      "fim": 285.761,
+      "bloco_anterior": 65,
+      "bloco_seguinte": 66,
+      "ocupados": [],
+      "limite_busca": 36.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "pesquisado_sem_confirmacao",
+      "tentativas": [
+        {
+          "janela": [
+            285.62,
+            285.761
+          ],
+          "texto": "are crying\nI won't give up, I'm trying\nAnd even if skies",
+          "palavras": [
+            {
+              "texto": "are",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "crying",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "I",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "won't",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "give",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "up",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "I'm",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "trying",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "And",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "even",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "if",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            },
+            {
+              "texto": "skies",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            }
+          ]
+        }
+      ],
+      "inseridos": [],
+      "tokens_recuperados": [],
+      "texto": "are crying I won't give up, I'm trying And even if skies"
+    },
+    {
+      "id": 5,
+      "txt_inicio": 536,
+      "txt_fim": 548,
+      "inicio": 347.58,
+      "fim": 356.6236875,
+      "bloco_anterior": 84,
+      "bloco_seguinte": null,
+      "ocupados": [],
+      "limite_busca": 36.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "parcialmente_recuperado",
+      "tentativas": [
+        {
+          "janela": [
+            347.58,
+            356.6236875
+          ],
+          "texto": "Mesmo que chova, serei o Sol\nMesmo que chova, serei o Sol",
+          "palavras": [
+            {
+              "texto": "Mesmo",
+              "inicio": 347.58,
+              "fim": 348.242,
+              "score": 0.366
+            },
+            {
+              "texto": "que",
+              "inicio": 348.723,
+              "fim": 349.064,
+              "score": 0.53
+            },
+            {
+              "texto": "chova",
+              "inicio": 350.307,
+              "fim": 350.869,
+              "score": 0.706
+            },
+            {
+              "texto": "serei",
+              "inicio": 351.049,
+              "fim": 351.37,
+              "score": 0.313
+            },
+            {
+              "texto": "o",
+              "inicio": 351.911,
+              "fim": 352.172,
+              "score": 0.923
+            },
+            {
+              "texto": "Sol",
+              "inicio": 355.4,
+              "fim": 355.461,
+              "score": 0.0
+            },
+            {
+              "texto": "Mesmo",
+              "inicio": 355.481,
+              "fim": 355.581,
+              "score": 0.0
+            },
+            {
+              "texto": "que",
+              "inicio": 355.601,
+              "fim": 355.661,
+              "score": 0.0
+            },
+            {
+              "texto": "chova",
+              "inicio": 355.681,
+              "fim": 355.781,
+              "score": 0.0
+            },
+            {
+              "texto": "serei",
+              "inicio": 355.802,
+              "fim": 355.902,
+              "score": 0.0
+            },
+            {
+              "texto": "o",
+              "inicio": 355.922,
+              "fim": 355.942,
+              "score": 0.0
+            },
+            {
+              "texto": "Sol",
+              "inicio": null,
+              "fim": null,
+              "score": null
+            }
+          ],
+          "trechos_nao_confirmados": [
+            {
+              "txt_inicio": 542,
+              "txt_fim": 547,
+              "motivo": "suporte_acustico_insuficiente",
+              "atividade_audio": 0.0
+            }
+          ]
+        }
+      ],
+      "inseridos": [
+        {
+          "inicio": 347.58,
+          "fim": 355.461,
+          "texto": "Mesmo que chova, serei o Sol",
+          "origem": "insercao_acustica",
+          "lacuna": 5,
+          "txt_inicio": 536,
+          "txt_fim": 542,
+          "score_minimo": 0.0,
+          "atividade_audio": 0.8477157360406091,
+          "palavras_baixa_confianca": 1
+        }
+      ],
+      "tokens_recuperados": [
+        536,
+        537,
+        538,
+        539,
+        540,
+        541
+      ],
+      "texto": "Mesmo que chova, serei o Sol Mesmo que chova, serei o Sol"
+    }
+  ],
+  "tentativas": [
+    {
+      "janela": [
+        72.996,
+        73.94
+      ],
+      "texto": "Eu não teria que",
+      "palavras": [
+        {
+          "texto": "Eu",
+          "inicio": 72.996,
+          "fim": 73.181,
+          "score": 0.662
+        },
+        {
+          "texto": "não",
+          "inicio": 73.406,
+          "fim": 73.489,
+          "score": 0.249
+        },
+        {
+          "texto": "teria",
+          "inicio": 73.571,
+          "fim": 73.755,
+          "score": 0.3
+        },
+        {
+          "texto": "que",
+          "inicio": 73.776,
+          "fim": 73.858,
+          "score": 0.2
+        }
+      ],
+      "lacuna": 1
+    },
+    {
+      "janela": [
+        109.455,
+        111.922
+      ],
+      "texto": "Que",
+      "palavras": [
+        {
+          "texto": "Que",
+          "inicio": 110.137,
+          "fim": 110.217,
+          "score": 0.167
+        }
+      ],
+      "lacuna": 2
+    },
+    {
+      "janela": [
+        233.771,
+        235.421
+      ],
+      "texto": "E",
+      "palavras": [
+        {
+          "texto": "E",
+          "inicio": 234.133,
+          "fim": 234.153,
+          "score": 0.058
+        }
+      ],
+      "trechos_nao_confirmados": [
+        {
+          "txt_inicio": 397,
+          "txt_fim": 398,
+          "motivo": "suporte_acustico_insuficiente",
+          "atividade_audio": 1.0
+        }
+      ],
+      "lacuna": 3
+    },
+    {
+      "janela": [
+        285.62,
+        285.761
+      ],
+      "texto": "are crying\nI won't give up, I'm trying\nAnd even if skies",
+      "palavras": [
+        {
+          "texto": "are",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "crying",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "I",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "won't",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "give",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "up",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "I'm",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "trying",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "And",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "even",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "if",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        },
+        {
+          "texto": "skies",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        }
+      ],
+      "lacuna": 4
+    },
+    {
+      "janela": [
+        347.58,
+        356.6236875
+      ],
+      "texto": "Mesmo que chova, serei o Sol\nMesmo que chova, serei o Sol",
+      "palavras": [
+        {
+          "texto": "Mesmo",
+          "inicio": 347.58,
+          "fim": 348.242,
+          "score": 0.366
+        },
+        {
+          "texto": "que",
+          "inicio": 348.723,
+          "fim": 349.064,
+          "score": 0.53
+        },
+        {
+          "texto": "chova",
+          "inicio": 350.307,
+          "fim": 350.869,
+          "score": 0.706
+        },
+        {
+          "texto": "serei",
+          "inicio": 351.049,
+          "fim": 351.37,
+          "score": 0.313
+        },
+        {
+          "texto": "o",
+          "inicio": 351.911,
+          "fim": 352.172,
+          "score": 0.923
+        },
+        {
+          "texto": "Sol",
+          "inicio": 355.4,
+          "fim": 355.461,
+          "score": 0.0
+        },
+        {
+          "texto": "Mesmo",
+          "inicio": 355.481,
+          "fim": 355.581,
+          "score": 0.0
+        },
+        {
+          "texto": "que",
+          "inicio": 355.601,
+          "fim": 355.661,
+          "score": 0.0
+        },
+        {
+          "texto": "chova",
+          "inicio": 355.681,
+          "fim": 355.781,
+          "score": 0.0
+        },
+        {
+          "texto": "serei",
+          "inicio": 355.802,
+          "fim": 355.902,
+          "score": 0.0
+        },
+        {
+          "texto": "o",
+          "inicio": 355.922,
+          "fim": 355.942,
+          "score": 0.0
+        },
+        {
+          "texto": "Sol",
+          "inicio": null,
+          "fim": null,
+          "score": null
+        }
+      ],
+      "trechos_nao_confirmados": [
+        {
+          "txt_inicio": 542,
+          "txt_fim": 547,
+          "motivo": "suporte_acustico_insuficiente",
+          "atividade_audio": 0.0
+        }
+      ],
+      "lacuna": 5
+    }
+  ],
+  "pendencias": [
+    {
+      "bloco_srt": 6,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 7,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 18,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 19,
+      "motivo": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 26,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 27,
+      "motivo": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 29,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 30,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 31,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 32,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 33,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 34,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 36,
+      "motivo": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 52,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 53,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 60,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 61,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 63,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 64,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 66,
+      "motivo": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 67,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 68,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 69,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 70,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 71,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 72,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 73,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 75,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 76,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 77,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 78,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 79,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 80,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 81,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "lacuna": 1,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "Eu não teria que"
+    },
+    {
+      "lacuna": 2,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "Que"
+    },
+    {
+      "lacuna": 3,
+      "motivo": "pesquisado_sem_confirmacao",
+      "detalhe": null
+    },
+    {
+      "lacuna": 4,
+      "motivo": "pesquisado_sem_confirmacao",
+      "detalhe": null
+    },
+    {
+      "lacuna": 5,
+      "motivo": "parcialmente_recuperado",
+      "detalhe": null
+    },
+    {
+      "lacuna": 5,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "Mesmo que chova, serei o Sol"
+    },
+    {
+      "motivo": "texto_txt_sem_tempo",
+      "tokens_txt": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        363,
+        364,
+        365,
+        366,
+        367,
+        368,
+        369,
+        370,
+        371,
+        372,
+        373,
+        374,
+        375,
+        376,
+        397,
+        414,
+        415,
+        416,
+        417,
+        418,
+        419,
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428,
+        446,
+        447,
+        448,
+        449,
+        450,
+        451,
+        452,
+        453,
+        454,
+        455,
+        456,
+        457,
+        467,
+        468,
+        469,
+        470,
+        471,
+        472,
+        473,
+        474,
+        475,
+        476,
+        477,
+        478,
+        479,
+        480,
+        481,
+        482,
+        483,
+        484,
+        485,
+        486,
+        487,
+        488,
+        489,
+        490,
+        491,
+        492,
+        493,
+        494,
+        495,
+        496,
+        497,
+        498,
+        499,
+        500,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511,
+        512,
+        513,
+        514,
+        515,
+        516,
+        517,
+        518,
+        519,
+        520,
+        521,
+        522,
+        523,
+        542,
+        543,
+        544,
+        545,
+        546,
+        547
+      ]
+    }
+  ],
+  "blocos": [
+    {
+      "inicio": 27.483,
+      "fim": 32.07,
+      "texto": "Foi num dia cinza onde eu me nublei e, desde aquele dia aqui nunca",
+      "origem": "texto_corrigido",
+      "bloco_original": 1
+    },
+    {
+      "inicio": 32.19,
+      "fim": 35.335,
+      "texto": "Secou a chuva ainda cai lá fora",
+      "origem": "texto_corrigido",
+      "bloco_original": 2
+    },
+    {
+      "inicio": 36.056,
+      "fim": 38.7,
+      "texto": "Mas foi aqui dentro onde inundou",
+      "origem": "texto_corrigido",
+      "bloco_original": 3
+    },
+    {
+      "inicio": 38.921,
+      "fim": 44.139,
+      "texto": "Eu me mascarei camada por camada um vínculo rompido se internalizou",
+      "origem": "texto_corrigido",
+      "bloco_original": 4
+    },
+    {
+      "inicio": 44.561,
+      "fim": 48.976,
+      "texto": "Eu protegerei mesmo que custe a alma pra que vocês não precisem sentir",
+      "origem": "texto_corrigido",
+      "bloco_original": 5
+    },
+    {
+      "inicio": 49.017,
+      "fim": 49.558,
+      "texto": "Assado",
+      "origem": "original_preservado",
+      "bloco_original": 6
+    },
+    {
+      "inicio": 50.261,
+      "fim": 55.359,
+      "texto": "Eu ainda luto pra superar o luto da minha melancolia, da minha monotonia",
+      "origem": "original_preservado",
+      "bloco_original": 7
+    },
+    {
+      "inicio": 55.641,
+      "fim": 57.74,
+      "texto": "É que eu ainda fujo do sentimento",
+      "origem": "texto_corrigido",
+      "bloco_original": 8
+    },
+    {
+      "inicio": 57.881,
+      "fim": 61.1,
+      "texto": "Nulo uma casca vazia buscando pela vida",
+      "origem": "texto_corrigido",
+      "bloco_original": 9
+    },
+    {
+      "inicio": 61.14,
+      "fim": 63.839,
+      "texto": "Eu ainda tento te salvar nos olhos que ainda veem",
+      "origem": "texto_corrigido",
+      "bloco_original": 10
+    },
+    {
+      "inicio": 64.081,
+      "fim": 66.62,
+      "texto": "Te enxergo nos olhas que me mostraram além",
+      "origem": "texto_corrigido",
+      "bloco_original": 11
+    },
+    {
+      "inicio": 66.721,
+      "fim": 69.6,
+      "texto": "Da saudade que ainda faz morada aqui no peito",
+      "origem": "texto_corrigido",
+      "bloco_original": 12
+    },
+    {
+      "inicio": 69.801,
+      "fim": 72.996,
+      "texto": "É meu defeito quem dera se eu pudesse alterar o que foi feito",
+      "origem": "texto_corrigido",
+      "bloco_original": 13
+    },
+    {
+      "inicio": 72.996,
+      "fim": 73.858,
+      "texto": "Eu não teria que",
+      "origem": "insercao_acustica",
+      "lacuna": 1,
+      "txt_inicio": 120,
+      "txt_fim": 124,
+      "score_minimo": 0.2,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 2
+    },
+    {
+      "inicio": 73.94,
+      "fim": 79.375,
+      "texto": "Te ver partir eu não queria ser o que te fez partir eu não sentiria o",
+      "origem": "texto_corrigido",
+      "bloco_original": 14
+    },
+    {
+      "inicio": 79.456,
+      "fim": 81.06,
+      "texto": "Coração em partes",
+      "origem": "texto_corrigido",
+      "bloco_original": 15
+    },
+    {
+      "inicio": 81.06,
+      "fim": 86.777,
+      "texto": "Eu não me culparia se estivesse aqui ainda me lembro da chuva cair",
+      "origem": "texto_corrigido",
+      "bloco_original": 16
+    },
+    {
+      "inicio": 87.158,
+      "fim": 87.78,
+      "texto": "Ainda dói, não",
+      "origem": "texto_corrigido",
+      "bloco_original": 17
+    },
+    {
+      "inicio": 87.881,
+      "fim": 91.36,
+      "texto": "Dá pra pôr em frases, mas o que me quebra é o que me conf...",
+      "origem": "original_preservado",
+      "bloco_original": 18
+    },
+    {
+      "inicio": 91.862,
+      "fim": 94.754,
+      "texto": "E por isso mesmo quebrado ainda vou seguir",
+      "origem": "original_preservado",
+      "bloco_original": 19
+    },
+    {
+      "inicio": 97.804,
+      "fim": 98.916,
+      "texto": "Eu perdi",
+      "origem": "original_preservado",
+      "bloco_original": 20
+    },
+    {
+      "inicio": 101.004,
+      "fim": 102.776,
+      "texto": "O medo da chuva",
+      "origem": "original_preservado",
+      "bloco_original": 21
+    },
+    {
+      "inicio": 103.481,
+      "fim": 104.572,
+      "texto": "Eu perdi",
+      "origem": "original_preservado",
+      "bloco_original": 22
+    },
+    {
+      "inicio": 107.365,
+      "fim": 109.455,
+      "texto": "Com a tempestade, aprendi",
+      "origem": "texto_corrigido",
+      "bloco_original": 23
+    },
+    {
+      "inicio": 110.137,
+      "fim": 110.217,
+      "texto": "Que",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 193,
+      "txt_fim": 194,
+      "score_minimo": 0.167,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 1
+    },
+    {
+      "inicio": 111.922,
+      "fim": 115.831,
+      "texto": "Eu não preciso mais lutar",
+      "origem": "texto_corrigido",
+      "bloco_original": 24
+    },
+    {
+      "inicio": 117.134,
+      "fim": 118.638,
+      "texto": "Contra",
+      "origem": "texto_corrigido",
+      "bloco_original": 25
+    },
+    {
+      "inicio": 120.559,
+      "fim": 125.556,
+      "texto": "And even if the skies are crying, i won't give up, i'll try, yeah.",
+      "origem": "original_preservado",
+      "bloco_original": 26
+    },
+    {
+      "inicio": 126.24,
+      "fim": 128.555,
+      "texto": "And even if the skies are falling.",
+      "origem": "original_preservado",
+      "bloco_original": 27
+    },
+    {
+      "inicio": 129.243,
+      "fim": 131.519,
+      "texto": "I'ma rise up, i promise",
+      "origem": "original_preservado",
+      "bloco_original": 28
+    },
+    {
+      "inicio": 131.804,
+      "fim": 132.579,
+      "texto": "I know i'm not so",
+      "origem": "original_preservado",
+      "bloco_original": 29
+    },
+    {
+      "inicio": 132.62,
+      "fim": 133.933,
+      "texto": "Still don't pay",
+      "origem": "original_preservado",
+      "bloco_original": 30
+    },
+    {
+      "inicio": 134.763,
+      "fim": 135.62,
+      "texto": "I know i'm not so",
+      "origem": "original_preservado",
+      "bloco_original": 31
+    },
+    {
+      "inicio": 136.186,
+      "fim": 137.256,
+      "texto": "Still don't pay",
+      "origem": "original_preservado",
+      "bloco_original": 32
+    },
+    {
+      "inicio": 137.64,
+      "fim": 138.105,
+      "texto": "No",
+      "origem": "original_preservado",
+      "bloco_original": 33
+    },
+    {
+      "inicio": 140.468,
+      "fim": 140.933,
+      "texto": "No",
+      "origem": "original_preservado",
+      "bloco_original": 34
+    },
+    {
+      "inicio": 167.125,
+      "fim": 171.491,
+      "texto": "Além das lágrimas quem poderia",
+      "origem": "texto_corrigido",
+      "bloco_original": 35
+    },
+    {
+      "inicio": 171.551,
+      "fim": 176.658,
+      "texto": "Imaginar que no abismo encontraria a minha",
+      "origem": "original_preservado",
+      "bloco_original": 36
+    },
+    {
+      "inicio": 176.678,
+      "fim": 177.9,
+      "texto": "Alma?",
+      "origem": "original_preservado",
+      "bloco_original": 37
+    },
+    {
+      "inicio": 178.261,
+      "fim": 180.795,
+      "texto": "Lembranças em páginas",
+      "origem": "texto_corrigido",
+      "bloco_original": 38
+    },
+    {
+      "inicio": 181.842,
+      "fim": 183.634,
+      "texto": "Preto e branco pois minha vida é um mangá",
+      "origem": "texto_corrigido",
+      "bloco_original": 39
+    },
+    {
+      "inicio": 184.42,
+      "fim": 188.099,
+      "texto": "Por você, eu busco cores pra colorir esses traumas",
+      "origem": "texto_corrigido",
+      "bloco_original": 40
+    },
+    {
+      "inicio": 188.522,
+      "fim": 190.739,
+      "texto": "De um azul tão indigo",
+      "origem": "texto_corrigido",
+      "bloco_original": 41
+    },
+    {
+      "inicio": 191.343,
+      "fim": 194.0,
+      "texto": "Como o céu noturno que as estrelas me acompanhem",
+      "origem": "texto_corrigido",
+      "bloco_original": 42
+    },
+    {
+      "inicio": 194.02,
+      "fim": 194.973,
+      "texto": "Já me senti ichigo",
+      "origem": "texto_corrigido",
+      "bloco_original": 43
+    },
+    {
+      "inicio": 197.168,
+      "fim": 199.54,
+      "texto": "Só mais um menino que não superou a partida da mãe",
+      "origem": "texto_corrigido",
+      "bloco_original": 44
+    },
+    {
+      "inicio": 199.782,
+      "fim": 202.459,
+      "texto": "Há um buraco no meu peito mas eu não sou um hollow",
+      "origem": "texto_corrigido",
+      "bloco_original": 45
+    },
+    {
+      "inicio": 202.621,
+      "fim": 205.54,
+      "texto": "É que há anjos aqui dentro e gostam quando eu choro",
+      "origem": "texto_corrigido",
+      "bloco_original": 46
+    },
+    {
+      "inicio": 205.802,
+      "fim": 208.379,
+      "texto": "Pois pecados podem lavar",
+      "origem": "original_preservado",
+      "bloco_original": 47
+    },
+    {
+      "inicio": 208.821,
+      "fim": 211.957,
+      "texto": "Então que meu coração seja um rio a desaguar",
+      "origem": "texto_corrigido",
+      "bloco_original": 48
+    },
+    {
+      "inicio": 212.56,
+      "fim": 214.399,
+      "texto": "Buscarei sorrir mesmo em meio à dor",
+      "origem": "texto_corrigido",
+      "bloco_original": 49
+    },
+    {
+      "inicio": 215.362,
+      "fim": 217.438,
+      "texto": "Não esquecei você, nem seu amor",
+      "origem": "texto_corrigido",
+      "bloco_original": 50
+    },
+    {
+      "inicio": 218.142,
+      "fim": 219.874,
+      "texto": "Viverá em mim, pois, onde quer que eu for",
+      "origem": "texto_corrigido",
+      "bloco_original": 51
+    },
+    {
+      "inicio": 220.982,
+      "fim": 222.776,
+      "texto": "Que trai seu nome e quase um pagoté",
+      "origem": "original_preservado",
+      "bloco_original": 52
+    },
+    {
+      "inicio": 223.461,
+      "fim": 226.039,
+      "texto": "Mesmo se derramei, você ainda me amei",
+      "origem": "original_preservado",
+      "bloco_original": 53
+    },
+    {
+      "inicio": 226.321,
+      "fim": 228.437,
+      "texto": "Quando a gente se reencontrar",
+      "origem": "texto_corrigido",
+      "bloco_original": 54
+    },
+    {
+      "inicio": 228.981,
+      "fim": 231.639,
+      "texto": "E como um shinigami que meu nome cê chame",
+      "origem": "texto_corrigido",
+      "bloco_original": 55
+    },
+    {
+      "inicio": 231.961,
+      "fim": 233.771,
+      "texto": "Em um mundo além da vida",
+      "origem": "original_preservado",
+      "bloco_original": 56
+    },
+    {
+      "inicio": 235.421,
+      "fim": 237.355,
+      "texto": "Beije pra sarar cada ferida",
+      "origem": "texto_corrigido",
+      "bloco_original": 57
+    },
+    {
+      "inicio": 238.02,
+      "fim": 241.295,
+      "texto": "Como você não pode fazer em vida",
+      "origem": "texto_corrigido",
+      "bloco_original": 58
+    },
+    {
+      "inicio": 242.984,
+      "fim": 244.17,
+      "texto": "Ó, minha querida mãe",
+      "origem": "texto_corrigido",
+      "bloco_original": 59
+    },
+    {
+      "inicio": 246.08,
+      "fim": 250.096,
+      "texto": "Em silêncio eu choro se pensar no que a gente não viveu e nunca vi",
+      "origem": "original_preservado",
+      "bloco_original": 60
+    },
+    {
+      "inicio": 250.157,
+      "fim": 250.739,
+      "texto": "Inteira",
+      "origem": "original_preservado",
+      "bloco_original": 61
+    },
+    {
+      "inicio": 250.98,
+      "fim": 256.772,
+      "texto": "Por que você teve que me deixar? por favor, só me deixa desaguar",
+      "origem": "texto_corrigido",
+      "bloco_original": 62
+    },
+    {
+      "inicio": 256.972,
+      "fim": 257.213,
+      "texto": "Byyyyyyyyye",
+      "origem": "original_preservado",
+      "bloco_original": 63
+    },
+    {
+      "inicio": 278.723,
+      "fim": 284.477,
+      "texto": "And even if the skies are crying, i won't give up, i'm trying, and",
+      "origem": "original_preservado",
+      "bloco_original": 64
+    },
+    {
+      "inicio": 284.577,
+      "fim": 285.62,
+      "texto": "Even if the skies",
+      "origem": "texto_corrigido",
+      "bloco_original": 65
+    },
+    {
+      "inicio": 285.761,
+      "fim": 290.9,
+      "texto": "Are falling, i'ma rise up, i promise, and no, not soon.",
+      "origem": "original_preservado",
+      "bloco_original": 66
+    },
+    {
+      "inicio": 291.521,
+      "fim": 296.338,
+      "texto": "Feel the pain, feel the pain",
+      "origem": "original_preservado",
+      "bloco_original": 67
+    },
+    {
+      "inicio": 297.222,
+      "fim": 297.945,
+      "texto": "No,",
+      "origem": "original_preservado",
+      "bloco_original": 68
+    },
+    {
+      "inicio": 298.628,
+      "fim": 299.352,
+      "texto": "No,",
+      "origem": "original_preservado",
+      "bloco_original": 69
+    },
+    {
+      "inicio": 300.015,
+      "fim": 300.075,
+      "texto": "No",
+      "origem": "original_preservado",
+      "bloco_original": 70
+    },
+    {
+      "inicio": 301.18,
+      "fim": 303.174,
+      "texto": "Living in this crazy cry, yeah",
+      "origem": "original_preservado",
+      "bloco_original": 71
+    },
+    {
+      "inicio": 304.403,
+      "fim": 306.518,
+      "texto": "I won't give up or try, yeah",
+      "origem": "original_preservado",
+      "bloco_original": 72
+    },
+    {
+      "inicio": 307.042,
+      "fim": 309.299,
+      "texto": "Living in this crazy fall, yeah",
+      "origem": "original_preservado",
+      "bloco_original": 73
+    },
+    {
+      "inicio": 309.903,
+      "fim": 312.259,
+      "texto": "I'ma rise up, i promise",
+      "origem": "texto_corrigido",
+      "bloco_original": 74
+    },
+    {
+      "inicio": 312.481,
+      "fim": 314.757,
+      "texto": "I know i'm not a super big",
+      "origem": "original_preservado",
+      "bloco_original": 75
+    },
+    {
+      "inicio": 315.381,
+      "fim": 317.738,
+      "texto": "I know i'm not a super big",
+      "origem": "original_preservado",
+      "bloco_original": 76
+    },
+    {
+      "inicio": 318.367,
+      "fim": 318.816,
+      "texto": "No",
+      "origem": "original_preservado",
+      "bloco_original": 77
+    },
+    {
+      "inicio": 321.143,
+      "fim": 321.612,
+      "texto": "No",
+      "origem": "original_preservado",
+      "bloco_original": 78
+    },
+    {
+      "inicio": 324.783,
+      "fim": 330.358,
+      "texto": "Oh, that's what i want to be, that's",
+      "origem": "original_preservado",
+      "bloco_original": 79
+    },
+    {
+      "inicio": 331.06,
+      "fim": 332.443,
+      "texto": "What i want to be",
+      "origem": "original_preservado",
+      "bloco_original": 80
+    },
+    {
+      "inicio": 332.764,
+      "fim": 335.951,
+      "texto": "Seu parcer em sol",
+      "origem": "original_preservado",
+      "bloco_original": 81
+    },
+    {
+      "inicio": 336.713,
+      "fim": 340.04,
+      "texto": "Mesmo que chova, serei",
+      "origem": "texto_corrigido",
+      "bloco_original": 82
+    },
+    {
+      "inicio": 340.742,
+      "fim": 341.063,
+      "texto": "O sol",
+      "origem": "texto_corrigido",
+      "bloco_original": 83
+    },
+    {
+      "inicio": 342.582,
+      "fim": 347.58,
+      "texto": "Mesmo que chova, serei o sol",
+      "origem": "texto_corrigido",
+      "bloco_original": 84
+    },
+    {
+      "inicio": 347.58,
+      "fim": 355.461,
+      "texto": "Mesmo que chova, serei o sol",
+      "origem": "insercao_acustica",
+      "lacuna": 5,
+      "txt_inicio": 536,
+      "txt_fim": 542,
+      "score_minimo": 0.0,
+      "atividade_audio": 0.8477157360406091,
+      "palavras_baixa_confianca": 1
+    }
+  ],
+  "configuracao_motor": {
+    "idioma": "auto",
+    "dispositivo": "cpu",
+    "modelo_solicitado": null,
+    "selecao_por_trecho": [
+      {
+        "inicio": 72.996,
+        "fim": 73.94,
+        "linhas": [
+          {
+            "idioma": "pt",
+            "votos_pt": 3,
+            "votos_en": 0,
+            "herdado": false
+          }
+        ]
+      },
+      {
+        "inicio": 109.455,
+        "fim": 111.922,
+        "linhas": [
+          {
+            "idioma": "pt",
+            "votos_pt": 1,
+            "votos_en": 0,
+            "herdado": false
+          }
+        ]
+      },
+      {
+        "inicio": 233.771,
+        "fim": 235.421,
+        "linhas": [
+          {
+            "idioma": "pt",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          }
+        ]
+      },
+      {
+        "inicio": 285.62,
+        "fim": 285.761,
+        "linhas": [
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 1,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 2,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 2,
+            "herdado": false
+          }
+        ]
+      },
+      {
+        "inicio": 347.58,
+        "fim": 356.6236875,
+        "linhas": [
+          {
+            "idioma": "pt",
+            "votos_pt": 2,
+            "votos_en": 0,
+            "herdado": false
+          },
+          {
+            "idioma": "pt",
+            "votos_pt": 2,
+            "votos_en": 0,
+            "herdado": false
+          }
+        ]
+      }
+    ]
+  },
+  "fontes": {
+    "txt": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\nerd-geek\\desaguar-raphyx-lucas-art\\letra.txt",
+      "sha256": "0e33e5ef65252e62b62242f6e2f9cfbd5024b8721fd96cb86ed60ffe51b8da35"
+    },
+    "srt": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\nerd-geek\\desaguar-raphyx-lucas-art\\letra.srt",
+      "sha256": "b01102bbf32cb27f3de34d921ee188922f92ff0f3e7f916ea6406679ea4339b7"
+    },
+    "voz": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\nerd-geek\\desaguar-raphyx-lucas-art\\voz.mp3",
+      "sha256": "f98e70f11c6c6eceb30180826e9a61966cde161fb04f6676aab5cda6d969448c"
+    }
+  },
+  "resumo_avisos": [
+    "Bloco 6: consulta txt ambigua original preservado.",
+    "Bloco 7: consulta txt ambigua original preservado.",
+    "Bloco 18: consulta txt ambigua original preservado.",
+    "Bloco 19: texto exclusivo srt preservado.",
+    "Bloco 26: consulta txt ambigua original preservado.",
+    "Bloco 27: texto exclusivo srt preservado.",
+    "Bloco 29: texto exclusivo srt exige revisao.",
+    "Bloco 30: texto exclusivo srt exige revisao.",
+    "Bloco 31: texto exclusivo srt exige revisao.",
+    "Bloco 32: texto exclusivo srt exige revisao.",
+    "Bloco 33: consulta txt ambigua original preservado.",
+    "Bloco 34: consulta txt ambigua original preservado.",
+    "Bloco 36: texto exclusivo srt preservado.",
+    "Bloco 52: texto exclusivo srt exige revisao.",
+    "Bloco 53: consulta txt ambigua original preservado.",
+    "Bloco 60: consulta txt ambigua original preservado.",
+    "Bloco 61: consulta txt ambigua original preservado.",
+    "Bloco 63: texto exclusivo srt exige revisao.",
+    "Bloco 64: consulta txt ambigua original preservado.",
+    "Bloco 66: texto exclusivo srt preservado.",
+    "Bloco 67: consulta txt ambigua original preservado.",
+    "Bloco 68: consulta txt ambigua original preservado.",
+    "Bloco 69: consulta txt ambigua original preservado.",
+    "Bloco 70: consulta txt ambigua original preservado.",
+    "Bloco 71: texto exclusivo srt exige revisao.",
+    "Bloco 72: consulta txt ambigua original preservado.",
+    "Bloco 73: texto exclusivo srt exige revisao.",
+    "Bloco 75: texto exclusivo srt exige revisao.",
+    "Bloco 76: texto exclusivo srt exige revisao.",
+    "Bloco 77: consulta txt ambigua original preservado.",
+    "Bloco 78: consulta txt ambigua original preservado.",
+    "Bloco 79: texto exclusivo srt exige revisao.",
+    "Bloco 80: texto exclusivo srt exige revisao.",
+    "Bloco 81: texto exclusivo srt exige revisao.",
+    "Inserção em 00:01:12,996: 2 palavra(s) com baixa confiança; mantidas.",
+    "Inserção em 00:01:50,137: 1 palavra(s) com baixa confiança; mantidas.",
+    "Lacuna 3: pesquisado sem confirmacao (00:03:53,771–00:03:55,421).",
+    "Lacuna 4: pesquisado sem confirmacao (00:04:45,620–00:04:45,761).",
+    "Lacuna 5: parcialmente recuperado (00:05:47,580–00:05:56,624).",
+    "Inserção em 00:05:47,580: 1 palavra(s) com baixa confiança; mantidas.",
+    "TXT linha 16, sem tempo: essa dor",
+    "TXT linha 17, sem tempo: Eu ainda luto pra superar o luto",
+    "TXT linha 18, sem tempo: Da minha melancolia",
+    "TXT linha 19, sem tempo: Da minha monotia",
+    "TXT linha 42, sem tempo: dá pra pôr em frases",
+    "TXT linha 43, sem tempo: Mas o que me quebra é o que me constrói",
+    "TXT linha 49, sem tempo: mim",
+    "TXT linha 51, sem tempo: Even if the skies are crying",
+    "TXT linha 52, sem tempo: I won't give up I'm trying",
+    "TXT linha 56, sem tempo: No one else will feel the pain",
+    "TXT linha 57, sem tempo: No one else will feel the pain",
+    "TXT linha 58, sem tempo: No more",
+    "TXT linha 59, sem tempo: No more",
+    "TXT linha 88, sem tempo: Gritarei seu nome igual Zanpakuto",
+    "TXT linha 90, sem tempo: Que bênçãos se derramem",
+    "TXT linha 91, sem tempo: E você ainda me ame",
+    "TXT linha 96, sem tempo: E",
+    "TXT linha 100, sem tempo: Em silêncio eu choro se pensar",
+    "TXT linha 101, sem tempo: No que a gente não viveu e nunca viverá",
+    "TXT linha 105, sem tempo: are crying",
+    "TXT linha 106, sem tempo: I won't give up I'm trying",
+    "TXT linha 107, sem tempo: And even if skies",
+    "TXT linha 110, sem tempo: else will feel the rain",
+    "TXT linha 111, sem tempo: No one else will feel the rain",
+    "TXT linha 112, sem tempo: No more",
+    "TXT linha 113, sem tempo: No more",
+    "TXT linha 115, sem tempo: Even if the skies are crying",
+    "TXT linha 116, sem tempo: I won't give up I'm trying",
+    "TXT linha 117, sem tempo: And even if skies are falling",
+    "TXT linha 120, sem tempo: No one else will feel the rain",
+    "TXT linha 121, sem tempo: No one else will feel the rain",
+    "TXT linha 122, sem tempo: No more",
+    "TXT linha 123, sem tempo: No more",
+    "TXT linha 128, sem tempo: Mesmo que chova serei o Sol"
+  ]
+}

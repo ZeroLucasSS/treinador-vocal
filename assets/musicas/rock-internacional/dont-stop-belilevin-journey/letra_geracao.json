@@ -1,0 +1,1465 @@
+{
+  "versao": 1,
+  "arquivo_voz": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\rock-internacional\\dont-stop-belilevin-journey\\voz.mp3",
+  "sha256_voz": "22ed7f91ea0aa0689d067b50aa1f697a6261db6196b7f2292f899b60eed694a8",
+  "duracao_audio": 250.2646875,
+  "configuracao": {
+    "modelo": "small",
+    "idioma": "en",
+    "dispositivo": "cpu",
+    "compute_type": "int8",
+    "vad": "silero"
+  },
+  "segmentos": [
+    {
+      "text": " Just a small town girl living in a lonely world She took the midnight train going anywhere Just a city boy born and raised in South Detroit He took the midnight train going anywhere",
+      "start": 18.754,
+      "end": 47.518,
+      "avg_logprob": -0.11591764390468598,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "Just",
+          "start": 18.954,
+          "end": 19.254,
+          "score": 0.861
+        },
+        {
+          "word": "a",
+          "start": 19.355,
+          "end": 19.415,
+          "score": 0.523
+        },
+        {
+          "word": "small",
+          "start": 19.455,
+          "end": 19.775,
+          "score": 0.835
+        },
+        {
+          "word": "town",
+          "start": 19.815,
+          "end": 20.275,
+          "score": 0.912
+        },
+        {
+          "word": "girl",
+          "start": 20.335,
+          "end": 20.816,
+          "score": 0.475
+        },
+        {
+          "word": "living",
+          "start": 22.557,
+          "end": 23.118,
+          "score": 0.797
+        },
+        {
+          "word": "in",
+          "start": 23.238,
+          "end": 23.358,
+          "score": 0.944
+        },
+        {
+          "word": "a",
+          "start": 23.438,
+          "end": 23.478,
+          "score": 0.891
+        },
+        {
+          "word": "lonely",
+          "start": 23.618,
+          "end": 24.359,
+          "score": 0.866
+        },
+        {
+          "word": "world",
+          "start": 24.419,
+          "end": 25.279,
+          "score": 0.408
+        },
+        {
+          "word": "She",
+          "start": 26.841,
+          "end": 27.061,
+          "score": 0.944
+        },
+        {
+          "word": "took",
+          "start": 27.101,
+          "end": 27.361,
+          "score": 0.817
+        },
+        {
+          "word": "the",
+          "start": 27.421,
+          "end": 27.601,
+          "score": 0.696
+        },
+        {
+          "word": "midnight",
+          "start": 27.661,
+          "end": 28.282,
+          "score": 0.823
+        },
+        {
+          "word": "train",
+          "start": 28.362,
+          "end": 28.922,
+          "score": 0.913
+        },
+        {
+          "word": "going",
+          "start": 28.963,
+          "end": 29.743,
+          "score": 0.706
+        },
+        {
+          "word": "anywhere",
+          "start": 30.264,
+          "end": 31.965,
+          "score": 0.812
+        },
+        {
+          "word": "Just",
+          "start": 35.248,
+          "end": 35.568,
+          "score": 0.881
+        },
+        {
+          "word": "a",
+          "start": 35.688,
+          "end": 35.748,
+          "score": 0.67
+        },
+        {
+          "word": "city",
+          "start": 35.828,
+          "end": 36.569,
+          "score": 0.91
+        },
+        {
+          "word": "boy",
+          "start": 36.629,
+          "end": 37.189,
+          "score": 0.533
+        },
+        {
+          "word": "born",
+          "start": 38.891,
+          "end": 39.191,
+          "score": 0.751
+        },
+        {
+          "word": "and",
+          "start": 39.231,
+          "end": 39.311,
+          "score": 0.266
+        },
+        {
+          "word": "raised",
+          "start": 39.391,
+          "end": 39.651,
+          "score": 0.6
+        },
+        {
+          "word": "in",
+          "start": 39.691,
+          "end": 39.832,
+          "score": 0.623
+        },
+        {
+          "word": "South",
+          "start": 39.892,
+          "end": 40.392,
+          "score": 0.667
+        },
+        {
+          "word": "Detroit",
+          "start": 40.412,
+          "end": 41.613,
+          "score": 0.433
+        },
+        {
+          "word": "He",
+          "start": 43.234,
+          "end": 43.415,
+          "score": 0.89
+        },
+        {
+          "word": "took",
+          "start": 43.455,
+          "end": 43.715,
+          "score": 0.871
+        },
+        {
+          "word": "the",
+          "start": 43.775,
+          "end": 43.915,
+          "score": 0.725
+        },
+        {
+          "word": "midnight",
+          "start": 43.975,
+          "end": 44.616,
+          "score": 0.854
+        },
+        {
+          "word": "train",
+          "start": 44.696,
+          "end": 45.236,
+          "score": 0.88
+        },
+        {
+          "word": "going",
+          "start": 45.296,
+          "end": 46.057,
+          "score": 0.662
+        },
+        {
+          "word": "anywhere",
+          "start": 46.537,
+          "end": 47.318,
+          "score": 0.615
+        }
+      ]
+    },
+    {
+      "text": " I'll sing her in a smokey room I'll smell a wine and cheap a few For a smile they can share the night It goes on and on and on and on Strangers waiting Whooping down the boulevard There's shadows searching in the night",
+      "start": 67.138,
+      "end": 96.478,
+      "avg_logprob": -0.24149411241963226,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "I'll",
+          "start": 67.198,
+          "end": 67.298,
+          "score": 0.266
+        },
+        {
+          "word": "sing",
+          "start": 67.358,
+          "end": 67.678,
+          "score": 0.914
+        },
+        {
+          "word": "her",
+          "start": 67.718,
+          "end": 67.838,
+          "score": 0.523
+        },
+        {
+          "word": "in",
+          "start": 68.039,
+          "end": 68.159,
+          "score": 0.91
+        },
+        {
+          "word": "a",
+          "start": 68.239,
+          "end": 68.299,
+          "score": 0.573
+        },
+        {
+          "word": "smokey",
+          "start": 68.359,
+          "end": 69.099,
+          "score": 0.863
+        },
+        {
+          "word": "room",
+          "start": 69.159,
+          "end": 69.56,
+          "score": 0.894
+        },
+        {
+          "word": "I'll",
+          "start": 69.58,
+          "end": 69.66,
+          "score": 0.001
+        },
+        {
+          "word": "smell",
+          "start": 71.361,
+          "end": 71.621,
+          "score": 0.851
+        },
+        {
+          "word": "a",
+          "start": 71.661,
+          "end": 71.721,
+          "score": 0.498
+        },
+        {
+          "word": "wine",
+          "start": 71.761,
+          "end": 72.181,
+          "score": 0.844
+        },
+        {
+          "word": "and",
+          "start": 72.221,
+          "end": 72.322,
+          "score": 0.485
+        },
+        {
+          "word": "cheap",
+          "start": 72.422,
+          "end": 72.922,
+          "score": 0.816
+        },
+        {
+          "word": "a",
+          "start": 73.082,
+          "end": 73.182,
+          "score": 0.691
+        },
+        {
+          "word": "few",
+          "start": 73.262,
+          "end": 73.963,
+          "score": 0.778
+        },
+        {
+          "word": "For",
+          "start": 75.003,
+          "end": 75.324,
+          "score": 0.807
+        },
+        {
+          "word": "a",
+          "start": 75.344,
+          "end": 75.384,
+          "score": 0.356
+        },
+        {
+          "word": "smile",
+          "start": 75.464,
+          "end": 76.004,
+          "score": 0.927
+        },
+        {
+          "word": "they",
+          "start": 76.044,
+          "end": 76.224,
+          "score": 0.879
+        },
+        {
+          "word": "can",
+          "start": 76.284,
+          "end": 76.444,
+          "score": 0.6
+        },
+        {
+          "word": "share",
+          "start": 76.524,
+          "end": 77.065,
+          "score": 0.794
+        },
+        {
+          "word": "the",
+          "start": 77.105,
+          "end": 77.245,
+          "score": 0.863
+        },
+        {
+          "word": "night",
+          "start": 77.345,
+          "end": 77.665,
+          "score": 0.91
+        },
+        {
+          "word": "It",
+          "start": 78.005,
+          "end": 78.105,
+          "score": 0.896
+        },
+        {
+          "word": "goes",
+          "start": 78.206,
+          "end": 78.546,
+          "score": 0.831
+        },
+        {
+          "word": "on",
+          "start": 78.986,
+          "end": 79.146,
+          "score": 0.98
+        },
+        {
+          "word": "and",
+          "start": 79.306,
+          "end": 79.426,
+          "score": 0.422
+        },
+        {
+          "word": "on",
+          "start": 79.987,
+          "end": 80.147,
+          "score": 0.983
+        },
+        {
+          "word": "and",
+          "start": 80.287,
+          "end": 80.407,
+          "score": 0.678
+        },
+        {
+          "word": "on",
+          "start": 80.967,
+          "end": 81.108,
+          "score": 0.962
+        },
+        {
+          "word": "and",
+          "start": 81.248,
+          "end": 81.368,
+          "score": 0.675
+        },
+        {
+          "word": "on",
+          "start": 81.648,
+          "end": 82.288,
+          "score": 0.766
+        },
+        {
+          "word": "Strangers",
+          "start": 82.508,
+          "end": 83.829,
+          "score": 0.807
+        },
+        {
+          "word": "waiting",
+          "start": 84.63,
+          "end": 86.031,
+          "score": 0.617
+        },
+        {
+          "word": "Whooping",
+          "start": 86.051,
+          "end": 88.092,
+          "score": 0.755
+        },
+        {
+          "word": "down",
+          "start": 88.132,
+          "end": 88.372,
+          "score": 0.904
+        },
+        {
+          "word": "the",
+          "start": 88.413,
+          "end": 88.533,
+          "score": 0.892
+        },
+        {
+          "word": "boulevard",
+          "start": 88.613,
+          "end": 90.034,
+          "score": 0.613
+        },
+        {
+          "word": "There's",
+          "start": 90.134,
+          "end": 90.474,
+          "score": 0.437
+        },
+        {
+          "word": "shadows",
+          "start": 90.594,
+          "end": 91.855,
+          "score": 0.767
+        },
+        {
+          "word": "searching",
+          "start": 92.615,
+          "end": 93.956,
+          "score": 0.699
+        },
+        {
+          "word": "in",
+          "start": 94.056,
+          "end": 94.176,
+          "score": 0.68
+        },
+        {
+          "word": "the",
+          "start": 94.196,
+          "end": 94.317,
+          "score": 0.641
+        },
+        {
+          "word": "night",
+          "start": 94.417,
+          "end": 96.238,
+          "score": 0.33
+        }
+      ]
+    },
+    {
+      "text": " Street lights, keeper Leading us to find emotion hiding Somewhere in the night Working hard to get my feel",
+      "start": 98.626,
+      "end": 126.11,
+      "avg_logprob": -0.4315356422554363,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "Street",
+          "start": 98.666,
+          "end": 99.307,
+          "score": 0.447
+        },
+        {
+          "word": "lights,",
+          "start": 99.427,
+          "end": 99.907,
+          "score": 0.817
+        },
+        {
+          "word": "keeper",
+          "start": 100.728,
+          "end": 102.089,
+          "score": 0.639
+        },
+        {
+          "word": "Leading",
+          "start": 103.71,
+          "end": 104.151,
+          "score": 0.444
+        },
+        {
+          "word": "us",
+          "start": 104.251,
+          "end": 104.391,
+          "score": 0.76
+        },
+        {
+          "word": "to",
+          "start": 104.431,
+          "end": 104.591,
+          "score": 0.692
+        },
+        {
+          "word": "find",
+          "start": 104.691,
+          "end": 105.152,
+          "score": 0.65
+        },
+        {
+          "word": "emotion",
+          "start": 105.312,
+          "end": 106.473,
+          "score": 0.815
+        },
+        {
+          "word": "hiding",
+          "start": 106.733,
+          "end": 107.814,
+          "score": 0.742
+        },
+        {
+          "word": "Somewhere",
+          "start": 108.675,
+          "end": 110.036,
+          "score": 0.614
+        },
+        {
+          "word": "in",
+          "start": 110.116,
+          "end": 110.236,
+          "score": 0.562
+        },
+        {
+          "word": "the",
+          "start": 110.276,
+          "end": 110.416,
+          "score": 0.482
+        },
+        {
+          "word": "night",
+          "start": 110.476,
+          "end": 114.38,
+          "score": 0.631
+        },
+        {
+          "word": "Working",
+          "start": 123.187,
+          "end": 123.668,
+          "score": 0.615
+        },
+        {
+          "word": "hard",
+          "start": 123.728,
+          "end": 124.409,
+          "score": 0.785
+        },
+        {
+          "word": "to",
+          "start": 124.469,
+          "end": 124.629,
+          "score": 0.629
+        },
+        {
+          "word": "get",
+          "start": 124.689,
+          "end": 124.869,
+          "score": 0.687
+        },
+        {
+          "word": "my",
+          "start": 124.949,
+          "end": 125.349,
+          "score": 0.863
+        },
+        {
+          "word": "feel",
+          "start": 125.389,
+          "end": 125.79,
+          "score": 0.636
+        }
+      ]
+    },
+    {
+      "text": " Everybody wants a thrill, then anything to roll the dice, just one more time. Some will win, some will lose, some are born to sing the blues, or the movie never ends. It goes on and on and on and on, and that's strange as",
+      "start": 127.426,
+      "end": 155.582,
+      "avg_logprob": -0.27091913548382845,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "Everybody",
+          "start": 127.706,
+          "end": 128.427,
+          "score": 0.768
+        },
+        {
+          "word": "wants",
+          "start": 128.607,
+          "end": 129.027,
+          "score": 0.578
+        },
+        {
+          "word": "a",
+          "start": 129.187,
+          "end": 129.267,
+          "score": 0.728
+        },
+        {
+          "word": "thrill,",
+          "start": 129.347,
+          "end": 130.308,
+          "score": 0.663
+        },
+        {
+          "word": "then",
+          "start": 131.068,
+          "end": 131.608,
+          "score": 0.795
+        },
+        {
+          "word": "anything",
+          "start": 131.748,
+          "end": 132.309,
+          "score": 0.859
+        },
+        {
+          "word": "to",
+          "start": 132.329,
+          "end": 132.369,
+          "score": 0.464
+        },
+        {
+          "word": "roll",
+          "start": 132.529,
+          "end": 133.009,
+          "score": 0.792
+        },
+        {
+          "word": "the",
+          "start": 133.069,
+          "end": 133.209,
+          "score": 0.758
+        },
+        {
+          "word": "dice,",
+          "start": 133.289,
+          "end": 133.73,
+          "score": 0.743
+        },
+        {
+          "word": "just",
+          "start": 134.23,
+          "end": 134.45,
+          "score": 0.88
+        },
+        {
+          "word": "one",
+          "start": 134.99,
+          "end": 135.13,
+          "score": 0.786
+        },
+        {
+          "word": "more",
+          "start": 135.29,
+          "end": 135.891,
+          "score": 0.682
+        },
+        {
+          "word": "time.",
+          "start": 135.991,
+          "end": 137.592,
+          "score": 0.389
+        },
+        {
+          "word": "Some",
+          "start": 138.933,
+          "end": 139.273,
+          "score": 0.8
+        },
+        {
+          "word": "will",
+          "start": 139.473,
+          "end": 139.973,
+          "score": 0.813
+        },
+        {
+          "word": "win,",
+          "start": 139.993,
+          "end": 140.073,
+          "score": 0.25
+        },
+        {
+          "word": "some",
+          "start": 140.694,
+          "end": 140.994,
+          "score": 0.927
+        },
+        {
+          "word": "will",
+          "start": 141.074,
+          "end": 141.294,
+          "score": 0.285
+        },
+        {
+          "word": "lose,",
+          "start": 141.374,
+          "end": 142.034,
+          "score": 0.804
+        },
+        {
+          "word": "some",
+          "start": 143.375,
+          "end": 143.595,
+          "score": 0.891
+        },
+        {
+          "word": "are",
+          "start": 143.655,
+          "end": 143.715,
+          "score": 0.037
+        },
+        {
+          "word": "born",
+          "start": 143.735,
+          "end": 144.095,
+          "score": 0.764
+        },
+        {
+          "word": "to",
+          "start": 144.115,
+          "end": 144.296,
+          "score": 0.776
+        },
+        {
+          "word": "sing",
+          "start": 144.416,
+          "end": 144.836,
+          "score": 0.894
+        },
+        {
+          "word": "the",
+          "start": 144.916,
+          "end": 145.136,
+          "score": 0.462
+        },
+        {
+          "word": "blues,",
+          "start": 145.156,
+          "end": 146.057,
+          "score": 0.633
+        },
+        {
+          "word": "or",
+          "start": 147.037,
+          "end": 147.137,
+          "score": 0.53
+        },
+        {
+          "word": "the",
+          "start": 147.157,
+          "end": 147.317,
+          "score": 0.602
+        },
+        {
+          "word": "movie",
+          "start": 147.397,
+          "end": 148.078,
+          "score": 0.66
+        },
+        {
+          "word": "never",
+          "start": 148.158,
+          "end": 149.078,
+          "score": 0.85
+        },
+        {
+          "word": "ends.",
+          "start": 149.278,
+          "end": 149.559,
+          "score": 0.707
+        },
+        {
+          "word": "It",
+          "start": 149.779,
+          "end": 149.919,
+          "score": 0.686
+        },
+        {
+          "word": "goes",
+          "start": 149.979,
+          "end": 150.359,
+          "score": 0.704
+        },
+        {
+          "word": "on",
+          "start": 150.739,
+          "end": 150.899,
+          "score": 0.902
+        },
+        {
+          "word": "and",
+          "start": 151.019,
+          "end": 151.119,
+          "score": 0.75
+        },
+        {
+          "word": "on",
+          "start": 151.74,
+          "end": 151.9,
+          "score": 0.884
+        },
+        {
+          "word": "and",
+          "start": 152.02,
+          "end": 152.12,
+          "score": 0.675
+        },
+        {
+          "word": "on",
+          "start": 152.7,
+          "end": 152.86,
+          "score": 0.876
+        },
+        {
+          "word": "and",
+          "start": 152.961,
+          "end": 153.081,
+          "score": 0.593
+        },
+        {
+          "word": "on,",
+          "start": 153.661,
+          "end": 153.821,
+          "score": 0.68
+        },
+        {
+          "word": "and",
+          "start": 153.841,
+          "end": 153.901,
+          "score": 0.004
+        },
+        {
+          "word": "that's",
+          "start": 153.921,
+          "end": 154.041,
+          "score": 0.093
+        },
+        {
+          "word": "strange",
+          "start": 154.201,
+          "end": 155.082,
+          "score": 0.911
+        },
+        {
+          "word": "as",
+          "start": 155.222,
+          "end": 155.262,
+          "score": 0.122
+        }
+      ]
+    },
+    {
+      "text": " waiting, up and down the foot of all those shadows searching in the night. Sweet lights, people, loving just to find him on sight and hiding somewhere in the night.",
+      "start": 156.258,
+      "end": 182.462,
+      "avg_logprob": -0.4330012947320938,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "waiting,",
+          "start": 156.278,
+          "end": 157.619,
+          "score": 0.827
+        },
+        {
+          "word": "up",
+          "start": 157.639,
+          "end": 157.679,
+          "score": 0.0
+        },
+        {
+          "word": "and",
+          "start": 159.381,
+          "end": 159.761,
+          "score": 0.543
+        },
+        {
+          "word": "down",
+          "start": 159.801,
+          "end": 160.021,
+          "score": 0.584
+        },
+        {
+          "word": "the",
+          "start": 160.082,
+          "end": 160.202,
+          "score": 0.868
+        },
+        {
+          "word": "foot",
+          "start": 160.262,
+          "end": 160.842,
+          "score": 0.731
+        },
+        {
+          "word": "of",
+          "start": 160.962,
+          "end": 161.062,
+          "score": 0.512
+        },
+        {
+          "word": "all",
+          "start": 161.563,
+          "end": 161.763,
+          "score": 0.452
+        },
+        {
+          "word": "those",
+          "start": 161.803,
+          "end": 162.123,
+          "score": 0.428
+        },
+        {
+          "word": "shadows",
+          "start": 162.264,
+          "end": 163.465,
+          "score": 0.751
+        },
+        {
+          "word": "searching",
+          "start": 164.225,
+          "end": 165.567,
+          "score": 0.71
+        },
+        {
+          "word": "in",
+          "start": 165.687,
+          "end": 165.787,
+          "score": 0.818
+        },
+        {
+          "word": "the",
+          "start": 165.827,
+          "end": 165.927,
+          "score": 0.565
+        },
+        {
+          "word": "night.",
+          "start": 166.027,
+          "end": 168.189,
+          "score": 0.686
+        },
+        {
+          "word": "Sweet",
+          "start": 170.211,
+          "end": 170.971,
+          "score": 0.803
+        },
+        {
+          "word": "lights,",
+          "start": 171.032,
+          "end": 171.432,
+          "score": 0.525
+        },
+        {
+          "word": "people,",
+          "start": 172.973,
+          "end": 173.734,
+          "score": 0.376
+        },
+        {
+          "word": "loving",
+          "start": 175.255,
+          "end": 175.676,
+          "score": 0.659
+        },
+        {
+          "word": "just",
+          "start": 175.736,
+          "end": 175.916,
+          "score": 0.488
+        },
+        {
+          "word": "to",
+          "start": 175.976,
+          "end": 176.116,
+          "score": 0.639
+        },
+        {
+          "word": "find",
+          "start": 176.236,
+          "end": 176.737,
+          "score": 0.65
+        },
+        {
+          "word": "him",
+          "start": 176.757,
+          "end": 176.997,
+          "score": 0.769
+        },
+        {
+          "word": "on",
+          "start": 177.197,
+          "end": 177.377,
+          "score": 0.76
+        },
+        {
+          "word": "sight",
+          "start": 177.477,
+          "end": 178.058,
+          "score": 0.569
+        },
+        {
+          "word": "and",
+          "start": 178.859,
+          "end": 179.039,
+          "score": 0.631
+        },
+        {
+          "word": "hiding",
+          "start": 179.099,
+          "end": 179.339,
+          "score": 0.296
+        },
+        {
+          "word": "somewhere",
+          "start": 180.2,
+          "end": 181.541,
+          "score": 0.69
+        },
+        {
+          "word": "in",
+          "start": 181.621,
+          "end": 181.741,
+          "score": 0.686
+        },
+        {
+          "word": "the",
+          "start": 181.781,
+          "end": 181.922,
+          "score": 0.794
+        },
+        {
+          "word": "night.",
+          "start": 181.942,
+          "end": 182.382,
+          "score": 0.361
+        }
+      ]
+    },
+    {
+      "text": " stuff believe in. Hold on to the feeling.",
+      "start": 202.786,
+      "end": 212.51,
+      "avg_logprob": -1.0410063916986638,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "stuff",
+          "start": 202.906,
+          "end": 203.287,
+          "score": 0.65
+        },
+        {
+          "word": "believe",
+          "start": 203.949,
+          "end": 205.252,
+          "score": 0.833
+        },
+        {
+          "word": "in.",
+          "start": 205.272,
+          "end": 205.332,
+          "score": 0.333
+        },
+        {
+          "word": "Hold",
+          "start": 207.137,
+          "end": 207.397,
+          "score": 0.614
+        },
+        {
+          "word": "on",
+          "start": 207.478,
+          "end": 207.598,
+          "score": 0.566
+        },
+        {
+          "word": "to",
+          "start": 207.638,
+          "end": 207.778,
+          "score": 0.841
+        },
+        {
+          "word": "the",
+          "start": 207.818,
+          "end": 208.139,
+          "score": 0.558
+        },
+        {
+          "word": "feeling.",
+          "start": 208.199,
+          "end": 208.781,
+          "score": 0.659
+        }
+      ]
+    }
+  ],
+  "blocos": [
+    {
+      "inicio": 18.954,
+      "fim": 20.816,
+      "texto": "Just a small town girl"
+    },
+    {
+      "inicio": 22.557,
+      "fim": 25.279,
+      "texto": "living in a lonely world"
+    },
+    {
+      "inicio": 26.841,
+      "fim": 31.965,
+      "texto": "She took the midnight train going anywhere"
+    },
+    {
+      "inicio": 35.248,
+      "fim": 37.189,
+      "texto": "Just a city boy"
+    },
+    {
+      "inicio": 38.891,
+      "fim": 41.613,
+      "texto": "born and raised in South Detroit"
+    },
+    {
+      "inicio": 43.234,
+      "fim": 47.318,
+      "texto": "He took the midnight train going anywhere"
+    },
+    {
+      "inicio": 67.198,
+      "fim": 69.66,
+      "texto": "I'll sing her in a smokey room I'll"
+    },
+    {
+      "inicio": 71.361,
+      "fim": 73.963,
+      "texto": "smell a wine and cheap a few"
+    },
+    {
+      "inicio": 75.003,
+      "fim": 80.407,
+      "texto": "For a smile they can share the night It goes on and on and"
+    },
+    {
+      "inicio": 80.967,
+      "fim": 83.829,
+      "texto": "on and on Strangers"
+    },
+    {
+      "inicio": 84.63,
+      "fim": 90.474,
+      "texto": "waiting Whooping down the boulevard There's"
+    },
+    {
+      "inicio": 90.594,
+      "fim": 91.855,
+      "texto": "shadows"
+    },
+    {
+      "inicio": 92.615,
+      "fim": 96.238,
+      "texto": "searching in the night"
+    },
+    {
+      "inicio": 98.666,
+      "fim": 99.907,
+      "texto": "Street lights,"
+    },
+    {
+      "inicio": 100.728,
+      "fim": 102.089,
+      "texto": "keeper"
+    },
+    {
+      "inicio": 103.71,
+      "fim": 107.814,
+      "texto": "Leading us to find emotion hiding"
+    },
+    {
+      "inicio": 108.675,
+      "fim": 114.38,
+      "texto": "Somewhere in the night"
+    },
+    {
+      "inicio": 123.187,
+      "fim": 125.79,
+      "texto": "Working hard to get my feel"
+    },
+    {
+      "inicio": 127.706,
+      "fim": 130.308,
+      "texto": "Everybody wants a thrill,"
+    },
+    {
+      "inicio": 131.068,
+      "fim": 135.891,
+      "texto": "then anything to roll the dice, just one more"
+    },
+    {
+      "inicio": 135.991,
+      "fim": 137.592,
+      "texto": "time."
+    },
+    {
+      "inicio": 138.933,
+      "fim": 142.034,
+      "texto": "Some will win, some will lose,"
+    },
+    {
+      "inicio": 143.375,
+      "fim": 146.057,
+      "texto": "some are born to sing the blues,"
+    },
+    {
+      "inicio": 147.037,
+      "fim": 152.86,
+      "texto": "or the movie never ends. It goes on and on and on"
+    },
+    {
+      "inicio": 152.961,
+      "fim": 155.262,
+      "texto": "and on, and that's strange as"
+    },
+    {
+      "inicio": 156.278,
+      "fim": 157.679,
+      "texto": "waiting, up"
+    },
+    {
+      "inicio": 159.381,
+      "fim": 163.465,
+      "texto": "and down the foot of all those shadows"
+    },
+    {
+      "inicio": 164.225,
+      "fim": 168.189,
+      "texto": "searching in the night."
+    },
+    {
+      "inicio": 170.211,
+      "fim": 171.432,
+      "texto": "Sweet lights,"
+    },
+    {
+      "inicio": 172.973,
+      "fim": 173.734,
+      "texto": "people,"
+    },
+    {
+      "inicio": 175.255,
+      "fim": 178.058,
+      "texto": "loving just to find him on sight"
+    },
+    {
+      "inicio": 178.859,
+      "fim": 179.339,
+      "texto": "and hiding"
+    },
+    {
+      "inicio": 180.2,
+      "fim": 182.382,
+      "texto": "somewhere in the night."
+    },
+    {
+      "inicio": 202.906,
+      "fim": 203.287,
+      "texto": "stuff"
+    },
+    {
+      "inicio": 203.949,
+      "fim": 205.332,
+      "texto": "believe in."
+    },
+    {
+      "inicio": 207.137,
+      "fim": 208.781,
+      "texto": "Hold on to the feeling."
+    }
+  ],
+  "avisos": [
+    "Segmento 1: alinhamento fraco em 'and'.",
+    "Segmento 2: alinhamento fraco em \"I'll\".",
+    "Segmento 2: alinhamento fraco em \"I'll\".",
+    "Segmento 4: alinhamento fraco em 'win,'.",
+    "Segmento 4: alinhamento fraco em 'will'.",
+    "Segmento 4: alinhamento fraco em 'are'.",
+    "Segmento 4: alinhamento fraco em 'and'.",
+    "Segmento 4: alinhamento fraco em \"that's\".",
+    "Segmento 4: alinhamento fraco em 'as'.",
+    "Segmento 5: alinhamento fraco em 'up'.",
+    "Segmento 5: alinhamento fraco em 'hiding'."
+  ],
+  "revisao_recomendada": true,
+  "comparacao_letra": {
+    "similaridade_textual": 0.7146666666666667,
+    "divergencias": [
+      {
+        "tipo": "replace",
+        "referencia": "livin",
+        "transcricao": "living"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "a singer",
+        "transcricao": "i ll sing her"
+      },
+      {
+        "tipo": "insert",
+        "referencia": "",
+        "transcricao": "i ll smell"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "smell of",
+        "transcricao": ""
+      },
+      {
+        "tipo": "replace",
+        "referencia": "perfume",
+        "transcricao": "a few"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "waitin up and",
+        "transcricao": "waiting whooping"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "their",
+        "transcricao": "there s"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "searchin",
+        "transcricao": "searching"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "streetlights people livin just",
+        "transcricao": "street lights keeper leading us"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "hidin",
+        "transcricao": "hiding"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "workin",
+        "transcricao": "working"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "fill",
+        "transcricao": "feel"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "payin",
+        "transcricao": "then"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "ll",
+        "transcricao": "will"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "whoa",
+        "transcricao": "or"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "strangers waitin",
+        "transcricao": "and that s strange as waiting"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "boulevard their",
+        "transcricao": "foot of all those"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "searchin",
+        "transcricao": "searching"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "streetlights",
+        "transcricao": "sweet lights"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "livin",
+        "transcricao": "loving"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "emotion hidin",
+        "transcricao": "him on sight and hiding"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "don t stop believin",
+        "transcricao": "stuff believe in"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "that feelin streetlights people don t stop believin hold on streetlights people don t stop believin hold on to that feelin streetlights people",
+        "transcricao": "the feeling"
+      }
+    ]
+  }
+}

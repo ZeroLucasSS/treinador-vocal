@@ -1,12 +1,12 @@
 {
   "versao": 1,
   "fontes": {
-    "consolidada": "b6d13be1afc520deba9e444639b26ceb154563679677c5d5f263ae146b064c86",
+    "consolidada": "c12d91f1ad5d57250125169f80d47f1da78a16171574addf65f0eb109c3209bb",
     "txt": "287b59c235108cd31f0dbdc58f3e0ad39227a91ee6b2e0815a5aece707de6e37",
-    "srt": "5be3ae21fbace833f907bb54d65244f1fd2e8ff06598a5567d1301a0c70a10d1",
+    "srt": "eb1384898d7815fc24e31c0128eebc8d0bfa005d5a46406e37d69cbf4db2dda3",
     "voz": "a8c8274d7b6875d7498785af45231ac385724ab57571fdd16efe87322c2e2cef"
   },
-  "sha256_srt": "bdac59a8f6bde07eb47974f888df715c3bb8a33477873fc4d05fedc84c9a816b",
+  "sha256_srt": "84bb031b75007b7d1ceb96fbe4c5d29e47e8facf088c5ec8cdbdd78bb8f0b871",
   "pendencias": 0,
   "blocos": {
     "1": [],
@@ -52,6 +52,23 @@
     "41": [],
     "42": [],
     "43": [],
-    "44": []
+    "44": [],
+    "45": [],
+    "46": [],
+    "47": [],
+    "48": [],
+    "49": [],
+    "50": [],
+    "51": [],
+    "52": [],
+    "53": [],
+    "54": [],
+    "55": [],
+    "56": [],
+    "57": [],
+    "58": [],
+    "59": [],
+    "60": [],
+    "61": []
   }
 }

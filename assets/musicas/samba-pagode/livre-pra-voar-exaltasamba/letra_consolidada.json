@@ -1,5 +1,5 @@
 {
-  "versao": 5,
+  "versao": 6,
   "status": "pendente",
   "estrategia": "preservar_corrigir_inserir",
   "motor": "whisperx",
@@ -8,607 +8,452 @@
   "aprovacao_musical_automatica": false,
   "parametros": {
     "score_minimo": 0.3,
-    "janela_maxima": 90.0,
+    "janela_maxima": 180.0,
+    "segundos_busca_por_palavra": 3.0,
+    "janela_minima": 30.0,
+    "fragmento_sem_ancora_max_palavras": 2,
+    "fragmento_sem_ancora_max_segundos": 1.0,
     "score_suporte_insercao": 0.1,
     "atividade_minima_insercao": 0.2,
     "margem": 0.4,
     "margem_aplicada": false
   },
   "total_palavras_txt": 408,
-  "total_palavras_srt": 434,
+  "total_palavras_srt": 415,
   "metricas": {
-    "palavras_publicadas": 435,
-    "blocos_srt_auditados": 58,
+    "palavras_publicadas": 421,
+    "blocos_srt_auditados": 42,
     "blocos_srt_descartados": 0,
-    "blocos_texto_corrigido": 40,
-    "blocos_inseridos": 0,
-    "palavras_txt_sem_tempo": 129,
-    "palavras_txt_nao_pesquisadas": 77,
-    "palavras_txt_pesquisadas_sem_tempo": 52,
-    "palavras_baixa_confianca": 0,
+    "blocos_texto_corrigido": 29,
+    "blocos_inseridos": 2,
+    "palavras_txt_sem_tempo": 46,
+    "palavras_txt_nao_pesquisadas": 46,
+    "palavras_txt_pesquisadas_sem_tempo": 0,
+    "palavras_conflito_original": 0,
+    "palavras_baixa_confianca": 3,
     "tentativas_acusticas": 2
   },
   "comparacao": {
     "consultas": [
       {
         "bloco_srt": 1,
-        "inicio": 6.73,
-        "fim": 8.21,
+        "inicio": 7.126,
+        "fim": 7.506,
         "txt_inicio": null,
         "txt_fim": null,
         "score": null,
-        "texto": "Vamos cantar!",
+        "texto": "Vamos",
         "aviso": "texto_exclusivo_srt_exige_revisao"
       },
       {
         "bloco_srt": 2,
-        "inicio": 28.91,
-        "fim": 32.85,
-        "txt_inicio": 0,
-        "txt_fim": 8,
-        "score": 1.0,
-        "texto": "Quando a gente se encontrar Tudo vai ser",
-        "aviso": null
+        "inicio": 7.646,
+        "fim": 22.799,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "cantar!",
+        "aviso": "consulta_txt_ambigua_original_preservado"
       },
       {
         "bloco_srt": 3,
-        "inicio": 32.85,
-        "fim": 36.61,
-        "txt_inicio": 8,
-        "txt_fim": 16,
+        "inicio": 30.785,
+        "fim": 35.329,
+        "txt_inicio": 0,
+        "txt_fim": 14,
         "score": 1.0,
-        "texto": "tão perfeito Eu quero te curtir demais E",
+        "texto": "Quando a gente se encontrar Tudo vai ser tão perfeito Eu quero te curtir",
         "aviso": null
       },
       {
         "bloco_srt": 4,
-        "inicio": 36.61,
-        "fim": 39.37,
-        "txt_inicio": 16,
-        "txt_fim": 24,
+        "inicio": 35.389,
+        "fim": 36.23,
+        "txt_inicio": 14,
+        "txt_fim": 15,
         "score": 1.0,
-        "texto": "eu vou aliviar Esse aperto no meu peito",
+        "texto": "demais",
         "aviso": null
       },
       {
         "bloco_srt": 5,
-        "inicio": 39.37,
-        "fim": 42.83,
-        "txt_inicio": 24,
-        "txt_fim": 32,
-        "score": 0.9473684210526316,
-        "texto": "Que vontade, não dá mais Se no telefone",
+        "inicio": 36.542,
+        "fim": 42.145,
+        "txt_inicio": 15,
+        "txt_fim": 31,
+        "score": 0.9929078014184397,
+        "texto": "E eu vou aliviar Esse aperto no meu peito Que vontade, não dá mais Se no",
         "aviso": null
       },
       {
         "bloco_srt": 6,
-        "inicio": 42.83,
-        "fim": 45.87,
-        "txt_inicio": 204,
-        "txt_fim": 212,
-        "score": 1.0,
-        "texto": "é bom Imagine aqui bem perto Eu sentindo",
+        "inicio": 42.185,
+        "fim": 47.747,
+        "txt_inicio": 31,
+        "txt_fim": 45,
+        "score": 0.9857142857142859,
+        "texto": "telefone é bom Imagina aqui bem perto Eu sentindo o teu calor Sem medo",
         "aviso": null
       },
       {
         "bloco_srt": 7,
-        "inicio": 45.87,
-        "fim": 48.69,
-        "txt_inicio": 212,
-        "txt_fim": 220,
+        "inicio": 47.767,
+        "fim": 52.489,
+        "txt_inicio": 45,
+        "txt_fim": 60,
         "score": 1.0,
-        "texto": "o teu calor Sem medo de ser feliz",
+        "texto": "de ser feliz Tô com o coração aberto Com você eu tô esperto Já me",
         "aviso": null
       },
       {
         "bloco_srt": 8,
-        "inicio": 48.81,
-        "fim": 51.49,
-        "txt_inicio": 220,
-        "txt_fim": 228,
-        "score": 1.0,
-        "texto": "Tô com o coração aberto Com você eu",
+        "inicio": 52.509,
+        "fim": 56.291,
+        "txt_inicio": 60,
+        "txt_fim": 72,
+        "score": 0.9323308270676691,
+        "texto": "acostumei Com o seu jeitinho De falar no telefone Besteirinhas prá me",
         "aviso": null
       },
       {
         "bloco_srt": 9,
-        "inicio": 51.49,
-        "fim": 53.35,
-        "txt_inicio": 228,
-        "txt_fim": 236,
-        "score": 1.0,
-        "texto": "tô esperto Já me acostumei Com o seu",
+        "inicio": 56.351,
+        "fim": 60.353,
+        "txt_inicio": 72,
+        "txt_fim": 85,
+        "score": 0.8955223880597015,
+        "texto": "provocar Quando eu te pegar Cê tá perdida, vai se arrepender De um",
         "aviso": null
       },
       {
         "bloco_srt": 10,
-        "inicio": 53.35,
-        "fim": 56.29,
-        "txt_inicio": 236,
-        "txt_fim": 244,
+        "inicio": 60.413,
+        "fim": 62.594,
+        "txt_inicio": 85,
+        "txt_fim": 92,
         "score": 1.0,
-        "texto": "jeitinho De falar no telefone Besteirinhas pra me",
+        "texto": "dia ter me tirado do meu lugar",
         "aviso": null
       },
       {
         "bloco_srt": 11,
-        "inicio": 56.29,
-        "fim": 59.27,
-        "txt_inicio": 244,
-        "txt_fim": 252,
+        "inicio": 63.146,
+        "fim": 66.769,
+        "txt_inicio": 92,
+        "txt_fim": 106,
         "score": 1.0,
-        "texto": "provocar Quando eu te pegar Cê tá perdida",
+        "texto": "Peço, por favor não se apaixone Pois não sou aquele homem Que um dia",
         "aviso": null
       },
       {
         "bloco_srt": 12,
-        "inicio": 59.27,
-        "fim": 61.07,
-        "txt_inicio": 252,
-        "txt_fim": 260,
-        "score": 1.0,
-        "texto": "Vai se arrepender de um dia ter me",
+        "inicio": 66.849,
+        "fim": 70.892,
+        "txt_inicio": 106,
+        "txt_fim": 118,
+        "score": 0.991304347826087,
+        "texto": "o seu pai sonhou Eu só tenho cara de santinho Sempre faço",
         "aviso": null
       },
       {
         "bloco_srt": 13,
-        "inicio": 61.07,
-        "fim": 64.069,
-        "txt_inicio": 260,
-        "txt_fim": 268,
-        "score": 1.0,
-        "texto": "tirado Do meu lugar Peço, por favor não",
-        "aviso": null
+        "inicio": 70.932,
+        "fim": 76.357,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "conjeitinho, coitadates quem acredito. Ei, eu, prometo que te dá",
+        "aviso": "consulta_txt_ambigua_original_preservado"
       },
       {
         "bloco_srt": 14,
-        "inicio": 64.069,
-        "fim": 66.33,
-        "txt_inicio": 268,
-        "txt_fim": 276,
-        "score": 1.0,
-        "texto": "se apaixone Pois não sou aquele homem Que",
+        "inicio": 76.437,
+        "fim": 81.761,
+        "txt_inicio": 128,
+        "txt_fim": 139,
+        "score": 0.8,
+        "texto": "carinho Mas gosto de ser sozinho Livre pra voar Quem sabe",
         "aviso": null
       },
       {
         "bloco_srt": 15,
-        "inicio": 66.33,
-        "fim": 68.85,
-        "txt_inicio": 104,
-        "txt_fim": 112,
-        "score": 1.0,
-        "texto": "um dia o seu pai sonhou Eu só",
-        "aviso": null
+        "inicio": 82.061,
+        "fim": 86.745,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "quem sabe o outro dia a gente possa se encontrar de novo. Eu, prometo",
+        "aviso": "consulta_txt_ambigua_original_preservado"
       },
       {
         "bloco_srt": 16,
-        "inicio": 68.85,
-        "fim": 71.53,
-        "txt_inicio": 112,
-        "txt_fim": 120,
-        "score": 1.0,
-        "texto": "tenho cara de santinho Sempre faço com jeitinho",
+        "inicio": 86.765,
+        "fim": 87.506,
+        "txt_inicio": 151,
+        "txt_fim": 154,
+        "score": 0.8387096774193549,
+        "texto": "te dar carinho",
         "aviso": null
       },
       {
         "bloco_srt": 17,
-        "inicio": 71.53,
-        "fim": 76.43,
-        "txt_inicio": 120,
-        "txt_fim": 128,
-        "score": 1.0,
-        "texto": "Coitada de quem acreditou Eu prometo te dar",
-        "aviso": null
+        "inicio": 89.147,
+        "fim": 92.51,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Faz nosso descenso, assim, o livre pra voar.",
+        "aviso": "consulta_txt_ambigua_original_preservado"
       },
       {
         "bloco_srt": 18,
-        "inicio": 76.43,
-        "fim": 77.71,
-        "txt_inicio": 128,
-        "txt_fim": 130,
-        "score": 0.8181818181818181,
-        "texto": "carinho Mas",
-        "aviso": null
+        "inicio": 93.066,
+        "fim": 97.848,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Quem sabe o outro dia? Vamos juntos, palma",
+        "aviso": "consulta_txt_ambigua_original_preservado"
       },
       {
         "bloco_srt": 19,
-        "inicio": 78.11,
-        "fim": 80.85,
-        "txt_inicio": 154,
-        "txt_fim": 162,
-        "score": 1.0,
-        "texto": "Mas gosto de ser sozinho Livre pra voar",
+        "inicio": 100.29,
+        "fim": 103.872,
+        "txt_inicio": 199,
+        "txt_fim": 201,
+        "score": 0.7692307692307692,
+        "texto": "dá mais",
         "aviso": null
       },
       {
         "bloco_srt": 20,
-        "inicio": 80.85,
-        "fim": 83.29,
-        "txt_inicio": 333,
-        "txt_fim": 341,
-        "score": 0.9552238805970148,
-        "texto": "Quem sabe!?) Quem sabe um outro dia A",
-        "aviso": null
+        "inicio": 104.592,
+        "fim": 106.573,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "score": null,
+        "texto": "Vamos juntos, palma da mão!",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
       },
       {
         "bloco_srt": 21,
-        "inicio": 83.29,
-        "fim": 86.77,
-        "txt_inicio": 143,
-        "txt_fim": 151,
-        "score": 1.0,
-        "texto": "gente possa se encontrar de novo Eu Prometo",
+        "inicio": 118.39,
+        "fim": 122.853,
+        "txt_inicio": 393,
+        "txt_fim": 407,
+        "score": 0.993006993006993,
+        "texto": "Quando a gente se encontrar Tudo vai ser tão perfeito Eu quero te curtir",
         "aviso": null
       },
       {
         "bloco_srt": 22,
-        "inicio": 86.77,
-        "fim": 88.87,
-        "txt_inicio": null,
-        "txt_fim": null,
-        "score": null,
-        "texto": "te dar carinho, vem!",
-        "aviso": "consulta_txt_ambigua_original_preservado"
+        "inicio": 122.933,
+        "fim": 128.556,
+        "txt_inicio": 186,
+        "txt_fim": 200,
+        "score": 0.9924812030075187,
+        "texto": "demais E eu vou aliviar Esse aperto no meu peito Que vontade, não dá",
+        "aviso": null
       },
       {
         "bloco_srt": 23,
-        "inicio": 88.87,
-        "fim": 92.15,
-        "txt_inicio": 154,
-        "txt_fim": 162,
-        "score": 1.0,
-        "texto": "Mas gosto de ser sozinho Livre pra voar",
+        "inicio": 128.616,
+        "fim": 133.659,
+        "txt_inicio": 200,
+        "txt_fim": 214,
+        "score": 0.9618320610687023,
+        "texto": "mais Se no telefone é bom Imagine aqui bem perto Eu sentindo o teu",
         "aviso": null
       },
       {
         "bloco_srt": 24,
-        "inicio": 92.87,
-        "fim": 94.41,
-        "txt_inicio": 333,
-        "txt_fim": 341,
-        "score": 0.9552238805970148,
-        "texto": "Quem sabe!?) Quem sabe um outro dia A",
+        "inicio": 133.739,
+        "fim": 139.102,
+        "txt_inicio": 214,
+        "txt_fim": 229,
+        "score": 0.9846153846153847,
+        "texto": "calor Sem medo de ser feliz Tô com o coração aberto Com você eu tô",
         "aviso": null
       },
       {
         "bloco_srt": 25,
-        "inicio": 94.41,
-        "fim": 98.05,
-        "txt_inicio": null,
-        "txt_fim": null,
-        "score": null,
-        "texto": "gente possa se encontrar Lê, lê, lê, lê,",
-        "aviso": "consulta_txt_ambigua_original_preservado"
+        "inicio": 139.163,
+        "fim": 142.645,
+        "txt_inicio": 229,
+        "txt_fim": 241,
+        "score": 0.96,
+        "texto": "esperto Já me acostumei Com o seu jeitinho De falar no telefone",
+        "aviso": null
       },
       {
         "bloco_srt": 26,
-        "inicio": 98.05,
-        "fim": 101.55,
-        "txt_inicio": null,
-        "txt_fim": null,
-        "score": null,
-        "texto": "lê, lê, lê, lê, lê, lê...",
-        "aviso": "texto_exclusivo_srt_exige_revisao"
+        "inicio": 142.685,
+        "fim": 144.546,
+        "txt_inicio": 241,
+        "txt_fim": 245,
+        "score": 1.0,
+        "texto": "Besteirinhas pra me provocar",
+        "aviso": null
       },
       {
         "bloco_srt": 27,
-        "inicio": 104.17,
-        "fim": 106.89,
-        "txt_inicio": null,
-        "txt_fim": null,
-        "score": null,
-        "texto": "Vamos juntos, palma na mão, vê!",
-        "aviso": "texto_exclusivo_srt_exige_revisao"
+        "inicio": 145.066,
+        "fim": 148.369,
+        "txt_inicio": 245,
+        "txt_fim": 260,
+        "score": 0.9850746268656717,
+        "texto": "Quando eu te pegar Cê tá perdida Vai se arrepender de um dia ter me",
+        "aviso": null
       },
       {
         "bloco_srt": 28,
-        "inicio": 107.77,
-        "fim": 110.29,
-        "txt_inicio": null,
-        "txt_fim": null,
-        "score": null,
-        "texto": "Lê, lê, lê, lê, lê, lê, lê, lê,",
-        "aviso": "texto_exclusivo_srt_exige_revisao"
+        "inicio": 148.449,
+        "fim": 153.033,
+        "txt_inicio": 260,
+        "txt_fim": 274,
+        "score": 1.0,
+        "texto": "tirado Do meu lugar Peço, por favor não se apaixone Pois não sou aquele",
+        "aviso": null
       },
       {
         "bloco_srt": 29,
-        "inicio": 110.49,
-        "fim": 113.55,
-        "txt_inicio": 187,
-        "txt_fim": 189,
-        "score": 0.6666666666666667,
-        "texto": "E eu",
+        "inicio": 153.093,
+        "fim": 158.137,
+        "txt_inicio": 274,
+        "txt_fim": 287,
+        "score": 0.944,
+        "texto": "homem Que um dia o seu pai sonhou Eu faço com jeitinho, gostoso",
         "aviso": null
       },
       {
         "bloco_srt": 30,
-        "inicio": 117.97,
-        "fim": 120.43,
-        "txt_inicio": 393,
-        "txt_fim": 401,
-        "score": 1.0,
-        "texto": "Quando a gente se encontrar Tudo vai ser",
+        "inicio": 158.718,
+        "fim": 161.1,
+        "txt_inicio": 287,
+        "txt_fim": 293,
+        "score": 0.9577464788732395,
+        "texto": "Coitada de quem acreditou, No refrão!",
         "aviso": null
       },
       {
         "bloco_srt": 31,
-        "inicio": 120.43,
-        "fim": 124.17,
-        "txt_inicio": 180,
-        "txt_fim": 188,
-        "score": 1.0,
-        "texto": "tão perfeito Eu quero te curtir demais E",
+        "inicio": 162.1,
+        "fim": 168.046,
+        "txt_inicio": 293,
+        "txt_fim": 307,
+        "score": 0.8057553956834532,
+        "texto": "Eu prometo te dar carinho Mas gosto de ser sozinho Livre pra voar Quem",
         "aviso": null
       },
       {
         "bloco_srt": 32,
-        "inicio": 124.17,
-        "fim": 126.89,
-        "txt_inicio": 188,
-        "txt_fim": 196,
+        "inicio": 168.106,
+        "fim": 170.267,
+        "txt_inicio": 307,
+        "txt_fim": 311,
         "score": 1.0,
-        "texto": "eu vou aliviar Esse aperto no meu peito",
+        "texto": "sabe um outro dia",
         "aviso": null
       },
       {
         "bloco_srt": 33,
-        "inicio": 126.89,
-        "fim": 130.27,
-        "txt_inicio": 196,
-        "txt_fim": 204,
+        "inicio": 171.849,
+        "fim": 172.629,
+        "txt_inicio": 316,
+        "txt_fim": 318,
         "score": 1.0,
-        "texto": "Que vontade, não dá mais Se no telefone",
+        "texto": "De novo! (",
         "aviso": null
       },
       {
         "bloco_srt": 34,
-        "inicio": 130.27,
-        "fim": 133.35,
-        "txt_inicio": 204,
-        "txt_fim": 212,
-        "score": 1.0,
-        "texto": "é bom Imagine aqui bem perto Eu sentindo",
+        "inicio": 173.514,
+        "fim": 178.916,
+        "txt_inicio": 319,
+        "txt_fim": 332,
+        "score": 0.9481481481481482,
+        "texto": "Prometo te dar carinho Mas gosto de ser sozinho Livre pra voar (Quem",
         "aviso": null
       },
       {
         "bloco_srt": 35,
-        "inicio": 133.35,
-        "fim": 136.31,
-        "txt_inicio": 213,
-        "txt_fim": 221,
-        "score": 1.0,
-        "texto": "teu calor Sem medo de ser feliz Tô",
+        "inicio": 179.016,
+        "fim": 182.718,
+        "txt_inicio": 332,
+        "txt_fim": 346,
+        "score": 0.9770992366412213,
+        "texto": "sabe, Quem sabe!?) Quem sabe um outro dia A gente possa se encontrar Eu",
         "aviso": null
       },
       {
         "bloco_srt": 36,
-        "inicio": 136.31,
-        "fim": 139.07,
-        "txt_inicio": 221,
-        "txt_fim": 229,
-        "score": 1.0,
-        "texto": "com o coração aberto Com você eu tô",
+        "inicio": 184.199,
+        "fim": 189.321,
+        "txt_inicio": 346,
+        "txt_fim": 357,
+        "score": 0.878048780487805,
+        "texto": "prometo te dar carinho Mas gosto de ser sozinho Livre pra",
         "aviso": null
       },
       {
         "bloco_srt": 37,
-        "inicio": 139.07,
-        "fim": 141.41,
-        "txt_inicio": 229,
-        "txt_fim": 238,
-        "score": 0.9772727272727273,
-        "texto": "esperto Já me acostumei Com o seu jeitinho De",
+        "inicio": 189.381,
+        "fim": 190.321,
+        "txt_inicio": 357,
+        "txt_fim": 358,
+        "score": 1.0,
+        "texto": "voar",
         "aviso": null
       },
       {
         "bloco_srt": 38,
-        "inicio": 141.41,
-        "fim": 145.25,
-        "txt_inicio": 238,
-        "txt_fim": 246,
-        "score": 1.0,
-        "texto": "falar no telefone Besteirinhas pra me provocar Quando",
+        "inicio": 191.022,
+        "fim": 196.264,
+        "txt_inicio": 137,
+        "txt_fim": 153,
+        "score": 0.9583333333333335,
+        "texto": "Quem sabe um outro dia A gente possa se encontrar de novo Eu Prometo te dar",
         "aviso": null
       },
       {
         "bloco_srt": 39,
-        "inicio": 145.25,
-        "fim": 147.01,
-        "txt_inicio": 246,
-        "txt_fim": 254,
-        "score": 1.0,
-        "texto": "eu te pegar Cê tá perdida Vai se",
+        "inicio": 196.324,
+        "fim": 200.586,
+        "txt_inicio": 153,
+        "txt_fim": 162,
+        "score": 0.9263157894736842,
+        "texto": "carinho Mas gosto de ser sozinho Livre pra voar",
         "aviso": null
       },
       {
         "bloco_srt": 40,
-        "inicio": 147.01,
-        "fim": 149.05,
-        "txt_inicio": 254,
-        "txt_fim": 262,
+        "inicio": 201.878,
+        "fim": 206.342,
+        "txt_inicio": 162,
+        "txt_fim": 176,
         "score": 1.0,
-        "texto": "arrepender de um dia ter me tirado Do",
+        "texto": "Quem sabe um outro dia A gente possa se encontrar Quando a gente se",
         "aviso": null
       },
       {
         "bloco_srt": 41,
-        "inicio": 149.05,
-        "fim": 152.07,
-        "txt_inicio": 262,
-        "txt_fim": 270,
+        "inicio": 206.382,
+        "fim": 211.187,
+        "txt_inicio": 176,
+        "txt_fim": 187,
         "score": 1.0,
-        "texto": "meu lugar Peço, por favor não se apaixone",
+        "texto": "encontrar Tudo vai ser tão perfeito Eu quero te curtir demais",
         "aviso": null
       },
       {
         "bloco_srt": 42,
-        "inicio": 152.07,
-        "fim": 154.09,
-        "txt_inicio": 270,
-        "txt_fim": 278,
-        "score": 1.0,
-        "texto": "Pois não sou aquele homem Que um dia",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 43,
-        "inicio": 154.09,
-        "fim": 157.23,
-        "txt_inicio": 278,
-        "txt_fim": 286,
-        "score": 1.0,
-        "texto": "o seu pai sonhou Eu faço com jeitinho,",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 44,
-        "inicio": 157.23,
-        "fim": 162.51,
-        "txt_inicio": 286,
-        "txt_fim": 294,
-        "score": 1.0,
-        "texto": "gostoso Coitada de quem acreditou, No refrão! Eu",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 45,
-        "inicio": 162.51,
-        "fim": 166.27,
-        "txt_inicio": 294,
-        "txt_fim": 302,
-        "score": 1.0,
-        "texto": "prometo te dar carinho Mas gosto de ser",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 46,
-        "inicio": 166.27,
-        "fim": 168.67,
-        "txt_inicio": 302,
-        "txt_fim": 310,
-        "score": 1.0,
-        "texto": "sozinho Livre pra voar Quem sabe um outro",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 47,
-        "inicio": 168.67,
-        "fim": 176.39,
-        "txt_inicio": 147,
-        "txt_fim": 155,
-        "score": 0.9066666666666666,
-        "texto": "de novo Eu Prometo te dar carinho Mas",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 48,
-        "inicio": 176.39,
-        "fim": 178.97,
-        "txt_inicio": 155,
-        "txt_fim": 163,
-        "score": 1.0,
-        "texto": "gosto de ser sozinho Livre pra voar Quem",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 49,
-        "inicio": 178.97,
-        "fim": 181.21,
-        "txt_inicio": 332,
-        "txt_fim": 340,
-        "score": 1.0,
-        "texto": "sabe, Quem sabe!?) Quem sabe um outro dia",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 50,
-        "inicio": 181.21,
-        "fim": 184.97,
-        "txt_inicio": 340,
-        "txt_fim": 348,
-        "score": 1.0,
-        "texto": "A gente possa se encontrar Eu prometo te",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 51,
-        "inicio": 184.97,
-        "fim": 189.05,
-        "txt_inicio": 348,
-        "txt_fim": 356,
-        "score": 1.0,
-        "texto": "dar carinho Mas gosto de ser sozinho Livre",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 52,
-        "inicio": 189.05,
-        "fim": 192.35,
-        "txt_inicio": 356,
-        "txt_fim": 364,
-        "score": 1.0,
-        "texto": "pra voar Quem sabe um outro dia A",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 53,
-        "inicio": 192.35,
-        "fim": 195.87,
-        "txt_inicio": 364,
-        "txt_fim": 371,
-        "score": 0.963855421686747,
-        "texto": "gente possa se encontrar de novo Prometo!",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 54,
-        "inicio": 195.87,
-        "fim": 199.93,
-        "txt_inicio": 373,
-        "txt_fim": 381,
-        "score": 1.0,
-        "texto": "dar carinho Mas gosto de ser sozinho Livre",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 55,
-        "inicio": 199.93,
-        "fim": 203.15,
-        "txt_inicio": 381,
-        "txt_fim": 389,
-        "score": 1.0,
-        "texto": "pra voar Quem sabe um outro dia A",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 56,
-        "inicio": 203.15,
-        "fim": 206.27,
-        "txt_inicio": 389,
-        "txt_fim": 397,
-        "score": 1.0,
-        "texto": "gente possa se encontrar Quando a gente se",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 57,
-        "inicio": 206.27,
-        "fim": 209.47,
-        "txt_inicio": 397,
-        "txt_fim": 405,
-        "score": 1.0,
-        "texto": "encontrar Tudo vai ser tão perfeito Eu quero",
-        "aviso": null
-      },
-      {
-        "bloco_srt": 58,
-        "inicio": 209.47,
-        "fim": 218.63,
+        "inicio": 217.533,
+        "fim": 219.134,
         "txt_inicio": null,
         "txt_fim": null,
         "score": null,
-        "texto": "te curtir demais Valeu!",
-        "aviso": "consulta_txt_ambigua_original_preservado"
+        "texto": "Valeu!",
+        "aviso": "texto_exclusivo_srt_exige_revisao"
       }
     ],
     "regioes": [
@@ -616,1405 +461,1048 @@
         "indices": [
           0
         ],
-        "inicio": 6.73,
-        "fim": 8.21,
+        "inicio": 7.126,
+        "fim": 7.506,
         "txt_inicio": null,
         "txt_fim": null,
-        "texto": "Vamos cantar!"
+        "texto": "Vamos"
       },
       {
         "indices": [
           1
         ],
-        "inicio": 28.91,
-        "fim": 32.85,
-        "txt_inicio": 0,
-        "txt_fim": 8,
-        "texto": "Quando a gente se encontrar Tudo vai ser"
+        "inicio": 7.646,
+        "fim": 22.799,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "cantar!"
       },
       {
         "indices": [
           2
         ],
-        "inicio": 32.85,
-        "fim": 36.61,
-        "txt_inicio": 8,
-        "txt_fim": 16,
-        "texto": "tão perfeito Eu quero te curtir demais E"
+        "inicio": 30.785,
+        "fim": 35.329,
+        "txt_inicio": 0,
+        "txt_fim": 14,
+        "texto": "Quando a gente se encontrar Tudo vai ser tão perfeito Eu quero te curtir"
       },
       {
         "indices": [
           3
         ],
-        "inicio": 36.61,
-        "fim": 39.37,
-        "txt_inicio": 16,
-        "txt_fim": 24,
-        "texto": "eu vou aliviar Esse aperto no meu peito"
+        "inicio": 35.389,
+        "fim": 36.23,
+        "txt_inicio": 14,
+        "txt_fim": 15,
+        "texto": "demais"
       },
       {
         "indices": [
           4
         ],
-        "inicio": 39.37,
-        "fim": 42.83,
-        "txt_inicio": 24,
-        "txt_fim": 32,
-        "texto": "Que vontade, não dá mais Se no telefone"
+        "inicio": 36.542,
+        "fim": 42.145,
+        "txt_inicio": 15,
+        "txt_fim": 31,
+        "texto": "E eu vou aliviar Esse aperto no meu peito Que vontade, não dá mais Se no"
       },
       {
         "indices": [
           5
         ],
-        "inicio": 42.83,
-        "fim": 45.87,
-        "txt_inicio": 204,
-        "txt_fim": 212,
-        "texto": "é bom Imagine aqui bem perto Eu sentindo"
+        "inicio": 42.185,
+        "fim": 47.747,
+        "txt_inicio": 31,
+        "txt_fim": 45,
+        "texto": "telefone é bom Imagina aqui bem perto Eu sentindo o teu calor Sem medo"
       },
       {
         "indices": [
           6
         ],
-        "inicio": 45.87,
-        "fim": 48.69,
-        "txt_inicio": 212,
-        "txt_fim": 220,
-        "texto": "o teu calor Sem medo de ser feliz"
+        "inicio": 47.767,
+        "fim": 52.489,
+        "txt_inicio": 45,
+        "txt_fim": 60,
+        "texto": "de ser feliz Tô com o coração aberto Com você eu tô esperto Já me"
       },
       {
         "indices": [
           7
         ],
-        "inicio": 48.81,
-        "fim": 51.49,
-        "txt_inicio": 220,
-        "txt_fim": 228,
-        "texto": "Tô com o coração aberto Com você eu"
+        "inicio": 52.509,
+        "fim": 56.291,
+        "txt_inicio": 60,
+        "txt_fim": 72,
+        "texto": "acostumei Com o seu jeitinho De falar no telefone Besteirinhas prá me"
       },
       {
         "indices": [
           8
         ],
-        "inicio": 51.49,
-        "fim": 53.35,
-        "txt_inicio": 228,
-        "txt_fim": 236,
-        "texto": "tô esperto Já me acostumei Com o seu"
+        "inicio": 56.351,
+        "fim": 60.353,
+        "txt_inicio": 72,
+        "txt_fim": 85,
+        "texto": "provocar Quando eu te pegar Cê tá perdida, vai se arrepender De um"
       },
       {
         "indices": [
           9
         ],
-        "inicio": 53.35,
-        "fim": 56.29,
-        "txt_inicio": 236,
-        "txt_fim": 244,
-        "texto": "jeitinho De falar no telefone Besteirinhas pra me"
+        "inicio": 60.413,
+        "fim": 62.594,
+        "txt_inicio": 85,
+        "txt_fim": 92,
+        "texto": "dia ter me tirado do meu lugar"
       },
       {
         "indices": [
           10
         ],
-        "inicio": 56.29,
-        "fim": 59.27,
-        "txt_inicio": 244,
-        "txt_fim": 252,
-        "texto": "provocar Quando eu te pegar Cê tá perdida"
+        "inicio": 63.146,
+        "fim": 66.769,
+        "txt_inicio": 92,
+        "txt_fim": 106,
+        "texto": "Peço, por favor não se apaixone Pois não sou aquele homem Que um dia"
       },
       {
         "indices": [
           11
         ],
-        "inicio": 59.27,
-        "fim": 61.07,
-        "txt_inicio": 252,
-        "txt_fim": 260,
-        "texto": "Vai se arrepender de um dia ter me"
+        "inicio": 66.849,
+        "fim": 70.892,
+        "txt_inicio": 106,
+        "txt_fim": 118,
+        "texto": "o seu pai sonhou Eu só tenho cara de santinho Sempre faço"
       },
       {
         "indices": [
           12
         ],
-        "inicio": 61.07,
-        "fim": 64.069,
-        "txt_inicio": 260,
-        "txt_fim": 268,
-        "texto": "tirado Do meu lugar Peço, por favor não"
+        "inicio": 70.932,
+        "fim": 76.357,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "conjeitinho, coitadates quem acredito. Ei, eu, prometo que te dá"
       },
       {
         "indices": [
           13
         ],
-        "inicio": 64.069,
-        "fim": 66.33,
-        "txt_inicio": 268,
-        "txt_fim": 276,
-        "texto": "se apaixone Pois não sou aquele homem Que"
+        "inicio": 76.437,
+        "fim": 81.761,
+        "txt_inicio": 128,
+        "txt_fim": 139,
+        "texto": "carinho Mas gosto de ser sozinho Livre pra voar Quem sabe"
       },
       {
         "indices": [
           14
         ],
-        "inicio": 66.33,
-        "fim": 68.85,
-        "txt_inicio": 104,
-        "txt_fim": 112,
-        "texto": "um dia o seu pai sonhou Eu só"
+        "inicio": 82.061,
+        "fim": 86.745,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "quem sabe o outro dia a gente possa se encontrar de novo. Eu, prometo"
       },
       {
         "indices": [
           15
         ],
-        "inicio": 68.85,
-        "fim": 71.53,
-        "txt_inicio": 112,
-        "txt_fim": 120,
-        "texto": "tenho cara de santinho Sempre faço com jeitinho"
+        "inicio": 86.765,
+        "fim": 87.506,
+        "txt_inicio": 151,
+        "txt_fim": 154,
+        "texto": "te dar carinho"
       },
       {
         "indices": [
           16
         ],
-        "inicio": 71.53,
-        "fim": 76.43,
-        "txt_inicio": 120,
-        "txt_fim": 128,
-        "texto": "Coitada de quem acreditou Eu prometo te dar"
+        "inicio": 89.147,
+        "fim": 92.51,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Faz nosso descenso, assim, o livre pra voar."
       },
       {
         "indices": [
           17
         ],
-        "inicio": 76.43,
-        "fim": 77.71,
-        "txt_inicio": 128,
-        "txt_fim": 130,
-        "texto": "carinho Mas"
+        "inicio": 93.066,
+        "fim": 97.848,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Quem sabe o outro dia? Vamos juntos, palma"
       },
       {
         "indices": [
           18
         ],
-        "inicio": 78.11,
-        "fim": 80.85,
-        "txt_inicio": 154,
-        "txt_fim": 162,
-        "texto": "Mas gosto de ser sozinho Livre pra voar"
+        "inicio": 100.29,
+        "fim": 103.872,
+        "txt_inicio": 199,
+        "txt_fim": 201,
+        "texto": "dá mais"
       },
       {
         "indices": [
           19
         ],
-        "inicio": 80.85,
-        "fim": 83.29,
-        "txt_inicio": 333,
-        "txt_fim": 341,
-        "texto": "Quem sabe!?) Quem sabe um outro dia A"
+        "inicio": 104.592,
+        "fim": 106.573,
+        "txt_inicio": null,
+        "txt_fim": null,
+        "texto": "Vamos juntos, palma da mão!"
       },
       {
         "indices": [
           20
         ],
-        "inicio": 83.29,
-        "fim": 86.77,
-        "txt_inicio": 143,
-        "txt_fim": 151,
-        "texto": "gente possa se encontrar de novo Eu Prometo"
+        "inicio": 118.39,
+        "fim": 122.853,
+        "txt_inicio": 393,
+        "txt_fim": 407,
+        "texto": "Quando a gente se encontrar Tudo vai ser tão perfeito Eu quero te curtir"
       },
       {
         "indices": [
           21
         ],
-        "inicio": 86.77,
-        "fim": 88.87,
-        "txt_inicio": null,
-        "txt_fim": null,
-        "texto": "te dar carinho, vem!"
+        "inicio": 122.933,
+        "fim": 128.556,
+        "txt_inicio": 186,
+        "txt_fim": 200,
+        "texto": "demais E eu vou aliviar Esse aperto no meu peito Que vontade, não dá"
       },
       {
         "indices": [
           22
         ],
-        "inicio": 88.87,
-        "fim": 92.15,
-        "txt_inicio": 154,
-        "txt_fim": 162,
-        "texto": "Mas gosto de ser sozinho Livre pra voar"
+        "inicio": 128.616,
+        "fim": 133.659,
+        "txt_inicio": 200,
+        "txt_fim": 214,
+        "texto": "mais Se no telefone é bom Imagine aqui bem perto Eu sentindo o teu"
       },
       {
         "indices": [
           23
         ],
-        "inicio": 92.87,
-        "fim": 94.41,
-        "txt_inicio": 333,
-        "txt_fim": 341,
-        "texto": "Quem sabe!?) Quem sabe um outro dia A"
+        "inicio": 133.739,
+        "fim": 139.102,
+        "txt_inicio": 214,
+        "txt_fim": 229,
+        "texto": "calor Sem medo de ser feliz Tô com o coração aberto Com você eu tô"
       },
       {
         "indices": [
           24
         ],
-        "inicio": 94.41,
-        "fim": 98.05,
-        "txt_inicio": null,
-        "txt_fim": null,
-        "texto": "gente possa se encontrar Lê, lê, lê, lê,"
+        "inicio": 139.163,
+        "fim": 142.645,
+        "txt_inicio": 229,
+        "txt_fim": 241,
+        "texto": "esperto Já me acostumei Com o seu jeitinho De falar no telefone"
       },
       {
         "indices": [
           25
         ],
-        "inicio": 98.05,
-        "fim": 101.55,
-        "txt_inicio": null,
-        "txt_fim": null,
-        "texto": "lê, lê, lê, lê, lê, lê..."
+        "inicio": 142.685,
+        "fim": 144.546,
+        "txt_inicio": 241,
+        "txt_fim": 245,
+        "texto": "Besteirinhas pra me provocar"
       },
       {
         "indices": [
           26
         ],
-        "inicio": 104.17,
-        "fim": 106.89,
-        "txt_inicio": null,
-        "txt_fim": null,
-        "texto": "Vamos juntos, palma na mão, vê!"
+        "inicio": 145.066,
+        "fim": 148.369,
+        "txt_inicio": 245,
+        "txt_fim": 260,
+        "texto": "Quando eu te pegar Cê tá perdida Vai se arrepender de um dia ter me"
       },
       {
         "indices": [
           27
         ],
-        "inicio": 107.77,
-        "fim": 110.29,
-        "txt_inicio": null,
-        "txt_fim": null,
-        "texto": "Lê, lê, lê, lê, lê, lê, lê, lê,"
+        "inicio": 148.449,
+        "fim": 153.033,
+        "txt_inicio": 260,
+        "txt_fim": 274,
+        "texto": "tirado Do meu lugar Peço, por favor não se apaixone Pois não sou aquele"
       },
       {
         "indices": [
           28
         ],
-        "inicio": 110.49,
-        "fim": 113.55,
-        "txt_inicio": 187,
-        "txt_fim": 189,
-        "texto": "E eu"
+        "inicio": 153.093,
+        "fim": 158.137,
+        "txt_inicio": 274,
+        "txt_fim": 287,
+        "texto": "homem Que um dia o seu pai sonhou Eu faço com jeitinho, gostoso"
       },
       {
         "indices": [
           29
         ],
-        "inicio": 117.97,
-        "fim": 120.43,
-        "txt_inicio": 393,
-        "txt_fim": 401,
-        "texto": "Quando a gente se encontrar Tudo vai ser"
+        "inicio": 158.718,
+        "fim": 161.1,
+        "txt_inicio": 287,
+        "txt_fim": 293,
+        "texto": "Coitada de quem acreditou, No refrão!"
       },
       {
         "indices": [
           30
         ],
-        "inicio": 120.43,
-        "fim": 124.17,
-        "txt_inicio": 180,
-        "txt_fim": 188,
-        "texto": "tão perfeito Eu quero te curtir demais E"
+        "inicio": 162.1,
+        "fim": 168.046,
+        "txt_inicio": 293,
+        "txt_fim": 307,
+        "texto": "Eu prometo te dar carinho Mas gosto de ser sozinho Livre pra voar Quem"
       },
       {
         "indices": [
           31
         ],
-        "inicio": 124.17,
-        "fim": 126.89,
-        "txt_inicio": 188,
-        "txt_fim": 196,
-        "texto": "eu vou aliviar Esse aperto no meu peito"
+        "inicio": 168.106,
+        "fim": 170.267,
+        "txt_inicio": 307,
+        "txt_fim": 311,
+        "texto": "sabe um outro dia"
       },
       {
         "indices": [
           32
         ],
-        "inicio": 126.89,
-        "fim": 130.27,
-        "txt_inicio": 196,
-        "txt_fim": 204,
-        "texto": "Que vontade, não dá mais Se no telefone"
+        "inicio": 171.849,
+        "fim": 172.629,
+        "txt_inicio": 316,
+        "txt_fim": 318,
+        "texto": "De novo! ("
       },
       {
         "indices": [
           33
         ],
-        "inicio": 130.27,
-        "fim": 133.35,
-        "txt_inicio": 204,
-        "txt_fim": 212,
-        "texto": "é bom Imagine aqui bem perto Eu sentindo"
+        "inicio": 173.514,
+        "fim": 178.916,
+        "txt_inicio": 319,
+        "txt_fim": 332,
+        "texto": "Prometo te dar carinho Mas gosto de ser sozinho Livre pra voar (Quem"
       },
       {
         "indices": [
           34
         ],
-        "inicio": 133.35,
-        "fim": 136.31,
-        "txt_inicio": 213,
-        "txt_fim": 221,
-        "texto": "teu calor Sem medo de ser feliz Tô"
+        "inicio": 179.016,
+        "fim": 182.718,
+        "txt_inicio": 332,
+        "txt_fim": 346,
+        "texto": "sabe, Quem sabe!?) Quem sabe um outro dia A gente possa se encontrar Eu"
       },
       {
         "indices": [
           35
         ],
-        "inicio": 136.31,
-        "fim": 139.07,
-        "txt_inicio": 221,
-        "txt_fim": 229,
-        "texto": "com o coração aberto Com você eu tô"
+        "inicio": 184.199,
+        "fim": 189.321,
+        "txt_inicio": 346,
+        "txt_fim": 357,
+        "texto": "prometo te dar carinho Mas gosto de ser sozinho Livre pra"
       },
       {
         "indices": [
           36
         ],
-        "inicio": 139.07,
-        "fim": 141.41,
-        "txt_inicio": 229,
-        "txt_fim": 238,
-        "texto": "esperto Já me acostumei Com o seu jeitinho De"
+        "inicio": 189.381,
+        "fim": 190.321,
+        "txt_inicio": 357,
+        "txt_fim": 358,
+        "texto": "voar"
       },
       {
         "indices": [
           37
         ],
-        "inicio": 141.41,
-        "fim": 145.25,
-        "txt_inicio": 238,
-        "txt_fim": 246,
-        "texto": "falar no telefone Besteirinhas pra me provocar Quando"
+        "inicio": 191.022,
+        "fim": 196.264,
+        "txt_inicio": 137,
+        "txt_fim": 153,
+        "texto": "Quem sabe um outro dia A gente possa se encontrar de novo Eu Prometo te dar"
       },
       {
         "indices": [
           38
         ],
-        "inicio": 145.25,
-        "fim": 147.01,
-        "txt_inicio": 246,
-        "txt_fim": 254,
-        "texto": "eu te pegar Cê tá perdida Vai se"
+        "inicio": 196.324,
+        "fim": 200.586,
+        "txt_inicio": 153,
+        "txt_fim": 162,
+        "texto": "carinho Mas gosto de ser sozinho Livre pra voar"
       },
       {
         "indices": [
           39
         ],
-        "inicio": 147.01,
-        "fim": 149.05,
-        "txt_inicio": 254,
-        "txt_fim": 262,
-        "texto": "arrepender de um dia ter me tirado Do"
+        "inicio": 201.878,
+        "fim": 206.342,
+        "txt_inicio": 162,
+        "txt_fim": 176,
+        "texto": "Quem sabe um outro dia A gente possa se encontrar Quando a gente se"
       },
       {
         "indices": [
           40
         ],
-        "inicio": 149.05,
-        "fim": 152.07,
-        "txt_inicio": 262,
-        "txt_fim": 270,
-        "texto": "meu lugar Peço, por favor não se apaixone"
+        "inicio": 206.382,
+        "fim": 211.187,
+        "txt_inicio": 176,
+        "txt_fim": 187,
+        "texto": "encontrar Tudo vai ser tão perfeito Eu quero te curtir demais"
       },
       {
         "indices": [
           41
         ],
-        "inicio": 152.07,
-        "fim": 154.09,
-        "txt_inicio": 270,
-        "txt_fim": 278,
-        "texto": "Pois não sou aquele homem Que um dia"
-      },
-      {
-        "indices": [
-          42
-        ],
-        "inicio": 154.09,
-        "fim": 157.23,
-        "txt_inicio": 278,
-        "txt_fim": 286,
-        "texto": "o seu pai sonhou Eu faço com jeitinho,"
-      },
-      {
-        "indices": [
-          43
-        ],
-        "inicio": 157.23,
-        "fim": 162.51,
-        "txt_inicio": 286,
-        "txt_fim": 294,
-        "texto": "gostoso Coitada de quem acreditou, No refrão! Eu"
-      },
-      {
-        "indices": [
-          44
-        ],
-        "inicio": 162.51,
-        "fim": 166.27,
-        "txt_inicio": 294,
-        "txt_fim": 302,
-        "texto": "prometo te dar carinho Mas gosto de ser"
-      },
-      {
-        "indices": [
-          45
-        ],
-        "inicio": 166.27,
-        "fim": 168.67,
-        "txt_inicio": 302,
-        "txt_fim": 310,
-        "texto": "sozinho Livre pra voar Quem sabe um outro"
-      },
-      {
-        "indices": [
-          46
-        ],
-        "inicio": 168.67,
-        "fim": 176.39,
-        "txt_inicio": 147,
-        "txt_fim": 155,
-        "texto": "de novo Eu Prometo te dar carinho Mas"
-      },
-      {
-        "indices": [
-          47
-        ],
-        "inicio": 176.39,
-        "fim": 178.97,
-        "txt_inicio": 155,
-        "txt_fim": 163,
-        "texto": "gosto de ser sozinho Livre pra voar Quem"
-      },
-      {
-        "indices": [
-          48
-        ],
-        "inicio": 178.97,
-        "fim": 181.21,
-        "txt_inicio": 332,
-        "txt_fim": 340,
-        "texto": "sabe, Quem sabe!?) Quem sabe um outro dia"
-      },
-      {
-        "indices": [
-          49
-        ],
-        "inicio": 181.21,
-        "fim": 184.97,
-        "txt_inicio": 340,
-        "txt_fim": 348,
-        "texto": "A gente possa se encontrar Eu prometo te"
-      },
-      {
-        "indices": [
-          50
-        ],
-        "inicio": 184.97,
-        "fim": 189.05,
-        "txt_inicio": 348,
-        "txt_fim": 356,
-        "texto": "dar carinho Mas gosto de ser sozinho Livre"
-      },
-      {
-        "indices": [
-          51
-        ],
-        "inicio": 189.05,
-        "fim": 192.35,
-        "txt_inicio": 356,
-        "txt_fim": 364,
-        "texto": "pra voar Quem sabe um outro dia A"
-      },
-      {
-        "indices": [
-          52
-        ],
-        "inicio": 192.35,
-        "fim": 195.87,
-        "txt_inicio": 364,
-        "txt_fim": 371,
-        "texto": "gente possa se encontrar de novo Prometo!"
-      },
-      {
-        "indices": [
-          53
-        ],
-        "inicio": 195.87,
-        "fim": 199.93,
-        "txt_inicio": 373,
-        "txt_fim": 381,
-        "texto": "dar carinho Mas gosto de ser sozinho Livre"
-      },
-      {
-        "indices": [
-          54
-        ],
-        "inicio": 199.93,
-        "fim": 203.15,
-        "txt_inicio": 381,
-        "txt_fim": 389,
-        "texto": "pra voar Quem sabe um outro dia A"
-      },
-      {
-        "indices": [
-          55
-        ],
-        "inicio": 203.15,
-        "fim": 206.27,
-        "txt_inicio": 389,
-        "txt_fim": 397,
-        "texto": "gente possa se encontrar Quando a gente se"
-      },
-      {
-        "indices": [
-          56
-        ],
-        "inicio": 206.27,
-        "fim": 209.47,
-        "txt_inicio": 397,
-        "txt_fim": 405,
-        "texto": "encontrar Tudo vai ser tão perfeito Eu quero"
-      },
-      {
-        "indices": [
-          57
-        ],
-        "inicio": 209.47,
-        "fim": 218.63,
+        "inicio": 217.533,
+        "fim": 219.134,
         "txt_inicio": null,
         "txt_fim": null,
-        "texto": "te curtir demais Valeu!"
+        "texto": "Valeu!"
       }
     ],
     "tokens_txt_sem_correspondencia": [
-      32,
-      33,
-      34,
-      35,
-      36,
-      37,
-      38,
-      39,
-      40,
-      41,
-      42,
-      43,
-      44,
-      45,
-      46,
-      47,
-      48,
-      49,
-      50,
-      51,
-      52,
-      53,
-      54,
-      55,
-      56,
-      57,
-      58,
-      59,
-      60,
-      61,
-      62,
-      63,
-      64,
-      65,
-      66,
-      67,
-      68,
-      69,
-      70,
-      71,
-      72,
-      73,
-      74,
-      75,
-      76,
-      77,
-      78,
-      79,
-      80,
-      81,
-      82,
-      83,
-      84,
-      85,
-      86,
-      87,
-      88,
-      89,
-      90,
-      91,
-      92,
-      93,
-      94,
-      95,
-      96,
-      97,
-      98,
-      99,
-      100,
-      101,
-      102,
-      103,
-      130,
-      131,
-      132,
-      133,
-      134,
-      135,
-      136,
-      137,
-      138,
-      139,
-      140,
-      141,
-      142,
-      163,
-      164,
-      165,
-      166,
-      167,
-      168,
-      169,
-      170,
-      171,
-      172,
-      173,
-      174,
-      175,
-      176,
-      177,
-      178,
-      179,
-      310,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
       311,
       312,
       313,
       314,
       315,
-      316,
-      317,
       318,
-      319,
-      320,
-      321,
-      322,
-      323,
-      324,
-      325,
-      326,
-      327,
-      328,
-      329,
-      330,
-      331,
+      358,
+      359,
+      360,
+      361,
+      362,
+      363,
+      364,
+      365,
+      366,
+      367,
+      368,
+      369,
+      370,
       371,
       372,
-      405,
-      406,
+      373,
+      374,
+      375,
+      376,
+      377,
+      378,
+      379,
+      380,
+      381,
+      382,
+      383,
+      384,
+      385,
+      386,
+      387,
+      388,
+      389,
+      390,
+      391,
+      392,
       407
     ],
     "parametros": {
       "score_consulta_minimo": 0.65,
       "margem_ambiguidade": 0.025,
       "bonus_por_extremidade": 0.02,
-      "score_contexto_minimo": 0.85
+      "score_contexto_minimo": 0.85,
+      "distancia_max_palavra_isolada": 3.0,
+      "palavra_isolada_exige_exatidao": true
     }
   },
   "auditoria_estrutura": [
     {
       "bloco_srt": 1,
-      "inicio_original": 6.73,
-      "fim_original": 8.21,
-      "texto_original": "Vamos cantar!",
-      "texto_publicado": "Vamos cantar!",
+      "inicio_original": 7.126,
+      "fim_original": 7.506,
+      "texto_original": "Vamos",
+      "texto_publicado": "Vamos",
       "tratamento": "original_preservado",
       "aviso": "texto_exclusivo_srt_exige_revisao"
     },
     {
       "bloco_srt": 2,
-      "inicio_original": 28.91,
-      "fim_original": 32.85,
-      "texto_original": "Quando a gente se encontrar Tudo vai ser",
-      "texto_publicado": "Quando a gente se encontrar tudo vai ser",
+      "inicio_original": 7.646,
+      "fim_original": 22.799,
+      "texto_original": "cantar!",
+      "texto_publicado": "Cantar!",
       "tratamento": "original_preservado",
-      "aviso": null
+      "aviso": "consulta_txt_ambigua_original_preservado"
     },
     {
       "bloco_srt": 3,
-      "inicio_original": 32.85,
-      "fim_original": 36.61,
-      "texto_original": "tão perfeito Eu quero te curtir demais E",
-      "texto_publicado": "Tão perfeito eu quero te curtir demais e",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 4,
-      "inicio_original": 36.61,
-      "fim_original": 39.37,
-      "texto_original": "eu vou aliviar esse aperto no meu peito",
-      "texto_publicado": "Eu vou aliviar esse aperto no meu peito",
+      "inicio_original": 30.785,
+      "fim_original": 35.329,
+      "texto_original": "Quando a gente se encontrar tudo vai ser tão perfeito Eu quero te curtir",
+      "texto_publicado": "Quando a gente se encontrar tudo vai ser tão perfeito eu quero te curtir",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
+      "bloco_srt": 4,
+      "inicio_original": 35.389,
+      "fim_original": 36.23,
+      "texto_original": "demais",
+      "texto_publicado": "Demais",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
       "bloco_srt": 5,
-      "inicio_original": 39.37,
-      "fim_original": 42.83,
-      "texto_original": "Que bondade não dá mais Se no telefone",
-      "texto_publicado": "Que vontade, não dá mais se no telefone",
+      "inicio_original": 36.542,
+      "fim_original": 42.145,
+      "texto_original": "E eu vou alívia, esse aperto no meu peito Que vontade não dá mais Se no",
+      "texto_publicado": "E eu vou aliviar esse aperto no meu peito que vontade, não dá mais se no",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 6,
-      "inicio_original": 42.83,
-      "fim_original": 45.87,
-      "texto_original": "é bom, imagine aqui bem perto Eu sentindo",
-      "texto_publicado": "É bom imagine aqui bem perto eu sentindo",
+      "inicio_original": 42.185,
+      "fim_original": 47.747,
+      "texto_original": "telefone é bom, imagine aqui bem perto Eu sentindo o teu calor Sem medo",
+      "texto_publicado": "Telefone é bom imagina aqui bem perto eu sentindo o teu calor sem medo",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 7,
-      "inicio_original": 45.87,
-      "fim_original": 48.69,
-      "texto_original": "o teu calor Sem medo de ser feliz,",
-      "texto_publicado": "O teu calor sem medo de ser feliz",
+      "inicio_original": 47.767,
+      "fim_original": 52.489,
+      "texto_original": "de ser feliz, tô com o coração aberto Com você eu tô esperto, já me",
+      "texto_publicado": "De ser feliz tô com o coração aberto com você eu tô esperto já me",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 8,
-      "inicio_original": 48.81,
-      "fim_original": 51.49,
-      "texto_original": "tô com o coração aberto Com você eu",
-      "texto_publicado": "Tô com o coração aberto com você eu",
+      "inicio_original": 52.509,
+      "fim_original": 56.291,
+      "texto_original": "acostumei com seu jeitinho De falar no telefone, descerias pra me",
+      "texto_publicado": "Acostumei com o seu jeitinho de falar no telefone besteirinhas prá me",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 9,
-      "inicio_original": 51.49,
-      "fim_original": 53.35,
-      "texto_original": "tô esperto Já me acostumei com o seu",
-      "texto_publicado": "Tô esperto já me acostumei com o seu",
+      "inicio_original": 56.351,
+      "fim_original": 60.353,
+      "texto_original": "provocar Quando eu te pego, você tá perdido, eu vou se arrepender de um",
+      "texto_publicado": "Provocar quando eu te pegar cê tá perdida, vai se arrepender de um",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 10,
-      "inicio_original": 53.35,
-      "fim_original": 56.29,
-      "texto_original": "jeitinho De falar no telefone besteirinhas pra me",
-      "texto_publicado": "Jeitinho de falar no telefone besteirinhas pra me",
+      "inicio_original": 60.413,
+      "fim_original": 62.594,
+      "texto_original": "dia Ter me tirado do meu lugar",
+      "texto_publicado": "Dia ter me tirado do meu lugar",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 11,
-      "inicio_original": 56.29,
-      "fim_original": 59.27,
-      "texto_original": "provocar Quando eu te pegar, cê tá perdida",
-      "texto_publicado": "Provocar quando eu te pegar cê tá perdida",
+      "inicio_original": 63.146,
+      "fim_original": 66.769,
+      "texto_original": "Peço, por favor, não se apaixone, pois não sou aquele homem que um dia",
+      "texto_publicado": "Peço, por favor não se apaixone pois não sou aquele homem que um dia",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 12,
-      "inicio_original": 59.27,
-      "fim_original": 61.07,
-      "texto_original": "Vai se arrepender de um dia ter me",
-      "texto_publicado": "Vai se arrepender de um dia ter me",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 13,
-      "inicio_original": 61.07,
-      "fim_original": 64.069,
-      "texto_original": "tirado do meu lugar Peço, por favor, não",
-      "texto_publicado": "Tirado do meu lugar peço, por favor não",
+      "inicio_original": 66.849,
+      "fim_original": 70.892,
+      "texto_original": "ao seu pai sonhou. Eu só tenho cara de santinho, sempre faço",
+      "texto_publicado": "O seu pai sonhou eu só tenho cara de santinho sempre faço",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
+      "bloco_srt": 13,
+      "inicio_original": 70.932,
+      "fim_original": 76.357,
+      "texto_original": "conjeitinho, coitadates quem acredito. Ei, eu, prometo que te dá",
+      "texto_publicado": "Conjeitinho, coitadates quem acredito. ei, eu, prometo que te dá",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
+    },
+    {
       "bloco_srt": 14,
-      "inicio_original": 64.069,
-      "fim_original": 66.33,
-      "texto_original": "se apaixone Pois não sou aquele homem que",
-      "texto_publicado": "Se apaixone pois não sou aquele homem que",
+      "inicio_original": 76.437,
+      "fim_original": 81.761,
+      "texto_original": "carinho. Vem, faz nosso descenso, assim, o livre pra voar. Quem sabe,",
+      "texto_publicado": "Carinho mas gosto de ser sozinho livre pra voar quem sabe",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 15,
-      "inicio_original": 66.33,
-      "fim_original": 68.85,
-      "texto_original": "um dia o seu pai sonhou Eu só",
-      "texto_publicado": "Um dia o seu pai sonhou eu só",
+      "inicio_original": 82.061,
+      "fim_original": 86.745,
+      "texto_original": "quem sabe o outro dia a gente possa se encontrar de novo. Eu, prometo",
+      "texto_publicado": "Quem sabe o outro dia a gente possa se encontrar de novo. eu, prometo",
       "tratamento": "original_preservado",
-      "aviso": null
+      "aviso": "consulta_txt_ambigua_original_preservado"
     },
     {
       "bloco_srt": 16,
-      "inicio_original": 68.85,
-      "fim_original": 71.53,
-      "texto_original": "tenho cara de santinho, sempre faço com jeitinho",
-      "texto_publicado": "Tenho cara de santinho sempre faço com jeitinho",
-      "tratamento": "texto_corrigido",
-      "aviso": null
+      "inicio_original": 86.765,
+      "fim_original": 87.506,
+      "texto_original": "que te dá carinho.",
+      "texto_publicado": "Que te dá carinho.",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_preservado"
     },
     {
       "bloco_srt": 17,
-      "inicio_original": 71.53,
-      "fim_original": 76.43,
-      "texto_original": "Coitada de quem acreditou Eu prometo te dar",
-      "texto_publicado": "Coitada de quem acreditou eu prometo te dar",
+      "inicio_original": 89.147,
+      "fim_original": 92.51,
+      "texto_original": "Faz nosso descenso, assim, o livre pra voar.",
+      "texto_publicado": "Faz nosso descenso, assim, o livre pra voar.",
       "tratamento": "original_preservado",
-      "aviso": null
+      "aviso": "consulta_txt_ambigua_original_preservado"
     },
     {
       "bloco_srt": 18,
-      "inicio_original": 76.43,
-      "fim_original": 77.71,
-      "texto_original": "carinho, vem!",
-      "texto_publicado": "Carinho mas",
-      "tratamento": "texto_corrigido",
-      "aviso": null
+      "inicio_original": 93.066,
+      "fim_original": 97.848,
+      "texto_original": "Quem sabe o outro dia? Vamos juntos, palma",
+      "texto_publicado": "Quem sabe o outro dia? vamos juntos, palma",
+      "tratamento": "original_preservado",
+      "aviso": "consulta_txt_ambigua_original_preservado"
     },
     {
       "bloco_srt": 19,
-      "inicio_original": 78.11,
-      "fim_original": 80.85,
-      "texto_original": "Mas gosto de ser sozinho, livre pra voar",
-      "texto_publicado": "Mas gosto de ser sozinho livre pra voar",
+      "inicio_original": 100.29,
+      "fim_original": 103.872,
+      "texto_original": "da mão!",
+      "texto_publicado": "Dá mais",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 20,
-      "inicio_original": 80.85,
-      "fim_original": 83.29,
-      "texto_original": "Quem sabe, quem sabe o outro dia a",
-      "texto_publicado": "Quem sabe!?) quem sabe um outro dia a",
-      "tratamento": "texto_corrigido",
-      "aviso": null
+      "inicio_original": 104.592,
+      "fim_original": 106.573,
+      "texto_original": "Vamos juntos, palma da mão!",
+      "texto_publicado": "Vamos juntos, palma da mão!",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_exige_revisao"
     },
     {
       "bloco_srt": 21,
-      "inicio_original": 83.29,
-      "fim_original": 86.77,
-      "texto_original": "gente possa se encontrar de novo Eu prometo",
-      "texto_publicado": "Gente possa se encontrar de novo eu prometo",
+      "inicio_original": 118.39,
+      "fim_original": 122.853,
+      "texto_original": "Quando a gente se encontra, tudo vai ser tão perfeito Eu quero te curtir",
+      "texto_publicado": "Quando a gente se encontrar tudo vai ser tão perfeito eu quero te curtir",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 22,
-      "inicio_original": 86.77,
-      "fim_original": 88.87,
-      "texto_original": "te dar carinho, vem!",
-      "texto_publicado": "Te dar carinho, vem!",
-      "tratamento": "original_preservado",
-      "aviso": "consulta_txt_ambigua_original_preservado"
+      "inicio_original": 122.933,
+      "fim_original": 128.556,
+      "texto_original": "demais, e eu vou alívia Esse aperto no meu peito, que vontade não dá",
+      "texto_publicado": "Demais e eu vou aliviar esse aperto no meu peito que vontade, não dá",
+      "tratamento": "texto_corrigido",
+      "aviso": null
     },
     {
       "bloco_srt": 23,
-      "inicio_original": 88.87,
-      "fim_original": 92.15,
-      "texto_original": "Mas gosto de ser sozinho, livre pra voar",
-      "texto_publicado": "Mas gosto de ser sozinho livre pra voar",
+      "inicio_original": 128.616,
+      "fim_original": 133.659,
+      "texto_original": "mais Se no telefone é bom, imagine que vem perto Eu sentindo o teu",
+      "texto_publicado": "Mais se no telefone é bom imagine aqui bem perto eu sentindo o teu",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 24,
-      "inicio_original": 92.87,
-      "fim_original": 94.41,
-      "texto_original": "Quem sabe, quem sabe o outro dia a",
-      "texto_publicado": "Quem sabe!?) quem sabe um outro dia a",
+      "inicio_original": 133.739,
+      "fim_original": 139.102,
+      "texto_original": "calor, sem medo de ser feliz Tô com coração aberto Com você eu tô",
+      "texto_publicado": "Calor sem medo de ser feliz tô com o coração aberto com você eu tô",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 25,
-      "inicio_original": 94.41,
-      "fim_original": 98.05,
-      "texto_original": "gente possa se encontrar Lê, lê, lê, lê,",
-      "texto_publicado": "Gente possa se encontrar lê, lê, lê, lê,",
-      "tratamento": "original_preservado",
-      "aviso": "consulta_txt_ambigua_original_preservado"
+      "inicio_original": 139.163,
+      "fim_original": 142.645,
+      "texto_original": "esperto já, me acostumei com seu jeitinho Que falar no telefone,",
+      "texto_publicado": "Esperto já me acostumei com o seu jeitinho de falar no telefone",
+      "tratamento": "texto_corrigido",
+      "aviso": null
     },
     {
       "bloco_srt": 26,
-      "inicio_original": 98.05,
-      "fim_original": 101.55,
-      "texto_original": "lê, lê, lê, lê, lê, lê...",
-      "texto_publicado": "Lê, lê, lê, lê, lê, lê...",
-      "tratamento": "original_preservado",
-      "aviso": "texto_exclusivo_srt_exige_revisao"
+      "inicio_original": 142.685,
+      "fim_original": 144.546,
+      "texto_original": "besteirinhas pra me provocar",
+      "texto_publicado": "Besteirinhas pra me provocar",
+      "tratamento": "texto_corrigido",
+      "aviso": null
     },
     {
       "bloco_srt": 27,
-      "inicio_original": 104.17,
-      "fim_original": 106.89,
-      "texto_original": "Vamos juntos, palma na mão, vê!",
-      "texto_publicado": "Vamos juntos, palma na mão, vê!",
-      "tratamento": "original_preservado",
-      "aviso": "texto_exclusivo_srt_exige_revisao"
+      "inicio_original": 145.066,
+      "fim_original": 148.369,
+      "texto_original": "Quando eu te pegar, se tá perdida Vai se arrepender de um dia Ter me",
+      "texto_publicado": "Quando eu te pegar cê tá perdida vai se arrepender de um dia ter me",
+      "tratamento": "texto_corrigido",
+      "aviso": null
     },
     {
       "bloco_srt": 28,
-      "inicio_original": 107.77,
-      "fim_original": 110.29,
-      "texto_original": "Lê, lê, lê, lê, lê, lê, lê, lê,",
-      "texto_publicado": "Lê, lê, lê, lê, lê, lê, lê, lê,",
-      "tratamento": "original_preservado",
-      "aviso": "texto_exclusivo_srt_exige_revisao"
+      "inicio_original": 148.449,
+      "fim_original": 153.033,
+      "texto_original": "tirado do meu lugar Peço por favor, não se apaixone Pois não sou aquele",
+      "texto_publicado": "Tirado do meu lugar peço, por favor não se apaixone pois não sou aquele",
+      "tratamento": "texto_corrigido",
+      "aviso": null
     },
     {
       "bloco_srt": 29,
-      "inicio_original": 110.49,
-      "fim_original": 113.55,
-      "texto_original": "lê, lê...",
-      "texto_publicado": "E eu",
+      "inicio_original": 153.093,
+      "fim_original": 158.137,
+      "texto_original": "homem Que um dia ao seu faz sonhão Eu faço com jeitinho, gostoso",
+      "texto_publicado": "Homem que um dia o seu pai sonhou eu faço com jeitinho, gostoso",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 30,
-      "inicio_original": 117.97,
-      "fim_original": 120.43,
-      "texto_original": "Quando a gente se encontrar, tudo vai ser",
-      "texto_publicado": "Quando a gente se encontrar tudo vai ser",
+      "inicio_original": 158.718,
+      "fim_original": 161.1,
+      "texto_original": "Coitada de quem acreditou, não é frão!",
+      "texto_publicado": "Coitada de quem acreditou, no refrão!",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 31,
-      "inicio_original": 120.43,
-      "fim_original": 124.17,
-      "texto_original": "tão perfeito Eu quero te curtir demais E",
-      "texto_publicado": "Tão perfeito eu quero te curtir demais e",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 32,
-      "inicio_original": 124.17,
-      "fim_original": 126.89,
-      "texto_original": "eu vou aliviar esse aperto no meu peito",
-      "texto_publicado": "Eu vou aliviar esse aperto no meu peito",
+      "inicio_original": 162.1,
+      "fim_original": 168.046,
+      "texto_original": "Eu prometo te dar carinho Mas eu sou de senso, assim, um livre pra quem",
+      "texto_publicado": "Eu prometo te dar carinho mas gosto de ser sozinho livre pra voar quem",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
+      "bloco_srt": 32,
+      "inicio_original": 168.106,
+      "fim_original": 170.267,
+      "texto_original": "sabe um outro dia",
+      "texto_publicado": "Sabe um outro dia",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
       "bloco_srt": 33,
-      "inicio_original": 126.89,
-      "fim_original": 130.27,
-      "texto_original": "Que vontade não dá mais Se no telefone",
-      "texto_publicado": "Que vontade, não dá mais se no telefone",
+      "inicio_original": 171.849,
+      "fim_original": 172.629,
+      "texto_original": "De novo",
+      "texto_publicado": "De novo! (",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 34,
-      "inicio_original": 130.27,
-      "fim_original": 133.35,
-      "texto_original": "é bom, imagine aqui bem perto Eu sentindo",
-      "texto_publicado": "É bom imagine aqui bem perto eu sentindo",
+      "inicio_original": 173.514,
+      "fim_original": 178.916,
+      "texto_original": "Prometo te dar carinho Mas eu sou de ser sozinho, livre pra voar Quem",
+      "texto_publicado": "Prometo te dar carinho mas gosto de ser sozinho livre pra voar (quem",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 35,
-      "inicio_original": 133.35,
-      "fim_original": 136.31,
-      "texto_original": "teu calor Sem medo de ser feliz, tô",
-      "texto_publicado": "Teu calor sem medo de ser feliz tô",
+      "inicio_original": 179.016,
+      "fim_original": 182.718,
+      "texto_original": "sabe? Quem sabe? Quem sabe outro dia a gente possa se encontrar Eu!",
+      "texto_publicado": "Sabe, quem sabe!?) quem sabe um outro dia a gente possa se encontrar eu",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 36,
-      "inicio_original": 136.31,
-      "fim_original": 139.07,
-      "texto_original": "com o coração aberto Com você eu tô",
-      "texto_publicado": "Com o coração aberto com você eu tô",
+      "inicio_original": 184.199,
+      "fim_original": 189.321,
+      "texto_original": "Prometo te dar carinho, carinho Mas eu sou de ser sozinho, livre pra",
+      "texto_publicado": "Prometo te dar carinho, carinho mas eu sou de ser sozinho, livre pra",
+      "tratamento": "original_preservado",
+      "aviso": "texto_exclusivo_srt_preservado"
+    },
+    {
+      "bloco_srt": 37,
+      "inicio_original": 189.381,
+      "fim_original": 190.321,
+      "texto_original": "voar",
+      "texto_publicado": "Voar",
       "tratamento": "original_preservado",
       "aviso": null
     },
     {
-      "bloco_srt": 37,
-      "inicio_original": 139.07,
-      "fim_original": 141.41,
-      "texto_original": "esperto, já me acostumei com seu jeitinho De",
-      "texto_publicado": "Esperto já me acostumei com o seu jeitinho de",
-      "tratamento": "texto_corrigido",
-      "aviso": null
-    },
-    {
       "bloco_srt": 38,
-      "inicio_original": 141.41,
-      "fim_original": 145.25,
-      "texto_original": "falar no telefone besteirinhas pra me provocar Quando",
-      "texto_publicado": "Falar no telefone besteirinhas pra me provocar quando",
+      "inicio_original": 191.022,
+      "fim_original": 196.264,
+      "texto_original": "Quem sabe outro dia a gente possa se encontrar de novo Prometo te dar",
+      "texto_publicado": "Quem sabe um outro dia a gente possa se encontrar de novo eu prometo te dar",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 39,
-      "inicio_original": 145.25,
-      "fim_original": 147.01,
-      "texto_original": "eu te pegar, cê tá perdida Vai se",
-      "texto_publicado": "Eu te pegar cê tá perdida vai se",
+      "inicio_original": 196.324,
+      "fim_original": 200.586,
+      "texto_original": "carinho Mas eu sou de ser sozinho, livre pra voar",
+      "texto_publicado": "Carinho mas gosto de ser sozinho livre pra voar",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 40,
-      "inicio_original": 147.01,
-      "fim_original": 149.05,
-      "texto_original": "arrepender de um dia ter me tirado do",
-      "texto_publicado": "Arrepender de um dia ter me tirado do",
+      "inicio_original": 201.878,
+      "fim_original": 206.342,
+      "texto_original": "Quem sabe um outro dia a gente possa se encontrar Quando a gente se",
+      "texto_publicado": "Quem sabe um outro dia a gente possa se encontrar quando a gente se",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 41,
-      "inicio_original": 149.05,
-      "fim_original": 152.07,
-      "texto_original": "meu lugar Peço por favor, não se apaixone",
-      "texto_publicado": "Meu lugar peço, por favor não se apaixone",
+      "inicio_original": 206.382,
+      "fim_original": 211.187,
+      "texto_original": "encontrar tudo vai ser tão perfeito Eu quero te curtir demais",
+      "texto_publicado": "Encontrar tudo vai ser tão perfeito eu quero te curtir demais",
       "tratamento": "texto_corrigido",
       "aviso": null
     },
     {
       "bloco_srt": 42,
-      "inicio_original": 152.07,
-      "fim_original": 154.09,
-      "texto_original": "Pois não sou aquele homem que um dia",
-      "texto_publicado": "Pois não sou aquele homem que um dia",
-      "tratamento": "texto_corrigido",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 43,
-      "inicio_original": 154.09,
-      "fim_original": 157.23,
-      "texto_original": "o seu pai sonhou Eu faço com jeitinho",
-      "texto_publicado": "O seu pai sonhou eu faço com jeitinho,",
-      "tratamento": "texto_corrigido",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 44,
-      "inicio_original": 157.23,
-      "fim_original": 162.51,
-      "texto_original": "gostoso Coitada de quem acreditou no refrão Eu",
-      "texto_publicado": "Gostoso coitada de quem acreditou, no refrão! eu",
-      "tratamento": "texto_corrigido",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 45,
-      "inicio_original": 162.51,
-      "fim_original": 166.27,
-      "texto_original": "prometo te dar carinho Mas gosto de ser",
-      "texto_publicado": "Prometo te dar carinho mas gosto de ser",
+      "inicio_original": 217.533,
+      "fim_original": 219.134,
+      "texto_original": "Valeu!",
+      "texto_publicado": "Valeu!",
       "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 46,
-      "inicio_original": 166.27,
-      "fim_original": 168.67,
-      "texto_original": "sozinho, livre pra voar Quem sabe um outro",
-      "texto_publicado": "Sozinho livre pra voar quem sabe um outro",
-      "tratamento": "texto_corrigido",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 47,
-      "inicio_original": 168.67,
-      "fim_original": 176.39,
-      "texto_original": "dia, de novo Prometo te dar carinho Mas",
-      "texto_publicado": "Dia, de novo prometo te dar carinho mas",
-      "tratamento": "original_preservado",
-      "aviso": "texto_exclusivo_srt_preservado"
-    },
-    {
-      "bloco_srt": 48,
-      "inicio_original": 176.39,
-      "fim_original": 178.97,
-      "texto_original": "gosto de ser sozinho, livre pra voar Quem",
-      "texto_publicado": "Gosto de ser sozinho livre pra voar quem",
-      "tratamento": "texto_corrigido",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 49,
-      "inicio_original": 178.97,
-      "fim_original": 181.21,
-      "texto_original": "sabe, quem sabe Quem sabe um outro dia",
-      "texto_publicado": "Sabe, quem sabe!?) quem sabe um outro dia",
-      "tratamento": "texto_corrigido",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 50,
-      "inicio_original": 181.21,
-      "fim_original": 184.97,
-      "texto_original": "a gente possa se encontrar Eu prometo te",
-      "texto_publicado": "A gente possa se encontrar eu prometo te",
-      "tratamento": "texto_corrigido",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 51,
-      "inicio_original": 184.97,
-      "fim_original": 189.05,
-      "texto_original": "dar carinho Mas gosto de ser sozinho, livre",
-      "texto_publicado": "Dar carinho mas gosto de ser sozinho livre",
-      "tratamento": "texto_corrigido",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 52,
-      "inicio_original": 189.05,
-      "fim_original": 192.35,
-      "texto_original": "pra voar Quem sabe um outro dia a",
-      "texto_publicado": "Pra voar quem sabe um outro dia a",
-      "tratamento": "texto_corrigido",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 53,
-      "inicio_original": 192.35,
-      "fim_original": 195.87,
-      "texto_original": "gente possa se encontrar de novo Prometo te",
-      "texto_publicado": "Gente possa se encontrar de novo prometo te",
-      "tratamento": "original_preservado",
-      "aviso": "texto_exclusivo_srt_preservado"
-    },
-    {
-      "bloco_srt": 54,
-      "inicio_original": 195.87,
-      "fim_original": 199.93,
-      "texto_original": "dar carinho Mas gosto de ser sozinho, livre",
-      "texto_publicado": "Dar carinho mas gosto de ser sozinho livre",
-      "tratamento": "texto_corrigido",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 55,
-      "inicio_original": 199.93,
-      "fim_original": 203.15,
-      "texto_original": "pra voar Quem sabe um outro dia a",
-      "texto_publicado": "Pra voar quem sabe um outro dia a",
-      "tratamento": "texto_corrigido",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 56,
-      "inicio_original": 203.15,
-      "fim_original": 206.27,
-      "texto_original": "gente possa se encontrar Quando a gente se",
-      "texto_publicado": "Gente possa se encontrar quando a gente se",
-      "tratamento": "original_preservado",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 57,
-      "inicio_original": 206.27,
-      "fim_original": 209.47,
-      "texto_original": "encontrar, tudo vai ser tão perfeito Eu quero",
-      "texto_publicado": "Encontrar tudo vai ser tão perfeito eu quero",
-      "tratamento": "texto_corrigido",
-      "aviso": null
-    },
-    {
-      "bloco_srt": 58,
-      "inicio_original": 209.47,
-      "fim_original": 218.63,
-      "texto_original": "te curtir demais Valeu!",
-      "texto_publicado": "Te curtir demais valeu!",
-      "tratamento": "original_preservado",
-      "aviso": "consulta_txt_ambigua_original_preservado"
+      "aviso": "texto_exclusivo_srt_exige_revisao"
     }
   ],
   "recuperacoes": [
     {
       "id": 1,
-      "txt_inicio": 32,
-      "txt_fim": 204,
-      "inicio": 42.83,
-      "fim": 42.83,
-      "bloco_anterior": 5,
-      "bloco_seguinte": 6,
-      "limite_busca": 90.0,
-      "motivo_nao_pesquisado": "sem_espaco_temporal_entre_blocos",
-      "estado": "nao_pesquisado",
-      "tentativas": [],
-      "inseridos": [],
-      "tokens_recuperados": []
+      "txt_inicio": 311,
+      "txt_fim": 316,
+      "inicio": 170.267,
+      "fim": 171.849,
+      "bloco_anterior": 32,
+      "bloco_seguinte": 33,
+      "ocupados": [],
+      "limite_busca": 30.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "recuperado",
+      "tentativas": [
+        {
+          "janela": [
+            170.267,
+            171.849
+          ],
+          "texto": "a gente possa se encontrar",
+          "palavras": [
+            {
+              "texto": "a",
+              "inicio": 170.267,
+              "fim": 170.409,
+              "score": 0.857
+            },
+            {
+              "texto": "gente",
+              "inicio": 170.47,
+              "fim": 170.774,
+              "score": 0.45
+            },
+            {
+              "texto": "possa",
+              "inicio": 170.835,
+              "fim": 171.261,
+              "score": 0.542
+            },
+            {
+              "texto": "se",
+              "inicio": 171.322,
+              "fim": 171.383,
+              "score": 0.25
+            },
+            {
+              "texto": "encontrar",
+              "inicio": 171.403,
+              "fim": 171.849,
+              "score": 0.293
+            }
+          ]
+        }
+      ],
+      "inseridos": [
+        {
+          "inicio": 170.267,
+          "fim": 171.849,
+          "texto": "a gente possa se encontrar,",
+          "origem": "insercao_acustica",
+          "lacuna": 1,
+          "txt_inicio": 311,
+          "txt_fim": 316,
+          "score_minimo": 0.25,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 2
+        }
+      ],
+      "tokens_recuperados": [
+        311,
+        312,
+        313,
+        314,
+        315
+      ],
+      "texto": "a gente possa se encontrar,"
     },
     {
       "id": 2,
-      "txt_inicio": 130,
-      "txt_fim": 154,
-      "inicio": 77.71,
-      "fim": 78.11,
-      "bloco_anterior": 18,
-      "bloco_seguinte": 19,
-      "limite_busca": 48.0,
+      "txt_inicio": 318,
+      "txt_fim": 319,
+      "inicio": 172.629,
+      "fim": 173.514,
+      "bloco_anterior": 33,
+      "bloco_seguinte": 34,
+      "ocupados": [],
+      "limite_busca": 30.0,
       "motivo_nao_pesquisado": null,
-      "estado": "pesquisado_sem_confirmacao",
+      "estado": "recuperado",
       "tentativas": [
         {
           "janela": [
-            77.71,
-            78.11
+            172.629,
+            173.514
           ],
-          "texto": "gosto de ser sozinho Livre pra voar Quem sabe um outro dia A gente possa se encontrar de novo Eu Prometo te dar carinho",
-          "palavras": []
+          "texto": "Prometo",
+          "palavras": [
+            {
+              "texto": "Prometo",
+              "inicio": 172.629,
+              "fim": 173.072,
+              "score": 0.134
+            }
+          ]
         }
       ],
-      "inseridos": [],
-      "tokens_recuperados": [],
-      "texto": "gosto de ser sozinho Livre pra voar Quem sabe um outro dia A gente possa se encontrar de novo Eu Prometo te dar carinho"
-    },
-    {
-      "id": 3,
-      "txt_inicio": 162,
-      "txt_fim": 333,
-      "inicio": 80.85,
-      "fim": 80.85,
-      "bloco_anterior": 19,
-      "bloco_seguinte": 20,
-      "limite_busca": 90.0,
-      "motivo_nao_pesquisado": "sem_espaco_temporal_entre_blocos",
-      "estado": "nao_pesquisado",
-      "tentativas": [],
-      "inseridos": [],
-      "tokens_recuperados": []
-    },
-    {
-      "id": 4,
-      "txt_inicio": 162,
-      "txt_fim": 333,
-      "inicio": 92.15,
-      "fim": 92.87,
-      "bloco_anterior": 23,
-      "bloco_seguinte": 24,
-      "limite_busca": 90.0,
-      "motivo_nao_pesquisado": null,
-      "estado": "pesquisado_sem_confirmacao",
-      "tentativas": [
+      "inseridos": [
         {
-          "janela": [
-            92.15,
-            92.87
-          ],
-          "texto": "Quem sabe um outro dia A gente possa se encontrar Quando a gente se encontrar Tudo vai ser tão perfeito Eu quero te curtir demais E eu vou aliviar Esse aperto no meu peito Que vontade não dá mais Se no telefone é bom Imagine aqui bem perto Eu sentindo o teu calor Sem medo de ser feliz Tô com o coração aberto Com você eu tô esperto Já me acostumei Com o seu jeitinho De falar no telefone Besteirinhas pra me provocar Quando eu te pegar Cê tá perdida Vai se arrepender de um dia ter me tirado Do meu lugar Peço por favor não se apaixone Pois não sou aquele homem Que um dia o seu pai sonhou Eu faço com jeitinho gostoso Coitada de quem acreditou No refrão Eu prometo te dar carinho Mas gosto de ser sozinho Livre pra voar Quem sabe um outro dia a gente possa se encontrar De novo Prometo Prometo te dar carinho Mas gosto de ser sozinho Livre pra voar Quem sabe",
-          "palavras": []
+          "inicio": 172.629,
+          "fim": 173.072,
+          "texto": "Prometo!)",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 318,
+          "txt_fim": 319,
+          "score_minimo": 0.134,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 1
         }
       ],
-      "inseridos": [],
-      "tokens_recuperados": [],
-      "texto": "Quem sabe um outro dia A gente possa se encontrar Quando a gente se encontrar Tudo vai ser tão perfeito Eu quero te curtir demais E eu vou aliviar Esse aperto no meu peito Que vontade, não dá mais Se no telefone é bom Imagine aqui bem perto Eu sentindo o teu calor Sem medo de ser feliz Tô com o coração aberto Com você eu tô esperto Já me acostumei Com o seu jeitinho De falar no telefone Besteirinhas pra me provocar Quando eu te pegar Cê tá perdida Vai se arrepender de um dia ter me tirado Do meu lugar Peço, por favor não se apaixone Pois não sou aquele homem Que um dia o seu pai sonhou Eu faço com jeitinho, gostoso Coitada de quem acreditou, No refrão! Eu prometo te dar carinho Mas gosto de ser sozinho Livre pra voar Quem sabe um outro dia a gente possa se encontrar, De novo! (Prometo!) Prometo te dar carinho Mas gosto de ser sozinho Livre pra voar (Quem sabe,"
-    },
-    {
-      "id": 5,
-      "txt_inicio": 189,
-      "txt_fim": 393,
-      "inicio": 113.55,
-      "fim": 117.97,
-      "bloco_anterior": 29,
-      "bloco_seguinte": 30,
-      "limite_busca": 90.0,
-      "motivo_nao_pesquisado": "referencias_textuais_insuficientes",
-      "estado": "nao_pesquisado",
-      "tentativas": [],
-      "inseridos": [],
-      "tokens_recuperados": []
-    },
-    {
-      "id": 6,
-      "txt_inicio": 212,
-      "txt_fim": 213,
-      "inicio": 133.35,
-      "fim": 133.35,
-      "bloco_anterior": 34,
-      "bloco_seguinte": 35,
-      "limite_busca": 30.0,
-      "motivo_nao_pesquisado": "sem_espaco_temporal_entre_blocos",
-      "estado": "nao_pesquisado",
-      "tentativas": [],
-      "inseridos": [],
-      "tokens_recuperados": []
-    },
-    {
-      "id": 7,
-      "txt_inicio": 163,
-      "txt_fim": 332,
-      "inicio": 178.97,
-      "fim": 178.97,
-      "bloco_anterior": 48,
-      "bloco_seguinte": 49,
-      "limite_busca": 90.0,
-      "motivo_nao_pesquisado": "sem_espaco_temporal_entre_blocos",
-      "estado": "nao_pesquisado",
-      "tentativas": [],
-      "inseridos": [],
-      "tokens_recuperados": []
-    },
-    {
-      "id": 8,
-      "txt_inicio": 371,
-      "txt_fim": 373,
-      "inicio": 195.87,
-      "fim": 195.87,
-      "bloco_anterior": 53,
-      "bloco_seguinte": 54,
-      "limite_busca": 30.0,
-      "motivo_nao_pesquisado": "sem_espaco_temporal_entre_blocos",
-      "estado": "nao_pesquisado",
-      "tentativas": [],
-      "inseridos": [],
-      "tokens_recuperados": []
+      "tokens_recuperados": [
+        318
+      ],
+      "texto": "Prometo!)"
     }
   ],
   "tentativas": [
     {
       "janela": [
-        77.71,
-        78.11
+        170.267,
+        171.849
       ],
-      "texto": "gosto de ser sozinho Livre pra voar Quem sabe um outro dia A gente possa se encontrar de novo Eu Prometo te dar carinho",
-      "palavras": [],
-      "lacuna": 2
+      "texto": "a gente possa se encontrar",
+      "palavras": [
+        {
+          "texto": "a",
+          "inicio": 170.267,
+          "fim": 170.409,
+          "score": 0.857
+        },
+        {
+          "texto": "gente",
+          "inicio": 170.47,
+          "fim": 170.774,
+          "score": 0.45
+        },
+        {
+          "texto": "possa",
+          "inicio": 170.835,
+          "fim": 171.261,
+          "score": 0.542
+        },
+        {
+          "texto": "se",
+          "inicio": 171.322,
+          "fim": 171.383,
+          "score": 0.25
+        },
+        {
+          "texto": "encontrar",
+          "inicio": 171.403,
+          "fim": 171.849,
+          "score": 0.293
+        }
+      ],
+      "lacuna": 1
     },
     {
       "janela": [
-        92.15,
-        92.87
+        172.629,
+        173.514
       ],
-      "texto": "Quem sabe um outro dia A gente possa se encontrar Quando a gente se encontrar Tudo vai ser tão perfeito Eu quero te curtir demais E eu vou aliviar Esse aperto no meu peito Que vontade não dá mais Se no telefone é bom Imagine aqui bem perto Eu sentindo o teu calor Sem medo de ser feliz Tô com o coração aberto Com você eu tô esperto Já me acostumei Com o seu jeitinho De falar no telefone Besteirinhas pra me provocar Quando eu te pegar Cê tá perdida Vai se arrepender de um dia ter me tirado Do meu lugar Peço por favor não se apaixone Pois não sou aquele homem Que um dia o seu pai sonhou Eu faço com jeitinho gostoso Coitada de quem acreditou No refrão Eu prometo te dar carinho Mas gosto de ser sozinho Livre pra voar Quem sabe um outro dia a gente possa se encontrar De novo Prometo Prometo te dar carinho Mas gosto de ser sozinho Livre pra voar Quem sabe",
-      "palavras": [],
-      "lacuna": 4
+      "texto": "Prometo",
+      "palavras": [
+        {
+          "texto": "Prometo",
+          "inicio": 172.629,
+          "fim": 173.072,
+          "score": 0.134
+        }
+      ],
+      "lacuna": 2
     }
   ],
   "pendencias": [
@@ -2023,624 +1511,453 @@
       "motivo": "texto_exclusivo_srt_exige_revisao"
     },
     {
-      "bloco_srt": 22,
+      "bloco_srt": 2,
       "motivo": "consulta_txt_ambigua_original_preservado"
     },
     {
-      "bloco_srt": 25,
+      "bloco_srt": 13,
       "motivo": "consulta_txt_ambigua_original_preservado"
     },
     {
-      "bloco_srt": 26,
-      "motivo": "texto_exclusivo_srt_exige_revisao"
+      "bloco_srt": 15,
+      "motivo": "consulta_txt_ambigua_original_preservado"
     },
     {
-      "bloco_srt": 27,
-      "motivo": "texto_exclusivo_srt_exige_revisao"
-    },
-    {
-      "bloco_srt": 28,
-      "motivo": "texto_exclusivo_srt_exige_revisao"
-    },
-    {
-      "bloco_srt": 47,
+      "bloco_srt": 16,
       "motivo": "texto_exclusivo_srt_preservado"
     },
     {
-      "bloco_srt": 53,
+      "bloco_srt": 17,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 18,
+      "motivo": "consulta_txt_ambigua_original_preservado"
+    },
+    {
+      "bloco_srt": 20,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
+    },
+    {
+      "bloco_srt": 36,
       "motivo": "texto_exclusivo_srt_preservado"
     },
     {
-      "bloco_srt": 58,
-      "motivo": "consulta_txt_ambigua_original_preservado"
+      "bloco_srt": 42,
+      "motivo": "texto_exclusivo_srt_exige_revisao"
     },
     {
       "lacuna": 1,
-      "motivo": "nao_pesquisado",
-      "detalhe": "sem_espaco_temporal_entre_blocos"
+      "motivo": "insercao_baixa_confianca",
+      "texto": "a gente possa se encontrar,"
     },
     {
       "lacuna": 2,
-      "motivo": "pesquisado_sem_confirmacao",
-      "detalhe": null
-    },
-    {
-      "lacuna": 3,
-      "motivo": "nao_pesquisado",
-      "detalhe": "sem_espaco_temporal_entre_blocos"
-    },
-    {
-      "lacuna": 4,
-      "motivo": "pesquisado_sem_confirmacao",
-      "detalhe": null
-    },
-    {
-      "lacuna": 5,
-      "motivo": "nao_pesquisado",
-      "detalhe": "referencias_textuais_insuficientes"
-    },
-    {
-      "lacuna": 6,
-      "motivo": "nao_pesquisado",
-      "detalhe": "sem_espaco_temporal_entre_blocos"
-    },
-    {
-      "lacuna": 7,
-      "motivo": "nao_pesquisado",
-      "detalhe": "sem_espaco_temporal_entre_blocos"
-    },
-    {
-      "lacuna": 8,
-      "motivo": "nao_pesquisado",
-      "detalhe": "sem_espaco_temporal_entre_blocos"
+      "motivo": "insercao_baixa_confianca",
+      "texto": "Prometo!)"
     },
     {
       "motivo": "texto_txt_sem_tempo",
       "tokens_txt": [
-        32,
-        33,
-        34,
-        35,
-        36,
-        37,
-        38,
-        39,
-        40,
-        41,
-        42,
-        43,
-        44,
-        45,
-        46,
-        47,
-        48,
-        49,
-        50,
-        51,
-        52,
-        53,
-        54,
-        55,
-        56,
-        57,
-        58,
-        59,
-        60,
-        61,
-        62,
-        63,
-        64,
-        65,
-        66,
-        67,
-        68,
-        69,
-        70,
-        71,
-        72,
-        73,
-        74,
-        75,
-        76,
-        77,
-        78,
-        79,
-        80,
-        81,
-        82,
-        83,
-        84,
-        85,
-        86,
-        87,
-        88,
-        89,
-        90,
-        91,
-        92,
-        93,
-        94,
-        95,
-        96,
-        97,
-        98,
-        99,
-        100,
-        101,
-        102,
-        103,
-        130,
-        131,
-        132,
-        133,
-        134,
-        135,
-        136,
-        137,
-        138,
-        139,
-        140,
-        141,
-        142,
-        163,
-        164,
-        165,
-        166,
-        167,
-        168,
-        169,
-        170,
-        171,
-        172,
-        173,
-        174,
-        175,
-        176,
-        177,
-        178,
-        179,
-        310,
-        311,
-        312,
-        313,
-        314,
-        315,
-        316,
-        317,
-        318,
-        319,
-        320,
-        321,
-        322,
-        323,
-        324,
-        325,
-        326,
-        327,
-        328,
-        329,
-        330,
-        331,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        358,
+        359,
+        360,
+        361,
+        362,
+        363,
+        364,
+        365,
+        366,
+        367,
+        368,
+        369,
+        370,
         371,
         372,
-        405,
-        406,
+        373,
+        374,
+        375,
+        376,
+        377,
+        378,
+        379,
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389,
+        390,
+        391,
+        392,
         407
       ]
     }
   ],
   "blocos": [
     {
-      "inicio": 6.73,
-      "fim": 8.21,
-      "texto": "Vamos cantar!",
+      "inicio": 7.126,
+      "fim": 7.506,
+      "texto": "Vamos",
       "origem": "original_preservado",
       "bloco_original": 1
     },
     {
-      "inicio": 28.91,
-      "fim": 32.85,
-      "texto": "Quando a gente se encontrar tudo vai ser",
+      "inicio": 7.646,
+      "fim": 22.799,
+      "texto": "Cantar!",
       "origem": "original_preservado",
       "bloco_original": 2
     },
     {
-      "inicio": 32.85,
-      "fim": 36.61,
-      "texto": "Tão perfeito eu quero te curtir demais e",
-      "origem": "original_preservado",
+      "inicio": 30.785,
+      "fim": 35.329,
+      "texto": "Quando a gente se encontrar tudo vai ser tão perfeito eu quero te curtir",
+      "origem": "texto_corrigido",
       "bloco_original": 3
     },
     {
-      "inicio": 36.61,
-      "fim": 39.37,
-      "texto": "Eu vou aliviar esse aperto no meu peito",
-      "origem": "texto_corrigido",
+      "inicio": 35.389,
+      "fim": 36.23,
+      "texto": "Demais",
+      "origem": "original_preservado",
       "bloco_original": 4
     },
     {
-      "inicio": 39.37,
-      "fim": 42.83,
-      "texto": "Que vontade, não dá mais se no telefone",
+      "inicio": 36.542,
+      "fim": 42.145,
+      "texto": "E eu vou aliviar esse aperto no meu peito que vontade, não dá mais se no",
       "origem": "texto_corrigido",
       "bloco_original": 5
     },
     {
-      "inicio": 42.83,
-      "fim": 45.87,
-      "texto": "É bom imagine aqui bem perto eu sentindo",
+      "inicio": 42.185,
+      "fim": 47.747,
+      "texto": "Telefone é bom imagina aqui bem perto eu sentindo o teu calor sem medo",
       "origem": "texto_corrigido",
       "bloco_original": 6
     },
     {
-      "inicio": 45.87,
-      "fim": 48.69,
-      "texto": "O teu calor sem medo de ser feliz",
+      "inicio": 47.767,
+      "fim": 52.489,
+      "texto": "De ser feliz tô com o coração aberto com você eu tô esperto já me",
       "origem": "texto_corrigido",
       "bloco_original": 7
     },
     {
-      "inicio": 48.81,
-      "fim": 51.49,
-      "texto": "Tô com o coração aberto com você eu",
+      "inicio": 52.509,
+      "fim": 56.291,
+      "texto": "Acostumei com o seu jeitinho de falar no telefone besteirinhas prá me",
       "origem": "texto_corrigido",
       "bloco_original": 8
     },
     {
-      "inicio": 51.49,
-      "fim": 53.35,
-      "texto": "Tô esperto já me acostumei com o seu",
+      "inicio": 56.351,
+      "fim": 60.353,
+      "texto": "Provocar quando eu te pegar cê tá perdida, vai se arrepender de um",
       "origem": "texto_corrigido",
       "bloco_original": 9
     },
     {
-      "inicio": 53.35,
-      "fim": 56.29,
-      "texto": "Jeitinho de falar no telefone besteirinhas pra me",
+      "inicio": 60.413,
+      "fim": 62.594,
+      "texto": "Dia ter me tirado do meu lugar",
       "origem": "texto_corrigido",
       "bloco_original": 10
     },
     {
-      "inicio": 56.29,
-      "fim": 59.27,
-      "texto": "Provocar quando eu te pegar cê tá perdida",
+      "inicio": 63.146,
+      "fim": 66.769,
+      "texto": "Peço, por favor não se apaixone pois não sou aquele homem que um dia",
       "origem": "texto_corrigido",
       "bloco_original": 11
     },
     {
-      "inicio": 59.27,
-      "fim": 61.07,
-      "texto": "Vai se arrepender de um dia ter me",
-      "origem": "original_preservado",
+      "inicio": 66.849,
+      "fim": 70.892,
+      "texto": "O seu pai sonhou eu só tenho cara de santinho sempre faço",
+      "origem": "texto_corrigido",
       "bloco_original": 12
     },
     {
-      "inicio": 61.07,
-      "fim": 64.069,
-      "texto": "Tirado do meu lugar peço, por favor não",
-      "origem": "texto_corrigido",
+      "inicio": 70.932,
+      "fim": 76.357,
+      "texto": "Conjeitinho, coitadates quem acredito. ei, eu, prometo que te dá",
+      "origem": "original_preservado",
       "bloco_original": 13
     },
     {
-      "inicio": 64.069,
-      "fim": 66.33,
-      "texto": "Se apaixone pois não sou aquele homem que",
+      "inicio": 76.437,
+      "fim": 81.761,
+      "texto": "Carinho mas gosto de ser sozinho livre pra voar quem sabe",
       "origem": "texto_corrigido",
       "bloco_original": 14
     },
     {
-      "inicio": 66.33,
-      "fim": 68.85,
-      "texto": "Um dia o seu pai sonhou eu só",
+      "inicio": 82.061,
+      "fim": 86.745,
+      "texto": "Quem sabe o outro dia a gente possa se encontrar de novo. eu, prometo",
       "origem": "original_preservado",
       "bloco_original": 15
     },
     {
-      "inicio": 68.85,
-      "fim": 71.53,
-      "texto": "Tenho cara de santinho sempre faço com jeitinho",
-      "origem": "texto_corrigido",
+      "inicio": 86.765,
+      "fim": 87.506,
+      "texto": "Que te dá carinho.",
+      "origem": "original_preservado",
       "bloco_original": 16
     },
     {
-      "inicio": 71.53,
-      "fim": 76.43,
-      "texto": "Coitada de quem acreditou eu prometo te dar",
+      "inicio": 89.147,
+      "fim": 92.51,
+      "texto": "Faz nosso descenso, assim, o livre pra voar.",
       "origem": "original_preservado",
       "bloco_original": 17
     },
     {
-      "inicio": 76.43,
-      "fim": 77.71,
-      "texto": "Carinho mas",
-      "origem": "texto_corrigido",
+      "inicio": 93.066,
+      "fim": 97.848,
+      "texto": "Quem sabe o outro dia? vamos juntos, palma",
+      "origem": "original_preservado",
       "bloco_original": 18
     },
     {
-      "inicio": 78.11,
-      "fim": 80.85,
-      "texto": "Mas gosto de ser sozinho livre pra voar",
+      "inicio": 100.29,
+      "fim": 103.872,
+      "texto": "Dá mais",
       "origem": "texto_corrigido",
       "bloco_original": 19
     },
     {
-      "inicio": 80.85,
-      "fim": 83.29,
-      "texto": "Quem sabe!?) quem sabe um outro dia a",
-      "origem": "texto_corrigido",
+      "inicio": 104.592,
+      "fim": 106.573,
+      "texto": "Vamos juntos, palma da mão!",
+      "origem": "original_preservado",
       "bloco_original": 20
     },
     {
-      "inicio": 83.29,
-      "fim": 86.77,
-      "texto": "Gente possa se encontrar de novo eu prometo",
+      "inicio": 118.39,
+      "fim": 122.853,
+      "texto": "Quando a gente se encontrar tudo vai ser tão perfeito eu quero te curtir",
       "origem": "texto_corrigido",
       "bloco_original": 21
     },
     {
-      "inicio": 86.77,
-      "fim": 88.87,
-      "texto": "Te dar carinho, vem!",
-      "origem": "original_preservado",
+      "inicio": 122.933,
+      "fim": 128.556,
+      "texto": "Demais e eu vou aliviar esse aperto no meu peito que vontade, não dá",
+      "origem": "texto_corrigido",
       "bloco_original": 22
     },
     {
-      "inicio": 88.87,
-      "fim": 92.15,
-      "texto": "Mas gosto de ser sozinho livre pra voar",
+      "inicio": 128.616,
+      "fim": 133.659,
+      "texto": "Mais se no telefone é bom imagine aqui bem perto eu sentindo o teu",
       "origem": "texto_corrigido",
       "bloco_original": 23
     },
     {
-      "inicio": 92.87,
-      "fim": 94.41,
-      "texto": "Quem sabe!?) quem sabe um outro dia a",
+      "inicio": 133.739,
+      "fim": 139.102,
+      "texto": "Calor sem medo de ser feliz tô com o coração aberto com você eu tô",
       "origem": "texto_corrigido",
       "bloco_original": 24
     },
     {
-      "inicio": 94.41,
-      "fim": 98.05,
-      "texto": "Gente possa se encontrar lê, lê, lê, lê,",
-      "origem": "original_preservado",
+      "inicio": 139.163,
+      "fim": 142.645,
+      "texto": "Esperto já me acostumei com o seu jeitinho de falar no telefone",
+      "origem": "texto_corrigido",
       "bloco_original": 25
     },
     {
-      "inicio": 98.05,
-      "fim": 101.55,
-      "texto": "Lê, lê, lê, lê, lê, lê...",
-      "origem": "original_preservado",
+      "inicio": 142.685,
+      "fim": 144.546,
+      "texto": "Besteirinhas pra me provocar",
+      "origem": "texto_corrigido",
       "bloco_original": 26
     },
     {
-      "inicio": 104.17,
-      "fim": 106.89,
-      "texto": "Vamos juntos, palma na mão, vê!",
-      "origem": "original_preservado",
+      "inicio": 145.066,
+      "fim": 148.369,
+      "texto": "Quando eu te pegar cê tá perdida vai se arrepender de um dia ter me",
+      "origem": "texto_corrigido",
       "bloco_original": 27
     },
     {
-      "inicio": 107.77,
-      "fim": 110.29,
-      "texto": "Lê, lê, lê, lê, lê, lê, lê, lê,",
-      "origem": "original_preservado",
+      "inicio": 148.449,
+      "fim": 153.033,
+      "texto": "Tirado do meu lugar peço, por favor não se apaixone pois não sou aquele",
+      "origem": "texto_corrigido",
       "bloco_original": 28
     },
     {
-      "inicio": 110.49,
-      "fim": 113.55,
-      "texto": "E eu",
+      "inicio": 153.093,
+      "fim": 158.137,
+      "texto": "Homem que um dia o seu pai sonhou eu faço com jeitinho, gostoso",
       "origem": "texto_corrigido",
       "bloco_original": 29
     },
     {
-      "inicio": 117.97,
-      "fim": 120.43,
-      "texto": "Quando a gente se encontrar tudo vai ser",
+      "inicio": 158.718,
+      "fim": 161.1,
+      "texto": "Coitada de quem acreditou, no refrão!",
       "origem": "texto_corrigido",
       "bloco_original": 30
     },
     {
-      "inicio": 120.43,
-      "fim": 124.17,
-      "texto": "Tão perfeito eu quero te curtir demais e",
-      "origem": "original_preservado",
+      "inicio": 162.1,
+      "fim": 168.046,
+      "texto": "Eu prometo te dar carinho mas gosto de ser sozinho livre pra voar quem",
+      "origem": "texto_corrigido",
       "bloco_original": 31
     },
     {
-      "inicio": 124.17,
-      "fim": 126.89,
-      "texto": "Eu vou aliviar esse aperto no meu peito",
-      "origem": "texto_corrigido",
+      "inicio": 168.106,
+      "fim": 170.267,
+      "texto": "Sabe um outro dia",
+      "origem": "original_preservado",
       "bloco_original": 32
     },
     {
-      "inicio": 126.89,
-      "fim": 130.27,
-      "texto": "Que vontade, não dá mais se no telefone",
+      "inicio": 170.267,
+      "fim": 171.849,
+      "texto": "A gente possa se encontrar,",
+      "origem": "insercao_acustica",
+      "lacuna": 1,
+      "txt_inicio": 311,
+      "txt_fim": 316,
+      "score_minimo": 0.25,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 2
+    },
+    {
+      "inicio": 171.849,
+      "fim": 172.629,
+      "texto": "De novo! (",
       "origem": "texto_corrigido",
       "bloco_original": 33
     },
     {
-      "inicio": 130.27,
-      "fim": 133.35,
-      "texto": "É bom imagine aqui bem perto eu sentindo",
+      "inicio": 172.629,
+      "fim": 173.072,
+      "texto": "Prometo!)",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 318,
+      "txt_fim": 319,
+      "score_minimo": 0.134,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 1
+    },
+    {
+      "inicio": 173.514,
+      "fim": 178.916,
+      "texto": "Prometo te dar carinho mas gosto de ser sozinho livre pra voar (quem",
       "origem": "texto_corrigido",
       "bloco_original": 34
     },
     {
-      "inicio": 133.35,
-      "fim": 136.31,
-      "texto": "Teu calor sem medo de ser feliz tô",
+      "inicio": 179.016,
+      "fim": 182.718,
+      "texto": "Sabe, quem sabe!?) quem sabe um outro dia a gente possa se encontrar eu",
       "origem": "texto_corrigido",
       "bloco_original": 35
     },
     {
-      "inicio": 136.31,
-      "fim": 139.07,
-      "texto": "Com o coração aberto com você eu tô",
+      "inicio": 184.199,
+      "fim": 189.321,
+      "texto": "Prometo te dar carinho, carinho mas eu sou de ser sozinho, livre pra",
       "origem": "original_preservado",
       "bloco_original": 36
     },
     {
-      "inicio": 139.07,
-      "fim": 141.41,
-      "texto": "Esperto já me acostumei com o seu jeitinho de",
-      "origem": "texto_corrigido",
+      "inicio": 189.381,
+      "fim": 190.321,
+      "texto": "Voar",
+      "origem": "original_preservado",
       "bloco_original": 37
     },
     {
-      "inicio": 141.41,
-      "fim": 145.25,
-      "texto": "Falar no telefone besteirinhas pra me provocar quando",
+      "inicio": 191.022,
+      "fim": 196.264,
+      "texto": "Quem sabe um outro dia a gente possa se encontrar de novo eu prometo te dar",
       "origem": "texto_corrigido",
       "bloco_original": 38
     },
     {
-      "inicio": 145.25,
-      "fim": 147.01,
-      "texto": "Eu te pegar cê tá perdida vai se",
+      "inicio": 196.324,
+      "fim": 200.586,
+      "texto": "Carinho mas gosto de ser sozinho livre pra voar",
       "origem": "texto_corrigido",
       "bloco_original": 39
     },
     {
-      "inicio": 147.01,
-      "fim": 149.05,
-      "texto": "Arrepender de um dia ter me tirado do",
+      "inicio": 201.878,
+      "fim": 206.342,
+      "texto": "Quem sabe um outro dia a gente possa se encontrar quando a gente se",
       "origem": "texto_corrigido",
       "bloco_original": 40
     },
     {
-      "inicio": 149.05,
-      "fim": 152.07,
-      "texto": "Meu lugar peço, por favor não se apaixone",
+      "inicio": 206.382,
+      "fim": 211.187,
+      "texto": "Encontrar tudo vai ser tão perfeito eu quero te curtir demais",
       "origem": "texto_corrigido",
       "bloco_original": 41
     },
     {
-      "inicio": 152.07,
-      "fim": 154.09,
-      "texto": "Pois não sou aquele homem que um dia",
-      "origem": "texto_corrigido",
+      "inicio": 217.533,
+      "fim": 219.134,
+      "texto": "Valeu!",
+      "origem": "original_preservado",
       "bloco_original": 42
-    },
-    {
-      "inicio": 154.09,
-      "fim": 157.23,
-      "texto": "O seu pai sonhou eu faço com jeitinho,",
-      "origem": "texto_corrigido",
-      "bloco_original": 43
-    },
-    {
-      "inicio": 157.23,
-      "fim": 162.51,
-      "texto": "Gostoso coitada de quem acreditou, no refrão! eu",
-      "origem": "texto_corrigido",
-      "bloco_original": 44
-    },
-    {
-      "inicio": 162.51,
-      "fim": 166.27,
-      "texto": "Prometo te dar carinho mas gosto de ser",
-      "origem": "original_preservado",
-      "bloco_original": 45
-    },
-    {
-      "inicio": 166.27,
-      "fim": 168.67,
-      "texto": "Sozinho livre pra voar quem sabe um outro",
-      "origem": "texto_corrigido",
-      "bloco_original": 46
-    },
-    {
-      "inicio": 168.67,
-      "fim": 176.39,
-      "texto": "Dia, de novo prometo te dar carinho mas",
-      "origem": "original_preservado",
-      "bloco_original": 47
-    },
-    {
-      "inicio": 176.39,
-      "fim": 178.97,
-      "texto": "Gosto de ser sozinho livre pra voar quem",
-      "origem": "texto_corrigido",
-      "bloco_original": 48
-    },
-    {
-      "inicio": 178.97,
-      "fim": 181.21,
-      "texto": "Sabe, quem sabe!?) quem sabe um outro dia",
-      "origem": "texto_corrigido",
-      "bloco_original": 49
-    },
-    {
-      "inicio": 181.21,
-      "fim": 184.97,
-      "texto": "A gente possa se encontrar eu prometo te",
-      "origem": "texto_corrigido",
-      "bloco_original": 50
-    },
-    {
-      "inicio": 184.97,
-      "fim": 189.05,
-      "texto": "Dar carinho mas gosto de ser sozinho livre",
-      "origem": "texto_corrigido",
-      "bloco_original": 51
-    },
-    {
-      "inicio": 189.05,
-      "fim": 192.35,
-      "texto": "Pra voar quem sabe um outro dia a",
-      "origem": "texto_corrigido",
-      "bloco_original": 52
-    },
-    {
-      "inicio": 192.35,
-      "fim": 195.87,
-      "texto": "Gente possa se encontrar de novo prometo te",
-      "origem": "original_preservado",
-      "bloco_original": 53
-    },
-    {
-      "inicio": 195.87,
-      "fim": 199.93,
-      "texto": "Dar carinho mas gosto de ser sozinho livre",
-      "origem": "texto_corrigido",
-      "bloco_original": 54
-    },
-    {
-      "inicio": 199.93,
-      "fim": 203.15,
-      "texto": "Pra voar quem sabe um outro dia a",
-      "origem": "texto_corrigido",
-      "bloco_original": 55
-    },
-    {
-      "inicio": 203.15,
-      "fim": 206.27,
-      "texto": "Gente possa se encontrar quando a gente se",
-      "origem": "original_preservado",
-      "bloco_original": 56
-    },
-    {
-      "inicio": 206.27,
-      "fim": 209.47,
-      "texto": "Encontrar tudo vai ser tão perfeito eu quero",
-      "origem": "texto_corrigido",
-      "bloco_original": 57
-    },
-    {
-      "inicio": 209.47,
-      "fim": 218.63,
-      "texto": "Te curtir demais valeu!",
-      "origem": "original_preservado",
-      "bloco_original": 58
     }
   ],
   "configuracao_motor": {
-    "idioma": "pt",
+    "idioma": "auto",
     "dispositivo": "cpu",
-    "modelo_solicitado": null
+    "modelo_solicitado": null,
+    "selecao_por_trecho": [
+      {
+        "inicio": 170.267,
+        "fim": 171.849,
+        "linhas": [
+          {
+            "idioma": "pt",
+            "votos_pt": 1,
+            "votos_en": 0,
+            "herdado": false
+          }
+        ]
+      },
+      {
+        "inicio": 172.629,
+        "fim": 173.514,
+        "linhas": [
+          {
+            "idioma": "pt",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          }
+        ]
+      }
+    ]
   },
   "fontes": {
     "txt": {
@@ -2649,7 +1966,7 @@
     },
     "srt": {
       "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\samba-pagode\\livre-pra-voar-exaltasamba\\letra.srt",
-      "sha256": "066febdb1f415c70c52c6e386ecca52d9526eeee97f54aa5d5e5d94706d2fd37"
+      "sha256": "fa2517f35684c98f60a29b5d352457179c26d16d34ddb75d8daa7e1d2e5be28a"
     },
     "voz": {
       "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\samba-pagode\\livre-pra-voar-exaltasamba\\voz.mp3",
@@ -2658,53 +1975,27 @@
   },
   "resumo_avisos": [
     "Bloco 1: texto exclusivo srt exige revisao.",
-    "Bloco 22: consulta txt ambigua original preservado.",
-    "Bloco 25: consulta txt ambigua original preservado.",
-    "Bloco 26: texto exclusivo srt exige revisao.",
-    "Bloco 27: texto exclusivo srt exige revisao.",
-    "Bloco 28: texto exclusivo srt exige revisao.",
-    "Bloco 47: texto exclusivo srt preservado.",
-    "Bloco 53: texto exclusivo srt preservado.",
-    "Bloco 58: consulta txt ambigua original preservado.",
-    "Lacuna 1: nao pesquisado (00:00:42,830–00:00:42,830).",
-    "Lacuna 2: pesquisado sem confirmacao (00:01:17,710–00:01:18,110).",
-    "Lacuna 3: nao pesquisado (00:01:20,850–00:01:20,850).",
-    "Lacuna 4: pesquisado sem confirmacao (00:01:32,150–00:01:32,870).",
-    "Lacuna 5: nao pesquisado (00:01:53,550–00:01:57,970).",
-    "Lacuna 6: nao pesquisado (00:02:13,350–00:02:13,350).",
-    "Lacuna 7: nao pesquisado (00:02:58,970–00:02:58,970).",
-    "Lacuna 8: nao pesquisado (00:03:15,870–00:03:15,870).",
-    "TXT linha 7, sem tempo: é bom",
-    "TXT linha 8, sem tempo: Imagina aqui bem perto",
-    "TXT linha 9, sem tempo: Eu sentindo o teu calor",
-    "TXT linha 10, sem tempo: Sem medo de ser feliz",
-    "TXT linha 11, sem tempo: Tô com o coração aberto",
-    "TXT linha 12, sem tempo: Com você eu tô esperto",
-    "TXT linha 14, sem tempo: Já me acostumei",
-    "TXT linha 15, sem tempo: Com o seu jeitinho",
-    "TXT linha 16, sem tempo: De falar no telefone",
-    "TXT linha 17, sem tempo: Besteirinhas prá me provocar",
-    "TXT linha 18, sem tempo: Quando eu te pegar",
-    "TXT linha 19, sem tempo: Cê tá perdida vai se arrepender",
-    "TXT linha 20, sem tempo: De um dia ter me tirado do meu lugar",
-    "TXT linha 21, sem tempo: Peço por favor não se apaixone",
-    "TXT linha 22, sem tempo: Pois não sou aquele homem",
-    "TXT linha 23, sem tempo: Que",
-    "TXT linha 29, sem tempo: gosto de ser sozinho",
-    "TXT linha 30, sem tempo: Livre pra voar",
-    "TXT linha 31, sem tempo: Quem sabe um outro dia",
-    "TXT linha 32, sem tempo: A",
-    "TXT linha 37, sem tempo: sabe um outro dia",
-    "TXT linha 38, sem tempo: A gente possa se encontrar",
-    "TXT linha 40, sem tempo: Quando a gente se encontrar",
-    "TXT linha 41, sem tempo: Tudo vai ser",
-    "TXT linha 71, sem tempo: dia a gente possa se encontrar",
-    "TXT linha 72, sem tempo: De novo Prometo",
-    "TXT linha 73, sem tempo: Prometo te dar carinho",
-    "TXT linha 74, sem tempo: Mas gosto de ser sozinho",
-    "TXT linha 75, sem tempo: Livre pra voar",
-    "TXT linha 76, sem tempo: Quem",
-    "TXT linha 85, sem tempo: Prometo te",
-    "TXT linha 93, sem tempo: te curtir demais"
+    "Bloco 2: consulta txt ambigua original preservado.",
+    "Bloco 13: consulta txt ambigua original preservado.",
+    "Bloco 15: consulta txt ambigua original preservado.",
+    "Bloco 16: texto exclusivo srt preservado.",
+    "Bloco 17: consulta txt ambigua original preservado.",
+    "Bloco 18: consulta txt ambigua original preservado.",
+    "Bloco 20: texto exclusivo srt exige revisao.",
+    "Bloco 36: texto exclusivo srt preservado.",
+    "Bloco 42: texto exclusivo srt exige revisao.",
+    "Inserção em 00:02:50,267: 2 palavra(s) com baixa confiança; mantidas.",
+    "Inserção em 00:02:52,629: 1 palavra(s) com baixa confiança; mantidas.",
+    "TXT linha 25, sem tempo: com jeitinho",
+    "TXT linha 26, sem tempo: Coitada de quem acreditou",
+    "TXT linha 28, sem tempo: Eu prometo te dar",
+    "TXT linha 83, sem tempo: Quem sabe um outro dia",
+    "TXT linha 84, sem tempo: A gente possa se encontrar de novo",
+    "TXT linha 85, sem tempo: Prometo Prometo te dar carinho",
+    "TXT linha 86, sem tempo: Mas gosto de ser sozinho",
+    "TXT linha 87, sem tempo: Livre pra voar",
+    "TXT linha 88, sem tempo: Quem sabe um outro dia",
+    "TXT linha 89, sem tempo: A gente possa se encontrar",
+    "TXT linha 93, sem tempo: demais"
   ]
 }

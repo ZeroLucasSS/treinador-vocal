@@ -1,0 +1,2556 @@
+{
+  "versao": 1,
+  "fontes": {
+    "consolidada": "cab57569cabda12371b786c4d34f1a8253b2fe0a1753a8adaccb0ff98d18985e",
+    "txt": "b5156171876517efcfcf0f3676cce4b819dc9256b769c38db8155fb0663813c9",
+    "srt": "17e39783c99995d2d24ff5c6dde2386449e79f61c7553e65f64096d606d754fd",
+    "voz": "71d6893fe270503216341e5eacb4ab32b48fc1918f4c07d6e057546ea7e2d85a"
+  },
+  "criado": "2026-10-14T22:44:00.584244+00:00",
+  "blocos": [
+    {
+      "id": "srt:1",
+      "inicio": 3.031,
+      "fim": 3.6310000000000002,
+      "texto": "If",
+      "palavras": []
+    },
+    {
+      "id": "srt:2",
+      "inicio": 4.932,
+      "fim": 5.132,
+      "texto": "I",
+      "palavras": []
+    },
+    {
+      "id": "srt:3",
+      "inicio": 7.274,
+      "fim": 13.059,
+      "texto": "Should stay i would",
+      "palavras": []
+    },
+    {
+      "id": "srt:4",
+      "inicio": 13.319,
+      "fim": 16.122,
+      "texto": "Only be in",
+      "palavras": []
+    },
+    {
+      "id": "srt:5",
+      "inicio": 17.303,
+      "fim": 20.926,
+      "texto": "Your way",
+      "palavras": []
+    },
+    {
+      "id": "srt:6",
+      "inicio": 22.027,
+      "fim": 24.669,
+      "texto": "So i will go,",
+      "palavras": []
+    },
+    {
+      "id": "srt:7",
+      "inicio": 25.97,
+      "fim": 27.431,
+      "texto": "But i know",
+      "palavras": []
+    },
+    {
+      "id": "srt:8",
+      "inicio": 29.953,
+      "fim": 30.754,
+      "texto": "I'll think of you",
+      "palavras": []
+    },
+    {
+      "texto": "Every step of",
+      "inicio": 31.554,
+      "fim": 34.275,
+      "palavras": [
+        {
+          "texto": "Every",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": 32.3,
+          "fim": 32.363,
+          "score": 0.83,
+          "origem": "alinhador"
+        },
+        {
+          "texto": "step",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": 32.803,
+          "fim": 33.166,
+          "score": 0.811,
+          "origem": "alinhador"
+        },
+        {
+          "texto": "of",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": 33.166,
+          "fim": 33.987,
+          "score": 0.376,
+          "origem": "alinhador"
+        }
+      ],
+      "id": "edicao:editar:srt:9:1:0"
+    },
+    {
+      "id": "srt:11",
+      "inicio": 35.275,
+      "fim": 38.315,
+      "texto": "The way",
+      "palavras": []
+    },
+    {
+      "id": "srt:12",
+      "inicio": 44.756,
+      "fim": 55.438,
+      "texto": "And i will always love you",
+      "palavras": []
+    },
+    {
+      "id": "srt:13",
+      "inicio": 55.458,
+      "fim": 68.16,
+      "texto": "I will always love you",
+      "palavras": []
+    },
+    {
+      "id": "srt:14",
+      "inicio": 68.74,
+      "fim": 76.321,
+      "texto": "You, my darling, you",
+      "palavras": []
+    },
+    {
+      "id": "srt:15",
+      "inicio": 78.602,
+      "fim": 83.863,
+      "texto": "Bittersweet memories",
+      "palavras": []
+    },
+    {
+      "id": "srt:16",
+      "inicio": 85.823,
+      "fim": 92.444,
+      "texto": "That is all i'm taking with me",
+      "palavras": []
+    },
+    {
+      "id": "srt:17",
+      "inicio": 93.264,
+      "fim": 98.405,
+      "texto": "So goodbye, please, don't cry",
+      "palavras": []
+    },
+    {
+      "id": "srt:18",
+      "inicio": 100.165,
+      "fim": 102.846,
+      "texto": "We both know i'm not what",
+      "palavras": []
+    },
+    {
+      "id": "srt:19",
+      "inicio": 102.865,
+      "fim": 103.049,
+      "texto": "You",
+      "palavras": []
+    },
+    {
+      "id": "srt:20",
+      "inicio": 104.106,
+      "fim": 106.786,
+      "texto": "You need",
+      "palavras": []
+    },
+    {
+      "id": "srt:21",
+      "inicio": 107.586,
+      "fim": 117.088,
+      "texto": "And i will always love you",
+      "palavras": []
+    },
+    {
+      "id": "srt:22",
+      "inicio": 119.488,
+      "fim": 129.17,
+      "texto": "I will always love you, oh",
+      "palavras": []
+    },
+    {
+      "id": "srt:23",
+      "inicio": 157.915,
+      "fim": 162.315,
+      "texto": "I hope life treats you kind",
+      "palavras": []
+    },
+    {
+      "id": "srt:24",
+      "inicio": 164.456,
+      "fim": 171.117,
+      "texto": "And i hope you'll have all you've dreamed of",
+      "palavras": []
+    },
+    {
+      "id": "srt:25",
+      "inicio": 171.757,
+      "fim": 177.238,
+      "texto": "And i wished you joy and happiness",
+      "palavras": []
+    },
+    {
+      "id": "srt:26",
+      "inicio": 178.518,
+      "fim": 180.023,
+      "texto": "But above all this,",
+      "palavras": []
+    },
+    {
+      "id": "srt:27",
+      "inicio": 180.946,
+      "fim": 181.488,
+      "texto": "I wish you",
+      "palavras": []
+    },
+    {
+      "id": "srt:28",
+      "inicio": 182.948,
+      "fim": 186.188,
+      "texto": "Love",
+      "palavras": []
+    },
+    {
+      "id": "srt:29",
+      "inicio": 190.549,
+      "fim": 199.83,
+      "texto": "And i will always love you",
+      "palavras": []
+    },
+    {
+      "id": "srt:30",
+      "inicio": 200.85,
+      "fim": 206.55,
+      "texto": "I will always love you",
+      "palavras": []
+    },
+    {
+      "id": "srt:31",
+      "inicio": 207.971,
+      "fim": 214.871,
+      "texto": "I will always love you",
+      "palavras": []
+    },
+    {
+      "id": "srt:32",
+      "inicio": 214.891,
+      "fim": 222.752,
+      "texto": "I will always love you",
+      "palavras": []
+    },
+    {
+      "id": "srt:33",
+      "inicio": 223.612,
+      "fim": 229.753,
+      "texto": "I will always love you",
+      "palavras": []
+    },
+    {
+      "id": "srt:34",
+      "inicio": 230.313,
+      "fim": 246.874,
+      "texto": "I, i will always love you, you",
+      "palavras": []
+    },
+    {
+      "id": "srt:35",
+      "inicio": 248.274,
+      "fim": 252.095,
+      "texto": "Darling, i love you",
+      "palavras": []
+    },
+    {
+      "id": "srt:36",
+      "inicio": 252.295,
+      "fim": 258.755,
+      "texto": "I'll always, i'll always love you",
+      "palavras": []
+    }
+  ],
+  "decisoes": {
+    "editar:srt:10": {
+      "acao": "remover",
+      "alvos": [
+        "srt:10"
+      ],
+      "novos": [],
+      "data": "2026-10-14T22:48:26.760646+00:00"
+    },
+    "editar:srt:9": {
+      "acao": "corrigir",
+      "alvos": [
+        "srt:9"
+      ],
+      "novos": [
+        {
+          "texto": "Every step of",
+          "inicio": 31.554,
+          "fim": 34.275,
+          "palavras": [
+            {
+              "texto": "Every",
+              "incluir": true,
+              "confirmado": false,
+              "inicio": 32.3,
+              "fim": 32.363,
+              "score": 0.83,
+              "origem": "alinhador"
+            },
+            {
+              "texto": "step",
+              "incluir": true,
+              "confirmado": false,
+              "inicio": 32.803,
+              "fim": 33.166,
+              "score": 0.811,
+              "origem": "alinhador"
+            },
+            {
+              "texto": "of",
+              "incluir": true,
+              "confirmado": false,
+              "inicio": 33.166,
+              "fim": 33.987,
+              "score": 0.376,
+              "origem": "alinhador"
+            }
+          ]
+        }
+      ],
+      "data": "2026-10-14T22:56:24.292148+00:00"
+    },
+    "txt:23:25": {
+      "acao": "associar",
+      "alvos": [
+        "edicao:editar:srt:9:1:0"
+      ],
+      "novos": [],
+      "data": "2026-10-14T23:00:35.433097+00:00"
+    },
+    "txt:62:63": {
+      "acao": "descartar",
+      "alvos": [],
+      "novos": [],
+      "data": "2026-10-14T23:00:37.964147+00:00"
+    },
+    "pendencia:srt:10": {
+      "acao": "descartar",
+      "alvos": [],
+      "novos": [],
+      "data": "2026-10-14T23:00:40.495562+00:00"
+    },
+    "pendencia:srt:19": {
+      "acao": "descartar",
+      "alvos": [],
+      "novos": [],
+      "data": "2026-10-14T23:00:43.245566+00:00"
+    }
+  },
+  "rascunhos": {
+    "txt:23:25": {
+      "texto": "Every step of",
+      "inicio": "00:31,554",
+      "fim": "00:34,275",
+      "palavras": [
+        {
+          "texto": "Every",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": 32.3,
+          "fim": 32.363,
+          "score": 0.83,
+          "origem": "alinhador"
+        },
+        {
+          "texto": "step",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": 32.803,
+          "fim": 33.166,
+          "score": 0.811,
+          "origem": "alinhador"
+        },
+        {
+          "texto": "of",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": 33.166,
+          "fim": 33.987,
+          "score": 0.376,
+          "origem": "alinhador"
+        }
+      ],
+      "alvos": []
+    },
+    "txt:62:63": {
+      "texto": "you",
+      "inicio": "01:42,865",
+      "fim": "01:43,049",
+      "palavras": [
+        {
+          "texto": "you",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        }
+      ],
+      "alvos": []
+    },
+    "pendencia:srt:10": {
+      "texto": "Bye.",
+      "inicio": "00:33,172",
+      "fim": "00:33,666",
+      "palavras": [
+        {
+          "texto": "Bye",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        }
+      ],
+      "alvos": []
+    },
+    "pendencia:srt:19": {
+      "texto": "You",
+      "inicio": "01:42,865",
+      "fim": "01:43,049",
+      "palavras": [
+        {
+          "texto": "You",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        }
+      ],
+      "alvos": []
+    },
+    "editar:srt:1": {
+      "texto": "If",
+      "inicio": "00:03,031",
+      "fim": "00:03,631",
+      "palavras": [
+        {
+          "texto": "If",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        }
+      ],
+      "alvos": [
+        "srt:9"
+      ]
+    },
+    "editar:srt:8": {
+      "texto": "Every",
+      "inicio": "00:30,754",
+      "fim": "00:33,172",
+      "palavras": [
+        {
+          "texto": "Every",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        }
+      ],
+      "alvos": [
+        "srt:10"
+      ]
+    },
+    "editar:srt:10": {
+      "texto": "Bye.",
+      "inicio": "00:33,172",
+      "fim": "00:33,666",
+      "palavras": [
+        {
+          "texto": "Bye",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        }
+      ],
+      "alvos": []
+    },
+    "editar:srt:9": {
+      "texto": "Every step of",
+      "inicio": "00:31,554",
+      "fim": "00:34,275",
+      "palavras": [
+        {
+          "texto": "Every",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": 32.3,
+          "fim": 32.363,
+          "score": 0.83,
+          "origem": "alinhador"
+        },
+        {
+          "texto": "step",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": 32.803,
+          "fim": 33.166,
+          "score": 0.811,
+          "origem": "alinhador"
+        },
+        {
+          "texto": "of",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": 33.166,
+          "fim": 33.987,
+          "score": 0.376,
+          "origem": "alinhador"
+        }
+      ],
+      "alvos": []
+    },
+    "editar:edicao:editar:srt:9:1:0": {
+      "texto": "Every step of",
+      "inicio": "00:31,554",
+      "fim": "00:34,275",
+      "palavras": [
+        {
+          "texto": "Every",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "step",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "of",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        }
+      ],
+      "alvos": [
+        "edicao:editar:srt:9:1:0"
+      ]
+    },
+    "editar:srt:11": {
+      "texto": "The way",
+      "inicio": "00:35,275",
+      "fim": "00:38,315",
+      "palavras": [
+        {
+          "texto": "The",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        },
+        {
+          "texto": "way",
+          "incluir": true,
+          "confirmado": false,
+          "inicio": null,
+          "fim": null
+        }
+      ],
+      "alvos": [
+        "srt:11"
+      ]
+    }
+  },
+  "historico": [
+    {
+      "item": "editar:srt:10",
+      "decisao": {
+        "acao": "remover",
+        "alvos": [
+          "srt:10"
+        ],
+        "novos": [],
+        "data": "2026-10-14T22:48:26.760646+00:00"
+      },
+      "blocos_antes": [
+        {
+          "id": "srt:1",
+          "inicio": 3.031,
+          "fim": 3.6310000000000002,
+          "texto": "If",
+          "palavras": []
+        },
+        {
+          "id": "srt:2",
+          "inicio": 4.932,
+          "fim": 5.132,
+          "texto": "I",
+          "palavras": []
+        },
+        {
+          "id": "srt:3",
+          "inicio": 7.274,
+          "fim": 13.059,
+          "texto": "Should stay i would",
+          "palavras": []
+        },
+        {
+          "id": "srt:4",
+          "inicio": 13.319,
+          "fim": 16.122,
+          "texto": "Only be in",
+          "palavras": []
+        },
+        {
+          "id": "srt:5",
+          "inicio": 17.303,
+          "fim": 20.926,
+          "texto": "Your way",
+          "palavras": []
+        },
+        {
+          "id": "srt:6",
+          "inicio": 22.027,
+          "fim": 24.669,
+          "texto": "So i will go,",
+          "palavras": []
+        },
+        {
+          "id": "srt:7",
+          "inicio": 25.97,
+          "fim": 27.431,
+          "texto": "But i know",
+          "palavras": []
+        },
+        {
+          "id": "srt:8",
+          "inicio": 29.953,
+          "fim": 30.754,
+          "texto": "I'll think of you",
+          "palavras": []
+        },
+        {
+          "id": "srt:9",
+          "inicio": 30.914,
+          "fim": 32.674,
+          "texto": "Every",
+          "palavras": []
+        },
+        {
+          "id": "srt:10",
+          "inicio": 33.172,
+          "fim": 33.666,
+          "texto": "Bye.",
+          "palavras": []
+        },
+        {
+          "id": "srt:11",
+          "inicio": 35.275,
+          "fim": 38.315,
+          "texto": "The way",
+          "palavras": []
+        },
+        {
+          "id": "srt:12",
+          "inicio": 44.756,
+          "fim": 55.438,
+          "texto": "And i will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:13",
+          "inicio": 55.458,
+          "fim": 68.16,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:14",
+          "inicio": 68.74,
+          "fim": 76.321,
+          "texto": "You, my darling, you",
+          "palavras": []
+        },
+        {
+          "id": "srt:15",
+          "inicio": 78.602,
+          "fim": 83.863,
+          "texto": "Bittersweet memories",
+          "palavras": []
+        },
+        {
+          "id": "srt:16",
+          "inicio": 85.823,
+          "fim": 92.444,
+          "texto": "That is all i'm taking with me",
+          "palavras": []
+        },
+        {
+          "id": "srt:17",
+          "inicio": 93.264,
+          "fim": 98.405,
+          "texto": "So goodbye, please, don't cry",
+          "palavras": []
+        },
+        {
+          "id": "srt:18",
+          "inicio": 100.165,
+          "fim": 102.846,
+          "texto": "We both know i'm not what",
+          "palavras": []
+        },
+        {
+          "id": "srt:19",
+          "inicio": 102.865,
+          "fim": 103.049,
+          "texto": "You",
+          "palavras": []
+        },
+        {
+          "id": "srt:20",
+          "inicio": 104.106,
+          "fim": 106.786,
+          "texto": "You need",
+          "palavras": []
+        },
+        {
+          "id": "srt:21",
+          "inicio": 107.586,
+          "fim": 117.088,
+          "texto": "And i will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:22",
+          "inicio": 119.488,
+          "fim": 129.17,
+          "texto": "I will always love you, oh",
+          "palavras": []
+        },
+        {
+          "id": "srt:23",
+          "inicio": 157.915,
+          "fim": 162.315,
+          "texto": "I hope life treats you kind",
+          "palavras": []
+        },
+        {
+          "id": "srt:24",
+          "inicio": 164.456,
+          "fim": 171.117,
+          "texto": "And i hope you'll have all you've dreamed of",
+          "palavras": []
+        },
+        {
+          "id": "srt:25",
+          "inicio": 171.757,
+          "fim": 177.238,
+          "texto": "And i wished you joy and happiness",
+          "palavras": []
+        },
+        {
+          "id": "srt:26",
+          "inicio": 178.518,
+          "fim": 180.023,
+          "texto": "But above all this,",
+          "palavras": []
+        },
+        {
+          "id": "srt:27",
+          "inicio": 180.946,
+          "fim": 181.488,
+          "texto": "I wish you",
+          "palavras": []
+        },
+        {
+          "id": "srt:28",
+          "inicio": 182.948,
+          "fim": 186.188,
+          "texto": "Love",
+          "palavras": []
+        },
+        {
+          "id": "srt:29",
+          "inicio": 190.549,
+          "fim": 199.83,
+          "texto": "And i will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:30",
+          "inicio": 200.85,
+          "fim": 206.55,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:31",
+          "inicio": 207.971,
+          "fim": 214.871,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:32",
+          "inicio": 214.891,
+          "fim": 222.752,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:33",
+          "inicio": 223.612,
+          "fim": 229.753,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:34",
+          "inicio": 230.313,
+          "fim": 246.874,
+          "texto": "I, i will always love you, you",
+          "palavras": []
+        },
+        {
+          "id": "srt:35",
+          "inicio": 248.274,
+          "fim": 252.095,
+          "texto": "Darling, i love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:36",
+          "inicio": 252.295,
+          "fim": 258.755,
+          "texto": "I'll always, i'll always love you",
+          "palavras": []
+        }
+      ],
+      "decisoes_antes": {}
+    },
+    {
+      "item": "editar:srt:9",
+      "decisao": {
+        "acao": "corrigir",
+        "alvos": [
+          "srt:9"
+        ],
+        "novos": [
+          {
+            "texto": "Every step of",
+            "inicio": 31.554,
+            "fim": 34.275,
+            "palavras": [
+              {
+                "texto": "Every",
+                "incluir": true,
+                "confirmado": false,
+                "inicio": 32.3,
+                "fim": 32.363,
+                "score": 0.83,
+                "origem": "alinhador"
+              },
+              {
+                "texto": "step",
+                "incluir": true,
+                "confirmado": false,
+                "inicio": 32.803,
+                "fim": 33.166,
+                "score": 0.811,
+                "origem": "alinhador"
+              },
+              {
+                "texto": "of",
+                "incluir": true,
+                "confirmado": false,
+                "inicio": 33.166,
+                "fim": 33.987,
+                "score": 0.376,
+                "origem": "alinhador"
+              }
+            ]
+          }
+        ],
+        "data": "2026-10-14T22:56:24.292148+00:00"
+      },
+      "blocos_antes": [
+        {
+          "id": "srt:1",
+          "inicio": 3.031,
+          "fim": 3.6310000000000002,
+          "texto": "If",
+          "palavras": []
+        },
+        {
+          "id": "srt:2",
+          "inicio": 4.932,
+          "fim": 5.132,
+          "texto": "I",
+          "palavras": []
+        },
+        {
+          "id": "srt:3",
+          "inicio": 7.274,
+          "fim": 13.059,
+          "texto": "Should stay i would",
+          "palavras": []
+        },
+        {
+          "id": "srt:4",
+          "inicio": 13.319,
+          "fim": 16.122,
+          "texto": "Only be in",
+          "palavras": []
+        },
+        {
+          "id": "srt:5",
+          "inicio": 17.303,
+          "fim": 20.926,
+          "texto": "Your way",
+          "palavras": []
+        },
+        {
+          "id": "srt:6",
+          "inicio": 22.027,
+          "fim": 24.669,
+          "texto": "So i will go,",
+          "palavras": []
+        },
+        {
+          "id": "srt:7",
+          "inicio": 25.97,
+          "fim": 27.431,
+          "texto": "But i know",
+          "palavras": []
+        },
+        {
+          "id": "srt:8",
+          "inicio": 29.953,
+          "fim": 30.754,
+          "texto": "I'll think of you",
+          "palavras": []
+        },
+        {
+          "id": "srt:9",
+          "inicio": 30.914,
+          "fim": 32.674,
+          "texto": "Every",
+          "palavras": []
+        },
+        {
+          "id": "srt:11",
+          "inicio": 35.275,
+          "fim": 38.315,
+          "texto": "The way",
+          "palavras": []
+        },
+        {
+          "id": "srt:12",
+          "inicio": 44.756,
+          "fim": 55.438,
+          "texto": "And i will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:13",
+          "inicio": 55.458,
+          "fim": 68.16,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:14",
+          "inicio": 68.74,
+          "fim": 76.321,
+          "texto": "You, my darling, you",
+          "palavras": []
+        },
+        {
+          "id": "srt:15",
+          "inicio": 78.602,
+          "fim": 83.863,
+          "texto": "Bittersweet memories",
+          "palavras": []
+        },
+        {
+          "id": "srt:16",
+          "inicio": 85.823,
+          "fim": 92.444,
+          "texto": "That is all i'm taking with me",
+          "palavras": []
+        },
+        {
+          "id": "srt:17",
+          "inicio": 93.264,
+          "fim": 98.405,
+          "texto": "So goodbye, please, don't cry",
+          "palavras": []
+        },
+        {
+          "id": "srt:18",
+          "inicio": 100.165,
+          "fim": 102.846,
+          "texto": "We both know i'm not what",
+          "palavras": []
+        },
+        {
+          "id": "srt:19",
+          "inicio": 102.865,
+          "fim": 103.049,
+          "texto": "You",
+          "palavras": []
+        },
+        {
+          "id": "srt:20",
+          "inicio": 104.106,
+          "fim": 106.786,
+          "texto": "You need",
+          "palavras": []
+        },
+        {
+          "id": "srt:21",
+          "inicio": 107.586,
+          "fim": 117.088,
+          "texto": "And i will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:22",
+          "inicio": 119.488,
+          "fim": 129.17,
+          "texto": "I will always love you, oh",
+          "palavras": []
+        },
+        {
+          "id": "srt:23",
+          "inicio": 157.915,
+          "fim": 162.315,
+          "texto": "I hope life treats you kind",
+          "palavras": []
+        },
+        {
+          "id": "srt:24",
+          "inicio": 164.456,
+          "fim": 171.117,
+          "texto": "And i hope you'll have all you've dreamed of",
+          "palavras": []
+        },
+        {
+          "id": "srt:25",
+          "inicio": 171.757,
+          "fim": 177.238,
+          "texto": "And i wished you joy and happiness",
+          "palavras": []
+        },
+        {
+          "id": "srt:26",
+          "inicio": 178.518,
+          "fim": 180.023,
+          "texto": "But above all this,",
+          "palavras": []
+        },
+        {
+          "id": "srt:27",
+          "inicio": 180.946,
+          "fim": 181.488,
+          "texto": "I wish you",
+          "palavras": []
+        },
+        {
+          "id": "srt:28",
+          "inicio": 182.948,
+          "fim": 186.188,
+          "texto": "Love",
+          "palavras": []
+        },
+        {
+          "id": "srt:29",
+          "inicio": 190.549,
+          "fim": 199.83,
+          "texto": "And i will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:30",
+          "inicio": 200.85,
+          "fim": 206.55,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:31",
+          "inicio": 207.971,
+          "fim": 214.871,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:32",
+          "inicio": 214.891,
+          "fim": 222.752,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:33",
+          "inicio": 223.612,
+          "fim": 229.753,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:34",
+          "inicio": 230.313,
+          "fim": 246.874,
+          "texto": "I, i will always love you, you",
+          "palavras": []
+        },
+        {
+          "id": "srt:35",
+          "inicio": 248.274,
+          "fim": 252.095,
+          "texto": "Darling, i love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:36",
+          "inicio": 252.295,
+          "fim": 258.755,
+          "texto": "I'll always, i'll always love you",
+          "palavras": []
+        }
+      ],
+      "decisoes_antes": {
+        "editar:srt:10": {
+          "acao": "remover",
+          "alvos": [
+            "srt:10"
+          ],
+          "novos": [],
+          "data": "2026-10-14T22:48:26.760646+00:00"
+        }
+      }
+    },
+    {
+      "item": "txt:23:25",
+      "decisao": {
+        "acao": "associar",
+        "alvos": [
+          "edicao:editar:srt:9:1:0"
+        ],
+        "novos": [],
+        "data": "2026-10-14T23:00:35.433097+00:00"
+      },
+      "blocos_antes": [
+        {
+          "id": "srt:1",
+          "inicio": 3.031,
+          "fim": 3.6310000000000002,
+          "texto": "If",
+          "palavras": []
+        },
+        {
+          "id": "srt:2",
+          "inicio": 4.932,
+          "fim": 5.132,
+          "texto": "I",
+          "palavras": []
+        },
+        {
+          "id": "srt:3",
+          "inicio": 7.274,
+          "fim": 13.059,
+          "texto": "Should stay i would",
+          "palavras": []
+        },
+        {
+          "id": "srt:4",
+          "inicio": 13.319,
+          "fim": 16.122,
+          "texto": "Only be in",
+          "palavras": []
+        },
+        {
+          "id": "srt:5",
+          "inicio": 17.303,
+          "fim": 20.926,
+          "texto": "Your way",
+          "palavras": []
+        },
+        {
+          "id": "srt:6",
+          "inicio": 22.027,
+          "fim": 24.669,
+          "texto": "So i will go,",
+          "palavras": []
+        },
+        {
+          "id": "srt:7",
+          "inicio": 25.97,
+          "fim": 27.431,
+          "texto": "But i know",
+          "palavras": []
+        },
+        {
+          "id": "srt:8",
+          "inicio": 29.953,
+          "fim": 30.754,
+          "texto": "I'll think of you",
+          "palavras": []
+        },
+        {
+          "texto": "Every step of",
+          "inicio": 31.554,
+          "fim": 34.275,
+          "palavras": [
+            {
+              "texto": "Every",
+              "incluir": true,
+              "confirmado": false,
+              "inicio": 32.3,
+              "fim": 32.363,
+              "score": 0.83,
+              "origem": "alinhador"
+            },
+            {
+              "texto": "step",
+              "incluir": true,
+              "confirmado": false,
+              "inicio": 32.803,
+              "fim": 33.166,
+              "score": 0.811,
+              "origem": "alinhador"
+            },
+            {
+              "texto": "of",
+              "incluir": true,
+              "confirmado": false,
+              "inicio": 33.166,
+              "fim": 33.987,
+              "score": 0.376,
+              "origem": "alinhador"
+            }
+          ],
+          "id": "edicao:editar:srt:9:1:0"
+        },
+        {
+          "id": "srt:11",
+          "inicio": 35.275,
+          "fim": 38.315,
+          "texto": "The way",
+          "palavras": []
+        },
+        {
+          "id": "srt:12",
+          "inicio": 44.756,
+          "fim": 55.438,
+          "texto": "And i will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:13",
+          "inicio": 55.458,
+          "fim": 68.16,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:14",
+          "inicio": 68.74,
+          "fim": 76.321,
+          "texto": "You, my darling, you",
+          "palavras": []
+        },
+        {
+          "id": "srt:15",
+          "inicio": 78.602,
+          "fim": 83.863,
+          "texto": "Bittersweet memories",
+          "palavras": []
+        },
+        {
+          "id": "srt:16",
+          "inicio": 85.823,
+          "fim": 92.444,
+          "texto": "That is all i'm taking with me",
+          "palavras": []
+        },
+        {
+          "id": "srt:17",
+          "inicio": 93.264,
+          "fim": 98.405,
+          "texto": "So goodbye, please, don't cry",
+          "palavras": []
+        },
+        {
+          "id": "srt:18",
+          "inicio": 100.165,
+          "fim": 102.846,
+          "texto": "We both know i'm not what",
+          "palavras": []
+        },
+        {
+          "id": "srt:19",
+          "inicio": 102.865,
+          "fim": 103.049,
+          "texto": "You",
+          "palavras": []
+        },
+        {
+          "id": "srt:20",
+          "inicio": 104.106,
+          "fim": 106.786,
+          "texto": "You need",
+          "palavras": []
+        },
+        {
+          "id": "srt:21",
+          "inicio": 107.586,
+          "fim": 117.088,
+          "texto": "And i will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:22",
+          "inicio": 119.488,
+          "fim": 129.17,
+          "texto": "I will always love you, oh",
+          "palavras": []
+        },
+        {
+          "id": "srt:23",
+          "inicio": 157.915,
+          "fim": 162.315,
+          "texto": "I hope life treats you kind",
+          "palavras": []
+        },
+        {
+          "id": "srt:24",
+          "inicio": 164.456,
+          "fim": 171.117,
+          "texto": "And i hope you'll have all you've dreamed of",
+          "palavras": []
+        },
+        {
+          "id": "srt:25",
+          "inicio": 171.757,
+          "fim": 177.238,
+          "texto": "And i wished you joy and happiness",
+          "palavras": []
+        },
+        {
+          "id": "srt:26",
+          "inicio": 178.518,
+          "fim": 180.023,
+          "texto": "But above all this,",
+          "palavras": []
+        },
+        {
+          "id": "srt:27",
+          "inicio": 180.946,
+          "fim": 181.488,
+          "texto": "I wish you",
+          "palavras": []
+        },
+        {
+          "id": "srt:28",
+          "inicio": 182.948,
+          "fim": 186.188,
+          "texto": "Love",
+          "palavras": []
+        },
+        {
+          "id": "srt:29",
+          "inicio": 190.549,
+          "fim": 199.83,
+          "texto": "And i will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:30",
+          "inicio": 200.85,
+          "fim": 206.55,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:31",
+          "inicio": 207.971,
+          "fim": 214.871,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:32",
+          "inicio": 214.891,
+          "fim": 222.752,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:33",
+          "inicio": 223.612,
+          "fim": 229.753,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:34",
+          "inicio": 230.313,
+          "fim": 246.874,
+          "texto": "I, i will always love you, you",
+          "palavras": []
+        },
+        {
+          "id": "srt:35",
+          "inicio": 248.274,
+          "fim": 252.095,
+          "texto": "Darling, i love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:36",
+          "inicio": 252.295,
+          "fim": 258.755,
+          "texto": "I'll always, i'll always love you",
+          "palavras": []
+        }
+      ],
+      "decisoes_antes": {
+        "editar:srt:10": {
+          "acao": "remover",
+          "alvos": [
+            "srt:10"
+          ],
+          "novos": [],
+          "data": "2026-10-14T22:48:26.760646+00:00"
+        },
+        "editar:srt:9": {
+          "acao": "corrigir",
+          "alvos": [
+            "srt:9"
+          ],
+          "novos": [
+            {
+              "texto": "Every step of",
+              "inicio": 31.554,
+              "fim": 34.275,
+              "palavras": [
+                {
+                  "texto": "Every",
+                  "incluir": true,
+                  "confirmado": false,
+                  "inicio": 32.3,
+                  "fim": 32.363,
+                  "score": 0.83,
+                  "origem": "alinhador"
+                },
+                {
+                  "texto": "step",
+                  "incluir": true,
+                  "confirmado": false,
+                  "inicio": 32.803,
+                  "fim": 33.166,
+                  "score": 0.811,
+                  "origem": "alinhador"
+                },
+                {
+                  "texto": "of",
+                  "incluir": true,
+                  "confirmado": false,
+                  "inicio": 33.166,
+                  "fim": 33.987,
+                  "score": 0.376,
+                  "origem": "alinhador"
+                }
+              ]
+            }
+          ],
+          "data": "2026-10-14T22:56:24.292148+00:00"
+        }
+      }
+    },
+    {
+      "item": "txt:62:63",
+      "decisao": {
+        "acao": "descartar",
+        "alvos": [],
+        "novos": [],
+        "data": "2026-10-14T23:00:37.964147+00:00"
+      },
+      "blocos_antes": [
+        {
+          "id": "srt:1",
+          "inicio": 3.031,
+          "fim": 3.6310000000000002,
+          "texto": "If",
+          "palavras": []
+        },
+        {
+          "id": "srt:2",
+          "inicio": 4.932,
+          "fim": 5.132,
+          "texto": "I",
+          "palavras": []
+        },
+        {
+          "id": "srt:3",
+          "inicio": 7.274,
+          "fim": 13.059,
+          "texto": "Should stay i would",
+          "palavras": []
+        },
+        {
+          "id": "srt:4",
+          "inicio": 13.319,
+          "fim": 16.122,
+          "texto": "Only be in",
+          "palavras": []
+        },
+        {
+          "id": "srt:5",
+          "inicio": 17.303,
+          "fim": 20.926,
+          "texto": "Your way",
+          "palavras": []
+        },
+        {
+          "id": "srt:6",
+          "inicio": 22.027,
+          "fim": 24.669,
+          "texto": "So i will go,",
+          "palavras": []
+        },
+        {
+          "id": "srt:7",
+          "inicio": 25.97,
+          "fim": 27.431,
+          "texto": "But i know",
+          "palavras": []
+        },
+        {
+          "id": "srt:8",
+          "inicio": 29.953,
+          "fim": 30.754,
+          "texto": "I'll think of you",
+          "palavras": []
+        },
+        {
+          "texto": "Every step of",
+          "inicio": 31.554,
+          "fim": 34.275,
+          "palavras": [
+            {
+              "texto": "Every",
+              "incluir": true,
+              "confirmado": false,
+              "inicio": 32.3,
+              "fim": 32.363,
+              "score": 0.83,
+              "origem": "alinhador"
+            },
+            {
+              "texto": "step",
+              "incluir": true,
+              "confirmado": false,
+              "inicio": 32.803,
+              "fim": 33.166,
+              "score": 0.811,
+              "origem": "alinhador"
+            },
+            {
+              "texto": "of",
+              "incluir": true,
+              "confirmado": false,
+              "inicio": 33.166,
+              "fim": 33.987,
+              "score": 0.376,
+              "origem": "alinhador"
+            }
+          ],
+          "id": "edicao:editar:srt:9:1:0"
+        },
+        {
+          "id": "srt:11",
+          "inicio": 35.275,
+          "fim": 38.315,
+          "texto": "The way",
+          "palavras": []
+        },
+        {
+          "id": "srt:12",
+          "inicio": 44.756,
+          "fim": 55.438,
+          "texto": "And i will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:13",
+          "inicio": 55.458,
+          "fim": 68.16,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:14",
+          "inicio": 68.74,
+          "fim": 76.321,
+          "texto": "You, my darling, you",
+          "palavras": []
+        },
+        {
+          "id": "srt:15",
+          "inicio": 78.602,
+          "fim": 83.863,
+          "texto": "Bittersweet memories",
+          "palavras": []
+        },
+        {
+          "id": "srt:16",
+          "inicio": 85.823,
+          "fim": 92.444,
+          "texto": "That is all i'm taking with me",
+          "palavras": []
+        },
+        {
+          "id": "srt:17",
+          "inicio": 93.264,
+          "fim": 98.405,
+          "texto": "So goodbye, please, don't cry",
+          "palavras": []
+        },
+        {
+          "id": "srt:18",
+          "inicio": 100.165,
+          "fim": 102.846,
+          "texto": "We both know i'm not what",
+          "palavras": []
+        },
+        {
+          "id": "srt:19",
+          "inicio": 102.865,
+          "fim": 103.049,
+          "texto": "You",
+          "palavras": []
+        },
+        {
+          "id": "srt:20",
+          "inicio": 104.106,
+          "fim": 106.786,
+          "texto": "You need",
+          "palavras": []
+        },
+        {
+          "id": "srt:21",
+          "inicio": 107.586,
+          "fim": 117.088,
+          "texto": "And i will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:22",
+          "inicio": 119.488,
+          "fim": 129.17,
+          "texto": "I will always love you, oh",
+          "palavras": []
+        },
+        {
+          "id": "srt:23",
+          "inicio": 157.915,
+          "fim": 162.315,
+          "texto": "I hope life treats you kind",
+          "palavras": []
+        },
+        {
+          "id": "srt:24",
+          "inicio": 164.456,
+          "fim": 171.117,
+          "texto": "And i hope you'll have all you've dreamed of",
+          "palavras": []
+        },
+        {
+          "id": "srt:25",
+          "inicio": 171.757,
+          "fim": 177.238,
+          "texto": "And i wished you joy and happiness",
+          "palavras": []
+        },
+        {
+          "id": "srt:26",
+          "inicio": 178.518,
+          "fim": 180.023,
+          "texto": "But above all this,",
+          "palavras": []
+        },
+        {
+          "id": "srt:27",
+          "inicio": 180.946,
+          "fim": 181.488,
+          "texto": "I wish you",
+          "palavras": []
+        },
+        {
+          "id": "srt:28",
+          "inicio": 182.948,
+          "fim": 186.188,
+          "texto": "Love",
+          "palavras": []
+        },
+        {
+          "id": "srt:29",
+          "inicio": 190.549,
+          "fim": 199.83,
+          "texto": "And i will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:30",
+          "inicio": 200.85,
+          "fim": 206.55,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:31",
+          "inicio": 207.971,
+          "fim": 214.871,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:32",
+          "inicio": 214.891,
+          "fim": 222.752,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:33",
+          "inicio": 223.612,
+          "fim": 229.753,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:34",
+          "inicio": 230.313,
+          "fim": 246.874,
+          "texto": "I, i will always love you, you",
+          "palavras": []
+        },
+        {
+          "id": "srt:35",
+          "inicio": 248.274,
+          "fim": 252.095,
+          "texto": "Darling, i love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:36",
+          "inicio": 252.295,
+          "fim": 258.755,
+          "texto": "I'll always, i'll always love you",
+          "palavras": []
+        }
+      ],
+      "decisoes_antes": {
+        "editar:srt:10": {
+          "acao": "remover",
+          "alvos": [
+            "srt:10"
+          ],
+          "novos": [],
+          "data": "2026-10-14T22:48:26.760646+00:00"
+        },
+        "editar:srt:9": {
+          "acao": "corrigir",
+          "alvos": [
+            "srt:9"
+          ],
+          "novos": [
+            {
+              "texto": "Every step of",
+              "inicio": 31.554,
+              "fim": 34.275,
+              "palavras": [
+                {
+                  "texto": "Every",
+                  "incluir": true,
+                  "confirmado": false,
+                  "inicio": 32.3,
+                  "fim": 32.363,
+                  "score": 0.83,
+                  "origem": "alinhador"
+                },
+                {
+                  "texto": "step",
+                  "incluir": true,
+                  "confirmado": false,
+                  "inicio": 32.803,
+                  "fim": 33.166,
+                  "score": 0.811,
+                  "origem": "alinhador"
+                },
+                {
+                  "texto": "of",
+                  "incluir": true,
+                  "confirmado": false,
+                  "inicio": 33.166,
+                  "fim": 33.987,
+                  "score": 0.376,
+                  "origem": "alinhador"
+                }
+              ]
+            }
+          ],
+          "data": "2026-10-14T22:56:24.292148+00:00"
+        },
+        "txt:23:25": {
+          "acao": "associar",
+          "alvos": [
+            "edicao:editar:srt:9:1:0"
+          ],
+          "novos": [],
+          "data": "2026-10-14T23:00:35.433097+00:00"
+        }
+      }
+    },
+    {
+      "item": "pendencia:srt:10",
+      "decisao": {
+        "acao": "descartar",
+        "alvos": [],
+        "novos": [],
+        "data": "2026-10-14T23:00:40.495562+00:00"
+      },
+      "blocos_antes": [
+        {
+          "id": "srt:1",
+          "inicio": 3.031,
+          "fim": 3.6310000000000002,
+          "texto": "If",
+          "palavras": []
+        },
+        {
+          "id": "srt:2",
+          "inicio": 4.932,
+          "fim": 5.132,
+          "texto": "I",
+          "palavras": []
+        },
+        {
+          "id": "srt:3",
+          "inicio": 7.274,
+          "fim": 13.059,
+          "texto": "Should stay i would",
+          "palavras": []
+        },
+        {
+          "id": "srt:4",
+          "inicio": 13.319,
+          "fim": 16.122,
+          "texto": "Only be in",
+          "palavras": []
+        },
+        {
+          "id": "srt:5",
+          "inicio": 17.303,
+          "fim": 20.926,
+          "texto": "Your way",
+          "palavras": []
+        },
+        {
+          "id": "srt:6",
+          "inicio": 22.027,
+          "fim": 24.669,
+          "texto": "So i will go,",
+          "palavras": []
+        },
+        {
+          "id": "srt:7",
+          "inicio": 25.97,
+          "fim": 27.431,
+          "texto": "But i know",
+          "palavras": []
+        },
+        {
+          "id": "srt:8",
+          "inicio": 29.953,
+          "fim": 30.754,
+          "texto": "I'll think of you",
+          "palavras": []
+        },
+        {
+          "texto": "Every step of",
+          "inicio": 31.554,
+          "fim": 34.275,
+          "palavras": [
+            {
+              "texto": "Every",
+              "incluir": true,
+              "confirmado": false,
+              "inicio": 32.3,
+              "fim": 32.363,
+              "score": 0.83,
+              "origem": "alinhador"
+            },
+            {
+              "texto": "step",
+              "incluir": true,
+              "confirmado": false,
+              "inicio": 32.803,
+              "fim": 33.166,
+              "score": 0.811,
+              "origem": "alinhador"
+            },
+            {
+              "texto": "of",
+              "incluir": true,
+              "confirmado": false,
+              "inicio": 33.166,
+              "fim": 33.987,
+              "score": 0.376,
+              "origem": "alinhador"
+            }
+          ],
+          "id": "edicao:editar:srt:9:1:0"
+        },
+        {
+          "id": "srt:11",
+          "inicio": 35.275,
+          "fim": 38.315,
+          "texto": "The way",
+          "palavras": []
+        },
+        {
+          "id": "srt:12",
+          "inicio": 44.756,
+          "fim": 55.438,
+          "texto": "And i will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:13",
+          "inicio": 55.458,
+          "fim": 68.16,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:14",
+          "inicio": 68.74,
+          "fim": 76.321,
+          "texto": "You, my darling, you",
+          "palavras": []
+        },
+        {
+          "id": "srt:15",
+          "inicio": 78.602,
+          "fim": 83.863,
+          "texto": "Bittersweet memories",
+          "palavras": []
+        },
+        {
+          "id": "srt:16",
+          "inicio": 85.823,
+          "fim": 92.444,
+          "texto": "That is all i'm taking with me",
+          "palavras": []
+        },
+        {
+          "id": "srt:17",
+          "inicio": 93.264,
+          "fim": 98.405,
+          "texto": "So goodbye, please, don't cry",
+          "palavras": []
+        },
+        {
+          "id": "srt:18",
+          "inicio": 100.165,
+          "fim": 102.846,
+          "texto": "We both know i'm not what",
+          "palavras": []
+        },
+        {
+          "id": "srt:19",
+          "inicio": 102.865,
+          "fim": 103.049,
+          "texto": "You",
+          "palavras": []
+        },
+        {
+          "id": "srt:20",
+          "inicio": 104.106,
+          "fim": 106.786,
+          "texto": "You need",
+          "palavras": []
+        },
+        {
+          "id": "srt:21",
+          "inicio": 107.586,
+          "fim": 117.088,
+          "texto": "And i will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:22",
+          "inicio": 119.488,
+          "fim": 129.17,
+          "texto": "I will always love you, oh",
+          "palavras": []
+        },
+        {
+          "id": "srt:23",
+          "inicio": 157.915,
+          "fim": 162.315,
+          "texto": "I hope life treats you kind",
+          "palavras": []
+        },
+        {
+          "id": "srt:24",
+          "inicio": 164.456,
+          "fim": 171.117,
+          "texto": "And i hope you'll have all you've dreamed of",
+          "palavras": []
+        },
+        {
+          "id": "srt:25",
+          "inicio": 171.757,
+          "fim": 177.238,
+          "texto": "And i wished you joy and happiness",
+          "palavras": []
+        },
+        {
+          "id": "srt:26",
+          "inicio": 178.518,
+          "fim": 180.023,
+          "texto": "But above all this,",
+          "palavras": []
+        },
+        {
+          "id": "srt:27",
+          "inicio": 180.946,
+          "fim": 181.488,
+          "texto": "I wish you",
+          "palavras": []
+        },
+        {
+          "id": "srt:28",
+          "inicio": 182.948,
+          "fim": 186.188,
+          "texto": "Love",
+          "palavras": []
+        },
+        {
+          "id": "srt:29",
+          "inicio": 190.549,
+          "fim": 199.83,
+          "texto": "And i will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:30",
+          "inicio": 200.85,
+          "fim": 206.55,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:31",
+          "inicio": 207.971,
+          "fim": 214.871,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:32",
+          "inicio": 214.891,
+          "fim": 222.752,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:33",
+          "inicio": 223.612,
+          "fim": 229.753,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:34",
+          "inicio": 230.313,
+          "fim": 246.874,
+          "texto": "I, i will always love you, you",
+          "palavras": []
+        },
+        {
+          "id": "srt:35",
+          "inicio": 248.274,
+          "fim": 252.095,
+          "texto": "Darling, i love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:36",
+          "inicio": 252.295,
+          "fim": 258.755,
+          "texto": "I'll always, i'll always love you",
+          "palavras": []
+        }
+      ],
+      "decisoes_antes": {
+        "editar:srt:10": {
+          "acao": "remover",
+          "alvos": [
+            "srt:10"
+          ],
+          "novos": [],
+          "data": "2026-10-14T22:48:26.760646+00:00"
+        },
+        "editar:srt:9": {
+          "acao": "corrigir",
+          "alvos": [
+            "srt:9"
+          ],
+          "novos": [
+            {
+              "texto": "Every step of",
+              "inicio": 31.554,
+              "fim": 34.275,
+              "palavras": [
+                {
+                  "texto": "Every",
+                  "incluir": true,
+                  "confirmado": false,
+                  "inicio": 32.3,
+                  "fim": 32.363,
+                  "score": 0.83,
+                  "origem": "alinhador"
+                },
+                {
+                  "texto": "step",
+                  "incluir": true,
+                  "confirmado": false,
+                  "inicio": 32.803,
+                  "fim": 33.166,
+                  "score": 0.811,
+                  "origem": "alinhador"
+                },
+                {
+                  "texto": "of",
+                  "incluir": true,
+                  "confirmado": false,
+                  "inicio": 33.166,
+                  "fim": 33.987,
+                  "score": 0.376,
+                  "origem": "alinhador"
+                }
+              ]
+            }
+          ],
+          "data": "2026-10-14T22:56:24.292148+00:00"
+        },
+        "txt:23:25": {
+          "acao": "associar",
+          "alvos": [
+            "edicao:editar:srt:9:1:0"
+          ],
+          "novos": [],
+          "data": "2026-10-14T23:00:35.433097+00:00"
+        },
+        "txt:62:63": {
+          "acao": "descartar",
+          "alvos": [],
+          "novos": [],
+          "data": "2026-10-14T23:00:37.964147+00:00"
+        }
+      }
+    },
+    {
+      "item": "pendencia:srt:19",
+      "decisao": {
+        "acao": "descartar",
+        "alvos": [],
+        "novos": [],
+        "data": "2026-10-14T23:00:43.245566+00:00"
+      },
+      "blocos_antes": [
+        {
+          "id": "srt:1",
+          "inicio": 3.031,
+          "fim": 3.6310000000000002,
+          "texto": "If",
+          "palavras": []
+        },
+        {
+          "id": "srt:2",
+          "inicio": 4.932,
+          "fim": 5.132,
+          "texto": "I",
+          "palavras": []
+        },
+        {
+          "id": "srt:3",
+          "inicio": 7.274,
+          "fim": 13.059,
+          "texto": "Should stay i would",
+          "palavras": []
+        },
+        {
+          "id": "srt:4",
+          "inicio": 13.319,
+          "fim": 16.122,
+          "texto": "Only be in",
+          "palavras": []
+        },
+        {
+          "id": "srt:5",
+          "inicio": 17.303,
+          "fim": 20.926,
+          "texto": "Your way",
+          "palavras": []
+        },
+        {
+          "id": "srt:6",
+          "inicio": 22.027,
+          "fim": 24.669,
+          "texto": "So i will go,",
+          "palavras": []
+        },
+        {
+          "id": "srt:7",
+          "inicio": 25.97,
+          "fim": 27.431,
+          "texto": "But i know",
+          "palavras": []
+        },
+        {
+          "id": "srt:8",
+          "inicio": 29.953,
+          "fim": 30.754,
+          "texto": "I'll think of you",
+          "palavras": []
+        },
+        {
+          "texto": "Every step of",
+          "inicio": 31.554,
+          "fim": 34.275,
+          "palavras": [
+            {
+              "texto": "Every",
+              "incluir": true,
+              "confirmado": false,
+              "inicio": 32.3,
+              "fim": 32.363,
+              "score": 0.83,
+              "origem": "alinhador"
+            },
+            {
+              "texto": "step",
+              "incluir": true,
+              "confirmado": false,
+              "inicio": 32.803,
+              "fim": 33.166,
+              "score": 0.811,
+              "origem": "alinhador"
+            },
+            {
+              "texto": "of",
+              "incluir": true,
+              "confirmado": false,
+              "inicio": 33.166,
+              "fim": 33.987,
+              "score": 0.376,
+              "origem": "alinhador"
+            }
+          ],
+          "id": "edicao:editar:srt:9:1:0"
+        },
+        {
+          "id": "srt:11",
+          "inicio": 35.275,
+          "fim": 38.315,
+          "texto": "The way",
+          "palavras": []
+        },
+        {
+          "id": "srt:12",
+          "inicio": 44.756,
+          "fim": 55.438,
+          "texto": "And i will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:13",
+          "inicio": 55.458,
+          "fim": 68.16,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:14",
+          "inicio": 68.74,
+          "fim": 76.321,
+          "texto": "You, my darling, you",
+          "palavras": []
+        },
+        {
+          "id": "srt:15",
+          "inicio": 78.602,
+          "fim": 83.863,
+          "texto": "Bittersweet memories",
+          "palavras": []
+        },
+        {
+          "id": "srt:16",
+          "inicio": 85.823,
+          "fim": 92.444,
+          "texto": "That is all i'm taking with me",
+          "palavras": []
+        },
+        {
+          "id": "srt:17",
+          "inicio": 93.264,
+          "fim": 98.405,
+          "texto": "So goodbye, please, don't cry",
+          "palavras": []
+        },
+        {
+          "id": "srt:18",
+          "inicio": 100.165,
+          "fim": 102.846,
+          "texto": "We both know i'm not what",
+          "palavras": []
+        },
+        {
+          "id": "srt:19",
+          "inicio": 102.865,
+          "fim": 103.049,
+          "texto": "You",
+          "palavras": []
+        },
+        {
+          "id": "srt:20",
+          "inicio": 104.106,
+          "fim": 106.786,
+          "texto": "You need",
+          "palavras": []
+        },
+        {
+          "id": "srt:21",
+          "inicio": 107.586,
+          "fim": 117.088,
+          "texto": "And i will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:22",
+          "inicio": 119.488,
+          "fim": 129.17,
+          "texto": "I will always love you, oh",
+          "palavras": []
+        },
+        {
+          "id": "srt:23",
+          "inicio": 157.915,
+          "fim": 162.315,
+          "texto": "I hope life treats you kind",
+          "palavras": []
+        },
+        {
+          "id": "srt:24",
+          "inicio": 164.456,
+          "fim": 171.117,
+          "texto": "And i hope you'll have all you've dreamed of",
+          "palavras": []
+        },
+        {
+          "id": "srt:25",
+          "inicio": 171.757,
+          "fim": 177.238,
+          "texto": "And i wished you joy and happiness",
+          "palavras": []
+        },
+        {
+          "id": "srt:26",
+          "inicio": 178.518,
+          "fim": 180.023,
+          "texto": "But above all this,",
+          "palavras": []
+        },
+        {
+          "id": "srt:27",
+          "inicio": 180.946,
+          "fim": 181.488,
+          "texto": "I wish you",
+          "palavras": []
+        },
+        {
+          "id": "srt:28",
+          "inicio": 182.948,
+          "fim": 186.188,
+          "texto": "Love",
+          "palavras": []
+        },
+        {
+          "id": "srt:29",
+          "inicio": 190.549,
+          "fim": 199.83,
+          "texto": "And i will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:30",
+          "inicio": 200.85,
+          "fim": 206.55,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:31",
+          "inicio": 207.971,
+          "fim": 214.871,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:32",
+          "inicio": 214.891,
+          "fim": 222.752,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:33",
+          "inicio": 223.612,
+          "fim": 229.753,
+          "texto": "I will always love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:34",
+          "inicio": 230.313,
+          "fim": 246.874,
+          "texto": "I, i will always love you, you",
+          "palavras": []
+        },
+        {
+          "id": "srt:35",
+          "inicio": 248.274,
+          "fim": 252.095,
+          "texto": "Darling, i love you",
+          "palavras": []
+        },
+        {
+          "id": "srt:36",
+          "inicio": 252.295,
+          "fim": 258.755,
+          "texto": "I'll always, i'll always love you",
+          "palavras": []
+        }
+      ],
+      "decisoes_antes": {
+        "editar:srt:10": {
+          "acao": "remover",
+          "alvos": [
+            "srt:10"
+          ],
+          "novos": [],
+          "data": "2026-10-14T22:48:26.760646+00:00"
+        },
+        "editar:srt:9": {
+          "acao": "corrigir",
+          "alvos": [
+            "srt:9"
+          ],
+          "novos": [
+            {
+              "texto": "Every step of",
+              "inicio": 31.554,
+              "fim": 34.275,
+              "palavras": [
+                {
+                  "texto": "Every",
+                  "incluir": true,
+                  "confirmado": false,
+                  "inicio": 32.3,
+                  "fim": 32.363,
+                  "score": 0.83,
+                  "origem": "alinhador"
+                },
+                {
+                  "texto": "step",
+                  "incluir": true,
+                  "confirmado": false,
+                  "inicio": 32.803,
+                  "fim": 33.166,
+                  "score": 0.811,
+                  "origem": "alinhador"
+                },
+                {
+                  "texto": "of",
+                  "incluir": true,
+                  "confirmado": false,
+                  "inicio": 33.166,
+                  "fim": 33.987,
+                  "score": 0.376,
+                  "origem": "alinhador"
+                }
+              ]
+            }
+          ],
+          "data": "2026-10-14T22:56:24.292148+00:00"
+        },
+        "txt:23:25": {
+          "acao": "associar",
+          "alvos": [
+            "edicao:editar:srt:9:1:0"
+          ],
+          "novos": [],
+          "data": "2026-10-14T23:00:35.433097+00:00"
+        },
+        "txt:62:63": {
+          "acao": "descartar",
+          "alvos": [],
+          "novos": [],
+          "data": "2026-10-14T23:00:37.964147+00:00"
+        },
+        "pendencia:srt:10": {
+          "acao": "descartar",
+          "alvos": [],
+          "novos": [],
+          "data": "2026-10-14T23:00:40.495562+00:00"
+        }
+      }
+    }
+  ],
+  "revisoes_anteriores": [],
+  "atualizado": "2026-10-14T23:11:47.605591+00:00",
+  "pendencias": [],
+  "resumo": {
+    "ocorrencias_pendentes": 0,
+    "blocos": 35,
+    "palavras_confirmadas": 0
+  }
+}

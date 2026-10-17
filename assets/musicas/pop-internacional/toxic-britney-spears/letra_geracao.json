@@ -1,0 +1,1997 @@
+{
+  "versao": 1,
+  "arquivo_voz": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\pop-internacional\\toxic-britney-spears\\voz.mp3",
+  "sha256_voz": "f79fcee40a79eebb053a31c1f25e5387d09362f522f546cb49bcbc1094aebffc",
+  "duracao_audio": 198.925375,
+  "configuracao": {
+    "modelo": "small",
+    "idioma": "en",
+    "dispositivo": "cpu",
+    "compute_type": "int8",
+    "vad": "silero"
+  },
+  "segmentos": [
+    {
+      "text": " Baby can't you see I'm calling A guy like you should wear a warning It's dangerous I'm falling There's no escape I can't wait I need a hit Baby give me hit You're dangerous I'm loving it",
+      "start": 14.21,
+      "end": 37.822,
+      "avg_logprob": -0.18121791274651236,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "Baby",
+          "start": 14.21,
+          "end": 14.59,
+          "score": 0.824
+        },
+        {
+          "word": "can't",
+          "start": 14.63,
+          "end": 14.85,
+          "score": 0.75
+        },
+        {
+          "word": "you",
+          "start": 14.89,
+          "end": 15.03,
+          "score": 0.716
+        },
+        {
+          "word": "see",
+          "start": 15.07,
+          "end": 15.471,
+          "score": 0.54
+        },
+        {
+          "word": "I'm",
+          "start": 16.111,
+          "end": 16.251,
+          "score": 0.763
+        },
+        {
+          "word": "calling",
+          "start": 16.311,
+          "end": 17.392,
+          "score": 0.818
+        },
+        {
+          "word": "A",
+          "start": 17.812,
+          "end": 17.892,
+          "score": 0.801
+        },
+        {
+          "word": "guy",
+          "start": 17.972,
+          "end": 18.192,
+          "score": 0.5
+        },
+        {
+          "word": "like",
+          "start": 18.232,
+          "end": 18.412,
+          "score": 0.531
+        },
+        {
+          "word": "you",
+          "start": 18.452,
+          "end": 18.732,
+          "score": 0.908
+        },
+        {
+          "word": "should",
+          "start": 19.032,
+          "end": 19.233,
+          "score": 0.839
+        },
+        {
+          "word": "wear",
+          "start": 19.313,
+          "end": 19.593,
+          "score": 0.671
+        },
+        {
+          "word": "a",
+          "start": 19.613,
+          "end": 19.633,
+          "score": 0.068
+        },
+        {
+          "word": "warning",
+          "start": 19.713,
+          "end": 20.673,
+          "score": 0.761
+        },
+        {
+          "word": "It's",
+          "start": 21.154,
+          "end": 21.294,
+          "score": 0.204
+        },
+        {
+          "word": "dangerous",
+          "start": 21.334,
+          "end": 22.214,
+          "score": 0.721
+        },
+        {
+          "word": "I'm",
+          "start": 22.794,
+          "end": 22.954,
+          "score": 0.723
+        },
+        {
+          "word": "falling",
+          "start": 23.054,
+          "end": 24.155,
+          "score": 0.365
+        },
+        {
+          "word": "There's",
+          "start": 27.857,
+          "end": 28.057,
+          "score": 0.744
+        },
+        {
+          "word": "no",
+          "start": 28.117,
+          "end": 28.317,
+          "score": 0.919
+        },
+        {
+          "word": "escape",
+          "start": 28.377,
+          "end": 28.937,
+          "score": 0.837
+        },
+        {
+          "word": "I",
+          "start": 29.538,
+          "end": 29.638,
+          "score": 0.753
+        },
+        {
+          "word": "can't",
+          "start": 29.698,
+          "end": 30.058,
+          "score": 0.847
+        },
+        {
+          "word": "wait",
+          "start": 30.198,
+          "end": 30.959,
+          "score": 0.58
+        },
+        {
+          "word": "I",
+          "start": 30.979,
+          "end": 30.999,
+          "score": 0.001
+        },
+        {
+          "word": "need",
+          "start": 31.299,
+          "end": 31.679,
+          "score": 0.742
+        },
+        {
+          "word": "a",
+          "start": 31.759,
+          "end": 31.819,
+          "score": 0.575
+        },
+        {
+          "word": "hit",
+          "start": 31.859,
+          "end": 32.119,
+          "score": 0.793
+        },
+        {
+          "word": "Baby",
+          "start": 32.639,
+          "end": 33.1,
+          "score": 0.837
+        },
+        {
+          "word": "give",
+          "start": 33.12,
+          "end": 33.34,
+          "score": 0.828
+        },
+        {
+          "word": "me",
+          "start": 33.38,
+          "end": 33.56,
+          "score": 0.917
+        },
+        {
+          "word": "hit",
+          "start": 33.62,
+          "end": 34.36,
+          "score": 0.737
+        },
+        {
+          "word": "You're",
+          "start": 34.54,
+          "end": 34.74,
+          "score": 0.475
+        },
+        {
+          "word": "dangerous",
+          "start": 34.78,
+          "end": 35.661,
+          "score": 0.716
+        },
+        {
+          "word": "I'm",
+          "start": 36.281,
+          "end": 36.441,
+          "score": 0.71
+        },
+        {
+          "word": "loving",
+          "start": 36.521,
+          "end": 36.902,
+          "score": 0.53
+        },
+        {
+          "word": "it",
+          "start": 36.922,
+          "end": 36.962,
+          "score": 0.16
+        }
+      ]
+    },
+    {
+      "text": " Too high, can't calm down Losing my hands in a round and round Do you feel me now? Ooh, the taste of your lips, I'm on the ride",
+      "start": 41.026,
+      "end": 60.638,
+      "avg_logprob": -0.33014044165611267,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "Too",
+          "start": 41.066,
+          "end": 41.446,
+          "score": 0.822
+        },
+        {
+          "word": "high,",
+          "start": 41.546,
+          "end": 41.927,
+          "score": 0.681
+        },
+        {
+          "word": "can't",
+          "start": 42.327,
+          "end": 42.727,
+          "score": 0.527
+        },
+        {
+          "word": "calm",
+          "start": 42.767,
+          "end": 43.167,
+          "score": 0.56
+        },
+        {
+          "word": "down",
+          "start": 43.227,
+          "end": 44.088,
+          "score": 0.669
+        },
+        {
+          "word": "Losing",
+          "start": 44.208,
+          "end": 44.668,
+          "score": 0.634
+        },
+        {
+          "word": "my",
+          "start": 44.688,
+          "end": 44.868,
+          "score": 0.682
+        },
+        {
+          "word": "hands",
+          "start": 44.908,
+          "end": 45.249,
+          "score": 0.544
+        },
+        {
+          "word": "in",
+          "start": 45.409,
+          "end": 45.529,
+          "score": 0.7
+        },
+        {
+          "word": "a",
+          "start": 45.609,
+          "end": 45.669,
+          "score": 0.707
+        },
+        {
+          "word": "round",
+          "start": 45.729,
+          "end": 46.069,
+          "score": 0.456
+        },
+        {
+          "word": "and",
+          "start": 46.77,
+          "end": 46.95,
+          "score": 0.583
+        },
+        {
+          "word": "round",
+          "start": 47.01,
+          "end": 47.81,
+          "score": 0.605
+        },
+        {
+          "word": "Do",
+          "start": 49.391,
+          "end": 49.551,
+          "score": 0.621
+        },
+        {
+          "word": "you",
+          "start": 49.591,
+          "end": 49.871,
+          "score": 0.586
+        },
+        {
+          "word": "feel",
+          "start": 49.931,
+          "end": 50.072,
+          "score": 0.296
+        },
+        {
+          "word": "me",
+          "start": 50.092,
+          "end": 50.312,
+          "score": 0.666
+        },
+        {
+          "word": "now?",
+          "start": 50.372,
+          "end": 50.872,
+          "score": 0.879
+        },
+        {
+          "word": "Ooh,",
+          "start": 56.996,
+          "end": 57.256,
+          "score": 0.674
+        },
+        {
+          "word": "the",
+          "start": 57.276,
+          "end": 57.456,
+          "score": 0.812
+        },
+        {
+          "word": "taste",
+          "start": 57.496,
+          "end": 57.836,
+          "score": 0.613
+        },
+        {
+          "word": "of",
+          "start": 57.976,
+          "end": 58.076,
+          "score": 0.434
+        },
+        {
+          "word": "your",
+          "start": 58.096,
+          "end": 58.297,
+          "score": 0.373
+        },
+        {
+          "word": "lips,",
+          "start": 58.317,
+          "end": 58.597,
+          "score": 0.585
+        },
+        {
+          "word": "I'm",
+          "start": 58.957,
+          "end": 59.157,
+          "score": 0.557
+        },
+        {
+          "word": "on",
+          "start": 59.277,
+          "end": 59.357,
+          "score": 0.383
+        },
+        {
+          "word": "the",
+          "start": 59.377,
+          "end": 59.537,
+          "score": 0.429
+        },
+        {
+          "word": "ride",
+          "start": 59.577,
+          "end": 60.358,
+          "score": 0.571
+        }
+      ]
+    },
+    {
+      "text": " You're toxic and slipping under Taste of a poison paradise I'm addicted to you Don't you know that you're toxic? And I love what you do Don't you know that you're toxic? Let's get a name",
+      "start": 60.866,
+      "end": 86.11,
+      "avg_logprob": -0.14192279266274493,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "You're",
+          "start": 61.166,
+          "end": 61.567,
+          "score": 0.624
+        },
+        {
+          "word": "toxic",
+          "start": 61.627,
+          "end": 62.448,
+          "score": 0.768
+        },
+        {
+          "word": "and",
+          "start": 62.628,
+          "end": 62.828,
+          "score": 0.672
+        },
+        {
+          "word": "slipping",
+          "start": 62.848,
+          "end": 63.288,
+          "score": 0.538
+        },
+        {
+          "word": "under",
+          "start": 63.448,
+          "end": 64.029,
+          "score": 0.638
+        },
+        {
+          "word": "Taste",
+          "start": 64.129,
+          "end": 64.55,
+          "score": 0.368
+        },
+        {
+          "word": "of",
+          "start": 64.67,
+          "end": 64.77,
+          "score": 0.556
+        },
+        {
+          "word": "a",
+          "start": 64.87,
+          "end": 64.93,
+          "score": 0.612
+        },
+        {
+          "word": "poison",
+          "start": 64.97,
+          "end": 65.791,
+          "score": 0.787
+        },
+        {
+          "word": "paradise",
+          "start": 65.831,
+          "end": 66.952,
+          "score": 0.654
+        },
+        {
+          "word": "I'm",
+          "start": 67.132,
+          "end": 67.272,
+          "score": 0.76
+        },
+        {
+          "word": "addicted",
+          "start": 67.372,
+          "end": 68.093,
+          "score": 0.628
+        },
+        {
+          "word": "to",
+          "start": 68.133,
+          "end": 68.273,
+          "score": 0.87
+        },
+        {
+          "word": "you",
+          "start": 68.333,
+          "end": 68.593,
+          "score": 0.895
+        },
+        {
+          "word": "Don't",
+          "start": 68.753,
+          "end": 68.954,
+          "score": 0.884
+        },
+        {
+          "word": "you",
+          "start": 68.994,
+          "end": 69.114,
+          "score": 0.925
+        },
+        {
+          "word": "know",
+          "start": 69.174,
+          "end": 69.514,
+          "score": 0.806
+        },
+        {
+          "word": "that",
+          "start": 69.594,
+          "end": 69.815,
+          "score": 0.865
+        },
+        {
+          "word": "you're",
+          "start": 69.835,
+          "end": 69.975,
+          "score": 0.108
+        },
+        {
+          "word": "toxic?",
+          "start": 69.995,
+          "end": 70.956,
+          "score": 0.556
+        },
+        {
+          "word": "And",
+          "start": 73.818,
+          "end": 73.938,
+          "score": 0.798
+        },
+        {
+          "word": "I",
+          "start": 74.099,
+          "end": 74.159,
+          "score": 0.485
+        },
+        {
+          "word": "love",
+          "start": 74.239,
+          "end": 74.599,
+          "score": 0.53
+        },
+        {
+          "word": "what",
+          "start": 74.659,
+          "end": 74.839,
+          "score": 0.758
+        },
+        {
+          "word": "you",
+          "start": 74.859,
+          "end": 74.999,
+          "score": 0.915
+        },
+        {
+          "word": "do",
+          "start": 75.059,
+          "end": 75.3,
+          "score": 0.858
+        },
+        {
+          "word": "Don't",
+          "start": 75.46,
+          "end": 75.68,
+          "score": 0.756
+        },
+        {
+          "word": "you",
+          "start": 75.7,
+          "end": 75.82,
+          "score": 0.941
+        },
+        {
+          "word": "know",
+          "start": 75.9,
+          "end": 76.241,
+          "score": 0.874
+        },
+        {
+          "word": "that",
+          "start": 76.321,
+          "end": 76.521,
+          "score": 0.834
+        },
+        {
+          "word": "you're",
+          "start": 76.561,
+          "end": 76.701,
+          "score": 0.124
+        },
+        {
+          "word": "toxic?",
+          "start": 76.721,
+          "end": 77.662,
+          "score": 0.67
+        },
+        {
+          "word": "Let's",
+          "start": 84.909,
+          "end": 85.089,
+          "score": 0.513
+        },
+        {
+          "word": "get",
+          "start": 85.149,
+          "end": 85.389,
+          "score": 0.733
+        },
+        {
+          "word": "a",
+          "start": 85.429,
+          "end": 85.549,
+          "score": 0.497
+        },
+        {
+          "word": "name",
+          "start": 85.61,
+          "end": 85.93,
+          "score": 0.486
+        }
+      ]
+    },
+    {
+      "text": " To give you love, I took a step from my devil's cloud So lonely, it's taking over me Do I can't come down? Is it the end? It's all around Can you believe it?",
+      "start": 86.498,
+      "end": 108.19,
+      "avg_logprob": -0.4548275721344081,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "To",
+          "start": 86.578,
+          "end": 86.658,
+          "score": 0.516
+        },
+        {
+          "word": "give",
+          "start": 86.778,
+          "end": 87.058,
+          "score": 0.828
+        },
+        {
+          "word": "you",
+          "start": 87.078,
+          "end": 87.258,
+          "score": 0.375
+        },
+        {
+          "word": "love,",
+          "start": 87.338,
+          "end": 87.899,
+          "score": 0.717
+        },
+        {
+          "word": "I",
+          "start": 88.319,
+          "end": 88.419,
+          "score": 0.648
+        },
+        {
+          "word": "took",
+          "start": 88.459,
+          "end": 88.739,
+          "score": 0.742
+        },
+        {
+          "word": "a",
+          "start": 88.779,
+          "end": 88.839,
+          "score": 0.646
+        },
+        {
+          "word": "step",
+          "start": 88.879,
+          "end": 89.22,
+          "score": 0.817
+        },
+        {
+          "word": "from",
+          "start": 89.62,
+          "end": 89.88,
+          "score": 0.624
+        },
+        {
+          "word": "my",
+          "start": 89.94,
+          "end": 90.14,
+          "score": 0.768
+        },
+        {
+          "word": "devil's",
+          "start": 90.18,
+          "end": 90.56,
+          "score": 0.618
+        },
+        {
+          "word": "cloud",
+          "start": 90.6,
+          "end": 91.201,
+          "score": 0.646
+        },
+        {
+          "word": "So",
+          "start": 91.661,
+          "end": 91.821,
+          "score": 0.874
+        },
+        {
+          "word": "lonely,",
+          "start": 91.841,
+          "end": 92.541,
+          "score": 0.809
+        },
+        {
+          "word": "it's",
+          "start": 92.561,
+          "end": 93.062,
+          "score": 0.611
+        },
+        {
+          "word": "taking",
+          "start": 93.102,
+          "end": 93.482,
+          "score": 0.872
+        },
+        {
+          "word": "over",
+          "start": 93.642,
+          "end": 93.942,
+          "score": 0.789
+        },
+        {
+          "word": "me",
+          "start": 94.002,
+          "end": 94.522,
+          "score": 0.877
+        },
+        {
+          "word": "Do",
+          "start": 94.542,
+          "end": 94.582,
+          "score": 0.0
+        },
+        {
+          "word": "I",
+          "start": 94.602,
+          "end": 94.622,
+          "score": 0.0
+        },
+        {
+          "word": "can't",
+          "start": 98.104,
+          "end": 99.805,
+          "score": 0.594
+        },
+        {
+          "word": "come",
+          "start": 99.865,
+          "end": 100.246,
+          "score": 0.445
+        },
+        {
+          "word": "down?",
+          "start": 100.326,
+          "end": 101.266,
+          "score": 0.793
+        },
+        {
+          "word": "Is",
+          "start": 101.326,
+          "end": 101.466,
+          "score": 0.682
+        },
+        {
+          "word": "it",
+          "start": 101.586,
+          "end": 101.686,
+          "score": 0.587
+        },
+        {
+          "word": "the",
+          "start": 101.706,
+          "end": 101.947,
+          "score": 0.644
+        },
+        {
+          "word": "end?",
+          "start": 102.167,
+          "end": 102.407,
+          "score": 0.618
+        },
+        {
+          "word": "It's",
+          "start": 102.507,
+          "end": 102.707,
+          "score": 0.331
+        },
+        {
+          "word": "all",
+          "start": 103.027,
+          "end": 103.167,
+          "score": 0.548
+        },
+        {
+          "word": "around",
+          "start": 103.487,
+          "end": 104.008,
+          "score": 0.451
+        },
+        {
+          "word": "Can",
+          "start": 104.048,
+          "end": 104.548,
+          "score": 0.729
+        },
+        {
+          "word": "you",
+          "start": 106.469,
+          "end": 106.609,
+          "score": 0.558
+        },
+        {
+          "word": "believe",
+          "start": 106.629,
+          "end": 106.949,
+          "score": 0.347
+        },
+        {
+          "word": "it?",
+          "start": 107.169,
+          "end": 107.39,
+          "score": 0.698
+        }
+      ]
+    },
+    {
+      "text": " Ooh, the taste of your lips and I'm on a ride You're toxic and slipping under The taste of a poison paradise I'm addicted to you Don't you know that you're toxic? And I love what you do Don't you know that you're toxic? Don't you know that you're toxic?",
+      "start": 113.89,
+      "end": 141.79,
+      "avg_logprob": -0.13247585389763117,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "Ooh,",
+          "start": 114.05,
+          "end": 114.31,
+          "score": 0.647
+        },
+        {
+          "word": "the",
+          "start": 114.33,
+          "end": 114.49,
+          "score": 0.682
+        },
+        {
+          "word": "taste",
+          "start": 114.53,
+          "end": 114.891,
+          "score": 0.467
+        },
+        {
+          "word": "of",
+          "start": 115.031,
+          "end": 115.111,
+          "score": 0.496
+        },
+        {
+          "word": "your",
+          "start": 115.151,
+          "end": 115.331,
+          "score": 0.471
+        },
+        {
+          "word": "lips",
+          "start": 115.351,
+          "end": 115.751,
+          "score": 0.615
+        },
+        {
+          "word": "and",
+          "start": 116.032,
+          "end": 116.192,
+          "score": 0.397
+        },
+        {
+          "word": "I'm",
+          "start": 116.312,
+          "end": 116.412,
+          "score": 0.219
+        },
+        {
+          "word": "on",
+          "start": 116.512,
+          "end": 116.612,
+          "score": 0.553
+        },
+        {
+          "word": "a",
+          "start": 117.192,
+          "end": 117.413,
+          "score": 0.725
+        },
+        {
+          "word": "ride",
+          "start": 117.433,
+          "end": 117.513,
+          "score": 0.002
+        },
+        {
+          "word": "You're",
+          "start": 118.213,
+          "end": 118.613,
+          "score": 0.664
+        },
+        {
+          "word": "toxic",
+          "start": 118.673,
+          "end": 119.474,
+          "score": 0.764
+        },
+        {
+          "word": "and",
+          "start": 119.674,
+          "end": 119.894,
+          "score": 0.68
+        },
+        {
+          "word": "slipping",
+          "start": 119.914,
+          "end": 120.375,
+          "score": 0.491
+        },
+        {
+          "word": "under",
+          "start": 120.495,
+          "end": 120.655,
+          "score": 0.281
+        },
+        {
+          "word": "The",
+          "start": 120.795,
+          "end": 121.215,
+          "score": 0.56
+        },
+        {
+          "word": "taste",
+          "start": 121.235,
+          "end": 121.616,
+          "score": 0.431
+        },
+        {
+          "word": "of",
+          "start": 121.736,
+          "end": 121.856,
+          "score": 0.676
+        },
+        {
+          "word": "a",
+          "start": 121.936,
+          "end": 121.976,
+          "score": 0.526
+        },
+        {
+          "word": "poison",
+          "start": 122.036,
+          "end": 122.836,
+          "score": 0.803
+        },
+        {
+          "word": "paradise",
+          "start": 122.896,
+          "end": 123.997,
+          "score": 0.58
+        },
+        {
+          "word": "I'm",
+          "start": 124.177,
+          "end": 124.317,
+          "score": 0.512
+        },
+        {
+          "word": "addicted",
+          "start": 124.438,
+          "end": 125.158,
+          "score": 0.614
+        },
+        {
+          "word": "to",
+          "start": 125.198,
+          "end": 125.338,
+          "score": 0.797
+        },
+        {
+          "word": "you",
+          "start": 125.378,
+          "end": 125.718,
+          "score": 0.868
+        },
+        {
+          "word": "Don't",
+          "start": 125.799,
+          "end": 125.999,
+          "score": 0.849
+        },
+        {
+          "word": "you",
+          "start": 126.039,
+          "end": 126.179,
+          "score": 0.876
+        },
+        {
+          "word": "know",
+          "start": 126.239,
+          "end": 126.619,
+          "score": 0.885
+        },
+        {
+          "word": "that",
+          "start": 126.659,
+          "end": 126.859,
+          "score": 0.834
+        },
+        {
+          "word": "you're",
+          "start": 126.879,
+          "end": 127.039,
+          "score": 0.21
+        },
+        {
+          "word": "toxic?",
+          "start": 127.059,
+          "end": 128.04,
+          "score": 0.659
+        },
+        {
+          "word": "And",
+          "start": 130.882,
+          "end": 131.002,
+          "score": 0.884
+        },
+        {
+          "word": "I",
+          "start": 131.162,
+          "end": 131.242,
+          "score": 0.668
+        },
+        {
+          "word": "love",
+          "start": 131.302,
+          "end": 131.683,
+          "score": 0.504
+        },
+        {
+          "word": "what",
+          "start": 131.723,
+          "end": 131.883,
+          "score": 0.396
+        },
+        {
+          "word": "you",
+          "start": 131.903,
+          "end": 132.103,
+          "score": 0.761
+        },
+        {
+          "word": "do",
+          "start": 132.143,
+          "end": 132.363,
+          "score": 0.888
+        },
+        {
+          "word": "Don't",
+          "start": 132.503,
+          "end": 132.724,
+          "score": 0.655
+        },
+        {
+          "word": "you",
+          "start": 132.764,
+          "end": 132.904,
+          "score": 0.817
+        },
+        {
+          "word": "know",
+          "start": 132.964,
+          "end": 133.344,
+          "score": 0.815
+        },
+        {
+          "word": "that",
+          "start": 133.384,
+          "end": 133.564,
+          "score": 0.894
+        },
+        {
+          "word": "you're",
+          "start": 133.604,
+          "end": 133.764,
+          "score": 0.269
+        },
+        {
+          "word": "toxic?",
+          "start": 133.784,
+          "end": 134.745,
+          "score": 0.775
+        },
+        {
+          "word": "Don't",
+          "start": 139.248,
+          "end": 139.448,
+          "score": 0.405
+        },
+        {
+          "word": "you",
+          "start": 139.468,
+          "end": 139.628,
+          "score": 0.856
+        },
+        {
+          "word": "know",
+          "start": 139.668,
+          "end": 140.069,
+          "score": 0.858
+        },
+        {
+          "word": "that",
+          "start": 140.109,
+          "end": 140.289,
+          "score": 0.794
+        },
+        {
+          "word": "you're",
+          "start": 140.309,
+          "end": 140.469,
+          "score": 0.411
+        },
+        {
+          "word": "toxic?",
+          "start": 140.509,
+          "end": 140.829,
+          "score": 0.44
+        }
+      ]
+    },
+    {
+      "text": " I'm addicted to you, don't you know that you're toxic I'm addicted to you, don't you know that you're toxic I'm addicted to you, don't you know that you're toxic I'm addicted to you, don't you know that you're toxic I'm addicted to you, don't you know that you're toxic I'm addicted to you, don't you know that you're toxic I'm addicted to you, don't you know that you're toxic I'm addicted to you, don't you know that you're toxic",
+      "start": 168.098,
+      "end": 197.502,
+      "avg_logprob": -0.12206640813202985,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "I'm",
+          "start": 168.158,
+          "end": 168.318,
+          "score": 0.264
+        },
+        {
+          "word": "addicted",
+          "start": 168.378,
+          "end": 168.799,
+          "score": 0.456
+        },
+        {
+          "word": "to",
+          "start": 168.819,
+          "end": 168.939,
+          "score": 0.965
+        },
+        {
+          "word": "you,",
+          "start": 168.999,
+          "end": 169.279,
+          "score": 0.859
+        },
+        {
+          "word": "don't",
+          "start": 169.439,
+          "end": 169.639,
+          "score": 0.75
+        },
+        {
+          "word": "you",
+          "start": 169.679,
+          "end": 169.819,
+          "score": 0.799
+        },
+        {
+          "word": "know",
+          "start": 169.859,
+          "end": 170.24,
+          "score": 0.756
+        },
+        {
+          "word": "that",
+          "start": 170.3,
+          "end": 170.5,
+          "score": 0.861
+        },
+        {
+          "word": "you're",
+          "start": 170.52,
+          "end": 170.66,
+          "score": 0.108
+        },
+        {
+          "word": "toxic",
+          "start": 170.7,
+          "end": 170.94,
+          "score": 0.3
+        },
+        {
+          "word": "I'm",
+          "start": 170.96,
+          "end": 171.04,
+          "score": 0.19
+        },
+        {
+          "word": "addicted",
+          "start": 171.401,
+          "end": 171.961,
+          "score": 0.49
+        },
+        {
+          "word": "to",
+          "start": 171.981,
+          "end": 172.201,
+          "score": 0.7
+        },
+        {
+          "word": "you,",
+          "start": 172.221,
+          "end": 172.381,
+          "score": 0.503
+        },
+        {
+          "word": "don't",
+          "start": 172.422,
+          "end": 172.722,
+          "score": 0.395
+        },
+        {
+          "word": "you",
+          "start": 172.782,
+          "end": 172.902,
+          "score": 0.248
+        },
+        {
+          "word": "know",
+          "start": 172.962,
+          "end": 173.122,
+          "score": 0.364
+        },
+        {
+          "word": "that",
+          "start": 173.142,
+          "end": 173.222,
+          "score": 0.013
+        },
+        {
+          "word": "you're",
+          "start": 173.282,
+          "end": 173.482,
+          "score": 0.25
+        },
+        {
+          "word": "toxic",
+          "start": 173.522,
+          "end": 173.643,
+          "score": 0.115
+        },
+        {
+          "word": "I'm",
+          "start": 173.663,
+          "end": 173.823,
+          "score": 0.433
+        },
+        {
+          "word": "addicted",
+          "start": 173.843,
+          "end": 174.523,
+          "score": 0.449
+        },
+        {
+          "word": "to",
+          "start": 174.543,
+          "end": 174.583,
+          "score": 0.004
+        },
+        {
+          "word": "you,",
+          "start": 174.944,
+          "end": 175.204,
+          "score": 0.614
+        },
+        {
+          "word": "don't",
+          "start": 175.284,
+          "end": 175.684,
+          "score": 0.769
+        },
+        {
+          "word": "you",
+          "start": 175.764,
+          "end": 175.904,
+          "score": 0.475
+        },
+        {
+          "word": "know",
+          "start": 175.924,
+          "end": 176.085,
+          "score": 0.151
+        },
+        {
+          "word": "that",
+          "start": 176.145,
+          "end": 176.485,
+          "score": 0.608
+        },
+        {
+          "word": "you're",
+          "start": 176.605,
+          "end": 176.925,
+          "score": 0.447
+        },
+        {
+          "word": "toxic",
+          "start": 176.985,
+          "end": 177.426,
+          "score": 0.584
+        },
+        {
+          "word": "I'm",
+          "start": 177.566,
+          "end": 177.766,
+          "score": 0.548
+        },
+        {
+          "word": "addicted",
+          "start": 178.106,
+          "end": 178.667,
+          "score": 0.579
+        },
+        {
+          "word": "to",
+          "start": 178.687,
+          "end": 178.927,
+          "score": 0.71
+        },
+        {
+          "word": "you,",
+          "start": 178.947,
+          "end": 179.067,
+          "score": 0.319
+        },
+        {
+          "word": "don't",
+          "start": 179.107,
+          "end": 179.507,
+          "score": 0.547
+        },
+        {
+          "word": "you",
+          "start": 179.527,
+          "end": 179.908,
+          "score": 0.72
+        },
+        {
+          "word": "know",
+          "start": 179.928,
+          "end": 180.208,
+          "score": 0.512
+        },
+        {
+          "word": "that",
+          "start": 180.228,
+          "end": 180.368,
+          "score": 0.351
+        },
+        {
+          "word": "you're",
+          "start": 180.388,
+          "end": 180.668,
+          "score": 0.294
+        },
+        {
+          "word": "toxic",
+          "start": 180.688,
+          "end": 181.089,
+          "score": 0.658
+        },
+        {
+          "word": "I'm",
+          "start": 181.209,
+          "end": 181.349,
+          "score": 0.399
+        },
+        {
+          "word": "addicted",
+          "start": 181.489,
+          "end": 182.23,
+          "score": 0.663
+        },
+        {
+          "word": "to",
+          "start": 182.27,
+          "end": 182.39,
+          "score": 0.847
+        },
+        {
+          "word": "you,",
+          "start": 182.45,
+          "end": 182.71,
+          "score": 0.922
+        },
+        {
+          "word": "don't",
+          "start": 182.87,
+          "end": 183.07,
+          "score": 0.827
+        },
+        {
+          "word": "you",
+          "start": 183.11,
+          "end": 183.25,
+          "score": 0.688
+        },
+        {
+          "word": "know",
+          "start": 183.29,
+          "end": 183.671,
+          "score": 0.725
+        },
+        {
+          "word": "that",
+          "start": 183.731,
+          "end": 183.931,
+          "score": 0.911
+        },
+        {
+          "word": "you're",
+          "start": 183.971,
+          "end": 184.111,
+          "score": 0.158
+        },
+        {
+          "word": "toxic",
+          "start": 184.131,
+          "end": 184.491,
+          "score": 0.519
+        },
+        {
+          "word": "I'm",
+          "start": 184.872,
+          "end": 185.112,
+          "score": 0.467
+        },
+        {
+          "word": "addicted",
+          "start": 185.232,
+          "end": 185.632,
+          "score": 0.479
+        },
+        {
+          "word": "to",
+          "start": 185.672,
+          "end": 185.772,
+          "score": 0.402
+        },
+        {
+          "word": "you,",
+          "start": 185.812,
+          "end": 186.033,
+          "score": 0.516
+        },
+        {
+          "word": "don't",
+          "start": 186.053,
+          "end": 186.153,
+          "score": 0.062
+        },
+        {
+          "word": "you",
+          "start": 186.173,
+          "end": 186.233,
+          "score": 0.0
+        },
+        {
+          "word": "know",
+          "start": 186.253,
+          "end": 186.933,
+          "score": 0.68
+        },
+        {
+          "word": "that",
+          "start": 186.953,
+          "end": 187.274,
+          "score": 0.514
+        },
+        {
+          "word": "you're",
+          "start": 187.294,
+          "end": 187.474,
+          "score": 0.571
+        },
+        {
+          "word": "toxic",
+          "start": 187.534,
+          "end": 187.894,
+          "score": 0.724
+        },
+        {
+          "word": "I'm",
+          "start": 188.315,
+          "end": 188.495,
+          "score": 0.235
+        },
+        {
+          "word": "addicted",
+          "start": 188.635,
+          "end": 188.955,
+          "score": 0.394
+        },
+        {
+          "word": "to",
+          "start": 188.975,
+          "end": 189.055,
+          "score": 0.334
+        },
+        {
+          "word": "you,",
+          "start": 189.075,
+          "end": 189.175,
+          "score": 0.242
+        },
+        {
+          "word": "don't",
+          "start": 189.215,
+          "end": 189.455,
+          "score": 0.366
+        },
+        {
+          "word": "you",
+          "start": 189.475,
+          "end": 189.576,
+          "score": 0.251
+        },
+        {
+          "word": "know",
+          "start": 189.596,
+          "end": 190.216,
+          "score": 0.776
+        },
+        {
+          "word": "that",
+          "start": 190.236,
+          "end": 190.316,
+          "score": 0.004
+        },
+        {
+          "word": "you're",
+          "start": 190.496,
+          "end": 190.636,
+          "score": 0.08
+        },
+        {
+          "word": "toxic",
+          "start": 190.656,
+          "end": 191.117,
+          "score": 0.671
+        },
+        {
+          "word": "I'm",
+          "start": 191.157,
+          "end": 191.477,
+          "score": 0.406
+        },
+        {
+          "word": "addicted",
+          "start": 191.937,
+          "end": 192.358,
+          "score": 0.452
+        },
+        {
+          "word": "to",
+          "start": 192.378,
+          "end": 192.498,
+          "score": 0.544
+        },
+        {
+          "word": "you,",
+          "start": 192.618,
+          "end": 192.798,
+          "score": 0.446
+        },
+        {
+          "word": "don't",
+          "start": 192.818,
+          "end": 192.918,
+          "score": 0.069
+        },
+        {
+          "word": "you",
+          "start": 192.978,
+          "end": 193.639,
+          "score": 0.904
+        },
+        {
+          "word": "know",
+          "start": 193.659,
+          "end": 193.879,
+          "score": 0.44
+        },
+        {
+          "word": "that",
+          "start": 193.919,
+          "end": 193.999,
+          "score": 0.311
+        },
+        {
+          "word": "you're",
+          "start": 194.019,
+          "end": 194.199,
+          "score": 0.651
+        },
+        {
+          "word": "toxic",
+          "start": 194.239,
+          "end": 194.56,
+          "score": 0.609
+        }
+      ]
+    }
+  ],
+  "blocos": [
+    {
+      "inicio": 14.21,
+      "fim": 19.633,
+      "texto": "Baby can't you see I'm calling A guy like you should wear a"
+    },
+    {
+      "inicio": 19.713,
+      "fim": 24.155,
+      "texto": "warning It's dangerous I'm falling"
+    },
+    {
+      "inicio": 27.857,
+      "fim": 33.56,
+      "texto": "There's no escape I can't wait I need a hit Baby give me"
+    },
+    {
+      "inicio": 33.62,
+      "fim": 36.962,
+      "texto": "hit You're dangerous I'm loving it"
+    },
+    {
+      "inicio": 41.066,
+      "fim": 46.069,
+      "texto": "Too high, can't calm down Losing my hands in a round"
+    },
+    {
+      "inicio": 46.77,
+      "fim": 47.81,
+      "texto": "and round"
+    },
+    {
+      "inicio": 49.391,
+      "fim": 50.872,
+      "texto": "Do you feel me now?"
+    },
+    {
+      "inicio": 56.996,
+      "fim": 60.358,
+      "texto": "Ooh, the taste of your lips, I'm on the ride"
+    },
+    {
+      "inicio": 61.166,
+      "fim": 66.952,
+      "texto": "You're toxic and slipping under Taste of a poison paradise"
+    },
+    {
+      "inicio": 67.132,
+      "fim": 70.956,
+      "texto": "I'm addicted to you Don't you know that you're toxic?"
+    },
+    {
+      "inicio": 73.818,
+      "fim": 77.662,
+      "texto": "And I love what you do Don't you know that you're toxic?"
+    },
+    {
+      "inicio": 84.909,
+      "fim": 85.93,
+      "texto": "Let's get a name"
+    },
+    {
+      "inicio": 86.578,
+      "fim": 92.541,
+      "texto": "To give you love, I took a step from my devil's cloud So lonely,"
+    },
+    {
+      "inicio": 92.561,
+      "fim": 94.622,
+      "texto": "it's taking over me Do I"
+    },
+    {
+      "inicio": 98.104,
+      "fim": 104.008,
+      "texto": "can't come down? Is it the end? It's all around"
+    },
+    {
+      "inicio": 104.048,
+      "fim": 104.548,
+      "texto": "Can"
+    },
+    {
+      "inicio": 106.469,
+      "fim": 107.39,
+      "texto": "you believe it?"
+    },
+    {
+      "inicio": 114.05,
+      "fim": 117.513,
+      "texto": "Ooh, the taste of your lips and I'm on a ride"
+    },
+    {
+      "inicio": 118.213,
+      "fim": 123.997,
+      "texto": "You're toxic and slipping under The taste of a poison paradise"
+    },
+    {
+      "inicio": 124.177,
+      "fim": 128.04,
+      "texto": "I'm addicted to you Don't you know that you're toxic?"
+    },
+    {
+      "inicio": 130.882,
+      "fim": 134.745,
+      "texto": "And I love what you do Don't you know that you're toxic?"
+    },
+    {
+      "inicio": 139.248,
+      "fim": 140.829,
+      "texto": "Don't you know that you're toxic?"
+    },
+    {
+      "inicio": 168.158,
+      "fim": 172.201,
+      "texto": "I'm addicted to you, don't you know that you're toxic I'm addicted to"
+    },
+    {
+      "inicio": 172.221,
+      "fim": 175.904,
+      "texto": "you, don't you know that you're toxic I'm addicted to you, don't you"
+    },
+    {
+      "inicio": 175.924,
+      "fim": 180.668,
+      "texto": "know that you're toxic I'm addicted to you, don't you know that you're"
+    },
+    {
+      "inicio": 180.688,
+      "fim": 185.632,
+      "texto": "toxic I'm addicted to you, don't you know that you're toxic I'm addicted"
+    },
+    {
+      "inicio": 185.672,
+      "fim": 189.576,
+      "texto": "to you, don't you know that you're toxic I'm addicted to you, don't you"
+    },
+    {
+      "inicio": 189.596,
+      "fim": 194.199,
+      "texto": "know that you're toxic I'm addicted to you, don't you know that you're"
+    },
+    {
+      "inicio": 194.239,
+      "fim": 194.56,
+      "texto": "toxic"
+    }
+  ],
+  "avisos": [
+    "Segmento 1: alinhamento fraco em 'a'.",
+    "Segmento 1: alinhamento fraco em \"It's\".",
+    "Segmento 1: alinhamento fraco em 'I'.",
+    "Segmento 1: alinhamento fraco em 'it'.",
+    "Segmento 2: alinhamento fraco em 'feel'.",
+    "Segmento 3: alinhamento fraco em \"you're\".",
+    "Segmento 3: alinhamento fraco em \"you're\".",
+    "Segmento 4: alinhamento fraco em 'Do'.",
+    "Segmento 4: alinhamento fraco em 'I'.",
+    "Segmento 5: alinhamento fraco em \"I'm\".",
+    "Segmento 5: alinhamento fraco em 'ride'.",
+    "Segmento 5: alinhamento fraco em 'under'.",
+    "Segmento 5: alinhamento fraco em \"you're\".",
+    "Segmento 5: alinhamento fraco em \"you're\".",
+    "Segmento 6: alinhamento fraco em \"I'm\".",
+    "Segmento 6: alinhamento fraco em \"you're\".",
+    "Segmento 6: alinhamento fraco em \"I'm\".",
+    "Segmento 6: alinhamento fraco em 'you'.",
+    "Segmento 6: alinhamento fraco em 'that'.",
+    "Segmento 6: alinhamento fraco em \"you're\".",
+    "Segmento 6: alinhamento fraco em 'toxic'.",
+    "Segmento 6: alinhamento fraco em 'to'.",
+    "Segmento 6: alinhamento fraco em 'know'.",
+    "Segmento 6: alinhamento fraco em \"you're\".",
+    "Segmento 6: alinhamento fraco em \"you're\".",
+    "Segmento 6: alinhamento fraco em \"don't\".",
+    "Segmento 6: alinhamento fraco em 'you'.",
+    "Segmento 6: alinhamento fraco em \"I'm\".",
+    "Segmento 6: alinhamento fraco em 'you,'.",
+    "Segmento 6: alinhamento fraco em 'you'.",
+    "Segmento 6: alinhamento fraco em 'that'.",
+    "Segmento 6: alinhamento fraco em \"you're\".",
+    "Segmento 6: alinhamento fraco em \"don't\"."
+  ],
+  "revisao_recomendada": true,
+  "comparacao_letra": {
+    "similaridade_textual": 0.6666666666666666,
+    "divergencias": [
+      {
+        "tipo": "replace",
+        "referencia": "it",
+        "transcricao": "hit"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "come",
+        "transcricao": "calm"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "losin",
+        "transcricao": "losing"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "head spinnin",
+        "transcricao": "hands in a"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "with",
+        "transcricao": "ooh"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "a",
+        "transcricao": "the"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "i m slippin",
+        "transcricao": "and slipping"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "with a",
+        "transcricao": ""
+      },
+      {
+        "tipo": "replace",
+        "referencia": "the",
+        "transcricao": "a"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "it",
+        "transcricao": "let"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "getting late",
+        "transcricao": "get a name"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "up",
+        "transcricao": "love"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "sip",
+        "transcricao": "step"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "a",
+        "transcricao": "my"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "cup slowly",
+        "transcricao": "cloud so lonely"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "too high",
+        "transcricao": "do i"
+      },
+      {
+        "tipo": "insert",
+        "referencia": "",
+        "transcricao": "is"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "s in",
+        "transcricao": ""
+      },
+      {
+        "tipo": "replace",
+        "referencia": "air and",
+        "transcricao": "end"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "feel me now with",
+        "transcricao": "believe it ooh"
+      },
+      {
+        "tipo": "insert",
+        "referencia": "",
+        "transcricao": "and"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "i m slippin",
+        "transcricao": "and slipping"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "with",
+        "transcricao": ""
+      },
+      {
+        "tipo": "replace",
+        "referencia": "the",
+        "transcricao": "a"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "taste of your lips i m on a ride you re toxic i m slippin under with the taste of a poison paradise",
+        "transcricao": ""
+      },
+      {
+        "tipo": "delete",
+        "referencia": "with the taste of your lips i m on a ride you re toxic i m slippin under toxic with the taste of the poison paradise",
+        "transcricao": ""
+      },
+      {
+        "tipo": "delete",
+        "referencia": "intoxicate me now with your lovin now i think",
+        "transcricao": ""
+      },
+      {
+        "tipo": "replace",
+        "referencia": "ready now i think",
+        "transcricao": "addicted to you don t you know that you re toxic"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "ready now intoxicate me now with your lovin now i think",
+        "transcricao": "addicted to you don t you know that you re toxic"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "ready now",
+        "transcricao": "addicted to you don t you know that you re toxic i m addicted to you don t you know that you re toxic i m addicted to you don t you know that you re toxic i m addicted to you don t you know that you re toxic"
+      }
+    ]
+  }
+}

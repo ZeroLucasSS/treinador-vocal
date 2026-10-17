@@ -1,0 +1,2675 @@
+{
+  "versao": 1,
+  "arquivo_voz": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\sertanejo\\evidencias-chitaozinho-xororo\\voz.mp3",
+  "sha256_voz": "682e56cf8da2585c758b89d17639ccb527c74bf5c4318641af3a97d3d42aab1b",
+  "duracao_audio": 298.817625,
+  "configuracao": {
+    "modelo": "small",
+    "idioma": "pt",
+    "dispositivo": "cpu",
+    "compute_type": "int8",
+    "vad": "silero"
+  },
+  "segmentos": [
+    {
+      "text": " Quando eu digo que deixei de te amar É porque eu te amo Quando eu digo que não quero mais você É porque eu te quero Eu tenho medo de te dar meu coração E confessar que eu estou em tuas mãos",
+      "start": 24.258,
+      "end": 52.99,
+      "avg_logprob": -0.034706723182759386,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Quando",
+          "start": 24.278,
+          "end": 24.678,
+          "score": 0.816
+        },
+        {
+          "word": "eu",
+          "start": 24.718,
+          "end": 24.798,
+          "score": 0.685
+        },
+        {
+          "word": "digo",
+          "start": 24.878,
+          "end": 25.559,
+          "score": 0.575
+        },
+        {
+          "word": "que",
+          "start": 25.599,
+          "end": 25.699,
+          "score": 0.785
+        },
+        {
+          "word": "deixei",
+          "start": 25.739,
+          "end": 26.699,
+          "score": 0.846
+        },
+        {
+          "word": "de",
+          "start": 26.739,
+          "end": 26.839,
+          "score": 0.738
+        },
+        {
+          "word": "te",
+          "start": 26.919,
+          "end": 27.179,
+          "score": 0.898
+        },
+        {
+          "word": "amar",
+          "start": 27.199,
+          "end": 28.22,
+          "score": 0.833
+        },
+        {
+          "word": "É",
+          "start": 29.24,
+          "end": 29.26,
+          "score": 0.001
+        },
+        {
+          "word": "porque",
+          "start": 29.34,
+          "end": 29.88,
+          "score": 0.797
+        },
+        {
+          "word": "eu",
+          "start": 29.98,
+          "end": 30.04,
+          "score": 0.843
+        },
+        {
+          "word": "te",
+          "start": 30.14,
+          "end": 30.321,
+          "score": 0.866
+        },
+        {
+          "word": "amo",
+          "start": 30.441,
+          "end": 31.701,
+          "score": 0.584
+        },
+        {
+          "word": "Quando",
+          "start": 34.022,
+          "end": 34.462,
+          "score": 0.798
+        },
+        {
+          "word": "eu",
+          "start": 34.522,
+          "end": 34.602,
+          "score": 0.863
+        },
+        {
+          "word": "digo",
+          "start": 34.682,
+          "end": 35.343,
+          "score": 0.728
+        },
+        {
+          "word": "que",
+          "start": 35.423,
+          "end": 35.543,
+          "score": 0.666
+        },
+        {
+          "word": "não",
+          "start": 35.583,
+          "end": 35.743,
+          "score": 0.502
+        },
+        {
+          "word": "quero",
+          "start": 35.843,
+          "end": 36.463,
+          "score": 0.587
+        },
+        {
+          "word": "mais",
+          "start": 36.623,
+          "end": 37.243,
+          "score": 0.859
+        },
+        {
+          "word": "você",
+          "start": 37.303,
+          "end": 38.364,
+          "score": 0.946
+        },
+        {
+          "word": "É",
+          "start": 39.564,
+          "end": 39.584,
+          "score": 0.001
+        },
+        {
+          "word": "porque",
+          "start": 39.664,
+          "end": 39.985,
+          "score": 0.87
+        },
+        {
+          "word": "eu",
+          "start": 40.305,
+          "end": 40.385,
+          "score": 0.556
+        },
+        {
+          "word": "te",
+          "start": 40.465,
+          "end": 40.565,
+          "score": 0.834
+        },
+        {
+          "word": "quero",
+          "start": 40.665,
+          "end": 42.346,
+          "score": 0.803
+        },
+        {
+          "word": "Eu",
+          "start": 43.006,
+          "end": 43.286,
+          "score": 0.756
+        },
+        {
+          "word": "tenho",
+          "start": 43.386,
+          "end": 43.966,
+          "score": 0.699
+        },
+        {
+          "word": "medo",
+          "start": 44.086,
+          "end": 45.127,
+          "score": 0.884
+        },
+        {
+          "word": "de",
+          "start": 45.187,
+          "end": 45.287,
+          "score": 0.732
+        },
+        {
+          "word": "te",
+          "start": 45.367,
+          "end": 45.467,
+          "score": 0.368
+        },
+        {
+          "word": "dar",
+          "start": 45.547,
+          "end": 46.147,
+          "score": 0.779
+        },
+        {
+          "word": "meu",
+          "start": 46.187,
+          "end": 46.427,
+          "score": 0.702
+        },
+        {
+          "word": "coração",
+          "start": 46.527,
+          "end": 47.508,
+          "score": 0.819
+        },
+        {
+          "word": "E",
+          "start": 48.428,
+          "end": 48.468,
+          "score": 0.998
+        },
+        {
+          "word": "confessar",
+          "start": 48.548,
+          "end": 49.569,
+          "score": 0.916
+        },
+        {
+          "word": "que",
+          "start": 49.629,
+          "end": 49.789,
+          "score": 0.537
+        },
+        {
+          "word": "eu",
+          "start": 49.869,
+          "end": 49.969,
+          "score": 0.702
+        },
+        {
+          "word": "estou",
+          "start": 50.029,
+          "end": 50.829,
+          "score": 0.91
+        },
+        {
+          "word": "em",
+          "start": 50.909,
+          "end": 51.029,
+          "score": 0.501
+        },
+        {
+          "word": "tuas",
+          "start": 51.169,
+          "end": 51.569,
+          "score": 0.718
+        },
+        {
+          "word": "mãos",
+          "start": 51.649,
+          "end": 51.789,
+          "score": 0.61
+        }
+      ]
+    },
+    {
+      "text": " Mas não posso imaginar o que vai ser de mim Se eu te perder um dia Eu me afaste e me defendo de você Mas depois me entrego",
+      "start": 53.442,
+      "end": 72.318,
+      "avg_logprob": -0.11782026221044362,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Mas",
+          "start": 53.462,
+          "end": 53.642,
+          "score": 1.0
+        },
+        {
+          "word": "não",
+          "start": 53.682,
+          "end": 53.822,
+          "score": 0.612
+        },
+        {
+          "word": "posso",
+          "start": 53.922,
+          "end": 54.443,
+          "score": 0.941
+        },
+        {
+          "word": "imaginar",
+          "start": 54.483,
+          "end": 55.504,
+          "score": 0.89
+        },
+        {
+          "word": "o",
+          "start": 55.564,
+          "end": 55.604,
+          "score": 0.504
+        },
+        {
+          "word": "que",
+          "start": 55.684,
+          "end": 55.824,
+          "score": 0.591
+        },
+        {
+          "word": "vai",
+          "start": 55.864,
+          "end": 56.064,
+          "score": 0.95
+        },
+        {
+          "word": "ser",
+          "start": 56.204,
+          "end": 56.585,
+          "score": 0.766
+        },
+        {
+          "word": "de",
+          "start": 56.645,
+          "end": 56.745,
+          "score": 0.94
+        },
+        {
+          "word": "mim",
+          "start": 56.825,
+          "end": 57.405,
+          "score": 0.754
+        },
+        {
+          "word": "Se",
+          "start": 57.425,
+          "end": 57.465,
+          "score": 0.0
+        },
+        {
+          "word": "eu",
+          "start": 57.966,
+          "end": 58.126,
+          "score": 0.641
+        },
+        {
+          "word": "te",
+          "start": 58.166,
+          "end": 58.266,
+          "score": 0.818
+        },
+        {
+          "word": "perder",
+          "start": 58.346,
+          "end": 59.387,
+          "score": 0.912
+        },
+        {
+          "word": "um",
+          "start": 59.467,
+          "end": 59.527,
+          "score": 0.954
+        },
+        {
+          "word": "dia",
+          "start": 59.647,
+          "end": 61.729,
+          "score": 0.94
+        },
+        {
+          "word": "Eu",
+          "start": 63.631,
+          "end": 63.991,
+          "score": 0.592
+        },
+        {
+          "word": "me",
+          "start": 64.031,
+          "end": 64.151,
+          "score": 0.91
+        },
+        {
+          "word": "afaste",
+          "start": 64.171,
+          "end": 65.052,
+          "score": 0.833
+        },
+        {
+          "word": "e",
+          "start": 65.072,
+          "end": 65.092,
+          "score": 0.004
+        },
+        {
+          "word": "me",
+          "start": 65.112,
+          "end": 65.192,
+          "score": 0.79
+        },
+        {
+          "word": "defendo",
+          "start": 65.232,
+          "end": 66.153,
+          "score": 0.932
+        },
+        {
+          "word": "de",
+          "start": 66.213,
+          "end": 66.313,
+          "score": 0.854
+        },
+        {
+          "word": "você",
+          "start": 66.353,
+          "end": 67.534,
+          "score": 0.987
+        },
+        {
+          "word": "Mas",
+          "start": 67.954,
+          "end": 68.715,
+          "score": 0.834
+        },
+        {
+          "word": "depois",
+          "start": 68.775,
+          "end": 69.516,
+          "score": 0.879
+        },
+        {
+          "word": "me",
+          "start": 69.556,
+          "end": 69.756,
+          "score": 0.644
+        },
+        {
+          "word": "entrego",
+          "start": 69.856,
+          "end": 71.077,
+          "score": 0.916
+        }
+      ]
+    },
+    {
+      "text": " Faço tipo falo coisas que eu não sou Mas depois eu nego Mas a verdade é que eu sou louco por você E tenho medo de pensar em te perder Eu preciso aceitar que não dá mais Pra separar as nossas vidas",
+      "start": 73.186,
+      "end": 101.118,
+      "avg_logprob": -0.09434530443074751,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Faço",
+          "start": 73.186,
+          "end": 73.786,
+          "score": 0.762
+        },
+        {
+          "word": "tipo",
+          "start": 73.906,
+          "end": 74.587,
+          "score": 0.841
+        },
+        {
+          "word": "falo",
+          "start": 74.707,
+          "end": 75.027,
+          "score": 0.748
+        },
+        {
+          "word": "coisas",
+          "start": 75.127,
+          "end": 75.947,
+          "score": 0.832
+        },
+        {
+          "word": "que",
+          "start": 76.007,
+          "end": 76.107,
+          "score": 0.864
+        },
+        {
+          "word": "eu",
+          "start": 76.267,
+          "end": 76.347,
+          "score": 0.538
+        },
+        {
+          "word": "não",
+          "start": 76.367,
+          "end": 76.768,
+          "score": 0.47
+        },
+        {
+          "word": "sou",
+          "start": 76.948,
+          "end": 77.588,
+          "score": 0.74
+        },
+        {
+          "word": "Mas",
+          "start": 78.028,
+          "end": 78.848,
+          "score": 0.796
+        },
+        {
+          "word": "depois",
+          "start": 78.908,
+          "end": 79.769,
+          "score": 0.907
+        },
+        {
+          "word": "eu",
+          "start": 79.829,
+          "end": 79.969,
+          "score": 0.616
+        },
+        {
+          "word": "nego",
+          "start": 80.049,
+          "end": 81.61,
+          "score": 0.925
+        },
+        {
+          "word": "Mas",
+          "start": 82.05,
+          "end": 82.51,
+          "score": 0.935
+        },
+        {
+          "word": "a",
+          "start": 82.59,
+          "end": 82.75,
+          "score": 0.888
+        },
+        {
+          "word": "verdade",
+          "start": 82.95,
+          "end": 84.251,
+          "score": 0.841
+        },
+        {
+          "word": "é",
+          "start": 84.271,
+          "end": 84.291,
+          "score": 0.0
+        },
+        {
+          "word": "que",
+          "start": 84.391,
+          "end": 84.471,
+          "score": 0.876
+        },
+        {
+          "word": "eu",
+          "start": 84.511,
+          "end": 84.631,
+          "score": 0.506
+        },
+        {
+          "word": "sou",
+          "start": 84.751,
+          "end": 84.951,
+          "score": 0.719
+        },
+        {
+          "word": "louco",
+          "start": 85.291,
+          "end": 85.791,
+          "score": 0.971
+        },
+        {
+          "word": "por",
+          "start": 85.871,
+          "end": 86.012,
+          "score": 0.755
+        },
+        {
+          "word": "você",
+          "start": 86.072,
+          "end": 86.992,
+          "score": 0.982
+        },
+        {
+          "word": "E",
+          "start": 87.612,
+          "end": 87.652,
+          "score": 0.963
+        },
+        {
+          "word": "tenho",
+          "start": 87.732,
+          "end": 88.012,
+          "score": 0.711
+        },
+        {
+          "word": "medo",
+          "start": 88.072,
+          "end": 88.933,
+          "score": 0.995
+        },
+        {
+          "word": "de",
+          "start": 88.993,
+          "end": 89.093,
+          "score": 0.366
+        },
+        {
+          "word": "pensar",
+          "start": 89.153,
+          "end": 90.013,
+          "score": 0.953
+        },
+        {
+          "word": "em",
+          "start": 90.073,
+          "end": 90.153,
+          "score": 0.666
+        },
+        {
+          "word": "te",
+          "start": 90.213,
+          "end": 90.313,
+          "score": 0.773
+        },
+        {
+          "word": "perder",
+          "start": 90.393,
+          "end": 92.674,
+          "score": 0.973
+        },
+        {
+          "word": "Eu",
+          "start": 92.714,
+          "end": 92.794,
+          "score": 1.0
+        },
+        {
+          "word": "preciso",
+          "start": 92.834,
+          "end": 93.775,
+          "score": 0.772
+        },
+        {
+          "word": "aceitar",
+          "start": 93.895,
+          "end": 94.855,
+          "score": 0.859
+        },
+        {
+          "word": "que",
+          "start": 94.915,
+          "end": 95.055,
+          "score": 0.785
+        },
+        {
+          "word": "não",
+          "start": 95.095,
+          "end": 95.316,
+          "score": 0.673
+        },
+        {
+          "word": "dá",
+          "start": 95.396,
+          "end": 95.936,
+          "score": 0.795
+        },
+        {
+          "word": "mais",
+          "start": 95.976,
+          "end": 96.496,
+          "score": 0.815
+        },
+        {
+          "word": "Pra",
+          "start": 96.756,
+          "end": 96.916,
+          "score": 0.823
+        },
+        {
+          "word": "separar",
+          "start": 96.996,
+          "end": 97.536,
+          "score": 0.77
+        },
+        {
+          "word": "as",
+          "start": 97.596,
+          "end": 97.797,
+          "score": 0.757
+        },
+        {
+          "word": "nossas",
+          "start": 97.837,
+          "end": 98.817,
+          "score": 0.723
+        },
+        {
+          "word": "vidas",
+          "start": 98.897,
+          "end": 99.617,
+          "score": 0.787
+        }
+      ]
+    },
+    {
+      "text": " e nessa loucura de dizer que não te quero vou negando as aparências disfarçando as evidências mas pra que viver fingindo se eu não posso enganar meu coração eu sei que te amo chega de mentiras de negar o meu desejo eu te quero mais que tudo",
+      "start": 102.818,
+      "end": 129.31,
+      "avg_logprob": -0.11123635844578819,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "e",
+          "start": 102.918,
+          "end": 103.038,
+          "score": 0.908
+        },
+        {
+          "word": "nessa",
+          "start": 103.138,
+          "end": 103.678,
+          "score": 0.969
+        },
+        {
+          "word": "loucura",
+          "start": 103.698,
+          "end": 104.739,
+          "score": 0.716
+        },
+        {
+          "word": "de",
+          "start": 105.039,
+          "end": 105.119,
+          "score": 0.661
+        },
+        {
+          "word": "dizer",
+          "start": 105.159,
+          "end": 105.599,
+          "score": 0.9
+        },
+        {
+          "word": "que",
+          "start": 105.659,
+          "end": 105.759,
+          "score": 0.468
+        },
+        {
+          "word": "não",
+          "start": 105.799,
+          "end": 106.039,
+          "score": 0.699
+        },
+        {
+          "word": "te",
+          "start": 106.119,
+          "end": 106.2,
+          "score": 0.73
+        },
+        {
+          "word": "quero",
+          "start": 106.28,
+          "end": 107.18,
+          "score": 0.647
+        },
+        {
+          "word": "vou",
+          "start": 107.2,
+          "end": 107.58,
+          "score": 0.506
+        },
+        {
+          "word": "negando",
+          "start": 107.62,
+          "end": 108.1,
+          "score": 0.866
+        },
+        {
+          "word": "as",
+          "start": 108.14,
+          "end": 108.26,
+          "score": 0.904
+        },
+        {
+          "word": "aparências",
+          "start": 108.341,
+          "end": 109.621,
+          "score": 0.836
+        },
+        {
+          "word": "disfarçando",
+          "start": 109.881,
+          "end": 110.501,
+          "score": 0.66
+        },
+        {
+          "word": "as",
+          "start": 110.602,
+          "end": 110.722,
+          "score": 0.844
+        },
+        {
+          "word": "evidências",
+          "start": 110.822,
+          "end": 112.082,
+          "score": 0.871
+        },
+        {
+          "word": "mas",
+          "start": 112.282,
+          "end": 112.442,
+          "score": 0.841
+        },
+        {
+          "word": "pra",
+          "start": 112.502,
+          "end": 112.622,
+          "score": 0.777
+        },
+        {
+          "word": "que",
+          "start": 112.662,
+          "end": 112.903,
+          "score": 0.579
+        },
+        {
+          "word": "viver",
+          "start": 112.943,
+          "end": 113.363,
+          "score": 0.862
+        },
+        {
+          "word": "fingindo",
+          "start": 113.423,
+          "end": 114.483,
+          "score": 0.841
+        },
+        {
+          "word": "se",
+          "start": 114.823,
+          "end": 114.863,
+          "score": 0.998
+        },
+        {
+          "word": "eu",
+          "start": 114.883,
+          "end": 114.964,
+          "score": 0.502
+        },
+        {
+          "word": "não",
+          "start": 114.984,
+          "end": 115.124,
+          "score": 0.659
+        },
+        {
+          "word": "posso",
+          "start": 115.224,
+          "end": 115.624,
+          "score": 0.888
+        },
+        {
+          "word": "enganar",
+          "start": 115.744,
+          "end": 116.564,
+          "score": 0.874
+        },
+        {
+          "word": "meu",
+          "start": 116.724,
+          "end": 116.944,
+          "score": 0.92
+        },
+        {
+          "word": "coração",
+          "start": 117.044,
+          "end": 119.386,
+          "score": 0.818
+        },
+        {
+          "word": "eu",
+          "start": 119.786,
+          "end": 119.886,
+          "score": 0.817
+        },
+        {
+          "word": "sei",
+          "start": 120.046,
+          "end": 120.326,
+          "score": 0.776
+        },
+        {
+          "word": "que",
+          "start": 120.406,
+          "end": 120.566,
+          "score": 0.867
+        },
+        {
+          "word": "te",
+          "start": 120.686,
+          "end": 121.026,
+          "score": 0.822
+        },
+        {
+          "word": "amo",
+          "start": 121.346,
+          "end": 122.007,
+          "score": 0.877
+        },
+        {
+          "word": "chega",
+          "start": 122.507,
+          "end": 122.847,
+          "score": 0.784
+        },
+        {
+          "word": "de",
+          "start": 122.967,
+          "end": 123.107,
+          "score": 0.94
+        },
+        {
+          "word": "mentiras",
+          "start": 123.187,
+          "end": 124.328,
+          "score": 0.842
+        },
+        {
+          "word": "de",
+          "start": 124.588,
+          "end": 124.688,
+          "score": 0.673
+        },
+        {
+          "word": "negar",
+          "start": 124.728,
+          "end": 125.268,
+          "score": 0.856
+        },
+        {
+          "word": "o",
+          "start": 125.308,
+          "end": 125.328,
+          "score": 0.754
+        },
+        {
+          "word": "meu",
+          "start": 125.388,
+          "end": 125.608,
+          "score": 0.676
+        },
+        {
+          "word": "desejo",
+          "start": 125.648,
+          "end": 126.789,
+          "score": 0.781
+        },
+        {
+          "word": "eu",
+          "start": 127.089,
+          "end": 127.169,
+          "score": 0.944
+        },
+        {
+          "word": "te",
+          "start": 127.229,
+          "end": 127.329,
+          "score": 0.732
+        },
+        {
+          "word": "quero",
+          "start": 127.409,
+          "end": 127.789,
+          "score": 0.666
+        },
+        {
+          "word": "mais",
+          "start": 127.829,
+          "end": 128.049,
+          "score": 0.791
+        },
+        {
+          "word": "que",
+          "start": 128.109,
+          "end": 128.21,
+          "score": 0.266
+        },
+        {
+          "word": "tudo",
+          "start": 128.29,
+          "end": 128.95,
+          "score": 0.853
+        }
+      ]
+    },
+    {
+      "text": " Eu preciso do teu beijo Eu entrego minha vida Pra você fazer o que quiser de mim Só quero ouvir você dizer que sim Diz que é verdade Que tem saudade Que ainda você pensa muito em mim Diz que é verdade Que tem saudade",
+      "start": 129.41,
+      "end": 158.75,
+      "avg_logprob": -0.06659540477788674,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Eu",
+          "start": 129.47,
+          "end": 129.55,
+          "score": 0.994
+        },
+        {
+          "word": "preciso",
+          "start": 129.61,
+          "end": 130.211,
+          "score": 0.938
+        },
+        {
+          "word": "do",
+          "start": 130.271,
+          "end": 130.411,
+          "score": 0.949
+        },
+        {
+          "word": "teu",
+          "start": 130.491,
+          "end": 130.591,
+          "score": 0.482
+        },
+        {
+          "word": "beijo",
+          "start": 130.771,
+          "end": 131.652,
+          "score": 0.848
+        },
+        {
+          "word": "Eu",
+          "start": 131.672,
+          "end": 131.712,
+          "score": 0.002
+        },
+        {
+          "word": "entrego",
+          "start": 131.972,
+          "end": 132.672,
+          "score": 0.598
+        },
+        {
+          "word": "minha",
+          "start": 132.732,
+          "end": 133.133,
+          "score": 0.68
+        },
+        {
+          "word": "vida",
+          "start": 133.213,
+          "end": 134.093,
+          "score": 0.703
+        },
+        {
+          "word": "Pra",
+          "start": 134.273,
+          "end": 134.493,
+          "score": 0.618
+        },
+        {
+          "word": "você",
+          "start": 134.533,
+          "end": 134.894,
+          "score": 0.922
+        },
+        {
+          "word": "fazer",
+          "start": 135.014,
+          "end": 135.474,
+          "score": 0.874
+        },
+        {
+          "word": "o",
+          "start": 135.534,
+          "end": 135.574,
+          "score": 0.642
+        },
+        {
+          "word": "que",
+          "start": 135.654,
+          "end": 136.175,
+          "score": 0.855
+        },
+        {
+          "word": "quiser",
+          "start": 136.295,
+          "end": 137.055,
+          "score": 0.82
+        },
+        {
+          "word": "de",
+          "start": 137.135,
+          "end": 137.255,
+          "score": 0.744
+        },
+        {
+          "word": "mim",
+          "start": 137.315,
+          "end": 138.856,
+          "score": 0.856
+        },
+        {
+          "word": "Só",
+          "start": 139.297,
+          "end": 139.457,
+          "score": 0.905
+        },
+        {
+          "word": "quero",
+          "start": 139.577,
+          "end": 140.037,
+          "score": 0.611
+        },
+        {
+          "word": "ouvir",
+          "start": 140.117,
+          "end": 140.518,
+          "score": 0.792
+        },
+        {
+          "word": "você",
+          "start": 140.558,
+          "end": 141.158,
+          "score": 0.915
+        },
+        {
+          "word": "dizer",
+          "start": 141.218,
+          "end": 141.718,
+          "score": 0.857
+        },
+        {
+          "word": "que",
+          "start": 141.818,
+          "end": 141.899,
+          "score": 0.557
+        },
+        {
+          "word": "sim",
+          "start": 142.039,
+          "end": 142.919,
+          "score": 0.613
+        },
+        {
+          "word": "Diz",
+          "start": 143.299,
+          "end": 143.58,
+          "score": 0.727
+        },
+        {
+          "word": "que",
+          "start": 143.6,
+          "end": 143.82,
+          "score": 0.835
+        },
+        {
+          "word": "é",
+          "start": 143.84,
+          "end": 143.86,
+          "score": 0.003
+        },
+        {
+          "word": "verdade",
+          "start": 143.9,
+          "end": 145.401,
+          "score": 0.897
+        },
+        {
+          "word": "Que",
+          "start": 145.741,
+          "end": 145.921,
+          "score": 0.809
+        },
+        {
+          "word": "tem",
+          "start": 146.021,
+          "end": 146.241,
+          "score": 0.735
+        },
+        {
+          "word": "saudade",
+          "start": 146.342,
+          "end": 148.643,
+          "score": 0.886
+        },
+        {
+          "word": "Que",
+          "start": 149.063,
+          "end": 149.203,
+          "score": 0.807
+        },
+        {
+          "word": "ainda",
+          "start": 149.264,
+          "end": 149.844,
+          "score": 0.83
+        },
+        {
+          "word": "você",
+          "start": 149.944,
+          "end": 150.344,
+          "score": 0.831
+        },
+        {
+          "word": "pensa",
+          "start": 150.444,
+          "end": 151.165,
+          "score": 0.803
+        },
+        {
+          "word": "muito",
+          "start": 151.265,
+          "end": 151.645,
+          "score": 0.91
+        },
+        {
+          "word": "em",
+          "start": 151.685,
+          "end": 151.805,
+          "score": 0.8
+        },
+        {
+          "word": "mim",
+          "start": 151.865,
+          "end": 152.726,
+          "score": 0.631
+        },
+        {
+          "word": "Diz",
+          "start": 153.126,
+          "end": 153.286,
+          "score": 0.503
+        },
+        {
+          "word": "que",
+          "start": 153.446,
+          "end": 153.586,
+          "score": 0.827
+        },
+        {
+          "word": "é",
+          "start": 153.647,
+          "end": 153.667,
+          "score": 0.001
+        },
+        {
+          "word": "verdade",
+          "start": 153.727,
+          "end": 155.188,
+          "score": 0.962
+        },
+        {
+          "word": "Que",
+          "start": 155.548,
+          "end": 155.748,
+          "score": 0.653
+        },
+        {
+          "word": "tem",
+          "start": 155.848,
+          "end": 156.048,
+          "score": 0.836
+        },
+        {
+          "word": "saudade",
+          "start": 156.148,
+          "end": 157.269,
+          "score": 0.883
+        }
+      ]
+    },
+    {
+      "text": " Que ainda você quer viver pra mim Eu me afasto e me defendo de você Mas depois me entrego",
+      "start": 158.882,
+      "end": 185.79,
+      "avg_logprob": -0.16680419445037842,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Que",
+          "start": 158.902,
+          "end": 158.962,
+          "score": 0.165
+        },
+        {
+          "word": "ainda",
+          "start": 159.002,
+          "end": 159.742,
+          "score": 0.854
+        },
+        {
+          "word": "você",
+          "start": 159.802,
+          "end": 160.222,
+          "score": 0.901
+        },
+        {
+          "word": "quer",
+          "start": 160.302,
+          "end": 160.803,
+          "score": 0.868
+        },
+        {
+          "word": "viver",
+          "start": 160.883,
+          "end": 161.523,
+          "score": 0.98
+        },
+        {
+          "word": "pra",
+          "start": 161.623,
+          "end": 161.803,
+          "score": 0.748
+        },
+        {
+          "word": "mim",
+          "start": 161.883,
+          "end": 176.507,
+          "score": 0.95
+        },
+        {
+          "word": "Eu",
+          "start": 176.527,
+          "end": 176.627,
+          "score": 0.215
+        },
+        {
+          "word": "me",
+          "start": 176.667,
+          "end": 176.767,
+          "score": 0.967
+        },
+        {
+          "word": "afasto",
+          "start": 176.827,
+          "end": 177.828,
+          "score": 0.936
+        },
+        {
+          "word": "e",
+          "start": 177.848,
+          "end": 177.868,
+          "score": 0.0
+        },
+        {
+          "word": "me",
+          "start": 177.888,
+          "end": 177.988,
+          "score": 0.833
+        },
+        {
+          "word": "defendo",
+          "start": 178.028,
+          "end": 178.968,
+          "score": 0.859
+        },
+        {
+          "word": "de",
+          "start": 179.028,
+          "end": 179.148,
+          "score": 0.867
+        },
+        {
+          "word": "você",
+          "start": 179.208,
+          "end": 180.328,
+          "score": 0.982
+        },
+        {
+          "word": "Mas",
+          "start": 180.909,
+          "end": 181.789,
+          "score": 0.833
+        },
+        {
+          "word": "depois",
+          "start": 181.849,
+          "end": 182.689,
+          "score": 0.893
+        },
+        {
+          "word": "me",
+          "start": 182.729,
+          "end": 183.009,
+          "score": 0.687
+        },
+        {
+          "word": "entrego",
+          "start": 183.109,
+          "end": 184.65,
+          "score": 0.95
+        }
+      ]
+    },
+    {
+      "text": " Faço tipo, falo coisas que eu não sou Mas depois eu nego Mas a verdade é que eu sou louco por você E tenho medo de pensar em te perder Eu preciso aceitar que não dá mais Pra separar as nossas vidas",
+      "start": 185.89,
+      "end": 213.726,
+      "avg_logprob": -0.10981813117861748,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Faço",
+          "start": 185.93,
+          "end": 186.51,
+          "score": 0.729
+        },
+        {
+          "word": "tipo,",
+          "start": 186.59,
+          "end": 187.291,
+          "score": 0.974
+        },
+        {
+          "word": "falo",
+          "start": 187.391,
+          "end": 187.691,
+          "score": 0.805
+        },
+        {
+          "word": "coisas",
+          "start": 187.811,
+          "end": 188.612,
+          "score": 0.81
+        },
+        {
+          "word": "que",
+          "start": 188.672,
+          "end": 188.732,
+          "score": 0.948
+        },
+        {
+          "word": "eu",
+          "start": 188.752,
+          "end": 188.872,
+          "score": 0.669
+        },
+        {
+          "word": "não",
+          "start": 188.912,
+          "end": 189.392,
+          "score": 0.834
+        },
+        {
+          "word": "sou",
+          "start": 189.592,
+          "end": 190.253,
+          "score": 0.849
+        },
+        {
+          "word": "Mas",
+          "start": 190.653,
+          "end": 191.573,
+          "score": 0.795
+        },
+        {
+          "word": "depois",
+          "start": 191.613,
+          "end": 192.554,
+          "score": 0.932
+        },
+        {
+          "word": "eu",
+          "start": 192.634,
+          "end": 192.774,
+          "score": 0.824
+        },
+        {
+          "word": "nego",
+          "start": 192.854,
+          "end": 194.215,
+          "score": 0.919
+        },
+        {
+          "word": "Mas",
+          "start": 194.735,
+          "end": 195.175,
+          "score": 0.807
+        },
+        {
+          "word": "a",
+          "start": 195.255,
+          "end": 195.476,
+          "score": 0.848
+        },
+        {
+          "word": "verdade",
+          "start": 195.576,
+          "end": 196.876,
+          "score": 0.849
+        },
+        {
+          "word": "é",
+          "start": 196.916,
+          "end": 196.936,
+          "score": 0.0
+        },
+        {
+          "word": "que",
+          "start": 197.016,
+          "end": 197.116,
+          "score": 0.668
+        },
+        {
+          "word": "eu",
+          "start": 197.156,
+          "end": 197.257,
+          "score": 0.567
+        },
+        {
+          "word": "sou",
+          "start": 197.377,
+          "end": 197.557,
+          "score": 0.549
+        },
+        {
+          "word": "louco",
+          "start": 197.897,
+          "end": 198.377,
+          "score": 0.901
+        },
+        {
+          "word": "por",
+          "start": 198.457,
+          "end": 198.577,
+          "score": 0.833
+        },
+        {
+          "word": "você",
+          "start": 198.617,
+          "end": 199.518,
+          "score": 0.986
+        },
+        {
+          "word": "E",
+          "start": 200.258,
+          "end": 200.298,
+          "score": 0.964
+        },
+        {
+          "word": "tenho",
+          "start": 200.378,
+          "end": 200.638,
+          "score": 0.829
+        },
+        {
+          "word": "medo",
+          "start": 200.699,
+          "end": 201.599,
+          "score": 0.646
+        },
+        {
+          "word": "de",
+          "start": 201.639,
+          "end": 201.739,
+          "score": 0.301
+        },
+        {
+          "word": "pensar",
+          "start": 201.799,
+          "end": 202.64,
+          "score": 0.98
+        },
+        {
+          "word": "em",
+          "start": 202.7,
+          "end": 202.8,
+          "score": 0.436
+        },
+        {
+          "word": "te",
+          "start": 202.84,
+          "end": 202.98,
+          "score": 0.84
+        },
+        {
+          "word": "perder",
+          "start": 203.04,
+          "end": 205.261,
+          "score": 0.948
+        },
+        {
+          "word": "Eu",
+          "start": 205.301,
+          "end": 205.381,
+          "score": 1.0
+        },
+        {
+          "word": "preciso",
+          "start": 205.441,
+          "end": 206.362,
+          "score": 0.859
+        },
+        {
+          "word": "aceitar",
+          "start": 206.462,
+          "end": 207.442,
+          "score": 0.88
+        },
+        {
+          "word": "que",
+          "start": 207.522,
+          "end": 207.643,
+          "score": 0.833
+        },
+        {
+          "word": "não",
+          "start": 207.703,
+          "end": 207.883,
+          "score": 0.747
+        },
+        {
+          "word": "dá",
+          "start": 207.983,
+          "end": 208.523,
+          "score": 0.81
+        },
+        {
+          "word": "mais",
+          "start": 208.583,
+          "end": 209.103,
+          "score": 0.827
+        },
+        {
+          "word": "Pra",
+          "start": 209.363,
+          "end": 209.524,
+          "score": 0.612
+        },
+        {
+          "word": "separar",
+          "start": 209.584,
+          "end": 210.124,
+          "score": 0.877
+        },
+        {
+          "word": "as",
+          "start": 210.184,
+          "end": 210.404,
+          "score": 0.77
+        },
+        {
+          "word": "nossas",
+          "start": 210.444,
+          "end": 211.445,
+          "score": 0.677
+        },
+        {
+          "word": "vidas",
+          "start": 211.525,
+          "end": 212.205,
+          "score": 0.782
+        }
+      ]
+    },
+    {
+      "text": " e nessa loucura te dizer que não te quero bom negando as aparências disfarçando as evidências mas pra que viver fingindo se eu não posso enganar meu coração eu sei que te amo chega de mentiras te negar o meu desejo eu te quero mais que tudo",
+      "start": 215.522,
+      "end": 241.982,
+      "avg_logprob": -0.1423314114411672,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "e",
+          "start": 215.622,
+          "end": 215.782,
+          "score": 0.784
+        },
+        {
+          "word": "nessa",
+          "start": 215.822,
+          "end": 216.363,
+          "score": 0.854
+        },
+        {
+          "word": "loucura",
+          "start": 216.403,
+          "end": 217.403,
+          "score": 0.839
+        },
+        {
+          "word": "te",
+          "start": 217.644,
+          "end": 217.724,
+          "score": 0.752
+        },
+        {
+          "word": "dizer",
+          "start": 217.784,
+          "end": 218.224,
+          "score": 0.795
+        },
+        {
+          "word": "que",
+          "start": 218.304,
+          "end": 218.364,
+          "score": 0.002
+        },
+        {
+          "word": "não",
+          "start": 218.384,
+          "end": 218.644,
+          "score": 0.744
+        },
+        {
+          "word": "te",
+          "start": 218.704,
+          "end": 218.784,
+          "score": 0.58
+        },
+        {
+          "word": "quero",
+          "start": 218.885,
+          "end": 219.785,
+          "score": 0.741
+        },
+        {
+          "word": "bom",
+          "start": 220.065,
+          "end": 220.226,
+          "score": 0.962
+        },
+        {
+          "word": "negando",
+          "start": 220.266,
+          "end": 220.646,
+          "score": 0.468
+        },
+        {
+          "word": "as",
+          "start": 220.746,
+          "end": 220.866,
+          "score": 0.936
+        },
+        {
+          "word": "aparências",
+          "start": 220.926,
+          "end": 222.287,
+          "score": 0.829
+        },
+        {
+          "word": "disfarçando",
+          "start": 222.547,
+          "end": 223.168,
+          "score": 0.78
+        },
+        {
+          "word": "as",
+          "start": 223.248,
+          "end": 223.368,
+          "score": 0.97
+        },
+        {
+          "word": "evidências",
+          "start": 223.448,
+          "end": 224.729,
+          "score": 0.819
+        },
+        {
+          "word": "mas",
+          "start": 224.949,
+          "end": 225.109,
+          "score": 0.879
+        },
+        {
+          "word": "pra",
+          "start": 225.149,
+          "end": 225.269,
+          "score": 0.875
+        },
+        {
+          "word": "que",
+          "start": 225.349,
+          "end": 225.59,
+          "score": 0.811
+        },
+        {
+          "word": "viver",
+          "start": 225.63,
+          "end": 226.01,
+          "score": 0.902
+        },
+        {
+          "word": "fingindo",
+          "start": 226.07,
+          "end": 227.131,
+          "score": 0.836
+        },
+        {
+          "word": "se",
+          "start": 227.431,
+          "end": 227.491,
+          "score": 0.956
+        },
+        {
+          "word": "eu",
+          "start": 227.531,
+          "end": 227.591,
+          "score": 0.751
+        },
+        {
+          "word": "não",
+          "start": 227.611,
+          "end": 227.731,
+          "score": 0.643
+        },
+        {
+          "word": "posso",
+          "start": 227.831,
+          "end": 228.232,
+          "score": 0.877
+        },
+        {
+          "word": "enganar",
+          "start": 228.372,
+          "end": 229.212,
+          "score": 0.902
+        },
+        {
+          "word": "meu",
+          "start": 229.272,
+          "end": 229.493,
+          "score": 0.696
+        },
+        {
+          "word": "coração",
+          "start": 229.633,
+          "end": 231.994,
+          "score": 0.925
+        },
+        {
+          "word": "eu",
+          "start": 232.435,
+          "end": 232.535,
+          "score": 0.794
+        },
+        {
+          "word": "sei",
+          "start": 232.695,
+          "end": 232.975,
+          "score": 0.78
+        },
+        {
+          "word": "que",
+          "start": 233.055,
+          "end": 233.235,
+          "score": 0.794
+        },
+        {
+          "word": "te",
+          "start": 233.315,
+          "end": 233.676,
+          "score": 0.72
+        },
+        {
+          "word": "amo",
+          "start": 233.996,
+          "end": 234.696,
+          "score": 0.92
+        },
+        {
+          "word": "chega",
+          "start": 235.137,
+          "end": 235.537,
+          "score": 0.754
+        },
+        {
+          "word": "de",
+          "start": 235.597,
+          "end": 235.777,
+          "score": 0.89
+        },
+        {
+          "word": "mentiras",
+          "start": 235.817,
+          "end": 236.998,
+          "score": 0.785
+        },
+        {
+          "word": "te",
+          "start": 237.318,
+          "end": 237.379,
+          "score": 0.536
+        },
+        {
+          "word": "negar",
+          "start": 237.439,
+          "end": 237.919,
+          "score": 0.956
+        },
+        {
+          "word": "o",
+          "start": 237.959,
+          "end": 237.999,
+          "score": 0.976
+        },
+        {
+          "word": "meu",
+          "start": 238.059,
+          "end": 238.259,
+          "score": 0.645
+        },
+        {
+          "word": "desejo",
+          "start": 238.319,
+          "end": 239.46,
+          "score": 0.549
+        },
+        {
+          "word": "eu",
+          "start": 239.72,
+          "end": 239.86,
+          "score": 0.662
+        },
+        {
+          "word": "te",
+          "start": 239.9,
+          "end": 239.98,
+          "score": 0.507
+        },
+        {
+          "word": "quero",
+          "start": 240.061,
+          "end": 240.421,
+          "score": 0.832
+        },
+        {
+          "word": "mais",
+          "start": 240.461,
+          "end": 240.721,
+          "score": 0.543
+        },
+        {
+          "word": "que",
+          "start": 240.761,
+          "end": 240.841,
+          "score": 0.301
+        },
+        {
+          "word": "tudo",
+          "start": 240.961,
+          "end": 241.602,
+          "score": 0.985
+        }
+      ]
+    },
+    {
+      "text": " Eu preciso do teu beijo Eu entrego a minha vida Pra você fazer o que quiser de mim Só quero ouvir você dizer que sim Diz que é verdade e tem saudade E ainda você pensa muito em mim Diz que é verdade e tem saudade",
+      "start": 242.082,
+      "end": 271.39,
+      "avg_logprob": -0.08750614937808779,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Eu",
+          "start": 242.142,
+          "end": 242.242,
+          "score": 0.863
+        },
+        {
+          "word": "preciso",
+          "start": 242.282,
+          "end": 242.882,
+          "score": 0.943
+        },
+        {
+          "word": "do",
+          "start": 242.942,
+          "end": 243.062,
+          "score": 0.993
+        },
+        {
+          "word": "teu",
+          "start": 243.162,
+          "end": 243.322,
+          "score": 0.62
+        },
+        {
+          "word": "beijo",
+          "start": 243.422,
+          "end": 244.343,
+          "score": 0.492
+        },
+        {
+          "word": "Eu",
+          "start": 244.623,
+          "end": 244.723,
+          "score": 0.876
+        },
+        {
+          "word": "entrego",
+          "start": 244.783,
+          "end": 245.243,
+          "score": 0.531
+        },
+        {
+          "word": "a",
+          "start": 245.263,
+          "end": 245.303,
+          "score": 0.992
+        },
+        {
+          "word": "minha",
+          "start": 245.363,
+          "end": 245.743,
+          "score": 0.859
+        },
+        {
+          "word": "vida",
+          "start": 245.823,
+          "end": 246.663,
+          "score": 0.968
+        },
+        {
+          "word": "Pra",
+          "start": 246.963,
+          "end": 247.123,
+          "score": 0.776
+        },
+        {
+          "word": "você",
+          "start": 247.183,
+          "end": 247.563,
+          "score": 0.914
+        },
+        {
+          "word": "fazer",
+          "start": 247.664,
+          "end": 248.104,
+          "score": 0.971
+        },
+        {
+          "word": "o",
+          "start": 248.164,
+          "end": 248.204,
+          "score": 0.5
+        },
+        {
+          "word": "que",
+          "start": 248.284,
+          "end": 248.704,
+          "score": 0.865
+        },
+        {
+          "word": "quiser",
+          "start": 248.824,
+          "end": 249.464,
+          "score": 0.84
+        },
+        {
+          "word": "de",
+          "start": 249.504,
+          "end": 249.624,
+          "score": 0.964
+        },
+        {
+          "word": "mim",
+          "start": 249.724,
+          "end": 251.505,
+          "score": 0.661
+        },
+        {
+          "word": "Só",
+          "start": 251.985,
+          "end": 252.105,
+          "score": 0.998
+        },
+        {
+          "word": "quero",
+          "start": 252.225,
+          "end": 252.705,
+          "score": 0.815
+        },
+        {
+          "word": "ouvir",
+          "start": 252.745,
+          "end": 253.165,
+          "score": 0.723
+        },
+        {
+          "word": "você",
+          "start": 253.225,
+          "end": 253.765,
+          "score": 0.96
+        },
+        {
+          "word": "dizer",
+          "start": 253.845,
+          "end": 254.305,
+          "score": 0.933
+        },
+        {
+          "word": "que",
+          "start": 254.385,
+          "end": 254.545,
+          "score": 0.573
+        },
+        {
+          "word": "sim",
+          "start": 254.705,
+          "end": 255.406,
+          "score": 0.651
+        },
+        {
+          "word": "Diz",
+          "start": 255.966,
+          "end": 256.346,
+          "score": 0.833
+        },
+        {
+          "word": "que",
+          "start": 256.366,
+          "end": 256.426,
+          "score": 0.003
+        },
+        {
+          "word": "é",
+          "start": 256.486,
+          "end": 256.526,
+          "score": 0.086
+        },
+        {
+          "word": "verdade",
+          "start": 256.586,
+          "end": 258.106,
+          "score": 0.848
+        },
+        {
+          "word": "e",
+          "start": 258.506,
+          "end": 258.607,
+          "score": 0.896
+        },
+        {
+          "word": "tem",
+          "start": 258.707,
+          "end": 258.907,
+          "score": 0.725
+        },
+        {
+          "word": "saudade",
+          "start": 259.007,
+          "end": 261.327,
+          "score": 0.879
+        },
+        {
+          "word": "E",
+          "start": 261.787,
+          "end": 261.847,
+          "score": 0.603
+        },
+        {
+          "word": "ainda",
+          "start": 261.947,
+          "end": 262.588,
+          "score": 0.873
+        },
+        {
+          "word": "você",
+          "start": 262.668,
+          "end": 263.128,
+          "score": 0.705
+        },
+        {
+          "word": "pensa",
+          "start": 263.248,
+          "end": 263.868,
+          "score": 0.788
+        },
+        {
+          "word": "muito",
+          "start": 263.968,
+          "end": 264.428,
+          "score": 0.858
+        },
+        {
+          "word": "em",
+          "start": 264.628,
+          "end": 265.268,
+          "score": 0.49
+        },
+        {
+          "word": "mim",
+          "start": 265.288,
+          "end": 265.348,
+          "score": 0.0
+        },
+        {
+          "word": "Diz",
+          "start": 265.768,
+          "end": 266.109,
+          "score": 0.813
+        },
+        {
+          "word": "que",
+          "start": 266.129,
+          "end": 266.189,
+          "score": 0.007
+        },
+        {
+          "word": "é",
+          "start": 266.209,
+          "end": 266.229,
+          "score": 0.004
+        },
+        {
+          "word": "verdade",
+          "start": 266.349,
+          "end": 266.549,
+          "score": 0.177
+        },
+        {
+          "word": "e",
+          "start": 266.569,
+          "end": 266.589,
+          "score": 0.004
+        },
+        {
+          "word": "tem",
+          "start": 266.649,
+          "end": 266.789,
+          "score": 0.444
+        },
+        {
+          "word": "saudade",
+          "start": 266.869,
+          "end": 267.309,
+          "score": 0.641
+        }
+      ]
+    },
+    {
+      "text": " Que ainda você quer viver pra mim Diz que é verdade Que tem saudade Que ainda você quer viver pra mim",
+      "start": 271.522,
+      "end": 288.766,
+      "avg_logprob": -0.20846461939315,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Que",
+          "start": 271.582,
+          "end": 271.822,
+          "score": 0.505
+        },
+        {
+          "word": "ainda",
+          "start": 271.983,
+          "end": 272.383,
+          "score": 0.682
+        },
+        {
+          "word": "você",
+          "start": 272.463,
+          "end": 272.884,
+          "score": 0.952
+        },
+        {
+          "word": "quer",
+          "start": 272.964,
+          "end": 273.405,
+          "score": 0.861
+        },
+        {
+          "word": "viver",
+          "start": 273.485,
+          "end": 274.126,
+          "score": 0.862
+        },
+        {
+          "word": "pra",
+          "start": 274.186,
+          "end": 274.406,
+          "score": 0.785
+        },
+        {
+          "word": "mim",
+          "start": 274.466,
+          "end": 275.207,
+          "score": 0.643
+        },
+        {
+          "word": "Diz",
+          "start": 275.588,
+          "end": 275.808,
+          "score": 0.639
+        },
+        {
+          "word": "que",
+          "start": 275.868,
+          "end": 275.948,
+          "score": 0.497
+        },
+        {
+          "word": "é",
+          "start": 275.968,
+          "end": 276.088,
+          "score": 0.825
+        },
+        {
+          "word": "verdade",
+          "start": 276.148,
+          "end": 277.671,
+          "score": 0.893
+        },
+        {
+          "word": "Que",
+          "start": 277.971,
+          "end": 278.151,
+          "score": 0.739
+        },
+        {
+          "word": "tem",
+          "start": 278.271,
+          "end": 278.472,
+          "score": 0.702
+        },
+        {
+          "word": "saudade",
+          "start": 278.572,
+          "end": 280.915,
+          "score": 0.867
+        },
+        {
+          "word": "Que",
+          "start": 281.316,
+          "end": 281.396,
+          "score": 0.559
+        },
+        {
+          "word": "ainda",
+          "start": 281.456,
+          "end": 282.177,
+          "score": 0.872
+        },
+        {
+          "word": "você",
+          "start": 282.257,
+          "end": 282.758,
+          "score": 0.94
+        },
+        {
+          "word": "quer",
+          "start": 282.858,
+          "end": 283.699,
+          "score": 0.825
+        },
+        {
+          "word": "viver",
+          "start": 283.759,
+          "end": 285.742,
+          "score": 0.832
+        },
+        {
+          "word": "pra",
+          "start": 286.202,
+          "end": 287.424,
+          "score": 0.816
+        },
+        {
+          "word": "mim",
+          "start": 287.604,
+          "end": 288.165,
+          "score": 0.654
+        }
+      ]
+    }
+  ],
+  "blocos": [
+    {
+      "inicio": 24.278,
+      "fim": 28.22,
+      "texto": "Quando eu digo que deixei de te amar"
+    },
+    {
+      "inicio": 29.24,
+      "fim": 31.701,
+      "texto": "É porque eu te amo"
+    },
+    {
+      "inicio": 34.022,
+      "fim": 38.364,
+      "texto": "Quando eu digo que não quero mais você"
+    },
+    {
+      "inicio": 39.564,
+      "fim": 42.346,
+      "texto": "É porque eu te quero"
+    },
+    {
+      "inicio": 43.006,
+      "fim": 47.508,
+      "texto": "Eu tenho medo de te dar meu coração"
+    },
+    {
+      "inicio": 48.428,
+      "fim": 51.789,
+      "texto": "E confessar que eu estou em tuas mãos"
+    },
+    {
+      "inicio": 53.462,
+      "fim": 59.387,
+      "texto": "Mas não posso imaginar o que vai ser de mim Se eu te perder"
+    },
+    {
+      "inicio": 59.467,
+      "fim": 61.729,
+      "texto": "um dia"
+    },
+    {
+      "inicio": 63.631,
+      "fim": 69.516,
+      "texto": "Eu me afaste e me defendo de você Mas depois"
+    },
+    {
+      "inicio": 69.556,
+      "fim": 71.077,
+      "texto": "me entrego"
+    },
+    {
+      "inicio": 73.186,
+      "fim": 78.848,
+      "texto": "Faço tipo falo coisas que eu não sou Mas"
+    },
+    {
+      "inicio": 78.908,
+      "fim": 84.631,
+      "texto": "depois eu nego Mas a verdade é que eu"
+    },
+    {
+      "inicio": 84.751,
+      "fim": 90.313,
+      "texto": "sou louco por você E tenho medo de pensar em te"
+    },
+    {
+      "inicio": 90.393,
+      "fim": 95.936,
+      "texto": "perder Eu preciso aceitar que não dá"
+    },
+    {
+      "inicio": 95.976,
+      "fim": 99.617,
+      "texto": "mais Pra separar as nossas vidas"
+    },
+    {
+      "inicio": 102.918,
+      "fim": 108.26,
+      "texto": "e nessa loucura de dizer que não te quero vou negando as"
+    },
+    {
+      "inicio": 108.341,
+      "fim": 113.363,
+      "texto": "aparências disfarçando as evidências mas pra que viver"
+    },
+    {
+      "inicio": 113.423,
+      "fim": 119.386,
+      "texto": "fingindo se eu não posso enganar meu coração"
+    },
+    {
+      "inicio": 119.786,
+      "fim": 125.608,
+      "texto": "eu sei que te amo chega de mentiras de negar o meu"
+    },
+    {
+      "inicio": 125.648,
+      "fim": 128.95,
+      "texto": "desejo eu te quero mais que tudo"
+    },
+    {
+      "inicio": 129.47,
+      "fim": 134.894,
+      "texto": "Eu preciso do teu beijo Eu entrego minha vida Pra você"
+    },
+    {
+      "inicio": 135.014,
+      "fim": 140.518,
+      "texto": "fazer o que quiser de mim Só quero ouvir"
+    },
+    {
+      "inicio": 140.558,
+      "fim": 146.241,
+      "texto": "você dizer que sim Diz que é verdade Que tem"
+    },
+    {
+      "inicio": 146.342,
+      "fim": 151.805,
+      "texto": "saudade Que ainda você pensa muito em"
+    },
+    {
+      "inicio": 151.865,
+      "fim": 157.269,
+      "texto": "mim Diz que é verdade Que tem saudade"
+    },
+    {
+      "inicio": 158.902,
+      "fim": 161.803,
+      "texto": "Que ainda você quer viver pra"
+    },
+    {
+      "inicio": 161.883,
+      "fim": 176.507,
+      "texto": "mim"
+    },
+    {
+      "inicio": 176.527,
+      "fim": 181.789,
+      "texto": "Eu me afasto e me defendo de você Mas"
+    },
+    {
+      "inicio": 181.849,
+      "fim": 184.65,
+      "texto": "depois me entrego"
+    },
+    {
+      "inicio": 185.93,
+      "fim": 191.573,
+      "texto": "Faço tipo, falo coisas que eu não sou Mas"
+    },
+    {
+      "inicio": 191.613,
+      "fim": 197.557,
+      "texto": "depois eu nego Mas a verdade é que eu sou"
+    },
+    {
+      "inicio": 197.897,
+      "fim": 199.518,
+      "texto": "louco por você"
+    },
+    {
+      "inicio": 200.258,
+      "fim": 205.381,
+      "texto": "E tenho medo de pensar em te perder Eu"
+    },
+    {
+      "inicio": 205.441,
+      "fim": 210.404,
+      "texto": "preciso aceitar que não dá mais Pra separar as"
+    },
+    {
+      "inicio": 210.444,
+      "fim": 212.205,
+      "texto": "nossas vidas"
+    },
+    {
+      "inicio": 215.622,
+      "fim": 220.866,
+      "texto": "e nessa loucura te dizer que não te quero bom negando as"
+    },
+    {
+      "inicio": 220.926,
+      "fim": 226.01,
+      "texto": "aparências disfarçando as evidências mas pra que viver"
+    },
+    {
+      "inicio": 226.07,
+      "fim": 231.994,
+      "texto": "fingindo se eu não posso enganar meu coração"
+    },
+    {
+      "inicio": 232.435,
+      "fim": 238.259,
+      "texto": "eu sei que te amo chega de mentiras te negar o meu"
+    },
+    {
+      "inicio": 238.319,
+      "fim": 241.602,
+      "texto": "desejo eu te quero mais que tudo"
+    },
+    {
+      "inicio": 242.142,
+      "fim": 248.104,
+      "texto": "Eu preciso do teu beijo Eu entrego a minha vida Pra você fazer"
+    },
+    {
+      "inicio": 248.164,
+      "fim": 253.765,
+      "texto": "o que quiser de mim Só quero ouvir você"
+    },
+    {
+      "inicio": 253.845,
+      "fim": 258.907,
+      "texto": "dizer que sim Diz que é verdade e tem"
+    },
+    {
+      "inicio": 259.007,
+      "fim": 264.428,
+      "texto": "saudade E ainda você pensa muito"
+    },
+    {
+      "inicio": 264.628,
+      "fim": 267.309,
+      "texto": "em mim Diz que é verdade e tem saudade"
+    },
+    {
+      "inicio": 271.582,
+      "fim": 276.088,
+      "texto": "Que ainda você quer viver pra mim Diz que é"
+    },
+    {
+      "inicio": 276.148,
+      "fim": 281.396,
+      "texto": "verdade Que tem saudade Que"
+    },
+    {
+      "inicio": 281.456,
+      "fim": 287.424,
+      "texto": "ainda você quer viver pra"
+    },
+    {
+      "inicio": 287.604,
+      "fim": 288.165,
+      "texto": "mim"
+    }
+  ],
+  "avisos": [
+    "Segmento 1: alinhamento fraco em 'É'.",
+    "Segmento 1: alinhamento fraco em 'É'.",
+    "Segmento 2: alinhamento fraco em 'Se'.",
+    "Segmento 2: alinhamento fraco em 'e'.",
+    "Segmento 3: alinhamento fraco em 'é'.",
+    "Segmento 4: alinhamento fraco em 'que'.",
+    "Segmento 5: alinhamento fraco em 'Eu'.",
+    "Segmento 5: alinhamento fraco em 'é'.",
+    "Segmento 5: alinhamento fraco em 'é'.",
+    "Segmento 6: alinhamento fraco em 'Que'.",
+    "Segmento 6: alinhamento fraco em 'Eu'.",
+    "Segmento 6: alinhamento fraco em 'e'.",
+    "Segmento 7: alinhamento fraco em 'é'.",
+    "Segmento 8: alinhamento fraco em 'que'.",
+    "Segmento 9: alinhamento fraco em 'que'.",
+    "Segmento 9: alinhamento fraco em 'é'.",
+    "Segmento 9: alinhamento fraco em 'mim'.",
+    "Segmento 9: alinhamento fraco em 'que'.",
+    "Segmento 9: alinhamento fraco em 'é'.",
+    "Segmento 9: alinhamento fraco em 'verdade'.",
+    "Segmento 9: alinhamento fraco em 'e'."
+  ],
+  "revisao_recomendada": true,
+  "comparacao_letra": {
+    "similaridade_textual": 0.7072758037225042,
+    "divergencias": [
+      {
+        "tipo": "replace",
+        "referencia": "afasto",
+        "transcricao": "afaste"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "seu",
+        "transcricao": "teu"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "a",
+        "transcricao": ""
+      },
+      {
+        "tipo": "insert",
+        "referencia": "",
+        "transcricao": "eu me afasto e me defendo de você mas depois me entrego faço tipo falo coisas que eu não sou mas depois eu nego mas a verdade é que eu sou louco por você e tenho medo de pensar em te perder eu preciso aceitar que não dá mais pra separar as nossas vidas e nessa loucura te dizer que não te quero bom negando as aparências disfarçando as evidências mas pra que viver fingindo se eu não posso enganar meu coração eu sei que te amo chega de mentiras te negar o meu desejo eu te quero mais que tudo eu preciso do teu beijo eu entrego a minha vida pra você fazer o que quiser de mim só quero ouvir você dizer que sim diz que é verdade e tem saudade e ainda você pensa muito em mim diz que é verdade e tem saudade que ainda você quer viver pra mim diz que é verdade que tem saudade que ainda você quer viver pra mim"
+      }
+    ]
+  }
+}

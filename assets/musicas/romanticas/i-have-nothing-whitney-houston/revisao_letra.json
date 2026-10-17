@@ -1,0 +1,394 @@
+{
+  "versao": 1,
+  "fontes": {
+    "consolidada": "5d1ef4aa0976d48797ddf83f0dffbfd36e92fa2ca1d4da62bc2f781f32f0011c",
+    "txt": "6f9835c0564ce20f7fba826b7ce387d080f9d16d0394f2fc2507f932e00d702d",
+    "srt": "9f1b379250a29acf73ab900ecda3a50d974faa193a74f7d8d99d75fb7b00974c",
+    "voz": "b64da1a3fd5c0e8a5f9e0a4845c917810c7db0b4511c183bc21df12e5e85f8bb"
+  },
+  "criado": "2026-10-15T22:58:03.495287+00:00",
+  "blocos": [
+    {
+      "id": "srt:1",
+      "inicio": 22.596,
+      "fim": 25.497,
+      "texto": "Share my life",
+      "palavras": []
+    },
+    {
+      "id": "srt:2",
+      "inicio": 26.238,
+      "fim": 30.439,
+      "texto": "Take me for what i am '",
+      "palavras": []
+    },
+    {
+      "id": "srt:3",
+      "inicio": 31.74,
+      "fim": 34.3,
+      "texto": "Cause i'll never change",
+      "palavras": []
+    },
+    {
+      "id": "srt:4",
+      "inicio": 35.181,
+      "fim": 39.442,
+      "texto": "All my colors for you",
+      "palavras": []
+    },
+    {
+      "id": "srt:5",
+      "inicio": 41.483,
+      "fim": 44.343,
+      "texto": "Take my love",
+      "palavras": []
+    },
+    {
+      "id": "srt:6",
+      "inicio": 45.324,
+      "fim": 49.145,
+      "texto": "I'll never ask for too much",
+      "palavras": []
+    },
+    {
+      "id": "srt:7",
+      "inicio": 50.545,
+      "fim": 52.626,
+      "texto": "Just all that you are",
+      "palavras": []
+    },
+    {
+      "id": "srt:8",
+      "inicio": 54.01,
+      "fim": 58.553,
+      "texto": "And everything that you do",
+      "palavras": []
+    },
+    {
+      "id": "srt:9",
+      "inicio": 60.454,
+      "fim": 61.915,
+      "texto": "I don't really need to look",
+      "palavras": []
+    },
+    {
+      "id": "srt:10",
+      "inicio": 62.696,
+      "fim": 68.44,
+      "texto": "Very much further i don't wanna have to go where you don't",
+      "palavras": []
+    },
+    {
+      "id": "srt:11",
+      "inicio": 68.6,
+      "fim": 74.403,
+      "texto": "Follow i won't hold it back again this passion inside can't",
+      "palavras": []
+    },
+    {
+      "id": "srt:12",
+      "inicio": 74.483,
+      "fim": 78.326,
+      "texto": "Run from myself there's nowhere to hide",
+      "palavras": []
+    },
+    {
+      "id": "srt:13",
+      "inicio": 81.586,
+      "fim": 85.486,
+      "texto": "Don't make me close one more door",
+      "palavras": []
+    },
+    {
+      "id": "srt:14",
+      "inicio": 86.706,
+      "fim": 90.187,
+      "texto": "I don't wanna hurt anymore",
+      "palavras": []
+    },
+    {
+      "id": "srt:15",
+      "inicio": 90.847,
+      "fim": 94.867,
+      "texto": "Stay in my arms if you dare",
+      "palavras": []
+    },
+    {
+      "id": "srt:16",
+      "inicio": 94.887,
+      "fim": 99.727,
+      "texto": "Or must i imagine you there",
+      "palavras": []
+    },
+    {
+      "id": "srt:17",
+      "inicio": 100.347,
+      "fim": 104.307,
+      "texto": "Don't walk away from me",
+      "palavras": []
+    },
+    {
+      "id": "srt:18",
+      "inicio": 105.607,
+      "fim": 109.448,
+      "texto": "I have nothing, nothing, nothing",
+      "palavras": []
+    },
+    {
+      "id": "srt:19",
+      "inicio": 109.468,
+      "fim": 123.828,
+      "texto": "If i don't have you, you, you, you, you, you",
+      "palavras": []
+    },
+    {
+      "id": "srt:20",
+      "inicio": 127.388,
+      "fim": 130.109,
+      "texto": "You see through",
+      "palavras": []
+    },
+    {
+      "id": "srt:21",
+      "inicio": 130.969,
+      "fim": 134.889,
+      "texto": "Right to the heart of me",
+      "palavras": []
+    },
+    {
+      "id": "srt:22",
+      "inicio": 136.389,
+      "fim": 139.089,
+      "texto": "You break down my walls",
+      "palavras": []
+    },
+    {
+      "id": "srt:23",
+      "inicio": 139.809,
+      "fim": 145.589,
+      "texto": "With the strength of your love",
+      "palavras": []
+    },
+    {
+      "id": "srt:24",
+      "inicio": 146.429,
+      "fim": 148.109,
+      "texto": "I never knew",
+      "palavras": []
+    },
+    {
+      "id": "srt:25",
+      "inicio": 149.749,
+      "fim": 154.41,
+      "texto": "Love like i've known it with you",
+      "palavras": []
+    },
+    {
+      "id": "srt:26",
+      "inicio": 154.87,
+      "fim": 157.65,
+      "texto": "Will a memory survive",
+      "palavras": []
+    },
+    {
+      "id": "srt:27",
+      "inicio": 158.83,
+      "fim": 163.27,
+      "texto": "One i can hold on to?",
+      "palavras": []
+    },
+    {
+      "id": "srt:28",
+      "inicio": 165.15,
+      "fim": 166.57,
+      "texto": "I don't really need to look",
+      "palavras": []
+    },
+    {
+      "id": "srt:29",
+      "inicio": 167.39,
+      "fim": 169.15,
+      "texto": "Very much further",
+      "palavras": []
+    },
+    {
+      "id": "srt:30",
+      "inicio": 169.17,
+      "fim": 171.511,
+      "texto": "I don't wanna have to go",
+      "palavras": []
+    },
+    {
+      "id": "srt:31",
+      "inicio": 172.071,
+      "fim": 173.771,
+      "texto": "Where you don't follow",
+      "palavras": []
+    },
+    {
+      "id": "srt:32",
+      "inicio": 173.791,
+      "fim": 175.971,
+      "texto": "I won't hold it back again",
+      "palavras": []
+    },
+    {
+      "id": "srt:33",
+      "inicio": 176.471,
+      "fim": 178.171,
+      "texto": "This passion inside",
+      "palavras": []
+    },
+    {
+      "id": "srt:34",
+      "inicio": 178.631,
+      "fim": 180.431,
+      "texto": "I can't run from myself",
+      "palavras": []
+    },
+    {
+      "id": "srt:35",
+      "inicio": 181.291,
+      "fim": 182.069,
+      "texto": "There's nowhere",
+      "palavras": []
+    },
+    {
+      "id": "srt:36",
+      "inicio": 182.249,
+      "fim": 184.989,
+      "texto": "To hide",
+      "palavras": []
+    },
+    {
+      "id": "srt:37",
+      "inicio": 185.029,
+      "fim": 189.689,
+      "texto": "Your love i'll remember forever",
+      "palavras": []
+    },
+    {
+      "id": "srt:38",
+      "inicio": 190.97,
+      "fim": 194.83,
+      "texto": "Don't make me close one more door",
+      "palavras": []
+    },
+    {
+      "id": "srt:39",
+      "inicio": 196.11,
+      "fim": 199.71,
+      "texto": "I don't want to hurt anymore",
+      "palavras": []
+    },
+    {
+      "id": "srt:40",
+      "inicio": 200.25,
+      "fim": 204.09,
+      "texto": "Stay in my arms if you dare",
+      "palavras": []
+    },
+    {
+      "id": "srt:41",
+      "inicio": 204.11,
+      "fim": 209.111,
+      "texto": "Or must i imagine you there",
+      "palavras": []
+    },
+    {
+      "id": "srt:42",
+      "inicio": 209.711,
+      "fim": 213.611,
+      "texto": "Don't walk away from me",
+      "palavras": []
+    },
+    {
+      "id": "srt:43",
+      "inicio": 213.631,
+      "fim": 221.432,
+      "texto": "I have nothing, nothing, nothing",
+      "palavras": []
+    },
+    {
+      "id": "srt:44",
+      "inicio": 221.492,
+      "fim": 227.772,
+      "texto": "Don't make me close one more door",
+      "palavras": []
+    },
+    {
+      "id": "srt:45",
+      "inicio": 229.032,
+      "fim": 232.572,
+      "texto": "I don't wanna hurt anymore",
+      "palavras": []
+    },
+    {
+      "id": "srt:46",
+      "inicio": 233.172,
+      "fim": 237.373,
+      "texto": "Stay in my arms if you dare",
+      "palavras": []
+    },
+    {
+      "id": "srt:47",
+      "inicio": 237.893,
+      "fim": 241.873,
+      "texto": "Or must i imagine you there",
+      "palavras": []
+    },
+    {
+      "id": "srt:48",
+      "inicio": 242.653,
+      "fim": 246.213,
+      "texto": "Don't walk away from me",
+      "palavras": []
+    },
+    {
+      "id": "srt:49",
+      "inicio": 246.233,
+      "fim": 250.413,
+      "texto": "No, don't walk away from me",
+      "palavras": []
+    },
+    {
+      "id": "srt:50",
+      "inicio": 251.273,
+      "fim": 255.234,
+      "texto": "Don't you dare walk away from me",
+      "palavras": []
+    },
+    {
+      "id": "srt:51",
+      "inicio": 257.334,
+      "fim": 262.734,
+      "texto": "I have nothing, nothing, nothing",
+      "palavras": []
+    },
+    {
+      "id": "srt:52",
+      "inicio": 263.314,
+      "fim": 269.195,
+      "texto": "If i don't have you, you",
+      "palavras": []
+    },
+    {
+      "id": "srt:53",
+      "inicio": 270.775,
+      "fim": 275.255,
+      "texto": "If i don't have you, oh, oh",
+      "palavras": []
+    }
+  ],
+  "decisoes": {},
+  "rascunhos": {},
+  "historico": [],
+  "revisoes_anteriores": [],
+  "atualizado": "2026-10-15T22:58:03.573236+00:00",
+  "pendencias": [],
+  "resumo": {
+    "ocorrencias_pendentes": 0,
+    "blocos": 53,
+    "palavras_confirmadas": 0
+  }
+}

@@ -1,0 +1,5128 @@
+{
+  "versao": 6,
+  "status": "pendente",
+  "estrategia": "preservar_corrigir_inserir",
+  "motor": "whisperx",
+  "duracao_audio": 290.1159375,
+  "scores_sao_probabilidades": false,
+  "aprovacao_musical_automatica": false,
+  "parametros": {
+    "score_minimo": 0.3,
+    "janela_maxima": 180.0,
+    "segundos_busca_por_palavra": 3.0,
+    "janela_minima": 30.0,
+    "fragmento_sem_ancora_max_palavras": 2,
+    "fragmento_sem_ancora_max_segundos": 1.0,
+    "score_suporte_insercao": 0.1,
+    "atividade_minima_insercao": 0.2,
+    "margem": 0.4,
+    "margem_aplicada": false
+  },
+  "total_palavras_txt": 297,
+  "total_palavras_srt": 73,
+  "metricas": {
+    "palavras_publicadas": 297,
+    "blocos_srt_auditados": 12,
+    "blocos_srt_descartados": 0,
+    "blocos_texto_corrigido": 6,
+    "blocos_inseridos": 41,
+    "palavras_txt_sem_tempo": 0,
+    "palavras_txt_nao_pesquisadas": 0,
+    "palavras_txt_pesquisadas_sem_tempo": 0,
+    "palavras_conflito_original": 0,
+    "palavras_baixa_confianca": 15,
+    "tentativas_acusticas": 3
+  },
+  "comparacao": {
+    "consultas": [
+      {
+        "bloco_srt": 1,
+        "inicio": 26.238,
+        "fim": 30.439,
+        "txt_inicio": 3,
+        "txt_fim": 9,
+        "score": 1.0,
+        "texto": "Take me for what I am '",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 2,
+        "inicio": 31.74,
+        "fim": 34.3,
+        "txt_inicio": 9,
+        "txt_fim": 13,
+        "score": 1.0,
+        "texto": "Cause I'll never change",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 3,
+        "inicio": 35.181,
+        "fim": 39.442,
+        "txt_inicio": 13,
+        "txt_fim": 18,
+        "score": 1.0,
+        "texto": "All my colors for you",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 4,
+        "inicio": 41.483,
+        "fim": 44.343,
+        "txt_inicio": 18,
+        "txt_fim": 21,
+        "score": 1.0,
+        "texto": "Take my love",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 5,
+        "inicio": 45.324,
+        "fim": 49.145,
+        "txt_inicio": 21,
+        "txt_fim": 27,
+        "score": 0.9056603773584907,
+        "texto": "I'll never ask for too much",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 6,
+        "inicio": 50.545,
+        "fim": 52.626,
+        "txt_inicio": 27,
+        "txt_fim": 32,
+        "score": 1.0,
+        "texto": "Just all that you are",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 7,
+        "inicio": 54.01,
+        "fim": 58.553,
+        "txt_inicio": 32,
+        "txt_fim": 37,
+        "score": 1.0,
+        "texto": "And everything that you do",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 8,
+        "inicio": 60.454,
+        "fim": 61.915,
+        "txt_inicio": 37,
+        "txt_fim": 43,
+        "score": 1.0,
+        "texto": "I don't really need to look",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 9,
+        "inicio": 62.696,
+        "fim": 68.44,
+        "txt_inicio": 43,
+        "txt_fim": 55,
+        "score": 0.9473684210526316,
+        "texto": "Very much further I don't wanna have to go Where you don't",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 10,
+        "inicio": 68.6,
+        "fim": 74.403,
+        "txt_inicio": 55,
+        "txt_fim": 66,
+        "score": 1.0,
+        "texto": "follow I won't hold it back again This passion inside Can't",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 11,
+        "inicio": 74.483,
+        "fim": 78.326,
+        "txt_inicio": 66,
+        "txt_fim": 73,
+        "score": 1.0,
+        "texto": "run from myself There's nowhere to hide",
+        "aviso": null
+      },
+      {
+        "bloco_srt": 12,
+        "inicio": 181.291,
+        "fim": 182.069,
+        "txt_inicio": 191,
+        "txt_fim": 193,
+        "score": 1.0,
+        "texto": "There's nowhere",
+        "aviso": null
+      }
+    ],
+    "regioes": [
+      {
+        "indices": [
+          0
+        ],
+        "inicio": 26.238,
+        "fim": 30.439,
+        "txt_inicio": 3,
+        "txt_fim": 9,
+        "texto": "Take me for what I am '"
+      },
+      {
+        "indices": [
+          1
+        ],
+        "inicio": 31.74,
+        "fim": 34.3,
+        "txt_inicio": 9,
+        "txt_fim": 13,
+        "texto": "Cause I'll never change"
+      },
+      {
+        "indices": [
+          2
+        ],
+        "inicio": 35.181,
+        "fim": 39.442,
+        "txt_inicio": 13,
+        "txt_fim": 18,
+        "texto": "All my colors for you"
+      },
+      {
+        "indices": [
+          3
+        ],
+        "inicio": 41.483,
+        "fim": 44.343,
+        "txt_inicio": 18,
+        "txt_fim": 21,
+        "texto": "Take my love"
+      },
+      {
+        "indices": [
+          4
+        ],
+        "inicio": 45.324,
+        "fim": 49.145,
+        "txt_inicio": 21,
+        "txt_fim": 27,
+        "texto": "I'll never ask for too much"
+      },
+      {
+        "indices": [
+          5
+        ],
+        "inicio": 50.545,
+        "fim": 52.626,
+        "txt_inicio": 27,
+        "txt_fim": 32,
+        "texto": "Just all that you are"
+      },
+      {
+        "indices": [
+          6
+        ],
+        "inicio": 54.01,
+        "fim": 58.553,
+        "txt_inicio": 32,
+        "txt_fim": 37,
+        "texto": "And everything that you do"
+      },
+      {
+        "indices": [
+          7
+        ],
+        "inicio": 60.454,
+        "fim": 61.915,
+        "txt_inicio": 37,
+        "txt_fim": 43,
+        "texto": "I don't really need to look"
+      },
+      {
+        "indices": [
+          8
+        ],
+        "inicio": 62.696,
+        "fim": 68.44,
+        "txt_inicio": 43,
+        "txt_fim": 55,
+        "texto": "Very much further I don't wanna have to go Where you don't"
+      },
+      {
+        "indices": [
+          9
+        ],
+        "inicio": 68.6,
+        "fim": 74.403,
+        "txt_inicio": 55,
+        "txt_fim": 66,
+        "texto": "follow I won't hold it back again This passion inside Can't"
+      },
+      {
+        "indices": [
+          10
+        ],
+        "inicio": 74.483,
+        "fim": 78.326,
+        "txt_inicio": 66,
+        "txt_fim": 73,
+        "texto": "run from myself There's nowhere to hide"
+      },
+      {
+        "indices": [
+          11
+        ],
+        "inicio": 181.291,
+        "fim": 182.069,
+        "txt_inicio": 191,
+        "txt_fim": 193,
+        "texto": "There's nowhere"
+      }
+    ],
+    "tokens_txt_sem_correspondencia": [
+      0,
+      1,
+      2,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244,
+      245,
+      246,
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258,
+      259,
+      260,
+      261,
+      262,
+      263,
+      264,
+      265,
+      266,
+      267,
+      268,
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279,
+      280,
+      281,
+      282,
+      283,
+      284,
+      285,
+      286,
+      287,
+      288,
+      289,
+      290,
+      291,
+      292,
+      293,
+      294,
+      295,
+      296
+    ],
+    "parametros": {
+      "score_consulta_minimo": 0.65,
+      "margem_ambiguidade": 0.025,
+      "bonus_por_extremidade": 0.02,
+      "score_contexto_minimo": 0.85,
+      "distancia_max_palavra_isolada": 3.0,
+      "palavra_isolada_exige_exatidao": true
+    }
+  },
+  "auditoria_estrutura": [
+    {
+      "bloco_srt": 1,
+      "inicio_original": 26.238,
+      "fim_original": 30.439,
+      "texto_original": "Take me for what I am",
+      "texto_publicado": "Take me for what i am '",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 2,
+      "inicio_original": 31.74,
+      "fim_original": 34.3,
+      "texto_original": "Cause I'll never change",
+      "texto_publicado": "Cause i'll never change",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 3,
+      "inicio_original": 35.181,
+      "fim_original": 39.442,
+      "texto_original": "All my colors for you",
+      "texto_publicado": "All my colors for you",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 4,
+      "inicio_original": 41.483,
+      "fim_original": 44.343,
+      "texto_original": "Take my love",
+      "texto_publicado": "Take my love",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 5,
+      "inicio_original": 45.324,
+      "fim_original": 49.145,
+      "texto_original": "I'll never rest for too much",
+      "texto_publicado": "I'll never ask for too much",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 6,
+      "inicio_original": 50.545,
+      "fim_original": 52.626,
+      "texto_original": "Just all that you are",
+      "texto_publicado": "Just all that you are",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 7,
+      "inicio_original": 54.01,
+      "fim_original": 58.553,
+      "texto_original": "and everything that you do.",
+      "texto_publicado": "And everything that you do",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 8,
+      "inicio_original": 60.454,
+      "fim_original": 61.915,
+      "texto_original": "I don't really need to look",
+      "texto_publicado": "I don't really need to look",
+      "tratamento": "original_preservado",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 9,
+      "inicio_original": 62.696,
+      "fim_original": 68.44,
+      "texto_original": "very much further. I don't want to have to go where you don't",
+      "texto_publicado": "Very much further i don't wanna have to go where you don't",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 10,
+      "inicio_original": 68.6,
+      "fim_original": 74.403,
+      "texto_original": "follow. I won't hold it back again. This passion inside can't",
+      "texto_publicado": "Follow i won't hold it back again this passion inside can't",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 11,
+      "inicio_original": 74.483,
+      "fim_original": 78.326,
+      "texto_original": "run from myself. There's nowhere to hide.",
+      "texto_publicado": "Run from myself there's nowhere to hide",
+      "tratamento": "texto_corrigido",
+      "aviso": null
+    },
+    {
+      "bloco_srt": 12,
+      "inicio_original": 181.291,
+      "fim_original": 182.069,
+      "texto_original": "There's nowhere",
+      "texto_publicado": "There's nowhere",
+      "tratamento": "original_preservado",
+      "aviso": null
+    }
+  ],
+  "recuperacoes": [
+    {
+      "id": 1,
+      "txt_inicio": 0,
+      "txt_fim": 3,
+      "inicio": 0.0,
+      "fim": 26.238,
+      "bloco_anterior": null,
+      "bloco_seguinte": 1,
+      "ocupados": [],
+      "limite_busca": 30.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "recuperado",
+      "tentativas": [
+        {
+          "janela": [
+            0.0,
+            26.238
+          ],
+          "texto": "Share my life",
+          "palavras": [
+            {
+              "texto": "Share",
+              "inicio": 22.596,
+              "fim": 23.876,
+              "score": 0.65
+            },
+            {
+              "texto": "my",
+              "inicio": 23.956,
+              "fim": 25.037,
+              "score": 0.875
+            },
+            {
+              "texto": "life",
+              "inicio": 25.097,
+              "fim": 25.497,
+              "score": 0.563
+            }
+          ]
+        }
+      ],
+      "inseridos": [
+        {
+          "inicio": 22.596,
+          "fim": 25.497,
+          "texto": "Share my life",
+          "origem": "insercao_acustica",
+          "lacuna": 1,
+          "txt_inicio": 0,
+          "txt_fim": 3,
+          "score_minimo": 0.563,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        }
+      ],
+      "tokens_recuperados": [
+        0,
+        1,
+        2
+      ],
+      "texto": "Share my life"
+    },
+    {
+      "id": 2,
+      "txt_inicio": 73,
+      "txt_fim": 191,
+      "inicio": 78.326,
+      "fim": 181.291,
+      "bloco_anterior": 11,
+      "bloco_seguinte": 12,
+      "ocupados": [],
+      "limite_busca": 180.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "recuperado",
+      "tentativas": [
+        {
+          "janela": [
+            78.326,
+            181.291
+          ],
+          "texto": "Don't make me close one more door\nI don't wanna hurt anymore\nStay in my arms if you dare\nOr must I imagine you there\nDon't walk away from me\nI have nothing, nothing, nothing\nIf I don't have you, you, you, you, you, you\n\nYou see through\nRight to the heart of me\nYou break down my walls\nWith the strength of your love\n\nI never knew\nLove like I've known it with you\nWill a memory survive\nOne I can hold on to?\n\nI don't really need to look\nVery much further\nI don't wanna have to go\nWhere you don't follow\nI won't hold it back again\nThis passion inside\nI can't run from myself",
+          "palavras": [
+            {
+              "texto": "Don't",
+              "inicio": 81.586,
+              "fim": 81.826,
+              "score": 0.527
+            },
+            {
+              "texto": "make",
+              "inicio": 81.946,
+              "fim": 82.266,
+              "score": 0.673
+            },
+            {
+              "texto": "me",
+              "inicio": 82.306,
+              "fim": 82.446,
+              "score": 0.755
+            },
+            {
+              "texto": "close",
+              "inicio": 82.506,
+              "fim": 84.066,
+              "score": 0.627
+            },
+            {
+              "texto": "one",
+              "inicio": 84.386,
+              "fim": 84.486,
+              "score": 0.299
+            },
+            {
+              "texto": "more",
+              "inicio": 84.646,
+              "fim": 84.826,
+              "score": 0.382
+            },
+            {
+              "texto": "door",
+              "inicio": 84.846,
+              "fim": 85.486,
+              "score": 0.518
+            },
+            {
+              "texto": "I",
+              "inicio": 86.706,
+              "fim": 86.806,
+              "score": 0.852
+            },
+            {
+              "texto": "don't",
+              "inicio": 86.826,
+              "fim": 87.006,
+              "score": 0.658
+            },
+            {
+              "texto": "wanna",
+              "inicio": 87.046,
+              "fim": 87.286,
+              "score": 0.495
+            },
+            {
+              "texto": "hurt",
+              "inicio": 87.346,
+              "fim": 89.027,
+              "score": 0.83
+            },
+            {
+              "texto": "anymore",
+              "inicio": 89.287,
+              "fim": 90.187,
+              "score": 0.586
+            },
+            {
+              "texto": "Stay",
+              "inicio": 90.847,
+              "fim": 91.327,
+              "score": 0.919
+            },
+            {
+              "texto": "in",
+              "inicio": 91.407,
+              "fim": 91.527,
+              "score": 0.634
+            },
+            {
+              "texto": "my",
+              "inicio": 91.707,
+              "fim": 92.067,
+              "score": 0.692
+            },
+            {
+              "texto": "arms",
+              "inicio": 93.267,
+              "fim": 93.467,
+              "score": 0.357
+            },
+            {
+              "texto": "if",
+              "inicio": 93.767,
+              "fim": 94.067,
+              "score": 0.77
+            },
+            {
+              "texto": "you",
+              "inicio": 94.087,
+              "fim": 94.247,
+              "score": 0.578
+            },
+            {
+              "texto": "dare",
+              "inicio": 94.287,
+              "fim": 94.867,
+              "score": 0.554
+            },
+            {
+              "texto": "Or",
+              "inicio": 94.887,
+              "fim": 94.927,
+              "score": 0.0
+            },
+            {
+              "texto": "must",
+              "inicio": 95.687,
+              "fim": 96.007,
+              "score": 0.726
+            },
+            {
+              "texto": "I",
+              "inicio": 96.507,
+              "fim": 96.627,
+              "score": 0.804
+            },
+            {
+              "texto": "imagine",
+              "inicio": 96.727,
+              "fim": 98.747,
+              "score": 0.778
+            },
+            {
+              "texto": "you",
+              "inicio": 98.787,
+              "fim": 98.947,
+              "score": 0.908
+            },
+            {
+              "texto": "there",
+              "inicio": 99.007,
+              "fim": 99.727,
+              "score": 0.505
+            },
+            {
+              "texto": "Don't",
+              "inicio": 100.347,
+              "fim": 100.707,
+              "score": 0.747
+            },
+            {
+              "texto": "walk",
+              "inicio": 100.767,
+              "fim": 101.027,
+              "score": 0.932
+            },
+            {
+              "texto": "away",
+              "inicio": 101.447,
+              "fim": 101.767,
+              "score": 0.77
+            },
+            {
+              "texto": "from",
+              "inicio": 101.847,
+              "fim": 102.067,
+              "score": 0.91
+            },
+            {
+              "texto": "me",
+              "inicio": 102.127,
+              "fim": 104.307,
+              "score": 0.911
+            },
+            {
+              "texto": "I",
+              "inicio": 105.607,
+              "fim": 105.767,
+              "score": 0.863
+            },
+            {
+              "texto": "have",
+              "inicio": 105.827,
+              "fim": 106.147,
+              "score": 0.833
+            },
+            {
+              "texto": "nothing",
+              "inicio": 106.227,
+              "fim": 106.627,
+              "score": 0.923
+            },
+            {
+              "texto": "nothing",
+              "inicio": 107.407,
+              "fim": 107.907,
+              "score": 0.894
+            },
+            {
+              "texto": "nothing",
+              "inicio": 108.627,
+              "fim": 109.448,
+              "score": 0.892
+            },
+            {
+              "texto": "If",
+              "inicio": 109.468,
+              "fim": 109.508,
+              "score": 0.0
+            },
+            {
+              "texto": "I",
+              "inicio": 110.788,
+              "fim": 110.908,
+              "score": 0.792
+            },
+            {
+              "texto": "don't",
+              "inicio": 110.948,
+              "fim": 111.608,
+              "score": 0.684
+            },
+            {
+              "texto": "have",
+              "inicio": 112.088,
+              "fim": 112.708,
+              "score": 0.738
+            },
+            {
+              "texto": "you",
+              "inicio": 113.288,
+              "fim": 116.168,
+              "score": 0.855
+            },
+            {
+              "texto": "you",
+              "inicio": 116.908,
+              "fim": 119.908,
+              "score": 0.813
+            },
+            {
+              "texto": "you",
+              "inicio": 120.748,
+              "fim": 121.528,
+              "score": 0.699
+            },
+            {
+              "texto": "you",
+              "inicio": 121.608,
+              "fim": 122.168,
+              "score": 0.82
+            },
+            {
+              "texto": "you",
+              "inicio": 122.688,
+              "fim": 123.308,
+              "score": 0.86
+            },
+            {
+              "texto": "you",
+              "inicio": 123.408,
+              "fim": 123.828,
+              "score": 0.762
+            },
+            {
+              "texto": "You",
+              "inicio": 127.388,
+              "fim": 128.288,
+              "score": 0.736
+            },
+            {
+              "texto": "see",
+              "inicio": 128.528,
+              "fim": 129.348,
+              "score": 0.918
+            },
+            {
+              "texto": "through",
+              "inicio": 129.508,
+              "fim": 130.109,
+              "score": 0.801
+            },
+            {
+              "texto": "Right",
+              "inicio": 130.969,
+              "fim": 131.289,
+              "score": 0.676
+            },
+            {
+              "texto": "to",
+              "inicio": 131.349,
+              "fim": 131.629,
+              "score": 0.904
+            },
+            {
+              "texto": "the",
+              "inicio": 131.729,
+              "fim": 132.849,
+              "score": 0.772
+            },
+            {
+              "texto": "heart",
+              "inicio": 133.109,
+              "fim": 133.349,
+              "score": 0.636
+            },
+            {
+              "texto": "of",
+              "inicio": 133.609,
+              "fim": 133.829,
+              "score": 0.509
+            },
+            {
+              "texto": "me",
+              "inicio": 134.469,
+              "fim": 134.889,
+              "score": 0.862
+            },
+            {
+              "texto": "You",
+              "inicio": 136.389,
+              "fim": 136.709,
+              "score": 0.902
+            },
+            {
+              "texto": "break",
+              "inicio": 136.789,
+              "fim": 137.169,
+              "score": 0.886
+            },
+            {
+              "texto": "down",
+              "inicio": 137.209,
+              "fim": 137.529,
+              "score": 0.874
+            },
+            {
+              "texto": "my",
+              "inicio": 137.629,
+              "fim": 137.909,
+              "score": 0.943
+            },
+            {
+              "texto": "walls",
+              "inicio": 137.989,
+              "fim": 139.089,
+              "score": 0.851
+            },
+            {
+              "texto": "With",
+              "inicio": 139.809,
+              "fim": 139.989,
+              "score": 0.867
+            },
+            {
+              "texto": "the",
+              "inicio": 140.069,
+              "fim": 140.189,
+              "score": 0.946
+            },
+            {
+              "texto": "strength",
+              "inicio": 140.309,
+              "fim": 141.049,
+              "score": 0.842
+            },
+            {
+              "texto": "of",
+              "inicio": 141.149,
+              "fim": 141.249,
+              "score": 0.852
+            },
+            {
+              "texto": "your",
+              "inicio": 141.329,
+              "fim": 141.649,
+              "score": 0.924
+            },
+            {
+              "texto": "love",
+              "inicio": 141.729,
+              "fim": 145.589,
+              "score": 0.916
+            },
+            {
+              "texto": "I",
+              "inicio": 146.429,
+              "fim": 146.569,
+              "score": 0.81
+            },
+            {
+              "texto": "never",
+              "inicio": 146.609,
+              "fim": 147.189,
+              "score": 0.784
+            },
+            {
+              "texto": "knew",
+              "inicio": 147.309,
+              "fim": 148.109,
+              "score": 0.671
+            },
+            {
+              "texto": "Love",
+              "inicio": 149.749,
+              "fim": 150.149,
+              "score": 0.547
+            },
+            {
+              "texto": "like",
+              "inicio": 150.209,
+              "fim": 150.389,
+              "score": 0.412
+            },
+            {
+              "texto": "I've",
+              "inicio": 150.65,
+              "fim": 150.75,
+              "score": 0.178
+            },
+            {
+              "texto": "known",
+              "inicio": 150.93,
+              "fim": 152.05,
+              "score": 0.627
+            },
+            {
+              "texto": "it",
+              "inicio": 152.17,
+              "fim": 152.25,
+              "score": 0.428
+            },
+            {
+              "texto": "with",
+              "inicio": 152.83,
+              "fim": 153.25,
+              "score": 0.784
+            },
+            {
+              "texto": "you",
+              "inicio": 153.29,
+              "fim": 154.41,
+              "score": 0.837
+            },
+            {
+              "texto": "Will",
+              "inicio": 154.87,
+              "fim": 155.19,
+              "score": 0.578
+            },
+            {
+              "texto": "a",
+              "inicio": 155.29,
+              "fim": 155.39,
+              "score": 0.709
+            },
+            {
+              "texto": "memory",
+              "inicio": 155.65,
+              "fim": 156.27,
+              "score": 0.743
+            },
+            {
+              "texto": "survive",
+              "inicio": 156.37,
+              "fim": 157.65,
+              "score": 0.606
+            },
+            {
+              "texto": "One",
+              "inicio": 158.83,
+              "fim": 159.39,
+              "score": 0.704
+            },
+            {
+              "texto": "I",
+              "inicio": 159.49,
+              "fim": 159.57,
+              "score": 0.798
+            },
+            {
+              "texto": "can",
+              "inicio": 159.59,
+              "fim": 159.73,
+              "score": 0.678
+            },
+            {
+              "texto": "hold",
+              "inicio": 159.79,
+              "fim": 161.19,
+              "score": 0.826
+            },
+            {
+              "texto": "on",
+              "inicio": 161.43,
+              "fim": 161.61,
+              "score": 0.859
+            },
+            {
+              "texto": "to",
+              "inicio": 161.71,
+              "fim": 163.27,
+              "score": 0.952
+            },
+            {
+              "texto": "I",
+              "inicio": 165.15,
+              "fim": 165.21,
+              "score": 0.98
+            },
+            {
+              "texto": "don't",
+              "inicio": 165.25,
+              "fim": 165.45,
+              "score": 0.831
+            },
+            {
+              "texto": "really",
+              "inicio": 165.49,
+              "fim": 165.77,
+              "score": 0.594
+            },
+            {
+              "texto": "need",
+              "inicio": 165.79,
+              "fim": 166.03,
+              "score": 0.524
+            },
+            {
+              "texto": "to",
+              "inicio": 166.05,
+              "fim": 166.19,
+              "score": 0.763
+            },
+            {
+              "texto": "look",
+              "inicio": 166.25,
+              "fim": 166.57,
+              "score": 0.915
+            },
+            {
+              "texto": "Very",
+              "inicio": 167.39,
+              "fim": 168.15,
+              "score": 0.805
+            },
+            {
+              "texto": "much",
+              "inicio": 168.21,
+              "fim": 168.43,
+              "score": 0.821
+            },
+            {
+              "texto": "further",
+              "inicio": 168.59,
+              "fim": 169.15,
+              "score": 0.759
+            },
+            {
+              "texto": "I",
+              "inicio": 169.17,
+              "fim": 169.19,
+              "score": 0.0
+            },
+            {
+              "texto": "don't",
+              "inicio": 169.99,
+              "fim": 170.19,
+              "score": 0.571
+            },
+            {
+              "texto": "wanna",
+              "inicio": 170.21,
+              "fim": 170.49,
+              "score": 0.468
+            },
+            {
+              "texto": "have",
+              "inicio": 170.53,
+              "fim": 170.89,
+              "score": 0.74
+            },
+            {
+              "texto": "to",
+              "inicio": 170.93,
+              "fim": 171.451,
+              "score": 0.759
+            },
+            {
+              "texto": "go",
+              "inicio": 171.471,
+              "fim": 171.511,
+              "score": 0.0
+            },
+            {
+              "texto": "Where",
+              "inicio": 172.071,
+              "fim": 172.511,
+              "score": 0.883
+            },
+            {
+              "texto": "you",
+              "inicio": 172.591,
+              "fim": 172.851,
+              "score": 0.891
+            },
+            {
+              "texto": "don't",
+              "inicio": 172.891,
+              "fim": 173.111,
+              "score": 0.739
+            },
+            {
+              "texto": "follow",
+              "inicio": 173.231,
+              "fim": 173.771,
+              "score": 0.697
+            },
+            {
+              "texto": "I",
+              "inicio": 173.791,
+              "fim": 173.811,
+              "score": 0.001
+            },
+            {
+              "texto": "won't",
+              "inicio": 174.571,
+              "fim": 174.751,
+              "score": 0.287
+            },
+            {
+              "texto": "hold",
+              "inicio": 174.831,
+              "fim": 175.091,
+              "score": 0.658
+            },
+            {
+              "texto": "it",
+              "inicio": 175.131,
+              "fim": 175.211,
+              "score": 0.75
+            },
+            {
+              "texto": "back",
+              "inicio": 175.271,
+              "fim": 175.471,
+              "score": 0.889
+            },
+            {
+              "texto": "again",
+              "inicio": 175.551,
+              "fim": 175.971,
+              "score": 0.925
+            },
+            {
+              "texto": "This",
+              "inicio": 176.471,
+              "fim": 176.671,
+              "score": 0.826
+            },
+            {
+              "texto": "passion",
+              "inicio": 176.811,
+              "fim": 177.331,
+              "score": 0.804
+            },
+            {
+              "texto": "inside",
+              "inicio": 177.431,
+              "fim": 178.171,
+              "score": 0.617
+            },
+            {
+              "texto": "I",
+              "inicio": 178.631,
+              "fim": 178.691,
+              "score": 0.811
+            },
+            {
+              "texto": "can't",
+              "inicio": 178.731,
+              "fim": 179.011,
+              "score": 0.679
+            },
+            {
+              "texto": "run",
+              "inicio": 179.131,
+              "fim": 179.451,
+              "score": 0.837
+            },
+            {
+              "texto": "from",
+              "inicio": 179.511,
+              "fim": 179.891,
+              "score": 0.692
+            },
+            {
+              "texto": "myself",
+              "inicio": 179.911,
+              "fim": 180.431,
+              "score": 0.774
+            }
+          ]
+        }
+      ],
+      "inseridos": [
+        {
+          "inicio": 81.586,
+          "fim": 85.486,
+          "texto": "Don't make me close one more door",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 73,
+          "txt_fim": 80,
+          "score_minimo": 0.299,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 1
+        },
+        {
+          "inicio": 86.706,
+          "fim": 90.187,
+          "texto": "I don't wanna hurt anymore",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 80,
+          "txt_fim": 85,
+          "score_minimo": 0.495,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 90.847,
+          "fim": 94.867,
+          "texto": "Stay in my arms if you dare",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 85,
+          "txt_fim": 92,
+          "score_minimo": 0.357,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 94.887,
+          "fim": 99.727,
+          "texto": "Or must I imagine you there",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 92,
+          "txt_fim": 98,
+          "score_minimo": 0.0,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 1
+        },
+        {
+          "inicio": 100.347,
+          "fim": 104.307,
+          "texto": "Don't walk away from me",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 98,
+          "txt_fim": 103,
+          "score_minimo": 0.747,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 105.607,
+          "fim": 109.448,
+          "texto": "I have nothing, nothing, nothing",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 103,
+          "txt_fim": 108,
+          "score_minimo": 0.833,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 109.468,
+          "fim": 123.828,
+          "texto": "If I don't have you, you, you, you, you, you",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 108,
+          "txt_fim": 118,
+          "score_minimo": 0.0,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 1
+        },
+        {
+          "inicio": 127.388,
+          "fim": 130.109,
+          "texto": "You see through",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 118,
+          "txt_fim": 121,
+          "score_minimo": 0.736,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 130.969,
+          "fim": 134.889,
+          "texto": "Right to the heart of me",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 121,
+          "txt_fim": 127,
+          "score_minimo": 0.509,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 136.389,
+          "fim": 139.089,
+          "texto": "You break down my walls",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 127,
+          "txt_fim": 132,
+          "score_minimo": 0.851,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 139.809,
+          "fim": 145.589,
+          "texto": "With the strength of your love",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 132,
+          "txt_fim": 138,
+          "score_minimo": 0.842,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 146.429,
+          "fim": 148.109,
+          "texto": "I never knew",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 138,
+          "txt_fim": 141,
+          "score_minimo": 0.671,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 149.749,
+          "fim": 154.41,
+          "texto": "Love like I've known it with you",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 141,
+          "txt_fim": 148,
+          "score_minimo": 0.178,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 1
+        },
+        {
+          "inicio": 154.87,
+          "fim": 157.65,
+          "texto": "Will a memory survive",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 148,
+          "txt_fim": 152,
+          "score_minimo": 0.578,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 158.83,
+          "fim": 163.27,
+          "texto": "One I can hold on to?",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 152,
+          "txt_fim": 158,
+          "score_minimo": 0.678,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 165.15,
+          "fim": 166.57,
+          "texto": "I don't really need to look",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 158,
+          "txt_fim": 164,
+          "score_minimo": 0.524,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 167.39,
+          "fim": 169.15,
+          "texto": "Very much further",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 164,
+          "txt_fim": 167,
+          "score_minimo": 0.759,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 169.17,
+          "fim": 171.511,
+          "texto": "I don't wanna have to go",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 167,
+          "txt_fim": 173,
+          "score_minimo": 0.0,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 2
+        },
+        {
+          "inicio": 172.071,
+          "fim": 173.771,
+          "texto": "Where you don't follow",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 173,
+          "txt_fim": 177,
+          "score_minimo": 0.697,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 173.791,
+          "fim": 175.971,
+          "texto": "I won't hold it back again",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 177,
+          "txt_fim": 183,
+          "score_minimo": 0.001,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 2
+        },
+        {
+          "inicio": 176.471,
+          "fim": 178.171,
+          "texto": "This passion inside",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 183,
+          "txt_fim": 186,
+          "score_minimo": 0.617,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 178.631,
+          "fim": 180.431,
+          "texto": "I can't run from myself",
+          "origem": "insercao_acustica",
+          "lacuna": 2,
+          "txt_inicio": 186,
+          "txt_fim": 191,
+          "score_minimo": 0.679,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        }
+      ],
+      "tokens_recuperados": [
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190
+      ],
+      "texto": "Don't make me close one more door I don't wanna hurt anymore Stay in my arms if you dare Or must I imagine you there Don't walk away from me I have nothing, nothing, nothing If I don't have you, you, you, you, you, you You see through Right to the heart of me You break down my walls With the strength of your love I never knew Love like I've known it with you Will a memory survive One I can hold on to? I don't really need to look Very much further I don't wanna have to go Where you don't follow I won't hold it back again This passion inside I can't run from myself"
+    },
+    {
+      "id": 3,
+      "txt_inicio": 193,
+      "txt_fim": 297,
+      "inicio": 182.069,
+      "fim": 290.1159375,
+      "bloco_anterior": 12,
+      "bloco_seguinte": null,
+      "ocupados": [],
+      "limite_busca": 180.0,
+      "motivo_nao_pesquisado": null,
+      "estado": "recuperado",
+      "tentativas": [
+        {
+          "janela": [
+            182.069,
+            290.1159375
+          ],
+          "texto": "to hide\nYour love I'll remember forever\n\nDon't make me close one more door\nI don't want to hurt anymore\nStay in my arms if you dare\nOr must I imagine you there\nDon't walk away from me\nI have nothing, nothing, nothing\nDon't make me close one more door\nI don't wanna hurt anymore\nStay in my arms if you dare\nOr must I imagine you there\nDon't walk away from me\nNo, don't walk away from me\nDon't you dare walk away from me\nI have nothing, nothing, nothing\nIf I don't have you, you\nIf I don't have you, oh, oh",
+          "palavras": [
+            {
+              "texto": "to",
+              "inicio": 182.249,
+              "fim": 182.469,
+              "score": 0.702
+            },
+            {
+              "texto": "hide",
+              "inicio": 182.529,
+              "fim": 184.989,
+              "score": 0.858
+            },
+            {
+              "texto": "Your",
+              "inicio": 185.029,
+              "fim": 185.309,
+              "score": 0.586
+            },
+            {
+              "texto": "love",
+              "inicio": 185.429,
+              "fim": 185.809,
+              "score": 0.66
+            },
+            {
+              "texto": "I'll",
+              "inicio": 185.929,
+              "fim": 186.029,
+              "score": 0.123
+            },
+            {
+              "texto": "remember",
+              "inicio": 186.049,
+              "fim": 186.769,
+              "score": 0.612
+            },
+            {
+              "texto": "forever",
+              "inicio": 187.169,
+              "fim": 189.689,
+              "score": 0.717
+            },
+            {
+              "texto": "Don't",
+              "inicio": 190.97,
+              "fim": 191.29,
+              "score": 0.536
+            },
+            {
+              "texto": "make",
+              "inicio": 191.31,
+              "fim": 191.53,
+              "score": 0.596
+            },
+            {
+              "texto": "me",
+              "inicio": 191.67,
+              "fim": 191.81,
+              "score": 0.71
+            },
+            {
+              "texto": "close",
+              "inicio": 191.87,
+              "fim": 193.61,
+              "score": 0.769
+            },
+            {
+              "texto": "one",
+              "inicio": 193.77,
+              "fim": 193.99,
+              "score": 0.531
+            },
+            {
+              "texto": "more",
+              "inicio": 194.01,
+              "fim": 194.19,
+              "score": 0.294
+            },
+            {
+              "texto": "door",
+              "inicio": 194.23,
+              "fim": 194.83,
+              "score": 0.497
+            },
+            {
+              "texto": "I",
+              "inicio": 196.11,
+              "fim": 196.19,
+              "score": 0.771
+            },
+            {
+              "texto": "don't",
+              "inicio": 196.23,
+              "fim": 196.39,
+              "score": 0.364
+            },
+            {
+              "texto": "want",
+              "inicio": 196.43,
+              "fim": 196.59,
+              "score": 0.551
+            },
+            {
+              "texto": "to",
+              "inicio": 196.61,
+              "fim": 196.71,
+              "score": 0.574
+            },
+            {
+              "texto": "hurt",
+              "inicio": 196.79,
+              "fim": 198.47,
+              "score": 0.774
+            },
+            {
+              "texto": "anymore",
+              "inicio": 198.71,
+              "fim": 199.71,
+              "score": 0.702
+            },
+            {
+              "texto": "Stay",
+              "inicio": 200.25,
+              "fim": 200.61,
+              "score": 0.504
+            },
+            {
+              "texto": "in",
+              "inicio": 200.77,
+              "fim": 200.89,
+              "score": 0.364
+            },
+            {
+              "texto": "my",
+              "inicio": 201.11,
+              "fim": 201.47,
+              "score": 0.704
+            },
+            {
+              "texto": "arms",
+              "inicio": 202.49,
+              "fim": 202.79,
+              "score": 0.504
+            },
+            {
+              "texto": "if",
+              "inicio": 203.17,
+              "fim": 203.43,
+              "score": 0.696
+            },
+            {
+              "texto": "you",
+              "inicio": 203.45,
+              "fim": 203.61,
+              "score": 0.751
+            },
+            {
+              "texto": "dare",
+              "inicio": 203.67,
+              "fim": 204.09,
+              "score": 0.602
+            },
+            {
+              "texto": "Or",
+              "inicio": 204.11,
+              "fim": 204.15,
+              "score": 0.001
+            },
+            {
+              "texto": "must",
+              "inicio": 204.83,
+              "fim": 205.29,
+              "score": 0.493
+            },
+            {
+              "texto": "I",
+              "inicio": 205.851,
+              "fim": 206.051,
+              "score": 0.798
+            },
+            {
+              "texto": "imagine",
+              "inicio": 206.111,
+              "fim": 208.131,
+              "score": 0.744
+            },
+            {
+              "texto": "you",
+              "inicio": 208.191,
+              "fim": 208.331,
+              "score": 0.475
+            },
+            {
+              "texto": "there",
+              "inicio": 208.371,
+              "fim": 209.111,
+              "score": 0.472
+            },
+            {
+              "texto": "Don't",
+              "inicio": 209.711,
+              "fim": 210.071,
+              "score": 0.833
+            },
+            {
+              "texto": "walk",
+              "inicio": 210.111,
+              "fim": 210.351,
+              "score": 0.956
+            },
+            {
+              "texto": "away",
+              "inicio": 210.871,
+              "fim": 211.171,
+              "score": 0.804
+            },
+            {
+              "texto": "from",
+              "inicio": 211.231,
+              "fim": 211.431,
+              "score": 0.954
+            },
+            {
+              "texto": "me",
+              "inicio": 211.471,
+              "fim": 213.611,
+              "score": 0.966
+            },
+            {
+              "texto": "I",
+              "inicio": 213.631,
+              "fim": 213.651,
+              "score": 0.005
+            },
+            {
+              "texto": "have",
+              "inicio": 215.231,
+              "fim": 215.571,
+              "score": 0.778
+            },
+            {
+              "texto": "nothing",
+              "inicio": 215.631,
+              "fim": 216.031,
+              "score": 0.912
+            },
+            {
+              "texto": "nothing",
+              "inicio": 216.791,
+              "fim": 217.351,
+              "score": 0.882
+            },
+            {
+              "texto": "nothing",
+              "inicio": 218.011,
+              "fim": 221.432,
+              "score": 0.748
+            },
+            {
+              "texto": "Don't",
+              "inicio": 221.492,
+              "fim": 222.632,
+              "score": 0.411
+            },
+            {
+              "texto": "make",
+              "inicio": 222.652,
+              "fim": 223.832,
+              "score": 0.666
+            },
+            {
+              "texto": "me",
+              "inicio": 223.872,
+              "fim": 224.272,
+              "score": 0.856
+            },
+            {
+              "texto": "close",
+              "inicio": 225.032,
+              "fim": 226.232,
+              "score": 0.456
+            },
+            {
+              "texto": "one",
+              "inicio": 226.712,
+              "fim": 226.952,
+              "score": 0.52
+            },
+            {
+              "texto": "more",
+              "inicio": 226.992,
+              "fim": 227.132,
+              "score": 0.225
+            },
+            {
+              "texto": "door",
+              "inicio": 227.172,
+              "fim": 227.772,
+              "score": 0.641
+            },
+            {
+              "texto": "I",
+              "inicio": 229.032,
+              "fim": 229.132,
+              "score": 0.747
+            },
+            {
+              "texto": "don't",
+              "inicio": 229.152,
+              "fim": 229.332,
+              "score": 0.379
+            },
+            {
+              "texto": "wanna",
+              "inicio": 229.372,
+              "fim": 229.652,
+              "score": 0.483
+            },
+            {
+              "texto": "hurt",
+              "inicio": 229.732,
+              "fim": 230.932,
+              "score": 0.463
+            },
+            {
+              "texto": "anymore",
+              "inicio": 231.612,
+              "fim": 232.572,
+              "score": 0.755
+            },
+            {
+              "texto": "Stay",
+              "inicio": 233.172,
+              "fim": 233.712,
+              "score": 0.858
+            },
+            {
+              "texto": "in",
+              "inicio": 233.732,
+              "fim": 233.832,
+              "score": 0.507
+            },
+            {
+              "texto": "my",
+              "inicio": 234.072,
+              "fim": 234.452,
+              "score": 0.704
+            },
+            {
+              "texto": "arms",
+              "inicio": 234.652,
+              "fim": 235.892,
+              "score": 0.802
+            },
+            {
+              "texto": "if",
+              "inicio": 236.092,
+              "fim": 236.372,
+              "score": 0.689
+            },
+            {
+              "texto": "you",
+              "inicio": 236.412,
+              "fim": 236.572,
+              "score": 0.748
+            },
+            {
+              "texto": "dare",
+              "inicio": 236.633,
+              "fim": 237.373,
+              "score": 0.662
+            },
+            {
+              "texto": "Or",
+              "inicio": 237.893,
+              "fim": 237.993,
+              "score": 0.458
+            },
+            {
+              "texto": "must",
+              "inicio": 238.013,
+              "fim": 238.233,
+              "score": 0.505
+            },
+            {
+              "texto": "I",
+              "inicio": 238.713,
+              "fim": 238.913,
+              "score": 0.789
+            },
+            {
+              "texto": "imagine",
+              "inicio": 239.073,
+              "fim": 241.073,
+              "score": 0.767
+            },
+            {
+              "texto": "you",
+              "inicio": 241.113,
+              "fim": 241.253,
+              "score": 0.547
+            },
+            {
+              "texto": "there",
+              "inicio": 241.313,
+              "fim": 241.873,
+              "score": 0.858
+            },
+            {
+              "texto": "Don't",
+              "inicio": 242.653,
+              "fim": 242.993,
+              "score": 0.865
+            },
+            {
+              "texto": "walk",
+              "inicio": 243.053,
+              "fim": 243.333,
+              "score": 0.92
+            },
+            {
+              "texto": "away",
+              "inicio": 243.813,
+              "fim": 244.153,
+              "score": 0.84
+            },
+            {
+              "texto": "from",
+              "inicio": 244.233,
+              "fim": 244.453,
+              "score": 0.909
+            },
+            {
+              "texto": "me",
+              "inicio": 244.513,
+              "fim": 246.213,
+              "score": 0.969
+            },
+            {
+              "texto": "No",
+              "inicio": 246.233,
+              "fim": 246.593,
+              "score": 0.76
+            },
+            {
+              "texto": "don't",
+              "inicio": 247.373,
+              "fim": 247.733,
+              "score": 0.567
+            },
+            {
+              "texto": "walk",
+              "inicio": 247.773,
+              "fim": 247.973,
+              "score": 0.507
+            },
+            {
+              "texto": "away",
+              "inicio": 248.353,
+              "fim": 248.773,
+              "score": 0.808
+            },
+            {
+              "texto": "from",
+              "inicio": 248.873,
+              "fim": 249.033,
+              "score": 0.425
+            },
+            {
+              "texto": "me",
+              "inicio": 249.213,
+              "fim": 250.413,
+              "score": 0.462
+            },
+            {
+              "texto": "Don't",
+              "inicio": 251.273,
+              "fim": 251.613,
+              "score": 0.652
+            },
+            {
+              "texto": "you",
+              "inicio": 251.673,
+              "fim": 251.993,
+              "score": 0.603
+            },
+            {
+              "texto": "dare",
+              "inicio": 252.053,
+              "fim": 252.534,
+              "score": 0.66
+            },
+            {
+              "texto": "walk",
+              "inicio": 252.854,
+              "fim": 253.054,
+              "score": 0.496
+            },
+            {
+              "texto": "away",
+              "inicio": 253.174,
+              "fim": 253.574,
+              "score": 0.7
+            },
+            {
+              "texto": "from",
+              "inicio": 253.774,
+              "fim": 253.994,
+              "score": 0.91
+            },
+            {
+              "texto": "me",
+              "inicio": 254.054,
+              "fim": 255.234,
+              "score": 0.476
+            },
+            {
+              "texto": "I",
+              "inicio": 257.334,
+              "fim": 257.534,
+              "score": 0.742
+            },
+            {
+              "texto": "have",
+              "inicio": 257.574,
+              "fim": 257.914,
+              "score": 0.738
+            },
+            {
+              "texto": "nothing",
+              "inicio": 257.974,
+              "fim": 258.374,
+              "score": 0.929
+            },
+            {
+              "texto": "nothing",
+              "inicio": 259.154,
+              "fim": 259.734,
+              "score": 0.791
+            },
+            {
+              "texto": "nothing",
+              "inicio": 260.314,
+              "fim": 262.734,
+              "score": 0.855
+            },
+            {
+              "texto": "If",
+              "inicio": 263.314,
+              "fim": 263.454,
+              "score": 0.776
+            },
+            {
+              "texto": "I",
+              "inicio": 263.734,
+              "fim": 263.854,
+              "score": 0.677
+            },
+            {
+              "texto": "don't",
+              "inicio": 263.914,
+              "fim": 264.574,
+              "score": 0.766
+            },
+            {
+              "texto": "have",
+              "inicio": 265.354,
+              "fim": 265.634,
+              "score": 0.658
+            },
+            {
+              "texto": "you",
+              "inicio": 265.694,
+              "fim": 267.394,
+              "score": 0.8
+            },
+            {
+              "texto": "you",
+              "inicio": 268.495,
+              "fim": 269.195,
+              "score": 0.697
+            },
+            {
+              "texto": "If",
+              "inicio": 270.775,
+              "fim": 271.175,
+              "score": 0.658
+            },
+            {
+              "texto": "I",
+              "inicio": 271.235,
+              "fim": 271.255,
+              "score": 0.006
+            },
+            {
+              "texto": "don't",
+              "inicio": 272.235,
+              "fim": 272.535,
+              "score": 0.68
+            },
+            {
+              "texto": "have",
+              "inicio": 272.635,
+              "fim": 273.195,
+              "score": 0.808
+            },
+            {
+              "texto": "you",
+              "inicio": 273.255,
+              "fim": 273.755,
+              "score": 0.759
+            },
+            {
+              "texto": "oh",
+              "inicio": 275.035,
+              "fim": 275.175,
+              "score": 0.584
+            },
+            {
+              "texto": "oh",
+              "inicio": 275.195,
+              "fim": 275.255,
+              "score": 0.213
+            }
+          ]
+        }
+      ],
+      "inseridos": [
+        {
+          "inicio": 182.249,
+          "fim": 184.989,
+          "texto": "to hide",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 193,
+          "txt_fim": 195,
+          "score_minimo": 0.702,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 185.029,
+          "fim": 189.689,
+          "texto": "Your love I'll remember forever",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 195,
+          "txt_fim": 200,
+          "score_minimo": 0.123,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 1
+        },
+        {
+          "inicio": 190.97,
+          "fim": 194.83,
+          "texto": "Don't make me close one more door",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 200,
+          "txt_fim": 207,
+          "score_minimo": 0.294,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 1
+        },
+        {
+          "inicio": 196.11,
+          "fim": 199.71,
+          "texto": "I don't want to hurt anymore",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 207,
+          "txt_fim": 213,
+          "score_minimo": 0.364,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 200.25,
+          "fim": 204.09,
+          "texto": "Stay in my arms if you dare",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 213,
+          "txt_fim": 220,
+          "score_minimo": 0.364,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 204.11,
+          "fim": 209.111,
+          "texto": "Or must I imagine you there",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 220,
+          "txt_fim": 226,
+          "score_minimo": 0.001,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 1
+        },
+        {
+          "inicio": 209.711,
+          "fim": 213.611,
+          "texto": "Don't walk away from me",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 226,
+          "txt_fim": 231,
+          "score_minimo": 0.804,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 213.631,
+          "fim": 221.432,
+          "texto": "I have nothing, nothing, nothing",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 231,
+          "txt_fim": 236,
+          "score_minimo": 0.005,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 1
+        },
+        {
+          "inicio": 221.492,
+          "fim": 227.772,
+          "texto": "Don't make me close one more door",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 236,
+          "txt_fim": 243,
+          "score_minimo": 0.225,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 1
+        },
+        {
+          "inicio": 229.032,
+          "fim": 232.572,
+          "texto": "I don't wanna hurt anymore",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 243,
+          "txt_fim": 248,
+          "score_minimo": 0.379,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 233.172,
+          "fim": 237.373,
+          "texto": "Stay in my arms if you dare",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 248,
+          "txt_fim": 255,
+          "score_minimo": 0.507,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 237.893,
+          "fim": 241.873,
+          "texto": "Or must I imagine you there",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 255,
+          "txt_fim": 261,
+          "score_minimo": 0.458,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 242.653,
+          "fim": 246.213,
+          "texto": "Don't walk away from me",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 261,
+          "txt_fim": 266,
+          "score_minimo": 0.84,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 246.233,
+          "fim": 250.413,
+          "texto": "No, don't walk away from me",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 266,
+          "txt_fim": 272,
+          "score_minimo": 0.425,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 251.273,
+          "fim": 255.234,
+          "texto": "Don't you dare walk away from me",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 272,
+          "txt_fim": 279,
+          "score_minimo": 0.476,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 257.334,
+          "fim": 262.734,
+          "texto": "I have nothing, nothing, nothing",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 279,
+          "txt_fim": 284,
+          "score_minimo": 0.738,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 263.314,
+          "fim": 269.195,
+          "texto": "If I don't have you, you",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 284,
+          "txt_fim": 290,
+          "score_minimo": 0.658,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 0
+        },
+        {
+          "inicio": 270.775,
+          "fim": 275.255,
+          "texto": "If I don't have you, oh, oh",
+          "origem": "insercao_acustica",
+          "lacuna": 3,
+          "txt_inicio": 290,
+          "txt_fim": 297,
+          "score_minimo": 0.006,
+          "atividade_audio": 1.0,
+          "palavras_baixa_confianca": 2
+        }
+      ],
+      "tokens_recuperados": [
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296
+      ],
+      "texto": "to hide Your love I'll remember forever Don't make me close one more door I don't want to hurt anymore Stay in my arms if you dare Or must I imagine you there Don't walk away from me I have nothing, nothing, nothing Don't make me close one more door I don't wanna hurt anymore Stay in my arms if you dare Or must I imagine you there Don't walk away from me No, don't walk away from me Don't you dare walk away from me I have nothing, nothing, nothing If I don't have you, you If I don't have you, oh, oh"
+    }
+  ],
+  "tentativas": [
+    {
+      "janela": [
+        0.0,
+        26.238
+      ],
+      "texto": "Share my life",
+      "palavras": [
+        {
+          "texto": "Share",
+          "inicio": 22.596,
+          "fim": 23.876,
+          "score": 0.65
+        },
+        {
+          "texto": "my",
+          "inicio": 23.956,
+          "fim": 25.037,
+          "score": 0.875
+        },
+        {
+          "texto": "life",
+          "inicio": 25.097,
+          "fim": 25.497,
+          "score": 0.563
+        }
+      ],
+      "lacuna": 1
+    },
+    {
+      "janela": [
+        78.326,
+        181.291
+      ],
+      "texto": "Don't make me close one more door\nI don't wanna hurt anymore\nStay in my arms if you dare\nOr must I imagine you there\nDon't walk away from me\nI have nothing, nothing, nothing\nIf I don't have you, you, you, you, you, you\n\nYou see through\nRight to the heart of me\nYou break down my walls\nWith the strength of your love\n\nI never knew\nLove like I've known it with you\nWill a memory survive\nOne I can hold on to?\n\nI don't really need to look\nVery much further\nI don't wanna have to go\nWhere you don't follow\nI won't hold it back again\nThis passion inside\nI can't run from myself",
+      "palavras": [
+        {
+          "texto": "Don't",
+          "inicio": 81.586,
+          "fim": 81.826,
+          "score": 0.527
+        },
+        {
+          "texto": "make",
+          "inicio": 81.946,
+          "fim": 82.266,
+          "score": 0.673
+        },
+        {
+          "texto": "me",
+          "inicio": 82.306,
+          "fim": 82.446,
+          "score": 0.755
+        },
+        {
+          "texto": "close",
+          "inicio": 82.506,
+          "fim": 84.066,
+          "score": 0.627
+        },
+        {
+          "texto": "one",
+          "inicio": 84.386,
+          "fim": 84.486,
+          "score": 0.299
+        },
+        {
+          "texto": "more",
+          "inicio": 84.646,
+          "fim": 84.826,
+          "score": 0.382
+        },
+        {
+          "texto": "door",
+          "inicio": 84.846,
+          "fim": 85.486,
+          "score": 0.518
+        },
+        {
+          "texto": "I",
+          "inicio": 86.706,
+          "fim": 86.806,
+          "score": 0.852
+        },
+        {
+          "texto": "don't",
+          "inicio": 86.826,
+          "fim": 87.006,
+          "score": 0.658
+        },
+        {
+          "texto": "wanna",
+          "inicio": 87.046,
+          "fim": 87.286,
+          "score": 0.495
+        },
+        {
+          "texto": "hurt",
+          "inicio": 87.346,
+          "fim": 89.027,
+          "score": 0.83
+        },
+        {
+          "texto": "anymore",
+          "inicio": 89.287,
+          "fim": 90.187,
+          "score": 0.586
+        },
+        {
+          "texto": "Stay",
+          "inicio": 90.847,
+          "fim": 91.327,
+          "score": 0.919
+        },
+        {
+          "texto": "in",
+          "inicio": 91.407,
+          "fim": 91.527,
+          "score": 0.634
+        },
+        {
+          "texto": "my",
+          "inicio": 91.707,
+          "fim": 92.067,
+          "score": 0.692
+        },
+        {
+          "texto": "arms",
+          "inicio": 93.267,
+          "fim": 93.467,
+          "score": 0.357
+        },
+        {
+          "texto": "if",
+          "inicio": 93.767,
+          "fim": 94.067,
+          "score": 0.77
+        },
+        {
+          "texto": "you",
+          "inicio": 94.087,
+          "fim": 94.247,
+          "score": 0.578
+        },
+        {
+          "texto": "dare",
+          "inicio": 94.287,
+          "fim": 94.867,
+          "score": 0.554
+        },
+        {
+          "texto": "Or",
+          "inicio": 94.887,
+          "fim": 94.927,
+          "score": 0.0
+        },
+        {
+          "texto": "must",
+          "inicio": 95.687,
+          "fim": 96.007,
+          "score": 0.726
+        },
+        {
+          "texto": "I",
+          "inicio": 96.507,
+          "fim": 96.627,
+          "score": 0.804
+        },
+        {
+          "texto": "imagine",
+          "inicio": 96.727,
+          "fim": 98.747,
+          "score": 0.778
+        },
+        {
+          "texto": "you",
+          "inicio": 98.787,
+          "fim": 98.947,
+          "score": 0.908
+        },
+        {
+          "texto": "there",
+          "inicio": 99.007,
+          "fim": 99.727,
+          "score": 0.505
+        },
+        {
+          "texto": "Don't",
+          "inicio": 100.347,
+          "fim": 100.707,
+          "score": 0.747
+        },
+        {
+          "texto": "walk",
+          "inicio": 100.767,
+          "fim": 101.027,
+          "score": 0.932
+        },
+        {
+          "texto": "away",
+          "inicio": 101.447,
+          "fim": 101.767,
+          "score": 0.77
+        },
+        {
+          "texto": "from",
+          "inicio": 101.847,
+          "fim": 102.067,
+          "score": 0.91
+        },
+        {
+          "texto": "me",
+          "inicio": 102.127,
+          "fim": 104.307,
+          "score": 0.911
+        },
+        {
+          "texto": "I",
+          "inicio": 105.607,
+          "fim": 105.767,
+          "score": 0.863
+        },
+        {
+          "texto": "have",
+          "inicio": 105.827,
+          "fim": 106.147,
+          "score": 0.833
+        },
+        {
+          "texto": "nothing",
+          "inicio": 106.227,
+          "fim": 106.627,
+          "score": 0.923
+        },
+        {
+          "texto": "nothing",
+          "inicio": 107.407,
+          "fim": 107.907,
+          "score": 0.894
+        },
+        {
+          "texto": "nothing",
+          "inicio": 108.627,
+          "fim": 109.448,
+          "score": 0.892
+        },
+        {
+          "texto": "If",
+          "inicio": 109.468,
+          "fim": 109.508,
+          "score": 0.0
+        },
+        {
+          "texto": "I",
+          "inicio": 110.788,
+          "fim": 110.908,
+          "score": 0.792
+        },
+        {
+          "texto": "don't",
+          "inicio": 110.948,
+          "fim": 111.608,
+          "score": 0.684
+        },
+        {
+          "texto": "have",
+          "inicio": 112.088,
+          "fim": 112.708,
+          "score": 0.738
+        },
+        {
+          "texto": "you",
+          "inicio": 113.288,
+          "fim": 116.168,
+          "score": 0.855
+        },
+        {
+          "texto": "you",
+          "inicio": 116.908,
+          "fim": 119.908,
+          "score": 0.813
+        },
+        {
+          "texto": "you",
+          "inicio": 120.748,
+          "fim": 121.528,
+          "score": 0.699
+        },
+        {
+          "texto": "you",
+          "inicio": 121.608,
+          "fim": 122.168,
+          "score": 0.82
+        },
+        {
+          "texto": "you",
+          "inicio": 122.688,
+          "fim": 123.308,
+          "score": 0.86
+        },
+        {
+          "texto": "you",
+          "inicio": 123.408,
+          "fim": 123.828,
+          "score": 0.762
+        },
+        {
+          "texto": "You",
+          "inicio": 127.388,
+          "fim": 128.288,
+          "score": 0.736
+        },
+        {
+          "texto": "see",
+          "inicio": 128.528,
+          "fim": 129.348,
+          "score": 0.918
+        },
+        {
+          "texto": "through",
+          "inicio": 129.508,
+          "fim": 130.109,
+          "score": 0.801
+        },
+        {
+          "texto": "Right",
+          "inicio": 130.969,
+          "fim": 131.289,
+          "score": 0.676
+        },
+        {
+          "texto": "to",
+          "inicio": 131.349,
+          "fim": 131.629,
+          "score": 0.904
+        },
+        {
+          "texto": "the",
+          "inicio": 131.729,
+          "fim": 132.849,
+          "score": 0.772
+        },
+        {
+          "texto": "heart",
+          "inicio": 133.109,
+          "fim": 133.349,
+          "score": 0.636
+        },
+        {
+          "texto": "of",
+          "inicio": 133.609,
+          "fim": 133.829,
+          "score": 0.509
+        },
+        {
+          "texto": "me",
+          "inicio": 134.469,
+          "fim": 134.889,
+          "score": 0.862
+        },
+        {
+          "texto": "You",
+          "inicio": 136.389,
+          "fim": 136.709,
+          "score": 0.902
+        },
+        {
+          "texto": "break",
+          "inicio": 136.789,
+          "fim": 137.169,
+          "score": 0.886
+        },
+        {
+          "texto": "down",
+          "inicio": 137.209,
+          "fim": 137.529,
+          "score": 0.874
+        },
+        {
+          "texto": "my",
+          "inicio": 137.629,
+          "fim": 137.909,
+          "score": 0.943
+        },
+        {
+          "texto": "walls",
+          "inicio": 137.989,
+          "fim": 139.089,
+          "score": 0.851
+        },
+        {
+          "texto": "With",
+          "inicio": 139.809,
+          "fim": 139.989,
+          "score": 0.867
+        },
+        {
+          "texto": "the",
+          "inicio": 140.069,
+          "fim": 140.189,
+          "score": 0.946
+        },
+        {
+          "texto": "strength",
+          "inicio": 140.309,
+          "fim": 141.049,
+          "score": 0.842
+        },
+        {
+          "texto": "of",
+          "inicio": 141.149,
+          "fim": 141.249,
+          "score": 0.852
+        },
+        {
+          "texto": "your",
+          "inicio": 141.329,
+          "fim": 141.649,
+          "score": 0.924
+        },
+        {
+          "texto": "love",
+          "inicio": 141.729,
+          "fim": 145.589,
+          "score": 0.916
+        },
+        {
+          "texto": "I",
+          "inicio": 146.429,
+          "fim": 146.569,
+          "score": 0.81
+        },
+        {
+          "texto": "never",
+          "inicio": 146.609,
+          "fim": 147.189,
+          "score": 0.784
+        },
+        {
+          "texto": "knew",
+          "inicio": 147.309,
+          "fim": 148.109,
+          "score": 0.671
+        },
+        {
+          "texto": "Love",
+          "inicio": 149.749,
+          "fim": 150.149,
+          "score": 0.547
+        },
+        {
+          "texto": "like",
+          "inicio": 150.209,
+          "fim": 150.389,
+          "score": 0.412
+        },
+        {
+          "texto": "I've",
+          "inicio": 150.65,
+          "fim": 150.75,
+          "score": 0.178
+        },
+        {
+          "texto": "known",
+          "inicio": 150.93,
+          "fim": 152.05,
+          "score": 0.627
+        },
+        {
+          "texto": "it",
+          "inicio": 152.17,
+          "fim": 152.25,
+          "score": 0.428
+        },
+        {
+          "texto": "with",
+          "inicio": 152.83,
+          "fim": 153.25,
+          "score": 0.784
+        },
+        {
+          "texto": "you",
+          "inicio": 153.29,
+          "fim": 154.41,
+          "score": 0.837
+        },
+        {
+          "texto": "Will",
+          "inicio": 154.87,
+          "fim": 155.19,
+          "score": 0.578
+        },
+        {
+          "texto": "a",
+          "inicio": 155.29,
+          "fim": 155.39,
+          "score": 0.709
+        },
+        {
+          "texto": "memory",
+          "inicio": 155.65,
+          "fim": 156.27,
+          "score": 0.743
+        },
+        {
+          "texto": "survive",
+          "inicio": 156.37,
+          "fim": 157.65,
+          "score": 0.606
+        },
+        {
+          "texto": "One",
+          "inicio": 158.83,
+          "fim": 159.39,
+          "score": 0.704
+        },
+        {
+          "texto": "I",
+          "inicio": 159.49,
+          "fim": 159.57,
+          "score": 0.798
+        },
+        {
+          "texto": "can",
+          "inicio": 159.59,
+          "fim": 159.73,
+          "score": 0.678
+        },
+        {
+          "texto": "hold",
+          "inicio": 159.79,
+          "fim": 161.19,
+          "score": 0.826
+        },
+        {
+          "texto": "on",
+          "inicio": 161.43,
+          "fim": 161.61,
+          "score": 0.859
+        },
+        {
+          "texto": "to",
+          "inicio": 161.71,
+          "fim": 163.27,
+          "score": 0.952
+        },
+        {
+          "texto": "I",
+          "inicio": 165.15,
+          "fim": 165.21,
+          "score": 0.98
+        },
+        {
+          "texto": "don't",
+          "inicio": 165.25,
+          "fim": 165.45,
+          "score": 0.831
+        },
+        {
+          "texto": "really",
+          "inicio": 165.49,
+          "fim": 165.77,
+          "score": 0.594
+        },
+        {
+          "texto": "need",
+          "inicio": 165.79,
+          "fim": 166.03,
+          "score": 0.524
+        },
+        {
+          "texto": "to",
+          "inicio": 166.05,
+          "fim": 166.19,
+          "score": 0.763
+        },
+        {
+          "texto": "look",
+          "inicio": 166.25,
+          "fim": 166.57,
+          "score": 0.915
+        },
+        {
+          "texto": "Very",
+          "inicio": 167.39,
+          "fim": 168.15,
+          "score": 0.805
+        },
+        {
+          "texto": "much",
+          "inicio": 168.21,
+          "fim": 168.43,
+          "score": 0.821
+        },
+        {
+          "texto": "further",
+          "inicio": 168.59,
+          "fim": 169.15,
+          "score": 0.759
+        },
+        {
+          "texto": "I",
+          "inicio": 169.17,
+          "fim": 169.19,
+          "score": 0.0
+        },
+        {
+          "texto": "don't",
+          "inicio": 169.99,
+          "fim": 170.19,
+          "score": 0.571
+        },
+        {
+          "texto": "wanna",
+          "inicio": 170.21,
+          "fim": 170.49,
+          "score": 0.468
+        },
+        {
+          "texto": "have",
+          "inicio": 170.53,
+          "fim": 170.89,
+          "score": 0.74
+        },
+        {
+          "texto": "to",
+          "inicio": 170.93,
+          "fim": 171.451,
+          "score": 0.759
+        },
+        {
+          "texto": "go",
+          "inicio": 171.471,
+          "fim": 171.511,
+          "score": 0.0
+        },
+        {
+          "texto": "Where",
+          "inicio": 172.071,
+          "fim": 172.511,
+          "score": 0.883
+        },
+        {
+          "texto": "you",
+          "inicio": 172.591,
+          "fim": 172.851,
+          "score": 0.891
+        },
+        {
+          "texto": "don't",
+          "inicio": 172.891,
+          "fim": 173.111,
+          "score": 0.739
+        },
+        {
+          "texto": "follow",
+          "inicio": 173.231,
+          "fim": 173.771,
+          "score": 0.697
+        },
+        {
+          "texto": "I",
+          "inicio": 173.791,
+          "fim": 173.811,
+          "score": 0.001
+        },
+        {
+          "texto": "won't",
+          "inicio": 174.571,
+          "fim": 174.751,
+          "score": 0.287
+        },
+        {
+          "texto": "hold",
+          "inicio": 174.831,
+          "fim": 175.091,
+          "score": 0.658
+        },
+        {
+          "texto": "it",
+          "inicio": 175.131,
+          "fim": 175.211,
+          "score": 0.75
+        },
+        {
+          "texto": "back",
+          "inicio": 175.271,
+          "fim": 175.471,
+          "score": 0.889
+        },
+        {
+          "texto": "again",
+          "inicio": 175.551,
+          "fim": 175.971,
+          "score": 0.925
+        },
+        {
+          "texto": "This",
+          "inicio": 176.471,
+          "fim": 176.671,
+          "score": 0.826
+        },
+        {
+          "texto": "passion",
+          "inicio": 176.811,
+          "fim": 177.331,
+          "score": 0.804
+        },
+        {
+          "texto": "inside",
+          "inicio": 177.431,
+          "fim": 178.171,
+          "score": 0.617
+        },
+        {
+          "texto": "I",
+          "inicio": 178.631,
+          "fim": 178.691,
+          "score": 0.811
+        },
+        {
+          "texto": "can't",
+          "inicio": 178.731,
+          "fim": 179.011,
+          "score": 0.679
+        },
+        {
+          "texto": "run",
+          "inicio": 179.131,
+          "fim": 179.451,
+          "score": 0.837
+        },
+        {
+          "texto": "from",
+          "inicio": 179.511,
+          "fim": 179.891,
+          "score": 0.692
+        },
+        {
+          "texto": "myself",
+          "inicio": 179.911,
+          "fim": 180.431,
+          "score": 0.774
+        }
+      ],
+      "lacuna": 2
+    },
+    {
+      "janela": [
+        182.069,
+        290.1159375
+      ],
+      "texto": "to hide\nYour love I'll remember forever\n\nDon't make me close one more door\nI don't want to hurt anymore\nStay in my arms if you dare\nOr must I imagine you there\nDon't walk away from me\nI have nothing, nothing, nothing\nDon't make me close one more door\nI don't wanna hurt anymore\nStay in my arms if you dare\nOr must I imagine you there\nDon't walk away from me\nNo, don't walk away from me\nDon't you dare walk away from me\nI have nothing, nothing, nothing\nIf I don't have you, you\nIf I don't have you, oh, oh",
+      "palavras": [
+        {
+          "texto": "to",
+          "inicio": 182.249,
+          "fim": 182.469,
+          "score": 0.702
+        },
+        {
+          "texto": "hide",
+          "inicio": 182.529,
+          "fim": 184.989,
+          "score": 0.858
+        },
+        {
+          "texto": "Your",
+          "inicio": 185.029,
+          "fim": 185.309,
+          "score": 0.586
+        },
+        {
+          "texto": "love",
+          "inicio": 185.429,
+          "fim": 185.809,
+          "score": 0.66
+        },
+        {
+          "texto": "I'll",
+          "inicio": 185.929,
+          "fim": 186.029,
+          "score": 0.123
+        },
+        {
+          "texto": "remember",
+          "inicio": 186.049,
+          "fim": 186.769,
+          "score": 0.612
+        },
+        {
+          "texto": "forever",
+          "inicio": 187.169,
+          "fim": 189.689,
+          "score": 0.717
+        },
+        {
+          "texto": "Don't",
+          "inicio": 190.97,
+          "fim": 191.29,
+          "score": 0.536
+        },
+        {
+          "texto": "make",
+          "inicio": 191.31,
+          "fim": 191.53,
+          "score": 0.596
+        },
+        {
+          "texto": "me",
+          "inicio": 191.67,
+          "fim": 191.81,
+          "score": 0.71
+        },
+        {
+          "texto": "close",
+          "inicio": 191.87,
+          "fim": 193.61,
+          "score": 0.769
+        },
+        {
+          "texto": "one",
+          "inicio": 193.77,
+          "fim": 193.99,
+          "score": 0.531
+        },
+        {
+          "texto": "more",
+          "inicio": 194.01,
+          "fim": 194.19,
+          "score": 0.294
+        },
+        {
+          "texto": "door",
+          "inicio": 194.23,
+          "fim": 194.83,
+          "score": 0.497
+        },
+        {
+          "texto": "I",
+          "inicio": 196.11,
+          "fim": 196.19,
+          "score": 0.771
+        },
+        {
+          "texto": "don't",
+          "inicio": 196.23,
+          "fim": 196.39,
+          "score": 0.364
+        },
+        {
+          "texto": "want",
+          "inicio": 196.43,
+          "fim": 196.59,
+          "score": 0.551
+        },
+        {
+          "texto": "to",
+          "inicio": 196.61,
+          "fim": 196.71,
+          "score": 0.574
+        },
+        {
+          "texto": "hurt",
+          "inicio": 196.79,
+          "fim": 198.47,
+          "score": 0.774
+        },
+        {
+          "texto": "anymore",
+          "inicio": 198.71,
+          "fim": 199.71,
+          "score": 0.702
+        },
+        {
+          "texto": "Stay",
+          "inicio": 200.25,
+          "fim": 200.61,
+          "score": 0.504
+        },
+        {
+          "texto": "in",
+          "inicio": 200.77,
+          "fim": 200.89,
+          "score": 0.364
+        },
+        {
+          "texto": "my",
+          "inicio": 201.11,
+          "fim": 201.47,
+          "score": 0.704
+        },
+        {
+          "texto": "arms",
+          "inicio": 202.49,
+          "fim": 202.79,
+          "score": 0.504
+        },
+        {
+          "texto": "if",
+          "inicio": 203.17,
+          "fim": 203.43,
+          "score": 0.696
+        },
+        {
+          "texto": "you",
+          "inicio": 203.45,
+          "fim": 203.61,
+          "score": 0.751
+        },
+        {
+          "texto": "dare",
+          "inicio": 203.67,
+          "fim": 204.09,
+          "score": 0.602
+        },
+        {
+          "texto": "Or",
+          "inicio": 204.11,
+          "fim": 204.15,
+          "score": 0.001
+        },
+        {
+          "texto": "must",
+          "inicio": 204.83,
+          "fim": 205.29,
+          "score": 0.493
+        },
+        {
+          "texto": "I",
+          "inicio": 205.851,
+          "fim": 206.051,
+          "score": 0.798
+        },
+        {
+          "texto": "imagine",
+          "inicio": 206.111,
+          "fim": 208.131,
+          "score": 0.744
+        },
+        {
+          "texto": "you",
+          "inicio": 208.191,
+          "fim": 208.331,
+          "score": 0.475
+        },
+        {
+          "texto": "there",
+          "inicio": 208.371,
+          "fim": 209.111,
+          "score": 0.472
+        },
+        {
+          "texto": "Don't",
+          "inicio": 209.711,
+          "fim": 210.071,
+          "score": 0.833
+        },
+        {
+          "texto": "walk",
+          "inicio": 210.111,
+          "fim": 210.351,
+          "score": 0.956
+        },
+        {
+          "texto": "away",
+          "inicio": 210.871,
+          "fim": 211.171,
+          "score": 0.804
+        },
+        {
+          "texto": "from",
+          "inicio": 211.231,
+          "fim": 211.431,
+          "score": 0.954
+        },
+        {
+          "texto": "me",
+          "inicio": 211.471,
+          "fim": 213.611,
+          "score": 0.966
+        },
+        {
+          "texto": "I",
+          "inicio": 213.631,
+          "fim": 213.651,
+          "score": 0.005
+        },
+        {
+          "texto": "have",
+          "inicio": 215.231,
+          "fim": 215.571,
+          "score": 0.778
+        },
+        {
+          "texto": "nothing",
+          "inicio": 215.631,
+          "fim": 216.031,
+          "score": 0.912
+        },
+        {
+          "texto": "nothing",
+          "inicio": 216.791,
+          "fim": 217.351,
+          "score": 0.882
+        },
+        {
+          "texto": "nothing",
+          "inicio": 218.011,
+          "fim": 221.432,
+          "score": 0.748
+        },
+        {
+          "texto": "Don't",
+          "inicio": 221.492,
+          "fim": 222.632,
+          "score": 0.411
+        },
+        {
+          "texto": "make",
+          "inicio": 222.652,
+          "fim": 223.832,
+          "score": 0.666
+        },
+        {
+          "texto": "me",
+          "inicio": 223.872,
+          "fim": 224.272,
+          "score": 0.856
+        },
+        {
+          "texto": "close",
+          "inicio": 225.032,
+          "fim": 226.232,
+          "score": 0.456
+        },
+        {
+          "texto": "one",
+          "inicio": 226.712,
+          "fim": 226.952,
+          "score": 0.52
+        },
+        {
+          "texto": "more",
+          "inicio": 226.992,
+          "fim": 227.132,
+          "score": 0.225
+        },
+        {
+          "texto": "door",
+          "inicio": 227.172,
+          "fim": 227.772,
+          "score": 0.641
+        },
+        {
+          "texto": "I",
+          "inicio": 229.032,
+          "fim": 229.132,
+          "score": 0.747
+        },
+        {
+          "texto": "don't",
+          "inicio": 229.152,
+          "fim": 229.332,
+          "score": 0.379
+        },
+        {
+          "texto": "wanna",
+          "inicio": 229.372,
+          "fim": 229.652,
+          "score": 0.483
+        },
+        {
+          "texto": "hurt",
+          "inicio": 229.732,
+          "fim": 230.932,
+          "score": 0.463
+        },
+        {
+          "texto": "anymore",
+          "inicio": 231.612,
+          "fim": 232.572,
+          "score": 0.755
+        },
+        {
+          "texto": "Stay",
+          "inicio": 233.172,
+          "fim": 233.712,
+          "score": 0.858
+        },
+        {
+          "texto": "in",
+          "inicio": 233.732,
+          "fim": 233.832,
+          "score": 0.507
+        },
+        {
+          "texto": "my",
+          "inicio": 234.072,
+          "fim": 234.452,
+          "score": 0.704
+        },
+        {
+          "texto": "arms",
+          "inicio": 234.652,
+          "fim": 235.892,
+          "score": 0.802
+        },
+        {
+          "texto": "if",
+          "inicio": 236.092,
+          "fim": 236.372,
+          "score": 0.689
+        },
+        {
+          "texto": "you",
+          "inicio": 236.412,
+          "fim": 236.572,
+          "score": 0.748
+        },
+        {
+          "texto": "dare",
+          "inicio": 236.633,
+          "fim": 237.373,
+          "score": 0.662
+        },
+        {
+          "texto": "Or",
+          "inicio": 237.893,
+          "fim": 237.993,
+          "score": 0.458
+        },
+        {
+          "texto": "must",
+          "inicio": 238.013,
+          "fim": 238.233,
+          "score": 0.505
+        },
+        {
+          "texto": "I",
+          "inicio": 238.713,
+          "fim": 238.913,
+          "score": 0.789
+        },
+        {
+          "texto": "imagine",
+          "inicio": 239.073,
+          "fim": 241.073,
+          "score": 0.767
+        },
+        {
+          "texto": "you",
+          "inicio": 241.113,
+          "fim": 241.253,
+          "score": 0.547
+        },
+        {
+          "texto": "there",
+          "inicio": 241.313,
+          "fim": 241.873,
+          "score": 0.858
+        },
+        {
+          "texto": "Don't",
+          "inicio": 242.653,
+          "fim": 242.993,
+          "score": 0.865
+        },
+        {
+          "texto": "walk",
+          "inicio": 243.053,
+          "fim": 243.333,
+          "score": 0.92
+        },
+        {
+          "texto": "away",
+          "inicio": 243.813,
+          "fim": 244.153,
+          "score": 0.84
+        },
+        {
+          "texto": "from",
+          "inicio": 244.233,
+          "fim": 244.453,
+          "score": 0.909
+        },
+        {
+          "texto": "me",
+          "inicio": 244.513,
+          "fim": 246.213,
+          "score": 0.969
+        },
+        {
+          "texto": "No",
+          "inicio": 246.233,
+          "fim": 246.593,
+          "score": 0.76
+        },
+        {
+          "texto": "don't",
+          "inicio": 247.373,
+          "fim": 247.733,
+          "score": 0.567
+        },
+        {
+          "texto": "walk",
+          "inicio": 247.773,
+          "fim": 247.973,
+          "score": 0.507
+        },
+        {
+          "texto": "away",
+          "inicio": 248.353,
+          "fim": 248.773,
+          "score": 0.808
+        },
+        {
+          "texto": "from",
+          "inicio": 248.873,
+          "fim": 249.033,
+          "score": 0.425
+        },
+        {
+          "texto": "me",
+          "inicio": 249.213,
+          "fim": 250.413,
+          "score": 0.462
+        },
+        {
+          "texto": "Don't",
+          "inicio": 251.273,
+          "fim": 251.613,
+          "score": 0.652
+        },
+        {
+          "texto": "you",
+          "inicio": 251.673,
+          "fim": 251.993,
+          "score": 0.603
+        },
+        {
+          "texto": "dare",
+          "inicio": 252.053,
+          "fim": 252.534,
+          "score": 0.66
+        },
+        {
+          "texto": "walk",
+          "inicio": 252.854,
+          "fim": 253.054,
+          "score": 0.496
+        },
+        {
+          "texto": "away",
+          "inicio": 253.174,
+          "fim": 253.574,
+          "score": 0.7
+        },
+        {
+          "texto": "from",
+          "inicio": 253.774,
+          "fim": 253.994,
+          "score": 0.91
+        },
+        {
+          "texto": "me",
+          "inicio": 254.054,
+          "fim": 255.234,
+          "score": 0.476
+        },
+        {
+          "texto": "I",
+          "inicio": 257.334,
+          "fim": 257.534,
+          "score": 0.742
+        },
+        {
+          "texto": "have",
+          "inicio": 257.574,
+          "fim": 257.914,
+          "score": 0.738
+        },
+        {
+          "texto": "nothing",
+          "inicio": 257.974,
+          "fim": 258.374,
+          "score": 0.929
+        },
+        {
+          "texto": "nothing",
+          "inicio": 259.154,
+          "fim": 259.734,
+          "score": 0.791
+        },
+        {
+          "texto": "nothing",
+          "inicio": 260.314,
+          "fim": 262.734,
+          "score": 0.855
+        },
+        {
+          "texto": "If",
+          "inicio": 263.314,
+          "fim": 263.454,
+          "score": 0.776
+        },
+        {
+          "texto": "I",
+          "inicio": 263.734,
+          "fim": 263.854,
+          "score": 0.677
+        },
+        {
+          "texto": "don't",
+          "inicio": 263.914,
+          "fim": 264.574,
+          "score": 0.766
+        },
+        {
+          "texto": "have",
+          "inicio": 265.354,
+          "fim": 265.634,
+          "score": 0.658
+        },
+        {
+          "texto": "you",
+          "inicio": 265.694,
+          "fim": 267.394,
+          "score": 0.8
+        },
+        {
+          "texto": "you",
+          "inicio": 268.495,
+          "fim": 269.195,
+          "score": 0.697
+        },
+        {
+          "texto": "If",
+          "inicio": 270.775,
+          "fim": 271.175,
+          "score": 0.658
+        },
+        {
+          "texto": "I",
+          "inicio": 271.235,
+          "fim": 271.255,
+          "score": 0.006
+        },
+        {
+          "texto": "don't",
+          "inicio": 272.235,
+          "fim": 272.535,
+          "score": 0.68
+        },
+        {
+          "texto": "have",
+          "inicio": 272.635,
+          "fim": 273.195,
+          "score": 0.808
+        },
+        {
+          "texto": "you",
+          "inicio": 273.255,
+          "fim": 273.755,
+          "score": 0.759
+        },
+        {
+          "texto": "oh",
+          "inicio": 275.035,
+          "fim": 275.175,
+          "score": 0.584
+        },
+        {
+          "texto": "oh",
+          "inicio": 275.195,
+          "fim": 275.255,
+          "score": 0.213
+        }
+      ],
+      "lacuna": 3
+    }
+  ],
+  "pendencias": [
+    {
+      "lacuna": 2,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "Don't make me close one more door"
+    },
+    {
+      "lacuna": 2,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "Or must I imagine you there"
+    },
+    {
+      "lacuna": 2,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "If I don't have you, you, you, you, you, you"
+    },
+    {
+      "lacuna": 2,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "Love like I've known it with you"
+    },
+    {
+      "lacuna": 2,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "I don't wanna have to go"
+    },
+    {
+      "lacuna": 2,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "I won't hold it back again"
+    },
+    {
+      "lacuna": 3,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "Your love I'll remember forever"
+    },
+    {
+      "lacuna": 3,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "Don't make me close one more door"
+    },
+    {
+      "lacuna": 3,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "Or must I imagine you there"
+    },
+    {
+      "lacuna": 3,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "I have nothing, nothing, nothing"
+    },
+    {
+      "lacuna": 3,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "Don't make me close one more door"
+    },
+    {
+      "lacuna": 3,
+      "motivo": "insercao_baixa_confianca",
+      "texto": "If I don't have you, oh, oh"
+    }
+  ],
+  "blocos": [
+    {
+      "inicio": 22.596,
+      "fim": 25.497,
+      "texto": "Share my life",
+      "origem": "insercao_acustica",
+      "lacuna": 1,
+      "txt_inicio": 0,
+      "txt_fim": 3,
+      "score_minimo": 0.563,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 26.238,
+      "fim": 30.439,
+      "texto": "Take me for what i am '",
+      "origem": "texto_corrigido",
+      "bloco_original": 1
+    },
+    {
+      "inicio": 31.74,
+      "fim": 34.3,
+      "texto": "Cause i'll never change",
+      "origem": "original_preservado",
+      "bloco_original": 2
+    },
+    {
+      "inicio": 35.181,
+      "fim": 39.442,
+      "texto": "All my colors for you",
+      "origem": "original_preservado",
+      "bloco_original": 3
+    },
+    {
+      "inicio": 41.483,
+      "fim": 44.343,
+      "texto": "Take my love",
+      "origem": "original_preservado",
+      "bloco_original": 4
+    },
+    {
+      "inicio": 45.324,
+      "fim": 49.145,
+      "texto": "I'll never ask for too much",
+      "origem": "texto_corrigido",
+      "bloco_original": 5
+    },
+    {
+      "inicio": 50.545,
+      "fim": 52.626,
+      "texto": "Just all that you are",
+      "origem": "original_preservado",
+      "bloco_original": 6
+    },
+    {
+      "inicio": 54.01,
+      "fim": 58.553,
+      "texto": "And everything that you do",
+      "origem": "texto_corrigido",
+      "bloco_original": 7
+    },
+    {
+      "inicio": 60.454,
+      "fim": 61.915,
+      "texto": "I don't really need to look",
+      "origem": "original_preservado",
+      "bloco_original": 8
+    },
+    {
+      "inicio": 62.696,
+      "fim": 68.44,
+      "texto": "Very much further i don't wanna have to go where you don't",
+      "origem": "texto_corrigido",
+      "bloco_original": 9
+    },
+    {
+      "inicio": 68.6,
+      "fim": 74.403,
+      "texto": "Follow i won't hold it back again this passion inside can't",
+      "origem": "texto_corrigido",
+      "bloco_original": 10
+    },
+    {
+      "inicio": 74.483,
+      "fim": 78.326,
+      "texto": "Run from myself there's nowhere to hide",
+      "origem": "texto_corrigido",
+      "bloco_original": 11
+    },
+    {
+      "inicio": 81.586,
+      "fim": 85.486,
+      "texto": "Don't make me close one more door",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 73,
+      "txt_fim": 80,
+      "score_minimo": 0.299,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 1
+    },
+    {
+      "inicio": 86.706,
+      "fim": 90.187,
+      "texto": "I don't wanna hurt anymore",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 80,
+      "txt_fim": 85,
+      "score_minimo": 0.495,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 90.847,
+      "fim": 94.867,
+      "texto": "Stay in my arms if you dare",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 85,
+      "txt_fim": 92,
+      "score_minimo": 0.357,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 94.887,
+      "fim": 99.727,
+      "texto": "Or must i imagine you there",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 92,
+      "txt_fim": 98,
+      "score_minimo": 0.0,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 1
+    },
+    {
+      "inicio": 100.347,
+      "fim": 104.307,
+      "texto": "Don't walk away from me",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 98,
+      "txt_fim": 103,
+      "score_minimo": 0.747,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 105.607,
+      "fim": 109.448,
+      "texto": "I have nothing, nothing, nothing",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 103,
+      "txt_fim": 108,
+      "score_minimo": 0.833,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 109.468,
+      "fim": 123.828,
+      "texto": "If i don't have you, you, you, you, you, you",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 108,
+      "txt_fim": 118,
+      "score_minimo": 0.0,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 1
+    },
+    {
+      "inicio": 127.388,
+      "fim": 130.109,
+      "texto": "You see through",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 118,
+      "txt_fim": 121,
+      "score_minimo": 0.736,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 130.969,
+      "fim": 134.889,
+      "texto": "Right to the heart of me",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 121,
+      "txt_fim": 127,
+      "score_minimo": 0.509,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 136.389,
+      "fim": 139.089,
+      "texto": "You break down my walls",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 127,
+      "txt_fim": 132,
+      "score_minimo": 0.851,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 139.809,
+      "fim": 145.589,
+      "texto": "With the strength of your love",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 132,
+      "txt_fim": 138,
+      "score_minimo": 0.842,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 146.429,
+      "fim": 148.109,
+      "texto": "I never knew",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 138,
+      "txt_fim": 141,
+      "score_minimo": 0.671,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 149.749,
+      "fim": 154.41,
+      "texto": "Love like i've known it with you",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 141,
+      "txt_fim": 148,
+      "score_minimo": 0.178,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 1
+    },
+    {
+      "inicio": 154.87,
+      "fim": 157.65,
+      "texto": "Will a memory survive",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 148,
+      "txt_fim": 152,
+      "score_minimo": 0.578,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 158.83,
+      "fim": 163.27,
+      "texto": "One i can hold on to?",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 152,
+      "txt_fim": 158,
+      "score_minimo": 0.678,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 165.15,
+      "fim": 166.57,
+      "texto": "I don't really need to look",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 158,
+      "txt_fim": 164,
+      "score_minimo": 0.524,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 167.39,
+      "fim": 169.15,
+      "texto": "Very much further",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 164,
+      "txt_fim": 167,
+      "score_minimo": 0.759,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 169.17,
+      "fim": 171.511,
+      "texto": "I don't wanna have to go",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 167,
+      "txt_fim": 173,
+      "score_minimo": 0.0,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 2
+    },
+    {
+      "inicio": 172.071,
+      "fim": 173.771,
+      "texto": "Where you don't follow",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 173,
+      "txt_fim": 177,
+      "score_minimo": 0.697,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 173.791,
+      "fim": 175.971,
+      "texto": "I won't hold it back again",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 177,
+      "txt_fim": 183,
+      "score_minimo": 0.001,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 2
+    },
+    {
+      "inicio": 176.471,
+      "fim": 178.171,
+      "texto": "This passion inside",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 183,
+      "txt_fim": 186,
+      "score_minimo": 0.617,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 178.631,
+      "fim": 180.431,
+      "texto": "I can't run from myself",
+      "origem": "insercao_acustica",
+      "lacuna": 2,
+      "txt_inicio": 186,
+      "txt_fim": 191,
+      "score_minimo": 0.679,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 181.291,
+      "fim": 182.069,
+      "texto": "There's nowhere",
+      "origem": "original_preservado",
+      "bloco_original": 12
+    },
+    {
+      "inicio": 182.249,
+      "fim": 184.989,
+      "texto": "To hide",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 193,
+      "txt_fim": 195,
+      "score_minimo": 0.702,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 185.029,
+      "fim": 189.689,
+      "texto": "Your love i'll remember forever",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 195,
+      "txt_fim": 200,
+      "score_minimo": 0.123,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 1
+    },
+    {
+      "inicio": 190.97,
+      "fim": 194.83,
+      "texto": "Don't make me close one more door",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 200,
+      "txt_fim": 207,
+      "score_minimo": 0.294,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 1
+    },
+    {
+      "inicio": 196.11,
+      "fim": 199.71,
+      "texto": "I don't want to hurt anymore",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 207,
+      "txt_fim": 213,
+      "score_minimo": 0.364,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 200.25,
+      "fim": 204.09,
+      "texto": "Stay in my arms if you dare",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 213,
+      "txt_fim": 220,
+      "score_minimo": 0.364,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 204.11,
+      "fim": 209.111,
+      "texto": "Or must i imagine you there",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 220,
+      "txt_fim": 226,
+      "score_minimo": 0.001,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 1
+    },
+    {
+      "inicio": 209.711,
+      "fim": 213.611,
+      "texto": "Don't walk away from me",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 226,
+      "txt_fim": 231,
+      "score_minimo": 0.804,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 213.631,
+      "fim": 221.432,
+      "texto": "I have nothing, nothing, nothing",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 231,
+      "txt_fim": 236,
+      "score_minimo": 0.005,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 1
+    },
+    {
+      "inicio": 221.492,
+      "fim": 227.772,
+      "texto": "Don't make me close one more door",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 236,
+      "txt_fim": 243,
+      "score_minimo": 0.225,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 1
+    },
+    {
+      "inicio": 229.032,
+      "fim": 232.572,
+      "texto": "I don't wanna hurt anymore",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 243,
+      "txt_fim": 248,
+      "score_minimo": 0.379,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 233.172,
+      "fim": 237.373,
+      "texto": "Stay in my arms if you dare",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 248,
+      "txt_fim": 255,
+      "score_minimo": 0.507,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 237.893,
+      "fim": 241.873,
+      "texto": "Or must i imagine you there",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 255,
+      "txt_fim": 261,
+      "score_minimo": 0.458,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 242.653,
+      "fim": 246.213,
+      "texto": "Don't walk away from me",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 261,
+      "txt_fim": 266,
+      "score_minimo": 0.84,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 246.233,
+      "fim": 250.413,
+      "texto": "No, don't walk away from me",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 266,
+      "txt_fim": 272,
+      "score_minimo": 0.425,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 251.273,
+      "fim": 255.234,
+      "texto": "Don't you dare walk away from me",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 272,
+      "txt_fim": 279,
+      "score_minimo": 0.476,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 257.334,
+      "fim": 262.734,
+      "texto": "I have nothing, nothing, nothing",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 279,
+      "txt_fim": 284,
+      "score_minimo": 0.738,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 263.314,
+      "fim": 269.195,
+      "texto": "If i don't have you, you",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 284,
+      "txt_fim": 290,
+      "score_minimo": 0.658,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 0
+    },
+    {
+      "inicio": 270.775,
+      "fim": 275.255,
+      "texto": "If i don't have you, oh, oh",
+      "origem": "insercao_acustica",
+      "lacuna": 3,
+      "txt_inicio": 290,
+      "txt_fim": 297,
+      "score_minimo": 0.006,
+      "atividade_audio": 1.0,
+      "palavras_baixa_confianca": 2
+    }
+  ],
+  "configuracao_motor": {
+    "idioma": "auto",
+    "dispositivo": "cpu",
+    "modelo_solicitado": null,
+    "selecao_por_trecho": [
+      {
+        "inicio": 0.0,
+        "fim": 26.238,
+        "linhas": [
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 1,
+            "herdado": false
+          }
+        ]
+      },
+      {
+        "inicio": 78.326,
+        "fim": 181.291,
+        "linhas": [
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 1,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 1,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 4,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 4,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 2,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 2,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 9,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 1,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 4,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 2,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 4,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 1,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 4,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 1,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 4,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 2,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 3,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 1,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 2,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 1,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 3,
+            "herdado": false
+          }
+        ]
+      },
+      {
+        "inicio": 182.069,
+        "fim": 290.1159375,
+        "linhas": [
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 1,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 2,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 0,
+            "herdado": true
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 1,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 2,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 4,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 4,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 2,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 2,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 1,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 1,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 4,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 4,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 2,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 1,
+            "votos_en": 2,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 3,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 2,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 5,
+            "herdado": false
+          },
+          {
+            "idioma": "en",
+            "votos_pt": 0,
+            "votos_en": 4,
+            "herdado": false
+          }
+        ]
+      }
+    ]
+  },
+  "fontes": {
+    "txt": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\pop-internacional\\i-have-nothing-whitney-houston\\letra.txt",
+      "sha256": "6f9835c0564ce20f7fba826b7ce387d080f9d16d0394f2fc2507f932e00d702d"
+    },
+    "srt": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\pop-internacional\\i-have-nothing-whitney-houston\\letra.srt",
+      "sha256": "9f1b379250a29acf73ab900ecda3a50d974faa193a74f7d8d99d75fb7b00974c"
+    },
+    "voz": {
+      "caminho": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\pop-internacional\\i-have-nothing-whitney-houston\\voz.mp3",
+      "sha256": "b64da1a3fd5c0e8a5f9e0a4845c917810c7db0b4511c183bc21df12e5e85f8bb"
+    }
+  },
+  "resumo_avisos": [
+    "Inserção em 00:01:21,586: 1 palavra(s) com baixa confiança; mantidas.",
+    "Inserção em 00:01:34,887: 1 palavra(s) com baixa confiança; mantidas.",
+    "Inserção em 00:01:49,468: 1 palavra(s) com baixa confiança; mantidas.",
+    "Inserção em 00:02:29,749: 1 palavra(s) com baixa confiança; mantidas.",
+    "Inserção em 00:02:49,170: 2 palavra(s) com baixa confiança; mantidas.",
+    "Inserção em 00:02:53,791: 2 palavra(s) com baixa confiança; mantidas.",
+    "Inserção em 00:03:05,029: 1 palavra(s) com baixa confiança; mantidas.",
+    "Inserção em 00:03:10,970: 1 palavra(s) com baixa confiança; mantidas.",
+    "Inserção em 00:03:24,110: 1 palavra(s) com baixa confiança; mantidas.",
+    "Inserção em 00:03:33,631: 1 palavra(s) com baixa confiança; mantidas.",
+    "Inserção em 00:03:41,492: 1 palavra(s) com baixa confiança; mantidas.",
+    "Inserção em 00:04:30,775: 2 palavra(s) com baixa confiança; mantidas."
+  ]
+}

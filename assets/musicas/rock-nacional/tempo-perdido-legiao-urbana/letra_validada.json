@@ -1,13 +1,13 @@
 {
   "versao": 1,
   "fontes": {
-    "consolidada": "5d88e9cb7918f48ee48beefa878f2206fa440d0a09c425f4e5bdcfbc06e500b9",
+    "consolidada": "8a8b9367341ae6a3ec11e3c3d91a55515dcead247f17c4e25cf6e44573373d2d",
     "txt": "a01bf708eb819fcb8f319af1d3b0cc0c42d55b26a12df1b343b2bcf6693f2903",
-    "srt": "2ae808faff2108c74f996c7eb23ca976a5de16e7c56eed18bc42cf23e0becf4e",
+    "srt": "7049efcba6738b2e2d2933186acc83f66d19007a762439f15a95cc7676d0b54c",
     "voz": "20ca3dbabb6856b2849b2d0900f21bc63041151e71827bbd27f405718bcfd6fc"
   },
-  "sha256_srt": "7aa77d62c101da1c50d095728c36145748e32dc0620cb28bb94bdcb87e189e39",
-  "pendencias": 0,
+  "sha256_srt": "9065b919257c53a7f5de8ad0e3f14354532d494fa4c9d43d2a02b2f28b51066e",
+  "pendencias": 14,
   "blocos": {
     "1": [],
     "2": [],
@@ -21,22 +21,151 @@
     "10": [],
     "11": [],
     "12": [],
-    "13": [],
-    "14": [],
+    "13": [
+      {
+        "texto": "Selvagem",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "14": [
+      {
+        "texto": "Selvagem",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
     "15": [],
     "16": [],
-    "17": [],
+    "17": [
+      {
+        "texto": "Castanhos",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
     "18": [],
     "19": [],
     "20": [],
     "21": [],
     "22": [],
-    "23": [],
-    "24": [],
+    "23": [
+      {
+        "texto": "Temos",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "nosso",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "próprio",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "tempo",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "não",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "tenho",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "24": [
+      {
+        "texto": "Medo",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": 156.885,
+        "fim": 157.433,
+        "score": 0.913,
+        "origem": "alinhador"
+      }
+    ],
     "25": [],
     "26": [],
     "27": [],
-    "28": [],
-    "29": []
+    "28": [
+      {
+        "texto": "Acessas",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "29": [],
+    "30": [],
+    "31": [],
+    "32": [],
+    "33": [],
+    "34": [
+      {
+        "texto": "Tão",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 196.322,
+        "fim": 196.754,
+        "score": 0.593,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "jovens",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 196.775,
+        "fim": 197.125,
+        "score": 0.514,
+        "origem": "alinhador"
+      }
+    ],
+    "35": [
+      {
+        "texto": "Tão",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 200.457,
+        "fim": 200.597,
+        "score": 0.265,
+        "origem": "alinhador"
+      },
+      {
+        "texto": "jovens",
+        "incluir": true,
+        "confirmado": true,
+        "inicio": 200.617,
+        "fim": 200.939,
+        "score": 0.458,
+        "origem": "alinhador"
+      }
+    ]
   }
 }

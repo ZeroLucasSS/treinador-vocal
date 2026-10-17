@@ -1,223 +1,195 @@
 1
-00:00:23,880 --> 00:00:28,180
+00:00:24,278 --> 00:00:28,220
 Quando eu digo que deixei de te amar
 
 2
-00:00:28,540 --> 00:00:31,759
+00:00:29,240 --> 00:00:31,701
 É porque eu te amo
 
 3
-00:00:33,840 --> 00:00:37,960
+00:00:34,022 --> 00:00:38,364
 Quando eu digo que não quero mais você
 
 4
-00:00:38,740 --> 00:00:41,500
+00:00:39,564 --> 00:00:42,346
 É porque eu te quero
 
 5
-00:00:42,840 --> 00:00:47,400
+00:00:43,006 --> 00:00:47,508
 Eu tenho medo de te dar meu coração
 
 6
-00:00:47,400 --> 00:00:52,820
+00:00:48,428 --> 00:00:51,789
 E confessar que eu estou em tuas mãos
 
 7
-00:00:52,820 --> 00:00:56,580
-Mas não posso imaginar o que vai ser
+00:00:53,462 --> 00:00:59,387
+Mas não posso imaginar o que vai ser de mim se eu te perder
 
 8
-00:00:56,580 --> 00:01:00,360
-De mim se eu te perder um dia
+00:00:59,467 --> 00:01:01,729
+Um dia
 
 9
-00:01:03,140 --> 00:01:07,120
-Eu me afasto e me defendo de você
+00:01:03,631 --> 00:01:09,516
+Eu me afasto e me defendo de você mas depois
 
 10
-00:01:08,000 --> 00:01:11,360
-Mas depois me entrego
+00:01:09,556 --> 00:01:11,077
+Me entrego
 
 11
-00:01:13,200 --> 00:01:17,540
-Faço tipo, falo coisas que eu não sou
+00:01:13,186 --> 00:01:18,848
+Faço tipo, falo coisas que eu não sou mas
 
 12
-00:01:18,080 --> 00:01:20,840
-Mas depois eu nego
+00:01:18,908 --> 00:01:24,631
+Depois eu nego mas a verdade é que eu
 
 13
-00:01:21,840 --> 00:01:25,780
-Mas a verdade é que eu sou louco
+00:01:24,751 --> 00:01:30,313
+Sou louco por você e tenho medo de pensar em te
 
 14
-00:01:25,780 --> 00:01:30,200
-Por você e tenho medo de pensar em
+00:01:30,393 --> 00:01:35,936
+Perder eu preciso aceitar que não dá
 
 15
-00:01:30,200 --> 00:01:30,960
-Te perder
+00:01:35,976 --> 00:01:39,617
+Mais pra separar as nossas vidas
 
 16
-00:01:32,540 --> 00:01:40,320
-Eu preciso aceitar que não dá mais pra separar as nossas vidas
+00:01:42,918 --> 00:01:48,260
+E nessa loucura de dizer que não te quero vou negando as
 
 17
-00:01:42,900 --> 00:01:46,280
-E nessa loucura de dizer que não te
+00:01:48,341 --> 00:01:53,363
+Aparências disfarçando as evidências mas pra que viver
 
 18
-00:01:46,280 --> 00:01:51,880
-Quero vou negando as aparências disfarçando as evidências
+00:01:53,423 --> 00:01:59,386
+Fingindo se eu não posso enganar meu coração?
 
 19
-00:01:52,320 --> 00:01:55,140
-Mas pra que viver fingindo se eu não
+00:01:59,786 --> 00:02:05,608
+Eu sei que te amo! chega de mentiras de negar o meu
 
 20
-00:01:55,140 --> 00:01:57,620
-Posso enganar meu coração?
+00:02:05,648 --> 00:02:08,950
+Desejo eu te quero mais que tudo
 
 21
-00:01:59,640 --> 00:02:04,320
-Eu sei que te amo! chega de mentiras
+00:02:09,470 --> 00:02:14,894
+Eu preciso do seu beijo eu entrego a minha vida pra você
 
 22
-00:02:04,600 --> 00:02:06,680
-De negar o meu desejo
+00:02:15,014 --> 00:02:20,518
+Fazer o que quiser de mim só quero ouvir
 
 23
-00:02:06,960 --> 00:02:10,140
-Eu te quero mais que tudo eu preciso
+00:02:20,558 --> 00:02:26,241
+Você dizer que sim! diz que é verdade, que tem
 
 24
-00:02:10,140 --> 00:02:11,500
-Do seu beijo
+00:02:26,342 --> 00:02:31,805
+Saudade que ainda você pensa muito em
 
 25
-00:02:11,920 --> 00:02:15,660
-Eu entrego a minha vida pra você fazer o
+00:02:31,865 --> 00:02:37,269
+Mim diz que é verdade, que tem saudade
 
 26
-00:02:15,660 --> 00:02:17,880
-Que quiser de mim
+00:02:38,902 --> 00:02:41,803
+Que ainda você quer viver pra
 
 27
-00:02:18,880 --> 00:02:22,880
-Só quero ouvir você dizer que sim!
+00:02:41,883 --> 00:02:56,507
+Mim
 
 28
-00:02:23,320 --> 00:02:29,180
-Diz que é verdade, que tem saudade que
+00:02:56,527 --> 00:03:01,789
+Eu me afasto e me defendo de você mas
 
 29
-00:02:29,180 --> 00:02:32,680
-Ainda você pensa muito em mim
+00:03:01,849 --> 00:03:04,650
+Depois me entrego
 
 30
-00:02:33,120 --> 00:02:39,020
-Diz que é verdade, que tem saudade que
+00:03:05,930 --> 00:03:11,573
+Faço tipo, falo coisas que eu não sou mas
 
 31
-00:02:39,020 --> 00:02:42,460
-Ainda você quer viver pra mim
+00:03:11,613 --> 00:03:17,557
+Depois eu nego mas a verdade é que eu sou
 
 32
-00:02:54,790 --> 00:03:00,110
-Eu me afasto e me defendo de você
+00:03:17,897 --> 00:03:19,518
+Louco por você
 
 33
-00:03:00,930 --> 00:03:03,670
-Mas depois me entrego
+00:03:20,258 --> 00:03:25,381
+E tenho medo de pensar em te perder eu
 
 34
-00:03:05,970 --> 00:03:10,190
-Faço tipo, falo coisas que eu não sou
+00:03:25,441 --> 00:03:30,404
+Preciso aceitar que não dá mais pra separar as
 
 35
-00:03:10,710 --> 00:03:13,570
-Mas depois eu nego
+00:03:30,444 --> 00:03:32,205
+Nossas vidas
 
 36
-00:03:14,750 --> 00:03:18,350
-Mas a verdade é que eu sou louco
+00:03:35,622 --> 00:03:40,866
+E nessa loucura de dizer que não te quero vou negando as
 
 37
-00:03:18,350 --> 00:03:22,650
-Por você e tenho medo de pensar em
+00:03:40,926 --> 00:03:46,010
+Aparências disfarçando as evidências mas pra que viver
 
 38
-00:03:22,650 --> 00:03:22,750
-Te perder
+00:03:46,070 --> 00:03:51,994
+Fingindo se eu não posso enganar meu coração?
 
 39
-00:03:23,950 --> 00:03:33,500
-Eu preciso aceitar que não dá mais pra separar as nossas vidas
+00:03:52,435 --> 00:03:58,259
+Eu sei que te amo! chega de mentiras de negar o meu
 
 40
-00:03:34,880 --> 00:03:38,880
-E nessa loucura de dizer que não te
+00:03:58,319 --> 00:04:01,602
+Desejo eu te quero mais que tudo
 
 41
-00:03:38,880 --> 00:03:44,500
-Quero vou negando as aparências disfarçando as evidências
+00:04:02,142 --> 00:04:08,104
+Eu preciso do seu beijo eu entrego a minha vida pra você fazer
 
 42
-00:03:44,980 --> 00:03:47,740
-Mas pra que viver fingindo se eu não
+00:04:08,164 --> 00:04:13,765
+O que quiser de mim só quero ouvir você
 
 43
-00:03:47,740 --> 00:03:50,260
-Posso enganar meu coração?
+00:04:13,845 --> 00:04:18,907
+Dizer que sim! diz que é verdade, que tem
 
 44
-00:03:51,560 --> 00:03:56,920
-Eu sei que te amo! chega de mentiras
+00:04:19,007 --> 00:04:24,428
+Saudade que ainda você pensa muito
 
 45
-00:03:57,280 --> 00:03:59,340
-De negar o meu desejo
+00:04:24,628 --> 00:04:27,309
+Em mim diz que é verdade, que tem saudade
 
 46
-00:03:59,660 --> 00:04:02,820
-Eu te quero mais que tudo eu preciso
+00:04:31,582 --> 00:04:36,088
+Que ainda você quer viver pra mim diz que é
 
 47
-00:04:02,820 --> 00:04:04,160
-Do seu beijo
+00:04:36,148 --> 00:04:41,396
+Verdade, que tem saudade que
 
 48
-00:04:04,620 --> 00:04:08,280
-Eu entrego a minha vida pra você fazer o
+00:04:41,456 --> 00:04:47,424
+Ainda você quer viver pra
 
 49
-00:04:08,280 --> 00:04:10,140
-Que quiser de mim
-
-50
-00:04:11,940 --> 00:04:15,399
-Só quero ouvir você dizer que sim!
-
-51
-00:04:15,399 --> 00:04:21,840
-Diz que é verdade, que tem saudade que
-
-52
-00:04:21,840 --> 00:04:25,340
-Ainda você pensa muito em mim
-
-53
-00:04:25,780 --> 00:04:31,660
-Diz que é verdade, que tem saudade que
-
-54
-00:04:31,660 --> 00:04:34,960
-Ainda você quer viver pra mim
-
-55
-00:04:34,960 --> 00:04:41,420
-Diz que é verdade, que tem saudade que
-
-56
-00:04:41,420 --> 00:04:47,860
-Ainda você quer viver pra mim
+00:04:47,604 --> 00:04:48,165
+Mim

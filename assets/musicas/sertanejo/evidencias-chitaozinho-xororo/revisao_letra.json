@@ -1,403 +1,354 @@
 {
   "versao": 1,
   "fontes": {
-    "consolidada": "5e9f00f3fb6c73a3621a53ee6d2b863758c31253dfa9e9595e6bddd04b052de8",
+    "consolidada": "3d6d933af3e66b6be020a237ff5bcbb8edceedf703ce0834110fb2cccea025b8",
     "txt": "c68186d249476aecbdd1d8ba1e5654cb766d7e981c8fe69d831f47216abba1a3",
-    "srt": "11d4956ef673c9accd467669088131e5fd1f1d9a41baeb4097706a2ea1fa01fe",
+    "srt": "e2540196bdbe2d6aafa81508e5575114883347ebf7eb928df1ce35d35329a73e",
     "voz": "682e56cf8da2585c758b89d17639ccb527c74bf5c4318641af3a97d3d42aab1b"
   },
-  "criado": "2026-10-09T00:09:46.727604+00:00",
+  "criado": "2026-10-15T23:54:51.747771+00:00",
   "blocos": [
     {
       "id": "srt:1",
-      "inicio": 23.88,
-      "fim": 28.18,
+      "inicio": 24.278,
+      "fim": 28.22,
       "texto": "Quando eu digo que deixei de te amar",
       "palavras": []
     },
     {
       "id": "srt:2",
-      "inicio": 28.54,
-      "fim": 31.759,
+      "inicio": 29.24,
+      "fim": 31.701,
       "texto": "É porque eu te amo",
       "palavras": []
     },
     {
       "id": "srt:3",
-      "inicio": 33.84,
-      "fim": 37.96,
+      "inicio": 34.022,
+      "fim": 38.364,
       "texto": "Quando eu digo que não quero mais você",
       "palavras": []
     },
     {
       "id": "srt:4",
-      "inicio": 38.74,
-      "fim": 41.5,
+      "inicio": 39.564,
+      "fim": 42.346,
       "texto": "É porque eu te quero",
       "palavras": []
     },
     {
       "id": "srt:5",
-      "inicio": 42.84,
-      "fim": 47.4,
+      "inicio": 43.006,
+      "fim": 47.508,
       "texto": "Eu tenho medo de te dar meu coração",
       "palavras": []
     },
     {
       "id": "srt:6",
-      "inicio": 47.4,
-      "fim": 52.82,
+      "inicio": 48.428,
+      "fim": 51.789,
       "texto": "E confessar que eu estou em tuas mãos",
       "palavras": []
     },
     {
       "id": "srt:7",
-      "inicio": 52.82,
-      "fim": 56.58,
-      "texto": "Mas não posso imaginar o que vai ser",
+      "inicio": 53.462,
+      "fim": 59.387,
+      "texto": "Mas não posso imaginar o que vai ser de mim se eu te perder",
       "palavras": []
     },
     {
       "id": "srt:8",
-      "inicio": 56.58,
-      "fim": 60.36,
-      "texto": "De mim se eu te perder um dia",
+      "inicio": 59.467,
+      "fim": 61.729,
+      "texto": "Um dia",
       "palavras": []
     },
     {
       "id": "srt:9",
-      "inicio": 63.14,
-      "fim": 67.12,
-      "texto": "Eu me afasto e me defendo de você",
+      "inicio": 63.631,
+      "fim": 69.516,
+      "texto": "Eu me afasto e me defendo de você mas depois",
       "palavras": []
     },
     {
       "id": "srt:10",
-      "inicio": 68.0,
-      "fim": 71.36,
-      "texto": "Mas depois me entrego",
+      "inicio": 69.556,
+      "fim": 71.077,
+      "texto": "Me entrego",
       "palavras": []
     },
     {
       "id": "srt:11",
-      "inicio": 73.2,
-      "fim": 77.54,
-      "texto": "Faço tipo, falo coisas que eu não sou",
+      "inicio": 73.186,
+      "fim": 78.848,
+      "texto": "Faço tipo, falo coisas que eu não sou mas",
       "palavras": []
     },
     {
       "id": "srt:12",
-      "inicio": 78.08,
-      "fim": 80.84,
-      "texto": "Mas depois eu nego",
+      "inicio": 78.908,
+      "fim": 84.631,
+      "texto": "Depois eu nego mas a verdade é que eu",
       "palavras": []
     },
     {
       "id": "srt:13",
-      "inicio": 81.84,
-      "fim": 85.78,
-      "texto": "Mas a verdade é que eu sou louco",
+      "inicio": 84.751,
+      "fim": 90.313,
+      "texto": "Sou louco por você e tenho medo de pensar em te",
       "palavras": []
     },
     {
       "id": "srt:14",
-      "inicio": 85.78,
-      "fim": 90.2,
-      "texto": "Por você e tenho medo de pensar em",
+      "inicio": 90.393,
+      "fim": 95.936,
+      "texto": "Perder eu preciso aceitar que não dá",
       "palavras": []
     },
     {
       "id": "srt:15",
-      "inicio": 90.2,
-      "fim": 90.96,
-      "texto": "Te perder",
+      "inicio": 95.976,
+      "fim": 99.617,
+      "texto": "Mais pra separar as nossas vidas",
       "palavras": []
     },
     {
       "id": "srt:16",
-      "inicio": 92.54,
-      "fim": 100.32,
-      "texto": "Eu preciso aceitar que não dá mais pra separar as nossas vidas",
+      "inicio": 102.918,
+      "fim": 108.26,
+      "texto": "E nessa loucura de dizer que não te quero vou negando as",
       "palavras": []
     },
     {
       "id": "srt:17",
-      "inicio": 102.9,
-      "fim": 106.28,
-      "texto": "E nessa loucura de dizer que não te",
+      "inicio": 108.341,
+      "fim": 113.363,
+      "texto": "Aparências disfarçando as evidências mas pra que viver",
       "palavras": []
     },
     {
       "id": "srt:18",
-      "inicio": 106.28,
-      "fim": 111.88,
-      "texto": "Quero vou negando as aparências disfarçando as evidências",
+      "inicio": 113.423,
+      "fim": 119.386,
+      "texto": "Fingindo se eu não posso enganar meu coração?",
       "palavras": []
     },
     {
       "id": "srt:19",
-      "inicio": 112.32,
-      "fim": 115.14,
-      "texto": "Mas pra que viver fingindo se eu não",
+      "inicio": 119.786,
+      "fim": 125.608,
+      "texto": "Eu sei que te amo! chega de mentiras de negar o meu",
       "palavras": []
     },
     {
       "id": "srt:20",
-      "inicio": 115.14,
-      "fim": 117.62,
-      "texto": "Posso enganar meu coração?",
+      "inicio": 125.648,
+      "fim": 128.95,
+      "texto": "Desejo eu te quero mais que tudo",
       "palavras": []
     },
     {
       "id": "srt:21",
-      "inicio": 119.64,
-      "fim": 124.32,
-      "texto": "Eu sei que te amo! chega de mentiras",
+      "inicio": 129.47,
+      "fim": 134.894,
+      "texto": "Eu preciso do seu beijo eu entrego a minha vida pra você",
       "palavras": []
     },
     {
       "id": "srt:22",
-      "inicio": 124.6,
-      "fim": 126.68,
-      "texto": "De negar o meu desejo",
+      "inicio": 135.014,
+      "fim": 140.518,
+      "texto": "Fazer o que quiser de mim só quero ouvir",
       "palavras": []
     },
     {
       "id": "srt:23",
-      "inicio": 126.96,
-      "fim": 130.14,
-      "texto": "Eu te quero mais que tudo eu preciso",
+      "inicio": 140.558,
+      "fim": 146.241,
+      "texto": "Você dizer que sim! diz que é verdade, que tem",
       "palavras": []
     },
     {
       "id": "srt:24",
-      "inicio": 130.14,
-      "fim": 131.5,
-      "texto": "Do seu beijo",
+      "inicio": 146.342,
+      "fim": 151.805,
+      "texto": "Saudade que ainda você pensa muito em",
       "palavras": []
     },
     {
       "id": "srt:25",
-      "inicio": 131.92,
-      "fim": 135.66,
-      "texto": "Eu entrego a minha vida pra você fazer o",
+      "inicio": 151.865,
+      "fim": 157.269,
+      "texto": "Mim diz que é verdade, que tem saudade",
       "palavras": []
     },
     {
       "id": "srt:26",
-      "inicio": 135.66,
-      "fim": 137.88,
-      "texto": "Que quiser de mim",
+      "inicio": 158.902,
+      "fim": 161.803,
+      "texto": "Que ainda você quer viver pra",
       "palavras": []
     },
     {
       "id": "srt:27",
-      "inicio": 138.88,
-      "fim": 142.88,
-      "texto": "Só quero ouvir você dizer que sim!",
+      "inicio": 161.883,
+      "fim": 176.507,
+      "texto": "Mim",
       "palavras": []
     },
     {
       "id": "srt:28",
-      "inicio": 143.32,
-      "fim": 149.18,
-      "texto": "Diz que é verdade, que tem saudade que",
+      "inicio": 176.527,
+      "fim": 181.789,
+      "texto": "Eu me afasto e me defendo de você mas",
       "palavras": []
     },
     {
       "id": "srt:29",
-      "inicio": 149.18,
-      "fim": 152.68,
-      "texto": "Ainda você pensa muito em mim",
+      "inicio": 181.849,
+      "fim": 184.65,
+      "texto": "Depois me entrego",
       "palavras": []
     },
     {
       "id": "srt:30",
-      "inicio": 153.12,
-      "fim": 159.02,
-      "texto": "Diz que é verdade, que tem saudade que",
+      "inicio": 185.93,
+      "fim": 191.573,
+      "texto": "Faço tipo, falo coisas que eu não sou mas",
       "palavras": []
     },
     {
       "id": "srt:31",
-      "inicio": 159.02,
-      "fim": 162.46,
-      "texto": "Ainda você quer viver pra mim",
+      "inicio": 191.613,
+      "fim": 197.557,
+      "texto": "Depois eu nego mas a verdade é que eu sou",
       "palavras": []
     },
     {
       "id": "srt:32",
-      "inicio": 174.79,
-      "fim": 180.11,
-      "texto": "Eu me afasto e me defendo de você",
+      "inicio": 197.897,
+      "fim": 199.518,
+      "texto": "Louco por você",
       "palavras": []
     },
     {
       "id": "srt:33",
-      "inicio": 180.93,
-      "fim": 183.67,
-      "texto": "Mas depois me entrego",
+      "inicio": 200.258,
+      "fim": 205.381,
+      "texto": "E tenho medo de pensar em te perder eu",
       "palavras": []
     },
     {
       "id": "srt:34",
-      "inicio": 185.97,
-      "fim": 190.19,
-      "texto": "Faço tipo, falo coisas que eu não sou",
+      "inicio": 205.441,
+      "fim": 210.404,
+      "texto": "Preciso aceitar que não dá mais pra separar as",
       "palavras": []
     },
     {
       "id": "srt:35",
-      "inicio": 190.71,
-      "fim": 193.57,
-      "texto": "Mas depois eu nego",
+      "inicio": 210.444,
+      "fim": 212.205,
+      "texto": "Nossas vidas",
       "palavras": []
     },
     {
       "id": "srt:36",
-      "inicio": 194.75,
-      "fim": 198.35,
-      "texto": "Mas a verdade é que eu sou louco",
+      "inicio": 215.622,
+      "fim": 220.866,
+      "texto": "E nessa loucura de dizer que não te quero vou negando as",
       "palavras": []
     },
     {
       "id": "srt:37",
-      "inicio": 198.35,
-      "fim": 202.65,
-      "texto": "Por você e tenho medo de pensar em",
+      "inicio": 220.926,
+      "fim": 226.01,
+      "texto": "Aparências disfarçando as evidências mas pra que viver",
       "palavras": []
     },
     {
       "id": "srt:38",
-      "inicio": 202.65,
-      "fim": 202.75,
-      "texto": "Te perder",
+      "inicio": 226.07,
+      "fim": 231.994,
+      "texto": "Fingindo se eu não posso enganar meu coração?",
       "palavras": []
     },
     {
       "id": "srt:39",
-      "inicio": 203.95,
-      "fim": 213.5,
-      "texto": "Eu preciso aceitar que não dá mais pra separar as nossas vidas",
+      "inicio": 232.435,
+      "fim": 238.259,
+      "texto": "Eu sei que te amo! chega de mentiras de negar o meu",
       "palavras": []
     },
     {
       "id": "srt:40",
-      "inicio": 214.88,
-      "fim": 218.88,
-      "texto": "E nessa loucura de dizer que não te",
+      "inicio": 238.319,
+      "fim": 241.602,
+      "texto": "Desejo eu te quero mais que tudo",
       "palavras": []
     },
     {
       "id": "srt:41",
-      "inicio": 218.88,
-      "fim": 224.5,
-      "texto": "Quero vou negando as aparências disfarçando as evidências",
+      "inicio": 242.142,
+      "fim": 248.104,
+      "texto": "Eu preciso do seu beijo eu entrego a minha vida pra você fazer",
       "palavras": []
     },
     {
       "id": "srt:42",
-      "inicio": 224.98,
-      "fim": 227.74,
-      "texto": "Mas pra que viver fingindo se eu não",
+      "inicio": 248.164,
+      "fim": 253.765,
+      "texto": "O que quiser de mim só quero ouvir você",
       "palavras": []
     },
     {
       "id": "srt:43",
-      "inicio": 227.74,
-      "fim": 230.26,
-      "texto": "Posso enganar meu coração?",
+      "inicio": 253.845,
+      "fim": 258.907,
+      "texto": "Dizer que sim! diz que é verdade, que tem",
       "palavras": []
     },
     {
       "id": "srt:44",
-      "inicio": 231.56,
-      "fim": 236.92,
-      "texto": "Eu sei que te amo! chega de mentiras",
+      "inicio": 259.007,
+      "fim": 264.428,
+      "texto": "Saudade que ainda você pensa muito",
       "palavras": []
     },
     {
       "id": "srt:45",
-      "inicio": 237.28,
-      "fim": 239.34,
-      "texto": "De negar o meu desejo",
+      "inicio": 264.628,
+      "fim": 267.309,
+      "texto": "Em mim diz que é verdade, que tem saudade",
       "palavras": []
     },
     {
       "id": "srt:46",
-      "inicio": 239.66,
-      "fim": 242.82,
-      "texto": "Eu te quero mais que tudo eu preciso",
+      "inicio": 271.582,
+      "fim": 276.088,
+      "texto": "Que ainda você quer viver pra mim diz que é",
       "palavras": []
     },
     {
       "id": "srt:47",
-      "inicio": 242.82,
-      "fim": 244.16,
-      "texto": "Do seu beijo",
+      "inicio": 276.148,
+      "fim": 281.396,
+      "texto": "Verdade, que tem saudade que",
       "palavras": []
     },
     {
       "id": "srt:48",
-      "inicio": 244.62,
-      "fim": 248.28,
-      "texto": "Eu entrego a minha vida pra você fazer o",
+      "inicio": 281.456,
+      "fim": 287.424,
+      "texto": "Ainda você quer viver pra",
       "palavras": []
     },
     {
       "id": "srt:49",
-      "inicio": 248.28,
-      "fim": 250.14,
-      "texto": "Que quiser de mim",
-      "palavras": []
-    },
-    {
-      "id": "srt:50",
-      "inicio": 251.94,
-      "fim": 255.399,
-      "texto": "Só quero ouvir você dizer que sim!",
-      "palavras": []
-    },
-    {
-      "id": "srt:51",
-      "inicio": 255.399,
-      "fim": 261.84,
-      "texto": "Diz que é verdade, que tem saudade que",
-      "palavras": []
-    },
-    {
-      "id": "srt:52",
-      "inicio": 261.84,
-      "fim": 265.34,
-      "texto": "Ainda você pensa muito em mim",
-      "palavras": []
-    },
-    {
-      "id": "srt:53",
-      "inicio": 265.78,
-      "fim": 271.66,
-      "texto": "Diz que é verdade, que tem saudade que",
-      "palavras": []
-    },
-    {
-      "id": "srt:54",
-      "inicio": 271.66,
-      "fim": 274.96,
-      "texto": "Ainda você quer viver pra mim",
-      "palavras": []
-    },
-    {
-      "id": "srt:55",
-      "inicio": 274.96,
-      "fim": 281.42,
-      "texto": "Diz que é verdade, que tem saudade que",
-      "palavras": []
-    },
-    {
-      "id": "srt:56",
-      "inicio": 281.42,
-      "fim": 287.86,
-      "texto": "Ainda você quer viver pra mim",
+      "inicio": 287.604,
+      "fim": 288.165,
+      "texto": "Mim",
       "palavras": []
     }
   ],
@@ -405,11 +356,19 @@
   "rascunhos": {},
   "historico": [],
   "revisoes_anteriores": [],
-  "atualizado": "2026-10-09T00:09:46.867565+00:00",
-  "pendencias": [],
+  "atualizado": "2026-10-15T23:56:53.418308+00:00",
+  "pendencias": [
+    {
+      "id": "pendencia:srt:46",
+      "bloco": "srt:46",
+      "texto": "Que ainda você quer viver pra mim diz que é",
+      "motivo": "texto_exclusivo_srt_preservado",
+      "tipo": "srt"
+    }
+  ],
   "resumo": {
-    "ocorrencias_pendentes": 0,
-    "blocos": 56,
+    "ocorrencias_pendentes": 1,
+    "blocos": 49,
     "palavras_confirmadas": 0
   }
 }

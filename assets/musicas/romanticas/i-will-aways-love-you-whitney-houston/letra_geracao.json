@@ -1,0 +1,325 @@
+{
+  "versao": 1,
+  "arquivo_voz": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\pop-internacional\\i-will-aways-love-you-whitney-houston\\voz.mp3",
+  "sha256_voz": "71d6893fe270503216341e5eacb4ab32b48fc1918f4c07d6e057546ea7e2d85a",
+  "duracao_audio": 274.07675,
+  "configuracao": {
+    "modelo": "small",
+    "idioma": "en",
+    "dispositivo": "cpu",
+    "compute_type": "int8",
+    "vad": "silero"
+  },
+  "segmentos": [
+    {
+      "text": " If I should stay I would only be in your way So I'll go but I know I'll think of you",
+      "start": 2.21,
+      "end": 30.974,
+      "avg_logprob": -0.12865447935958704,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "If",
+          "start": 3.031,
+          "end": 3.631,
+          "score": 0.776
+        },
+        {
+          "word": "I",
+          "start": 4.932,
+          "end": 5.132,
+          "score": 0.74
+        },
+        {
+          "word": "should",
+          "start": 7.274,
+          "end": 8.415,
+          "score": 0.839
+        },
+        {
+          "word": "stay",
+          "start": 8.515,
+          "end": 9.156,
+          "score": 0.896
+        },
+        {
+          "word": "I",
+          "start": 9.176,
+          "end": 9.196,
+          "score": 0.002
+        },
+        {
+          "word": "would",
+          "start": 9.216,
+          "end": 13.059,
+          "score": 0.472
+        },
+        {
+          "word": "only",
+          "start": 13.319,
+          "end": 15.181,
+          "score": 0.905
+        },
+        {
+          "word": "be",
+          "start": 15.241,
+          "end": 15.561,
+          "score": 0.863
+        },
+        {
+          "word": "in",
+          "start": 15.801,
+          "end": 16.122,
+          "score": 0.869
+        },
+        {
+          "word": "your",
+          "start": 17.303,
+          "end": 17.643,
+          "score": 0.76
+        },
+        {
+          "word": "way",
+          "start": 17.723,
+          "end": 20.926,
+          "score": 0.779
+        },
+        {
+          "word": "So",
+          "start": 22.027,
+          "end": 22.307,
+          "score": 0.909
+        },
+        {
+          "word": "I'll",
+          "start": 22.947,
+          "end": 23.228,
+          "score": 0.644
+        },
+        {
+          "word": "go",
+          "start": 23.628,
+          "end": 24.669,
+          "score": 0.91
+        },
+        {
+          "word": "but",
+          "start": 25.97,
+          "end": 26.21,
+          "score": 0.949
+        },
+        {
+          "word": "I",
+          "start": 26.75,
+          "end": 26.911,
+          "score": 0.897
+        },
+        {
+          "word": "know",
+          "start": 26.971,
+          "end": 27.431,
+          "score": 0.838
+        },
+        {
+          "word": "I'll",
+          "start": 29.953,
+          "end": 30.253,
+          "score": 0.823
+        },
+        {
+          "word": "think",
+          "start": 30.293,
+          "end": 30.534,
+          "score": 0.915
+        },
+        {
+          "word": "of",
+          "start": 30.614,
+          "end": 30.674,
+          "score": 0.964
+        },
+        {
+          "word": "you",
+          "start": 30.694,
+          "end": 30.754,
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "text": " Bye.",
+      "start": 33.09,
+      "end": 33.79,
+      "avg_logprob": -1.1348930994669597,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "Bye.",
+          "start": 33.172,
+          "end": 33.666,
+          "score": 0.75
+        }
+      ]
+    },
+    {
+      "text": " you",
+      "start": 102.722,
+      "end": 103.294,
+      "avg_logprob": -0.6469759941101074,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "you",
+          "start": 102.865,
+          "end": 103.049,
+          "score": 0.266
+        }
+      ]
+    },
+    {
+      "text": " But above all this, I wish you",
+      "start": 178.498,
+      "end": 182.11,
+      "avg_logprob": -0.45430035061306423,
+      "idioma": "en",
+      "words": [
+        {
+          "word": "But",
+          "start": 178.518,
+          "end": 178.659,
+          "score": 0.753
+        },
+        {
+          "word": "above",
+          "start": 178.699,
+          "end": 179.2,
+          "score": 0.765
+        },
+        {
+          "word": "all",
+          "start": 179.301,
+          "end": 179.521,
+          "score": 0.748
+        },
+        {
+          "word": "this,",
+          "start": 179.602,
+          "end": 180.023,
+          "score": 0.806
+        },
+        {
+          "word": "I",
+          "start": 180.946,
+          "end": 181.127,
+          "score": 0.754
+        },
+        {
+          "word": "wish",
+          "start": 181.227,
+          "end": 181.408,
+          "score": 0.861
+        },
+        {
+          "word": "you",
+          "start": 181.428,
+          "end": 181.488,
+          "score": 0.022
+        }
+      ]
+    }
+  ],
+  "blocos": [
+    {
+      "inicio": 3.031,
+      "fim": 3.631,
+      "texto": "If"
+    },
+    {
+      "inicio": 4.932,
+      "fim": 5.132,
+      "texto": "I"
+    },
+    {
+      "inicio": 7.274,
+      "fim": 13.059,
+      "texto": "should stay I would"
+    },
+    {
+      "inicio": 13.319,
+      "fim": 16.122,
+      "texto": "only be in"
+    },
+    {
+      "inicio": 17.303,
+      "fim": 20.926,
+      "texto": "your way"
+    },
+    {
+      "inicio": 22.027,
+      "fim": 24.669,
+      "texto": "So I'll go"
+    },
+    {
+      "inicio": 25.97,
+      "fim": 27.431,
+      "texto": "but I know"
+    },
+    {
+      "inicio": 29.953,
+      "fim": 30.754,
+      "texto": "I'll think of you"
+    },
+    {
+      "inicio": 33.172,
+      "fim": 33.666,
+      "texto": "Bye."
+    },
+    {
+      "inicio": 102.865,
+      "fim": 103.049,
+      "texto": "you"
+    },
+    {
+      "inicio": 178.518,
+      "fim": 180.023,
+      "texto": "But above all this,"
+    },
+    {
+      "inicio": 180.946,
+      "fim": 181.488,
+      "texto": "I wish you"
+    }
+  ],
+  "avisos": [
+    "Segmento 1: alinhamento fraco em 'I'.",
+    "Segmento 1: alinhamento fraco em 'you'.",
+    "Segmento 3: alinhamento fraco em 'you'.",
+    "Segmento 4: alinhamento fraco em 'you'."
+  ],
+  "revisao_recomendada": true,
+  "comparacao_letra": {
+    "similaridade_textual": 0.3157894736842105,
+    "divergencias": [
+      {
+        "tipo": "replace",
+        "referencia": "will",
+        "transcricao": "ll"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "every step of the way and i will always love",
+        "transcricao": "bye"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "i will always love you you my darling you bittersweet memories that is all i m taking with me so goodbye please don t cry we both know i m not what you you need and i will always love you i will always love you oh i hope life treats you kind and i hope you ll have all you ve dreamed of and i wished you joy and happiness",
+        "transcricao": ""
+      },
+      {
+        "tipo": "delete",
+        "referencia": "love and i will always love you i will always love you i will always love you i will always love you i will always love you i i will always love you you darling i love you i ll always i ll always love you",
+        "transcricao": ""
+      }
+    ]
+  }
+}

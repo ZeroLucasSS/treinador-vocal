@@ -1,13 +1,13 @@
 {
   "versao": 1,
   "fontes": {
-    "consolidada": "332afc8312815e6e5f8f0945c92c3721fad649f696a15f819ed47f75a72f26c6",
+    "consolidada": "57ac792bff4f81704ef289e3acd7111aed840f6329ed5dbbde8f51814700c368",
     "txt": "ef1206a09e352450059f685b2fe385399bd56346e95e612a606b5a975435daab",
-    "srt": "6ca2e6935700aa83a5aa778f6ff0ad614d7d5a2904ce053af17ed018c1ddf91c",
+    "srt": "ef03aef0097019b394fbb93116524f0d2816895c2a4e4683d66d1891d5e33871",
     "voz": "1471aea5fce3660630f7be60e5af962d4762e0161105cb8840652c58b93f03ab"
   },
-  "sha256_srt": "c1f5295f274369dd0602a8093c767a9afd041ea9f420c0e4f28aeaf23d74d01b",
-  "pendencias": 2,
+  "sha256_srt": "b196162affa46134e3d7ed9422fcc3fc4dc378f00dec739bdd711e61d3c35d64",
+  "pendencias": 29,
   "blocos": {
     "1": [],
     "2": [],
@@ -15,170 +15,12 @@
     "4": [],
     "5": [],
     "6": [],
-    "7": [
-      {
-        "texto": "Mas",
-        "incluir": true,
-        "confirmado": false,
-        "inicio": null,
-        "fim": null
-      },
-      {
-        "texto": "se",
-        "incluir": true,
-        "confirmado": false,
-        "inicio": null,
-        "fim": null
-      },
-      {
-        "texto": "ele",
-        "incluir": true,
-        "confirmado": false,
-        "inicio": null,
-        "fim": null
-      },
-      {
-        "texto": "te",
-        "incluir": true,
-        "confirmado": false,
-        "inicio": null,
-        "fim": null
-      },
-      {
-        "texto": "merecesse",
-        "incluir": true,
-        "confirmado": false,
-        "inicio": null,
-        "fim": null
-      },
-      {
-        "texto": "não",
-        "incluir": true,
-        "confirmado": false,
-        "inicio": null,
-        "fim": null
-      },
-      {
-        "texto": "estaria",
-        "incluir": true,
-        "confirmado": false,
-        "inicio": null,
-        "fim": null
-      },
-      {
-        "texto": "aqui",
-        "incluir": true,
-        "confirmado": false,
-        "inicio": null,
-        "fim": null
-      }
-    ],
-    "8": [
-      {
-        "texto": "Não",
-        "incluir": true,
-        "confirmado": false,
-        "inicio": null,
-        "fim": null
-      },
-      {
-        "texto": "não",
-        "incluir": true,
-        "confirmado": false,
-        "inicio": null,
-        "fim": null
-      },
-      {
-        "texto": "não",
-        "incluir": true,
-        "confirmado": false,
-        "inicio": null,
-        "fim": null
-      },
-      {
-        "texto": "ou",
-        "incluir": true,
-        "confirmado": false,
-        "inicio": null,
-        "fim": null
-      },
-      {
-        "texto": "talvez",
-        "incluir": true,
-        "confirmado": false,
-        "inicio": null,
-        "fim": null
-      },
-      {
-        "texto": "você",
-        "incluir": true,
-        "confirmado": false,
-        "inicio": null,
-        "fim": null
-      },
-      {
-        "texto": "não",
-        "incluir": true,
-        "confirmado": false,
-        "inicio": null,
-        "fim": null
-      },
-      {
-        "texto": "queira",
-        "incluir": true,
-        "confirmado": false,
-        "inicio": null,
-        "fim": null
-      }
-    ],
+    "7": [],
+    "8": [],
     "9": [],
     "10": [],
-    "11": [
-      {
-        "texto": "Arrepender",
-        "incluir": true,
-        "confirmado": false,
-        "inicio": null,
-        "fim": null
-      }
-    ],
-    "12": [
-      {
-        "texto": "Não",
-        "incluir": true,
-        "confirmado": false,
-        "inicio": null,
-        "fim": null
-      },
-      {
-        "texto": "não",
-        "incluir": true,
-        "confirmado": false,
-        "inicio": null,
-        "fim": null
-      },
-      {
-        "texto": "não",
-        "incluir": true,
-        "confirmado": false,
-        "inicio": null,
-        "fim": null
-      },
-      {
-        "texto": "não",
-        "incluir": true,
-        "confirmado": false,
-        "inicio": null,
-        "fim": null
-      },
-      {
-        "texto": "não",
-        "incluir": true,
-        "confirmado": false,
-        "inicio": null,
-        "fim": null
-      }
-    ],
+    "11": [],
+    "12": [],
     "13": [],
     "14": [],
     "15": [],
@@ -203,111 +45,6 @@
     "34": [],
     "35": [],
     "36": [],
-    "37": [],
-    "38": [],
-    "39": [],
-    "40": [],
-    "41": [
-      {
-        "texto": "Vai",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 129.62,
-        "fim": 129.781,
-        "score": 0.951,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "se",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 129.922,
-        "fim": 130.223,
-        "score": 0.994,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "arrepender",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 130.243,
-        "fim": 130.605,
-        "score": 0.272,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "não",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 130.625,
-        "fim": 130.726,
-        "score": 0.372,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "não",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 130.766,
-        "fim": 131.047,
-        "score": 0.682,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "não",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 131.108,
-        "fim": 131.188,
-        "score": 0.166,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "não",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 131.329,
-        "fim": 131.53,
-        "score": 0.334,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "não",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 131.57,
-        "fim": 131.771,
-        "score": 0.217,
-        "origem": "alinhador"
-      },
-      {
-        "texto": "não",
-        "incluir": true,
-        "confirmado": true,
-        "inicio": 132.213,
-        "fim": 133.62,
-        "score": 0.621,
-        "origem": "alinhador"
-      }
-    ],
-    "42": [],
-    "43": [],
-    "44": [],
-    "45": [],
-    "46": [],
-    "47": [],
-    "48": [],
-    "49": [],
-    "50": [],
-    "51": [],
-    "52": [],
-    "53": [],
-    "54": [],
-    "55": [],
-    "56": [],
-    "57": [],
-    "58": [],
-    "59": [],
-    "60": []
+    "37": []
   }
 }

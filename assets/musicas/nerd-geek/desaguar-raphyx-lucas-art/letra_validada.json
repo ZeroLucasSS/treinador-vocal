@@ -1,0 +1,1385 @@
+{
+  "versao": 1,
+  "fontes": {
+    "consolidada": "332502cbfd4f685b29bb4c2cb554bc70390f012d6b4e70b74efe363ca0d6e88b",
+    "txt": "0e33e5ef65252e62b62242f6e2f9cfbd5024b8721fd96cb86ed60ffe51b8da35",
+    "srt": "b01102bbf32cb27f3de34d921ee188922f92ff0f3e7f916ea6406679ea4339b7",
+    "voz": "f98e70f11c6c6eceb30180826e9a61966cde161fb04f6676aab5cda6d969448c"
+  },
+  "sha256_srt": "8a520c3b006d8e5c90f50c0c4277930603fc82d881a0cda6c2cdf0c232feafa5",
+  "pendencias": 63,
+  "blocos": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [],
+    "5": [],
+    "6": [
+      {
+        "texto": "Essa",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "dor",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "7": [],
+    "8": [],
+    "9": [],
+    "10": [],
+    "11": [
+      {
+        "texto": "Te",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "enxergo",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "nos",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "olhares",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "que",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "me",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "mostraram",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "além",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "12": [],
+    "13": [],
+    "14": [
+      {
+        "texto": "Eu",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "não",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "queria",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "ter",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "que",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "15": [],
+    "16": [],
+    "17": [],
+    "18": [],
+    "19": [
+      {
+        "texto": "Dá",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "pra",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "pôr",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "em",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "frases",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "mas",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "o",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "que",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "me",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "quebra",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "é",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "o",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "que",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "me",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "constrói",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "20": [
+      {
+        "texto": "Por",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "isso",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "mesmo",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "quebrado",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "ainda",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "vou",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "seguir",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "21": [],
+    "22": [],
+    "23": [],
+    "24": [],
+    "25": [],
+    "26": [],
+    "27": [
+      {
+        "texto": "Contra",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "28": [
+      {
+        "texto": "And",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "even",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "if",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "the",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "skies",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "are",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "crying",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "i",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "won't",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "give",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "up",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "i'm",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "trying",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "29": [],
+    "30": [],
+    "31": [
+      {
+        "texto": "No",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "one",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "else",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "will",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "32": [
+      {
+        "texto": "Feel",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "the",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "pain",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "33": [
+      {
+        "texto": "No",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "one",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "else",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "will",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "34": [
+      {
+        "texto": "Feel",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "the",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "rain",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "35": [],
+    "36": [],
+    "37": [],
+    "38": [],
+    "39": [],
+    "40": [],
+    "41": [],
+    "42": [],
+    "43": [],
+    "44": [],
+    "45": [],
+    "46": [],
+    "47": [],
+    "48": [],
+    "49": [],
+    "50": [],
+    "51": [],
+    "52": [],
+    "53": [],
+    "54": [
+      {
+        "texto": "Gritarei",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "seu",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "nome",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "igual",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "zanpakuto",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "55": [
+      {
+        "texto": "Bênçãos",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "se",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "derramem",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "e",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "você",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "ainda",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "me",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "ame",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "56": [],
+    "57": [],
+    "58": [],
+    "59": [],
+    "60": [],
+    "61": [],
+    "62": [
+      {
+        "texto": "Em",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "silêncio",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "eu",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "choro",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "se",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "pensar",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "no",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "que",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "a",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "gente",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "não",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "viveu",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "e",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "nunca",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "63": [
+      {
+        "texto": "Viverá",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "64": [
+      {
+        "texto": "Por",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "que",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "você",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "teve",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "que",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "me",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "deixar",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "por",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "favor",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "só",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "me",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "deixa",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "65": [
+      {
+        "texto": "Desaguar",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "66": [],
+    "67": [],
+    "68": [
+      {
+        "texto": "Are",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "falling",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "i'ma",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "rise",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "up",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "i",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "promise",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "and",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "no",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "one",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "else",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "will",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "69": [
+      {
+        "texto": "Feel",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "the",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "pain",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "feel",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "the",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "rain",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "70": [],
+    "71": [],
+    "72": [],
+    "73": [
+      {
+        "texto": "Even",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "if",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "the",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "skies",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "are",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "crying",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "74": [
+      {
+        "texto": "I",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "won't",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "give",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "up",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "i'm",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "trying",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "75": [
+      {
+        "texto": "And",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "even",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "if",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "skies",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "are",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "falling",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "76": [],
+    "77": [
+      {
+        "texto": "No",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "one",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "else",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "will",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "feel",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "the",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "pain",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "78": [
+      {
+        "texto": "No",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "one",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "else",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "will",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "feel",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "the",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "rain",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "79": [],
+    "80": [],
+    "81": [
+      {
+        "texto": "Mesmo",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "que",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "chova",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "serei",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "o",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "sol",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "82": [
+      {
+        "texto": "Mesmo",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "que",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "chova",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "serei",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "o",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "sol",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "83": [
+      {
+        "texto": "Mesmo",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "que",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "chova",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "serei",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "o",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "sol",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ],
+    "84": [
+      {
+        "texto": "Mesmo",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "que",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "chova",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "serei",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "o",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      },
+      {
+        "texto": "sol",
+        "incluir": true,
+        "confirmado": false,
+        "inicio": null,
+        "fim": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,2935 @@
+{
+  "versao": 1,
+  "arquivo_voz": "C:\\Projetos Visual Studio\\06 - Treinador Vocal\\treinador-vocal\\assets\\musicas\\samba-pagode\\livre-pra-voar-exaltasamba\\voz.mp3",
+  "sha256_voz": "ab8bcd7c3748821df0d3c287aedf1617394051f4cffc9bc4748c78f219b07f13",
+  "duracao_audio": 221.23975,
+  "configuracao": {
+    "modelo": "small",
+    "idioma": "pt",
+    "dispositivo": "cpu",
+    "compute_type": "int8",
+    "vad": "silero"
+  },
+  "segmentos": [
+    {
+      "text": " Vamos cantar! Quando a gente se encontrar tudo vai ser tão perfeito Eu quero te curtir demais",
+      "start": 7.106,
+      "end": 36.35,
+      "avg_logprob": -0.24409746310927652,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Vamos",
+          "start": 7.126,
+          "end": 7.506,
+          "score": 0.489
+        },
+        {
+          "word": "cantar!",
+          "start": 7.646,
+          "end": 22.799,
+          "score": 0.788
+        },
+        {
+          "word": "Quando",
+          "start": 30.785,
+          "end": 31.026,
+          "score": 0.857
+        },
+        {
+          "word": "a",
+          "start": 31.086,
+          "end": 31.106,
+          "score": 1.0
+        },
+        {
+          "word": "gente",
+          "start": 31.166,
+          "end": 31.386,
+          "score": 0.789
+        },
+        {
+          "word": "se",
+          "start": 31.486,
+          "end": 31.726,
+          "score": 0.714
+        },
+        {
+          "word": "encontrar",
+          "start": 31.746,
+          "end": 32.287,
+          "score": 0.88
+        },
+        {
+          "word": "tudo",
+          "start": 32.427,
+          "end": 32.567,
+          "score": 0.879
+        },
+        {
+          "word": "vai",
+          "start": 32.627,
+          "end": 32.707,
+          "score": 0.63
+        },
+        {
+          "word": "ser",
+          "start": 32.747,
+          "end": 32.867,
+          "score": 0.566
+        },
+        {
+          "word": "tão",
+          "start": 32.947,
+          "end": 33.167,
+          "score": 0.661
+        },
+        {
+          "word": "perfeito",
+          "start": 33.247,
+          "end": 33.928,
+          "score": 0.722
+        },
+        {
+          "word": "Eu",
+          "start": 34.308,
+          "end": 34.388,
+          "score": 0.826
+        },
+        {
+          "word": "quero",
+          "start": 34.468,
+          "end": 34.709,
+          "score": 0.93
+        },
+        {
+          "word": "te",
+          "start": 34.789,
+          "end": 34.849,
+          "score": 0.917
+        },
+        {
+          "word": "curtir",
+          "start": 34.949,
+          "end": 35.329,
+          "score": 0.868
+        },
+        {
+          "word": "demais",
+          "start": 35.389,
+          "end": 36.23,
+          "score": 0.892
+        }
+      ]
+    },
+    {
+      "text": " E eu vou alívia, esse aperto no meu peito Que vontade não dá mais Se no telefone é bom, imagine aqui bem perto Eu sentindo o teu calor Sem medo de ser feliz, tô com o coração aberto Com você eu tô esperto, já me acostumei com seu jeitinho De falar no telefone, descerias pra me provocar Quando eu te pego, você tá perdido, eu vou se arrepender de um dia Ter me tirado do meu lugar",
+      "start": 36.482,
+      "end": 62.814,
+      "avg_logprob": -0.21343258613685392,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "E",
+          "start": 36.542,
+          "end": 36.582,
+          "score": 0.633
+        },
+        {
+          "word": "eu",
+          "start": 36.642,
+          "end": 36.682,
+          "score": 0.106
+        },
+        {
+          "word": "vou",
+          "start": 36.722,
+          "end": 36.802,
+          "score": 0.487
+        },
+        {
+          "word": "alívia,",
+          "start": 36.842,
+          "end": 37.663,
+          "score": 0.841
+        },
+        {
+          "word": "esse",
+          "start": 37.843,
+          "end": 38.003,
+          "score": 0.549
+        },
+        {
+          "word": "aperto",
+          "start": 38.023,
+          "end": 38.303,
+          "score": 0.851
+        },
+        {
+          "word": "no",
+          "start": 38.363,
+          "end": 38.643,
+          "score": 0.824
+        },
+        {
+          "word": "meu",
+          "start": 38.683,
+          "end": 38.803,
+          "score": 0.998
+        },
+        {
+          "word": "peito",
+          "start": 38.903,
+          "end": 39.443,
+          "score": 0.888
+        },
+        {
+          "word": "Que",
+          "start": 39.884,
+          "end": 40.024,
+          "score": 0.987
+        },
+        {
+          "word": "vontade",
+          "start": 40.084,
+          "end": 40.504,
+          "score": 0.922
+        },
+        {
+          "word": "não",
+          "start": 40.604,
+          "end": 40.784,
+          "score": 0.684
+        },
+        {
+          "word": "dá",
+          "start": 40.944,
+          "end": 41.064,
+          "score": 0.87
+        },
+        {
+          "word": "mais",
+          "start": 41.124,
+          "end": 41.624,
+          "score": 0.797
+        },
+        {
+          "word": "Se",
+          "start": 41.964,
+          "end": 42.005,
+          "score": 0.954
+        },
+        {
+          "word": "no",
+          "start": 42.045,
+          "end": 42.145,
+          "score": 0.696
+        },
+        {
+          "word": "telefone",
+          "start": 42.185,
+          "end": 42.865,
+          "score": 0.978
+        },
+        {
+          "word": "é",
+          "start": 42.905,
+          "end": 42.925,
+          "score": 0.0
+        },
+        {
+          "word": "bom,",
+          "start": 42.985,
+          "end": 43.185,
+          "score": 0.585
+        },
+        {
+          "word": "imagine",
+          "start": 43.345,
+          "end": 43.705,
+          "score": 0.854
+        },
+        {
+          "word": "aqui",
+          "start": 43.745,
+          "end": 44.065,
+          "score": 0.847
+        },
+        {
+          "word": "bem",
+          "start": 44.166,
+          "end": 44.286,
+          "score": 0.832
+        },
+        {
+          "word": "perto",
+          "start": 44.366,
+          "end": 44.926,
+          "score": 0.944
+        },
+        {
+          "word": "Eu",
+          "start": 45.386,
+          "end": 45.466,
+          "score": 0.996
+        },
+        {
+          "word": "sentindo",
+          "start": 45.526,
+          "end": 45.906,
+          "score": 0.907
+        },
+        {
+          "word": "o",
+          "start": 45.926,
+          "end": 45.966,
+          "score": 0.524
+        },
+        {
+          "word": "teu",
+          "start": 46.046,
+          "end": 46.206,
+          "score": 0.84
+        },
+        {
+          "word": "calor",
+          "start": 46.286,
+          "end": 47.067,
+          "score": 0.884
+        },
+        {
+          "word": "Sem",
+          "start": 47.427,
+          "end": 47.507,
+          "score": 0.749
+        },
+        {
+          "word": "medo",
+          "start": 47.547,
+          "end": 47.747,
+          "score": 0.821
+        },
+        {
+          "word": "de",
+          "start": 47.767,
+          "end": 47.847,
+          "score": 0.978
+        },
+        {
+          "word": "ser",
+          "start": 47.967,
+          "end": 48.207,
+          "score": 0.797
+        },
+        {
+          "word": "feliz,",
+          "start": 48.287,
+          "end": 48.648,
+          "score": 0.508
+        },
+        {
+          "word": "tô",
+          "start": 48.668,
+          "end": 48.728,
+          "score": 0.252
+        },
+        {
+          "word": "com",
+          "start": 48.788,
+          "end": 48.888,
+          "score": 0.313
+        },
+        {
+          "word": "o",
+          "start": 48.948,
+          "end": 48.988,
+          "score": 0.844
+        },
+        {
+          "word": "coração",
+          "start": 49.028,
+          "end": 49.608,
+          "score": 0.881
+        },
+        {
+          "word": "aberto",
+          "start": 49.688,
+          "end": 50.308,
+          "score": 0.959
+        },
+        {
+          "word": "Com",
+          "start": 50.829,
+          "end": 50.989,
+          "score": 0.585
+        },
+        {
+          "word": "você",
+          "start": 51.029,
+          "end": 51.369,
+          "score": 0.9
+        },
+        {
+          "word": "eu",
+          "start": 51.409,
+          "end": 51.449,
+          "score": 0.024
+        },
+        {
+          "word": "tô",
+          "start": 51.529,
+          "end": 51.669,
+          "score": 0.426
+        },
+        {
+          "word": "esperto,",
+          "start": 51.729,
+          "end": 52.149,
+          "score": 0.716
+        },
+        {
+          "word": "já",
+          "start": 52.229,
+          "end": 52.369,
+          "score": 0.651
+        },
+        {
+          "word": "me",
+          "start": 52.409,
+          "end": 52.489,
+          "score": 0.696
+        },
+        {
+          "word": "acostumei",
+          "start": 52.509,
+          "end": 53.05,
+          "score": 0.557
+        },
+        {
+          "word": "com",
+          "start": 53.07,
+          "end": 53.17,
+          "score": 0.465
+        },
+        {
+          "word": "seu",
+          "start": 53.25,
+          "end": 53.37,
+          "score": 0.914
+        },
+        {
+          "word": "jeitinho",
+          "start": 53.41,
+          "end": 53.89,
+          "score": 0.694
+        },
+        {
+          "word": "De",
+          "start": 53.93,
+          "end": 54.01,
+          "score": 0.93
+        },
+        {
+          "word": "falar",
+          "start": 54.09,
+          "end": 54.43,
+          "score": 0.748
+        },
+        {
+          "word": "no",
+          "start": 54.45,
+          "end": 54.53,
+          "score": 0.724
+        },
+        {
+          "word": "telefone,",
+          "start": 54.61,
+          "end": 55.251,
+          "score": 0.798
+        },
+        {
+          "word": "descerias",
+          "start": 55.331,
+          "end": 55.991,
+          "score": 0.729
+        },
+        {
+          "word": "pra",
+          "start": 56.031,
+          "end": 56.191,
+          "score": 0.275
+        },
+        {
+          "word": "me",
+          "start": 56.211,
+          "end": 56.291,
+          "score": 0.483
+        },
+        {
+          "word": "provocar",
+          "start": 56.351,
+          "end": 57.211,
+          "score": 0.843
+        },
+        {
+          "word": "Quando",
+          "start": 57.692,
+          "end": 57.892,
+          "score": 0.859
+        },
+        {
+          "word": "eu",
+          "start": 57.912,
+          "end": 57.972,
+          "score": 0.215
+        },
+        {
+          "word": "te",
+          "start": 58.012,
+          "end": 58.072,
+          "score": 0.525
+        },
+        {
+          "word": "pego,",
+          "start": 58.172,
+          "end": 58.412,
+          "score": 0.392
+        },
+        {
+          "word": "você",
+          "start": 58.432,
+          "end": 58.592,
+          "score": 0.274
+        },
+        {
+          "word": "tá",
+          "start": 58.672,
+          "end": 58.792,
+          "score": 0.768
+        },
+        {
+          "word": "perdido,",
+          "start": 58.852,
+          "end": 59.272,
+          "score": 0.734
+        },
+        {
+          "word": "eu",
+          "start": 59.292,
+          "end": 59.332,
+          "score": 0.006
+        },
+        {
+          "word": "vou",
+          "start": 59.372,
+          "end": 59.472,
+          "score": 0.317
+        },
+        {
+          "word": "se",
+          "start": 59.533,
+          "end": 59.673,
+          "score": 0.806
+        },
+        {
+          "word": "arrepender",
+          "start": 59.753,
+          "end": 60.193,
+          "score": 0.525
+        },
+        {
+          "word": "de",
+          "start": 60.233,
+          "end": 60.273,
+          "score": 0.403
+        },
+        {
+          "word": "um",
+          "start": 60.313,
+          "end": 60.353,
+          "score": 0.703
+        },
+        {
+          "word": "dia",
+          "start": 60.413,
+          "end": 60.693,
+          "score": 0.761
+        },
+        {
+          "word": "Ter",
+          "start": 60.753,
+          "end": 60.893,
+          "score": 0.716
+        },
+        {
+          "word": "me",
+          "start": 60.913,
+          "end": 61.013,
+          "score": 0.664
+        },
+        {
+          "word": "tirado",
+          "start": 61.073,
+          "end": 61.533,
+          "score": 0.896
+        },
+        {
+          "word": "do",
+          "start": 61.593,
+          "end": 61.693,
+          "score": 0.832
+        },
+        {
+          "word": "meu",
+          "start": 61.754,
+          "end": 61.914,
+          "score": 1.0
+        },
+        {
+          "word": "lugar",
+          "start": 61.954,
+          "end": 62.594,
+          "score": 0.995
+        }
+      ]
+    },
+    {
+      "text": " Peço, por favor, não se apaixone, pois não sou aquele homem que um dia ao seu pai sonhou. Eu só tenho cara de santinho, sempre faço conjeitinho, coitadates quem acredito. Ei, eu, prometo que te dá carinho. Vem, faz nosso descenso, assim, o livre pra voar. Quem sabe, quem sabe o outro dia a gente possa se encontrar de novo. Eu, prometo que te dá carinho. Faz nosso descenso, assim, o livre pra voar.",
+      "start": 63.106,
+      "end": 92.51,
+      "avg_logprob": -0.2522101587608081,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Peço,",
+          "start": 63.146,
+          "end": 63.386,
+          "score": 0.541
+        },
+        {
+          "word": "por",
+          "start": 63.426,
+          "end": 63.566,
+          "score": 0.737
+        },
+        {
+          "word": "favor,",
+          "start": 63.626,
+          "end": 63.927,
+          "score": 0.961
+        },
+        {
+          "word": "não",
+          "start": 63.967,
+          "end": 64.067,
+          "score": 0.767
+        },
+        {
+          "word": "se",
+          "start": 64.107,
+          "end": 64.187,
+          "score": 0.765
+        },
+        {
+          "word": "apaixone,",
+          "start": 64.227,
+          "end": 64.747,
+          "score": 0.823
+        },
+        {
+          "word": "pois",
+          "start": 64.807,
+          "end": 64.968,
+          "score": 0.918
+        },
+        {
+          "word": "não",
+          "start": 64.988,
+          "end": 65.108,
+          "score": 0.764
+        },
+        {
+          "word": "sou",
+          "start": 65.188,
+          "end": 65.368,
+          "score": 0.802
+        },
+        {
+          "word": "aquele",
+          "start": 65.428,
+          "end": 65.868,
+          "score": 0.801
+        },
+        {
+          "word": "homem",
+          "start": 65.888,
+          "end": 66.108,
+          "score": 0.518
+        },
+        {
+          "word": "que",
+          "start": 66.189,
+          "end": 66.409,
+          "score": 0.742
+        },
+        {
+          "word": "um",
+          "start": 66.429,
+          "end": 66.469,
+          "score": 0.135
+        },
+        {
+          "word": "dia",
+          "start": 66.529,
+          "end": 66.769,
+          "score": 0.826
+        },
+        {
+          "word": "ao",
+          "start": 66.849,
+          "end": 66.929,
+          "score": 0.77
+        },
+        {
+          "word": "seu",
+          "start": 67.009,
+          "end": 67.129,
+          "score": 0.993
+        },
+        {
+          "word": "pai",
+          "start": 67.209,
+          "end": 67.49,
+          "score": 0.817
+        },
+        {
+          "word": "sonhou.",
+          "start": 67.57,
+          "end": 68.17,
+          "score": 0.746
+        },
+        {
+          "word": "Eu",
+          "start": 68.59,
+          "end": 68.671,
+          "score": 0.695
+        },
+        {
+          "word": "só",
+          "start": 68.731,
+          "end": 68.811,
+          "score": 1.0
+        },
+        {
+          "word": "tenho",
+          "start": 68.891,
+          "end": 69.151,
+          "score": 0.735
+        },
+        {
+          "word": "cara",
+          "start": 69.251,
+          "end": 69.491,
+          "score": 0.868
+        },
+        {
+          "word": "de",
+          "start": 69.571,
+          "end": 69.671,
+          "score": 0.893
+        },
+        {
+          "word": "santinho,",
+          "start": 69.751,
+          "end": 70.212,
+          "score": 0.849
+        },
+        {
+          "word": "sempre",
+          "start": 70.272,
+          "end": 70.532,
+          "score": 0.783
+        },
+        {
+          "word": "faço",
+          "start": 70.612,
+          "end": 70.892,
+          "score": 0.57
+        },
+        {
+          "word": "conjeitinho,",
+          "start": 70.932,
+          "end": 71.573,
+          "score": 0.789
+        },
+        {
+          "word": "coitadates",
+          "start": 71.613,
+          "end": 72.273,
+          "score": 0.721
+        },
+        {
+          "word": "quem",
+          "start": 72.314,
+          "end": 72.494,
+          "score": 0.69
+        },
+        {
+          "word": "acredito.",
+          "start": 72.554,
+          "end": 73.835,
+          "score": 0.897
+        },
+        {
+          "word": "Ei,",
+          "start": 74.095,
+          "end": 74.315,
+          "score": 0.31
+        },
+        {
+          "word": "eu,",
+          "start": 74.756,
+          "end": 74.956,
+          "score": 0.558
+        },
+        {
+          "word": "prometo",
+          "start": 75.376,
+          "end": 75.816,
+          "score": 0.703
+        },
+        {
+          "word": "que",
+          "start": 75.876,
+          "end": 75.977,
+          "score": 0.237
+        },
+        {
+          "word": "te",
+          "start": 76.077,
+          "end": 76.157,
+          "score": 0.444
+        },
+        {
+          "word": "dá",
+          "start": 76.297,
+          "end": 76.357,
+          "score": 0.21
+        },
+        {
+          "word": "carinho.",
+          "start": 76.437,
+          "end": 77.218,
+          "score": 0.843
+        },
+        {
+          "word": "Vem,",
+          "start": 77.278,
+          "end": 77.738,
+          "score": 0.867
+        },
+        {
+          "word": "faz",
+          "start": 78.118,
+          "end": 78.278,
+          "score": 0.579
+        },
+        {
+          "word": "nosso",
+          "start": 78.298,
+          "end": 78.579,
+          "score": 0.5
+        },
+        {
+          "word": "descenso,",
+          "start": 78.619,
+          "end": 79.379,
+          "score": 0.837
+        },
+        {
+          "word": "assim,",
+          "start": 79.399,
+          "end": 79.74,
+          "score": 0.59
+        },
+        {
+          "word": "o",
+          "start": 79.78,
+          "end": 79.82,
+          "score": 0.856
+        },
+        {
+          "word": "livre",
+          "start": 79.88,
+          "end": 80.1,
+          "score": 0.881
+        },
+        {
+          "word": "pra",
+          "start": 80.2,
+          "end": 80.36,
+          "score": 0.726
+        },
+        {
+          "word": "voar.",
+          "start": 80.42,
+          "end": 80.881,
+          "score": 0.577
+        },
+        {
+          "word": "Quem",
+          "start": 81.041,
+          "end": 81.201,
+          "score": 0.814
+        },
+        {
+          "word": "sabe,",
+          "start": 81.281,
+          "end": 81.761,
+          "score": 0.98
+        },
+        {
+          "word": "quem",
+          "start": 82.061,
+          "end": 82.162,
+          "score": 0.255
+        },
+        {
+          "word": "sabe",
+          "start": 82.242,
+          "end": 82.522,
+          "score": 0.986
+        },
+        {
+          "word": "o",
+          "start": 82.542,
+          "end": 82.562,
+          "score": 0.006
+        },
+        {
+          "word": "outro",
+          "start": 82.602,
+          "end": 82.902,
+          "score": 0.348
+        },
+        {
+          "word": "dia",
+          "start": 82.962,
+          "end": 83.162,
+          "score": 0.276
+        },
+        {
+          "word": "a",
+          "start": 83.182,
+          "end": 83.222,
+          "score": 0.63
+        },
+        {
+          "word": "gente",
+          "start": 83.262,
+          "end": 83.483,
+          "score": 0.98
+        },
+        {
+          "word": "possa",
+          "start": 83.623,
+          "end": 83.843,
+          "score": 0.758
+        },
+        {
+          "word": "se",
+          "start": 83.963,
+          "end": 84.063,
+          "score": 0.818
+        },
+        {
+          "word": "encontrar",
+          "start": 84.083,
+          "end": 84.604,
+          "score": 0.675
+        },
+        {
+          "word": "de",
+          "start": 84.664,
+          "end": 84.864,
+          "score": 0.853
+        },
+        {
+          "word": "novo.",
+          "start": 85.004,
+          "end": 85.464,
+          "score": 0.765
+        },
+        {
+          "word": "Eu,",
+          "start": 85.564,
+          "end": 85.885,
+          "score": 0.77
+        },
+        {
+          "word": "prometo",
+          "start": 86.345,
+          "end": 86.745,
+          "score": 0.767
+        },
+        {
+          "word": "que",
+          "start": 86.765,
+          "end": 86.825,
+          "score": 0.015
+        },
+        {
+          "word": "te",
+          "start": 86.865,
+          "end": 86.945,
+          "score": 0.814
+        },
+        {
+          "word": "dá",
+          "start": 86.985,
+          "end": 87.026,
+          "score": 0.004
+        },
+        {
+          "word": "carinho.",
+          "start": 87.066,
+          "end": 87.506,
+          "score": 0.389
+        },
+        {
+          "word": "Faz",
+          "start": 89.147,
+          "end": 89.267,
+          "score": 0.467
+        },
+        {
+          "word": "nosso",
+          "start": 89.307,
+          "end": 89.588,
+          "score": 0.5
+        },
+        {
+          "word": "descenso,",
+          "start": 89.628,
+          "end": 90.288,
+          "score": 0.764
+        },
+        {
+          "word": "assim,",
+          "start": 90.388,
+          "end": 90.729,
+          "score": 0.73
+        },
+        {
+          "word": "o",
+          "start": 90.769,
+          "end": 90.809,
+          "score": 0.16
+        },
+        {
+          "word": "livre",
+          "start": 90.869,
+          "end": 91.109,
+          "score": 0.585
+        },
+        {
+          "word": "pra",
+          "start": 91.189,
+          "end": 91.329,
+          "score": 0.702
+        },
+        {
+          "word": "voar.",
+          "start": 91.389,
+          "end": 92.51,
+          "score": 0.68
+        }
+      ]
+    },
+    {
+      "text": " Quem sabe o outro dia? Vamos juntos, palma da mão! Vamos juntos, palma da mão!",
+      "start": 93.026,
+      "end": 116.638,
+      "avg_logprob": -0.4470340039419091,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Quem",
+          "start": 93.066,
+          "end": 93.206,
+          "score": 0.318
+        },
+        {
+          "word": "sabe",
+          "start": 93.226,
+          "end": 93.466,
+          "score": 0.881
+        },
+        {
+          "word": "o",
+          "start": 93.486,
+          "end": 93.506,
+          "score": 0.106
+        },
+        {
+          "word": "outro",
+          "start": 93.606,
+          "end": 93.846,
+          "score": 0.637
+        },
+        {
+          "word": "dia?",
+          "start": 93.886,
+          "end": 94.507,
+          "score": 0.778
+        },
+        {
+          "word": "Vamos",
+          "start": 94.607,
+          "end": 95.067,
+          "score": 0.561
+        },
+        {
+          "word": "juntos,",
+          "start": 95.107,
+          "end": 96.888,
+          "score": 0.783
+        },
+        {
+          "word": "palma",
+          "start": 97.388,
+          "end": 97.848,
+          "score": 0.689
+        },
+        {
+          "word": "da",
+          "start": 100.29,
+          "end": 100.73,
+          "score": 0.666
+        },
+        {
+          "word": "mão!",
+          "start": 100.81,
+          "end": 103.872,
+          "score": 0.824
+        },
+        {
+          "word": "Vamos",
+          "start": 104.592,
+          "end": 104.892,
+          "score": 0.606
+        },
+        {
+          "word": "juntos,",
+          "start": 104.912,
+          "end": 105.552,
+          "score": 0.618
+        },
+        {
+          "word": "palma",
+          "start": 105.632,
+          "end": 106.053,
+          "score": 0.664
+        },
+        {
+          "word": "da",
+          "start": 106.093,
+          "end": 106.213,
+          "score": 0.726
+        },
+        {
+          "word": "mão!",
+          "start": 106.273,
+          "end": 106.573,
+          "score": 0.588
+        }
+      ]
+    },
+    {
+      "text": " Quando a gente se encontra, tudo vai ser tão perfeito Eu quero te curtir demais, e eu vou alívia Esse aperto no meu peito, que vontade não dá mais Se no telefone é bom, imagine que vem perto Eu sentindo o teu calor, sem medo de ser feliz Tô com coração aberto Com você eu tô esperto já, me acostumei com seu jeitinho Que falar no telefone, besteirinhas pra me provocar",
+      "start": 118.37,
+      "end": 144.926,
+      "avg_logprob": -0.16467280853159574,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Quando",
+          "start": 118.39,
+          "end": 118.65,
+          "score": 0.776
+        },
+        {
+          "word": "a",
+          "start": 118.69,
+          "end": 118.73,
+          "score": 0.775
+        },
+        {
+          "word": "gente",
+          "start": 118.77,
+          "end": 119.03,
+          "score": 0.944
+        },
+        {
+          "word": "se",
+          "start": 119.13,
+          "end": 119.351,
+          "score": 0.96
+        },
+        {
+          "word": "encontra,",
+          "start": 119.371,
+          "end": 119.831,
+          "score": 0.64
+        },
+        {
+          "word": "tudo",
+          "start": 119.951,
+          "end": 120.131,
+          "score": 0.804
+        },
+        {
+          "word": "vai",
+          "start": 120.171,
+          "end": 120.271,
+          "score": 0.469
+        },
+        {
+          "word": "ser",
+          "start": 120.311,
+          "end": 120.411,
+          "score": 0.627
+        },
+        {
+          "word": "tão",
+          "start": 120.491,
+          "end": 120.671,
+          "score": 0.751
+        },
+        {
+          "word": "perfeito",
+          "start": 120.791,
+          "end": 121.532,
+          "score": 0.955
+        },
+        {
+          "word": "Eu",
+          "start": 121.852,
+          "end": 121.932,
+          "score": 0.765
+        },
+        {
+          "word": "quero",
+          "start": 121.992,
+          "end": 122.252,
+          "score": 0.879
+        },
+        {
+          "word": "te",
+          "start": 122.332,
+          "end": 122.412,
+          "score": 0.902
+        },
+        {
+          "word": "curtir",
+          "start": 122.472,
+          "end": 122.853,
+          "score": 0.904
+        },
+        {
+          "word": "demais,",
+          "start": 122.933,
+          "end": 123.873,
+          "score": 0.887
+        },
+        {
+          "word": "e",
+          "start": 124.093,
+          "end": 124.133,
+          "score": 0.778
+        },
+        {
+          "word": "eu",
+          "start": 124.153,
+          "end": 124.254,
+          "score": 0.55
+        },
+        {
+          "word": "vou",
+          "start": 124.294,
+          "end": 124.394,
+          "score": 0.395
+        },
+        {
+          "word": "alívia",
+          "start": 124.414,
+          "end": 125.174,
+          "score": 0.819
+        },
+        {
+          "word": "Esse",
+          "start": 125.414,
+          "end": 125.554,
+          "score": 0.885
+        },
+        {
+          "word": "aperto",
+          "start": 125.574,
+          "end": 125.935,
+          "score": 0.848
+        },
+        {
+          "word": "no",
+          "start": 126.055,
+          "end": 126.155,
+          "score": 0.944
+        },
+        {
+          "word": "meu",
+          "start": 126.215,
+          "end": 126.335,
+          "score": 0.96
+        },
+        {
+          "word": "peito,",
+          "start": 126.415,
+          "end": 126.975,
+          "score": 0.98
+        },
+        {
+          "word": "que",
+          "start": 127.395,
+          "end": 127.516,
+          "score": 0.876
+        },
+        {
+          "word": "vontade",
+          "start": 127.596,
+          "end": 127.996,
+          "score": 0.893
+        },
+        {
+          "word": "não",
+          "start": 128.096,
+          "end": 128.356,
+          "score": 0.802
+        },
+        {
+          "word": "dá",
+          "start": 128.416,
+          "end": 128.556,
+          "score": 0.862
+        },
+        {
+          "word": "mais",
+          "start": 128.616,
+          "end": 129.116,
+          "score": 0.526
+        },
+        {
+          "word": "Se",
+          "start": 129.437,
+          "end": 129.517,
+          "score": 0.766
+        },
+        {
+          "word": "no",
+          "start": 129.537,
+          "end": 129.617,
+          "score": 0.956
+        },
+        {
+          "word": "telefone",
+          "start": 129.657,
+          "end": 130.277,
+          "score": 0.936
+        },
+        {
+          "word": "é",
+          "start": 130.297,
+          "end": 130.317,
+          "score": 0.015
+        },
+        {
+          "word": "bom,",
+          "start": 130.457,
+          "end": 130.637,
+          "score": 0.798
+        },
+        {
+          "word": "imagine",
+          "start": 130.838,
+          "end": 131.218,
+          "score": 0.915
+        },
+        {
+          "word": "que",
+          "start": 131.318,
+          "end": 131.498,
+          "score": 0.835
+        },
+        {
+          "word": "vem",
+          "start": 131.518,
+          "end": 131.678,
+          "score": 0.628
+        },
+        {
+          "word": "perto",
+          "start": 131.778,
+          "end": 132.338,
+          "score": 0.994
+        },
+        {
+          "word": "Eu",
+          "start": 132.879,
+          "end": 132.959,
+          "score": 0.882
+        },
+        {
+          "word": "sentindo",
+          "start": 133.019,
+          "end": 133.399,
+          "score": 0.887
+        },
+        {
+          "word": "o",
+          "start": 133.419,
+          "end": 133.439,
+          "score": 0.008
+        },
+        {
+          "word": "teu",
+          "start": 133.499,
+          "end": 133.659,
+          "score": 0.908
+        },
+        {
+          "word": "calor,",
+          "start": 133.739,
+          "end": 134.6,
+          "score": 0.781
+        },
+        {
+          "word": "sem",
+          "start": 134.9,
+          "end": 134.98,
+          "score": 0.789
+        },
+        {
+          "word": "medo",
+          "start": 135.0,
+          "end": 135.2,
+          "score": 0.808
+        },
+        {
+          "word": "de",
+          "start": 135.24,
+          "end": 135.3,
+          "score": 0.953
+        },
+        {
+          "word": "ser",
+          "start": 135.4,
+          "end": 135.64,
+          "score": 0.921
+        },
+        {
+          "word": "feliz",
+          "start": 135.7,
+          "end": 136.161,
+          "score": 0.748
+        },
+        {
+          "word": "Tô",
+          "start": 136.201,
+          "end": 136.301,
+          "score": 0.532
+        },
+        {
+          "word": "com",
+          "start": 136.341,
+          "end": 136.421,
+          "score": 0.495
+        },
+        {
+          "word": "coração",
+          "start": 136.461,
+          "end": 137.021,
+          "score": 0.751
+        },
+        {
+          "word": "aberto",
+          "start": 137.101,
+          "end": 137.782,
+          "score": 0.927
+        },
+        {
+          "word": "Com",
+          "start": 138.242,
+          "end": 138.402,
+          "score": 0.613
+        },
+        {
+          "word": "você",
+          "start": 138.442,
+          "end": 138.802,
+          "score": 0.871
+        },
+        {
+          "word": "eu",
+          "start": 138.822,
+          "end": 138.862,
+          "score": 0.002
+        },
+        {
+          "word": "tô",
+          "start": 138.962,
+          "end": 139.102,
+          "score": 0.315
+        },
+        {
+          "word": "esperto",
+          "start": 139.163,
+          "end": 139.543,
+          "score": 0.883
+        },
+        {
+          "word": "já,",
+          "start": 139.623,
+          "end": 139.763,
+          "score": 0.629
+        },
+        {
+          "word": "me",
+          "start": 139.783,
+          "end": 139.883,
+          "score": 0.666
+        },
+        {
+          "word": "acostumei",
+          "start": 139.903,
+          "end": 140.443,
+          "score": 0.844
+        },
+        {
+          "word": "com",
+          "start": 140.463,
+          "end": 140.583,
+          "score": 0.572
+        },
+        {
+          "word": "seu",
+          "start": 140.623,
+          "end": 140.763,
+          "score": 0.886
+        },
+        {
+          "word": "jeitinho",
+          "start": 140.804,
+          "end": 141.284,
+          "score": 0.825
+        },
+        {
+          "word": "Que",
+          "start": 141.324,
+          "end": 141.404,
+          "score": 0.722
+        },
+        {
+          "word": "falar",
+          "start": 141.484,
+          "end": 141.804,
+          "score": 0.798
+        },
+        {
+          "word": "no",
+          "start": 141.844,
+          "end": 141.924,
+          "score": 0.675
+        },
+        {
+          "word": "telefone,",
+          "start": 141.984,
+          "end": 142.645,
+          "score": 0.81
+        },
+        {
+          "word": "besteirinhas",
+          "start": 142.685,
+          "end": 143.265,
+          "score": 0.615
+        },
+        {
+          "word": "pra",
+          "start": 143.345,
+          "end": 143.505,
+          "score": 0.662
+        },
+        {
+          "word": "me",
+          "start": 143.525,
+          "end": 143.645,
+          "score": 0.496
+        },
+        {
+          "word": "provocar",
+          "start": 143.705,
+          "end": 144.546,
+          "score": 0.873
+        }
+      ]
+    },
+    {
+      "text": " Quando eu te pegar, se tá perdida Vai se arrepender de um dia Ter me tirado do meu lugar Peço por favor, não se apaixone Pois não sou aquele homem Que um dia ao seu faz sonhão Eu faço com jeitinho, gostoso Coitada de quem acreditou, não é frão! Eu prometo te dar carinho Mas eu sou de senso, assim, um livre pra quem sabe um outro dia De novo",
+      "start": 145.026,
+      "end": 173.31,
+      "avg_logprob": -0.2718214389620995,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Quando",
+          "start": 145.066,
+          "end": 145.266,
+          "score": 0.798
+        },
+        {
+          "word": "eu",
+          "start": 145.286,
+          "end": 145.326,
+          "score": 0.802
+        },
+        {
+          "word": "te",
+          "start": 145.366,
+          "end": 145.446,
+          "score": 0.958
+        },
+        {
+          "word": "pegar,",
+          "start": 145.546,
+          "end": 145.827,
+          "score": 0.585
+        },
+        {
+          "word": "se",
+          "start": 145.887,
+          "end": 145.967,
+          "score": 0.768
+        },
+        {
+          "word": "tá",
+          "start": 146.047,
+          "end": 146.207,
+          "score": 0.798
+        },
+        {
+          "word": "perdida",
+          "start": 146.247,
+          "end": 146.687,
+          "score": 0.842
+        },
+        {
+          "word": "Vai",
+          "start": 146.727,
+          "end": 146.848,
+          "score": 0.646
+        },
+        {
+          "word": "se",
+          "start": 146.908,
+          "end": 146.968,
+          "score": 0.572
+        },
+        {
+          "word": "arrepender",
+          "start": 146.988,
+          "end": 147.548,
+          "score": 0.748
+        },
+        {
+          "word": "de",
+          "start": 147.568,
+          "end": 147.628,
+          "score": 0.747
+        },
+        {
+          "word": "um",
+          "start": 147.668,
+          "end": 147.708,
+          "score": 0.641
+        },
+        {
+          "word": "dia",
+          "start": 147.768,
+          "end": 147.989,
+          "score": 0.652
+        },
+        {
+          "word": "Ter",
+          "start": 148.109,
+          "end": 148.229,
+          "score": 0.499
+        },
+        {
+          "word": "me",
+          "start": 148.269,
+          "end": 148.369,
+          "score": 0.789
+        },
+        {
+          "word": "tirado",
+          "start": 148.449,
+          "end": 148.889,
+          "score": 0.892
+        },
+        {
+          "word": "do",
+          "start": 148.949,
+          "end": 149.049,
+          "score": 0.778
+        },
+        {
+          "word": "meu",
+          "start": 149.109,
+          "end": 149.29,
+          "score": 0.836
+        },
+        {
+          "word": "lugar",
+          "start": 149.31,
+          "end": 149.99,
+          "score": 0.925
+        },
+        {
+          "word": "Peço",
+          "start": 150.491,
+          "end": 150.751,
+          "score": 0.818
+        },
+        {
+          "word": "por",
+          "start": 150.811,
+          "end": 150.931,
+          "score": 0.823
+        },
+        {
+          "word": "favor,",
+          "start": 150.971,
+          "end": 151.311,
+          "score": 1.0
+        },
+        {
+          "word": "não",
+          "start": 151.331,
+          "end": 151.431,
+          "score": 0.686
+        },
+        {
+          "word": "se",
+          "start": 151.491,
+          "end": 151.552,
+          "score": 0.818
+        },
+        {
+          "word": "apaixone",
+          "start": 151.592,
+          "end": 152.112,
+          "score": 0.829
+        },
+        {
+          "word": "Pois",
+          "start": 152.172,
+          "end": 152.352,
+          "score": 0.729
+        },
+        {
+          "word": "não",
+          "start": 152.372,
+          "end": 152.472,
+          "score": 0.315
+        },
+        {
+          "word": "sou",
+          "start": 152.572,
+          "end": 152.733,
+          "score": 0.734
+        },
+        {
+          "word": "aquele",
+          "start": 152.773,
+          "end": 153.033,
+          "score": 0.908
+        },
+        {
+          "word": "homem",
+          "start": 153.093,
+          "end": 153.393,
+          "score": 0.693
+        },
+        {
+          "word": "Que",
+          "start": 153.653,
+          "end": 153.753,
+          "score": 0.702
+        },
+        {
+          "word": "um",
+          "start": 153.793,
+          "end": 153.833,
+          "score": 0.422
+        },
+        {
+          "word": "dia",
+          "start": 153.894,
+          "end": 154.094,
+          "score": 0.783
+        },
+        {
+          "word": "ao",
+          "start": 154.154,
+          "end": 154.254,
+          "score": 0.442
+        },
+        {
+          "word": "seu",
+          "start": 154.334,
+          "end": 154.474,
+          "score": 0.855
+        },
+        {
+          "word": "faz",
+          "start": 154.554,
+          "end": 154.834,
+          "score": 0.699
+        },
+        {
+          "word": "sonhão",
+          "start": 154.914,
+          "end": 155.515,
+          "score": 0.752
+        },
+        {
+          "word": "Eu",
+          "start": 156.095,
+          "end": 156.155,
+          "score": 0.998
+        },
+        {
+          "word": "faço",
+          "start": 156.215,
+          "end": 156.496,
+          "score": 0.874
+        },
+        {
+          "word": "com",
+          "start": 156.616,
+          "end": 156.696,
+          "score": 0.444
+        },
+        {
+          "word": "jeitinho,",
+          "start": 156.736,
+          "end": 157.356,
+          "score": 0.782
+        },
+        {
+          "word": "gostoso",
+          "start": 157.396,
+          "end": 158.137,
+          "score": 0.797
+        },
+        {
+          "word": "Coitada",
+          "start": 158.718,
+          "end": 159.218,
+          "score": 0.767
+        },
+        {
+          "word": "de",
+          "start": 159.258,
+          "end": 159.338,
+          "score": 0.766
+        },
+        {
+          "word": "quem",
+          "start": 159.418,
+          "end": 159.578,
+          "score": 0.369
+        },
+        {
+          "word": "acreditou,",
+          "start": 159.598,
+          "end": 160.099,
+          "score": 0.492
+        },
+        {
+          "word": "não",
+          "start": 160.279,
+          "end": 160.379,
+          "score": 0.355
+        },
+        {
+          "word": "é",
+          "start": 160.459,
+          "end": 160.519,
+          "score": 0.666
+        },
+        {
+          "word": "frão!",
+          "start": 160.579,
+          "end": 161.1,
+          "score": 0.665
+        },
+        {
+          "word": "Eu",
+          "start": 162.1,
+          "end": 162.361,
+          "score": 0.564
+        },
+        {
+          "word": "prometo",
+          "start": 162.661,
+          "end": 163.081,
+          "score": 0.843
+        },
+        {
+          "word": "te",
+          "start": 163.141,
+          "end": 163.241,
+          "score": 0.745
+        },
+        {
+          "word": "dar",
+          "start": 163.342,
+          "end": 163.622,
+          "score": 0.776
+        },
+        {
+          "word": "carinho",
+          "start": 163.702,
+          "end": 164.763,
+          "score": 0.848
+        },
+        {
+          "word": "Mas",
+          "start": 165.343,
+          "end": 165.523,
+          "score": 0.94
+        },
+        {
+          "word": "eu",
+          "start": 165.543,
+          "end": 165.643,
+          "score": 0.424
+        },
+        {
+          "word": "sou",
+          "start": 165.704,
+          "end": 165.844,
+          "score": 0.449
+        },
+        {
+          "word": "de",
+          "start": 165.864,
+          "end": 165.924,
+          "score": 0.958
+        },
+        {
+          "word": "senso,",
+          "start": 166.064,
+          "end": 166.544,
+          "score": 0.857
+        },
+        {
+          "word": "assim,",
+          "start": 166.624,
+          "end": 166.945,
+          "score": 0.773
+        },
+        {
+          "word": "um",
+          "start": 166.985,
+          "end": 167.045,
+          "score": 0.971
+        },
+        {
+          "word": "livre",
+          "start": 167.085,
+          "end": 167.345,
+          "score": 0.902
+        },
+        {
+          "word": "pra",
+          "start": 167.425,
+          "end": 167.585,
+          "score": 0.369
+        },
+        {
+          "word": "quem",
+          "start": 167.905,
+          "end": 168.046,
+          "score": 0.617
+        },
+        {
+          "word": "sabe",
+          "start": 168.106,
+          "end": 168.346,
+          "score": 0.726
+        },
+        {
+          "word": "um",
+          "start": 168.386,
+          "end": 168.466,
+          "score": 0.258
+        },
+        {
+          "word": "outro",
+          "start": 168.526,
+          "end": 168.726,
+          "score": 0.836
+        },
+        {
+          "word": "dia",
+          "start": 168.786,
+          "end": 170.267,
+          "score": 1.0
+        },
+        {
+          "word": "De",
+          "start": 171.849,
+          "end": 172.069,
+          "score": 0.832
+        },
+        {
+          "word": "novo",
+          "start": 172.209,
+          "end": 172.629,
+          "score": 0.888
+        }
+      ]
+    },
+    {
+      "text": " Prometo te dar carinho Mas eu sou de ser sozinho, livre pra voar Quem sabe? Quem sabe? Quem sabe outro dia a gente possa se encontrar Eu! Prometo te dar carinho, carinho Mas eu sou de ser sozinho, livre pra voar Quem sabe outro dia a gente possa se encontrar de novo Prometo te dar carinho Mas eu sou de ser sozinho, livre pra voar",
+      "start": 173.474,
+      "end": 201.406,
+      "avg_logprob": -0.12950395332293563,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Prometo",
+          "start": 173.514,
+          "end": 173.934,
+          "score": 0.751
+        },
+        {
+          "word": "te",
+          "start": 173.994,
+          "end": 174.054,
+          "score": 0.324
+        },
+        {
+          "word": "dar",
+          "start": 174.194,
+          "end": 174.514,
+          "score": 0.736
+        },
+        {
+          "word": "carinho",
+          "start": 174.534,
+          "end": 175.715,
+          "score": 0.765
+        },
+        {
+          "word": "Mas",
+          "start": 176.235,
+          "end": 176.375,
+          "score": 0.999
+        },
+        {
+          "word": "eu",
+          "start": 176.395,
+          "end": 176.495,
+          "score": 0.523
+        },
+        {
+          "word": "sou",
+          "start": 176.575,
+          "end": 176.695,
+          "score": 0.61
+        },
+        {
+          "word": "de",
+          "start": 176.715,
+          "end": 176.795,
+          "score": 0.86
+        },
+        {
+          "word": "ser",
+          "start": 176.915,
+          "end": 177.176,
+          "score": 0.568
+        },
+        {
+          "word": "sozinho,",
+          "start": 177.256,
+          "end": 177.896,
+          "score": 0.683
+        },
+        {
+          "word": "livre",
+          "start": 177.936,
+          "end": 178.236,
+          "score": 0.615
+        },
+        {
+          "word": "pra",
+          "start": 178.276,
+          "end": 178.616,
+          "score": 0.771
+        },
+        {
+          "word": "voar",
+          "start": 178.656,
+          "end": 178.736,
+          "score": 0.045
+        },
+        {
+          "word": "Quem",
+          "start": 178.776,
+          "end": 178.916,
+          "score": 0.746
+        },
+        {
+          "word": "sabe?",
+          "start": 179.016,
+          "end": 179.377,
+          "score": 0.948
+        },
+        {
+          "word": "Quem",
+          "start": 179.417,
+          "end": 179.577,
+          "score": 0.735
+        },
+        {
+          "word": "sabe?",
+          "start": 179.677,
+          "end": 180.357,
+          "score": 0.828
+        },
+        {
+          "word": "Quem",
+          "start": 180.517,
+          "end": 180.657,
+          "score": 0.19
+        },
+        {
+          "word": "sabe",
+          "start": 180.677,
+          "end": 180.797,
+          "score": 0.237
+        },
+        {
+          "word": "outro",
+          "start": 180.897,
+          "end": 180.997,
+          "score": 0.145
+        },
+        {
+          "word": "dia",
+          "start": 181.037,
+          "end": 181.277,
+          "score": 0.749
+        },
+        {
+          "word": "a",
+          "start": 181.297,
+          "end": 181.317,
+          "score": 0.008
+        },
+        {
+          "word": "gente",
+          "start": 181.357,
+          "end": 181.638,
+          "score": 0.467
+        },
+        {
+          "word": "possa",
+          "start": 181.698,
+          "end": 181.958,
+          "score": 0.691
+        },
+        {
+          "word": "se",
+          "start": 182.038,
+          "end": 182.118,
+          "score": 0.887
+        },
+        {
+          "word": "encontrar",
+          "start": 182.138,
+          "end": 182.638,
+          "score": 0.595
+        },
+        {
+          "word": "Eu!",
+          "start": 182.658,
+          "end": 182.718,
+          "score": 0.185
+        },
+        {
+          "word": "Prometo",
+          "start": 184.199,
+          "end": 184.679,
+          "score": 0.632
+        },
+        {
+          "word": "te",
+          "start": 184.739,
+          "end": 184.859,
+          "score": 0.766
+        },
+        {
+          "word": "dar",
+          "start": 184.919,
+          "end": 185.539,
+          "score": 0.724
+        },
+        {
+          "word": "carinho,",
+          "start": 185.619,
+          "end": 186.219,
+          "score": 0.746
+        },
+        {
+          "word": "carinho",
+          "start": 186.28,
+          "end": 186.88,
+          "score": 0.631
+        },
+        {
+          "word": "Mas",
+          "start": 187.14,
+          "end": 187.28,
+          "score": 0.964
+        },
+        {
+          "word": "eu",
+          "start": 187.3,
+          "end": 187.42,
+          "score": 0.294
+        },
+        {
+          "word": "sou",
+          "start": 187.48,
+          "end": 187.62,
+          "score": 0.606
+        },
+        {
+          "word": "de",
+          "start": 187.64,
+          "end": 187.72,
+          "score": 0.552
+        },
+        {
+          "word": "ser",
+          "start": 187.82,
+          "end": 188.08,
+          "score": 0.6
+        },
+        {
+          "word": "sozinho,",
+          "start": 188.16,
+          "end": 188.821,
+          "score": 0.834
+        },
+        {
+          "word": "livre",
+          "start": 188.841,
+          "end": 189.121,
+          "score": 0.714
+        },
+        {
+          "word": "pra",
+          "start": 189.181,
+          "end": 189.321,
+          "score": 0.679
+        },
+        {
+          "word": "voar",
+          "start": 189.381,
+          "end": 190.321,
+          "score": 0.901
+        },
+        {
+          "word": "Quem",
+          "start": 191.022,
+          "end": 191.162,
+          "score": 0.3
+        },
+        {
+          "word": "sabe",
+          "start": 191.222,
+          "end": 191.482,
+          "score": 0.934
+        },
+        {
+          "word": "outro",
+          "start": 191.502,
+          "end": 191.782,
+          "score": 0.58
+        },
+        {
+          "word": "dia",
+          "start": 191.882,
+          "end": 192.142,
+          "score": 0.856
+        },
+        {
+          "word": "a",
+          "start": 192.162,
+          "end": 192.182,
+          "score": 0.035
+        },
+        {
+          "word": "gente",
+          "start": 192.222,
+          "end": 192.522,
+          "score": 0.708
+        },
+        {
+          "word": "possa",
+          "start": 192.562,
+          "end": 192.822,
+          "score": 0.809
+        },
+        {
+          "word": "se",
+          "start": 192.902,
+          "end": 192.982,
+          "score": 0.752
+        },
+        {
+          "word": "encontrar",
+          "start": 193.002,
+          "end": 193.523,
+          "score": 0.505
+        },
+        {
+          "word": "de",
+          "start": 193.583,
+          "end": 193.823,
+          "score": 0.847
+        },
+        {
+          "word": "novo",
+          "start": 193.983,
+          "end": 194.403,
+          "score": 0.732
+        },
+        {
+          "word": "Prometo",
+          "start": 194.463,
+          "end": 194.963,
+          "score": 0.527
+        },
+        {
+          "word": "te",
+          "start": 195.303,
+          "end": 195.724,
+          "score": 0.587
+        },
+        {
+          "word": "dar",
+          "start": 195.784,
+          "end": 196.264,
+          "score": 0.754
+        },
+        {
+          "word": "carinho",
+          "start": 196.324,
+          "end": 197.504,
+          "score": 0.774
+        },
+        {
+          "word": "Mas",
+          "start": 198.025,
+          "end": 198.185,
+          "score": 0.864
+        },
+        {
+          "word": "eu",
+          "start": 198.205,
+          "end": 198.305,
+          "score": 0.528
+        },
+        {
+          "word": "sou",
+          "start": 198.365,
+          "end": 198.485,
+          "score": 0.579
+        },
+        {
+          "word": "de",
+          "start": 198.505,
+          "end": 198.585,
+          "score": 0.852
+        },
+        {
+          "word": "ser",
+          "start": 198.705,
+          "end": 198.945,
+          "score": 0.53
+        },
+        {
+          "word": "sozinho,",
+          "start": 199.025,
+          "end": 199.705,
+          "score": 0.812
+        },
+        {
+          "word": "livre",
+          "start": 199.725,
+          "end": 200.025,
+          "score": 0.598
+        },
+        {
+          "word": "pra",
+          "start": 200.085,
+          "end": 200.205,
+          "score": 0.537
+        },
+        {
+          "word": "voar",
+          "start": 200.266,
+          "end": 200.586,
+          "score": 0.589
+        }
+      ]
+    },
+    {
+      "text": " Quem sabe um outro dia a gente possa se encontrar Quando a gente se encontrar tudo vai ser tão perfeito Eu quero te curtir demais Valeu!",
+      "start": 201.858,
+      "end": 219.134,
+      "avg_logprob": -0.12780623570565255,
+      "idioma": "pt",
+      "words": [
+        {
+          "word": "Quem",
+          "start": 201.878,
+          "end": 202.018,
+          "score": 0.796
+        },
+        {
+          "word": "sabe",
+          "start": 202.098,
+          "end": 202.338,
+          "score": 0.938
+        },
+        {
+          "word": "um",
+          "start": 202.399,
+          "end": 202.439,
+          "score": 0.107
+        },
+        {
+          "word": "outro",
+          "start": 202.479,
+          "end": 202.739,
+          "score": 0.741
+        },
+        {
+          "word": "dia",
+          "start": 202.779,
+          "end": 202.999,
+          "score": 0.85
+        },
+        {
+          "word": "a",
+          "start": 203.019,
+          "end": 203.079,
+          "score": 0.646
+        },
+        {
+          "word": "gente",
+          "start": 203.119,
+          "end": 203.339,
+          "score": 0.856
+        },
+        {
+          "word": "possa",
+          "start": 203.439,
+          "end": 203.82,
+          "score": 0.671
+        },
+        {
+          "word": "se",
+          "start": 203.92,
+          "end": 204.0,
+          "score": 0.646
+        },
+        {
+          "word": "encontrar",
+          "start": 204.04,
+          "end": 204.841,
+          "score": 0.912
+        },
+        {
+          "word": "Quando",
+          "start": 205.361,
+          "end": 205.601,
+          "score": 0.897
+        },
+        {
+          "word": "a",
+          "start": 205.662,
+          "end": 205.702,
+          "score": 0.997
+        },
+        {
+          "word": "gente",
+          "start": 205.742,
+          "end": 206.002,
+          "score": 0.925
+        },
+        {
+          "word": "se",
+          "start": 206.102,
+          "end": 206.342,
+          "score": 0.942
+        },
+        {
+          "word": "encontrar",
+          "start": 206.382,
+          "end": 206.883,
+          "score": 0.773
+        },
+        {
+          "word": "tudo",
+          "start": 206.963,
+          "end": 207.143,
+          "score": 0.78
+        },
+        {
+          "word": "vai",
+          "start": 207.183,
+          "end": 207.423,
+          "score": 0.875
+        },
+        {
+          "word": "ser",
+          "start": 207.543,
+          "end": 207.683,
+          "score": 0.118
+        },
+        {
+          "word": "tão",
+          "start": 207.703,
+          "end": 207.763,
+          "score": 0.272
+        },
+        {
+          "word": "perfeito",
+          "start": 207.844,
+          "end": 208.604,
+          "score": 0.934
+        },
+        {
+          "word": "Eu",
+          "start": 209.005,
+          "end": 209.085,
+          "score": 0.834
+        },
+        {
+          "word": "quero",
+          "start": 209.185,
+          "end": 209.505,
+          "score": 0.831
+        },
+        {
+          "word": "te",
+          "start": 209.565,
+          "end": 209.665,
+          "score": 0.84
+        },
+        {
+          "word": "curtir",
+          "start": 209.765,
+          "end": 210.366,
+          "score": 0.892
+        },
+        {
+          "word": "demais",
+          "start": 210.386,
+          "end": 211.187,
+          "score": 0.543
+        },
+        {
+          "word": "Valeu!",
+          "start": 217.533,
+          "end": 219.134,
+          "score": 0.992
+        }
+      ]
+    }
+  ],
+  "blocos": [
+    {
+      "inicio": 7.126,
+      "fim": 7.506,
+      "texto": "Vamos"
+    },
+    {
+      "inicio": 7.646,
+      "fim": 22.799,
+      "texto": "cantar!"
+    },
+    {
+      "inicio": 30.785,
+      "fim": 35.329,
+      "texto": "Quando a gente se encontrar tudo vai ser tão perfeito Eu quero te curtir"
+    },
+    {
+      "inicio": 35.389,
+      "fim": 36.23,
+      "texto": "demais"
+    },
+    {
+      "inicio": 36.542,
+      "fim": 42.145,
+      "texto": "E eu vou alívia, esse aperto no meu peito Que vontade não dá mais Se no"
+    },
+    {
+      "inicio": 42.185,
+      "fim": 47.747,
+      "texto": "telefone é bom, imagine aqui bem perto Eu sentindo o teu calor Sem medo"
+    },
+    {
+      "inicio": 47.767,
+      "fim": 52.489,
+      "texto": "de ser feliz, tô com o coração aberto Com você eu tô esperto, já me"
+    },
+    {
+      "inicio": 52.509,
+      "fim": 56.291,
+      "texto": "acostumei com seu jeitinho De falar no telefone, descerias pra me"
+    },
+    {
+      "inicio": 56.351,
+      "fim": 60.353,
+      "texto": "provocar Quando eu te pego, você tá perdido, eu vou se arrepender de um"
+    },
+    {
+      "inicio": 60.413,
+      "fim": 62.594,
+      "texto": "dia Ter me tirado do meu lugar"
+    },
+    {
+      "inicio": 63.146,
+      "fim": 66.769,
+      "texto": "Peço, por favor, não se apaixone, pois não sou aquele homem que um dia"
+    },
+    {
+      "inicio": 66.849,
+      "fim": 70.892,
+      "texto": "ao seu pai sonhou. Eu só tenho cara de santinho, sempre faço"
+    },
+    {
+      "inicio": 70.932,
+      "fim": 76.357,
+      "texto": "conjeitinho, coitadates quem acredito. Ei, eu, prometo que te dá"
+    },
+    {
+      "inicio": 76.437,
+      "fim": 81.761,
+      "texto": "carinho. Vem, faz nosso descenso, assim, o livre pra voar. Quem sabe,"
+    },
+    {
+      "inicio": 82.061,
+      "fim": 86.745,
+      "texto": "quem sabe o outro dia a gente possa se encontrar de novo. Eu, prometo"
+    },
+    {
+      "inicio": 86.765,
+      "fim": 87.506,
+      "texto": "que te dá carinho."
+    },
+    {
+      "inicio": 89.147,
+      "fim": 92.51,
+      "texto": "Faz nosso descenso, assim, o livre pra voar."
+    },
+    {
+      "inicio": 93.066,
+      "fim": 97.848,
+      "texto": "Quem sabe o outro dia? Vamos juntos, palma"
+    },
+    {
+      "inicio": 100.29,
+      "fim": 103.872,
+      "texto": "da mão!"
+    },
+    {
+      "inicio": 104.592,
+      "fim": 106.573,
+      "texto": "Vamos juntos, palma da mão!"
+    },
+    {
+      "inicio": 118.39,
+      "fim": 122.853,
+      "texto": "Quando a gente se encontra, tudo vai ser tão perfeito Eu quero te curtir"
+    },
+    {
+      "inicio": 122.933,
+      "fim": 128.556,
+      "texto": "demais, e eu vou alívia Esse aperto no meu peito, que vontade não dá"
+    },
+    {
+      "inicio": 128.616,
+      "fim": 133.659,
+      "texto": "mais Se no telefone é bom, imagine que vem perto Eu sentindo o teu"
+    },
+    {
+      "inicio": 133.739,
+      "fim": 139.102,
+      "texto": "calor, sem medo de ser feliz Tô com coração aberto Com você eu tô"
+    },
+    {
+      "inicio": 139.163,
+      "fim": 142.645,
+      "texto": "esperto já, me acostumei com seu jeitinho Que falar no telefone,"
+    },
+    {
+      "inicio": 142.685,
+      "fim": 144.546,
+      "texto": "besteirinhas pra me provocar"
+    },
+    {
+      "inicio": 145.066,
+      "fim": 148.369,
+      "texto": "Quando eu te pegar, se tá perdida Vai se arrepender de um dia Ter me"
+    },
+    {
+      "inicio": 148.449,
+      "fim": 153.033,
+      "texto": "tirado do meu lugar Peço por favor, não se apaixone Pois não sou aquele"
+    },
+    {
+      "inicio": 153.093,
+      "fim": 158.137,
+      "texto": "homem Que um dia ao seu faz sonhão Eu faço com jeitinho, gostoso"
+    },
+    {
+      "inicio": 158.718,
+      "fim": 161.1,
+      "texto": "Coitada de quem acreditou, não é frão!"
+    },
+    {
+      "inicio": 162.1,
+      "fim": 168.046,
+      "texto": "Eu prometo te dar carinho Mas eu sou de senso, assim, um livre pra quem"
+    },
+    {
+      "inicio": 168.106,
+      "fim": 170.267,
+      "texto": "sabe um outro dia"
+    },
+    {
+      "inicio": 171.849,
+      "fim": 172.629,
+      "texto": "De novo"
+    },
+    {
+      "inicio": 173.514,
+      "fim": 178.916,
+      "texto": "Prometo te dar carinho Mas eu sou de ser sozinho, livre pra voar Quem"
+    },
+    {
+      "inicio": 179.016,
+      "fim": 182.718,
+      "texto": "sabe? Quem sabe? Quem sabe outro dia a gente possa se encontrar Eu!"
+    },
+    {
+      "inicio": 184.199,
+      "fim": 189.321,
+      "texto": "Prometo te dar carinho, carinho Mas eu sou de ser sozinho, livre pra"
+    },
+    {
+      "inicio": 189.381,
+      "fim": 190.321,
+      "texto": "voar"
+    },
+    {
+      "inicio": 191.022,
+      "fim": 196.264,
+      "texto": "Quem sabe outro dia a gente possa se encontrar de novo Prometo te dar"
+    },
+    {
+      "inicio": 196.324,
+      "fim": 200.586,
+      "texto": "carinho Mas eu sou de ser sozinho, livre pra voar"
+    },
+    {
+      "inicio": 201.878,
+      "fim": 206.342,
+      "texto": "Quem sabe um outro dia a gente possa se encontrar Quando a gente se"
+    },
+    {
+      "inicio": 206.382,
+      "fim": 211.187,
+      "texto": "encontrar tudo vai ser tão perfeito Eu quero te curtir demais"
+    },
+    {
+      "inicio": 217.533,
+      "fim": 219.134,
+      "texto": "Valeu!"
+    }
+  ],
+  "avisos": [
+    "Segmento 2: alinhamento fraco em 'eu'.",
+    "Segmento 2: alinhamento fraco em 'é'.",
+    "Segmento 2: alinhamento fraco em 'tô'.",
+    "Segmento 2: alinhamento fraco em 'eu'.",
+    "Segmento 2: alinhamento fraco em 'pra'.",
+    "Segmento 2: alinhamento fraco em 'eu'.",
+    "Segmento 2: alinhamento fraco em 'você'.",
+    "Segmento 2: alinhamento fraco em 'eu'.",
+    "Segmento 3: alinhamento fraco em 'um'.",
+    "Segmento 3: alinhamento fraco em 'que'.",
+    "Segmento 3: alinhamento fraco em 'dá'.",
+    "Segmento 3: alinhamento fraco em 'quem'.",
+    "Segmento 3: alinhamento fraco em 'o'.",
+    "Segmento 3: alinhamento fraco em 'dia'.",
+    "Segmento 3: alinhamento fraco em 'que'.",
+    "Segmento 3: alinhamento fraco em 'dá'.",
+    "Segmento 3: alinhamento fraco em 'o'.",
+    "Segmento 4: alinhamento fraco em 'o'.",
+    "Segmento 5: alinhamento fraco em 'é'.",
+    "Segmento 5: alinhamento fraco em 'o'.",
+    "Segmento 5: alinhamento fraco em 'eu'.",
+    "Segmento 6: alinhamento fraco em 'um'.",
+    "Segmento 7: alinhamento fraco em 'voar'.",
+    "Segmento 7: alinhamento fraco em 'Quem'.",
+    "Segmento 7: alinhamento fraco em 'sabe'.",
+    "Segmento 7: alinhamento fraco em 'outro'.",
+    "Segmento 7: alinhamento fraco em 'a'.",
+    "Segmento 7: alinhamento fraco em 'Eu!'.",
+    "Segmento 7: alinhamento fraco em 'eu'.",
+    "Segmento 7: alinhamento fraco em 'a'.",
+    "Segmento 8: alinhamento fraco em 'um'.",
+    "Segmento 8: alinhamento fraco em 'ser'.",
+    "Segmento 8: alinhamento fraco em 'tão'."
+  ],
+  "revisao_recomendada": true,
+  "comparacao_letra": {
+    "similaridade_textual": 0.5151883353584447,
+    "divergencias": [
+      {
+        "tipo": "insert",
+        "referencia": "",
+        "transcricao": "vamos cantar"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "aliviar esse aperto no meu peito que vontade não dá mais se no telefone é bom imagina aqui bem perto eu sentindo o teu calor sem medo de ser feliz tô com o coração aberto com você eu tô esperto já me acostumei com o seu jeitinho de falar no telefone besteirinhas prá me provocar quando eu te pegar cê tá perdida vai se arrepender de um dia ter me tirado do meu lugar peço por favor não se apaixone pois não sou aquele homem que um dia o seu pai sonhou eu só tenho cara de santinho sempre faço com jeitinho coitada de quem acreditou eu prometo te dar carinho mas gosto de ser sozinho livre pra voar quem sabe um outro dia a gente possa se encontrar de novo eu prometo te dar carinho mas gosto de ser sozinho livre pra voar quem sabe um outro dia a gente possa se encontrar quando a gente se encontrar tudo vai ser tão perfeito eu quero te curtir demais e eu vou aliviar",
+        "transcricao": "alívia"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "o",
+        "transcricao": ""
+      },
+      {
+        "tipo": "insert",
+        "referencia": "",
+        "transcricao": "falar no telefone descerias pra me provocar quando eu te pego você tá perdido eu vou se arrepender de um dia ter me tirado do meu lugar peço por favor não se apaixone pois não sou aquele homem que um dia ao seu pai sonhou eu só tenho cara de santinho sempre faço conjeitinho coitadates quem acredito ei eu prometo que te dá carinho vem faz nosso descenso assim o livre pra voar quem sabe quem sabe o outro dia a gente possa se encontrar de novo eu prometo que te dá carinho faz nosso descenso assim o livre pra voar quem sabe o outro dia vamos juntos palma da mão vamos juntos palma da mão quando a gente se encontra tudo vai ser tão perfeito eu quero te curtir demais e eu vou alívia esse aperto no meu peito que vontade não dá mais se no telefone é bom imagine que vem perto eu sentindo o teu calor sem medo de ser feliz tô com coração aberto com você eu tô esperto já me acostumei com seu jeitinho que"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "cê",
+        "transcricao": "se"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "o",
+        "transcricao": "ao"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "pai sonhou",
+        "transcricao": "faz sonhão"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "no refrão",
+        "transcricao": "não é frão"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "gosto",
+        "transcricao": "eu sou"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "ser sozinho",
+        "transcricao": "senso assim um"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "voar",
+        "transcricao": ""
+      },
+      {
+        "tipo": "delete",
+        "referencia": "a gente possa se encontrar",
+        "transcricao": ""
+      },
+      {
+        "tipo": "delete",
+        "referencia": "prometo",
+        "transcricao": ""
+      },
+      {
+        "tipo": "replace",
+        "referencia": "gosto",
+        "transcricao": "eu sou"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "um",
+        "transcricao": ""
+      },
+      {
+        "tipo": "insert",
+        "referencia": "",
+        "transcricao": "carinho"
+      },
+      {
+        "tipo": "replace",
+        "referencia": "gosto",
+        "transcricao": "eu sou"
+      },
+      {
+        "tipo": "delete",
+        "referencia": "um",
+        "transcricao": ""
+      },
+      {
+        "tipo": "delete",
+        "referencia": "prometo",
+        "transcricao": ""
+      },
+      {
+        "tipo": "replace",
+        "referencia": "gosto",
+        "transcricao": "eu sou"
+      },
+      {
+        "tipo": "insert",
+        "referencia": "",
+        "transcricao": "valeu"
+      }
+    ]
+  }
+}
